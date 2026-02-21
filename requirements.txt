@@ -4,19 +4,23 @@
 # Fine-tuning Large Language Models for Uzbek Aspect-Based Sentiment Analysis
 # =============================================================================
 #
-# IMPORTANT: PyTorch must be installed with CUDA 12.4 support separately:
+# ⚠️  CRITICAL: PyTorch CUDA Installation
+# ========================================
+# DO NOT just run "pip install -r requirements.txt" alone!
 # 
-# WINDOWS (with NVIDIA GPUs):
+# By default, pip will install CPU-only PyTorch. You MUST use the --index-url
+# flag to get CUDA 12.4-enabled wheels from the official PyTorch repository.
+#
+# CORRECT (with GPU support):
 #   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 #
-# LINUX (with NVIDIA GPUs):
-#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+# WRONG (will install CPU-only):
+#   pip install torch
+#   pip install -r requirements.txt  (without installing torch first)
 #
-# CPU only (testing/development):
-#   pip install torch torchvision torchaudio
+# The --index-url flag tells pip to fetch pre-built CUDA wheels instead of
+# the default CPU versions. This is REQUIRED for NVIDIA GPU training.
 #
-# The --index-url flag is required to get CUDA-enabled wheels.
-# Do NOT run "pip install -r requirements.txt" alone for GPU training!
 # =============================================================================
 
 # (PyTorch packages are installed separately via --index-url, see instructions above)
@@ -151,4 +155,46 @@ pytest-cov>=4.1.0
 #   "
 #
 # =============================================================================
-
+# Troubleshooting: PyTorch Installation
+# =============================================================================
+#
+# Problem: CUDA not found (torch.cuda.is_available() returns False)
+# ----------------------------------------------------------------
+# This usually means you installed CPU-only PyTorch instead of CUDA-enabled.
+#
+# Quick fix:
+#   1. Uninstall existing PyTorch:
+#      pip uninstall torch torchvision torchaudio -y
+#
+#   2. Reinstall with CUDA 12.4 (use the --index-url flag):
+#      pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#
+#   3. Verify:
+#      python -c "import torch; print(f'CUDA: {torch.cuda.is_available()}, GPUs: {torch.cuda.device_count()}')"
+#      Should print: CUDA: True, GPUs: {your_gpu_count}
+#
+#
+# Problem: Torch version mismatch (e.g., torch 2.10.0 but torchaudio 2.6.0)
+# -------------------------------------------------------------------------
+# Happens when you partially installed CUDA packages without using --index-url.
+#
+# Quick fix:
+#   1. Uninstall all PyTorch packages:
+#      pip uninstall torch torchvision torchaudio -y
+#
+#   2. Reinstall all at once with CUDA 12.4:
+#      pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#
+#   Note: Install all three (torch, torchvision, torchaudio) in one command
+#         to ensure version compatibility.
+#
+#
+# Problem: "ERROR: pip's dependency resolver does not currently account..."
+# -------------------------------------------------------------------------
+# This warning typically appears after successful installation. 
+# It can usually be ignored if torch.cuda.is_available() returns True.
+# However, if you see xformers or other package conflicts, uninstall them:
+#
+#   pip uninstall xformers -y
+#
+# =============================================================================
