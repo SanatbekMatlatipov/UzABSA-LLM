@@ -1,0 +1,2522 @@
+[
+  {
+    "object_name": "\"NBF MED\" mas‘uliyati cheklangan jamiyati",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Agrobank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Aloqabank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Anor bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Asakabank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Asakabank (Самарқанд)",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Asakabank (Термиз)",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Asakabank (Урганч)",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Asakabank (Қарши )",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Davr Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Garant Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Hamkorbank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Infin Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Ipak yo‘li bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Ipoteka Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Kapitalbank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "MKBANK",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "MKBANK (Toshkent shahar boshqarmasi)",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Orient Finance Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "SQB",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "TBC Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Tenge Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Trast Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Turkiston Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Turon Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Universal Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Uzum Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Xalq Banki",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Yangi bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "Ziraat Bank",
+    "business_category": "Bank/Moliya"
+  },
+  {
+    "object_name": "\"BNQ GAS LUX\" MAS'ULIYATI CHEKLANGAN JAMIYAT",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"DANG`ARA DIAGNOSTIKA VA DAVOLASH \" mas`uliyati cheklangan jamiyati",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"GRAND FARM AVITSENNA\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"KGH\" mas‘uliyati cheklangan jamiyati",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"MUSTAHKAM MEGA OIL\" МЧЖ",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"NAVOIY XITOY TIBBIYOTI\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"SAIF-OPTIMA\" xususiy korxonasi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"SAYDANA\" mas`uliyati cheklangan jamiyat qo'shma korxonasi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"VIVA-MED-SERVICE\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "\"Анкалайф\" Центр здоровья женщины и ЭКО",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "(Dinay) Ricomel Beverages LLC",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "999",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Adamari",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ahmad Tea",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Aiko",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Alhakim Taklifnoma",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Angar Qarshi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Arrows & Sparrows Uzbekistan",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Asadbek's company",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ashxobod sayilgohi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Astera sea",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Atmos",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Axmad olmos joja",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Aygen",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "BESTON",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Baxt ko'li",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Beanberry",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Bek Dubay Abaya Uz",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "BelissimO",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Big boss",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Bilol Farm",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Butterfly",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Button",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Cakelab",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Chartak Fidani",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Chaykof tashkent",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Choyga uz",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "CoHub Coworking",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Crafers",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Darel",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Dekos Group",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Dental",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Doktor Servis",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Dom 29",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Dudek",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "ERIELL",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Everest",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Fan Javohirlari НОУ",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Galaktika",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Gardenhouse.uz",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Go'sht mahsulotlari",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Golden House",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Golden Life",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Grand osh markazi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Green way",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Grill",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Hilton Plaza 777",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "ILM.UZ",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ice Berg BTL Agency",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Idea",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Impuls",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ipak Yuli",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ishonch",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Istanbul",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "JUST!",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Jelly",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Kamolot-osiyo",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Like",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "MARVARID",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "MAVRID",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "MCHJ \"TURON FAYZLI KERAMIKA\"",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "MDS",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Maloxat",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Mar-Mar",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Marstiff by Marifat Jamal",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Mebel House",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Medexpert",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Mening Yurtim",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Mentalaba.uz",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Mi-Tashkent",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Miss",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Miss Kamilla",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Moliya studiyasi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "MyTeacher",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "NBU",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "N`MEDOV",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Nestlé",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Nora",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "OQ",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Orange Woman",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Papa Johns",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Parus",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Perfectum",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Pipls",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Polufabrikati_ot_vkusnobyseva",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Qarshi xalqaro universiteti",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Quadro",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Queens",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Raqamli texnologiyalar markazi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Result",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Rich garden Uz",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Rozmetov",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "SHARQ",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Samarqand Darvoza",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Samosh",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Saxovat",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Secret Tashkent",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Seg Tasco",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Sharof Rashidov Nomidagi Samarqand Davlat Universiteti",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Sharq ziyokori",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Sirali Kebap",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Sonamu",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Sumaya collection",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Target",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Tarnov",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Tashkent City Estate",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Tashkent Perfume",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Tegen",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Tehnikum",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Terra pro (Next)",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Toshkent Amaliy Fanlar Universiteti",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Toshkent Imtihon Markazi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Turk Saray",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "UIC Group",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Umar brand",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Uyda uz",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Uyda uz Chilonzor tumani Integro savdo markazi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "VIP BRAND",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "VIP Brand Women",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Villa grand",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Way II",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Xanna Wedding",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Xayrullo qazisi va go’sht maxsulotlari",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Xon Atlas",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Xon Saroy",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Yangi O'zbekiston Bog'i",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Zarina",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "hydrolife",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "mussafo",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "АЗС IBR",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Автомактаб",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Автошкола",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ахборот ресурс маркази",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Аёл учун",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Бассейн",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Городской родильный комплекс № 6",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Детская школа музыки и искусств № 1 им. т. садыкова",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Дори таъминот № 7",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Карши шахар тиббиёт бирлашмаси",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Книжный магазин",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Куранты Бар",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ломбард",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "МЧЖ \"LAZIZ SAVDO BIZNES\"",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Магазин мяса",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Марко Милано",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Медицинская клиника De Factum",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Метан",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Музыкальная школа",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "НОУ Qurilishda Qiymat Injiniringi",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Национальная библиотека Узбекистана имени Алишера Навои",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Национальный университет Узбекистана",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Подушечная",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Родильный комплекс № 8",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "СОК Gt club",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "СЫРОВАРНЯ",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Салон красоты",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Салон красоты 2012",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Самаркандский государственный медицинский университет",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Специализированная детско-юношеская школа по водным видам спорта города Ташкента",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Студия завивок",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Сцена",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Тандир Кашкадарьинский",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Тандыр гушт маркази",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ташкентский государственный транспортный университет",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ташкентский университет информационных технологий имени Мухаммада ал-Хоразмий",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Театр Современного Танца DekoS",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "У бабушки",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Федерация Плавания Узбекистана",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Часы.me",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Шеф Бургер",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Ясмин Фарм",
+    "business_category": "Boshqa"
+  },
+  {
+    "object_name": "Altinsay BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Balikchi BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Denov BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Kattakurgan BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Markhamat BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Shurchi BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Termez city BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Yashnabad BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Zarhal Plaza",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "Zarkent bazar BSC",
+    "business_category": "Bozor/BSC"
+  },
+  {
+    "object_name": "HGT - kommunal ilova",
+    "business_category": "Davlat xizmatlari"
+  },
+  {
+    "object_name": "HUDUDGAZTA'MINOT",
+    "business_category": "Davlat xizmatlari"
+  },
+  {
+    "object_name": "Uz Suv Taminot",
+    "business_category": "Davlat xizmatlari"
+  },
+  {
+    "object_name": "Vatanparvar",
+    "business_category": "Davlat xizmatlari"
+  },
+  {
+    "object_name": "Yashil Energiya",
+    "business_category": "Davlat xizmatlari"
+  },
+  {
+    "object_name": "Horev",
+    "business_category": "Din/Madaniyat"
+  },
+  {
+    "object_name": "Minor mosque",
+    "business_category": "Din/Madaniyat"
+  },
+  {
+    "object_name": "To'xtaniyoz-ota",
+    "business_category": "Din/Madaniyat"
+  },
+  {
+    "object_name": "VAQF",
+    "business_category": "Din/Madaniyat"
+  },
+  {
+    "object_name": "Asaxiy",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Asaxiy Books",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Beil Toys",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Elbozor",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "G-Shop",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "INBAZAR",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Magnum",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Medion",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "OLX.uz",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Openshop.uz",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Sello!",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Texnomart",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Uzum Market",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Zoodmall",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "n1Tools.uz",
+    "business_category": "Elektron tijorat"
+  },
+  {
+    "object_name": "Alina pro Beauty",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Beauty Me Tashkent",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Beauty club",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Beauty salon \"Lyusiya\"",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Dessange",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Elegant",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Kelin ko'ylaklar saloni",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Zulfizar Cosmetics",
+    "business_category": "Go'zallik"
+  },
+  {
+    "object_name": "Beautyroses Uz",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Euroflowers.uz",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Gavalli Chocolates",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Gulzor Go'sht do'kon",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Infinityroses Uz",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Kamila's flowers",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Magflowers.tashkent",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Qoratosh flowers",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "Toshkent gullari",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "flowers uz",
+    "business_category": "Gul/Sovg'a"
+  },
+  {
+    "object_name": "AkeFx",
+    "business_category": "Investitsiya/Trading"
+  },
+  {
+    "object_name": "Az Capital",
+    "business_category": "Investitsiya/Trading"
+  },
+  {
+    "object_name": "Grand Invest",
+    "business_category": "Investitsiya/Trading"
+  },
+  {
+    "object_name": "Milliy FX",
+    "business_category": "Investitsiya/Trading"
+  },
+  {
+    "object_name": "Shark Trading",
+    "business_category": "Investitsiya/Trading"
+  },
+  {
+    "object_name": "Trend line",
+    "business_category": "Investitsiya/Trading"
+  },
+  {
+    "object_name": "Uzbek invest",
+    "business_category": "Investitsiya/Trading"
+  },
+  {
+    "object_name": "Golden books",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Hilol nashr",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "IBooK",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Imdod | Kitoblar do'koni",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Kitoblar olami",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Kutubxoha",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Kutubxona",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Mutolaa",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Qamar kitoblar do‘koni",
+    "business_category": "Kitob/Nashriyot"
+  },
+  {
+    "object_name": "Anhor park",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Central Park-Mirzo Ulug'bek",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Dream Park",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Jumanji",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Lokomotiv Park",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Magic Cinema",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Magic City",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Milliy Ansambil",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Music Brand",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Tashkent Zoo",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "zeus game club",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "zoomrad",
+    "business_category": "Ko'ngilochar"
+  },
+  {
+    "object_name": "Freshbazar uz",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Green Apple market",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Korzinka.uz",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Makro",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Mega Planet",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Mukarram Market",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Olma Market",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Tashkent City Mall",
+    "business_category": "Oziq-ovqat do'konlari"
+  },
+  {
+    "object_name": "Afiyet Döner Kebab",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Afsona",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Akmal Oltin Baliq",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Alimovs_restaurant",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Ansor family Restaurant",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Apex Pizza",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Apexpizza",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "April Verdant Restaurant",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Asl Baraka",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Asl Kamolon milliy taomlar",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Avocado bistro",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Avtomotohavaskorlar",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Avtomotohavaskorlar Mirobod bo’limi",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Axmad Oltin Jo'ja Sergeli",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Axmad oltin jo'ja",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "BBQ Burger",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Baraka Market",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Basri Baba",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Bellissimo Pizza",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Bento Dizi",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Besh qozon",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Best mix burger",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Bla Bla Bar",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Black Star Barbershop",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Black Star Burger",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Broccoli",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Bu Doner",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Burger embassy",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Buyuk istanbul restorani",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Carvon",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "China shashlik",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Chopar",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Chustiy choyxona",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "City 21 Pan Asian Restaurant",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Dayako Chicken",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Demir Bey Fast Food",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Do'stlik choyxonasi Shahrixon",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Dodo pizza",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Efendi",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Evos",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Fayz non markazi",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Fedorovich",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Feed Up",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Fish and Bread",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Fresco",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "FreshCa.fe",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Gijduvon Premium Oilaviy",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Giotto",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Gosht Doner",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Gracia cafe",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Guten Pub",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Havas",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Hayat",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Hayat medical center",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Healthy food",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Hotdogger",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Hurma Lombard",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Jizzak somsa",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "KFC",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "KFC (Chilonzor)",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "KFC (Family Park)",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "KFC (Samarkand Darvoza)",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "KFC (Seoul Mun)",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Kamolon Osh",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Kashkadarya tandoori with meat and chicken",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Khachapuri house",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Kofteci Ramiz",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Le taom",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Level Restaurant",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Lombard",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Loook",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "MANDU MANTI",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "MONA Restaurant & Lounge",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Mahmood Kabob",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Marinno Shashlik Market",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Master Kebab",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Max Way",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Mehmed kebab",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Merhaba Steakhouse",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Minor somsa",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "National dishes of Munisa",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Nomdor somsa",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Olim polvon",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Olot somsa",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Oqtepa Lavash",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Oqtepa lavash",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Oshpalov",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Ozbegim restaurant",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Paylov",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Pie Republic",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Plov-samsa. uz",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Plovcity",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Qanotchi",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Qora qamish osh",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Rayhon Milliy Taomlari",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Respublika onkologiya markazi",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Retro Milliy",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Roni pizza",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Senior Meathouse",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Shashleek",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Shashlik & Somsa",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Sherin",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Sochnaya Dolina",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Socials Cafe",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Soy restoran",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "State National Library of the Republic of Uzbekistan named after Alisher Navoi",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Street 77",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Sultan Ahmet",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Tandiriy",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "The choyxona",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "The only interactive public services portal (my.gov.uz)",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Toku",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Twice Spice",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "UzLombard",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "WOK",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Wendy’s",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Yalpiz",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Yangi Khayat BSC",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Yapona mama",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "Zohid kebab",
+    "business_category": "Restoran/Ovqatlanish"
+  },
+  {
+    "object_name": "\"BMB ZAFARON HOTEL JIZZAX\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "\"CHIMYON SANATORIYASI\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Asialuxe Travel",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Friends Travel",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Gunesh Hotel Samarkand",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Humo Air",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Hyatt Regency",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Kurorti.uz",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Masuma Tour",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Orange Travel",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Saaf travel",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Sanatorium Chartak",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Silkavia",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Tourist.uz",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Uzbekistan Airways",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Zaamin Ultra",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "Туристичская компания 1Travel Tashkent",
+    "business_category": "Sayohat/Turizm"
+  },
+  {
+    "object_name": "1 FIT",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Arena",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Basseyn Jacksoft",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "BeFit",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Born2swim",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Humo Arena",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Power Gym",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Sport Tv",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Victory Fitness Club",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Wunderfit",
+    "business_category": "Sport/Fitnes"
+  },
+  {
+    "object_name": "Apex Insurance",
+    "business_category": "Sug'urta"
+  },
+  {
+    "object_name": "Gross insurance",
+    "business_category": "Sug'urta"
+  },
+  {
+    "object_name": "Sug'urta Bozor",
+    "business_category": "Sug'urta"
+  },
+  {
+    "object_name": "\"Riks\" Education centre",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Al Beruniy International School",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Al Beruniy Академия",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Al-Bukhari University",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Alfraganus universiteti",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Avto school",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Avtomaktab",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Avtomaktab sergeli AKJ",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Best school",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Cambridge Learning Centre",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Cambridge university in Tashkent",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Excellent Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Fashion Art Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Fozilov Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Global Education Karshi",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "HBS Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Hong Kong Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Humo School Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Ieltszone",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Inter Nation",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Inter Nation English School",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Iqtidor IT Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Kasb Education",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "King's Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Kolesnitsa - Driving School",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Lerna Uzbekistan",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Mars IT School",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Master IELTS",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Merax Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Mohir Ai",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Mohirdev",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "My School",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Najot ta’lim",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Nekov school",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Oneacademy.uz",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Oxford learning Centre",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Ozbek Milliy Akademik teatri",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "PDP Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "PDP University",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Profi University",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Proweb",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Registan",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Registan LC",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Samarqand Iqtisodiyot Va Servis Instituti",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Samarqand davlat chet tillari instituti, Ingliz tili nazariyasi va amaliyoti kafedrasi",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Sergeli Avtomaktab 2019-1",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Shiroq business school",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Skillbox",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Tashkent Financial Institute",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Tashkent Institute of Architecture and Civil Engineering",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Tashkent International University of Financial Management and Technologies TIFT",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Tashkent State Law University",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Tashkent State University of Economics",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Thompson school",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Toshkent davlat sharqshunoslik instituti",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Trading Academy Uz",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "UIC Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Uzbekistan State University of World Languages",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Vector IT Academy",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Webster",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Westminster International University",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Yakubovʼs School",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Yeoju",
+    "business_category": "Ta'lim"
+  },
+  {
+    "object_name": "Beeline",
+    "business_category": "Telekommunikatsiya"
+  },
+  {
+    "object_name": "Humans",
+    "business_category": "Telekommunikatsiya"
+  },
+  {
+    "object_name": "Ucell",
+    "business_category": "Telekommunikatsiya"
+  },
+  {
+    "object_name": "Uzmobile",
+    "business_category": "Telekommunikatsiya"
+  },
+  {
+    "object_name": "mobi.uz",
+    "business_category": "Telekommunikatsiya"
+  },
+  {
+    "object_name": "DT Ecosystem",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Daryo",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Dataprizma LLC",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Enter Engineering",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Instagram",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Kun uz",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Milliy TV",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Netflix",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Qalampir.uz",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Sevimli TV",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Sharh",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Ticker.trade",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Toshkent TV",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Yoshlar TV",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "ZTE CORPORATION",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "Zo'r TV",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "iTV.uz",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "islom.uz",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "itrade.uz",
+    "business_category": "Texnologiya/Media"
+  },
+  {
+    "object_name": "\"AKMAL FARM SANOAT\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"ALFA MED SERVICE HAZORASP\" mas'uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"ALFRAGANUS UNIVERSITY HOSPITAL\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"ARZON APTEKA PLUS\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"CHIMYON SHIFO MED TEX FARM\" mas‘uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"DR IBRAHIM MEDICAL\" oilaviy korxonasi",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"GENOMED MGC\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"KO`P TARMOQLI TRAVMATOLOGIYA VA ORTOPEDIYA SHIFOXONASI\" mas‘uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"LOR MED MUBORAK\" MAS'ULIYATI CHEKLANGAN JAMIYAT",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"MEDZONE HOSPITALS\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"MURODBEK STOMATOLOG\" oilaviy korxonasi",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"NUR MED KO`Z\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"NURMED\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"REAL - MED\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"SABA-DARMON\" mas‘uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "\"VIVOMED\" mas`uliyati cheklangan jamiyati",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Akfa Medline",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Akmal farm",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Akrom Stom",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Anatomica.uz",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Arzon Apteka",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Arzon Dorixona",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Ayol Care",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Biogen Med",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Bolalar Massaji Nazokat 79",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Chinor Medical Center",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Diamed Clinic",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Diyor Medical Centre",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Dorixona Ibn Sino",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "EKO-IKSI",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "ENT PLUS 24/7 CHIRCHIK",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "ENT PLUS 24/7 MIROBAD",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "ENT PLUS 24/7 YUNUSABAD",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "GENOTEXNOLOGIYA",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Hi Tech Laboratories",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "IHLOS DOKTOR",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "IVF DOCTOR D",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Ifor Pharm",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Ixlos Medical Center",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Kokcha Med",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Lor Mama",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Lor Profmed 24/7",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Medical center Doctor-K",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Mediva Clinic",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Mubina wellness",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "ONA foundation",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Ona va bola diagnostika markazi",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Onlayn Hamshira",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Oxymed",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Prof Dent Plus",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Profmedservice",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "SBJ Medical",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Saneg",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Shahar 4-son tug'ruq kompleksi",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Shox International Hospital",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Siz Ona bo'lasiz Eko Markazi",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "StarMed Center",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Toshkent farmatsevtika instituti",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Zarmed University",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "darmon servis",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Бассейн EraMed ‍",
+    "business_category": "Tibbiyot/Sog'liqni saqlash"
+  },
+  {
+    "object_name": "Alifmobi",
+    "business_category": "To'lov tizimlari"
+  },
+  {
+    "object_name": "Click",
+    "business_category": "To'lov tizimlari"
+  },
+  {
+    "object_name": "Marjon App",
+    "business_category": "To'lov tizimlari"
+  },
+  {
+    "object_name": "PayWay",
+    "business_category": "To'lov tizimlari"
+  },
+  {
+    "object_name": "Xazna",
+    "business_category": "To'lov tizimlari"
+  },
+  {
+    "object_name": "depozit.uz",
+    "business_category": "To'lov tizimlari"
+  },
+  {
+    "object_name": "payme",
+    "business_category": "To'lov tizimlari"
+  },
+  {
+    "object_name": "7 day car wash",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Auto Doctor",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "BYD",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Chevrolet",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "China Motors",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Kashkadarya roads",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Kia Qarshi",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Li Ning",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Oʻzbekiston temir yoʻllari",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Roads of Khorezm",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Surkhandarya roads",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Tashkent roads",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Uzpost",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "ZTY car energy",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "avtoelon",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "road24",
+    "business_category": "Transport/Yo'l"
+  },
+  {
+    "object_name": "Express 24",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "My Taxi",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "OOO MyTaxi",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "Royal Taxi",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "Uklon",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "VIP Taxi",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "Yandex GO",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "Yandex Go",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "Yandex eats",
+    "business_category": "Yetkazib berish"
+  },
+  {
+    "object_name": "veloxizmat.uz",
+    "business_category": "Yetkazib berish"
+  }
+]

@@ -1,0 +1,211 @@
+{
+  "Restoran/Ovqatlanish": {
+    "description": "Restaurants, fast food, cafes, national cuisine",
+    "subcategories": [
+      "ovqat_sifati",
+      "xizmat_ko'rsatish",
+      "narx",
+      "tozalik",
+      "muhit",
+      "tezlik",
+      "menyu_xilma-xilligi",
+      "joylashuv",
+      "porsiya"
+    ]
+  },
+  "Bank/Moliya": {
+    "description": "Banks, financial services, loans",
+    "subcategories": [
+      "xizmat_ko'rsatish",
+      "ilova_qulayligi",
+      "kredit",
+      "foiz_stavka",
+      "tezlik",
+      "xavfsizlik",
+      "filial",
+      "qo'llab-quvvatlash",
+      "karta_xizmati",
+      "onlayn_xizmat"
+    ]
+  },
+  "To'lov tizimlari": {
+    "description": "Mobile payment, fintech, digital wallets",
+    "subcategories": [
+      "ilova_qulayligi",
+      "tezlik",
+      "xavfsizlik",
+      "qo'llab-quvvatlash",
+      "komissiya",
+      "funksionallik",
+      "ishonchlilik"
+    ]
+  },
+  "Telekommunikatsiya": {
+    "description": "Mobile operators, internet service providers",
+    "subcategories": [
+      "internet_sifati",
+      "aloqa_sifati",
+      "narx",
+      "qo'llab-quvvatlash",
+      "qamrov",
+      "tezlik",
+      "ilova_qulayligi"
+    ]
+  },
+  "Elektron tijorat": {
+    "description": "Online marketplaces, e-commerce platforms",
+    "subcategories": [
+      "mahsulot_sifati",
+      "yetkazib_berish",
+      "narx",
+      "qo'llab-quvvatlash",
+      "tanlov",
+      "qaytarish",
+      "ilova_qulayligi",
+      "to'lov"
+    ]
+  },
+  "Oziq-ovqat do'konlari": {
+    "description": "Supermarkets, grocery stores, retail chains",
+    "subcategories": [
+      "mahsulot_sifati",
+      "narx",
+      "xizmat_ko'rsatish",
+      "tozalik",
+      "tanlov",
+      "joylashuv",
+      "navbat"
+    ]
+  },
+  "Tibbiyot/Sog'liqni saqlash": {
+    "description": "Hospitals, clinics, pharmacies, healthcare",
+    "subcategories": [
+      "shifokor_malakasi",
+      "xizmat_ko'rsatish",
+      "narx",
+      "tozalik",
+      "diagnostika",
+      "navbat",
+      "jihozlar",
+      "dori",
+      "qo'llab-quvvatlash"
+    ]
+  },
+  "Ta'lim": {
+    "description": "Universities, schools, courses, training centers",
+    "subcategories": [
+      "o'qitish_sifati",
+      "o'qituvchi",
+      "narx",
+      "dastur",
+      "infratuzilma",
+      "natija",
+      "sertifikat",
+      "amaliyot"
+    ]
+  },
+  "Gul/Sovg'a": {
+    "description": "Flower shops, gift stores",
+    "subcategories": [
+      "sifat",
+      "narx",
+      "yetkazib_berish",
+      "xizmat_ko'rsatish",
+      "tanlov",
+      "tezlik"
+    ]
+  },
+  "Sport/Fitnes": {
+    "description": "Gyms, fitness centers, sports facilities",
+    "subcategories": [
+      "jihozlar",
+      "murabbiy",
+      "narx",
+      "tozalik",
+      "muhit",
+      "joylashuv"
+    ]
+  },
+  "Sayohat/Turizm": {
+    "description": "Airlines, hotels, travel agencies, resorts",
+    "subcategories": [
+      "xizmat_ko'rsatish",
+      "narx",
+      "qulaylik",
+      "tozalik",
+      "ovqat_sifati",
+      "joylashuv",
+      "xodimlar"
+    ]
+  },
+  "Yetkazib berish": {
+    "description": "Delivery services, ride-hailing, logistics",
+    "subcategories": [
+      "tezlik",
+      "narx",
+      "xizmat_ko'rsatish",
+      "ilova_qulayligi",
+      "ishonchlilik",
+      "xavfsizlik"
+    ]
+  },
+  "Go'zallik": {
+    "description": "Beauty salons, cosmetics, barbershops",
+    "subcategories": [
+      "sifat",
+      "narx",
+      "tozalik",
+      "mutaxassislik",
+      "muhit"
+    ]
+  },
+  "Kitob/Nashriyot": {
+    "description": "Bookstores, publishing houses",
+    "subcategories": [
+      "tanlov",
+      "narx",
+      "sifat",
+      "xizmat_ko'rsatish",
+      "yetkazib_berish"
+    ]
+  },
+  "Texnologiya/Media": {
+    "description": "Tech platforms, media, news outlets",
+    "subcategories": [
+      "kontent_sifati",
+      "ilova_qulayligi",
+      "ishonchlilik",
+      "reklama",
+      "qo'llab-quvvatlash"
+    ]
+  },
+  "Transport/Yo'l": {
+    "description": "Transport, roads, auto services",
+    "subcategories": [
+      "sifat",
+      "narx",
+      "xavfsizlik",
+      "qulaylik",
+      "tezlik"
+    ]
+  },
+  "Ko'ngilochar": {
+    "description": "Entertainment, parks, cinema, theater",
+    "subcategories": [
+      "ko'ngilochar_sifati",
+      "narx",
+      "xizmat_ko'rsatish",
+      "muhit",
+      "tozalik"
+    ]
+  },
+  "Boshqa": {
+    "description": "Other / miscellaneous",
+    "subcategories": [
+      "sifat",
+      "narx",
+      "xizmat_ko'rsatish",
+      "qo'llab-quvvatlash"
+    ]
+  }
+}

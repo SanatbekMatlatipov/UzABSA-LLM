@@ -412,6 +412,241 @@ Date: Feb 21, 2026
 - **Recommendation:** Consider script-aware preprocessing or filtering for monolingual experiments.
 
 
+## LOG 017 — Data Exploration: Business Category & ABSA Subcategory Analysis
+Date: Feb 21, 2026
+
+### Source
+- File: `./data/raw/reviews.csv`
+- Total reviews loaded: **5058**
+- After cleaning (drop NaN/empty `review_text`): **5058**
+- Unique businesses: **630**
+
+### Text Statistics
+| Metric | Value |
+|--------|-------|
+| Avg words / review | 13.55 |
+| Avg chars / review | 96.26 |
+| Median words | 11 |
+| Word range | 2–59 |
+| Char range | 19–400 |
+
+### Language/Script Classification Results
+| Language Category | Count | Percentage |
+|-------------------|------:|----------:|
+| Primarily Uzbek (Latin) | 4693 | 92.78% |
+| Primarily Russian (Cyrillic) | 262 | 5.18% |
+| Primarily Uzbek (Cyrillic) | 103 | 2.04% |
+
+### Sample Reviews per Language Category
+  **Primarily Uzbek (Latin)**:
+  - _Rayhon milliy taomllarida hamma taomlari mazali lekin mijozlarga boʼlgan iliq munosabati menga yoqdi narxlari ham Arzon _…
+  - _Bank bilan online aloqa juda qulay_…
+  **Primarily Russian (Cyrillic)**:
+  - _Тоже хотел рассказать про опыт онлайн-обучения. Начал проходить курс Управление Командами. Во-первых, программа хорошо в_…
+  - _Платформа топовая, все понятно и легка в использовании. Опытные учителя благодаря которым леги и интересно закончил курс_…
+  **Primarily Uzbek (Cyrillic)**:
+  - _Жуда зур авиакомпания. Факат ш компанияда учаман. Сотрудниклар хушмуомула. Обед хр доим бор. Бошка мамлакатдагилардан ха_…
+  - _Мени кизим учшохли нерви бн даволаниб чикти. Бошка жойларда килган муолажалари тасир килмаганди. Яхши хозир кайталамадик_…
+
+### Business Category Classification
+- **Method:** Keyword-based mapping from `object_name` to business domain
+- **Total categories identified:** 23
+
+| Business Category | Reviews | Businesses | Percentage |
+|--------------------|--------:|-----------:|-----------:|
+| Restoran/Ovqatlanish | 1628 | 120 | 32.19% |
+| Bank/Moliya | 586 | 30 | 11.59% |
+| Boshqa | 507 | 181 | 10.02% |
+| To'lov tizimlari | 328 | 7 | 6.48% |
+| Elektron tijorat | 296 | 15 | 5.85% |
+| Ta'lim | 295 | 63 | 5.83% |
+| Tibbiyot/Sog'liqni saqlash | 285 | 61 | 5.63% |
+| Telekommunikatsiya | 234 | 5 | 4.63% |
+| Oziq-ovqat do'konlari | 215 | 8 | 4.25% |
+| Gul/Sovg'a | 173 | 10 | 3.42% |
+| Texnologiya/Media | 110 | 19 | 2.17% |
+| Sayohat/Turizm | 79 | 17 | 1.56% |
+| Sport/Fitnes | 60 | 10 | 1.19% |
+| Kitob/Nashriyot | 56 | 9 | 1.11% |
+| Din/Madaniyat | 49 | 4 | 0.97% |
+| Transport/Yo'l | 32 | 16 | 0.63% |
+| Yetkazib berish | 30 | 10 | 0.59% |
+| Ko'ngilochar | 26 | 12 | 0.51% |
+| Investitsiya/Trading | 22 | 7 | 0.43% |
+| Davlat xizmatlari | 16 | 5 | 0.32% |
+| Bozor/BSC | 13 | 10 | 0.26% |
+| Go'zallik | 11 | 8 | 0.22% |
+| Sug'urta | 7 | 3 | 0.14% |
+
+### Key Findings — Business Domain Distribution
+- **Largest domain:** Restoran/Ovqatlanish (1628 reviews, 32.19%)
+- The dataset covers **23** distinct business domains — this is a MULTI-DOMAIN dataset
+- Unlike standard ABSA benchmarks (restaurant-only like SemEVAL 2014), our dataset spans restaurants, banks, telecom, healthcare, education, e-commerce, and more
+- **This is a key contribution:** First multi-domain ABSA dataset for Uzbek language
+
+### Predefined ABSA Subcategories per Business Domain
+- Total: **119 subcategories** across **18 domains**
+- These subcategories define the aspect taxonomy for annotation and model training
+
+- **Restoran/Ovqatlanish** — Restaurants, fast food, cafes, national cuisine
+  - `ovqat_sifati`
+  - `xizmat_ko'rsatish`
+  - `narx`
+  - `tozalik`
+  - `muhit`
+  - `tezlik`
+  - `menyu_xilma-xilligi`
+  - `joylashuv`
+  - `porsiya`
+- **Bank/Moliya** — Banks, financial services, loans
+  - `xizmat_ko'rsatish`
+  - `ilova_qulayligi`
+  - `kredit`
+  - `foiz_stavka`
+  - `tezlik`
+  - `xavfsizlik`
+  - `filial`
+  - `qo'llab-quvvatlash`
+  - `karta_xizmati`
+  - `onlayn_xizmat`
+- **To'lov tizimlari** — Mobile payment, fintech, digital wallets
+  - `ilova_qulayligi`
+  - `tezlik`
+  - `xavfsizlik`
+  - `qo'llab-quvvatlash`
+  - `komissiya`
+  - `funksionallik`
+  - `ishonchlilik`
+- **Telekommunikatsiya** — Mobile operators, internet service providers
+  - `internet_sifati`
+  - `aloqa_sifati`
+  - `narx`
+  - `qo'llab-quvvatlash`
+  - `qamrov`
+  - `tezlik`
+  - `ilova_qulayligi`
+- **Elektron tijorat** — Online marketplaces, e-commerce platforms
+  - `mahsulot_sifati`
+  - `yetkazib_berish`
+  - `narx`
+  - `qo'llab-quvvatlash`
+  - `tanlov`
+  - `qaytarish`
+  - `ilova_qulayligi`
+  - `to'lov`
+- **Oziq-ovqat do'konlari** — Supermarkets, grocery stores, retail chains
+  - `mahsulot_sifati`
+  - `narx`
+  - `xizmat_ko'rsatish`
+  - `tozalik`
+  - `tanlov`
+  - `joylashuv`
+  - `navbat`
+- **Tibbiyot/Sog'liqni saqlash** — Hospitals, clinics, pharmacies, healthcare
+  - `shifokor_malakasi`
+  - `xizmat_ko'rsatish`
+  - `narx`
+  - `tozalik`
+  - `diagnostika`
+  - `navbat`
+  - `jihozlar`
+  - `dori`
+  - `qo'llab-quvvatlash`
+- **Ta'lim** — Universities, schools, courses, training centers
+  - `o'qitish_sifati`
+  - `o'qituvchi`
+  - `narx`
+  - `dastur`
+  - `infratuzilma`
+  - `natija`
+  - `sertifikat`
+  - `amaliyot`
+- **Gul/Sovg'a** — Flower shops, gift stores
+  - `sifat`
+  - `narx`
+  - `yetkazib_berish`
+  - `xizmat_ko'rsatish`
+  - `tanlov`
+  - `tezlik`
+- **Sport/Fitnes** — Gyms, fitness centers, sports facilities
+  - `jihozlar`
+  - `murabbiy`
+  - `narx`
+  - `tozalik`
+  - `muhit`
+  - `joylashuv`
+- **Sayohat/Turizm** — Airlines, hotels, travel agencies, resorts
+  - `xizmat_ko'rsatish`
+  - `narx`
+  - `qulaylik`
+  - `tozalik`
+  - `ovqat_sifati`
+  - `joylashuv`
+  - `xodimlar`
+- **Yetkazib berish** — Delivery services, ride-hailing, logistics
+  - `tezlik`
+  - `narx`
+  - `xizmat_ko'rsatish`
+  - `ilova_qulayligi`
+  - `ishonchlilik`
+  - `xavfsizlik`
+- **Go'zallik** — Beauty salons, cosmetics, barbershops
+  - `sifat`
+  - `narx`
+  - `tozalik`
+  - `mutaxassislik`
+  - `muhit`
+- **Kitob/Nashriyot** — Bookstores, publishing houses
+  - `tanlov`
+  - `narx`
+  - `sifat`
+  - `xizmat_ko'rsatish`
+  - `yetkazib_berish`
+- **Texnologiya/Media** — Tech platforms, media, news outlets
+  - `kontent_sifati`
+  - `ilova_qulayligi`
+  - `ishonchlilik`
+  - `reklama`
+  - `qo'llab-quvvatlash`
+- **Transport/Yo'l** — Transport, roads, auto services
+  - `sifat`
+  - `narx`
+  - `xavfsizlik`
+  - `qulaylik`
+  - `tezlik`
+- **Ko'ngilochar** — Entertainment, parks, cinema, theater
+  - `ko'ngilochar_sifati`
+  - `narx`
+  - `xizmat_ko'rsatish`
+  - `muhit`
+  - `tozalik`
+- **Boshqa** — Other / miscellaneous
+  - `sifat`
+  - `narx`
+  - `xizmat_ko'rsatish`
+  - `qo'llab-quvvatlash`
+
+### Rationale for Subcategory Design
+- Subcategories are designed based on:
+  1. Common aspects mentioned in real reviews (observed from data)
+  2. Domain-specific attributes (e.g., `kredit` for banks, `shifokor_malakasi` for healthcare)
+  3. Cross-domain shared aspects (e.g., `narx`, `xizmat_ko'rsatish` appear in most domains)
+- Uzbek-language category names chosen for consistency with Uzbek ABSA task
+- Categories are **hierarchical**: business_category → subcategory → polarity
+
+### Implications for ABSA Fine-tuning
+- The dataset is **predominantly Uzbek in Latin script** (92.78%).
+- Multi-domain nature requires **domain-aware aspect categories** (not a flat list)
+- Predefined subcategories allow:
+  1. Structured annotation of the raw reviews.csv dataset
+  2. Category-aware training (the model learns domain-specific aspects)
+  3. Evaluation per domain (compare model performance across business categories)
+- **Recommendation:** Annotate raw reviews using the predefined subcategory taxonomy, then combine with the existing HuggingFace annotated dataset for a larger, richer training set.
+- **Output files saved:**
+  - `data/raw/absa_subcategories.json` — Full subcategory taxonomy
+  - `data/raw/business_categories.json` — Business→category mapping for all 630 businesses
+
+
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
