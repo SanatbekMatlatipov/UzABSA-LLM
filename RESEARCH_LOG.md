@@ -360,6 +360,58 @@ For paper submission, ensure:
 - [ ] Statistical significance tests (multiple seeds or bootstrap)
 
 
+## LOG 016 — Data Exploration: Language/Script Profiling
+Date: Feb 21, 2026
+
+### Source
+- File: `./data/raw/reviews.csv`
+- Total reviews loaded: **5058**
+- After cleaning (drop NaN/empty `review_text`): **5058**
+
+### Text Statistics
+| Metric | Value |
+|--------|-------|
+| Avg words / review | 13.55 |
+| Avg chars / review | 96.26 |
+| Median words | 11 |
+| Word range | 2–59 |
+| Char range | 19–400 |
+
+### Language/Script Classification Method
+- **Character-level:** Ratio of Cyrillic (U+0400–U+04FF) vs Latin (a-z, ʻ, ʼ) characters.
+  - >70 % Latin → Latin-dominant
+  - >70 % Cyrillic → Cyrillic-dominant
+  - 30–70 % each → Highly Mixed
+- **Word-level (for Cyrillic-dominant texts):**
+  - Presence of Uzbek-specific Cyrillic characters (ў, қ, ғ, ҳ) → Uzbek Cyrillic
+  - High frequency of Russian function words (и, не, на, что, …) → Russian
+  - Fallback heuristic using common Uzbek word list
+
+### Results
+| Language Category | Count | Percentage |
+|-------------------|------:|----------:|
+| Primarily Uzbek (Latin) | 4693 | 92.78% |
+| Primarily Russian (Cyrillic) | 262 | 5.18% |
+| Primarily Uzbek (Cyrillic) | 103 | 2.04% |
+
+### Sample Reviews per Category
+  **Primarily Uzbek (Latin)**:
+  - _Rayhon milliy taomllarida hamma taomlari mazali lekin mijozlarga boʼlgan iliq munosabati menga yoqdi narxlari ham Arzon _…
+  - _Bank bilan online aloqa juda qulay_…
+  **Primarily Russian (Cyrillic)**:
+  - _Тоже хотел рассказать про опыт онлайн-обучения. Начал проходить курс Управление Командами. Во-первых, программа хорошо в_…
+  - _Платформа топовая, все понятно и легка в использовании. Опытные учителя благодаря которым леги и интересно закончил курс_…
+  **Primarily Uzbek (Cyrillic)**:
+  - _Жуда зур авиакомпания. Факат ш компанияда учаман. Сотрудниклар хушмуомула. Обед хр доим бор. Бошка мамлакатдагилардан ха_…
+  - _Мени кизим учшохли нерви бн даволаниб чикти. Бошка жойларда килган муолажалари тасир килмаганди. Яхши хозир кайталамадик_…
+
+### Implications for ABSA Fine-tuning
+- The dataset is **predominantly Uzbek in Latin script** (92.78%).
+- A non-trivial minority of reviews is in **Russian (Cyrillic)**, which affects tokenizer coverage and model selection.
+- Presence of Uzbek-in-Cyrillic texts (legacy Soviet-era orthography) adds further script diversity.
+- **Recommendation:** Consider script-aware preprocessing or filtering for monolingual experiments.
+
+
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
