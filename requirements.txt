@@ -3,13 +3,23 @@
 # =============================================================================
 # Fine-tuning Large Language Models for Uzbek Aspect-Based Sentiment Analysis
 # =============================================================================
+#
+# IMPORTANT: PyTorch must be installed with CUDA 12.4 support separately:
+# 
+# WINDOWS (with NVIDIA GPUs):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#
+# LINUX (with NVIDIA GPUs):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#
+# CPU only (testing/development):
+#   pip install torch torchvision torchaudio
+#
+# The --index-url flag is required to get CUDA-enabled wheels.
+# Do NOT run "pip install -r requirements.txt" alone for GPU training!
+# =============================================================================
 
-# -----------------------------------------------------------------------------
-# Core Deep Learning Framework
-# -----------------------------------------------------------------------------
-torch>=2.1.0
-torchvision>=0.16.0
-torchaudio>=2.1.0
+# (PyTorch packages are installed separately via --index-url, see instructions above)
 
 # -----------------------------------------------------------------------------
 # Hugging Face Ecosystem
@@ -57,6 +67,11 @@ wandb>=0.16.0
 tensorboard>=2.15.0
 
 # -----------------------------------------------------------------------------
+# Visualization & Plotting
+# -----------------------------------------------------------------------------
+matplotlib>=3.8.0
+
+# -----------------------------------------------------------------------------
 # Jupyter & Development
 # -----------------------------------------------------------------------------
 jupyter>=1.0.0
@@ -79,16 +94,61 @@ pytest>=8.0.0
 pytest-cov>=4.1.0
 
 # =============================================================================
-# Installation Notes:
+# Installation Instructions
 # =============================================================================
-# For Unsloth with CUDA support (recommended):
-#   pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
-#   pip install --no-deps "xformers<0.0.27" trl peft accelerate bitsandbytes
 #
-# For CPU-only development:
+# STEP 1: Create & activate virtual environment
+# ============================================
+# Python 3.10+ recommended
+#
+#   Windows (PowerShell):
+#     python -m venv .venv
+#     .\.venv\Scripts\Activate.ps1
+#
+#   Linux/Mac:
+#     python3 -m venv .venv
+#     source .venv/bin/activate
+#
+#
+# STEP 2: Install PyTorch with CUDA 12.4 support (NVIDIA GPUs)
+# ===========================================================
+#
+#   Windows/Linux:
+#     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#
+#   CPU-only (testing):
+#     pip install torch torchvision torchaudio
+#
+#   Verify installation:
+#     python -c "import torch; print(f'CUDA: {torch.cuda.is_available()}, GPUs: {torch.cuda.device_count()}')"
+#
+#
+# STEP 3: Install remaining dependencies
+# ======================================
+#
 #   pip install -r requirements.txt
 #
-# For full GPU training environment:
-#   pip install -r requirements.txt
+#
+# STEP 4: Install Unsloth from GitHub (for optimized LLM training)
+# ===============================================================
+#
 #   pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
+#
+#   If you get permission issues, first ensure pip is updated:
+#     pip install --upgrade pip
+#
+#
+# STEP 5: Verify complete setup
+# ============================
+#
+#   python -c "
+#   import torch
+#   import transformers
+#   from src.training_metrics import TrainingMetricsCallback
+#   print('✓ All imports successful')
+#   print(f'✓ PyTorch {torch.__version__}, CUDA {torch.version.cuda if torch.cuda.is_available() else \"N/A\"}')
+#   print(f'✓ Transformers {transformers.__version__}')
+#   "
+#
 # =============================================================================
+
