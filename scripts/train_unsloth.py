@@ -44,17 +44,32 @@ from src.gpu_config import (
     print_gpu_status,
     recommend_training_config,
 )
+from src.training_metrics import (
+    TrainingMetricsCallback,
+    save_experiment_summary,
+)
 
 # =============================================================================
 # Configure Logging
 # =============================================================================
+# Create log file handler with explicit formatting
+log_filename = f"training_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+formatter = logging.Formatter(log_format)
+
+file_handler = logging.FileHandler(log_filename, mode='w')
+file_handler.setFormatter(formatter)
+file_handler.setLevel(logging.INFO)
+
+stream_handler = logging.StreamHandler(sys.stdout)
+stream_handler.setFormatter(formatter)
+stream_handler.setLevel(logging.INFO)
+
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(sys.stdout),
-        logging.FileHandler(f"training_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"),
-    ]
+    format=log_format,
+    force=True,
+    handlers=[stream_handler, file_handler],
 )
 logger = logging.getLogger(__name__)
 
@@ -361,7 +376,7 @@ def create_trainer(
         logging_steps=config.logging_steps,
         save_steps=config.save_steps,
         save_total_limit=config.save_total_limit,
-        report_to=config.report_to,
+        report_to=["tensorboard"] if config.report_to == "none" else [config.report_to, "tensorboard"],
         
         # Training hyperparameters
         learning_rate=config.learning_rate,
@@ -390,6 +405,9 @@ def create_trainer(
         max_grad_norm=1.0,
     )
     
+    # Create metrics callback for research-grade logging
+    metrics_callback = TrainingMetricsCallback(output_dir=str(output_dir))
+    
     # Create trainer
     trainer = SFTTrainer(
         model=model,
@@ -400,10 +418,11 @@ def create_trainer(
         dataset_text_field="text",  # Column containing formatted text
         max_seq_length=config.max_seq_length,
         packing=False,  # Set to True for efficient packing of short sequences
+        callbacks=[metrics_callback],
     )
     
     logger.info("SFTTrainer created successfully!")
-    return trainer
+    return trainer, metrics_callback
 
 
 # =============================================================================
@@ -519,7 +538,7 @@ def train(
     
     # Step 4: Create trainer
     logger.info("\n[Step 4/5] Creating trainer...")
-    trainer = create_trainer(
+    trainer, metrics_callback = create_trainer(
         model=model,
         tokenizer=tokenizer,
         train_dataset=train_dataset,
@@ -546,6 +565,20 @@ def train(
     logger.info("-" * 70)
     logger.info("Training complete!")
     logger.info(f"Train loss: {train_result.training_loss:.4f}")
+    logger.info(f"Total steps: {train_result.global_step}")
+    
+    # Log training curves summary
+    curves_summary = metrics_callback.get_summary()
+    if curves_summary:
+        logger.info("\nTraining Curves Summary:")
+        logger.info(f"  Initial loss: {curves_summary.get('initial_loss', 'N/A')}")
+        logger.info(f"  Final loss:   {curves_summary.get('final_loss', 'N/A')}")
+        logger.info(f"  Min loss:     {curves_summary.get('min_loss', 'N/A')}")
+        logger.info(f"  Loss reduction: {curves_summary.get('loss_reduction_pct', 'N/A')}%")
+        if 'best_eval_loss' in curves_summary:
+            logger.info(f"  Best eval loss: {curves_summary['best_eval_loss']} (step {curves_summary['best_eval_step']})")
+        if 'total_training_time_min' in curves_summary:
+            logger.info(f"  Total time: {curves_summary['total_training_time_min']} min")
     
     # Save the model
     logger.info("\nSaving model...")
@@ -564,9 +597,34 @@ def train(
         save_method="merged",
     )
     
+    # Save experiment summary JSON (for paper reproducibility)
+    dataset_info = {
+        "path": dataset_path,
+        "train_examples": len(train_dataset),
+        "eval_examples": len(eval_dataset) if eval_dataset else 0,
+    }
+    save_experiment_summary(
+        output_dir=config.output_dir,
+        config=config,
+        train_result=train_result,
+        metrics_callback=metrics_callback,
+        dataset_info=dataset_info,
+    )
+    
+    # Generate GPU memory plot
+    metrics_callback.plot_gpu_memory()
+    
     logger.info("=" * 70)
     logger.info("Fine-tuning complete!")
     logger.info(f"Model saved to: {config.output_dir}")
+    logger.info(f"Outputs in {config.output_dir}:")
+    logger.info(f"  lora_adapters/     — LoRA adapter weights")
+    logger.info(f"  merged_model/      — Full merged model (for inference)")
+    logger.info(f"  training_history.json  — Per-step metrics")
+    logger.info(f"  training_history.csv   — Metrics as CSV")
+    logger.info(f"  training_curves.png    — Loss curves plot")
+    logger.info(f"  lr_schedule.png        — Learning rate schedule")
+    logger.info(f"  experiment_summary.json — Full experiment config + results")
     logger.info("=" * 70)
     
     return trainer

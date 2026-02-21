@@ -68,7 +68,8 @@ def get_gpu_info() -> Dict[int, Dict[str, any]]:
             "memory_gb": memory_gb,
             "sm_count": props.multi_processor_count,
             "total_memory_bytes": props.total_memory,
-            "max_threads_per_block": props.max_threads_per_block,
+            "major": props.major,  # Compute capability major version
+            "minor": props.minor,  # Compute capability minor version
         }
     
     return gpu_info
@@ -91,7 +92,7 @@ def print_gpu_status():
         logger.info(f"\nGPU {gpu_id}: {info['name']}")
         logger.info(f"  Memory: {info['memory_gb']:.1f} GB")
         logger.info(f"  SMs: {info['sm_count']}")
-        logger.info(f"  Max threads/block: {info['max_threads_per_block']}")
+        logger.info(f"  Compute Capability: {info['major']}.{info['minor']}")
         total_memory += info['memory_gb']
     
     logger.info(f"\nTotal GPU Memory: {total_memory:.1f} GB")

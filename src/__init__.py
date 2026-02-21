@@ -43,6 +43,12 @@ from .gpu_config import (
     estimate_model_memory,
 )
 
+from .training_metrics import (
+    TrainingMetricsCallback,
+    save_experiment_summary,
+    plot_model_comparison,
+)
+
 # Lazy imports for optional dependencies
 def __getattr__(name):
     """Lazy import for inference and evaluation modules."""
@@ -72,6 +78,16 @@ __all__ = [
     "convert_semeval_to_instruction_format",
     "convert_dataset",
     "analyze_converted_dataset",
+    # GPU config
+    "get_gpu_info",
+    "print_gpu_status",
+    "recommend_training_config",
+    "get_batch_size_recommendations",
+    "estimate_model_memory",
+    # Training metrics
+    "TrainingMetricsCallback",
+    "save_experiment_summary",
+    "plot_model_comparison",
     # Inference (lazy loaded)
     "load_model",
     "extract_aspects",

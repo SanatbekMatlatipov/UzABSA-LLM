@@ -38,15 +38,24 @@ from src.format_converter import analyze_converted_dataset, convert_dataset
 # =============================================================================
 # Configure Logging
 # =============================================================================
+# Create log file handler with explicit formatting and flushing
+log_filename = f"data_prep_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+formatter = logging.Formatter(log_format)
+
+file_handler = logging.FileHandler(log_filename, mode='w')
+file_handler.setFormatter(formatter)
+file_handler.setLevel(logging.INFO)
+
+stream_handler = logging.StreamHandler(sys.stdout)
+stream_handler.setFormatter(formatter)
+stream_handler.setLevel(logging.INFO)
+
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(sys.stdout),
-        logging.FileHandler(
-            f"data_prep_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
-        ),
-    ],
+    format=log_format,
+    force=True,
+    handlers=[stream_handler, file_handler],
 )
 logger = logging.getLogger(__name__)
 

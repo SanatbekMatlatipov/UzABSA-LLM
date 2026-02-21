@@ -1,0 +1,12 @@
+{
+  "total_examples": 10,
+  "total_aspects": 22,
+  "avg_aspects_per_text": 2.2,
+  "avg_text_length_words": 5.1,
+  "polarity_distribution": {
+    "positive": 16,
+    "negative": 2,
+    "neutral": 4
+  },
+  "examples_with_aspects": 10
+}
