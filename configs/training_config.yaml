@@ -1,0 +1,199 @@
+# =============================================================================
+# UzABSA-LLM Training Configuration
+# =============================================================================
+# This YAML file contains all configurable parameters for fine-tuning.
+# Copy and modify this file for different experiments.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Model Configuration
+# -----------------------------------------------------------------------------
+model:
+  # Model identifier (use Unsloth 4-bit quantized models for efficiency)
+  name: "unsloth/Qwen2.5-7B-Instruct-bnb-4bit"
+  
+  # Maximum sequence length for input/output
+  max_seq_length: 2048
+  
+  # Load model in 4-bit quantization (recommended for QLoRA)
+  load_in_4bit: true
+  
+  # Data type (null for auto-detection, or specify: float16, bfloat16)
+  dtype: null
+
+# -----------------------------------------------------------------------------
+# LoRA Configuration
+# -----------------------------------------------------------------------------
+lora:
+  # LoRA rank - higher = more parameters, more expressiveness
+  # Recommended: 8 (lightweight), 16 (balanced), 32 (maximum)
+  r: 16
+  
+  # LoRA alpha - scaling factor, typically 2x the rank
+  alpha: 32
+  
+  # Dropout probability for LoRA layers
+  dropout: 0.05
+  
+  # Target modules for LoRA adaptation
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  
+  # Bias training: "none", "all", or "lora_only"
+  bias: "none"
+  
+  # Use gradient checkpointing: "unsloth" (optimized), true, or false
+  use_gradient_checkpointing: "unsloth"
+
+# -----------------------------------------------------------------------------
+# Training Configuration
+# -----------------------------------------------------------------------------
+training:
+  # Learning rate (2e-4 is typical for LoRA fine-tuning)
+  learning_rate: 2.0e-4
+  
+  # Batch size per GPU
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  
+  # Gradient accumulation steps (effective batch = batch_size * grad_accum)
+  gradient_accumulation_steps: 4
+  
+  # Training duration
+  # Set max_steps > 0 to use step-based training
+  # Set max_steps = -1 to use epoch-based training
+  max_steps: 1000
+  num_train_epochs: 3
+  
+  # Learning rate schedule
+  warmup_ratio: 0.1
+  lr_scheduler_type: "cosine"  # Options: linear, cosine, cosine_with_restarts
+  
+  # Regularization
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # Optimizer: "adamw_8bit" (memory efficient), "adamw_torch", "paged_adamw_8bit"
+  optim: "adamw_8bit"
+  
+  # Precision: Use bf16 if supported, otherwise fp16
+  fp16: false
+  bf16: true
+
+# -----------------------------------------------------------------------------
+# Dataset Configuration
+# -----------------------------------------------------------------------------
+dataset:
+  # Path to processed dataset (local path or HuggingFace dataset ID)
+  path: "./data/processed"
+  
+  # Text column name in the formatted dataset
+  text_field: "text"
+  
+  # Validation split ratio (only used if no validation split exists)
+  val_size: 0.1
+  
+  # Number of workers for data loading
+  num_proc: 4
+  
+  # Sequence packing (set true for efficient short sequence training)
+  packing: false
+
+# -----------------------------------------------------------------------------
+# Output Configuration
+# -----------------------------------------------------------------------------
+output:
+  # Base output directory
+  dir: "./outputs"
+  
+  # Run name (null for auto-generated timestamp)
+  run_name: null
+  
+  # Checkpoint saving
+  save_steps: 100
+  save_total_limit: 3
+  
+  # Save methods: lora (adapters only), merged (full model), gguf (llama.cpp)
+  save_method: "lora"
+  save_merged: true
+
+# -----------------------------------------------------------------------------
+# Logging Configuration
+# -----------------------------------------------------------------------------
+logging:
+  # Logging frequency
+  logging_steps: 10
+  
+  # Experiment tracking: "wandb", "tensorboard", "none"
+  report_to: "wandb"
+  
+  # WandB settings
+  wandb_project: "uzabsa-llm"
+  wandb_entity: null  # Your WandB username or team name
+
+# -----------------------------------------------------------------------------
+# Evaluation Configuration
+# -----------------------------------------------------------------------------
+evaluation:
+  # Evaluation strategy: "steps", "epoch", "no"
+  strategy: "steps"
+  
+  # Evaluation frequency (when strategy="steps")
+  eval_steps: 100
+  
+  # Load best model at end based on eval metric
+  load_best_model_at_end: true
+  
+  # Metric for best model selection
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+
+# -----------------------------------------------------------------------------
+# Miscellaneous
+# -----------------------------------------------------------------------------
+misc:
+  # Random seed for reproducibility
+  seed: 42
+  
+  # Enable deterministic algorithms (slower but reproducible)
+  deterministic: false
+  
+  # Resume from checkpoint (path to checkpoint or null)
+  resume_from_checkpoint: null
+
+# =============================================================================
+# Model Presets
+# =============================================================================
+# Uncomment one of these sections to use a preset configuration
+# =============================================================================
+
+# --- Qwen 2.5 7B (Recommended) ---
+# model:
+#   name: "unsloth/Qwen2.5-7B-Instruct-bnb-4bit"
+#   max_seq_length: 2048
+
+# --- Qwen 2.5 14B (More capable, needs more VRAM) ---
+# model:
+#   name: "unsloth/Qwen2.5-14B-Instruct-bnb-4bit"
+#   max_seq_length: 2048
+
+# --- Llama 3 8B ---
+# model:
+#   name: "unsloth/llama-3-8b-Instruct-bnb-4bit"
+#   max_seq_length: 2048
+
+# --- DeepSeek 7B ---
+# model:
+#   name: "unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit"
+#   max_seq_length: 2048
+
+# --- Mistral 7B ---
+# model:
+#   name: "unsloth/mistral-7b-instruct-v0.3-bnb-4bit"
+#   max_seq_length: 2048
