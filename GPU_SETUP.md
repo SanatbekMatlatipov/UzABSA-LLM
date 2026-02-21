@@ -40,6 +40,9 @@ The UzABSA-LLM project is optimized for GPU-accelerated training on NVIDIA hardw
 
 # Option 2: Using conda (easier)
 conda install -c nvidia cuda-toolkit cuda-runtime
+
+# Activate .venv first
+.venv\Scripts\activate
 ```
 
 **Linux:**

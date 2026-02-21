@@ -86,9 +86,9 @@ cd UzABSA-LLM
 
 ```bash
 # Using venv
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate     # Windows
 
 # Or using conda
 conda create -n uzabsa python=3.10

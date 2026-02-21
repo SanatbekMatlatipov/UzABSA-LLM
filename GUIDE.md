@@ -2,6 +2,17 @@
 
 Complete guide for working with raw reviews, annotated datasets, and training models.
 
+## Quick Setup
+
+```bash
+# Activate virtual environment
+.venv\Scripts\activate     # Windows
+source .venv/bin/activate # Linux/Mac
+
+# Install dependencies (if not already done)
+pip install -r requirements.txt
+```
+
 ## Dataset Overview
 
 ### Annotations Structure (SemEVAL 2014)
