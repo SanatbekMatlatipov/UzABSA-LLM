@@ -36,6 +36,15 @@ from typing import Optional, Dict, Any
 import torch
 from datasets import load_from_disk
 
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from src.gpu_config import (
+    get_gpu_info,
+    print_gpu_status,
+    recommend_training_config,
+)
+
 # =============================================================================
 # Configure Logging
 # =============================================================================
@@ -567,6 +576,31 @@ def train(
 # CLI Interface
 # =============================================================================
 
+def recommend_batch_size_for_gpu():
+    """Recommend batch size based on available GPU memory."""
+    if not torch.cuda.is_available():
+        return 1
+    
+    total_memory_gb = sum(
+        torch.cuda.get_device_properties(i).total_memory / 1024**3
+        for i in range(torch.cuda.device_count())
+    )
+    
+    # RTX A6000: 46GB → batch_size 4-8
+    # RTX A100: 40GB → batch_size 4-6
+    # RTX 4090: 24GB → batch_size 2-4
+    # RTX 3090: 24GB → batch_size 1-2
+    
+    if total_memory_gb >= 90:  # 2+ RTX A6000
+        return 8
+    elif total_memory_gb >= 40:  # 1 RTX A6000 or 1 A100
+        return 4
+    elif total_memory_gb >= 24:  # RTX 4090
+        return 2
+    else:
+        return 1
+
+
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
@@ -592,6 +626,26 @@ def parse_args():
         type=int,
         default=2048,
         help="Maximum sequence length",
+    )
+    
+    # GPU arguments
+    parser.add_argument(
+        "--device-map",
+        type=str,
+        default="auto",
+        choices=["auto", "cuda:0", "cuda:1", "cpu"],
+        help="Device to use for training (auto for multi-GPU)",
+    )
+    parser.add_argument(
+        "--gpu-id",
+        type=int,
+        default=None,
+        help="Specific GPU ID to use (0, 1, 2, 3, etc)",
+    )
+    parser.add_argument(
+        "--multi-gpu",
+        action="store_true",
+        help="Enable multi-GPU training with DistributedDataParallel",
     )
     
     # Dataset arguments
@@ -684,9 +738,70 @@ def parse_args():
     return parser.parse_args()
 
 
+def check_gpu_availability():
+    """Check available GPUs and their memory."""
+    if torch.cuda.is_available():
+        num_gpus = torch.cuda.device_count()
+        logger.info(f"Found {num_gpus} GPU(s) available:")
+        for i in range(num_gpus):
+            props = torch.cuda.get_device_properties(i)
+            memory_gb = props.total_memory / 1024**3
+            logger.info(f"  GPU {i}: {props.name} ({memory_gb:.1f} GB)")
+        return num_gpus
+    else:
+        logger.warning("No GPUs found. Training will be slow on CPU.")
+        return 0
+
+
 def main():
     """Main entry point for the training script."""
     args = parse_args()
+    
+    # =========================================================================
+    # GPU Configuration and Optimization
+    # =========================================================================
+    
+    logger.info("=" * 80)
+    logger.info("GPU Configuration and Setup")
+    logger.info("=" * 80)
+    
+    # Check GPU availability
+    num_gpus = check_gpu_availability()
+    
+    # Get detailed GPU info
+    gpu_info = get_gpu_info()
+    if gpu_info:
+        print_gpu_status()
+    
+    # Get GPU-specific training recommendations
+    if gpu_info:
+        gpu_recommendations = recommend_training_config(gpu_info)
+        logger.info("\nRecommended Training Configuration:")
+        for key, value in gpu_recommendations.items():
+            if key != "note":
+                logger.info(f"  {key}: {value}")
+        logger.info(f"  Note: {gpu_recommendations['note']}")
+        
+        # Override batch size if not explicitly set and using defaults
+        if args.batch_size == 2:  # Default value
+            recommended_batch = gpu_recommendations.get("batch_size", 2)
+            logger.info(f"  Auto-adjusting batch_size from 2 to {recommended_batch}")
+            args.batch_size = recommended_batch
+    
+    # Handle GPU selection arguments
+    if args.gpu_id is not None:
+        if args.gpu_id >= torch.cuda.device_count():
+            logger.warning(f"GPU {args.gpu_id} not found (only {torch.cuda.device_count()} GPUs available)")
+        else:
+            os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu_id)
+            logger.info(f"Using GPU {args.gpu_id}")
+            args.device_map = f"cuda:0"  # Map to first available after CUDA_VISIBLE_DEVICES
+    
+    if args.multi_gpu:
+        logger.info("Multi-GPU training mode enabled")
+        # Will be handled by DistributedDataParallel in trainer
+    
+    logger.info("=" * 80)
     
     # Resolve model name
     if args.model_path:

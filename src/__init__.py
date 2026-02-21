@@ -6,6 +6,7 @@ Uzbek Aspect-Based Sentiment Analysis with Large Language Models.
 
 This package contains modules for:
 - Data preparation and formatting for LLM fine-tuning
+- Dataset loading and utilities (raw + annotated)
 - Model training utilities
 - Evaluation metrics and benchmarking
 - Inference pipelines
@@ -18,6 +19,28 @@ from .data_prep import (
     load_uzbek_absa_dataset,
     format_for_instruction_tuning,
     create_train_val_split,
+)
+
+from .dataset_utils import (
+    load_raw_reviews_csv,
+    load_annotated_absa_dataset,
+    clean_raw_reviews,
+    analyze_dataset_stats,
+    merge_raw_and_annotated,
+)
+
+from .format_converter import (
+    convert_semeval_to_instruction_format,
+    convert_dataset,
+    analyze_converted_dataset,
+)
+
+from .gpu_config import (
+    get_gpu_info,
+    print_gpu_status,
+    recommend_training_config,
+    get_batch_size_recommendations,
+    estimate_model_memory,
 )
 
 # Lazy imports for optional dependencies
@@ -39,6 +62,16 @@ __all__ = [
     "load_uzbek_absa_dataset",
     "format_for_instruction_tuning",
     "create_train_val_split",
+    # Dataset utilities
+    "load_raw_reviews_csv",
+    "load_annotated_absa_dataset",
+    "clean_raw_reviews",
+    "analyze_dataset_stats",
+    "merge_raw_and_annotated",
+    # Format conversion
+    "convert_semeval_to_instruction_format",
+    "convert_dataset",
+    "analyze_converted_dataset",
     # Inference (lazy loaded)
     "load_model",
     "extract_aspects",

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-02-21T16:24:27.474786",
+  "total_examples": 99,
+  "train_examples": 89,
+  "val_examples": 10,
+  "val_size": 0.1,
+  "conversion_stats": {
+    "total_examples": 99,
+    "total_aspects": 250,
+    "avg_aspects_per_text": 2.53,
+    "avg_text_length_words": 6.42,
+    "polarity_distribution": {
+      "positive": 160,
+      "negative": 41,
+      "neutral": 49
+    },
+    "examples_with_aspects": 99
+  },
+  "source": "Sanatbek/aspect-based-sentiment-analysis-uzbek"
+}

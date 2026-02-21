@@ -10,7 +10,9 @@
   <a href="#installation">Installation</a> •
   <a href="#quick-start">Quick Start</a> •
   <a href="#usage">Usage</a> •
-  <a href="#models">Models</a>
+  <a href="#models">Models</a> •
+  <a href="GPU_SETUP.md">GPU Setup</a> •
+  <a href="GUIDE.md">Quick Reference</a>
 </p>
 
 ---
@@ -19,7 +21,9 @@
 
 UzABSA-LLM is a project for fine-tuning open-source Large Language Models (LLMs) on Uzbek Aspect-Based Sentiment Analysis (ABSA) tasks. The goal is to train models that can extract aspect terms, categories, and sentiment polarities from Uzbek text reviews.
 
-**Dataset**: [Sanatbek/aspect-based-sentiment-analysis-uzbek](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek) - 6,000 annotated Uzbek reviews
+**Datasets**:
+1. **Annotated ABSA Dataset**: [Sanatbek/aspect-based-sentiment-analysis-uzbek](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek) - 6,000 manually annotated reviews following SemEVAL 2014 task format
+2. **Raw Reviews**: sharh.commeta.uz - 5,000+ unannotated reviews for future semi-supervised learning
 
 **Key Technologies**:
 - 🚀 **Unsloth** - 2x faster training with 80% less memory
@@ -102,7 +106,21 @@ pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
 pip install --no-deps "xformers<0.0.27" trl peft accelerate bitsandbytes
 ```
 
-### Step 4: (Optional) Setup WandB
+### Step 4: (Optional) GPU Configuration
+
+For optimal performance with NVIDIA GPUs (especially RTX A6000):
+
+```bash
+# Check available GPUs
+python -m src.gpu_config --check
+
+# Get training recommendations for your hardware
+python -m src.gpu_config --recommend
+```
+
+See [GPU_SETUP.md](GPU_SETUP.md) for detailed GPU configuration, multi-GPU training, and optimization guides.
+
+### Step 5: (Optional) Setup WandB
 
 ```bash
 wandb login
@@ -110,7 +128,23 @@ wandb login
 
 ## Quick Start
 
-### 1. Prepare the Dataset
+### 1. Explore Datasets
+
+Examine your raw reviews and annotated ABSA dataset:
+
+```bash
+python scripts/explore_datasets.py --raw-file ./data/raw/reviews.csv --analyze --merge
+```
+
+This will:
+- Load your raw reviews from sharh.commeta.uz
+- Load the annotated ABSA dataset from Hugging Face
+- Show statistics for both
+- Attempt to match raw reviews with annotated examples
+
+### 2. Prepare the Dataset
+
+Format the annotated dataset for instruction tuning:
 
 ```bash
 python -m src.data_prep --output-dir ./data/processed --val-size 0.1
@@ -122,8 +156,9 @@ This will:
 - Create train/validation splits
 - Save to `./data/processed/`
 
-### 2. Run Training
+### 3. Run Training
 
+**Basic training:**
 ```bash
 python scripts/train_unsloth.py \
     --model qwen2.5-7b \
@@ -134,7 +169,30 @@ python scripts/train_unsloth.py \
     --output-dir ./outputs
 ```
 
-### 3. Run Inference
+**GPU-optimized training (RTX A6000):**
+```bash
+# Single GPU
+python scripts/train_unsloth.py \
+    --model qwen2.5-7b \
+    --dataset ./data/processed \
+    --gpu-id 0 \
+    --batch-size 8 \
+    --grad-accum 2 \
+    --max-steps 1000
+
+# Multiple GPUs (recommended for faster training)
+python scripts/train_unsloth.py \
+    --model qwen2.5-7b \
+    --dataset ./data/processed \
+    --multi-gpu \
+    --batch-size 8 \
+    --grad-accum 2 \
+    --max-steps 1000
+```
+
+See [GPU_SETUP.md](GPU_SETUP.md) for detailed GPU configuration and optimization.
+
+### 4. Run Inference
 
 ```python
 from src.inference import load_model, extract_aspects
@@ -163,8 +221,11 @@ python scripts/train_unsloth.py --help
 | `--lora-r` | 16 | LoRA rank |
 | `--lora-alpha` | 32 | LoRA alpha |
 | `--learning-rate` | 2e-4 | Learning rate |
-| `--batch-size` | 2 | Per-device batch size |
+| `--batch-size` | 2 | Per-device batch size (auto-detected if not set) |
 | `--grad-accum` | 4 | Gradient accumulation steps |
+| `--gpu-id` | None | Specific GPU ID to use (0, 1, 2, 3, etc.) |
+| `--device-map` | `auto` | Device mapping strategy (auto, cuda:0, cuda:1, cpu) |
+| `--multi-gpu` | False | Enable multi-GPU DistributedDataParallel training |
 | `--max-steps` | 1000 | Max training steps (-1 for epochs) |
 | `--epochs` | 3 | Number of epochs (if max-steps=-1) |
 | `--output-dir` | `./outputs` | Output directory |
@@ -223,6 +284,58 @@ Metrics:
 - Aspect Term Extraction (F1)
 - Aspect Category Classification (Accuracy)
 - Sentiment Polarity Classification (Accuracy, F1)
+
+## Working with Raw Datasets
+
+You can work with raw reviews alongside the annotated dataset:
+
+```python
+from src.dataset_utils import (
+    load_raw_reviews_csv,
+    load_annotated_absa_dataset,
+    clean_raw_reviews,
+    analyze_dataset_stats,
+    merge_raw_and_annotated,
+)
+
+# Load raw reviews from sharh.commeta.uz
+raw_df = load_raw_reviews_csv("./data/raw/reviews.csv")
+print(f"Loaded {len(raw_df)} reviews")
+
+# Clean the reviews
+raw_df = clean_raw_reviews(raw_df)
+
+# Analyze statistics
+stats = analyze_dataset_stats(raw_df, text_field="review_text")
+print(f"Average words per review: {stats['avg_words']}")
+
+# Load annotated dataset
+annotated = load_annotated_absa_dataset(split="train")
+
+# Merge raw and annotated by matching text
+merged_df, matched_idx = merge_raw_and_annotated(
+    raw_df,
+    annotated,
+    raw_text_column="review_text",
+    annotated_text_column="text",
+    match_type="fuzzy"
+)
+```
+
+### Dataset Utilities CLI
+
+Explore datasets from the command line:
+
+```bash
+# Load and inspect raw reviews
+python -m src.dataset_utils load-raw --csv ./data/raw/reviews.csv --clean
+
+# Load and inspect annotated dataset
+python -m src.dataset_utils load-annotated --inspect
+
+# Analyze dataset statistics
+python -m src.dataset_utils analyze --csv ./data/raw/reviews.csv --text-column review_text
+```
 
 ## Contributing
 
