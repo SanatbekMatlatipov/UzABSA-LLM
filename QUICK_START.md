@@ -149,6 +149,8 @@ python scripts/train_unsloth.py --multi-gpu --model qwen2.5-7b --dataset ./data/
 | **Very slow training** | Check if CUDA available: `python -c "import torch; print(torch.cuda.is_available())"` |
 | **Module not found** | Make sure you're in `.venv`: `python -c "import sys; print(sys.prefix)"` |
 | **Unsloth install fails** | Try: `pip install --upgrade pip` then retry |
+| **"AttrsDescriptor" error** | Triton version mismatch: `pip install triton-windows==3.2.0.post19` |
+| **Empty training log files** | Likely an import crash — check with: `python -c "from unsloth import FastLanguageModel"` |
 
 See [INSTALL_AND_RUN.md](INSTALL_AND_RUN.md) for detailed troubleshooting.
 

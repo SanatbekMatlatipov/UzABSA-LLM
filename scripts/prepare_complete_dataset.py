@@ -129,8 +129,8 @@ def main():
             # Combine all splits
             dataset = full_dataset[list(full_dataset.keys())[0]]
         
-        # Limit examples if requested
-        if args.max_examples:
+        # Limit examples if requested (-1 or None means use all)
+        if args.max_examples is not None and args.max_examples > 0:
             dataset = dataset.select(range(min(args.max_examples, len(dataset))))
             logger.info(f"Limited to {len(dataset)} examples")
         else:

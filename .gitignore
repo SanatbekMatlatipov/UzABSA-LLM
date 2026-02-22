@@ -1,3 +1,7 @@
+wandb/*
+unsloth_compiled_cache/*
+outputs/my_run/*
+!outputs/my_run/README.md
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -57,6 +61,8 @@ cover/
 
 # Django stuff:
 *.log
+!training-qwen27-7b_20260222_001628.log
+!data_prep_20260221_212145
 local_settings.py
 db.sqlite3
 db.sqlite3-journal

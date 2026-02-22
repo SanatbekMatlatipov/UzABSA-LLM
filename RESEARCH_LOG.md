@@ -647,8 +647,83 @@ Date: Feb 21, 2026
   - `data/raw/business_categories.json` — Business→category mapping for all 630 businesses
 
 
+## LOG 018 — Experiment 1 Result: Qwen 2.5-7B Fine-tuning (COMPLETED)
+Date: Feb 22, 2026
+
+### Run Details
+- **Run ID:** `uzabsa_qwen2.5-7b_20260222_001629`
+- **Model:** `unsloth/Qwen2.5-7B-Instruct-bnb-4bit` (4-bit NF4)
+- **GPU:** NVIDIA RTX A6000 (48GB), single GPU
+- **Status:** ✅ **COMPLETED SUCCESSFULLY** (1000/1000 steps)
+
+### Training Configuration Used
+| Parameter | Value |
+|-----------|-------|
+| LoRA rank (r) | 16 |
+| LoRA alpha | 32 |
+| LoRA dropout | 0.05 |
+| Learning rate | 2e-4 (cosine schedule) |
+| Batch size (per device) | 4 |
+| Gradient accumulation | 4 |
+| Effective batch size | 16 |
+| Max steps | 1000 |
+| Epochs completed | 2.92 / 3 |
+| Optimizer | AdamW 8-bit |
+| Precision | BF16 |
+
+### Training Results
+| Metric | Value |
+|--------|-------|
+| Initial train loss | 3.0409 |
+| Final train loss | 0.4010 |
+| Min train loss | 0.2422 |
+| **Loss reduction** | **86.8%** |
+| Best eval loss | 0.3656 (step 1000) |
+| Training runtime | 2,942 s (~49 min compute) |
+| Total wall time | 282.6 min (~4.7 hr incl. eval/save) |
+| Samples/sec | 5.44 |
+| GPU memory allocated | ~5.4 GB |
+| GPU memory reserved | ~7.8 GB |
+
+### Loss Curve Observations
+- Rapid initial convergence: loss drops from 3.04 → 0.58 in first 50 steps
+- Steady decrease through training: 0.45 → 0.24 (min at late steps)
+- Eval loss consistently improving: 0.436 (step 100) → 0.366 (step 1000)
+- No signs of overfitting — eval loss still decreasing at termination
+- **Plots saved:** `training_curves.png`, `lr_schedule.png`, `gpu_memory.png`
+
+![Training Curves](outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/training_curves.png)
+![LR Schedule](outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/lr_schedule.png)
+![GPU Memory](outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/gpu_memory.png)
+
+### Saved Artifacts
+- `lora_adapters/` — LoRA adapter weights (adapter_model.safetensors)
+- `merged_model/` — Full merged 16-bit model (4 safetensors shards)
+- `checkpoint-800/`, `checkpoint-900/`, `checkpoint-1000/` — Training checkpoints
+- `experiment_summary.json` — Full reproducibility metadata
+- W&B run: `9dvndnmk` (project: uzabsa-llm)
+
+### Dataset Used for Training
+- Source: `Sanatbek/aspect-based-sentiment-analysis-uzbek` (HuggingFace)
+- **Train:** 5,480 examples | **Validation:** 609 examples (90/10 split)
+- Format: ChatML instruction-response pairs (see LOG 003)
+- Input → Uzbek review text with ABSA extraction instruction
+- Output → Structured JSON with aspects, categories, polarities
+
+### Next Steps
+- [ ] Run ABSA evaluation on Qwen 2.5-7B (P/R/F1 for ATE and ASC)
+- [ ] Train remaining models: Llama 3.1-8B, DeepSeek-7B, Mistral-7B
+- [ ] Compare results across architectures (Experiment 1 completion)
+- [ ] Begin work on annotating raw reviews.csv with fine-tuned model
+
+### Note on Failed Prior Runs
+- Runs 1–4 (`_233911`, `_235743`, `_000337`, `_000839`) failed early due to debugging issues
+- Run in `my_runcopilot-debug/` was also a debugging attempt
+- All used same Qwen 2.5-7B model — only the 5th run (`_001629`) completed successfully
+
+
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
-# Next: Run experiments → LOG 016+ with actual results
+# Next: Complete model comparison (Exp 1), then LoRA ablation (Exp 2)
 # ======================================================================

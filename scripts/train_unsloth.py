@@ -33,6 +33,25 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional, Dict, Any
 
+# Unsloth only supports single-GPU training (no DataParallel).
+# With multiple GPUs visible, transformers wraps the model in nn.DataParallel
+# which is incompatible with 4-bit quantized LoRA models and causes
+# "'int' object has no attribute 'mean'" errors.
+# Must be set BEFORE torch initializes CUDA.
+# Allow --gpu-id to select a specific GPU (pre-parse before argparse runs)
+if "CUDA_VISIBLE_DEVICES" not in os.environ:
+    _gpu_id = "0"
+    for i, arg in enumerate(sys.argv):
+        if arg == "--gpu-id" and i + 1 < len(sys.argv):
+            _gpu_id = sys.argv[i + 1]
+    os.environ["CUDA_VISIBLE_DEVICES"] = _gpu_id
+
+# Save the original builtins.__import__ BEFORE unsloth patches it
+# (unsloth_zoo/temporary_patches/deepseek_v3_moe.py replaces it globally,
+#  which breaks torch.compile for all non-DeepSeek models)
+import builtins
+_original_import = builtins.__import__
+
 import torch
 from datasets import load_from_disk
 
@@ -237,6 +256,13 @@ def load_model_and_tokenizer(config: TrainingConfig):
         load_in_4bit=config.load_in_4bit,
     )
     
+    # Restore original builtins.__import__ that was monkey-patched by
+    # unsloth_zoo deepseek_v3_moe.py — not needed for non-DeepSeek models
+    # and causes torch._dynamo graph breaks
+    import builtins
+    builtins.__import__ = _original_import
+    logger.info("Restored builtins.__import__ (removed deepseek_v3_moe hook)")
+    
     logger.info("Model loaded successfully!")
     logger.info(f"Model dtype: {model.dtype}")
     logger.info(f"Tokenizer vocab size: {len(tokenizer)}")
@@ -396,7 +422,7 @@ def create_trainer(
         
         # Misc
         seed=config.seed,
-        evaluation_strategy="steps" if eval_dataset is not None else "no",
+        eval_strategy="steps" if eval_dataset is not None else "no",
         eval_steps=config.save_steps if eval_dataset is not None else None,
         load_best_model_at_end=eval_dataset is not None,
         
@@ -848,12 +874,10 @@ def main():
     
     # Handle GPU selection arguments
     if args.gpu_id is not None:
-        if args.gpu_id >= torch.cuda.device_count():
-            logger.warning(f"GPU {args.gpu_id} not found (only {torch.cuda.device_count()} GPUs available)")
-        else:
-            os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu_id)
-            logger.info(f"Using GPU {args.gpu_id}")
-            args.device_map = f"cuda:0"  # Map to first available after CUDA_VISIBLE_DEVICES
+        logger.info(f"GPU {args.gpu_id} was requested via --gpu-id (CUDA_VISIBLE_DEVICES was set at startup)")
+    
+    logger.info(f"Using GPU: CUDA_VISIBLE_DEVICES={os.environ.get('CUDA_VISIBLE_DEVICES', 'not set')}")
+    logger.info(f"Visible GPUs: {torch.cuda.device_count()}")
     
     if args.multi_gpu:
         logger.info("Multi-GPU training mode enabled")
@@ -902,4 +926,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        logger.error(f"Training failed with error: {e}", exc_info=True)
+        sys.exit(1)
