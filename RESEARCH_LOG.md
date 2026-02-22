@@ -32,12 +32,18 @@ Date: Feb 2026
   - `text`: Uzbek review sentence
   - `aspect_terms`: list of {term, polarity, from, to} — character-level spans
   - `aspect_categories`: list of {category, polarity}
-- Polarity labels: `positive`, `negative`, `neutral`
+- Polarity labels: `positive`, `negative`, `neutral`, `conflict`
 - Statistics (measured):
+  - Total aspect terms: **7,412** | Total aspect categories: **7,724**
   - Avg aspects per example: **2.53**
   - Avg text length: **6.42 words** per sentence
-  - Polarity distribution: **~64% positive, ~16% negative, ~20% neutral**
+  - Term polarity: positive=4,153 | negative=1,555 | neutral=1,601 | conflict=103
+  - Category polarity: positive=4,488 | negative=1,547 | neutral=1,518 | conflict=171
+  - Unique categories: 5 (`ovqat`, `muhit`, `xizmat`, `narx`, `boshqalar`)
+  - Examples with aspect terms: 5,367/6,175 (86.9%)
+  - Examples with categories only (no terms): 808 (13.1%)
 - NOTE: Class imbalance exists — positive is dominant. Consider stratified splitting or weighted loss.
+- NOTE: `conflict` polarity exists in data (rare: 103 term-level, 171 category-level).
 
 ### Secondary Dataset (Raw/Unannotated)
 - Source: sharh.commeta.uz
@@ -138,9 +144,10 @@ Date: Feb 2026
 - NOTE: Report actual training time and peak memory as empirical evidence
 
 ### Data Split
-- Train/Validation: **90/10** split (stratified shuffle, seed=42)
-- ~5,558 train / ~617 validation (estimated from 6,175 total)
-- NOTE: No separate test set — consider k-fold or holding out a test set
+- **Initial split (used for Qwen 2.5-7B training):** 90/10 train/val → 5,480 train / 609 val
+- **Recommended split (for paper):** 80/10/10 train/dev/test → 4,940 / 617 / 618 (see LOG 019)
+- Seed: 42, random shuffle
+- NOTE: Future experiments should use the 80/10/10 split with a held-out test set for final evaluation
 
 
 ## LOG 006 — Evaluation Metrics
@@ -357,6 +364,7 @@ For paper submission, ensure:
 - [ ] Training logs saved (WandB ✓)
 - [ ] Code released on GitHub (repo exists ✓)
 - [ ] Dataset publicly available (HuggingFace ✓)
+- [ ] Fine-tuned models publicly available on HuggingFace Hub: [Sanatbek/UzABSA-LLM](https://huggingface.co/Sanatbek/UzABSA-LLM/tree/main) (Add as footnote in paper)
 - [ ] Statistical significance tests (multiple seeds or bootstrap)
 
 
@@ -722,8 +730,252 @@ Date: Feb 22, 2026
 - All used same Qwen 2.5-7B model — only the 5th run (`_001629`) completed successfully
 
 
+## LOG 019 — Dataset Splits & ABSA Subtask Feasibility Analysis
+Date: Feb 22, 2026
+
+### Proper Train / Dev / Test Split (80/10/10)
+- Split method: random shuffle with `seed=42`, 80/10/10 ratio
+- **This split should be used for all future experiments and paper results**
+
+#### Full Dataset Statistics
+
+| Statistic | Train | Dev | Test | Total |
+|-----------|------:|----:|-----:|------:|
+| **Sentences** | 4,940 | 617 | 618 | 6,175 |
+| **Aspect Terms** | 5,923 | 755 | 734 | 7,412 |
+| **Unique Terms** | 2,169 | 367 | 376 | — |
+| **Aspect Categories** | 6,166 | 790 | 768 | 7,724 |
+| **Unique Categories** | 5 | 5 | 5 | 5 |
+
+#### Aspect Term Sentiment Distribution
+
+| Polarity | Train | Dev | Test | Total |
+|----------|------:|----:|-----:|------:|
+| Positive | 3,266 | 454 | 433 | 4,153 |
+| Negative | 1,270 | 146 | 139 | 1,555 |
+| Neutral  | 1,312 | 139 | 150 | 1,601 |
+| Conflict | 75 | 16 | 12 | 103 |
+
+#### Aspect Category Sentiment Distribution
+
+| Polarity | Train | Dev | Test | Total |
+|----------|------:|----:|-----:|------:|
+| Positive | 3,548 | 478 | 462 | 4,488 |
+| Negative | 1,258 | 151 | 138 | 1,547 |
+| Neutral  | 1,230 | 140 | 148 | 1,518 |
+| Conflict | 130 | 21 | 20 | 171 |
+
+#### Category Labels
+- `ovqat` (food), `muhit` (ambiance), `xizmat` (service), `narx` (price), `boshqalar` (miscellaneous)
+- All 5 categories present in all 3 splits
+
+### ABSA Subtask Feasibility Analysis
+
+The dataset annotation provides: **(aspect_term, from, to, polarity)** + **(aspect_category, polarity)**.
+
+For each subtask, the available annotation fields determine feasibility:
+
+| Subtask | Required Tuple | Available? | Status |
+|---------|---------------|------------|--------|
+| **ATE** (Aspect Term Extraction) | (term) | ✅ `aspect_terms.term` | **Fully supported** |
+| **ACD** (Aspect Category Detection) | (category) | ✅ `aspect_categories.category` | **Fully supported** |
+| **ASC** (Aspect Sentiment Classification) | (term, polarity) | ✅ `aspect_terms.{term, polarity}` | **Fully supported** |
+| **ACSC** (Aspect Category Sentiment) | (category, polarity) | ✅ `aspect_categories.{category, polarity}` | **Fully supported** |
+| **E2E-ABSA** (End-to-End Joint) | (term, polarity) | ✅ | **Fully supported — current approach** |
+| **TASD** (Target-Aspect-Sentiment Detection) | (term, category, polarity) | ⚠️ Partial | **Feasible with heuristic alignment** |
+| **ASTE** (Aspect Sentiment Triplet Extraction) | (term, opinion_term, polarity) | ❌ No `opinion_term` | **Not supported** |
+| **ACOS** (Aspect-Category-Opinion-Sentiment) | (term, category, opinion, polarity) | ❌ No `opinion_term` | **Not supported** |
+| **ASQP** (Aspect Sentiment Quad Prediction) | (term, category, opinion, polarity) | ❌ No `opinion_term` | **Not supported** |
+
+### Subtask Details
+
+**Fully Supported (current fine-tuning covers these):**
+1. **ATE** — Extract aspect terms from text. Our model outputs `{"aspects": [{"term": ...}]}`.
+2. **ACD** — Detect aspect categories. Our model outputs `{"aspects": [{"category": ...}]}`.
+3. **ASC** — Classify sentiment per aspect term. Our model outputs `{"aspects": [{"term": ..., "polarity": ...}]}`.
+4. **ACSC** — Classify sentiment per category. Our model outputs `{"aspects": [{"category": ..., "polarity": ...}]}`.
+5. **E2E-ABSA** — Joint term extraction + sentiment. This is our primary evaluation metric (pair F1).
+
+**Feasible with Heuristic Alignment:**
+6. **TASD** — Requires (term, category, sentiment) triplets. Our data has separate term and category lists per sentence. When `len(terms) == len(categories)` (4,631/6,175 = 75% of examples), positional alignment can create triplets. For remaining 25%, polarity-matching heuristic can pair them. This enables TASD evaluation on a **cleaned subset**.
+
+**Not Supported (missing opinion_term annotation):**
+7. **ASTE**, **ACOS**, **ASQP** — All require explicit `opinion_term` (the word expressing sentiment, e.g., "mazali" in "ovqat mazali"). Our dataset does not annotate opinion terms, only aspect terms and their polarities. These subtasks would require **re-annotation** of the dataset.
+
+### Recommendation for Paper
+- **Primary metrics:** ATE (P/R/F1), ASC (P/R/F1), E2E-ABSA pair F1, ACSC accuracy
+- **Secondary:** TASD on the 75% aligned subset (report as supplementary)
+- **Clearly state** that ASTE/ACOS/ASQP are not evaluated due to missing opinion term annotations — this is a standard limitation shared with several SemEVAL 2014 datasets
+- **Future work:** Re-annotate with opinion terms to enable ASTE/ASQP
+
+
+## LOG 020 — Evaluation Procedure: How to Run ABSA Evaluation
+Date: Feb 22, 2026
+
+### Running Evaluation on Qwen 2.5-7B
+
+The evaluation pipeline consists of: (1) load fine-tuned model, (2) run inference on test/validation set, (3) parse JSON outputs, (4) compute metrics.
+
+#### Command
+```powershell
+# Activate environment
+.\.venv\Scripts\Activate.ps1
+
+# Evaluate using merged model on validation set
+python scripts/evaluate.py `
+    --model-path ./outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/merged_model `
+    --test-data ./data/processed `
+    --output-dir ./outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629 `
+    --max-samples 100  # Remove for full eval
+```
+
+#### Metrics Computed
+The evaluation script (`src/evaluation.py`) computes:
+
+| Metric | What it Measures | Formula |
+|--------|-----------------|----------|
+| ATE Precision (exact) | Correctly extracted terms / all predicted terms | TP / (TP + FP) |
+| ATE Recall (exact) | Correctly extracted terms / all gold terms | TP / (TP + FN) |
+| ATE F1 (exact) | Harmonic mean | 2PR / (P + R) |
+| ATE F1 (partial) | Relaxed: substring/superstring matching | Same formula |
+| Pair Precision | Correct (term, polarity) / all predicted | TP / (TP + FP) |
+| Pair Recall | Correct (term, polarity) / all gold | TP / (TP + FN) |
+| **Pair F1** | **Primary metric — joint extraction + sentiment** | 2PR / (P + R) |
+| Sentiment Accuracy | Correct polarity / matched terms | Accuracy |
+| Sentiment Macro-F1 | Per-class F1 averaged | macro average |
+
+#### Output Files
+- `eval_results_YYYYMMDD_HHMMSS.json` — Full metric report
+- Console output with formatted table
+
+#### Important Notes
+- Use **greedy decoding** (`do_sample=False`, `temperature=0.1`) for deterministic evaluation
+- **JSON parse success rate** should be reported — it measures instruction-following quality
+- Current evaluation uses the `validation` split; once 80/10/10 split is implemented, use the `test` split
+- Evaluation requires GPU (loads the full merged model or base + LoRA adapters)
+
+
+## LOG 021 — LLM-as-Judge Evaluation Framework
+Date: Feb 22, 2026
+
+### Motivation
+Automatic metrics (P/R/F1) only measure exact/partial string matching. They miss:
+- Semantically correct but differently worded aspect terms
+- Valid aspects the gold standard missed (annotation recall < 100%)
+- Quality of model outputs beyond the annotated test set
+- Real-world performance on diverse domains beyond the training distribution
+
+**LLM-as-Judge** provides a complementary evaluation by using a powerful LLM (e.g., GPT-4, Claude) to judge the quality of model predictions.
+
+### Framework Design
+
+#### Evaluation Dimensions (Scoring Rubric)
+Each model prediction is scored on 4 dimensions (1-5 scale):
+
+| Dimension | Description | Score Guide |
+|-----------|-------------|-------------|
+| **Completeness** | Did the model find ALL aspects in the text? | 5=all found, 1=most missed |
+| **Accuracy** | Are extracted terms actually aspects (not noise)? | 5=all correct, 1=mostly wrong |
+| **Sentiment Correctness** | Is the polarity label correct for each aspect? | 5=all correct, 1=all wrong |
+| **Format Compliance** | Is the output valid JSON matching the schema? | 5=perfect JSON, 1=unparseable |
+
+#### Data Preparation — Two-Phase Approach
+
+**Phase 1: Judge on Annotated Test Set (Gold Standard Comparison)**
+- Input: model prediction + gold standard + original text
+- Judge sees both and evaluates prediction quality
+- This validates LLM-as-Judge correlation with automatic metrics
+- Use: **Test split (618 sentences)** from the annotated dataset
+
+**Phase 2: Judge on Unannotated Raw Reviews (Real-World Evaluation)**
+- Input: model prediction + original text (NO gold standard)
+- Judge evaluates based on text comprehension alone
+- **This is where `reviews.csv` is used** — the 5,058 raw reviews
+- Purpose: measure real-world generalization across 23 business domains
+- This evaluation covers domains NOT in the training data (banking, telecom, etc.)
+
+#### Data Format for LLM-as-Judge
+
+**Phase 1 prompt template (with gold standard):**
+```
+You are evaluating an ABSA model for Uzbek text. Score the model's output.
+
+Original text: "{text}"
+Gold standard: {gold_aspects}
+Model prediction: {predicted_aspects}
+
+Score each dimension (1-5):
+1. Completeness: [1-5] — Did the model find all aspects?
+2. Accuracy: [1-5] — Are predicted aspects actually present in the text?
+3. Sentiment: [1-5] — Are polarity labels correct?
+4. Format: [1-5] — Is the JSON output well-formed?
+
+Explanation: <brief justification>
+```
+
+**Phase 2 prompt template (without gold, for reviews.csv):**
+```
+You are evaluating an ABSA model for Uzbek text. There is no gold standard.
+Judge the model's output based on your understanding of the text.
+
+Original text: "{review_text}"
+Business: "{object_name}"
+User rating: {rating_value}/5
+Model prediction: {predicted_aspects}
+
+Score each dimension (1-5):
+1. Completeness: [1-5] — Does the output capture the main opinions?
+2. Accuracy: [1-5] — Are the extracted aspects actually mentioned?
+3. Sentiment: [1-5] — Do polarities match the tone of the text?
+4. Format: [1-5] — Is the JSON output well-formed?
+
+Explanation: <brief justification>
+```
+
+#### How reviews.csv Enables Multi-Domain Evaluation
+The raw reviews span 23 business domains. By running inference on a stratified sample:
+
+| Domain | Sample Size | Purpose |
+|--------|------------|----------|
+| Restoran/Ovqatlanish | 50 | In-domain (training data is restaurant reviews) |
+| Bank/Moliya | 30 | Out-of-domain: financial services |
+| Telekommunikatsiya | 20 | Out-of-domain: telecom |
+| Tibbiyot/Sog'liqni saqlash | 20 | Out-of-domain: healthcare |
+| Ta'lim | 20 | Out-of-domain: education |
+| Elektron tijorat | 20 | Out-of-domain: e-commerce |
+| Other domains | 5 each | Coverage check |
+| **Total** | **~200** | Manageable for LLM-as-Judge cost |
+
+This produces a **domain-wise quality matrix** showing how well the fine-tuned model generalizes — a key result for the paper.
+
+#### Implementation Plan
+1. Run inference on stratified sample of `reviews.csv` (~200 reviews)
+2. Format predictions into judge-ready prompts
+3. Submit to GPT-4 / Claude API for scoring
+4. Aggregate scores per domain and per dimension
+5. Report: mean scores, per-domain heatmap, correlation with automatic metrics (Phase 1)
+
+#### Reliability Measures
+- **Inter-judge agreement:** Run a subset (50 examples) through 2 different LLM judges
+- **Human validation:** Manually score 30 examples, compute Spearman correlation with LLM judge scores
+- **Calibration:** Phase 1 (with gold standard) establishes baseline — if LLM-as-Judge agrees with F1 ranking, it's trustworthy for Phase 2
+
+#### Cost Estimate
+- Phase 1: 618 examples × ~500 tokens each ≈ 310K tokens (~$3 with GPT-4o-mini)
+- Phase 2: 200 examples × ~500 tokens each ≈ 100K tokens (~$1 with GPT-4o-mini)
+- Total: ~$4-10 depending on model choice
+
+### Key Research Value
+- **Novel contribution:** First LLM-as-Judge evaluation for Uzbek ABSA
+- **Bridges the gap** between automatic metrics and human judgment
+- **Enables multi-domain assessment** using the unannotated `reviews.csv` — this is the path to the annotated multi-domain dataset goal
+- **Practical outcome:** The LLM-as-Judge scores on `reviews.csv` can serve as **silver-standard annotations**, which can then be human-verified to create the multi-domain ABSA resource
+
+
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
-# Next: Complete model comparison (Exp 1), then LoRA ablation (Exp 2)
+# Next: (1) Re-prepare data with 80/10/10 split, (2) Run evaluation on
+#       Qwen 2.5-7B, (3) Train Llama/DeepSeek/Mistral, (4) Implement
+#       LLM-as-Judge pipeline, (5) Run multi-domain eval on reviews.csv
 # ======================================================================
