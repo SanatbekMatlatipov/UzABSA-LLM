@@ -1,0 +1,123 @@
+2026-02-22 00:16:28,999 - __main__ - INFO - ================================================================================
+2026-02-22 00:16:28,999 - __main__ - INFO - GPU Configuration and Setup
+2026-02-22 00:16:28,999 - __main__ - INFO - ================================================================================
+2026-02-22 00:16:29,024 - __main__ - INFO - Found 1 GPU(s) available:
+2026-02-22 00:16:29,025 - __main__ - INFO -   GPU 0: NVIDIA RTX A6000 (45.0 GB)
+2026-02-22 00:16:29,026 - src.gpu_config - INFO - ======================================================================
+2026-02-22 00:16:29,026 - src.gpu_config - INFO - GPU Status
+2026-02-22 00:16:29,026 - src.gpu_config - INFO - ======================================================================
+2026-02-22 00:16:29,026 - src.gpu_config - INFO - 
+GPU 0: NVIDIA RTX A6000
+2026-02-22 00:16:29,027 - src.gpu_config - INFO -   Memory: 45.0 GB
+2026-02-22 00:16:29,027 - src.gpu_config - INFO -   SMs: 84
+2026-02-22 00:16:29,027 - src.gpu_config - INFO -   Compute Capability: 8.6
+2026-02-22 00:16:29,027 - src.gpu_config - INFO - 
+Total GPU Memory: 45.0 GB
+2026-02-22 00:16:29,027 - src.gpu_config - INFO - ======================================================================
+2026-02-22 00:16:29,027 - __main__ - INFO - 
+Recommended Training Configuration:
+2026-02-22 00:16:29,027 - __main__ - INFO -   num_gpus: 1
+2026-02-22 00:16:29,027 - __main__ - INFO -   total_memory_gb: 44.98779296875
+2026-02-22 00:16:29,027 - __main__ - INFO -   batch_size: 8
+2026-02-22 00:16:29,027 - __main__ - INFO -   grad_accum: 2
+2026-02-22 00:16:29,027 - __main__ - INFO -   max_batch_size: 16
+2026-02-22 00:16:29,028 - __main__ - INFO -   learning_rate: 0.0002
+2026-02-22 00:16:29,028 - __main__ - INFO -   warmup_ratio: 0.1
+2026-02-22 00:16:29,028 - __main__ - INFO -   device_map: cuda:0
+2026-02-22 00:16:29,028 - __main__ - INFO -   fp16: False
+2026-02-22 00:16:29,028 - __main__ - INFO -   bf16: True
+2026-02-22 00:16:29,028 - __main__ - INFO -   Note: Single GPU training (GPU 0: NVIDIA RTX A6000)
+2026-02-22 00:16:29,028 - __main__ - INFO - Using GPU: CUDA_VISIBLE_DEVICES=0
+2026-02-22 00:16:29,028 - __main__ - INFO - Visible GPUs: 1
+2026-02-22 00:16:29,028 - __main__ - INFO - ================================================================================
+2026-02-22 00:16:29,028 - __main__ - INFO - ======================================================================
+2026-02-22 00:16:29,028 - __main__ - INFO - UzABSA-LLM: Starting Fine-tuning with Unsloth
+2026-02-22 00:16:29,029 - __main__ - INFO - ======================================================================
+2026-02-22 00:16:29,029 - __main__ - INFO - Config: TrainingConfig({'model_name': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit', 'max_seq_length': 2048, 'load_in_4bit': True, 'lora_r': 16, 'lora_alpha': 32, 'lora_dropout': 0.05, 'lora_target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'], 'use_gradient_checkpointing': 'unsloth', 'learning_rate': 0.0002, 'per_device_train_batch_size': 4, 'gradient_accumulation_steps': 4, 'max_steps': 1000, 'num_train_epochs': 3, 'warmup_ratio': 0.1, 'weight_decay': 0.01, 'lr_scheduler_type': 'cosine', 'optim': 'adamw_8bit', 'fp16': False, 'bf16': True, 'logging_steps': 10, 'save_steps': 100, 'save_total_limit': 3, 'output_dir': 'outputs\\my_run\\uzabsa_qwen2.5-7b_20260222_001629', 'seed': 42, 'report_to': 'wandb'})
+2026-02-22 00:16:29,029 - __main__ - INFO - 
+[Step 1/5] Loading model and tokenizer...
+2026-02-22 00:16:36,432 - __main__ - INFO - Loading model: unsloth/Qwen2.5-7B-Instruct-bnb-4bit
+2026-02-22 00:16:36,433 - __main__ - INFO - Max sequence length: 2048
+2026-02-22 00:16:36,433 - __main__ - INFO - 4-bit quantization: True
+2026-02-22 00:16:54,475 - __main__ - INFO - Restored builtins.__import__ (removed deepseek_v3_moe hook)
+2026-02-22 00:16:54,475 - __main__ - INFO - Model loaded successfully!
+2026-02-22 00:16:54,475 - __main__ - INFO - Model dtype: torch.bfloat16
+2026-02-22 00:16:54,507 - __main__ - INFO - Tokenizer vocab size: 151665
+2026-02-22 00:16:54,507 - __main__ - INFO - 
+[Step 2/5] Applying LoRA adapters...
+2026-02-22 00:16:54,507 - __main__ - INFO - Applying LoRA adapters...
+2026-02-22 00:16:54,507 - __main__ - INFO -   LoRA rank (r): 16
+2026-02-22 00:16:54,507 - __main__ - INFO -   LoRA alpha: 32
+2026-02-22 00:16:54,507 - __main__ - INFO -   LoRA dropout: 0.05
+2026-02-22 00:16:54,508 - __main__ - INFO -   Target modules: ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']
+2026-02-22 00:16:57,773 - __main__ - INFO - Trainable parameters: 40,370,176 (0.92%)
+2026-02-22 00:16:57,773 - __main__ - INFO - Total parameters: 4,393,342,464
+2026-02-22 00:16:57,773 - __main__ - INFO - 
+[Step 3/5] Loading training dataset...
+2026-02-22 00:16:57,774 - __main__ - INFO - Loading dataset from: ./data/processed
+2026-02-22 00:16:57,781 - __main__ - INFO - Dataset loaded: DatasetDict({
+    train: Dataset({
+        features: ['text'],
+        num_rows: 5480
+    })
+    validation: Dataset({
+        features: ['text'],
+        num_rows: 609
+    })
+})
+2026-02-22 00:16:57,781 - __main__ - INFO - Train examples: 5480
+2026-02-22 00:16:57,781 - __main__ - INFO - Eval examples: 609
+2026-02-22 00:16:57,781 - __main__ - INFO - 
+[Step 4/5] Creating trainer...
+2026-02-22 00:16:57,782 - __main__ - INFO - Creating SFTTrainer...
+2026-02-22 00:16:58,013 - unsloth.trainer - INFO - Unsloth: Padding-free batching auto-enabled for SFTTrainer instance.
+2026-02-22 00:16:58,554 - __main__ - INFO - SFTTrainer created successfully!
+2026-02-22 00:16:58,554 - __main__ - INFO - GPU: NVIDIA RTX A6000
+2026-02-22 00:16:58,554 - __main__ - INFO - VRAM: 45.0 GB
+2026-02-22 00:16:58,555 - __main__ - INFO - Allocated: 5.3 GB
+2026-02-22 00:16:58,555 - __main__ - INFO - Reserved: 6.7 GB
+2026-02-22 00:16:58,555 - __main__ - INFO - 
+[Step 5/5] Starting training...
+2026-02-22 00:16:58,555 - __main__ - INFO - ----------------------------------------------------------------------
+2026-02-22 00:17:04,327 - src.training_metrics - INFO - Training metrics collection started.
+2026-02-22 01:06:02,102 - src.training_metrics - INFO - Training finished in 2937.8s (49.0min)
+2026-02-22 01:06:02,102 - src.training_metrics - INFO - Total logged steps: 111
+2026-02-22 01:06:02,103 - src.training_metrics - INFO - Total eval records: 10
+2026-02-22 01:06:02,105 - src.training_metrics - INFO - Training history JSON saved to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629\training_history.json
+2026-02-22 01:06:02,107 - src.training_metrics - INFO - Training history CSV saved to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629\training_history.csv
+2026-02-22 01:06:02,387 - src.training_metrics - INFO - Training curves plot saved to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629\training_curves.png
+2026-02-22 01:06:02,549 - src.training_metrics - INFO - LR schedule plot saved to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629\lr_schedule.png
+2026-02-22 01:06:05,248 - __main__ - INFO - ----------------------------------------------------------------------
+2026-02-22 01:06:05,248 - __main__ - INFO - Training complete!
+2026-02-22 01:06:05,248 - __main__ - INFO - Train loss: 0.4010
+2026-02-22 01:06:05,248 - __main__ - INFO - Total steps: 1000
+2026-02-22 01:06:05,249 - __main__ - INFO - 
+Training Curves Summary:
+2026-02-22 01:06:05,249 - __main__ - INFO -   Initial loss: 3.0409
+2026-02-22 01:06:05,249 - __main__ - INFO -   Final loss:   0.400963
+2026-02-22 01:06:05,249 - __main__ - INFO -   Min loss:     0.2422
+2026-02-22 01:06:05,249 - __main__ - INFO -   Loss reduction: 86.81%
+2026-02-22 01:06:05,249 - __main__ - INFO -   Best eval loss: 0.36560362577438354 (step 1000)
+2026-02-22 01:06:05,250 - __main__ - INFO -   Total time: 49.0 min
+2026-02-22 01:06:05,250 - __main__ - INFO - 
+Saving model...
+2026-02-22 01:06:05,250 - __main__ - INFO - Saving model to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629
+2026-02-22 01:06:05,250 - __main__ - INFO - Save method: lora
+2026-02-22 01:06:06,596 - __main__ - INFO - LoRA adapters saved!
+2026-02-22 01:06:06,596 - __main__ - INFO - Saving model to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629
+2026-02-22 01:06:06,596 - __main__ - INFO - Save method: merged
+2026-02-22 04:59:38,486 - __main__ - INFO - Merged model saved!
+2026-02-22 04:59:38,488 - src.training_metrics - INFO - Experiment summary saved to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629\experiment_summary.json
+2026-02-22 04:59:38,624 - src.training_metrics - INFO - GPU memory plot saved to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629\gpu_memory.png
+2026-02-22 04:59:38,624 - __main__ - INFO - ======================================================================
+2026-02-22 04:59:38,624 - __main__ - INFO - Fine-tuning complete!
+2026-02-22 04:59:38,624 - __main__ - INFO - Model saved to: outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629
+2026-02-22 04:59:38,624 - __main__ - INFO - Outputs in outputs\my_run\uzabsa_qwen2.5-7b_20260222_001629:
+2026-02-22 04:59:38,624 - __main__ - INFO -   lora_adapters/     — LoRA adapter weights
+2026-02-22 04:59:38,624 - __main__ - INFO -   merged_model/      — Full merged model (for inference)
+2026-02-22 04:59:38,625 - __main__ - INFO -   training_history.json  — Per-step metrics
+2026-02-22 04:59:38,625 - __main__ - INFO -   training_history.csv   — Metrics as CSV
+2026-02-22 04:59:38,625 - __main__ - INFO -   training_curves.png    — Loss curves plot
+2026-02-22 04:59:38,625 - __main__ - INFO -   lr_schedule.png        — Learning rate schedule
+2026-02-22 04:59:38,625 - __main__ - INFO -   experiment_summary.json — Full experiment config + results
+2026-02-22 04:59:38,626 - __main__ - INFO - ======================================================================
