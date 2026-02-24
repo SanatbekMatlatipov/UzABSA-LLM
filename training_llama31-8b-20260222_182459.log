@@ -1,0 +1,125 @@
+2026-02-22 18:24:59,906 - __main__ - INFO - ================================================================================
+2026-02-22 18:24:59,907 - __main__ - INFO - GPU Configuration and Setup
+2026-02-22 18:24:59,907 - __main__ - INFO - ================================================================================
+2026-02-22 18:24:59,965 - __main__ - INFO - Found 1 GPU(s) available:
+2026-02-22 18:24:59,968 - __main__ - INFO -   GPU 0: NVIDIA RTX A6000 (45.0 GB)
+2026-02-22 18:24:59,968 - src.gpu_config - INFO - ======================================================================
+2026-02-22 18:24:59,968 - src.gpu_config - INFO - GPU Status
+2026-02-22 18:24:59,968 - src.gpu_config - INFO - ======================================================================
+2026-02-22 18:24:59,968 - src.gpu_config - INFO - 
+GPU 0: NVIDIA RTX A6000
+2026-02-22 18:24:59,968 - src.gpu_config - INFO -   Memory: 45.0 GB
+2026-02-22 18:24:59,968 - src.gpu_config - INFO -   SMs: 84
+2026-02-22 18:24:59,968 - src.gpu_config - INFO -   Compute Capability: 8.6
+2026-02-22 18:24:59,968 - src.gpu_config - INFO - 
+Total GPU Memory: 45.0 GB
+2026-02-22 18:24:59,968 - src.gpu_config - INFO - ======================================================================
+2026-02-22 18:24:59,968 - __main__ - INFO - 
+Recommended Training Configuration:
+2026-02-22 18:24:59,968 - __main__ - INFO -   num_gpus: 1
+2026-02-22 18:24:59,969 - __main__ - INFO -   total_memory_gb: 44.98779296875
+2026-02-22 18:24:59,969 - __main__ - INFO -   batch_size: 8
+2026-02-22 18:24:59,969 - __main__ - INFO -   grad_accum: 2
+2026-02-22 18:24:59,969 - __main__ - INFO -   max_batch_size: 16
+2026-02-22 18:24:59,969 - __main__ - INFO -   learning_rate: 0.0002
+2026-02-22 18:24:59,969 - __main__ - INFO -   warmup_ratio: 0.1
+2026-02-22 18:24:59,969 - __main__ - INFO -   device_map: cuda:0
+2026-02-22 18:24:59,969 - __main__ - INFO -   fp16: False
+2026-02-22 18:24:59,970 - __main__ - INFO -   bf16: True
+2026-02-22 18:24:59,970 - __main__ - INFO -   Note: Single GPU training (GPU 0: NVIDIA RTX A6000)
+2026-02-22 18:24:59,970 - __main__ - INFO - Using GPU: CUDA_VISIBLE_DEVICES=0
+2026-02-22 18:24:59,970 - __main__ - INFO - Visible GPUs: 1
+2026-02-22 18:24:59,970 - __main__ - INFO - ================================================================================
+2026-02-22 18:24:59,970 - __main__ - INFO - ======================================================================
+2026-02-22 18:24:59,970 - __main__ - INFO - UzABSA-LLM: Starting Fine-tuning with Unsloth
+2026-02-22 18:24:59,970 - __main__ - INFO - ======================================================================
+2026-02-22 18:24:59,971 - __main__ - INFO - Config: TrainingConfig({'model_name': 'unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit', 'max_seq_length': 2048, 'load_in_4bit': True, 'lora_r': 16, 'lora_alpha': 32, 'lora_dropout': 0.05, 'lora_target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'], 'use_gradient_checkpointing': 'unsloth', 'learning_rate': 0.0002, 'per_device_train_batch_size': 4, 'gradient_accumulation_steps': 4, 'max_steps': 1000, 'num_train_epochs': 3, 'warmup_ratio': 0.1, 'weight_decay': 0.01, 'lr_scheduler_type': 'cosine', 'optim': 'adamw_8bit', 'fp16': False, 'bf16': True, 'logging_steps': 10, 'save_steps': 100, 'save_total_limit': 3, 'output_dir': 'outputs\\my_run\\uzabsa_llama3.1-8b_20260222_182459', 'seed': 42, 'report_to': 'wandb'})
+2026-02-22 18:24:59,971 - __main__ - INFO - 
+[Step 1/5] Loading model and tokenizer...
+2026-02-22 18:25:14,693 - __main__ - INFO - Loading model: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+2026-02-22 18:25:14,693 - __main__ - INFO - Max sequence length: 2048
+2026-02-22 18:25:14,693 - __main__ - INFO - 4-bit quantization: True
+2026-02-22 19:58:03,254 - __main__ - INFO - Restored builtins.__import__ (removed deepseek_v3_moe hook)
+2026-02-22 19:58:03,254 - __main__ - INFO - Model loaded successfully!
+2026-02-22 19:58:03,254 - __main__ - INFO - Model dtype: torch.bfloat16
+2026-02-22 19:58:03,277 - __main__ - INFO - Tokenizer vocab size: 128256
+2026-02-22 19:58:03,277 - __main__ - INFO - 
+[Step 2/5] Applying LoRA adapters...
+2026-02-22 19:58:03,277 - __main__ - INFO - Applying LoRA adapters...
+2026-02-22 19:58:03,278 - __main__ - INFO -   LoRA rank (r): 16
+2026-02-22 19:58:03,278 - __main__ - INFO -   LoRA alpha: 32
+2026-02-22 19:58:03,278 - __main__ - INFO -   LoRA dropout: 0.05
+2026-02-22 19:58:03,278 - __main__ - INFO -   Target modules: ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']
+2026-02-22 19:58:06,682 - __main__ - INFO - Trainable parameters: 41,943,040 (0.92%)
+2026-02-22 19:58:06,682 - __main__ - INFO - Total parameters: 4,582,543,360
+2026-02-22 19:58:06,683 - __main__ - INFO - 
+[Step 3/5] Loading training dataset...
+2026-02-22 19:58:06,683 - __main__ - INFO - Loading dataset from: ./data/processed
+2026-02-22 19:58:06,694 - __main__ - INFO - Dataset loaded: DatasetDict({
+    train: Dataset({
+        features: ['text'],
+        num_rows: 5480
+    })
+    validation: Dataset({
+        features: ['text'],
+        num_rows: 609
+    })
+})
+2026-02-22 19:58:06,694 - __main__ - INFO - Train examples: 5480
+2026-02-22 19:58:06,694 - __main__ - INFO - Eval examples: 609
+2026-02-22 19:58:06,694 - __main__ - INFO - 
+[Step 4/5] Creating trainer...
+2026-02-22 19:58:06,695 - __main__ - INFO - Creating SFTTrainer...
+2026-02-22 19:58:06,937 - unsloth.trainer - INFO - Unsloth: Padding-free batching auto-enabled for SFTTrainer instance.
+2026-02-22 19:58:08,843 - __main__ - INFO - SFTTrainer created successfully!
+2026-02-22 19:58:08,843 - __main__ - INFO - GPU: NVIDIA RTX A6000
+2026-02-22 19:58:08,844 - __main__ - INFO - VRAM: 45.0 GB
+2026-02-22 19:58:08,844 - __main__ - INFO - Allocated: 5.5 GB
+2026-02-22 19:58:08,844 - __main__ - INFO - Reserved: 7.3 GB
+2026-02-22 19:58:08,844 - __main__ - INFO - 
+[Step 5/5] Starting training...
+2026-02-22 19:58:08,844 - __main__ - INFO - ----------------------------------------------------------------------
+2026-02-22 19:58:15,095 - src.training_metrics - INFO - Training metrics collection started.
+2026-02-22 20:57:55,140 - src.training_metrics - INFO - Training finished in 3580.0s (59.7min)
+2026-02-22 20:57:55,140 - src.training_metrics - INFO - Total logged steps: 111
+2026-02-22 20:57:55,140 - src.training_metrics - INFO - Total eval records: 10
+2026-02-22 20:57:55,143 - src.training_metrics - INFO - Training history JSON saved to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459\training_history.json
+2026-02-22 20:57:55,144 - src.training_metrics - INFO - Training history CSV saved to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459\training_history.csv
+2026-02-22 20:57:55,428 - src.training_metrics - INFO - Training curves plot saved to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459\training_curves.png
+2026-02-22 20:57:55,607 - src.training_metrics - INFO - LR schedule plot saved to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459\lr_schedule.png
+2026-02-22 20:57:58,732 - __main__ - INFO - ----------------------------------------------------------------------
+2026-02-22 20:57:58,732 - __main__ - INFO - Training complete!
+2026-02-22 20:57:58,732 - __main__ - INFO - Train loss: 0.2868
+2026-02-22 20:57:58,732 - __main__ - INFO - Total steps: 1000
+2026-02-22 20:57:58,732 - __main__ - INFO - 
+Training Curves Summary:
+2026-02-22 20:57:58,733 - __main__ - INFO -   Initial loss: 2.1197
+2026-02-22 20:57:58,733 - __main__ - INFO -   Final loss:   0.286776
+2026-02-22 20:57:58,733 - __main__ - INFO -   Min loss:     0.1818
+2026-02-22 20:57:58,733 - __main__ - INFO -   Loss reduction: 86.47%
+2026-02-22 20:57:58,733 - __main__ - INFO -   Best eval loss: 0.27852103114128113 (step 600)
+2026-02-22 20:57:58,733 - __main__ - INFO -   Total time: 59.7 min
+2026-02-22 20:57:58,733 - __main__ - INFO - 
+Saving model...
+2026-02-22 20:57:58,734 - __main__ - INFO - Saving model to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459
+2026-02-22 20:57:58,734 - __main__ - INFO - Save method: lora
+2026-02-22 20:58:01,493 - __main__ - INFO - LoRA adapters saved!
+2026-02-22 20:58:01,493 - __main__ - INFO - Saving model to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459
+2026-02-22 20:58:01,493 - __main__ - INFO - Save method: merged
+2026-02-22 21:36:49,193 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/unsloth/Meta-Llama-3.1-8B-Instruct/resolve/main/model-00001-of-00004.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2026-02-23 03:35:46,307 - __main__ - INFO - Merged model saved!
+2026-02-23 03:35:46,308 - src.training_metrics - INFO - Experiment summary saved to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459\experiment_summary.json
+2026-02-23 03:35:46,452 - src.training_metrics - INFO - GPU memory plot saved to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459\gpu_memory.png
+2026-02-23 03:35:46,452 - __main__ - INFO - ======================================================================
+2026-02-23 03:35:46,452 - __main__ - INFO - Fine-tuning complete!
+2026-02-23 03:35:46,452 - __main__ - INFO - Model saved to: outputs\my_run\uzabsa_llama3.1-8b_20260222_182459
+2026-02-23 03:35:46,453 - __main__ - INFO - Outputs in outputs\my_run\uzabsa_llama3.1-8b_20260222_182459:
+2026-02-23 03:35:46,453 - __main__ - INFO -   lora_adapters/     — LoRA adapter weights
+2026-02-23 03:35:46,453 - __main__ - INFO -   merged_model/      — Full merged model (for inference)
+2026-02-23 03:35:46,453 - __main__ - INFO -   training_history.json  — Per-step metrics
+2026-02-23 03:35:46,453 - __main__ - INFO -   training_history.csv   — Metrics as CSV
+2026-02-23 03:35:46,453 - __main__ - INFO -   training_curves.png    — Loss curves plot
+2026-02-23 03:35:46,453 - __main__ - INFO -   lr_schedule.png        — Learning rate schedule
+2026-02-23 03:35:46,453 - __main__ - INFO -   experiment_summary.json — Full experiment config + results
+2026-02-23 03:35:46,453 - __main__ - INFO - ======================================================================

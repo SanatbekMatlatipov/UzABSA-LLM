@@ -62,6 +62,7 @@ cover/
 # Django stuff:
 *.log
 !training-qwen27-7b_20260222_001628.log
+!training_llama31-8b-20260222_182459.log
 !data_prep_20260221_212145
 local_settings.py
 db.sqlite3
