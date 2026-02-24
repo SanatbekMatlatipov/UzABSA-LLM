@@ -466,7 +466,7 @@ Detailed methodology, experiment logs, and reproducibility metadata are in [RESE
 
 ---
 
-## License & Citation
+##  Citation
 
 ```bibtex
 @misc{uzabsa-llm-2026,

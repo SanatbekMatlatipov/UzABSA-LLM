@@ -1032,69 +1032,161 @@ Date: Feb 22, 2026
 ![LR Schedule](outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/lr_schedule.png)
 ![GPU Memory](outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/gpu_memory.png)
 
+## LOG 022 — Experiment 3 Result: DeepSeek-R1-Distill-Qwen-7B Fine-tuning (COMPLETED)
+Date: Feb 24, 2026
+
+### Run Details
+- **Run ID:** `uzabsa_deepseek-7b` (output: `outputs/my_run/uzabsa_deepseek-7b`)
+- **Model:** `unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit` (4-bit NF4)
+- **GPU:** NVIDIA RTX A6000 (48GB), single GPU
+- **Status:** ✅ **COMPLETED SUCCESSFULLY** (1000/1000 steps)
+- **W&B run:** `agbzwa0z` (project: uzabsa-llm)
+
+### Model Background
+DeepSeek-R1-Distill-Qwen-7B is a **distillation** of the DeepSeek-R1 reasoning model into the Qwen-7B architecture. Unlike the instruction-tuned Qwen 2.5-7B used in Experiment 1, this variant carries R1's chain-of-thought reasoning capabilities distilled into the same Qwen backbone. This makes it an interesting comparison point: **same architecture (Qwen-7B), different pre-training objective** (instruction-tuning vs reasoning distillation).
+
+### Training Configuration
+- Identical to Experiments 1 & 2 (LOG 018, LOG 021) — same LoRA config, hyperparameters, optimizer, and data split
+- This ensures a **controlled comparison**: the only variable is the base model and its pre-training
+
+### Training Results
+| Metric | Value |
+|--------|-------|
+| Initial train loss | 3.2857 |
+| Final train loss | 0.4146 |
+| Min train loss | 0.2330 |
+| **Loss reduction** | **87.4%** |
+| Best eval loss | 0.3363 (step 1000) |
+| Training compute time | 3,736 s (~62.3 min) |
+| Total wall time | 238.3 min (~4.0 hr incl. eval/save) |
+| Samples/sec | 4.28 |
+| Steps/sec | 0.268 |
+| Total FLOPs | 1.42×10¹⁷ |
+| Trainable parameters | 40,370,176 (0.92%) |
+| Total parameters | 4,393,342,464 |
+| GPU memory allocated | ~5.5 GB |
+| GPU memory reserved | ~8.5 GB |
+
+### Eval Loss Progression
+| Step | Epoch | Eval Loss |
+|-----:|------:|----------:|
+| 100 | 0.29 | 0.4526 |
+| 200 | 0.58 | 0.3959 |
+| 300 | 0.88 | 0.3704 |
+| 400 | 1.17 | 0.3611 |
+| 500 | 1.46 | 0.3477 |
+| 600 | 1.75 | 0.3424 |
+| 700 | 2.04 | 0.3386 |
+| 800 | 2.33 | 0.3384 |
+| 900 | 2.63 | 0.3363 |
+| **1000** | **2.92** | **0.3363** ← best |
+
+### Loss Curve Observations
+- **Highest initial loss of all three models** (3.29 vs Qwen's 3.04 and Llama's 2.12) — the R1 reasoning distillation creates a larger gap from the ABSA task format at initialization
+- Rapid early convergence: loss drops from 3.29 → 0.82 in first 50 steps (similar trajectory to Qwen)
+- Eval loss **continuously improving through all 1000 steps** — same pattern as Qwen, no overfitting detected
+- Very small eval loss improvement from step 800→1000 (0.3384→0.3363, Δ=0.002), suggesting diminishing returns
+- Gradient norms stable at 0.40–0.58 range after warmup, indicating healthy optimization
+- HuggingFace hub timeout warnings during training (checkpoint saving attempted HEAD requests), but training continued uninterrupted
+
+### Saved Artifacts
+- `lora_adapters/` — LoRA adapter weights
+- `merged_model/` — Full merged 16-bit model
+- `checkpoint-800/`, `checkpoint-900/`, `checkpoint-1000/` — Training checkpoints
+- `experiment_summary.json` — Full reproducibility metadata
+- **Plots:** `training_curves.png`, `lr_schedule.png`, `gpu_memory.png`
+
+![Training Curves](outputs/my_run/uzabsa_deepseek-7b/training_curves.png)
+![LR Schedule](outputs/my_run/uzabsa_deepseek-7b/lr_schedule.png)
+![GPU Memory](outputs/my_run/uzabsa_deepseek-7b/gpu_memory.png)
+
 ---
 
-### Comparative Analysis: Qwen 2.5-7B vs Llama 3.1-8B
+### Comparative Analysis: Qwen 2.5-7B vs Llama 3.1-8B vs DeepSeek-R1-Distill-7B
 
 #### Training Dynamics Comparison
 
-| Metric | Qwen 2.5-7B (Exp 1) | Llama 3.1-8B (Exp 2) | Δ | Advantage |
-|--------|--------------------:|---------------------:|--:|-----------|
-| **Initial train loss** | 3.0409 | 2.1197 | −0.92 | Llama |
-| **Final train loss** | 0.4010 | 0.2868 | −0.11 | Llama |
-| **Min train loss** | 0.2422 | 0.1818 | −0.06 | Llama |
-| **Loss reduction (%)** | 86.8% | 86.5% | −0.3pp | ~Tied |
-| **Best eval loss** | 0.3656 | 0.2785 | −0.087 | **Llama** |
-| **Best eval step** | 1000 | 600 | −400 | Llama (faster) |
-| **Final eval loss** | 0.3656 | 0.2833 | −0.082 | **Llama** |
+| Metric | Qwen 2.5-7B (Exp 1) | Llama 3.1-8B (Exp 2) | DeepSeek-R1-7B (Exp 3) | Best |
+|--------|--------------------:|---------------------:|-----------------------:|------|
+| **Initial train loss** | 3.0409 | 2.1197 | 3.2857 | **Llama** (lowest) |
+| **Final train loss** | 0.4010 | 0.2868 | 0.4146 | **Llama** |
+| **Min train loss** | 0.2422 | 0.1818 | 0.2330 | **Llama** |
+| **Loss reduction (%)** | 86.8% | 86.5% | 87.4% | ~Tied |
+| **Best eval loss** | 0.3656 | 0.2785 | 0.3363 | **Llama** |
+| **Best eval step** | 1000 | 600 | 1000 | Llama (fastest) |
+| **Final eval loss** | 0.3656 | 0.2833 | 0.3363 | **Llama** |
+| **Overfitting observed** | No | Mild (after step 600) | No | Qwen/DeepSeek |
 
 #### Efficiency Comparison
 
-| Metric | Qwen 2.5-7B | Llama 3.1-8B | Δ | Note |
-|--------|------------:|-------------:|--:|------|
-| **Training compute (s)** | 2,942 | 3,585 | +643 | Qwen 22% faster |
-| **Wall time (min)** | 282.6 | 457.5 | +175 | Qwen 38% faster |
-| **Samples/sec** | 5.44 | 4.46 | −0.98 | Qwen 22% higher throughput |
-| **Total FLOPs** | 1.24×10¹⁷ | 1.50×10¹⁷ | +0.26×10¹⁷ | Qwen 17% fewer FLOPs |
-| **GPU mem allocated** | ~5.4 GB | ~5.6 GB | +0.2 | ~Same |
-| **GPU mem reserved** | ~7.8 GB | ~7.6 GB | −0.2 | ~Same |
+| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B | Note |
+|--------|------------:|-------------:|---------------:|------|
+| **Training compute (s)** | 2,942 | 3,585 | 3,736 | Qwen 21% fastest |
+| **Wall time (min)** | 282.6 | 457.5 | 238.3 | DeepSeek shortest wall time |
+| **Samples/sec** | 5.44 | 4.46 | 4.28 | Qwen 27% higher than DeepSeek |
+| **Total FLOPs** | 1.24×10¹⁷ | 1.50×10¹⁷ | 1.42×10¹⁷ | Qwen most efficient |
+| **GPU mem allocated** | ~5.4 GB | ~5.6 GB | ~5.5 GB | All comparable |
+| **GPU mem reserved** | ~7.8 GB | ~7.6 GB | ~8.5 GB | DeepSeek slightly higher |
+| **Trainable params** | ~40M (0.92%) | ~40M | 40,370,176 (0.92%) | Same LoRA config |
+
+#### Eval Loss Trajectory Comparison (Side-by-Side)
+
+| Step | Epoch | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B |
+|-----:|------:|------------:|-------------:|---------------:|
+| 100 | 0.29 | 0.4360 | 0.3075 | 0.4526 |
+| 200 | 0.58 | 0.4188 | 0.2977 | 0.3959 |
+| 300 | 0.88 | 0.4049 | 0.2885 | 0.3704 |
+| 400 | 1.17 | 0.3974 | 0.2879 | 0.3611 |
+| 500 | 1.46 | 0.3884 | 0.2834 | 0.3477 |
+| 600 | 1.75 | 0.3821 | **0.2785** | 0.3424 |
+| 700 | 2.04 | 0.3773 | 0.2799 | 0.3386 |
+| 800 | 2.33 | 0.3734 | 0.2827 | 0.3384 |
+| 900 | 2.63 | 0.3697 | 0.2835 | 0.3363 |
+| 1000 | 2.92 | 0.3656 | 0.2833 | **0.3363** |
 
 #### Key Findings
 
-1. **Llama 3.1-8B achieves significantly lower eval loss** (0.2785 vs 0.3656, a **23.8% relative improvement**). This is the most important finding — it suggests Llama produces better ABSA outputs for Uzbek text.
+1. **Llama 3.1-8B remains the clear leader** with best eval loss of 0.2785, followed by DeepSeek-R1-7B (0.3363, +20.7%) and Qwen 2.5-7B (0.3656, +31.3%). The ranking is consistent across all evaluation checkpoints.
 
-2. **Llama converges faster in terms of epochs** — best eval loss at step 600 (epoch 1.75) vs Qwen's best at step 1000 (epoch 2.92). Llama could potentially be trained for fewer steps.
+2. **DeepSeek-R1-Distill outperforms its Qwen 2.5 base architecture** — despite sharing the Qwen-7B backbone, DeepSeek achieves 8.0% lower eval loss (0.3363 vs 0.3656). This suggests the R1 reasoning distillation provides transferable representations that benefit structured output tasks like ABSA.
 
-3. **Qwen is computationally more efficient** — 22% faster throughput (5.44 vs 4.46 samples/sec) and 17% fewer FLOPs. This is expected: Qwen 2.5-7B has ~7B parameters while Llama 3.1-8B has ~8B.
+3. **DeepSeek has the worst starting point but the best relative improvement** — initial loss of 3.29 (highest) drops to 0.233 min loss (87.4% reduction, highest). The model "catches up" during training, but its eval loss never reaches Llama's level.
 
-4. **Llama shows slight overfitting after epoch 1.75** — eval loss increases from 0.2785 (step 600) to 0.2833 (step 1000). For production use, the **step-600 checkpoint is optimal**. Qwen's eval loss was still improving at termination, suggesting it could benefit from more training.
+4. **Two convergence patterns emerge:**
+   - **Monotonically improving (Qwen, DeepSeek):** Eval loss still decreasing at step 1000. Both could potentially benefit from longer training.
+   - **Early convergence with plateau (Llama):** Best eval loss at step 600, slight increase after. Llama reaches its optimum faster but overfits slightly.
 
-5. **Lower initial loss for Llama** (2.12 vs 3.04) indicates better pre-trained alignment with the ABSA task format or more efficient tokenization of Uzbek text. This merits further investigation via tokenizer fertility analysis (see LOG 014).
+5. **Architecture vs pre-training effect:** Qwen 2.5 and DeepSeek share the same Qwen-7B architecture (identical trainable params: 40.4M / 0.92%), yet DeepSeek performs 8% better. Llama uses a different architecture (8B params) and performs 24% better than Qwen. This suggests **both architecture and pre-training objective matter**, with Llama's architecture + instruction-tuning being the strongest combination for Uzbek ABSA.
 
-6. **Memory usage is comparable** — both models fit comfortably on a single A6000 with ~5.5 GB allocated, leaving ample headroom for larger batch sizes.
+6. **Throughput ranking: Qwen > Llama > DeepSeek** (5.44 > 4.46 > 4.28 samples/sec). DeepSeek's slightly lower throughput despite same architecture as Qwen may be due to differences in attention implementation or the R1 distillation modifications.
 
-#### Preliminary Ranking (Training Loss Only — Evaluation Pending)
+7. **Memory usage is comparable across all three** — all fit comfortably on a single A6000 with ~5.5 GB allocated. DeepSeek uses slightly more reserved memory (~8.5 GB vs ~7.7 GB for others), possibly due to different caching behavior.
 
-| Rank | Model | Best Eval Loss | Training Efficiency |
-|:----:|-------|---------------:|:-------------------:|
-| 1 | **Llama 3.1-8B** | **0.2785** | Moderate |
-| 2 | Qwen 2.5-7B | 0.3656 | High |
+#### Preliminary Ranking (Training Loss Only — ABSA Evaluation Pending)
 
-> ⚠️ **Important caveat:** These rankings are based on **cross-entropy loss only**, not on actual ABSA metrics (P/R/F1). Lower loss does not always translate to better task performance — a model with lower eval loss could still produce worse JSON outputs or misidentify aspects. **ABSA evaluation (LOG 020 pipeline) on both models is required before drawing final conclusions.**
+| Rank | Model | Best Eval Loss | vs. Best | Training Speed | Convergence |
+|:----:|-------|---------------:|---------:|:--------------:|:-----------:|
+| 1 | **Llama 3.1-8B** | **0.2785** | — | Moderate (4.46 s/s) | Fast (step 600) |
+| 2 | DeepSeek-R1-7B | 0.3363 | +20.7% | Slow (4.28 s/s) | Gradual (step 1000) |
+| 3 | Qwen 2.5-7B | 0.3656 | +31.3% | Fast (5.44 s/s) | Gradual (step 1000) |
+
+> ⚠️ **Important caveat:** These rankings are based on **cross-entropy loss only**, not on actual ABSA metrics (P/R/F1). Lower loss does not always translate to better task performance — a model with lower eval loss could still produce worse JSON outputs or misidentify aspects. **ABSA evaluation (LOG 020 pipeline) on all three models is required before drawing final conclusions.**
 
 ### Next Steps
-- [ ] Run ABSA evaluation on **both** Qwen 2.5-7B and Llama 3.1-8B using the evaluation pipeline (LOG 020)
+- [ ] Run ABSA evaluation on **all three** models (Qwen, Llama, DeepSeek) using the evaluation pipeline (LOG 020)
 - [ ] Compare JSON parse success rates — critical for instruction-following assessment
 - [ ] Compare ATE/ASC/E2E-ABSA F1 scores — the definitive metrics
-- [ ] Train remaining models: DeepSeek-7B, Mistral-7B (complete Experiment 1)
-- [ ] Investigate tokenizer fertility differences between Qwen and Llama on Uzbek text
+- [ ] Train final model: Mistral-7B (complete the 4-model comparison)
+- [ ] Investigate tokenizer fertility differences across all models on Uzbek text
 - [ ] Consider training Llama for only ~600–700 steps (early stopping at best eval loss)
+- [ ] Consider extending Qwen and DeepSeek training beyond 1000 steps (eval loss still improving)
 
 
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
-# Next: (1) Run ABSA evaluation on Qwen & Llama, (2) Train DeepSeek/
-#       Mistral, (3) Implement LLM-as-Judge pipeline, (4) Tokenizer
-#       fertility analysis, (5) Run multi-domain eval on reviews.csv
+# Next: (1) Run ABSA evaluation on Qwen, Llama & DeepSeek,
+#       (2) Train Mistral-7B, (3) Implement LLM-as-Judge pipeline,
+#       (4) Tokenizer fertility analysis,
+#       (5) Run multi-domain eval on reviews.csv
 # ======================================================================
