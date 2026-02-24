@@ -972,10 +972,129 @@ This produces a **domain-wise quality matrix** showing how well the fine-tuned m
 - **Practical outcome:** The LLM-as-Judge scores on `reviews.csv` can serve as **silver-standard annotations**, which can then be human-verified to create the multi-domain ABSA resource
 
 
+## LOG 021 — Experiment 2 Result: Llama 3.1-8B Fine-tuning (COMPLETED)
+Date: Feb 22, 2026
+
+### Run Details
+- **Run ID:** `uzabsa_llama3.1-8b_20260222_182459`
+- **Model:** `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit` (4-bit NF4)
+- **GPU:** NVIDIA RTX A6000 (48GB), single GPU
+- **Status:** ✅ **COMPLETED SUCCESSFULLY** (1000/1000 steps)
+- **W&B run:** `dnxp8iq3` (project: uzabsa-llm)
+
+### Training Configuration
+- Identical to Experiment 1 (LOG 018) — same LoRA config, hyperparameters, optimizer, and data split
+- This ensures a **controlled comparison**: the only variable is the base model architecture
+
+### Training Results
+| Metric | Value |
+|--------|-------|
+| Initial train loss | 2.1197 |
+| Final train loss | 0.2868 |
+| Min train loss | 0.1818 |
+| **Loss reduction** | **86.5%** |
+| Best eval loss | 0.2785 (step 600) |
+| Final eval loss | 0.2833 (step 1000) |
+| Training compute time | 3,585 s (~59.8 min) |
+| Total wall time | 457.5 min (~7.6 hr incl. eval/save) |
+| Samples/sec | 4.46 |
+| GPU memory allocated | ~5.6 GB |
+| GPU memory reserved | ~7.6 GB |
+
+### Eval Loss Progression
+| Step | Epoch | Eval Loss |
+|-----:|------:|----------:|
+| 100 | 0.29 | 0.3075 |
+| 200 | 0.58 | 0.2977 |
+| 300 | 0.88 | 0.2885 |
+| 400 | 1.17 | 0.2879 |
+| 500 | 1.46 | 0.2834 |
+| **600** | **1.75** | **0.2785** ← best |
+| 700 | 2.04 | 0.2799 |
+| 800 | 2.33 | 0.2827 |
+| 900 | 2.62 | 0.2835 |
+| 1000 | 2.92 | 0.2833 |
+
+### Loss Curve Observations
+- Llama starts with a **much lower initial loss** (2.12 vs Qwen's 3.04) — suggesting better pre-trained representation for the task or tokenizer efficiency
+- Convergence is smoother: loss drops to ~0.30 by step 30, then steadily decreases
+- Best eval loss reached at **step 600 (epoch 1.75)** — train loss continues decreasing but eval loss plateaus, indicating mild overfitting after ~1.75 epochs
+- Gradient norms remain stable (0.27–0.45 range after warmup), indicating healthy optimization
+
+### Saved Artifacts
+- `lora_adapters/` — LoRA adapter weights
+- `merged_model/` — Full merged 16-bit model
+- `checkpoint-600/`, `checkpoint-900/`, `checkpoint-1000/` — Training checkpoints
+- `experiment_summary.json` — Full reproducibility metadata
+- **Plots:** `training_curves.png`, `lr_schedule.png`, `gpu_memory.png`
+
+![Training Curves](outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/training_curves.png)
+![LR Schedule](outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/lr_schedule.png)
+![GPU Memory](outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/gpu_memory.png)
+
+---
+
+### Comparative Analysis: Qwen 2.5-7B vs Llama 3.1-8B
+
+#### Training Dynamics Comparison
+
+| Metric | Qwen 2.5-7B (Exp 1) | Llama 3.1-8B (Exp 2) | Δ | Advantage |
+|--------|--------------------:|---------------------:|--:|-----------|
+| **Initial train loss** | 3.0409 | 2.1197 | −0.92 | Llama |
+| **Final train loss** | 0.4010 | 0.2868 | −0.11 | Llama |
+| **Min train loss** | 0.2422 | 0.1818 | −0.06 | Llama |
+| **Loss reduction (%)** | 86.8% | 86.5% | −0.3pp | ~Tied |
+| **Best eval loss** | 0.3656 | 0.2785 | −0.087 | **Llama** |
+| **Best eval step** | 1000 | 600 | −400 | Llama (faster) |
+| **Final eval loss** | 0.3656 | 0.2833 | −0.082 | **Llama** |
+
+#### Efficiency Comparison
+
+| Metric | Qwen 2.5-7B | Llama 3.1-8B | Δ | Note |
+|--------|------------:|-------------:|--:|------|
+| **Training compute (s)** | 2,942 | 3,585 | +643 | Qwen 22% faster |
+| **Wall time (min)** | 282.6 | 457.5 | +175 | Qwen 38% faster |
+| **Samples/sec** | 5.44 | 4.46 | −0.98 | Qwen 22% higher throughput |
+| **Total FLOPs** | 1.24×10¹⁷ | 1.50×10¹⁷ | +0.26×10¹⁷ | Qwen 17% fewer FLOPs |
+| **GPU mem allocated** | ~5.4 GB | ~5.6 GB | +0.2 | ~Same |
+| **GPU mem reserved** | ~7.8 GB | ~7.6 GB | −0.2 | ~Same |
+
+#### Key Findings
+
+1. **Llama 3.1-8B achieves significantly lower eval loss** (0.2785 vs 0.3656, a **23.8% relative improvement**). This is the most important finding — it suggests Llama produces better ABSA outputs for Uzbek text.
+
+2. **Llama converges faster in terms of epochs** — best eval loss at step 600 (epoch 1.75) vs Qwen's best at step 1000 (epoch 2.92). Llama could potentially be trained for fewer steps.
+
+3. **Qwen is computationally more efficient** — 22% faster throughput (5.44 vs 4.46 samples/sec) and 17% fewer FLOPs. This is expected: Qwen 2.5-7B has ~7B parameters while Llama 3.1-8B has ~8B.
+
+4. **Llama shows slight overfitting after epoch 1.75** — eval loss increases from 0.2785 (step 600) to 0.2833 (step 1000). For production use, the **step-600 checkpoint is optimal**. Qwen's eval loss was still improving at termination, suggesting it could benefit from more training.
+
+5. **Lower initial loss for Llama** (2.12 vs 3.04) indicates better pre-trained alignment with the ABSA task format or more efficient tokenization of Uzbek text. This merits further investigation via tokenizer fertility analysis (see LOG 014).
+
+6. **Memory usage is comparable** — both models fit comfortably on a single A6000 with ~5.5 GB allocated, leaving ample headroom for larger batch sizes.
+
+#### Preliminary Ranking (Training Loss Only — Evaluation Pending)
+
+| Rank | Model | Best Eval Loss | Training Efficiency |
+|:----:|-------|---------------:|:-------------------:|
+| 1 | **Llama 3.1-8B** | **0.2785** | Moderate |
+| 2 | Qwen 2.5-7B | 0.3656 | High |
+
+> ⚠️ **Important caveat:** These rankings are based on **cross-entropy loss only**, not on actual ABSA metrics (P/R/F1). Lower loss does not always translate to better task performance — a model with lower eval loss could still produce worse JSON outputs or misidentify aspects. **ABSA evaluation (LOG 020 pipeline) on both models is required before drawing final conclusions.**
+
+### Next Steps
+- [ ] Run ABSA evaluation on **both** Qwen 2.5-7B and Llama 3.1-8B using the evaluation pipeline (LOG 020)
+- [ ] Compare JSON parse success rates — critical for instruction-following assessment
+- [ ] Compare ATE/ASC/E2E-ABSA F1 scores — the definitive metrics
+- [ ] Train remaining models: DeepSeek-7B, Mistral-7B (complete Experiment 1)
+- [ ] Investigate tokenizer fertility differences between Qwen and Llama on Uzbek text
+- [ ] Consider training Llama for only ~600–700 steps (early stopping at best eval loss)
+
+
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
-# Next: (1) Re-prepare data with 80/10/10 split, (2) Run evaluation on
-#       Qwen 2.5-7B, (3) Train Llama/DeepSeek/Mistral, (4) Implement
-#       LLM-as-Judge pipeline, (5) Run multi-domain eval on reviews.csv
+# Next: (1) Run ABSA evaluation on Qwen & Llama, (2) Train DeepSeek/
+#       Mistral, (3) Implement LLM-as-Judge pipeline, (4) Tokenizer
+#       fertility analysis, (5) Run multi-domain eval on reviews.csv
 # ======================================================================
