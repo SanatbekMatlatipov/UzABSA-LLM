@@ -324,12 +324,39 @@ results = extract_aspects_batch(model, tokenizer, texts, batch_size=8)
 
 ## Evaluation
 
+### Quick Test (5 samples, ~30 sec)
+
 ```powershell
 python scripts/evaluate.py `
-    --model-path ./outputs/my_run/.../merged_model `
+    --model-path ./outputs/my_run/<experiment>/merged_model `
     --test-data ./data/processed `
-    --output ./outputs/my_run/.../eval_results.json
+    --output-dir ./outputs/my_run/<experiment> `
+    --max-samples 5
 ```
+
+### Full Evaluation — All Three Models
+
+```powershell
+# Qwen 2.5-7B
+python scripts/evaluate.py `
+    --model-path ./outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/merged_model `
+    --test-data ./data/processed `
+    --output-dir ./outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629
+
+# Llama 3.1-8B
+python scripts/evaluate.py `
+    --model-path ./outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/merged_model `
+    --test-data ./data/processed `
+    --output-dir ./outputs/my_run/uzabsa_llama3.1-8b_20260222_182459
+
+# DeepSeek-R1-7B
+python scripts/evaluate.py `
+    --model-path ./outputs/my_run/uzabsa_deepseek-7b/merged_model `
+    --test-data ./data/processed `
+    --output-dir ./outputs/my_run/uzabsa_deepseek-7b
+```
+
+Each run takes ~25 min on the full 609 validation examples. Results are saved to `eval_results_YYYYMMDD_HHMMSS.json` in the output directory.
 
 **Metrics computed:**
 - **ATE** (Aspect Term Extraction): Precision, Recall, F1 — exact & partial match
@@ -367,17 +394,30 @@ All experiments used identical configuration: LoRA r=16, alpha=32, dropout=0.05,
 | Throughput | 4.46 samples/sec |
 | GPU memory | ~5.6 GB allocated, ~7.6 GB reserved |
 
-### Head-to-Head Comparison
+### Experiment 3: DeepSeek-R1-7B (Feb 22–23, 2026)
 
-| Metric | Qwen 2.5-7B | Llama 3.1-8B | Winner |
-|--------|:-----------:|:------------:|:------:|
-| Best eval loss | 0.3656 | **0.2785** | Llama (−23.8%) |
-| Best eval step | 1000 | **600** | Llama (faster) |
-| Training speed | **5.44 s/s** | 4.46 s/s | Qwen (+22%) |
-| Total FLOPs | **1.24×10¹⁷** | 1.50×10¹⁷ | Qwen (−17%) |
-| GPU memory | ~Same | ~Same | Tied |
+| Metric | Value |
+|--------|-------|
+| Model | `unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit` |
+| Initial → Final train loss | 3.2900 → 0.2330 (−92.9%) |
+| Best eval loss | 0.3363 (step 1000) |
+| Training compute time | **62 min** |
+| Total wall time | ~**8+ hours** (incl. eval/save) |
+| Throughput | 4.28 samples/sec |
+| GPU memory | ~5.5 GB allocated, ~8.5 GB reserved |
 
-> **Note:** Rankings based on cross-entropy loss only. ABSA evaluation (P/R/F1) is pending — see RESEARCH_LOG.md for full details.
+### 3-Model Comparison (Training Loss)
+
+| Metric | Qwen 2.5-7B | DeepSeek-R1-7B | Llama 3.1-8B |
+|--------|:-----------:|:--------------:|:------------:|
+| Best eval loss | 0.3656 | 0.3363 | **0.2785** |
+| Best eval step | 1000 | 1000 | **600** |
+| Loss reduction | 86.8% | **92.9%** | 86.5% |
+| Training speed | **5.44 s/s** | 4.28 s/s | 4.46 s/s |
+| GPU memory | ~5.4 GB | ~5.5 GB | ~5.6 GB |
+| Convergence | Gradual | Gradual | Fast |
+
+> **Note:** Rankings based on cross-entropy loss only. ABSA evaluation (P/R/F1) is pending — see RESEARCH_LOG.md for full details. DeepSeek shares the Qwen-7B architecture but achieves 8% lower eval loss, likely due to R1 reasoning distillation.
 
 ---
 
@@ -445,13 +485,13 @@ python scripts/train_unsloth.py --help
 
 ## Research Paper Support
 
-Detailed methodology, experiment logs, and reproducibility metadata are in [RESEARCH_LOG.md](RESEARCH_LOG.md) (21 entries covering dataset analysis, model selection, QLoRA config, evaluation metrics, hardware setup, experiment plans, and results).
+Detailed methodology, experiment logs, and reproducibility metadata are in [RESEARCH_LOG.md](RESEARCH_LOG.md) (22 entries covering dataset analysis, model selection, QLoRA config, evaluation metrics, hardware setup, experiment plans, and results).
 
 ### Planned Experiments (see RESEARCH_LOG.md)
 
 | # | Experiment | Status |
 |---|-----------|--------|
-| 1 | Model comparison (Qwen/Llama/DeepSeek/Mistral at ~7B) | Qwen & Llama done |
+| 1 | Model comparison (Qwen/Llama/DeepSeek/Mistral at ~7B) | Qwen, Llama & DeepSeek done |
 | 2 | LoRA rank ablation (r ∈ {4, 8, 16, 32, 64}) | Planned |
 | 3 | Prompt language ablation (Uzbek vs English) | Planned |
 | 4 | Model scale comparison (3B vs 7B vs 14B) | Planned |

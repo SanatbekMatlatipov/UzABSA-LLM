@@ -718,12 +718,6 @@ Date: Feb 22, 2026
 - Input → Uzbek review text with ABSA extraction instruction
 - Output → Structured JSON with aspects, categories, polarities
 
-### Next Steps
-- [ ] Run ABSA evaluation on Qwen 2.5-7B (P/R/F1 for ATE and ASC)
-- [ ] Train remaining models: Llama 3.1-8B, DeepSeek-7B, Mistral-7B
-- [ ] Compare results across architectures (Experiment 1 completion)
-- [ ] Begin work on annotating raw reviews.csv with fine-tuned model
-
 ### Note on Failed Prior Runs
 - Runs 1–4 (`_233911`, `_235743`, `_000337`, `_000839`) failed early due to debugging issues
 - Run in `my_runcopilot-debug/` was also a debugging attempt
@@ -1173,20 +1167,68 @@ DeepSeek-R1-Distill-Qwen-7B is a **distillation** of the DeepSeek-R1 reasoning m
 > ⚠️ **Important caveat:** These rankings are based on **cross-entropy loss only**, not on actual ABSA metrics (P/R/F1). Lower loss does not always translate to better task performance — a model with lower eval loss could still produce worse JSON outputs or misidentify aspects. **ABSA evaluation (LOG 020 pipeline) on all three models is required before drawing final conclusions.**
 
 ### Next Steps
+
+#### Immediate: ABSA Evaluation (In Progress)
 - [ ] Run ABSA evaluation on **all three** models (Qwen, Llama, DeepSeek) using the evaluation pipeline (LOG 020)
 - [ ] Compare JSON parse success rates — critical for instruction-following assessment
 - [ ] Compare ATE/ASC/E2E-ABSA F1 scores — the definitive metrics
-- [ ] Train final model: Mistral-7B (complete the 4-model comparison)
+- [ ] Write LOG 023 with full ABSA metric comparison across all 3 models
+
+#### Phase A: Annotate `reviews.csv` Using Fine-Tuned Models
+The raw `reviews.csv` contains **5,058 unannotated multi-domain reviews** spanning 23 business categories. The goal is to create a **silver-standard annotated multi-domain Uzbek ABSA dataset** — a novel resource.
+
+**Step-by-step plan:**
+1. **Select best model** — After ABSA evaluation (above), choose the model with highest E2E-ABSA F1 as the annotation engine
+2. **Stratified sampling** — Select ~200 reviews across domains for initial annotation (see LOG 020 domain table)
+3. **Run batch inference** — Use the selected model to predict aspects for each review:
+   ```
+   python scripts/evaluate.py --model-path ./outputs/my_run/<best_model>/merged_model \
+       --test-data <reviews_dataset> --output-dir ./data/annotated
+   ```
+4. **Quality filtering** — Keep only predictions with valid JSON parse and ≥1 aspect term
+5. **Export annotations** — Save as structured JSON: `{review_id, text, business_category, rating, predicted_aspects}`
+6. **Human verification (optional)** — Manually verify a random sample (~50–100 reviews) to estimate annotation quality
+7. **Full annotation run** — Once quality is confirmed, annotate all 5,058 reviews
+
+**Deliverable:** `data/annotated/reviews_annotated.json` — the multi-domain Uzbek ABSA silver dataset
+
+#### Phase B: LLM-as-Judge Evaluation Pipeline
+Designed in LOG 020, the LLM-as-Judge pipeline evaluates model quality beyond automatic metrics.
+
+**Phase B.1 — Calibration (with gold standard):**
+1. Run all 3 fine-tuned models on the **validation split** (609 examples)
+2. Format predictions into judge-ready prompts (see LOG 020 prompt templates)
+3. Submit to GPT-4o-mini / Claude API — score each prediction on 4 dimensions:
+   - Completeness (1–5), Accuracy (1–5), Sentiment (1–5), Format (1–5)
+4. Compute **correlation** between LLM-as-Judge scores and automatic F1 metrics
+5. If correlation > 0.7 → LLM-as-Judge is reliable for Phase B.2
+
+**Phase B.2 — Real-world evaluation (on `reviews.csv`):**
+1. Run best model on stratified sample (~200 reviews from `reviews.csv`)
+2. Submit predictions to LLM-as-Judge (Phase 2 prompt — no gold standard)
+3. Aggregate scores per business domain → **domain-wise quality heatmap**
+4. Identify domains where the model generalizes well vs. poorly
+
+**Reliability measures:**
+- Inter-judge agreement on 50-example subset (2 different LLM judges)
+- Human correlation check on 30 manually scored examples
+- Cost estimate: ~$4–10 total (GPT-4o-mini pricing)
+
+**Deliverable:** Domain-generalization analysis table + judge score distributions
+
+#### Phase C: Remaining Experiments
+- [ ] Train final model: **Mistral-7B** (complete 4-model comparison)
 - [ ] Investigate tokenizer fertility differences across all models on Uzbek text
 - [ ] Consider training Llama for only ~600–700 steps (early stopping at best eval loss)
 - [ ] Consider extending Qwen and DeepSeek training beyond 1000 steps (eval loss still improving)
+- [ ] Write final paper results section with all metrics
 
 
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
 # Next: (1) Run ABSA evaluation on Qwen, Llama & DeepSeek,
-#       (2) Train Mistral-7B, (3) Implement LLM-as-Judge pipeline,
-#       (4) Tokenizer fertility analysis,
-#       (5) Run multi-domain eval on reviews.csv
+#       (2) Annotate reviews.csv with best model,
+#       (3) Implement LLM-as-Judge pipeline (Phase B),
+#       (4) Train Mistral-7B, (5) Tokenizer fertility analysis
 # ======================================================================

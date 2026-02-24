@@ -1,7 +1,16 @@
 wandb/*
 unsloth_compiled_cache/*
-outputs/my_run/*
-!outputs/my_run/README.md
+
+# outputs - ignore large model weights & checkpoints, keep experiment metadata
+# Tracked:  experiment_summary.json, training_history.json/csv,
+#           training_curves.png, lr_schedule.png, gpu_memory.png,
+#           eval_results_*.json, README.md
+# Ignored:  merged_model/, lora_adapters/, checkpoint-*/, model/, logs/
+outputs/my_run/*/merged_model/
+outputs/my_run/*/lora_adapters/
+outputs/my_run/*/checkpoint-*/
+outputs/my_run/*/model/
+outputs/my_run/*/logs/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
