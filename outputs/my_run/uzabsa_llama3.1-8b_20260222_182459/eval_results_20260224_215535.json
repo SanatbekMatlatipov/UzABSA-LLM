@@ -1,0 +1,34 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.6394,
+      "recall": 0.6713,
+      "f1": 0.6549
+    },
+    "partial_match": {
+      "precision": 0.7411,
+      "recall": 0.7781,
+      "f1": 0.7591
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.5667,
+    "pair_recall": 0.595,
+    "pair_f1": 0.5805,
+    "sentiment_accuracy": 0.8864,
+    "sentiment_macro_f1": 0.8435,
+    "total_predictions": 757,
+    "total_references": 721
+  },
+  "json_parse_rate": 95.89,
+  "json_parse_successes": 584,
+  "json_parse_failures": 25,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "metadata": {
+    "model_path": "./outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/merged_model",
+    "test_data": "./data/processed",
+    "timestamp": "2026-02-24T21:55:35.657788",
+    "num_samples": 609
+  }
+}
