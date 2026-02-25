@@ -1450,9 +1450,10 @@ Based on quality scores from Steps 4–5:
 
 ### Next Steps
 - [x] ~~ABSA evaluation on all three models~~ → **Done (LOG 023)**
-- [ ] Build `scripts/annotate_reviews.py` — batch annotation script
-- [ ] Run Qwen 2.5-7B on all 5,058 reviews
-- [ ] Implement LLM-as-Judge scoring script
+- [x] ~~Build `scripts/annotate_reviews.py`~~ → **Done (LOG 025)**
+- [x] ~~Implement LLM-as-Judge scoring script~~ → **Done (LOG 025)**
+- [x] ~~Implement dataset assembly script~~ → **Done (LOG 025)**
+- [ ] Run Qwen 2.5-7B on all 5,038 reviews → **In Progress (LOG 025)**
 - [ ] Run judge on stratified sample (~300 reviews)
 - [ ] Human verification (50 reviews, 2 annotators)
 - [ ] Assemble final dataset + publish to HuggingFace Hub
@@ -1460,12 +1461,97 @@ Based on quality scores from Steps 4–5:
 - [ ] Write final paper results section with all metrics
 
 
+## LOG 025 — Annotation Pipeline Implementation (IN PROGRESS)
+Date: Feb 25, 2026
+
+### Overview
+Full implementation of the 3-layer annotation pipeline from LOG 024. All scripts built and tested, batch annotation running on 5,038 reviews.
+
+### Scripts Implemented
+
+#### 1. `scripts/annotate_reviews.py` — Batch ABSA Annotation
+- **Input:** `data/raw/reviews.csv` (5,058 reviews → 5,038 after dedup + filter)
+- **Model:** Qwen 2.5-7B fine-tuned (`outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/merged_model`)
+- **Features:**
+  - Automatic business category mapping from `business_categories.json`
+  - Checkpoint support: saves every 100 reviews for crash recovery
+  - Quality categorization: good / no_aspects / failed / flagged (>5 aspects)
+  - Outputs: `reviews_annotated.json`, `annotation_stats.json`, `domain_distribution.json`
+- **Test run (5 samples):** 100% JSON parse rate, 100% usable, 5/5 good annotations, 1 flagged (9 aspects)
+
+#### 2. `scripts/llm_judge.py` — LLM-as-Judge Quality Scoring
+- **Providers:** OpenAI (GPT-5-mini), Anthropic (Claude 3.5 Haiku), any OpenAI-compatible API
+- **Scoring dimensions (1–5 each):**
+  - Completeness — captures all opinions?
+  - Accuracy — extracted terms actually in text?
+  - Sentiment — polarity labels correct?
+  - Relevance — categories appropriate?
+  - Overall — combined quality
+- **Stratified sampling:** ~300 reviews across 23 domains (priority: Restoran 50, Bank 30, Telekom 25, Tibbiyot 25, Ta'lim 20, E-tijorat 20, Transport 15, Mehmonxona 15, others proportional)
+- **Features:** Checkpoint recovery, rate limiting, retry with backoff, structured JSON score parsing with regex fallback
+- **Output:** `judge_results.json`, `judge_report.json` (aggregated), `judge_summary.txt` (human-readable)
+
+#### 3. `scripts/assemble_dataset.py` — Final Dataset Assembly
+- **Quality tiers:** Include (≥3.5), Flag (2.5–3.5), Exclude (<2.5), Unjudged
+- **Output formats:**
+  - `uzbek_multi_domain_absa_full.json` — all annotations + judge scores
+  - `uzbek_multi_domain_absa_silver.json` — included + unjudged (silver standard)
+  - `uzbek_multi_domain_absa_approved.json` — judge-approved only
+  - `uzbek_multi_domain_absa.jsonl` — JSONL for HuggingFace
+  - `dataset_stats.json` — comprehensive statistics
+
+### Batch Annotation Status
+**Started:** Feb 25, 2026 10:50
+**Current progress:** ~142/5,038 reviews (~3%)
+**Average speed:** ~5.3 sec/review
+**Estimated completion:** ~7–8 hours from start
+**JSON parse rate so far:** 100% (consistent with LOG 023 evaluation)
+
+### Annotation Quality (First 5 Samples)
+
+| Review | Domain | Aspects | Flagged? | Notes |
+|--------|--------|:-------:|:--------:|-------|
+| rev_00000 | Ta'lim | 9 | Yes (>5) | Long review with many opinions — extraction valid |
+| rev_00001 | Ta'lim | 2 | No | Correct: platform + teachers |
+| rev_00002 | Ta'lim | 1 | No | Short review, single aspect correct |
+| rev_00003 | Ta'lim | 3 | No | Platform + courses + teachers |
+| rev_00004 | Ta'lim | 2 | No | Good extraction from short text |
+
+### Pipeline Execution Order
+```
+1. annotate_reviews.py   → data/annotated/reviews_annotated.json    [RUNNING]
+2. llm_judge.py          → data/judged/judge_results.json           [WAITING for Step 1 + API key]
+3. assemble_dataset.py   → data/final_dataset/                      [WAITING for Steps 1-2]
+```
+
+### Commands to Run (after annotation completes)
+```powershell
+# Set API key
+$env:OPENAI_API_KEY = "sk-..."
+
+# Run LLM-as-Judge on stratified sample
+python scripts/llm_judge.py \
+    --annotations ./data/annotated/reviews_annotated.json \
+    --provider openai --model gpt-5-mini \
+    --sample-size 300 --output-dir ./data/judged
+
+# Assemble final dataset
+python scripts/assemble_dataset.py \
+    --annotations ./data/annotated/reviews_annotated.json \
+    --judge-results ./data/judged/judge_results.json \
+    --output-dir ./data/final_dataset
+```
+
+### Also Fixed
+- Resolved 2 merge conflict blocks in RESEARCH_LOG.md (from `git reset --soft` in previous session)
+- Removed outdated Phase A/B/C plan and remote-branch conflict markers
+
+
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
-# Next: (1) Build annotation pipeline for reviews.csv,
-#       (2) Run Qwen inference on 5,058 reviews,
-#       (3) LLM-as-Judge scoring, (4) Human verification,
-#       (5) Publish multi-domain dataset to HuggingFace Hub,
-#       (6) Tokenizer fertility analysis
+# Next: (1) Complete annotation run (~7-8 hours),
+#       (2) Run LLM-as-Judge on stratified 300-sample,
+#       (3) Assemble final dataset, (4) Human verification,
+#       (5) Publish to HuggingFace Hub, (6) Tokenizer fertility analysis
 # ======================================================================
