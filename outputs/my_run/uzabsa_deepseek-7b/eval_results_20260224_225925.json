@@ -1,0 +1,34 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.5348,
+      "recall": 0.6921,
+      "f1": 0.6034
+    },
+    "partial_match": {
+      "precision": 0.6452,
+      "recall": 0.835,
+      "f1": 0.7279
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.4448,
+    "pair_recall": 0.5756,
+    "pair_f1": 0.5018,
+    "sentiment_accuracy": 0.8317,
+    "sentiment_macro_f1": 0.7717,
+    "total_predictions": 933,
+    "total_references": 721
+  },
+  "json_parse_rate": 95.4,
+  "json_parse_successes": 581,
+  "json_parse_failures": 28,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "metadata": {
+    "model_path": "./outputs/my_run/uzabsa_deepseek-7b/merged_model",
+    "test_data": "./data/processed",
+    "timestamp": "2026-02-24T22:59:25.955282",
+    "num_samples": 609
+  }
+}

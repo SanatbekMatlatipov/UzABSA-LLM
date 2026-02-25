@@ -17,6 +17,7 @@ License: MIT
 
 import json
 import logging
+import re
 from collections import defaultdict
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -214,6 +215,58 @@ def compute_aspect_polarity_metrics(
 
 
 # =============================================================================
+# ChatML Parsing
+# =============================================================================
+
+def parse_chatml_example(chatml_text: str) -> Tuple[str, List[Dict[str, str]]]:
+    """
+    Parse a ChatML-formatted example into review text and gold aspects.
+
+    The dataset stores examples as full ChatML conversations:
+        <|im_start|>system\n...<|im_end|>
+        <|im_start|>user\n...<|im_end|>
+        <|im_start|>assistant\n{JSON}<|im_end|>
+
+    Args:
+        chatml_text: Full ChatML conversation string.
+
+    Returns:
+        Tuple of (review_text, gold_aspects_list).
+    """
+    # Extract review text from user message
+    # Pattern: Matn: "..." inside the user block
+    text_match = re.search(r'Matn:\s*"(.+?)"', chatml_text, re.DOTALL)
+    if text_match:
+        review_text = text_match.group(1).strip()
+    else:
+        # Fallback: try to extract from Text: "..."
+        text_match = re.search(r'Text:\s*"(.+?)"', chatml_text, re.DOTALL)
+        review_text = text_match.group(1).strip() if text_match else ""
+
+    # Extract gold aspects from assistant response
+    # Find the assistant block and parse JSON
+    assistant_match = re.search(
+        r'<\|im_start\|>assistant\s*\n(.*?)(?:<\|im_end\|>|$)',
+        chatml_text,
+        re.DOTALL
+    )
+
+    gold_aspects = []
+    if assistant_match:
+        assistant_text = assistant_match.group(1).strip()
+        # Parse JSON from assistant response
+        json_match = re.search(r'\{[\s\S]*\}', assistant_text)
+        if json_match:
+            try:
+                parsed = json.loads(json_match.group())
+                gold_aspects = parsed.get("aspects", [])
+            except json.JSONDecodeError:
+                logger.warning(f"Failed to parse gold JSON: {assistant_text[:200]}")
+
+    return review_text, gold_aspects
+
+
+# =============================================================================
 # Full Evaluation Pipeline
 # =============================================================================
 
@@ -229,6 +282,10 @@ def evaluate_model(
     """
     Run full evaluation on a test dataset.
 
+    Supports two dataset formats:
+    1. ChatML format: Single 'text' column with full conversation (auto-detected)
+    2. Separate columns: 'text' for input, 'aspects' for gold labels
+
     Args:
         model: The loaded model.
         tokenizer: The tokenizer.
@@ -243,34 +300,66 @@ def evaluate_model(
     """
     from .inference import extract_aspects
     from tqdm import tqdm
-    
+
     logger.info(f"Evaluating on {len(test_dataset)} examples...")
-    
+
+    # Detect dataset format
+    columns = test_dataset.column_names if hasattr(test_dataset, 'column_names') else []
+    is_chatml = aspects_column not in columns and text_column in columns
+
+    if is_chatml:
+        logger.info("Detected ChatML format — parsing review text and gold aspects from 'text' column")
+
     all_predictions = []
     all_references = []
-    
+    parse_successes = 0
+    parse_failures = 0
+    empty_gold = 0
+
     for example in tqdm(test_dataset, desc="Evaluating"):
-        text = example[text_column]
-        ref_aspects = example[aspects_column]
-        
-        # Handle string JSON
-        if isinstance(ref_aspects, str):
-            ref_aspects = json.loads(ref_aspects)
-        
+        if is_chatml:
+            # Parse ChatML to get review text and gold aspects
+            review_text, ref_aspects = parse_chatml_example(example[text_column])
+            if not review_text:
+                empty_gold += 1
+                continue
+        else:
+            review_text = example[text_column]
+            ref_aspects = example[aspects_column]
+            if isinstance(ref_aspects, str):
+                ref_aspects = json.loads(ref_aspects)
+
         # Run inference
-        result = extract_aspects(model, tokenizer, text, use_uzbek)
+        result = extract_aspects(model, tokenizer, review_text, use_uzbek)
         pred_aspects = result.get("aspects", [])
-        
+
+        if result.get("parse_success", False):
+            parse_successes += 1
+        else:
+            parse_failures += 1
+
         all_predictions.append(pred_aspects)
         all_references.append(ref_aspects)
+
+    total_evaluated = len(all_predictions)
+    parse_rate = parse_successes / total_evaluated * 100 if total_evaluated > 0 else 0
+
+    logger.info(f"Evaluated {total_evaluated} examples")
+    logger.info(f"JSON parse success rate: {parse_rate:.1f}% ({parse_successes}/{total_evaluated})")
+    if empty_gold > 0:
+        logger.warning(f"Skipped {empty_gold} examples with empty/unparseable gold text")
     
-    # Compute metrics
-    pred_terms = [[a.get("term", "") for a in aspects] for aspects in all_predictions]
-    ref_terms = [[a.get("term", "") for a in aspects] for aspects in all_references]
+    # Compute metrics — filter to aspects that have "term" key (skip category-only aspects)
+    pred_terms = [[a.get("term", "") for a in aspects if a.get("term")] for aspects in all_predictions]
+    ref_terms = [[a.get("term", "") for a in aspects if a.get("term")] for aspects in all_references]
+
+    # Filter to aspects with terms for pair metrics too
+    pred_with_terms = [[a for a in aspects if a.get("term")] for aspects in all_predictions]
+    ref_with_terms = [[a for a in aspects if a.get("term")] for aspects in all_references]
     
     ate_metrics = compute_ate_metrics(pred_terms, ref_terms)
     ate_metrics_partial = compute_ate_metrics(pred_terms, ref_terms, partial_match=True)
-    pair_metrics = compute_aspect_polarity_metrics(all_predictions, all_references)
+    pair_metrics = compute_aspect_polarity_metrics(pred_with_terms, ref_with_terms)
     
     results = {
         "aspect_term_extraction": {
@@ -278,13 +367,18 @@ def evaluate_model(
             "partial_match": ate_metrics_partial,
         },
         "aspect_polarity_pairs": pair_metrics,
-        "num_examples": len(test_dataset),
+        "json_parse_rate": round(parse_rate, 2),
+        "json_parse_successes": parse_successes,
+        "json_parse_failures": parse_failures,
+        "num_examples": total_evaluated,
+        "skipped_empty_gold": empty_gold,
     }
     
     # Print report
     print("\n" + "=" * 60)
     print("Evaluation Results")
     print("=" * 60)
+    print(f"\nJSON Parse Success Rate: {parse_rate:.1f}% ({parse_successes}/{total_evaluated})")
     print(f"\nAspect Term Extraction (Exact Match):")
     print(f"  Precision: {ate_metrics['precision']:.4f}")
     print(f"  Recall:    {ate_metrics['recall']:.4f}")
