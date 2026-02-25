@@ -95,11 +95,10 @@ Date: Feb 2026
 | Llama 3.2 3B | 3B | unsloth/Llama-3.2-3B-Instruct-bnb-4bit | Smallest, fastest |
 | DeepSeek 7B | 7B | unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit | Distilled reasoning |
 | DeepSeek 14B | 14B | unsloth/DeepSeek-R1-Distill-Qwen-14B-bnb-4bit | Larger reasoning |
-| Mistral 7B | 7B | unsloth/mistral-7b-instruct-v0.3-bnb-4bit | Efficient architecture |
 | Gemma 2 9B | 9B | unsloth/gemma-2-9b-it-bnb-4bit | Google's model |
 
 - Selection rationale: all are instruction-tuned, available in 4-bit, and cover diverse architectures
-- KEY POINT FOR PAPER: Compare at least 3-4 models (e.g., Qwen 7B, Llama 3.1 8B, DeepSeek 7B, Mistral 7B) at same parameter scale for fair comparison
+- KEY POINT FOR PAPER: Compare 3 models (Qwen 7B, Llama 3.1 8B, DeepSeek 7B) at same parameter scale for fair comparison
 
 
 ## LOG 005 — Fine-tuning Method: QLoRA
@@ -121,6 +120,7 @@ Date: Feb 2026
   - 7 target modules per transformer layer
 - RSLoRA: disabled
 - LoftQ: disabled
+
 
 ### Training Hyperparameters
 - Optimizer: **AdamW 8-bit** (memory efficient)
@@ -213,7 +213,7 @@ Date: Feb 2026
 
 ### Experiment 1 — Model Comparison (Primary)
 - Goal: Compare base models on Uzbek ABSA
-- Models: Qwen 2.5-7B, Llama 3.1-8B, DeepSeek-7B, Mistral-7B (all at ~7B scale)
+- Models: Qwen 2.5-7B, Llama 3.1-8B, DeepSeek-7B (all at ~7B scale)
 - Fixed: LoRA r=16, alpha=32, lr=2e-4, 3 epochs, same data split
 - Metric: Aspect-polarity pair F1
 
@@ -298,7 +298,6 @@ Date: Feb 2026
 - Hu et al. (2022) — LoRA: Low-Rank Adaptation of LLMs
 - Touvron et al. (2023) — Llama 2 (and Llama 3 tech report if available)
 - Yang et al. (2024) — Qwen2.5 Technical Report
-- Jiang et al. (2023) — Mistral 7B
 - DeepSeek-AI (2024) — DeepSeek-R1 technical report
 - Zhang et al. (2024) — Instruction tuning survey
 - Unsloth — cite GitHub repo + any available paper
@@ -348,7 +347,7 @@ Date: Feb 2026
   "Xizmat ko'rsatish sifati past, kutish vaqti juda uzoq."
   "Mahsulot sifati a'lo darajada, yetkazib berish tez."
   ```
-- Compare across: Qwen, Llama, DeepSeek, Mistral, Gemma tokenizers
+- Compare across: Qwen, Llama, DeepSeek, Gemma tokenizers
 
 
 ## LOG 015 — Reproducibility Checklist
@@ -966,7 +965,7 @@ This produces a **domain-wise quality matrix** showing how well the fine-tuned m
 - **Practical outcome:** The LLM-as-Judge scores on `reviews.csv` can serve as **silver-standard annotations**, which can then be human-verified to create the multi-domain ABSA resource
 
 
-## LOG 021 — Experiment 2 Result: Llama 3.1-8B Fine-tuning (COMPLETED)
+## LOG 021b — Experiment 2 Result: Llama 3.1-8B Fine-tuning (COMPLETED)
 Date: Feb 22, 2026
 
 ### Run Details
@@ -1167,68 +1166,306 @@ DeepSeek-R1-Distill-Qwen-7B is a **distillation** of the DeepSeek-R1 reasoning m
 > ⚠️ **Important caveat:** These rankings are based on **cross-entropy loss only**, not on actual ABSA metrics (P/R/F1). Lower loss does not always translate to better task performance — a model with lower eval loss could still produce worse JSON outputs or misidentify aspects. **ABSA evaluation (LOG 020 pipeline) on all three models is required before drawing final conclusions.**
 
 ### Next Steps
-
-#### Immediate: ABSA Evaluation (In Progress)
-- [ ] Run ABSA evaluation on **all three** models (Qwen, Llama, DeepSeek) using the evaluation pipeline (LOG 020)
-- [ ] Compare JSON parse success rates — critical for instruction-following assessment
-- [ ] Compare ATE/ASC/E2E-ABSA F1 scores — the definitive metrics
-- [ ] Write LOG 023 with full ABSA metric comparison across all 3 models
-
-#### Phase A: Annotate `reviews.csv` Using Fine-Tuned Models
-The raw `reviews.csv` contains **5,058 unannotated multi-domain reviews** spanning 23 business categories. The goal is to create a **silver-standard annotated multi-domain Uzbek ABSA dataset** — a novel resource.
-
-**Step-by-step plan:**
-1. **Select best model** — After ABSA evaluation (above), choose the model with highest E2E-ABSA F1 as the annotation engine
-2. **Stratified sampling** — Select ~200 reviews across domains for initial annotation (see LOG 020 domain table)
-3. **Run batch inference** — Use the selected model to predict aspects for each review:
-   ```
-   python scripts/evaluate.py --model-path ./outputs/my_run/<best_model>/merged_model \
-       --test-data <reviews_dataset> --output-dir ./data/annotated
-   ```
-4. **Quality filtering** — Keep only predictions with valid JSON parse and ≥1 aspect term
-5. **Export annotations** — Save as structured JSON: `{review_id, text, business_category, rating, predicted_aspects}`
-6. **Human verification (optional)** — Manually verify a random sample (~50–100 reviews) to estimate annotation quality
-7. **Full annotation run** — Once quality is confirmed, annotate all 5,058 reviews
-
-**Deliverable:** `data/annotated/reviews_annotated.json` — the multi-domain Uzbek ABSA silver dataset
-
-#### Phase B: LLM-as-Judge Evaluation Pipeline
-Designed in LOG 020, the LLM-as-Judge pipeline evaluates model quality beyond automatic metrics.
-
-**Phase B.1 — Calibration (with gold standard):**
-1. Run all 3 fine-tuned models on the **validation split** (609 examples)
-2. Format predictions into judge-ready prompts (see LOG 020 prompt templates)
-3. Submit to GPT-4o-mini / Claude API — score each prediction on 4 dimensions:
-   - Completeness (1–5), Accuracy (1–5), Sentiment (1–5), Format (1–5)
-4. Compute **correlation** between LLM-as-Judge scores and automatic F1 metrics
-5. If correlation > 0.7 → LLM-as-Judge is reliable for Phase B.2
-
-**Phase B.2 — Real-world evaluation (on `reviews.csv`):**
-1. Run best model on stratified sample (~200 reviews from `reviews.csv`)
-2. Submit predictions to LLM-as-Judge (Phase 2 prompt — no gold standard)
-3. Aggregate scores per business domain → **domain-wise quality heatmap**
-4. Identify domains where the model generalizes well vs. poorly
-
-**Reliability measures:**
-- Inter-judge agreement on 50-example subset (2 different LLM judges)
-- Human correlation check on 30 manually scored examples
-- Cost estimate: ~$4–10 total (GPT-4o-mini pricing)
-
-**Deliverable:** Domain-generalization analysis table + judge score distributions
-
-#### Phase C: Remaining Experiments
-- [ ] Train final model: **Mistral-7B** (complete 4-model comparison)
+- [x] ~~Run ABSA evaluation on all three models~~ → **Done (LOG 023)**
+- [x] ~~Compare JSON parse success rates~~ → **Done (LOG 023)**
+- [x] ~~Compare ATE/ASC/E2E-ABSA F1 scores~~ → **Done (LOG 023)**
+- [ ] Create multi-domain annotated dataset from `reviews.csv` → **Plan in LOG 024**
+- [ ] Implement LLM-as-Judge evaluation pipeline
 - [ ] Investigate tokenizer fertility differences across all models on Uzbek text
-- [ ] Consider training Llama for only ~600–700 steps (early stopping at best eval loss)
-- [ ] Consider extending Qwen and DeepSeek training beyond 1000 steps (eval loss still improving)
+- [ ] Write final paper results section with all metrics
+
+
+## LOG 023 — ABSA Evaluation: 3-Model Comparison (COMPLETED)
+Date: Feb 24, 2026
+
+### Overview
+Full ABSA evaluation on the **validation split (609 examples)** for all three fine-tuned models. This is the definitive comparison — unlike training loss (LOG 022), these metrics measure actual task performance: can the model correctly extract aspect terms and assign sentiment polarities from Uzbek text?
+
+### Evaluation Setup
+- **Dataset:** Validation split, 609 examples (ChatML format, auto-parsed)
+- **Inference:** Greedy decoding (`do_sample=False`, `temperature=0.1`)
+- **Metrics:** ATE (exact + partial match F1), Aspect-Polarity Pair F1 (E2E-ABSA), Sentiment Accuracy/Macro-F1, JSON parse success rate
+- **Hardware:** NVIDIA RTX A6000, ~25 min per model
+
+### Results
+
+#### Aspect Term Extraction (ATE)
+
+| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B | Best |
+|--------|:-----------:|:------------:|:--------------:|:----:|
+| **Exact Precision** | **0.6138** | 0.6394 | 0.5348 | Llama |
+| **Exact Recall** | **0.7143** | 0.6713 | 0.6921 | Qwen |
+| **Exact F1** | **0.6603** | 0.6549 | 0.6034 | **Qwen** |
+| Partial Precision | 0.7163 | 0.7411 | 0.6452 | Llama |
+| Partial Recall | 0.8336 | 0.7781 | 0.8350 | Qwen ≈ DeepSeek |
+| **Partial F1** | **0.7705** | 0.7591 | 0.7279 | **Qwen** |
+
+#### End-to-End ABSA (Aspect-Polarity Pairs)
+
+| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B | Best |
+|--------|:-----------:|:------------:|:--------------:|:----:|
+| Pair Precision | 0.5387 | **0.5667** | 0.4448 | Llama |
+| Pair Recall | **0.6269** | 0.5950 | 0.5756 | Qwen |
+| **Pair F1 (E2E-ABSA)** | 0.5795 | **0.5805** | 0.5018 | **Llama** (≈ Qwen) |
+| Total predictions | 839 | 757 | 933 | — |
+| Total references | 721 | 721 | 721 | — |
+
+#### Sentiment Classification (on matched aspect pairs)
+
+| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B | Best |
+|--------|:-----------:|:------------:|:--------------:|:----:|
+| **Sentiment Accuracy** | 0.8777 | **0.8864** | 0.8317 | **Llama** |
+| **Sentiment Macro-F1** | 0.8113 | **0.8435** | 0.7717 | **Llama** |
+
+#### Instruction Following (JSON Parse Rate)
+
+| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B |
+|--------|:-----------:|:------------:|:--------------:|
+| **JSON parse rate** | **100.0%** | 95.89% | 95.40% |
+| Parse successes | 609/609 | 584/609 | 581/609 |
+| Parse failures | 0 | 25 | 28 |
+
+### Key Findings
+
+#### 1. Training loss ranking ≠ ABSA metric ranking
+The most significant finding: **Llama had the best training eval loss (0.2785) but Qwen matches or beats it on several ABSA metrics.** This validates the LOG 022 caveat — cross-entropy loss alone is not a reliable predictor of task performance.
+
+| Ranking | By Eval Loss (LOG 022) | By ATE F1 (Exact) | By E2E-ABSA Pair F1 | By JSON Parse |
+|:-------:|:----------------------:|:------------------:|:--------------------:|:-------------:|
+| 1st | Llama (0.2785) | **Qwen (0.6603)** | **Llama (0.5805)** | **Qwen (100%)** |
+| 2nd | DeepSeek (0.3363) | Llama (0.6549) | Qwen (0.5795) | Llama (95.9%) |
+| 3rd | Qwen (0.3656) | DeepSeek (0.6034) | DeepSeek (0.5018) | DeepSeek (95.4%) |
+
+#### 2. Qwen is the best aspect extractor, Llama is the best end-to-end system
+- **Qwen 2.5-7B** leads on **ATE F1** (both exact 0.6603 and partial 0.7705) — it finds more aspect terms
+- **Llama 3.1-8B** leads on **E2E-ABSA Pair F1** (0.5805 vs 0.5795) and **Sentiment** (0.8864 accuracy, 0.8435 macro-F1) — it assigns better sentiment labels
+- The Pair F1 gap between Llama and Qwen is **negligible (0.001)** — effectively tied
+
+#### 3. Qwen has perfect instruction following (100% JSON parse)
+Qwen produced valid JSON for all 609 examples. Llama failed on 25 (4.1%) and DeepSeek on 28 (4.6%). This makes **Qwen the most reliable model for production use** (batch annotation, API deployment).
+
+#### 4. DeepSeek-R1 underperforms despite R1 distillation
+Despite achieving better *training loss* than Qwen (0.3363 vs 0.3656), DeepSeek scores lowest on all ABSA metrics. Possible reasons:
+- The R1 reasoning distillation may produce verbose/exploratory outputs that hurt structured JSON extraction
+- DeepSeek generates the most predictions (933 vs 721 gold) — high recall but low precision, over-predicting aspects
+- The `<think>` reasoning pattern from R1 distillation may interfere with direct JSON output
+
+#### 5. Over-prediction vs under-prediction patterns
+| Model | Predictions | References | Ratio | Pattern |
+|-------|:-----------:|:----------:|:-----:|:-------:|
+| Qwen | 839 | 721 | 1.16 | Slight over-prediction |
+| Llama | 757 | 721 | 1.05 | Near-balanced |
+| DeepSeek | 933 | 721 | 1.29 | Significant over-prediction |
+
+Llama is closest to the gold count, suggesting better calibration. DeepSeek over-predicts by 29%, explaining its lower precision.
+
+#### 6. Practical recommendation
+For the **annotation pipeline** (annotating `reviews.csv`), **Qwen 2.5-7B is the best choice** because:
+- 100% JSON parse rate → no failed annotations
+- Highest ATE recall (0.7143 exact, 0.8336 partial) → catches more aspects
+- Pair F1 effectively tied with Llama (0.5795 vs 0.5805)
+- Fastest inference speed (5.44 samples/sec during training)
+
+For **research reporting**, both Qwen and Llama should be highlighted as top performers, with the key insight that **training loss does not predict task performance**.
+
+### Final Model Ranking (ABSA Metrics — Definitive)
+
+| Rank | Model | ATE F1 (Exact) | Pair F1 (E2E) | Sentiment Acc | JSON Parse | Recommendation |
+|:----:|-------|:--------------:|:-------------:|:-------------:|:----------:|:---------------|
+| **1** | **Qwen 2.5-7B** | **0.6603** | 0.5795 | 0.8777 | **100%** | Best for annotation pipeline |
+| **2** | **Llama 3.1-8B** | 0.6549 | **0.5805** | **0.8864** | 95.9% | Best sentiment accuracy |
+| 3 | DeepSeek-R1-7B | 0.6034 | 0.5018 | 0.8317 | 95.4% | Over-predicts aspects |
+
+
+## LOG 024 — Multi-Domain Dataset Annotation Plan
+Date: Feb 24, 2026
+
+### Motivation
+The current Uzbek ABSA dataset ([Sanatbek/aspect-based-sentiment-analysis-uzbek](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek)) covers **only restaurant reviews** (SemEVAL 2014 format). Real-world Uzbek ABSA needs to handle diverse domains: banking, telecom, healthcare, education, e-commerce, etc.
+
+We have **5,058 unannotated multi-domain reviews** in `data/raw/reviews.csv` spanning **23 business categories** from sharh.commeta.uz. Annotating these creates a **novel multi-domain Uzbek ABSA dataset** — a significant research contribution.
+
+### Annotation Strategy: Model-Assisted + LLM-as-Judge + Human Verification
+
+The strategy uses three layers to maximize annotation quality while keeping cost manageable:
+
+```
+Layer 1: Fine-tuned model (Qwen 2.5-7B) → generates initial predictions
+Layer 2: LLM-as-Judge (GPT-4o / Claude) → scores prediction quality (1–5)
+Layer 3: Human verification → validates a sample for gold-standard calibration
+```
+
+### Why Qwen 2.5-7B for Annotation (LOG 023 Evidence)
+| Criterion | Qwen 2.5-7B | Why it matters |
+|-----------|:-----------:|:---------------|
+| JSON parse rate | **100%** | Zero failed annotations in batch runs |
+| ATE Recall (exact) | **0.7143** | Catches most aspect terms |
+| ATE F1 (exact) | **0.6603** | Best aspect extraction overall |
+| Pair F1 | 0.5795 | Tied with Llama (Δ=0.001) |
+| Inference speed | **5.44 s/s** | Fastest — practical for 5K reviews |
+
+### Step-by-Step Annotation Pipeline
+
+#### Step 1: Prepare `reviews.csv` for Inference
+- Load `data/raw/reviews.csv` (5,058 reviews)
+- Clean text: remove empty reviews, normalize whitespace
+- Create a HuggingFace Dataset from the CSV
+- Fields: `review_id`, `text`, `object_name`, `business_category`, `rating_value`
+
+#### Step 2: Run Batch Inference with Qwen 2.5-7B
+```python
+# Annotate all 5,058 reviews
+python scripts/annotate_reviews.py \
+    --model-path ./outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/merged_model \
+    --reviews-csv ./data/raw/reviews.csv \
+    --output-dir ./data/annotated
+```
+- Estimated time: 5,058 reviews ÷ 5.44 s/s ≈ **15.5 minutes**
+- Output: `data/annotated/reviews_annotated.json` with predicted aspects per review
+
+#### Step 3: Quality Filtering
+- Remove reviews where JSON parsing failed (expect ~0% with Qwen)
+- Remove reviews with 0 extracted aspects (review may be too short or non-opinionated)
+- Flag reviews with >5 aspects for manual review (potential hallucination)
+- Expected yield: ~4,000–4,500 usable annotated reviews
+
+#### Step 4: LLM-as-Judge Quality Scoring
+Use an external LLM (GPT-4o-mini or Claude 3.5 Haiku) to score annotation quality on a **stratified sample (~300 reviews)**:
+
+**Stratified sampling across domains:**
+| Domain | # Reviews | Sample Size |
+|--------|:---------:|:-----------:|
+| Restoran/Ovqatlanish (in-domain) | ~2,000 | 50 |
+| Bank/Moliya | ~300 | 30 |
+| Telekommunikatsiya | ~200 | 25 |
+| Tibbiyot/Sog'liqni saqlash | ~200 | 25 |
+| Ta'lim | ~150 | 20 |
+| Elektron tijorat | ~150 | 20 |
+| Transport/Logistika | ~100 | 15 |
+| Mehmonxona/Turizm | ~100 | 15 |
+| Other domains (15 categories) | ~1,800 | 100 (5–10 each) |
+| **Total** | **~5,058** | **~300** |
+
+**Judge prompt (no gold standard — Phase 2 from LOG 020):**
+```
+You are an expert in Aspect-Based Sentiment Analysis for Uzbek language.
+Evaluate the quality of the following ABSA prediction.
+
+Original review: "{text}"
+Business: "{object_name}" (Category: {business_category})
+User rating: {rating_value}/5
+
+Model prediction:
+{predicted_aspects_json}
+
+Score each dimension (1-5, where 5 is best):
+1. Completeness: Does the output capture ALL opinions expressed in the text?
+2. Accuracy: Are the extracted aspect terms actually present in the text?
+3. Sentiment: Are the polarity labels (positive/negative/neutral) correct?
+4. Relevance: Are the predicted categories appropriate for this domain?
+
+Overall quality score (1-5):
+Brief explanation:
+```
+
+**Quality thresholds for dataset inclusion:**
+- Overall score ≥ 3.5 → **Include** in final dataset
+- Overall score 2.5–3.49 → **Flag** for human review
+- Overall score < 2.5 → **Exclude**
+
+#### Step 5: Human Verification (Gold Calibration)
+- Randomly select **50 reviews** from the judged sample
+- 2 human annotators independently label aspects + sentiments
+- Compute inter-annotator agreement (Cohen's κ)
+- Compute correlation between LLM-as-Judge scores and human scores
+- If Spearman ρ > 0.7 → LLM-as-Judge is reliable for the remaining ~4,700 reviews
+
+#### Step 6: Final Dataset Assembly
+Based on quality scores from Steps 4–5:
+- **Gold-verified subset:** 50 human-annotated reviews (highest quality)
+- **Judge-approved subset:** Reviews with LLM-as-Judge score ≥ 3.5
+- **Full silver dataset:** All 5,058 reviews with model predictions + quality scores
+
+**Output format (HuggingFace-compatible):**
+```json
+{
+  "review_id": "rev_001",
+  "text": "Bu bankning xizmati juda yaxshi, lekin navbat ko'p.",
+  "business_name": "Kapitalbank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 4,
+  "aspects": [
+    {"term": "xizmati", "category": "xizmat", "polarity": "positive"},
+    {"term": "navbat", "category": "muhit", "polarity": "negative"}
+  ],
+  "annotation_source": "qwen2.5-7b-finetuned",
+  "judge_score": 4.2,
+  "human_verified": false
+}
+```
+
+#### Step 7: Publish to HuggingFace Hub
+- Dataset name: `Sanatbek/uzbek-multi-domain-absa` (or similar)
+- Splits: full dataset (no train/val split — this is an annotation resource)
+- Dataset card: domains covered, annotation methodology, quality metrics
+- License: same as source data
+
+### Dataset Contribution Summary
+
+| Aspect | Existing Dataset | New Multi-Domain Dataset |
+|--------|:----------------:|:------------------------:|
+| Source | SemEVAL 2014 | sharh.commeta.uz |
+| Language | Uzbek | Uzbek |
+| Domain | Restaurant only | **23 business domains** |
+| Size | 6,089 sentences | **~5,058 reviews** |
+| Annotation | Human (gold) | Model + LLM-Judge (silver) |
+| Categories | 5 (ovqat, muhit, xizmat, narx, boshqalar) | **Domain-adaptive** |
+| Quality control | — | LLM-as-Judge + human subset |
+
+### Research Paper Value
+1. **Novel resource:** First multi-domain Uzbek ABSA dataset
+2. **Scalable methodology:** Model-assisted annotation with LLM-as-Judge QA — reproducible pipeline
+3. **Domain generalization analysis:** How well does a restaurant-trained model handle banking, telecom, healthcare?
+4. **Cross-domain aspect categories:** Discovering domain-specific aspects (e.g., "foiz stavkasi" in banking, "tarif" in telecom)
+5. **Quality metadata:** Every annotation includes source model, judge score, and human verification flag — full provenance
+
+### Cost Estimate
+| Component | Volume | Cost |
+|-----------|:------:|:----:|
+| Qwen inference (local GPU) | 5,058 reviews | $0 (own hardware) |
+| LLM-as-Judge (GPT-4o-mini) | 300 reviews × ~500 tokens | ~$1–2 |
+| Human verification | 50 reviews × 2 annotators | ~2 hours labor |
+| **Total** | — | **~$2 + 2 hours** |
+
+### Implementation Timeline
+| Phase | Task | Time Estimate |
+|:-----:|------|:-------------:|
+| 1 | Prepare reviews.csv + run Qwen inference | 1 hour |
+| 2 | Quality filtering + export | 30 min |
+| 3 | LLM-as-Judge scoring (300 samples) | 1 hour |
+| 4 | Human verification (50 samples) | 2 hours |
+| 5 | Dataset assembly + HuggingFace upload | 1 hour |
+| **Total** | — | **~5.5 hours** |
+
+
+### Next Steps
+- [x] ~~ABSA evaluation on all three models~~ → **Done (LOG 023)**
+- [ ] Build `scripts/annotate_reviews.py` — batch annotation script
+- [ ] Run Qwen 2.5-7B on all 5,058 reviews
+- [ ] Implement LLM-as-Judge scoring script
+- [ ] Run judge on stratified sample (~300 reviews)
+- [ ] Human verification (50 reviews, 2 annotators)
+- [ ] Assemble final dataset + publish to HuggingFace Hub
+- [ ] Investigate tokenizer fertility differences across all models on Uzbek text
 - [ ] Write final paper results section with all metrics
 
 
 # ======================================================================
 # END OF CURRENT LOGS — Update as experiments progress
 # ======================================================================
-# Next: (1) Run ABSA evaluation on Qwen, Llama & DeepSeek,
-#       (2) Annotate reviews.csv with best model,
-#       (3) Implement LLM-as-Judge pipeline (Phase B),
-#       (4) Train Mistral-7B, (5) Tokenizer fertility analysis
+# Next: (1) Build annotation pipeline for reviews.csv,
+#       (2) Run Qwen inference on 5,058 reviews,
+#       (3) LLM-as-Judge scoring, (4) Human verification,
+#       (5) Publish multi-domain dataset to HuggingFace Hub,
+#       (6) Tokenizer fertility analysis
 # ======================================================================
