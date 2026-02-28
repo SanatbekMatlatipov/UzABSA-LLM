@@ -14,6 +14,8 @@
 - [Training](#training)
 - [Inference](#inference)
 - [Evaluation](#evaluation)
+- [Multi-Domain Annotation Pipeline](#multi-domain-annotation-pipeline)
+- [Publishing Models to HuggingFace Hub](#publishing-models-to-huggingface-hub)
 - [Completed Experiments](#completed-experiments)
 - [Supported Models](#supported-models)
 - [Training Arguments Reference](#training-arguments-reference)
@@ -57,7 +59,11 @@ UzABSA-LLM/
 │   ├── train_unsloth.py              # Main training script (QLoRA + Unsloth)
 │   ├── prepare_complete_dataset.py   # End-to-end data preparation pipeline
 │   ├── explore_datasets.py           # Dataset exploration & analysis
-│   └── evaluate.py                   # Model evaluation script
+│   ├── evaluate.py                   # Model evaluation script
+│   ├── annotate_reviews.py           # Batch ABSA annotation with checkpoint support
+│   ├── llm_judge.py                  # LLM-as-Judge quality scoring (OpenAI/Anthropic)
+│   ├── assemble_dataset.py           # Final dataset assembly with quality tiers
+│   └── push_to_hub.py                # Upload models to HuggingFace Hub
 ├── configs/
 │   └── training_config.yaml          # Hyperparameter presets
 ├── data/
@@ -483,9 +489,185 @@ python scripts/train_unsloth.py --help
 
 ---
 
+## Multi-Domain Annotation Pipeline
+
+This project includes a complete 3-layer annotation pipeline for creating a silver-standard multi-domain Uzbek ABSA dataset from 5,038 raw reviews spanning 23 business domains.
+
+### Architecture
+
+```
+Layer 1: Fine-tuned model (local GPU)  →  Extracts aspects + sentiments from raw reviews
+Layer 2: LLM-as-Judge (API: GPT-4o-mini)  →  Scores annotation quality (1–5) on stratified sample
+Layer 3: Dataset assembly  →  Filters by quality tiers, exports HuggingFace-compatible dataset
+```
+
+### Layer 1 — Batch Annotation
+
+Annotate all 5,038 reviews using any of the three fine-tuned models. The script automatically resumes from checkpoints if interrupted.
+
+**Qwen 2.5-7B** (recommended — 100% JSON parse rate, highest ATE F1):
+```powershell
+python scripts/annotate_reviews.py `
+    --model-path ./outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/merged_model
+```
+
+**Llama 3.1-8B** (best sentiment accuracy, 95.9% JSON parse rate):
+```powershell
+python scripts/annotate_reviews.py `
+    --model-path ./outputs/my_run/uzabsa_llama3.1-8b_20260222_182459/merged_model
+```
+
+**DeepSeek-R1-7B** (95.4% JSON parse rate):
+```powershell
+python scripts/annotate_reviews.py `
+    --model-path ./outputs/my_run/uzabsa_deepseek-7b/merged_model
+```
+
+| Option | Description |
+|--------|-------------|
+| `--max-samples N` | Annotate only N reviews (for testing) |
+| `--reviews-csv PATH` | Custom reviews CSV (default: `./data/raw/reviews.csv`) |
+| `--categories-json PATH` | Business categories JSON (default: `./data/raw/business_categories.json`) |
+| `--output-dir PATH` | Output directory (default: `./data/annotated`) |
+| `--use-english` | Use English prompts instead of Uzbek |
+
+**Output:** `data/annotated/reviews_annotated.json`, `annotation_stats.json`, `domain_distribution.json`
+
+### Layer 2 — LLM-as-Judge Quality Scoring
+
+Scores a stratified sample (~300 reviews across 23 domains) using an external LLM. The judge reads each review alongside the model's prediction and rates quality on 5 dimensions (1–5 scale): Completeness, Accuracy, Sentiment, Relevance, Overall.
+
+```powershell
+# Set API key first
+$env:OPENAI_API_KEY = "sk-..."
+
+# Run with GPT-4o-mini (OpenAI)
+python scripts/llm_judge.py `
+    --annotations ./data/annotated/reviews_annotated.json `
+    --provider openai `
+    --model gpt-4o-mini `
+    --sample-size 300 `
+    --output-dir ./data/judged
+```
+
+**Alternative providers:**
+```powershell
+# Anthropic Claude
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+python scripts/llm_judge.py `
+    --annotations ./data/annotated/reviews_annotated.json `
+    --provider anthropic `
+    --model claude-3-5-haiku-20241022 `
+    --sample-size 300 `
+    --output-dir ./data/judged
+
+# Any OpenAI-compatible API (e.g., Together, Groq, local vLLM)
+$env:OPENAI_API_KEY = "your-api-key"
+python scripts/llm_judge.py `
+    --annotations ./data/annotated/reviews_annotated.json `
+    --provider openai `
+    --model meta-llama/Meta-Llama-3.1-70B-Instruct `
+    --api-base https://api.together.xyz/v1 `
+    --sample-size 300 `
+    --output-dir ./data/judged
+```
+
+| Option | Description |
+|--------|-------------|
+| `--sample-size N` | Number of reviews to judge (default: 300) |
+| `--delay SECS` | Delay between API calls (default: 0.5) |
+| `--seed N` | Random seed for stratified sampling (default: 42) |
+| `--no-sample` | Judge ALL annotations (no sampling) |
+
+**Output:** `data/judged/judge_results.json`, `judge_report.json`, `judge_summary.txt`
+
+### Layer 3 — Final Dataset Assembly
+
+Merges annotations with judge scores and applies quality thresholds:
+- **Include** (overall score ≥ 3.5) — high-quality annotations
+- **Flag** (2.5–3.5) — needs human review
+- **Exclude** (< 2.5) — low quality
+
+```powershell
+python scripts/assemble_dataset.py `
+    --annotations ./data/annotated/reviews_annotated.json `
+    --judge-results ./data/judged/judge_results.json `
+    --output-dir ./data/final_dataset
+```
+
+Can also run **without judge results** (all annotations become "unjudged" tier):
+```powershell
+python scripts/assemble_dataset.py `
+    --annotations ./data/annotated/reviews_annotated.json `
+    --output-dir ./data/final_dataset
+```
+
+| Option | Description |
+|--------|-------------|
+| `--include-threshold N` | Minimum judge score to include (default: 3.5) |
+
+**Output:**
+| File | Description |
+|------|-------------|
+| `uzbek_multi_domain_absa_full.json` | All annotations + judge scores |
+| `uzbek_multi_domain_absa_silver.json` | Included + unjudged (silver standard) |
+| `uzbek_multi_domain_absa_approved.json` | Judge-approved only (score ≥ 3.5) |
+| `uzbek_multi_domain_absa.jsonl` | JSONL format for HuggingFace |
+| `dataset_stats.json` | Comprehensive statistics |
+
+---
+
+## Publishing Models to HuggingFace Hub
+
+All three fine-tuned models are published to a single HuggingFace repository using **branches**:
+
+| Branch | Model | Size (merged + LoRA) |
+|--------|-------|:----:|
+| [`main`](https://huggingface.co/Sanatbek/UzABSA-LLM) | Project README + comparison | — |
+| [`qwen2.5-7b`](https://huggingface.co/Sanatbek/UzABSA-LLM/tree/qwen2.5-7b) | Qwen 2.5-7B | 14.2 GB + 154 MB |
+| [`llama3.1-8b`](https://huggingface.co/Sanatbek/UzABSA-LLM/tree/llama3.1-8b) | Llama 3.1-8B | 15.0 GB + 160 MB |
+| [`deepseek-r1-7b`](https://huggingface.co/Sanatbek/UzABSA-LLM/tree/deepseek-r1-7b) | DeepSeek-R1-Distill-Qwen-7B | 14.2 GB + 154 MB |
+
+### How to Upload
+
+```powershell
+# 1. Login to HuggingFace (one-time setup)
+pip install huggingface_hub
+huggingface-cli login
+
+# 2. Dry-run first to preview what will be uploaded
+python scripts/push_to_hub.py --all --dry-run
+
+# 3. Upload everything (main README + all 3 models)
+python scripts/push_to_hub.py --all
+
+# Or upload one model at a time
+python scripts/push_to_hub.py --branch main          # Project README only
+python scripts/push_to_hub.py --branch qwen2.5-7b     # Qwen model
+python scripts/push_to_hub.py --branch llama3.1-8b     # Llama model
+python scripts/push_to_hub.py --branch deepseek-r1-7b  # DeepSeek model
+```
+
+### How Others Load Your Models
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Pick a model branch
+model = AutoModelForCausalLM.from_pretrained(
+    "Sanatbek/UzABSA-LLM",
+    revision="qwen2.5-7b",   # or "llama3.1-8b" or "deepseek-r1-7b"
+    torch_dtype="auto",
+    device_map="auto",
+)
+tokenizer = AutoTokenizer.from_pretrained("Sanatbek/UzABSA-LLM", revision="qwen2.5-7b")
+```
+
+---
+
 ## Research Paper Support
 
-Detailed methodology, experiment logs, and reproducibility metadata are in [RESEARCH_LOG.md](RESEARCH_LOG.md) (22 entries covering dataset analysis, model selection, QLoRA config, evaluation metrics, hardware setup, experiment plans, and results).
+Detailed methodology, experiment logs, and reproducibility metadata are in [RESEARCH_LOG.md](RESEARCH_LOG.md) (25 entries covering dataset analysis, model selection, QLoRA config, evaluation metrics, hardware setup, experiment plans, and results).
 
 ### Planned Experiments (see RESEARCH_LOG.md)
 
@@ -506,14 +688,15 @@ Detailed methodology, experiment logs, and reproducibility metadata are in [RESE
 
 ---
 
-##  Citation
+## Citation
 
 ```bibtex
 @misc{uzabsa-llm-2026,
-  title={UzABSA-LLM: Fine-tuning LLMs for Uzbek Aspect-Based Sentiment Analysis},
+  title={UzABSA-LLM: Fine-tuned Large Language Models for Uzbek Aspect-Based Sentiment Analysis},
   author={Matlatipov, Sanatbek},
   year={2026},
-  url={https://github.com/yourusername/UzABSA-LLM}
+  url={https://huggingface.co/Sanatbek/UzABSA-LLM},
+  note={QLoRA fine-tuned Qwen 2.5-7B, Llama 3.1-8B, and DeepSeek-R1-Distill-Qwen-7B}
 }
 ```
 

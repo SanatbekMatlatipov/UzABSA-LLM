@@ -1,0 +1,268 @@
+{
+  "total_judged": 307,
+  "successfully_scored": 307,
+  "parse_failures": 0,
+  "overall_averages": {
+    "completeness": 3.32,
+    "accuracy": 4.47,
+    "sentiment": 4.21,
+    "relevance": 4.06,
+    "overall": 3.75
+  },
+  "domain_averages": {
+    "Restoran/Ovqatlanish": {
+      "count": 50,
+      "completeness": 3.68,
+      "accuracy": 4.76,
+      "sentiment": 4.56,
+      "relevance": 4.66,
+      "overall": 4.24
+    },
+    "Boshqa": {
+      "count": 37,
+      "completeness": 3.43,
+      "accuracy": 4.54,
+      "sentiment": 3.89,
+      "relevance": 4.38,
+      "overall": 3.81
+    },
+    "Bank/Moliya": {
+      "count": 30,
+      "completeness": 3.4,
+      "accuracy": 4.47,
+      "sentiment": 4.17,
+      "relevance": 3.9,
+      "overall": 3.7
+    },
+    "Telekommunikatsiya": {
+      "count": 25,
+      "completeness": 3.04,
+      "accuracy": 4.36,
+      "sentiment": 3.64,
+      "relevance": 3.64,
+      "overall": 3.32
+    },
+    "Tibbiyot/Sog'liqni saqlash": {
+      "count": 25,
+      "completeness": 3.4,
+      "accuracy": 4.6,
+      "sentiment": 4.2,
+      "relevance": 4.36,
+      "overall": 3.8
+    },
+    "To'lov tizimlari": {
+      "count": 24,
+      "completeness": 3.0,
+      "accuracy": 4.29,
+      "sentiment": 4.38,
+      "relevance": 3.54,
+      "overall": 3.54
+    },
+    "Elektron tijorat": {
+      "count": 21,
+      "completeness": 3.43,
+      "accuracy": 4.48,
+      "sentiment": 4.1,
+      "relevance": 4.14,
+      "overall": 3.81
+    },
+    "Ta'lim": {
+      "count": 20,
+      "completeness": 2.9,
+      "accuracy": 4.2,
+      "sentiment": 3.8,
+      "relevance": 3.45,
+      "overall": 3.25
+    },
+    "Oziq-ovqat do'konlari": {
+      "count": 15,
+      "completeness": 3.47,
+      "accuracy": 4.33,
+      "sentiment": 4.47,
+      "relevance": 4.13,
+      "overall": 3.8
+    },
+    "Gul/Sovg'a": {
+      "count": 12,
+      "completeness": 3.08,
+      "accuracy": 4.08,
+      "sentiment": 4.83,
+      "relevance": 3.67,
+      "overall": 3.58
+    },
+    "Texnologiya/Media": {
+      "count": 8,
+      "completeness": 2.88,
+      "accuracy": 4.5,
+      "sentiment": 5.0,
+      "relevance": 3.88,
+      "overall": 3.88
+    },
+    "Sayohat/Turizm": {
+      "count": 5,
+      "completeness": 4.0,
+      "accuracy": 4.8,
+      "sentiment": 4.6,
+      "relevance": 4.4,
+      "overall": 4.4
+    },
+    "Sport/Fitnes": {
+      "count": 4,
+      "completeness": 2.75,
+      "accuracy": 4.25,
+      "sentiment": 4.25,
+      "relevance": 3.0,
+      "overall": 3.25
+    },
+    "Kitob/Nashriyot": {
+      "count": 4,
+      "completeness": 3.0,
+      "accuracy": 4.25,
+      "sentiment": 4.0,
+      "relevance": 3.0,
+      "overall": 3.0
+    },
+    "Go'zallik": {
+      "count": 3,
+      "completeness": 3.33,
+      "accuracy": 4.67,
+      "sentiment": 5.0,
+      "relevance": 4.0,
+      "overall": 4.0
+    },
+    "Transport/Yo'l": {
+      "count": 3,
+      "completeness": 3.33,
+      "accuracy": 4.0,
+      "sentiment": 4.0,
+      "relevance": 4.0,
+      "overall": 3.67
+    },
+    "Yetkazib berish": {
+      "count": 3,
+      "completeness": 3.67,
+      "accuracy": 5.0,
+      "sentiment": 4.67,
+      "relevance": 4.33,
+      "overall": 4.33
+    },
+    "Bozor/BSC": {
+      "count": 3,
+      "completeness": 3.67,
+      "accuracy": 5.0,
+      "sentiment": 5.0,
+      "relevance": 5.0,
+      "overall": 4.67
+    },
+    "Sug'urta": {
+      "count": 3,
+      "completeness": 2.33,
+      "accuracy": 3.67,
+      "sentiment": 2.67,
+      "relevance": 3.33,
+      "overall": 2.67
+    },
+    "Din/Madaniyat": {
+      "count": 3,
+      "completeness": 4.33,
+      "accuracy": 5.0,
+      "sentiment": 4.0,
+      "relevance": 5.0,
+      "overall": 4.33
+    },
+    "Investitsiya/Trading": {
+      "count": 3,
+      "completeness": 2.33,
+      "accuracy": 4.0,
+      "sentiment": 3.67,
+      "relevance": 3.0,
+      "overall": 2.67
+    },
+    "Ko'ngilochar": {
+      "count": 3,
+      "completeness": 3.33,
+      "accuracy": 4.67,
+      "sentiment": 4.33,
+      "relevance": 4.0,
+      "overall": 3.67
+    },
+    "Davlat xizmatlari": {
+      "count": 3,
+      "completeness": 3.0,
+      "accuracy": 4.0,
+      "sentiment": 4.33,
+      "relevance": 3.67,
+      "overall": 3.33
+    }
+  },
+  "score_distribution": {
+    "completeness": {
+      "1": 7,
+      "2": 33,
+      "3": 158,
+      "4": 73,
+      "5": 36
+    },
+    "accuracy": {
+      "1": 0,
+      "2": 0,
+      "3": 12,
+      "4": 138,
+      "5": 157
+    },
+    "sentiment": {
+      "1": 19,
+      "2": 21,
+      "3": 37,
+      "4": 28,
+      "5": 202
+    },
+    "relevance": {
+      "1": 0,
+      "2": 10,
+      "3": 69,
+      "4": 122,
+      "5": 106
+    },
+    "overall": {
+      "1": 3,
+      "2": 23,
+      "3": 86,
+      "4": 132,
+      "5": 63
+    }
+  },
+  "quality_tiers": {
+    "include_gte_3.5": 195,
+    "flag_2.5_to_3.5": 86,
+    "exclude_lt_2.5": 26
+  },
+  "sample_allocation": {
+    "Restoran/Ovqatlanish": 50,
+    "Bank/Moliya": 30,
+    "Telekommunikatsiya": 25,
+    "Tibbiyot/Sog'liqni saqlash": 25,
+    "Ta'lim": 20,
+    "Sayohat/Turizm": 5,
+    "Sport/Fitnes": 4,
+    "Elektron tijorat": 21,
+    "Gul/Sovg'a": 12,
+    "Oziq-ovqat do'konlari": 15,
+    "To'lov tizimlari": 24,
+    "Kitob/Nashriyot": 4,
+    "Texnologiya/Media": 8,
+    "Boshqa": 37,
+    "Transport/Yo'l": 3,
+    "Din/Madaniyat": 3,
+    "Go'zallik": 3,
+    "Yetkazib berish": 3,
+    "Ko'ngilochar": 3,
+    "Bozor/BSC": 3,
+    "Davlat xizmatlari": 3,
+    "Sug'urta": 3,
+    "Investitsiya/Trading": 3
+  },
+  "judge_provider": "openai",
+  "judge_model": "gpt-4o-mini",
+  "timestamp": "20260225_175459"
+}

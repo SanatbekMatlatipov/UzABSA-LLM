@@ -1,0 +1,49 @@
+============================================================
+LLM-AS-JUDGE QUALITY REPORT
+Judge: openai / gpt-4o-mini
+Date: 20260225_175459
+============================================================
+
+Total judged: 307
+Successfully scored: 307
+Parse failures: 0
+
+--- OVERALL AVERAGES (1-5 scale) ---
+  completeness   : 3.32
+  accuracy       : 4.47
+  sentiment      : 4.21
+  relevance      : 4.06
+  overall        : 3.75
+
+--- QUALITY TIERS ---
+  include_gte_3.5          :  195 ( 63.5%)
+  flag_2.5_to_3.5          :   86 ( 28.0%)
+  exclude_lt_2.5           :   26 (  8.5%)
+
+--- PER-DOMAIN SCORES ---
+Domain                                 N  Comp   Acc  Sent   Rel  Ovrl
+----------------------------------------------------------------------
+Restoran/Ovqatlanish                  50  3.68  4.76  4.56  4.66  4.24
+Boshqa                                37  3.43  4.54  3.89  4.38  3.81
+Bank/Moliya                           30  3.40  4.47  4.17  3.90  3.70
+Telekommunikatsiya                    25  3.04  4.36  3.64  3.64  3.32
+Tibbiyot/Sog'liqni saqlash            25  3.40  4.60  4.20  4.36  3.80
+To'lov tizimlari                      24  3.00  4.29  4.38  3.54  3.54
+Elektron tijorat                      21  3.43  4.48  4.10  4.14  3.81
+Ta'lim                                20  2.90  4.20  3.80  3.45  3.25
+Oziq-ovqat do'konlari                 15  3.47  4.33  4.47  4.13  3.80
+Gul/Sovg'a                            12  3.08  4.08  4.83  3.67  3.58
+Texnologiya/Media                      8  2.88  4.50  5.00  3.88  3.88
+Sayohat/Turizm                         5  4.00  4.80  4.60  4.40  4.40
+Sport/Fitnes                           4  2.75  4.25  4.25  3.00  3.25
+Kitob/Nashriyot                        4  3.00  4.25  4.00  3.00  3.00
+Go'zallik                              3  3.33  4.67  5.00  4.00  4.00
+Transport/Yo'l                         3  3.33  4.00  4.00  4.00  3.67
+Yetkazib berish                        3  3.67  5.00  4.67  4.33  4.33
+Bozor/BSC                              3  3.67  5.00  5.00  5.00  4.67
+Sug'urta                               3  2.33  3.67  2.67  3.33  2.67
+Din/Madaniyat                          3  4.33  5.00  4.00  5.00  4.33
+Investitsiya/Trading                   3  2.33  4.00  3.67  3.00  2.67
+Ko'ngilochar                           3  3.33  4.67  4.33  4.00  3.67
+Davlat xizmatlari                      3  3.00  4.00  4.33  3.67  3.33
+============================================================

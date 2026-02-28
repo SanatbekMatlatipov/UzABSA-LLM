@@ -1,0 +1,162 @@
+[
+  {
+    "review_id": "rev_00000",
+    "text": "Тоже хотел рассказать про опыт онлайн-обучения. Начал проходить курс Управление Командами. Во-первых, программа хорошо выстроена: от базовых принципов до практических инструментов управления. Во-вторых, очень порадовала прогоамма по мотивации, делегированию и выстраиванию коммуникаций. Материалы все четко и по делу. Рекомендую топ и управленцам!",
+    "business_name": "Lerna Uzbekistan",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "программа",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "методы",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "инструментов",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "мотивации",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "делегированию",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "коммуникаций",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "Материалы",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "обучения",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "Управление Командами",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 9,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "parse_success": true,
+    "raw_output": "{\n    \"aspects\": [\n        {\n            \"term\": \"программа\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"методы\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"инструментов\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"мотивации\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"делегированию\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"коммуникаций\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"Материалы\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"обучения\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"Управление Командами\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        }\n    ]\n}"
+  },
+  {
+    "review_id": "rev_00001",
+    "text": "Платформа топовая, все понятно и легка в использовании. Опытные учителя благодаря которым леги и интересно закончил курсы по дата аналатике🔥",
+    "business_name": "Lerna Uzbekistan",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Платформа",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "Опытные учителя",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "parse_success": true,
+    "raw_output": "{\n    \"aspects\": [\n        {\n            \"term\": \"Платформа\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"Опытные учителя\",\n            \"category\": \"xizmat\",\n            \"polarity\": \"positive\"\n        }\n    ]\n}"
+  },
+  {
+    "review_id": "rev_00002",
+    "text": "Отлично и очень удобная платформа, благодарю ❤️‍🩹",
+    "business_name": "Lerna Uzbekistan",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "платформа",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "parse_success": true,
+    "raw_output": "{\n    \"aspects\": [\n        {\n            \"term\": \"платформа\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        }\n    ]\n}"
+  },
+  {
+    "review_id": "rev_00003",
+    "text": "Крутая платформа, очень удобно👍🏻 Приобрела несколько курсов в Скиллбокс, лучшее решение для саморазвития. И преподаватели ТОП🙌🏻",
+    "business_name": "Lerna Uzbekistan",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "платформа",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "курсов",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "решение",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "преподавателей",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 4,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "parse_success": true,
+    "raw_output": "{\n    \"aspects\": [\n        {\n            \"term\": \"платформа\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"курсов\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"решение\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"преподавателей\",\n            \"category\": \"xizmat\",\n            \"polarity\": \"positive\"\n        }\n    ]\n}"
+  },
+  {
+    "review_id": "rev_00004",
+    "text": "«Очень крутой курс! Всё чётко, понятно и по делу. Огромная благодарность за такой качественный подход и вдохновение в каждом уроке!»",
+    "business_name": "Lerna Uzbekistan",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "курс",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "вдохновение",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "подход",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "parse_success": true,
+    "raw_output": "{\n    \"aspects\": [\n        {\n            \"term\": \"курс\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"вдохновение\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        },\n        {\n            \"term\": \"подход\",\n            \"category\": \"boshqalar\",\n            \"polarity\": \"positive\"\n        }\n    ]\n}"
+  }
+]

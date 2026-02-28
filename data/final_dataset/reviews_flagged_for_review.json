@@ -1,0 +1,2456 @@
+[
+  {
+    "review_id": "rev_00005",
+    "text": "Лучший курс по сео маркетингу советую всем, skillbox lerna самые проверенные курсы",
+    "business_name": "Lerna Uzbekistan",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "курс",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures a positive sentiment towards the course but misses other aspects like 'SEO marketing' and 'Skillbox', which are relevant to the review. The category 'boshqalar' is too vague and not specific to the educational context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00094",
+    "text": "после обновления работает очень плохо,слишком часто зависает.",
+    "business_name": "iTV.uz",
+    "business_category": "Texnologiya/Media",
+    "user_rating": 2,
+    "aspects": [
+      {
+        "term": "обновления",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures one negative sentiment related to 'обновления', but misses other sentiments about performance issues. The term is accurate, but the category 'boshqalar' is not specific enough for the context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00157",
+    "text": "Assalomu alaykum men halq bankning ushbu ilovasidan foydalanib turaman, qulayliklaridan biri komunal to‘lovlariga yahshi keshbek berishadi, kartaga o‘tkazish nol foyiz hullas yahshi oddiy tshunarli ilova foydalanib ko‘ring bilib olasiz",
+    "business_name": "Xazna",
+    "business_category": "To'lov tizimlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "halq bankning",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "keshbek",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kartaga",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "tshunarli",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 4,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the review but misses key sentiments related to the app's usability and benefits. While most terms are present, the sentiment for 'kartaga' is incorrectly labeled as negative.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00272",
+    "text": "TBC bankni boshqa banklarga qaraganda juda ham qulayliklari koʻp.Men bu bankdan anchadan buyon foydalanib kelaman va oʻz minnatdorchiligimni bildirib qolaman.",
+    "business_name": "TBC Bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "TBC bankni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures a positive sentiment towards TBC bank but misses other implied sentiments about its convenience. The aspect term is accurate, but the category 'boshqalar' is not relevant as it should relate to banking.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00296",
+    "text": "Juda zo'r bank. Bu bankda barcha qulayliklar mavjud. Men hamkorbank bilan omonatlarimni ishonchli saqlayabman. Hammaga tavsiya qilamn.",
+    "business_name": "Hamkorbank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "hammaga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some positive sentiments but misses key aspects like 'bank' and 'qulayliklar', which are central to the review. The categories assigned are not fully appropriate for the terms identified.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00309",
+    "text": "Xazina pul oʻtkazish platformasiga gap yoʻq chunki oʻzim va ishidagi hamkasblarim ham shu xazina ilovasidan foydalanishadi. Bu bizga qulay va %olmaydi bu esa juda zoʻr. Tez ishlashi ham zoʻr.",
+    "business_name": "Xazna",
+    "business_category": "To'lov tizimlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Xazina",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures one aspect but misses others like 'pul oʻtkazish platformasi' and 'tez ishlashi', which are also positive sentiments. The category 'boshqalar' is not appropriate as it should relate to 'To'lov tizimlari'.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00331",
+    "text": "Yaqinda doslari bilan bordi dostim taklif qildi menga yoqdi zor ekan",
+    "business_name": "Minor somsa",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "dostim",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect ('dostim') and misses the main aspect of the review, which is the positive sentiment towards the restaurant experience. While the sentiment for 'dostim' is correctly labeled as positive, the relevance of the category 'boshqalar' is questionable.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00343",
+    "text": "Oqtepa lavashdan man pashti har hafta zakaz berama buyurtmalarim isiq ozini xolidek bolib keladi lavashlari sochniy oqtepa lavash tog’ri tanlov",
+    "business_name": "Oqtepa lavash",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "oqtepa lavash",
+        "category": "ovqat",
+        "polarity": "positive"
+      },
+      {
+        "term": "zakaz",
+        "category": "xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures one positive aspect but misses the overall positive sentiment towards the service and the food. The term 'zakaz' is inaccurately labeled as negative, which does not reflect the user's positive experience.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00347",
+    "text": "Men hardoim UzMobile kompaniyasi obanentiman juda zo'r kompaniya interneti zo'r ishlaydi",
+    "business_name": "Uzmobile",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "interneti",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment towards the internet but misses the overall positive sentiment towards the company itself. The aspect category 'boshqalar' is not very relevant as it could be categorized under 'telekomunikatsiya'.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00412",
+    "text": "Humans sim kartasidan foydalaning ,juda arzon tarif mavjud va telegram , instagram ,you tubega cheksiz internet mavjud",
+    "business_name": "Humans",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "telegram , instagram ,you tubega",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "sim kartasidan",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "tarif",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 4,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the review but misses the overall sentiment regarding the 'arzon tarif' and 'cheksiz internet', which are significant positive points. The categories assigned are somewhat vague and could be more specific.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00480",
+    "text": "Tez va qulay chet eldan koʻp oʻtkazmalar amalga oshiraman onlayn plastik karta ochsa ham boʻladi juda zoʻr",
+    "business_name": "TBC Bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "chet eldan",
+        "category": "xizmat",
+        "polarity": "negative"
+      },
+      {
+        "term": "plastik karta",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall positive sentiment of the review. The term 'chet eldan' is inaccurately categorized as negative, while 'plastik karta' is correctly identified but lacks context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00485",
+    "text": "Juda yaxshi klinika doktrla yaxshi qaridi",
+    "business_name": "Shox International Hospital",
+    "business_category": "Tibbiyot/Sog'liqni saqlash",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "klinika",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 5,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect ('klinika') and misses the overall positive sentiment expressed in the review. While the term and sentiment are accurate, the category 'muhit' is not appropriate as it should relate to the service or quality of care.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00503",
+    "text": "Tõxtaniyz ota gõsht markazi juda toza holol gõsht hisoblanadi 100% halol men faqat shu gõshtdan olaman",
+    "business_name": "To'xtaniyoz-ota",
+    "business_category": "Din/Madaniyat",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "gõsht",
+        "category": "ovqat",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 5,
+    "judge_sentiment": 2,
+    "judge_relevance": 5,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures the aspect 'gõsht' accurately, but it fails to reflect the positive sentiment expressed in the text, which affects completeness and sentiment scoring.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00593",
+    "text": "Nestle kampanyasini barcha maxsulotlari juda ajoyib shu maxsulotlar qatoriga bolalar uchun maxsus imunitetni kotaruvchi. vitaminli shirinliklar qoshilsa yanayam yaxshi bolardi korinishi bilan kichkintoylarni oziga jalb qiladigan shakarsiz multi qaxramnlarni eslatuvchi konfetmi yoki biskivitmi bolsa zor bolardi meni farzandlarimga oxshagan ishtaxasiz bolalar uchun",
+    "business_name": "Nestlé",
+    "business_category": "Boshqa",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Nestle",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "maxsus imunitetni kotaruvchi",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "shirinliklar",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "konfetmi",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "biskivitmi",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 5,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 5,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the review but misses key sentiments related to the products mentioned. While the terms are mostly accurate, the sentiment for 'shirinliklar' should be positive, and 'konfetmi' and 'biskivitmi' should be neutral.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00616",
+    "text": "Korzinkaning narsalari juda sifatli",
+    "business_name": "Korzinka.uz",
+    "business_category": "Oziq-ovqat do'konlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Korzinkaning",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment but only identifies one aspect, missing the overall quality expressed in the text. The term 'Korzinkaning' is present but the category 'boshqalar' is not appropriate for the context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00705",
+    "text": "Bu sport bilan shug’ilanmoqchi bo’lgan insonlar uchun juda qol keladigan ilova bo’lib sizni maksimal shug’ilanishingizga yordam beradi.",
+    "business_name": "1 FIT",
+    "business_category": "Sport/Fitnes",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "sport",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures a positive sentiment towards the aspect 'sport', but it misses other potential aspects related to the application and its benefits. The category 'boshqalar' is not specific enough for the context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00747",
+    "text": "Yashil enirgiya juda yaxshi ammo oddiy aholiga oʻrnatish qimmatlik qiladi kiridit larni foyizini kamaytirish kerak",
+    "business_name": "Yashil Energiya",
+    "business_category": "Davlat xizmatlari",
+    "user_rating": 3,
+    "aspects": [
+      {
+        "term": "kiridit larni",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "Yashil enirgiya",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some opinions but misses the overall sentiment about the high cost of installation. The aspect terms are mostly accurate, but the sentiment for 'Yashil enirgiya' is misclassified as positive when it is presented in a mixed context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00827",
+    "text": "Shox Internatsional Hospital kilinikasining narxlari juda hamyombob ,malakali shifokorlarga ega,shifokorlar juda momilali",
+    "business_name": "Shox International Hospital",
+    "business_category": "Tibbiyot/Sog'liqni saqlash",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "narxlari",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "shifokorlarga",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 5,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the positive sentiment associated with 'narxlari' and does not fully reflect the overall positive sentiment of the review. The categories are appropriate, but the sentiment for 'narxlari' is incorrectly labeled as negative.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00863",
+    "text": "Bolalar kelajagini xozirdan yaratishimiz kerak musiqa bolalarni rivojlanishida kata yordam beradi",
+    "business_name": "Музыкальная школа",
+    "business_category": "Boshqa",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "musiqa",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures one aspect but misses the broader sentiment about children's development and the role of music. The term 'musiqa' is accurate, but the category 'muhit' is not appropriate as it should relate more to the context of music in development.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00877",
+    "text": "Yaqinda ochilganiga qaramay tezda yuqori korsatgichlarga erishishmoqda ustozlar bilim berish darajasi juda baland",
+    "business_name": "Vector IT Academy",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "ochilganiga",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "korsatgichlarga",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "bilim berish",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the text but misses key sentiments related to the quality of education. The terms are mostly present, but the sentiment labels are inconsistent with the positive tone of the review.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00880",
+    "text": "Evos Andijon shaxar mik rayondagisi juda xam alo va mazzali zor tayorlanadi Lekin borgan sari qimmatlab ketyapti 🤔 shunisi bor xolos",
+    "business_name": "Evos",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "xam alo",
+        "category": "muhit",
+        "polarity": "negative"
+      },
+      {
+        "term": "mazzali",
+        "category": "ovqat",
+        "polarity": "positive"
+      },
+      {
+        "term": "qimmatlab",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some key aspects but misses the overall positive sentiment towards the restaurant experience. The aspect 'xam alo' is inaccurately categorized and labeled, while 'mazzali' and 'qimmatlab' are mostly correct.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00913",
+    "text": "Men payme ilovasini 2 yildan beri ishlatib kelyapman,ishlatish judayam tushunarli hattoki yoshi katta qariyalar ham bemalol ishlata olishadi",
+    "business_name": "payme",
+    "business_category": "To'lov tizimlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "payme ilovasini",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures the positive sentiment towards the 'payme ilovasini', but it misses the broader context of the usability for older users. The category 'boshqalar' is not appropriate as it should relate to payment systems.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_00965",
+    "text": "odamlar salomatligini yolida sport bn shugullanish un sharoitlar yaratlgan",
+    "business_name": "1 FIT",
+    "business_category": "Sport/Fitnes",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "sport",
+        "category": "muhit",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect ('sport') but misses the broader sentiment regarding the conditions for health and fitness. The category 'muhit' is not appropriate as it does not reflect the context of the review.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01035",
+    "text": "Atmos ilovasi biz uchun juda qulay pul otkazmalarini tez amalga oshiradi",
+    "business_name": "Atmos",
+    "business_category": "Boshqa",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "pul otkazmalarini",
+        "category": "narx",
+        "polarity": "positive"
+      },
+      {
+        "term": "Atmos",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall sentiment towards the application itself. The aspect 'pul otkazmalarini' is inaccurately categorized under 'narx' instead of a more suitable category like 'xizmat'.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01242",
+    "text": "Maslahatim kirmanglar qimmat Bu kasalxonada hamma narsaga ham analiz qilib beradi",
+    "business_name": "GENOTEXNOLOGIYA",
+    "business_category": "Tibbiyot/Sog'liqni saqlash",
+    "user_rating": 1,
+    "aspects": [
+      {
+        "term": "Bu kasalxonada",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "hamma narsaga",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the text but misses the main sentiment regarding high prices. The aspect terms are mostly accurate, but the sentiment for 'Bu kasalxonada' is not fully aligned with the negative sentiment expressed.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01263",
+    "text": "Lor plus klinikasiga raxmat 1,5 yil nafas olishga qiynalardim klinikaga borib dardimga davo topdim + tamoni ixcham xama sharoiti bor yotoq joyi",
+    "business_name": "ENT PLUS 24/7 CHIRCHIK",
+    "business_category": "Tibbiyot/Sog'liqni saqlash",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "tamoni",
+        "category": "muhit",
+        "polarity": "negative"
+      },
+      {
+        "term": "dardimga",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses key sentiments expressed in the review, such as the positive sentiment towards the clinic's services. The term 'tamoni' is inaccurately categorized and labeled with a negative sentiment.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01265",
+    "text": "Корзинкадан ҳамма нарса топса булади сифати ало дараҷада сроки ҷой ҷойида лекин сал қиммат",
+    "business_name": "Korzinka.uz",
+    "business_category": "Oziq-ovqat do'konlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "нарса",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "сроки",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "қиммат",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the positive sentiment regarding quality ('сифати ало дараҷада'). The terms are mostly accurate, but the sentiment for 'сроки' is incorrectly labeled as negative.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01328",
+    "text": "Eng arzon apteka dsaga boladi noyob dorilarni xam shu yerDan topsa boladi",
+    "business_name": "Arzon Apteka",
+    "business_category": "Tibbiyot/Sog'liqni saqlash",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "aptpeka",
+        "category": "narx",
+        "polarity": "positive"
+      },
+      {
+        "term": "dorilarni",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall positive sentiment towards the pharmacy and misclassifies the term 'dorilarni' with a negative sentiment, which does not align with the review's context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01339",
+    "text": "Mazza qilib aylandik bollar ozidayoq xursand oyingoxlaRida rosa uchishdi Yana boramz xudo xolas",
+    "business_name": "Dream Park",
+    "business_category": "Ko'ngilochar",
+    "user_rating": 4,
+    "aspects": [
+      {
+        "term": "bollar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "oyinglaRida",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "rosa",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "xolas",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 4,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 4,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some positive sentiments but misses key aspects related to the overall experience at the venue. The terms extracted are present in the text, but their relevance to the sentiment expressed is questionable.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01480",
+    "text": "Judayam chiroylik kelin koʻylaklar bor tuyalarda malikalarga oʻxshab turasiz",
+    "business_name": "Kelin ko'ylaklar saloni",
+    "business_category": "Go'zallik",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "koʻylaklar",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures a positive sentiment towards 'koʻylaklar', but it misses the broader context of beauty ('go'zallik') and the specific aspect category. The term is accurate, but the category 'muhit' is not relevant.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01575",
+    "text": "Shinam toza va muximi turli turdagi kitoblar va ketta yoruğ kutubxona kelishni tafsiya beraman",
+    "business_name": "State National Library of the Republic of Uzbekistan named after Alisher Navoi",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "kitoblar",
+        "category": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "kutubxona",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects of the text but misses the overall context of the library as a place, and the categories assigned are not fully appropriate for the aspects identified.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01608",
+    "text": "Biz doim kitoblarni shu dukondan topamiz va olamiz ham dastafkasi ham bor bu juda yaxshi uyda utirib ham kitoblarimizni bemalol zakas qila olamiza",
+    "business_name": "Hilol nashr",
+    "business_category": "Kitob/Nashriyot",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "kitoblarni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment towards 'kitoblarni', but misses other potential aspects like 'dastafkasi' and the overall positive experience expressed in the review. The category 'boshqalar' is not specific enough for the context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01686",
+    "text": "Salom mobiuz sim kartasidan foydalanaman. Telegram orqali shaxmat o‘ynaganimda ora orada internet bir to‘xtab oladi.",
+    "business_name": "mobi.uz",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 4,
+    "aspects": [
+      {
+        "term": "internet",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "mobiuz sim kartasidan",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects of the text but misses the overall sentiment regarding the service. The term 'internet' is accurately identified but its negative sentiment is somewhat subjective, while the category for 'mobiuz sim kartasidan' is not specific enough.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01734",
+    "text": "Korzinka juda zor hamyonbob sifatli maxsulotlar",
+    "business_name": "Korzinka.uz",
+    "business_category": "Oziq-ovqat do'konlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Korzinka",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "maxsulotlar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall positive sentiment of the review. The term 'Korzinka' is misclassified under 'narx' with a negative sentiment, which is incorrect.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01880",
+    "text": "Men 7 yildan beri usel ishlataman yaxshi kampaniya lekin antenna unchalik yaxshimasda aloqani yaxshilash kerak",
+    "business_name": "Ucell",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "antenna",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "kampaniya",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the review but misses the overall sentiment about the service quality. The terms are mostly accurate, but the categories could be more specific.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01907",
+    "text": "Qamar kitoblar doʻkoni qulay va sifatli kitoblar sotadi kitoblar arzon har qanday kitobni shu yerda topsa boladi",
+    "business_name": "Qamar kitoblar do‘koni",
+    "business_category": "Kitob/Nashriyot",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "kitoblar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kitoblar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kitoblar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kitobni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 4,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 2,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some positive sentiments but fails to identify the specific aspect category related to 'kitoblar' and uses 'boshqalar' which is too vague. The terms are present, but the categorization lacks precision.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01914",
+    "text": "TBC bank ilovasidan men foydalanaman zor bank uyin shartlari bor bonuslari bor bir ikki marta yutuq hm olganman yolgon emasakan uyin uynap pul ham yutib olganman bir kunda pulni tushirip berishadi gapyuq zor ilova",
+    "business_name": "TBC Bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "TBC bank",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "shartlari",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "bonuslari",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "yutuq",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "yolgon",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "uyin",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "pul",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 7,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses key sentiments and misclassifies categories, particularly by labeling all aspects as 'boshqalar' which lacks specificity. The sentiment labels are mixed, with some correct and others incorrect.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01919",
+    "text": "Abonimentni sotib olish juda oson, shaharning barcha jabhalarini qamrab olgan, sport bilan muntazam shug'ullanish uchun zo'r tanlov.",
+    "business_name": "1 FIT",
+    "business_category": "Sport/Fitnes",
+    "user_rating": 4,
+    "aspects": [
+      {
+        "term": "Abonimentni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "jabhalarini",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "sport",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 4,
+    "judge_relevance": 2,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some positive sentiments but misses key aspects like 'aboniment' and 'sport' being central to the review. The category 'boshqalar' is too vague and not specific to the context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01927",
+    "text": "Xalqaro reytingda ham yetakchi o'rinda turadigon o'ta kuchli va bilimga tirishqoq kadrlarni yetishtirib chiqadigon eng yuqori universitetlardan biri",
+    "business_name": "Westminster International University",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "o'ta kuchli va bilimga tirishqoq kadrlarni",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment but misses the broader context of the university's strengths. The aspect term is somewhat accurate but categorized under 'muhit' instead of a more fitting category like 'ta'lim'.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_01931",
+    "text": "Sekin iwlashini xisobga olmasa zor gap yoq taomlari",
+    "business_name": "Sultan Ahmet",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 2,
+    "aspects": [
+      {
+        "term": "taomlari",
+        "category": "ovqat",
+        "polarity": "positive"
+      },
+      {
+        "term": "iwlashini",
+        "category": "xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some opinions but misses the overall negative sentiment regarding the service. The aspect terms are mostly accurate, but the sentiment polarity for 'taomlari' is incorrectly labeled as positive.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02056",
+    "text": "Kop qulayliklarga ega yaxshi ilova kartadan kartaga foizsiz pul otkizish bir qancha qulayliklarga ega Mobil operatorlarga pul tolansa kesbek berar ekan hullas zor",
+    "business_name": "Alifmobi",
+    "business_category": "To'lov tizimlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "tolansa",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "qulayliklarga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects of the review but misses key sentiments, particularly the positive sentiment towards the application and its features. The term 'tolansa' is inaccurately categorized as negative, which affects the overall sentiment assessment.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02116",
+    "text": "Goldin house uylari zamonaviy juda chiroyli yuqori sifat juda narxi baland uylar hisoblanadi",
+    "business_name": "Golden House",
+    "business_category": "Boshqa",
+    "user_rating": 4,
+    "aspects": [
+      {
+        "term": "narxi",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "yuqori sifat",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "Goldin house",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses the overall sentiment regarding the high price, which is expressed negatively. The aspect categories are mostly appropriate, but the sentiment for 'narxi' should be negative.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02137",
+    "text": "Juda tezkor o'tkazmalar uchun foiz kam zor",
+    "business_name": "Agrobank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "o'tkazmalar",
+        "category": "xizmat",
+        "polarity": "negative"
+      },
+      {
+        "term": "foiz",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses the positive sentiment expressed in the review. The terms are mostly accurate, but the polarity labels for both aspects are incorrect.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02151",
+    "text": "Zor menga yoqadi liimitlar taqtim etishi kozni quvontiradi ajoyib tanov",
+    "business_name": "Uzum Bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "tanov",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "liimitlar",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the text but misses the positive sentiment associated with 'liimitlar' and does not fully represent the overall positive sentiment of the review.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02175",
+    "text": "Mebel Hause bebilari ajoyb sfati undanda ajoyb narxlariyam hamyonbob",
+    "business_name": "Mebel House",
+    "business_category": "Boshqa",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Mebel Hause",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narxlariyam",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures one aspect correctly but misclassifies the sentiment of 'narxlariyam', which is positive in the context. The categories are mostly appropriate, but the sentiment labels need correction.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02227",
+    "text": "Natijaga yo'naltirilgan markaz. Yaxshi o'rgatishadi. Lekin ba'zida darslar tez o'tib ketadi.",
+    "business_name": "Result",
+    "business_category": "Boshqa",
+    "user_rating": 4,
+    "aspects": [
+      {
+        "term": "Natijaga",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "darslar",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall sentiment regarding the teaching quality. The terms are mostly accurate, but the sentiment for 'darslar' is not fully justified as it reflects both positive and negative sentiments.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02356",
+    "text": "Kridit olishda qiyinchiliklar yoq judayam qulay bank",
+    "business_name": "TBC Bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Kridit",
+        "category": "xizmat",
+        "polarity": "negative"
+      },
+      {
+        "term": "bank",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall positive sentiment of the review. The term 'Kridit' is inaccurately labeled as negative, while 'bank' is correctly identified but its sentiment is not aligned with the text.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02385",
+    "text": "Yaxshi ilova lekin xodimlari masulyatsiz yarim yil boʼldi ilova bilan xatolikni toʼgʼirlab berishmadi",
+    "business_name": "Uzum Bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 1,
+    "aspects": [
+      {
+        "term": "xodimlari",
+        "category": "xizmat",
+        "polarity": "negative"
+      },
+      {
+        "term": "ilova",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the negative sentiment associated with the 'ilova' term. The categories are mostly appropriate, but the sentiment for 'ilova' is incorrectly labeled as positive.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02390",
+    "text": "Xazna juda zur ilova aniq ishlaydi xalq bankidan foydalanadigan lar juda yaxshi biladi pirlajinani uzi bank ishini bajaradi",
+    "business_name": "Xazna",
+    "business_category": "To'lov tizimlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Xazna",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "xalq bankidan",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "pirlajinani",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 4,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 2,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses the main aspect category 'To'lov tizimlari' and assigns all aspects to 'boshqalar', which is not relevant. The sentiment labels are correct, but the overall relevance of categories is low.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02461",
+    "text": "Iltios mijozlarga telgram mesnjer oqali ham hizmat qilshni yo'ga qo'yinglar",
+    "business_name": "Sug'urta Bozor",
+    "business_category": "Sug'urta",
+    "user_rating": 1,
+    "aspects": [
+      {
+        "term": "telgram mesnjer",
+        "category": "xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures one aspect but misses the overall negative sentiment expressed in the review. The term is accurately extracted, but the sentiment polarity could be more reflective of the user's dissatisfaction.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02466",
+    "text": "Uzum Market narsalari jifatli va hamyonbop 3kun ichiqda topshirish punktiga yetkazib beriladi",
+    "business_name": "Uzum Market",
+    "business_category": "Elektron tijorat",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "topshirish punktiga",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "Uzum Market",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "narsalari",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the positive sentiment regarding quality and affordability. The aspect terms are mostly accurate, but the sentiment for 'narsalari' is incorrectly labeled as negative.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02648",
+    "text": "osh guruchi sal qatiqro ekan shu tog’lasalarz zor boladi",
+    "business_name": "Kamolon Osh",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 3,
+    "aspects": [
+      {
+        "term": "osh",
+        "category": "ovqat",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 5,
+    "judge_sentiment": 1,
+    "judge_relevance": 5,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect and misses the overall positive sentiment expressed in the text. While the aspect term and category are accurate, the sentiment polarity is incorrectly labeled as negative.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02663",
+    "text": "Интернет Зур ишлайди тарифлари арзон",
+    "business_name": "Uzmobile",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Интернет",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "тарифлари",
+        "category": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall positive sentiment of the internet service. The term 'Интернет' is misclassified as negative, which affects the sentiment accuracy.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02799",
+    "text": "Cambridge Learning Centre oʻquv markazi juda ham zor.O'qituvchilari ham yaxshi dars berishadi.Hammaga tavsiya etama.❤️❤️",
+    "business_name": "Cambridge Learning Centre",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "O'qituvchilari",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "ham zor",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "tavsiya",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses key positive sentiments and misclassifies others. The term 'ham zor' is incorrectly labeled as negative, while the overall sentiment is positive.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02921",
+    "text": "Anorbank yaxshi faqat kreditini foizi baland ,shuni pasaytirish kerak.",
+    "business_name": "Anor bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 4,
+    "aspects": [
+      {
+        "term": "Anorbank",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "kreditini",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses the overall positive sentiment towards the bank while focusing on the negative aspect of high interest rates. The categories assigned are not appropriate for the terms extracted.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_02976",
+    "text": "Manga karzinkada savdo qilish yoqadi chunki xamyonbop",
+    "business_name": "Korzinka.uz",
+    "business_category": "Oziq-ovqat do'konlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Manga karzinkada",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment but only identifies one aspect, missing the broader context of the review. The term extracted is somewhat paraphrased, and the category 'boshqalar' is not specific enough for the context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03076",
+    "text": "Men anor bank dan 100 milion kridit olgandi juda kam foiz vilan toladim juda ishonchli va hamyonbob ekan keyingi safar yana kridit olaman ☺️",
+    "business_name": "Anor bank",
+    "business_category": "Bank/Moliya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "kridit",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures the positive sentiment towards 'kridit', but it misses other aspects like 'Anor bank' and the overall positive experience. The category 'boshqalar' is too vague for the specific context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03149",
+    "text": "Bankda xizmat ko'tsatish yaxshi lekin bir narsadan bugun juda noroziman.Bankning Joyida ilovasi orqali kartadan kartaga foizsiz pul o'tkazmalarini amalga oshirish mumkin deyishgandi.Men bu ilovaga Turon bankning kartasini uladim va o'tkazmani amalga oshirganimda kartamdan komissiya uchun ham alohida pul mablag'i yechib olindi.Bu qoraning oq bo'lib chiqishimi yoki oqning qora bo'lib chiqishimi?",
+    "business_name": "SQB",
+    "business_category": "Bank/Moliya",
+    "user_rating": 1,
+    "aspects": [
+      {
+        "term": "xizmat",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "ilovasi",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "komissiya",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses the overall negative sentiment regarding the commission issue. The aspect terms are mostly accurate, but the sentiment for 'xizmat' is incorrectly labeled as positive.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03282",
+    "text": "Bu kapaniya juda zor mb beradi internet yaxwi ishldi",
+    "business_name": "mobi.uz",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "kapaniya",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "internet",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses the overall positive sentiment of the review. The term 'kapaniya' is misclassified as negative, while 'internet' is correctly identified but categorized as 'boshqalar' instead of a more relevant category.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03375",
+    "text": "Hamyonbop narxlar juda zor aksiyalar men doimi shu yerdan harid qilaman",
+    "business_name": "Uzum Market",
+    "business_category": "Elektron tijorat",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "narxlar",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "aksiyalar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the positive sentiment associated with 'narxlar' and incorrectly labels its polarity as negative. The categories are mostly appropriate.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03377",
+    "text": "Ajoyib supermarket juda super narxlar bomba mana shu yerdan olsangiz bozordagidek narxda olasiz",
+    "business_name": "Korzinka.uz",
+    "business_category": "Oziq-ovqat do'konlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "supermarket",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narxlar",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects but misses the positive sentiment associated with 'narxlar' and does not include the positive sentiment of the overall review. The term 'supermarket' is present but categorized as 'boshqalar', which is less relevant.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03489",
+    "text": "Najot Talimda dasturlashni õrganmoqchiman eng yaxshisi shu hozir",
+    "business_name": "Najot ta’lim",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Najot Talimda",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect and misses the overall positive sentiment expressed in the text. The aspect term is present but categorized as 'boshqalar', which is not the most relevant category.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03583",
+    "text": "Xazna toʻlov ilovasi menga juda yoqdi. Xazna ilovasi oson,, oddiy ilova ekan",
+    "business_name": "Xazna",
+    "business_category": "To'lov tizimlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Xazna",
+        "category": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 5,
+    "judge_sentiment": 5,
+    "judge_relevance": 2,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect, missing the overall positive sentiment towards the application and its ease of use. The category 'narx' is not relevant to the context of the review.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03737",
+    "text": "Sifatli ta'lim, tajribali uqituvchilar va zamonaviy usullar har qanday ta'lim markazining ustuni hisoblanadi va bunda Najt ta'lim sizga yordam bera oladi",
+    "business_name": "Najot ta’lim",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "ta'lim",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment towards the aspect of 'ta'lim', but it misses other important aspects like 'tajribali uqituvchilar' and 'zamonaviy usullar'. The category 'boshqalar' is not appropriate as 'ta'lim' should be categorized under 'ta'lim'.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03764",
+    "text": "Flowers uz gullar doʻkonidan xarid qildim bir-biridan chiroyli gullar sotilar ekan menga juda yoqdi ishlariga omad",
+    "business_name": "flowers uz",
+    "business_category": "Gul/Sovg'a",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "gullar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures a positive sentiment towards 'gullar' but misses other aspects like the overall service and experience. The category 'boshqalar' is not specific enough, as 'gullar' should relate to 'Gul/Sovg'a'.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03780",
+    "text": "Antennasi yaxshi chiqmeydi kam megabayt beradi.",
+    "business_name": "Uzmobile",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 3,
+    "aspects": [
+      {
+        "term": "Antennasi",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures one aspect but misses the overall negative sentiment regarding the service quality. The term 'Antennasi' is relevant, but the category 'boshqalar' is not specific enough for the context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03875",
+    "text": "Yaxshi kompaniya internet tezligi ham ajoyib hammaga tavsiya qilaman",
+    "business_name": "Humans",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "hammaga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "internet",
+        "category": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "kompaniya",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the main aspect of 'internet tezligi' which is crucial to the review. The terms are mostly accurate, but the categories for 'hammaga' and 'kompaniya' are not the best fit.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03931",
+    "text": "Bu universitetida talabalar uzlariga kerakli bulgan bilimlarni olishi mumkin chunki bu yerda yutuk kadrlar yetishib chiqadi",
+    "business_name": "Uzbekistan State University of World Languages",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "yutuk kadrlar",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect and misses the overall positive sentiment regarding the university's educational quality. The term 'yutuk kadrlar' is relevant but categorized as 'boshqalar' instead of a more fitting category like 'ta'lim'.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_03970",
+    "text": "Juda ajoyib gullarni faqat shu yerdan topasiz Turli xil bir biridan chiroyli gullar.",
+    "business_name": "Kamila's flowers",
+    "business_category": "Gul/Sovg'a",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "gullarni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment towards 'gullarni', but it misses the broader context of the review which praises the variety and beauty of the flowers. The category 'boshqalar' is not specific enough for the aspect.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04091",
+    "text": "Zoʻr ishlaydi gap yoʻq narxlari xam oʻziga yarasha yaxwi",
+    "business_name": "Beeline",
+    "business_category": "Telekommunikatsiya",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "ishlaydi",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narxlari",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some opinions but misses the positive sentiment about 'narxlari' which is described as 'yaxwi'. The aspect 'ishlaydi' is relevant but could be more specific, while the sentiment for 'narxlari' is incorrectly labeled as negative.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04127",
+    "text": "Az Capital tradingni òrganmoqchiman.men uchun qiziqarli va foydali boladi deb oyliman",
+    "business_name": "Az Capital",
+    "business_category": "Investitsiya/Trading",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Az Capital tradingni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures the positive sentiment towards 'Az Capital tradingni', but it misses the broader context of learning and usefulness expressed in the text. The category 'boshqalar' is not the most relevant choice for this aspect.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04133",
+    "text": "Vatanparvar eng zor mashina xaydashni malakali murabbiylar orgatadi.",
+    "business_name": "Vatanparvar",
+    "business_category": "Davlat xizmatlari",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "mashina xaydashni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment related to driving, but it misses the broader context of the review regarding the quality of training provided by the 'Vatanparvar' service. The category 'boshqalar' is not entirely relevant as it does not reflect the specific service aspect.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04149",
+    "text": "Ake fx doim 1chilardan,o’quv jarayonlari juda zo’r prosta bomba ake fxda bilimlarimi oshirib hozirda yaxwi yutuqlarga erishmoqdaman,Ake fx birgalikda bir kuchmiz✊🏻",
+    "business_name": "AkeFx",
+    "business_category": "Investitsiya/Trading",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "fx",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect and misses others related to the positive sentiment expressed about the learning process and achievements. The term 'fx' is present but the category 'boshqalar' is not the most relevant.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04301",
+    "text": "Flowers.uz gullari judayam chiroyli u gullar menga juda ham yoqadi",
+    "business_name": "flowers uz",
+    "business_category": "Gul/Sovg'a",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Flowers.uz",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures the positive sentiment but only identifies one aspect, missing the broader sentiment about the flowers themselves. The category 'boshqalar' is not appropriate as it does not reflect the specific aspect of flowers.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04305",
+    "text": "Nbu pul otkazmaga kamissiya omedi menga shu tarafi juda yoqadi",
+    "business_name": "NBU",
+    "business_category": "Boshqa",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Nbu pul",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "shu tarafi",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the text but misses the overall positive sentiment expressed. The term 'Nbu pul' is inaccurately categorized as 'narx' and labeled negative, which does not align with the user's positive sentiment.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04334",
+    "text": "Najot taʼlim juda kuchli va mahoratli oʻqituvchilari bor juda koʻpchilik maqtashadi",
+    "business_name": "Najot ta’lim",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "mahoratli oʻqituvchilari",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "koʻpchilik",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "taʼlim",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some aspects of the text but misses the overall positive sentiment towards the teaching quality. The term 'koʻpchilik' is incorrectly categorized as negative, which affects the sentiment accuracy.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04475",
+    "text": "Roʻzmetov maxsulotlarga gap boʻlishi mumkin emas bu maxsulot saharlik hamda iftorlik uchun engtoʻgʻri tanlov",
+    "business_name": "Rozmetov",
+    "business_category": "Boshqa",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "maxssulotlarga",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures one aspect but misses the overall sentiment expressed in the review. The term 'maxsulotlarga' is present but does not fully represent the positive sentiment conveyed in the text.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04502",
+    "text": "Bu hospital yaxshi ish olib borishadi doxtirlariyam jud tajribali",
+    "business_name": "Shox International Hospital",
+    "business_category": "Tibbiyot/Sog'liqni saqlash",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "hospital",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures a positive sentiment towards the hospital but misses the specific mention of 'doxtirlar' (doctors) and their experience, which is a significant aspect of the review. The category 'boshqalar' is not appropriate as it does not reflect the healthcare context.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04555",
+    "text": "Sifatli va kafolatli ta'lim bera oladigan ta'lim markazlaridan biri deb bilaman.Ayniqsa ustozlarning hushmuomalaligini etirof etish kerak.",
+    "business_name": "Master IELTS",
+    "business_category": "Ta'lim",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "ta'lim markazlaridan",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "ustozlarning",
+        "category": "xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the positive sentiment towards 'ustozlarning hushmuomalaligi'. The term 'ta'lim markazlaridan' is relevant but categorized as 'boshqalar', which is less appropriate.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04583",
+    "text": ".Dugonamga 8-martga gul zakaz qilgandim.Tez va sifatli qilib yetkazib beriwdi.Szlarga xam maslahat beramn Kamila's flowers DAN gul zakaz qiliwni",
+    "business_name": "Kamila's flowers",
+    "business_category": "Gul/Sovg'a",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Kamila's flowers",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "gul",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "yetkazib beriwdi",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 3,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 4,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall positive sentiment towards the service and the product. The categories for 'gul' and 'Kamila's flowers' are not appropriate, as they should reflect the specific context of the review.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04601",
+    "text": "Somsaga gap yo Zor Mazzali ihcham",
+    "business_name": "Minor somsa",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Somsaga",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "Mazzali",
+        "category": "ovqat",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 2,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures some aspects but misses the overall positive sentiment of the review. The term 'Somsaga' is inaccurately categorized and labeled negatively, while 'Mazzali' is correctly identified but the overall sentiment is not reflected.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04647",
+    "text": "Har hil turlaridan bor o’zingizga yoqqanini tanlab olishingiz uchun qulay",
+    "business_name": "flowers uz",
+    "business_category": "Gul/Sovg'a",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "turlaridan",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 3,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect, missing the broader sentiment expressed in the text. While the term is present, its category is not entirely relevant to the context of the review.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04679",
+    "text": "Туризм отдых и развлечения на любой вкус",
+    "business_name": "Tourist.uz",
+    "business_category": "Sayohat/Turizm",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Туризм",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 4,
+    "judge_sentiment": 3,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The prediction captures only one aspect and misses the overall positive sentiment expressed in the text. While 'Туризм' is accurately identified, the category 'boshqalar' is not appropriate, and the sentiment should be positive.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04769",
+    "text": "Palovi zor achiqina qalampirli narxlari xamyobop",
+    "business_name": "Chustiy choyxona",
+    "business_category": "Restoran/Ovqatlanish",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "Palovi",
+        "category": "ovqat",
+        "polarity": "negative"
+      },
+      {
+        "term": "narxlari",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 2,
+    "judge_accuracy": 5,
+    "judge_sentiment": 1,
+    "judge_relevance": 5,
+    "judge_overall": 3,
+    "judge_explanation": "The model missed the positive sentiment expressed in the review, particularly regarding 'Palovi', which is a key aspect. While the terms and categories are accurate, the sentiment polarity is incorrect.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04875",
+    "text": "Men bu yerdan katta buket gul zakaz bergandim tez yetib keldi",
+    "business_name": "Kamila's flowers",
+    "business_category": "Gul/Sovg'a",
+    "user_rating": 5,
+    "aspects": [
+      {
+        "term": "buket gul",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "num_aspects": 1,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 5,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures the positive sentiment towards the bouquet but misses the specific aspect category related to flowers. The term is accurate, but the category 'boshqalar' is not relevant.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  },
+  {
+    "review_id": "rev_04966",
+    "text": "Ishlayaptimi zapravka ozi toshkenda gaz beryaptimi qaysidir gazzapravka. ilova yopiq joylarni ham ochiq deb aytyapti",
+    "business_name": "МЧЖ \"LAZIZ SAVDO BIZNES\"",
+    "business_category": "Boshqa",
+    "user_rating": 1,
+    "aspects": [
+      {
+        "term": "gazberyapti",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "zapravka",
+        "category": "muhit",
+        "polarity": "negative"
+      }
+    ],
+    "num_aspects": 2,
+    "annotation_source": "qwen2.5-7b-finetuned",
+    "judge_completeness": 3,
+    "judge_accuracy": 4,
+    "judge_sentiment": 4,
+    "judge_relevance": 3,
+    "judge_overall": 3,
+    "judge_explanation": "The model captures some sentiments but misses the overall negative sentiment regarding the service. The aspect terms are mostly accurate, but the category for 'zapravka' is not appropriate as it relates more to service than environment.",
+    "human_verified": false,
+    "quality_tier": "flag_for_review"
+  }
+]

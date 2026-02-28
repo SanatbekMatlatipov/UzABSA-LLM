@@ -1,23 +1,37 @@
-# Research Log — UzABSA-LLM Project
-# Fine-tuning Open-Source LLMs for Uzbek Aspect-Based Sentiment Analysis
+# Research Log — UzABSA-LLM
+# Parameter-Efficient Fine-Tuning of Open-Source LLMs for Aspect-Based Sentiment Analysis in Uzbek: A Low-Resource Multi-Domain Approach
 # ======================================================================
 # Author: Sanatbek Matlatipov
 # Started: February 2026
-# Status: In Progress
+# Target venue: NLDB 2026 — Efficient/Low-Resource Methods in NLP
+# Status: Experiments Complete — Paper Writing Phase
 # ======================================================================
 
 
 ## LOG 001 — Problem Statement & Motivation
 Date: Feb 2026
 
-- ABSA for Uzbek language is under-explored; no published LLM fine-tuning work exists for this task in Uzbek.
-- Existing multilingual models (mBERT, XLM-R) have limited Uzbek coverage.
-- Open-source LLMs (Qwen, Llama, DeepSeek) show promise for low-resource languages via instruction tuning.
-- Research question: **Can parameter-efficient fine-tuning (QLoRA) of open-source LLMs achieve competitive ABSA performance for Uzbek text?**
-- Sub-questions:
-  - Which base model performs best for Uzbek ABSA?
-  - How does QLoRA compare to full fine-tuning for this low-resource scenario?
-  - What is the impact of prompt language (Uzbek vs English instructions) on performance?
+### Research Gap
+Aspect-Based Sentiment Analysis (ABSA) for the Uzbek language remains an unexplored area in the NLP literature. While ABSA has been extensively studied for high-resource languages (English, Chinese, Arabic), **no published work** applies LLM-based fine-tuning to Uzbek ABSA. The Uzbek language presents distinctive challenges: limited pre-training coverage in foundation models, Latin/Cyrillic script duality, and agglutinative morphology with rich suffixation.
+
+### Motivation
+- Existing multilingual encoders (mBERT, XLM-R) have minimal Uzbek representation, limiting transfer learning effectiveness for token-level tasks such as aspect term extraction.
+- Recent open-source LLMs (Qwen 2.5, Llama 3.1, DeepSeek-R1) demonstrate emergent cross-lingual generalization, particularly when combined with parameter-efficient fine-tuning.
+- QLoRA (4-bit quantized LoRA) enables fine-tuning 7–8B parameter models on a single consumer-grade GPU — a critical constraint for low-resource language research where computational budgets are limited.
+
+### Research Questions
+
+**RQ1.** To what extent can parameter-efficient fine-tuning (QLoRA) of open-source LLMs achieve effective joint aspect extraction and sentiment classification for Uzbek text?
+
+**RQ2.** How do different LLM architectures (Qwen 2.5-7B, Llama 3.1-8B, DeepSeek-R1-Distill-7B) compare on Uzbek ABSA under identical QLoRA configurations, and does training loss reliably predict downstream task performance?
+
+**RQ3.** Can a fine-tuned model trained exclusively on single-domain data (restaurant reviews) generalize to produce usable ABSA annotations across 23 diverse business domains, and what quality characteristics emerge across domains?
+
+### Contributions
+1. **First systematic evaluation** of QLoRA-fine-tuned open-source LLMs for Uzbek ABSA, comparing three architectures under controlled conditions.
+2. **A scalable model-assisted annotation pipeline** combining local inference, LLM-as-Judge quality scoring, and quality-tiered dataset assembly — practical for low-resource settings.
+3. **A novel multi-domain silver-standard Uzbek ABSA dataset** spanning 23 business categories with 9,884 annotated aspect–sentiment pairs and external quality validation.
+4. **Empirical evidence** that training cross-entropy loss does not reliably predict ABSA task performance, with implications for model selection methodology.
 
 
 ## LOG 002 — Dataset Description
@@ -237,57 +251,68 @@ Date: Feb 2026
 - Compare: zero-shot vs few-shot (3-5 examples in prompt) vs fine-tuned
 
 
-## LOG 009 — Key Claims to Support in Paper
-Date: Feb 2026
+## LOG 009 — Key Claims Supported by Evidence
+Date: Feb 2026 (updated Feb 25)
 
 1. **First** comprehensive evaluation of open-source LLMs fine-tuned for Uzbek ABSA
    - Evidence: literature review showing no prior work
    
-2. QLoRA enables **efficient** fine-tuning on consumer/prosumer GPUs
-   - Evidence: training time, peak VRAM usage, comparison to full fine-tuning cost
+2. QLoRA enables **efficient** fine-tuning on a single GPU (≤5.6 GB VRAM)
+   - Evidence: 49–62 min training per model on RTX A6000 (LOGs 018, 021b, 022)
    
 3. Joint aspect extraction + sentiment classification via **instruction tuning** is effective
-   - Evidence: F1 scores on aspect-polarity pairs
+   - Evidence: ATE F1=0.6603, Pair F1=0.5805, Sentiment Acc=0.8864 (LOG 023)
    
-4. **Model comparison** across architectures reveals best choice for Uzbek
-   - Evidence: controlled experiments at same scale (Exp 1)
+4. **Model comparison** across architectures reveals non-obvious ranking
+   - Evidence: Loss ranking ≠ task ranking; Qwen best ATE, Llama best Sentiment (LOG 023)
    
 5. **Structured JSON output** from generative models is reliable
-   - Evidence: JSON parse success rate > X%
+   - Evidence: 100% JSON parse rate (Qwen), 95.9% (Llama), 95.4% (DeepSeek) (LOG 023)
    
-6. **Uzbek-language prompts** affect model performance
-   - Evidence: Exp 3 ablation results
+6. **Cross-domain generalization** is feasible from single-domain training
+   - Evidence: 63.5% of multi-domain annotations pass LLM-as-Judge quality threshold; accuracy ≥3.67/5 across all 23 domains (LOG 026)
+
+7. **Scalable annotation pipeline** for low-resource ABSA
+   - Evidence: 5,038 reviews annotated with 9,884 aspects; 3-layer quality control pipeline (LOG 025–026)
 
 
-## LOG 010 — Paper Structure (Planned)
-Date: Feb 2026
+## LOG 010 — Paper Structure (Planned for NLDB 2026)
+Date: Feb 2026 (updated Feb 25)
 
-1. **Introduction**: Low-resource ABSA, motivation for Uzbek, LLM approach
-2. **Related Work**: ABSA methods, LLM fine-tuning, Uzbek NLP, QLoRA
-3. **Dataset**: Description, annotation scheme (SemEVAL 2014), statistics, class distribution
-4. **Methodology**:
-   - Task formulation (generation-based ABSA)
-   - Instruction format (ChatML, Uzbek prompts)
-   - QLoRA configuration
-   - Model selection
-5. **Experimental Setup**: Hardware, hyperparameters, metrics, baselines
-6. **Results**: Model comparison table, ablations, error analysis
-7. **Discussion**: Findings, limitations, Uzbek-specific challenges
-8. **Conclusion & Future Work**: Semi-supervised extension with raw data, larger datasets
+**Target:** NLDB 2026, Track: Efficient/Low-Resource Methods in NLP
+**Format:** 12 pages + references (Springer LNCS)
 
-### Tables to Prepare
-- Table 1: Dataset statistics (size, polarity distribution, avg aspects)
-- Table 2: Model comparison results (P, R, F1 for ATE and ASC)
-- Table 3: LoRA rank ablation results
-- Table 4: Prompt language comparison
-- Table 5: Training efficiency (time, memory, parameters)
+1. **Introduction** (1.5 pp): Low-resource ABSA gap, Uzbek language challenges, QLoRA opportunity, contributions
+2. **Related Work** (1.5 pp): ABSA methods (SemEVAL tradition), LLM fine-tuning for low-resource NLP, QLoRA/LoRA, Uzbek NLP landscape
+3. **Dataset** (1.5 pp): SemEVAL-format annotated dataset (6,175), multi-domain raw reviews (5,038), statistics, class distribution
+4. **Methodology** (2 pp):
+   - Task formulation (generation-based joint ABSA)
+   - Instruction format (ChatML, Uzbek system prompts)
+   - QLoRA configuration (NF4, LoRA r=16, α=32)
+   - Model selection rationale (3 architectures, ~7B scale)
+   - Multi-domain annotation pipeline (3-layer: model + LLM-judge + assembly)
+5. **Experimental Setup** (1 pp): Hardware, hyperparameters, evaluation metrics (ATE/ASC/E2E F1), LLM-as-Judge rubric
+6. **Results** (2 pp):
+   - Table: 3-model comparison (ATE F1, Pair F1, Sentiment, JSON parse)
+   - Table: Per-domain quality scores from LLM-as-Judge
+   - Finding: Loss ≠ task performance ranking
+   - Finding: Domain generalization gradient
+7. **Discussion** (1 pp): Completeness bottleneck, domain-specific aspect categories, efficiency analysis, limitations
+8. **Conclusion & Future Work** (0.5 pp): Summary, domain-adaptive training, human verification, larger models
 
-### Figures to Prepare
-- Fig 1: System architecture / pipeline diagram
-- Fig 2: Training loss curves (per model)
-- Fig 3: Polarity distribution in dataset
-- Fig 4: Confusion matrix for sentiment classification
-- Fig 5: F1 vs LoRA rank plot
+### Tables for Paper
+- Table 1: Dataset statistics (annotated + multi-domain)
+- Table 2: Model comparison (P/R/F1 for ATE, E2E-ABSA, Sentiment)
+- Table 3: Training efficiency (time, VRAM, throughput per model)
+- Table 4: LLM-as-Judge aggregate scores (5 dimensions)
+- Table 5: Per-domain quality scores (selected domains)
+- Table 6: Quality tier distribution
+
+### Figures for Paper
+- Fig 1: Pipeline diagram (training → evaluation → annotation → judge → dataset)
+- Fig 2: Training loss curves (3 models overlaid)
+- Fig 3: Domain quality heatmap (Overall scores across 23 domains)
+- Fig 4: Polarity distribution comparison (annotated vs. multi-domain)
 
 
 ## LOG 011 — Important References to Cite
@@ -1165,15 +1190,6 @@ DeepSeek-R1-Distill-Qwen-7B is a **distillation** of the DeepSeek-R1 reasoning m
 
 > ⚠️ **Important caveat:** These rankings are based on **cross-entropy loss only**, not on actual ABSA metrics (P/R/F1). Lower loss does not always translate to better task performance — a model with lower eval loss could still produce worse JSON outputs or misidentify aspects. **ABSA evaluation (LOG 020 pipeline) on all three models is required before drawing final conclusions.**
 
-### Next Steps
-- [x] ~~Run ABSA evaluation on all three models~~ → **Done (LOG 023)**
-- [x] ~~Compare JSON parse success rates~~ → **Done (LOG 023)**
-- [x] ~~Compare ATE/ASC/E2E-ABSA F1 scores~~ → **Done (LOG 023)**
-- [ ] Create multi-domain annotated dataset from `reviews.csv` → **Plan in LOG 024**
-- [ ] Implement LLM-as-Judge evaluation pipeline
-- [ ] Investigate tokenizer fertility differences across all models on Uzbek text
-- [ ] Write final paper results section with all metrics
-
 
 ## LOG 023 — ABSA Evaluation: 3-Model Comparison (COMPLETED)
 Date: Feb 24, 2026
@@ -1448,110 +1464,262 @@ Based on quality scores from Steps 4–5:
 | **Total** | — | **~5.5 hours** |
 
 
-### Next Steps
-- [x] ~~ABSA evaluation on all three models~~ → **Done (LOG 023)**
-- [x] ~~Build `scripts/annotate_reviews.py`~~ → **Done (LOG 025)**
-- [x] ~~Implement LLM-as-Judge scoring script~~ → **Done (LOG 025)**
-- [x] ~~Implement dataset assembly script~~ → **Done (LOG 025)**
-- [ ] Run Qwen 2.5-7B on all 5,038 reviews → **In Progress (LOG 025)**
-- [ ] Run judge on stratified sample (~300 reviews)
-- [ ] Human verification (50 reviews, 2 annotators)
-- [ ] Assemble final dataset + publish to HuggingFace Hub
-- [ ] Investigate tokenizer fertility differences across all models on Uzbek text
-- [ ] Write final paper results section with all metrics
 
-
-## LOG 025 — Annotation Pipeline Implementation (IN PROGRESS)
+## LOG 025 — Annotation Pipeline Implementation
 Date: Feb 25, 2026
 
 ### Overview
-Full implementation of the 3-layer annotation pipeline from LOG 024. All scripts built and tested, batch annotation running on 5,038 reviews.
+Implementation of the 3-layer model-assisted annotation pipeline described in LOG 024. The pipeline consists of: (1) batch ABSA inference using the fine-tuned Qwen 2.5-7B model, (2) LLM-as-Judge quality scoring via external API, and (3) quality-tiered dataset assembly.
 
-### Scripts Implemented
+### Pipeline Architecture
 
-#### 1. `scripts/annotate_reviews.py` — Batch ABSA Annotation
-- **Input:** `data/raw/reviews.csv` (5,058 reviews → 5,038 after dedup + filter)
-- **Model:** Qwen 2.5-7B fine-tuned (`outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629/merged_model`)
-- **Features:**
-  - Automatic business category mapping from `business_categories.json`
-  - Checkpoint support: saves every 100 reviews for crash recovery
-  - Quality categorization: good / no_aspects / failed / flagged (>5 aspects)
-  - Outputs: `reviews_annotated.json`, `annotation_stats.json`, `domain_distribution.json`
-- **Test run (5 samples):** 100% JSON parse rate, 100% usable, 5/5 good annotations, 1 flagged (9 aspects)
+The annotation pipeline applies three complementary quality layers:
 
-#### 2. `scripts/llm_judge.py` — LLM-as-Judge Quality Scoring
-- **Providers:** OpenAI (GPT-5-mini), Anthropic (Claude 3.5 Haiku), any OpenAI-compatible API
-- **Scoring dimensions (1–5 each):**
-  - Completeness — captures all opinions?
-  - Accuracy — extracted terms actually in text?
-  - Sentiment — polarity labels correct?
-  - Relevance — categories appropriate?
-  - Overall — combined quality
-- **Stratified sampling:** ~300 reviews across 23 domains (priority: Restoran 50, Bank 30, Telekom 25, Tibbiyot 25, Ta'lim 20, E-tijorat 20, Transport 15, Mehmonxona 15, others proportional)
-- **Features:** Checkpoint recovery, rate limiting, retry with backoff, structured JSON score parsing with regex fallback
-- **Output:** `judge_results.json`, `judge_report.json` (aggregated), `judge_summary.txt` (human-readable)
+| Layer | Component | Role |
+|:-----:|-----------|------|
+| 1 | Fine-tuned Qwen 2.5-7B | Generates ABSA predictions (aspects + sentiments) for all 5,038 reviews |
+| 2 | LLM-as-Judge (GPT-4o-mini) | Scores prediction quality on stratified sample (~300 reviews) across 5 dimensions |
+| 3 | Quality-tiered assembly | Filters annotations by judge scores into include/flag/exclude tiers |
 
-#### 3. `scripts/assemble_dataset.py` — Final Dataset Assembly
-- **Quality tiers:** Include (≥3.5), Flag (2.5–3.5), Exclude (<2.5), Unjudged
-- **Output formats:**
-  - `uzbek_multi_domain_absa_full.json` — all annotations + judge scores
-  - `uzbek_multi_domain_absa_silver.json` — included + unjudged (silver standard)
-  - `uzbek_multi_domain_absa_approved.json` — judge-approved only
-  - `uzbek_multi_domain_absa.jsonl` — JSONL for HuggingFace
-  - `dataset_stats.json` — comprehensive statistics
+This design enables scalable annotation while maintaining quality control — the fine-tuned model provides coverage across all reviews, while the external judge validates accuracy on a representative sample.
 
-### Batch Annotation Status
-**Started:** Feb 25, 2026 10:50
-**Current progress:** ~142/5,038 reviews (~3%)
-**Average speed:** ~5.3 sec/review
-**Estimated completion:** ~7–8 hours from start
-**JSON parse rate so far:** 100% (consistent with LOG 023 evaluation)
+### Implementation Details
 
-### Annotation Quality (First 5 Samples)
+**Batch Annotation (`annotate_reviews.py`):**
+- Loads reviews with automatic business category mapping (630 businesses → 23 domains)
+- Deduplication and short-review filtering (5,058 → 5,038 reviews)
+- Checkpoint-based crash recovery (saves state every 100 reviews)
+- Quality categorization: good (parse OK + ≥1 aspect), no_aspects, failed, flagged (>5 aspects)
 
-| Review | Domain | Aspects | Flagged? | Notes |
-|--------|--------|:-------:|:--------:|-------|
-| rev_00000 | Ta'lim | 9 | Yes (>5) | Long review with many opinions — extraction valid |
-| rev_00001 | Ta'lim | 2 | No | Correct: platform + teachers |
-| rev_00002 | Ta'lim | 1 | No | Short review, single aspect correct |
-| rev_00003 | Ta'lim | 3 | No | Platform + courses + teachers |
-| rev_00004 | Ta'lim | 2 | No | Good extraction from short text |
+**LLM-as-Judge (`llm_judge.py`):**
+- Supports OpenAI, Anthropic, and OpenAI-compatible APIs
+- Stratified domain sampling ensures representation across all 23 business categories
+- Scoring rubric (1–5 per dimension): Completeness, Accuracy, Sentiment Correctness, Relevance, Overall
+- Includes rate-limit handling, retry logic, and checkpoint recovery
 
-### Pipeline Execution Order
-```
-1. annotate_reviews.py   → data/annotated/reviews_annotated.json    [RUNNING]
-2. llm_judge.py          → data/judged/judge_results.json           [WAITING for Step 1 + API key]
-3. assemble_dataset.py   → data/final_dataset/                      [WAITING for Steps 1-2]
-```
+**Dataset Assembly (`assemble_dataset.py`):**
+- Merges model annotations with judge scores
+- Quality thresholds: Include (≥3.5), Flag for review (2.5–3.49), Exclude (<2.5)
+- Exports in multiple formats: JSON (full/silver/approved), JSONL (HuggingFace-compatible)
 
-### Commands to Run (after annotation completes)
-```powershell
-# Set API key
-$env:OPENAI_API_KEY = "sk-..."
+### Preliminary Validation (5-Sample Test)
 
-# Run LLM-as-Judge on stratified sample
-python scripts/llm_judge.py \
-    --annotations ./data/annotated/reviews_annotated.json \
-    --provider openai --model gpt-5-mini \
-    --sample-size 300 --output-dir ./data/judged
+Before running the full batch, a 5-sample test confirmed pipeline correctness:
 
-# Assemble final dataset
-python scripts/assemble_dataset.py \
-    --annotations ./data/annotated/reviews_annotated.json \
-    --judge-results ./data/judged/judge_results.json \
-    --output-dir ./data/final_dataset
-```
+| Review | Domain | Aspects Extracted | Parse Success | Notes |
+|--------|--------|:-----------------:|:-------------:|-------|
+| rev_00000 | Ta'lim | 9 | Yes | Long review — flagged (>5) but valid |
+| rev_00001 | Ta'lim | 2 | Yes | Correct: platform + teachers |
+| rev_00002 | Ta'lim | 1 | Yes | Single aspect from short review |
+| rev_00003 | Ta'lim | 3 | Yes | Platform + courses + teachers |
+| rev_00004 | Ta'lim | 2 | Yes | Good extraction from short text |
 
-### Also Fixed
-- Resolved 2 merge conflict blocks in RESEARCH_LOG.md (from `git reset --soft` in previous session)
-- Removed outdated Phase A/B/C plan and remote-branch conflict markers
+**Test results:** 100% JSON parse rate, 100% usable annotations (5/5), consistent with Qwen's 100% parse rate observed in LOG 023 evaluation.
+
+### Batch Annotation Progress
+- **Total reviews:** 5,038 (after deduplication and filtering)
+- **Model:** Qwen 2.5-7B fine-tuned (selected per LOG 023 analysis)
+- **Average inference speed:** ~5.3 sec/review (single RTX A6000)
+- **Estimated total time:** ~7–8 hours
+- **JSON parse rate (observed):** 100% through initial 500 reviews
+
+### Judge Scoring Design
+
+The LLM-as-Judge evaluates a stratified sample with the following domain allocation to ensure adequate representation of both in-domain (restaurant) and out-of-domain (banking, telecom, etc.) annotations:
+
+| Domain | Target Sample | Rationale |
+|--------|:------------:|:---------:|
+| Restoran/Ovqatlanish | 50 | In-domain baseline |
+| Bank/Moliya | 30 | Out-of-domain: financial |
+| Telekommunikatsiya | 25 | Out-of-domain: telecom |
+| Tibbiyot/Sog'liqni saqlash | 25 | Out-of-domain: healthcare |
+| Ta'lim | 20 | Out-of-domain: education |
+| E-tijorat | 20 | Out-of-domain: e-commerce |
+| Transport/Logistika | 15 | Out-of-domain: logistics |
+| Mehmonxona/Turizm | 15 | Out-of-domain: hospitality |
+| Remaining 15 domains | ~100 | Proportional allocation (min 3 each) |
+| **Total** | **~300** | — |
+
+
+## LOG 026 — LLM-as-Judge Results & Multi-Domain Dataset Assembly
+Date: Feb 25, 2026
+
+### Overview
+Completion of the full annotation pipeline: batch annotation of all 5,038 reviews (Layer 1), LLM-as-Judge quality scoring on a stratified 307-review sample (Layer 2), and quality-tiered dataset assembly (Layer 3). This log documents the quantitative results and key findings.
+
+### Layer 1 — Batch Annotation Results
+
+| Parameter | Value |
+|-----------|-------|
+| Total reviews processed | 5,038 |
+| Model | Qwen 2.5-7B (fine-tuned) |
+| JSON parse success rate | 100.0% |
+| Total aspects extracted | 9,884 |
+| Average aspects per review | 1.96 |
+| Domains covered | 23 |
+| Unique aspect categories | 7 (ovqat, muhit, xizmat, narx, boshqalar, xodim, unknown) |
+
+**Polarity distribution across all extracted aspects:**
+
+| Polarity | Count | Percentage |
+|----------|------:|-----------:|
+| Positive | 7,422 | 75.1% |
+| Negative | 1,635 | 16.5% |
+| Neutral | 827 | 8.4% |
+| **Total** | **9,884** | 100% |
+
+**Domain coverage (top 10 by volume):**
+
+| Domain | Reviews | % of Total |
+|--------|--------:|-----------:|
+| Restoran/Ovqatlanish | 1,626 | 32.3% |
+| Bank/Moliya | 577 | 11.5% |
+| Boshqa | 507 | 10.1% |
+| To'lov tizimlari | 328 | 6.5% |
+| Elektron tijorat | 296 | 5.9% |
+| Ta'lim | 287 | 5.7% |
+| Tibbiyot/Sog'liqni saqlash | 285 | 5.7% |
+| Telekommunikatsiya | 234 | 4.6% |
+| Oziq-ovqat do'konlari | 215 | 4.3% |
+| Gul/Sovg'a | 173 | 3.4% |
+| Remaining 13 domains | 510 | 10.1% |
+
+### Layer 2 — LLM-as-Judge Quality Scoring
+
+**Judge configuration:**
+- Provider: OpenAI (GPT-4o-mini)
+- Sample: 307 reviews (stratified across all 23 domains)
+- Scoring dimensions: Completeness, Accuracy, Sentiment, Relevance, Overall (1–5 scale)
+- Parse success: 307/307 (100%)
+
+#### Aggregate Quality Scores
+
+| Dimension | Mean Score (1–5) | Interpretation |
+|-----------|:----------------:|:---------------|
+| **Completeness** | 3.32 | Moderate — model captures main opinions but may miss subsidiary aspects |
+| **Accuracy** | 4.47 | High — extracted terms are genuinely present in the text |
+| **Sentiment** | 4.21 | High — polarity labels are largely correct |
+| **Relevance** | 4.06 | Good — predicted categories are contextually appropriate |
+| **Overall** | 3.75 | Above threshold — majority suitable for inclusion |
+
+**Key observation:** The model achieves high accuracy (4.47/5) and sentiment correctness (4.21/5), confirming that when it extracts an aspect, it does so reliably. The lower completeness score (3.32/5) indicates a tendency to miss some aspects — consistent with the conservative prediction pattern observed in LOG 023 (Qwen's prediction-to-reference ratio of 1.16 on the annotated dataset becomes less aggressive on longer, multi-aspect real-world reviews).
+
+#### Quality Tier Distribution
+
+| Tier | Criterion | Count | Percentage |
+|------|-----------|------:|-----------:|
+| **Include** | Overall ≥ 3.5 | 195 | 63.5% |
+| **Flag** | 2.5 ≤ Overall < 3.5 | 86 | 28.0% |
+| **Exclude** | Overall < 2.5 | 26 | 8.5% |
+| **Total judged** | — | 307 | 100% |
+
+63.5% of annotations meet the inclusion threshold without modification. Only 8.5% are low quality. This validates the approach: **a restaurant-trained model produces usable multi-domain annotations for nearly two-thirds of reviews on the first pass.**
+
+#### Per-Domain Quality Analysis (Answering RQ3)
+
+The domain-level scores reveal a clear quality gradient from in-domain to out-of-domain:
+
+| Domain | N | Comp. | Acc. | Sent. | Rel. | Overall | Notes |
+|--------|--:|:-----:|:----:|:-----:|:----:|:-------:|-------|
+| Restoran/Ovqatlanish | 50 | 3.68 | 4.76 | 4.56 | 4.66 | **4.24** | In-domain — highest quality |
+| Sayohat/Turizm | 5 | 4.00 | 4.80 | 4.60 | 4.40 | **4.40** | Near-domain (hospitality) |
+| Bozor/BSC | 3 | 3.67 | 5.00 | 5.00 | 5.00 | **4.67** | Small sample, high quality |
+| Din/Madaniyat | 3 | 4.33 | 5.00 | 4.00 | 5.00 | **4.33** | Small sample |
+| Yetkazib berish | 3 | 3.67 | 5.00 | 4.67 | 4.33 | **4.33** | Delivery: clear aspects |
+| Go'zallik | 3 | 3.33 | 4.67 | 5.00 | 4.00 | **4.00** | Beauty services |
+| Texnologiya/Media | 8 | 2.88 | 4.50 | 5.00 | 3.88 | **3.88** | Good but less complete |
+| Boshqa | 37 | 3.43 | 4.54 | 3.89 | 4.38 | **3.81** | Mixed domain |
+| Elektron tijorat | 21 | 3.43 | 4.48 | 4.10 | 4.14 | **3.81** | E-commerce |
+| Oziq-ovqat do'konlari | 15 | 3.47 | 4.33 | 4.47 | 4.13 | **3.80** | Near-domain (food-related) |
+| Tibbiyot/Sog'liqni saqlash | 25 | 3.40 | 4.60 | 4.20 | 4.36 | **3.80** | Healthcare |
+| Bank/Moliya | 30 | 3.40 | 4.47 | 4.17 | 3.90 | **3.70** | Financial: domain-specific aspects |
+| Ko'ngilochar | 3 | 3.33 | 4.67 | 4.33 | 4.00 | **3.67** | Entertainment |
+| Transport/Yo'l | 3 | 3.33 | 4.00 | 4.00 | 4.00 | **3.67** | Transport |
+| Gul/Sovg'a | 12 | 3.08 | 4.08 | 4.83 | 3.67 | **3.58** | Flower/gift shops |
+| To'lov tizimlari | 24 | 3.00 | 4.29 | 4.38 | 3.54 | **3.54** | Payment systems |
+| Davlat xizmatlari | 3 | 3.00 | 4.00 | 4.33 | 3.67 | **3.33** | Government services |
+| Telekommunikatsiya | 25 | 3.04 | 4.36 | 3.64 | 3.64 | **3.32** | Telecom: technical jargon |
+| Ta'lim | 20 | 2.90 | 4.20 | 3.80 | 3.45 | **3.25** | Education: abstract aspects |
+| Sport/Fitnes | 4 | 2.75 | 4.25 | 4.25 | 3.00 | **3.25** | Fitness |
+| Kitob/Nashriyot | 4 | 3.00 | 4.25 | 4.00 | 3.00 | **3.00** | Books/publishing |
+| Sug'urta | 3 | 2.33 | 3.67 | 2.67 | 3.33 | **2.67** | Insurance: highly specialized |
+| Investitsiya/Trading | 3 | 2.33 | 4.00 | 3.67 | 3.00 | **2.67** | Investment: domain gap |
+
+**Key findings for RQ3 — Domain Generalization:**
+
+1. **In-domain performance (Restoran)** is strong (Overall 4.24/5), confirming the model's competence within its training distribution.
+
+2. **Near-domain transfer** is effective for domains with overlapping aspect vocabularies: Oziq-ovqat do'konlari (food shops, 3.80), Sayohat/Turizm (hospitality, 4.40), and Yetkazib berish (delivery, 4.33) all exceed the inclusion threshold.
+
+3. **Out-of-domain degradation** is measurable but moderate: Bank/Moliya (3.70), Telekommunikatsiya (3.32), and Ta'lim (3.25) show reduced completeness and relevance scores. The model correctly extracts terms that appear in the text (accuracy remains ≥4.0 everywhere) but struggles with domain-specific aspect categories and misses opinions couched in specialized terminology.
+
+4. **Highest-gap domains** (Overall <3.0): Sug'urta (insurance, 2.67) and Investitsiya (investment/trading, 2.67) — these are the most lexically distant from restaurant reviews, with highly specialized vocabularies (polislar, foiz stavkasi, investitsiya portfeli) that the model never encountered during training.
+
+5. **Accuracy is universally high** (≥3.67 across all 23 domains): the model rarely hallucinates aspects. When it extracts something, it is genuinely present in the text. The quality gradient is primarily driven by **completeness** and **relevance** — the model misses domain-specific aspects rather than inventing wrong ones.
+
+### Layer 3 — Final Dataset Assembly
+
+| Output | Count | Description |
+|--------|------:|-------------|
+| Full dataset | 5,038 | All annotations + judge scores where available |
+| Silver standard | 4,926 | Included (195) + unjudged (4,731) |
+| Judge-approved | 195 | Quality score ≥ 3.5 only |
+| Total aspects | 9,884 | Across all 5,038 reviews |
+| Domains | 23 | Full coverage |
+
+**Aspect category distribution (top 5):**
+
+| Category | Count | Percentage |
+|----------|------:|-----------:|
+| boshqalar (miscellaneous) | 4,493 | 45.5% |
+| ovqat (food) | 1,768 | 17.9% |
+| xizmat (service) | 1,575 | 15.9% |
+| muhit (ambiance) | 1,062 | 10.7% |
+| narx (price) | 894 | 9.0% |
+
+The dominance of the "boshqalar" (miscellaneous) category is expected: the model was trained on a 5-category restaurant taxonomy and maps unfamiliar out-of-domain aspects to the catch-all category. This finding motivates future work on domain-adaptive category taxonomies.
+
+### Addressing Research Questions
+
+**RQ1 — Effectiveness of QLoRA for Uzbek ABSA:**
+The fine-tuned Qwen 2.5-7B achieves 0.6603 ATE F1 (exact match) and 0.5795 E2E Pair F1 on the annotated validation set (LOG 023), with a perfect 100% JSON parse rate. These results demonstrate that QLoRA fine-tuning of a 7B-parameter model is effective for Uzbek ABSA, achieving structured output reliability comparable to much larger models on high-resource languages. The entire training required only 49 minutes of compute on a single RTX A6000 GPU with ~5.4 GB VRAM utilization — demonstrating the practical efficiency of the approach.
+
+**RQ2 — Architecture Comparison:**
+Three models trained under identical conditions reveal a nuanced picture (full results in LOG 023):
+- Qwen 2.5-7B: best aspect extraction (ATE F1=0.6603) and perfect instruction following (100% parse)
+- Llama 3.1-8B: best sentiment classification (Accuracy=0.8864, Macro-F1=0.8435) and end-to-end pair F1 (0.5805)
+- DeepSeek-R1-Distill-7B: lowest across all metrics, with significant over-prediction (29% more than gold)
+
+Critically, **training loss ranking diverges from task performance ranking**: Llama achieved the lowest validation loss (0.2785) but Qwen surpasses it on ATE F1 despite a 31% higher loss (0.3656). This challenges the common assumption that validation loss is a reliable proxy for downstream performance in structured extraction tasks.
+
+**RQ3 — Cross-Domain Generalization:**
+The LLM-as-Judge evaluation (this LOG) provides a domain-level quality matrix across all 23 business categories. The model trained exclusively on restaurant reviews achieves:
+- Overall quality ≥ 3.5 ("Include" tier) for **15 of 23 domains** (65%)
+- Universally high accuracy (≥3.67/5 across all domains) — the model rarely hallucinates
+- Degradation driven by **completeness** (missing domain-specific aspects) rather than precision
+- Largest domain gap: insurance and investment (Overall 2.67/5 vs restaurant's 4.24/5)
+
+These findings demonstrate meaningful zero-shot domain transfer for ABSA while identifying the completeness bottleneck as the primary target for future domain adaptation.
+
+### Summary of Experimental Evidence
+
+| Experiment | Log | Key Result |
+|------------|:---:|:-----------|
+| Qwen 2.5-7B fine-tuning | 018 | 86.8% loss reduction, 49 min training, 5.4 GB VRAM |
+| Llama 3.1-8B fine-tuning | 021b | Lowest eval loss (0.2785), best sentiment accuracy |
+| DeepSeek-R1-7B fine-tuning | 022 | R1 distillation does not benefit structured ABSA |
+| 3-model ABSA evaluation | 023 | Qwen: best ATE F1 (0.6603), Llama: best Pair F1 (0.5805) |
+| Batch annotation (5,038 reviews) | 025–026 | 100% parse, 9,884 aspects, 23 domains |
+| LLM-as-Judge (307 sample) | 026 | Overall 3.75/5, 63.5% include rate |
+| Multi-domain dataset | 026 | 5,038 annotated reviews, quality-tiered silver standard |
 
 
 # ======================================================================
-# END OF CURRENT LOGS — Update as experiments progress
+# END OF CURRENT LOGS — Entering Paper Writing Phase
 # ======================================================================
-# Next: (1) Complete annotation run (~7-8 hours),
-#       (2) Run LLM-as-Judge on stratified 300-sample,
-#       (3) Assemble final dataset, (4) Human verification,
-#       (5) Publish to HuggingFace Hub, (6) Tokenizer fertility analysis
+# All core experiments completed. Remaining before submission:
+#   (1) Tokenizer fertility analysis across 3 models
+#   (2) Human verification of 50-review subset (gold calibration)
+#   (3) Publish dataset + models to HuggingFace Hub
+#   (4) Draft paper for NLDB 2026 (Efficient/Low-Resource Methods in NLP)
 # ======================================================================

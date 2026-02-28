@@ -1,7 +1,117 @@
 {
   "Ta'lim": {
-    "count": 5,
-    "avg_aspects": 3.8,
+    "count": 287,
+    "avg_aspects": 2.21,
+    "total_aspects": 635
+  },
+  "Restoran/Ovqatlanish": {
+    "count": 1626,
+    "avg_aspects": 2.1,
+    "total_aspects": 3418
+  },
+  "Bank/Moliya": {
+    "count": 577,
+    "avg_aspects": 1.93,
+    "total_aspects": 1116
+  },
+  "Sayohat/Turizm": {
+    "count": 78,
+    "avg_aspects": 1.71,
+    "total_aspects": 133
+  },
+  "Sport/Fitnes": {
+    "count": 60,
+    "avg_aspects": 1.67,
+    "total_aspects": 100
+  },
+  "Elektron tijorat": {
+    "count": 296,
+    "avg_aspects": 2.03,
+    "total_aspects": 601
+  },
+  "Gul/Sovg'a": {
+    "count": 173,
+    "avg_aspects": 1.62,
+    "total_aspects": 280
+  },
+  "Oziq-ovqat do'konlari": {
+    "count": 215,
+    "avg_aspects": 2.07,
+    "total_aspects": 445
+  },
+  "To'lov tizimlari": {
+    "count": 328,
+    "avg_aspects": 1.81,
+    "total_aspects": 595
+  },
+  "Kitob/Nashriyot": {
+    "count": 56,
+    "avg_aspects": 1.73,
+    "total_aspects": 97
+  },
+  "Texnologiya/Media": {
+    "count": 110,
+    "avg_aspects": 1.56,
+    "total_aspects": 172
+  },
+  "Tibbiyot/Sog'liqni saqlash": {
+    "count": 285,
+    "avg_aspects": 1.96,
+    "total_aspects": 559
+  },
+  "Boshqa": {
+    "count": 507,
+    "avg_aspects": 1.86,
+    "total_aspects": 945
+  },
+  "Transport/Yo'l": {
+    "count": 32,
+    "avg_aspects": 1.81,
+    "total_aspects": 58
+  },
+  "Telekommunikatsiya": {
+    "count": 234,
+    "avg_aspects": 1.86,
+    "total_aspects": 435
+  },
+  "Din/Madaniyat": {
+    "count": 49,
+    "avg_aspects": 1.49,
+    "total_aspects": 73
+  },
+  "Go'zallik": {
+    "count": 11,
+    "avg_aspects": 1.82,
+    "total_aspects": 20
+  },
+  "Yetkazib berish": {
+    "count": 30,
+    "avg_aspects": 1.63,
+    "total_aspects": 49
+  },
+  "Ko'ngilochar": {
+    "count": 26,
+    "avg_aspects": 1.92,
+    "total_aspects": 50
+  },
+  "Bozor/BSC": {
+    "count": 13,
+    "avg_aspects": 1.46,
     "total_aspects": 19
+  },
+  "Davlat xizmatlari": {
+    "count": 16,
+    "avg_aspects": 1.75,
+    "total_aspects": 28
+  },
+  "Sug'urta": {
+    "count": 7,
+    "avg_aspects": 1.29,
+    "total_aspects": 9
+  },
+  "Investitsiya/Trading": {
+    "count": 22,
+    "avg_aspects": 2.14,
+    "total_aspects": 47
   }
 }

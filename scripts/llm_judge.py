@@ -13,7 +13,7 @@ Usage:
     # OpenAI
     python scripts/llm_judge.py \
         --annotations ./data/annotated/reviews_annotated.json \
-        --provider openai --model gpt-5-mini \
+        --provider openai --model gpt-4o-mini \
         --sample-size 300 --output-dir ./data/judged
 
     # Anthropic
@@ -195,7 +195,7 @@ class OpenAIClient:
     def __init__(
         self,
         api_key: str,
-        model: str = "gpt-5-mini",
+        model: str = "gpt-4o-mini",
         api_base: str = "https://api.openai.com/v1",
         timeout: float = 60.0,
     ):
@@ -627,8 +627,8 @@ def main():
         help="LLM provider (default: openai)",
     )
     parser.add_argument(
-        "--model", type=str, default="gpt-5-mini",
-        help="Model name (default: gpt-5-mini)",
+        "--model", type=str, default="gpt-4o-mini",
+        help="Model name (default: gpt-4o-mini)",
     )
     parser.add_argument(
         "--api-key", type=str, default=None,
