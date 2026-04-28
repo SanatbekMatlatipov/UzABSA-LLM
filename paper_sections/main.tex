@@ -87,16 +87,16 @@
 % Author Orchid ID: enter ID or remove command
 \newcommand{\orcidauthorA}{0000-0002-6895-3436} % Add \orcidA{} behind the author's name
 \newcommand{\orcidauthorB}{0000-0002-3664-4954} % Add \orcidB{} behind the author's name
-\newcommand{\orcidauthorC}{0000-0002-0369-6707} % 
-\newcommand{\orcidauthoD}{0000-0002-7876-5009} % 
+\newcommand{\orcidauthorC}{0000-0002-0369-6707} % Add \orcidC{} behind the author's name
+\newcommand{\orcidauthorD}{0000-0002-7876-5009} % Add \orcidD{} behind the author's name
 
 % Authors, for the paper (add full first names)
-\Author{Sanatbek Matlatipov $^{1}$\orcidA{}, Khabibulla Madatov $^{2}$\orcidB{}, Jaloliddin Rajabov $^{1}$\orcidC{} and Jernej Vi\v{c}i\v{c} $^{3}$\orcidC{}}
+\Author{Sanatbek Matlatipov $^{1}$\orcidA{}, Khabibulla Madatov $^{2}$\orcidB{}, Jaloliddin Rajabov $^{1}$\orcidC{} and Jernej Vi\v{c}i\v{c} $^{3}$\orcidD{}}
 
 %\longauthorlist{yes}
 
 % MDPI internal command: Authors, for metadata in PDF
-\AuthorNames{Sanatbek, Khabibulla, Jaloliddin Rajabov and Jernej}
+\AuthorNames{Sanatbek Matlatipov, Khabibulla Madatov, Jaloliddin Rajabov and Jernej Vi\v{c}i\v{c}}
 
 %\longauthorlist{yes}
 
@@ -104,7 +104,7 @@
 \address{%
 $^{1}$ \quad Faculty of Applied Mathematics and Intelligent Technologies, National University of Uzbekistan named after Mirzo Ulugbek, Tashkent 100174, Uzbekistan; {s.matlatipov@nuu.uz}\\
 $^{2}$ \quad The Department of Computer Science, Urgench State University Named after Abu Rayhan Biruni,
-14 Kh. Alimdjan Str., Urgench City 220100, Uzbekistan; habi1972@mail.ru; \\
+14 Kh. Alimdjan Str., Urgench City 220100, Uzbekistan; habi1972@mail.ru\\
 $^{3}$ \quad Faculty of Mathematics, Natural Science and Information Technologies, University of Primorska, 6000 Koper, Slovenia; jernej.vicic@upr.si\\
 }
 
@@ -123,7 +123,7 @@ $^{3}$ \quad Faculty of Mathematics, Natural Science and Information Technologie
 %\conference{} % An extended version of a conference paper
 
 % Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{Aspect-Based Sentiment Analysis (ABSA) remains largely unexplored for Uzbek, a low-resource Turkic language with limited representation in current foundation models. This study presents the first systematic investigation of parameter-efficient fine-tuning for Uzbek ABSA, comparing three open-source large language models: Qwen~2.5-7B, Llama ~3.1-8B, and DeepSeek-7B, each evaluated under identical QLoRA configurations on a SemEval-format restaurant review dataset comprising 6,175 annotated sentences. ABSA is reformulated as a generation task with Uzbek-language instruction tuning, enabling models to jointly extract aspect terms and classify sentiment polarity in a single pass, producing structured JSON output. Evaluation on 609 validation examples demonstrates that Qwen~2.5-7B achieves the highest aspect term extraction F1 score of 0.6603 with a perfect 100\% JSON parse rate, while Llama~3.1-8B leads in end-to-end pair F1 (0.5805) and sentiment accuracy (0.8864). Importantly, training loss does not reliably predict downstream task performance: Qwen surpasses Llama in extraction despite a 31\% higher validation loss. Based on these findings, a three-layer model-assisted annotation pipeline is proposed, integrating local inference, LLM-as-Judge quality scoring, and quality-tiered assembly. Application of this pipeline to 5,038 multi-domain Uzbek business reviews across 23 categories produces a novel silver-standard dataset containing 9,884 aspect–sentiment pairs, with 63.5\% of judged annotations meeting inclusion quality thresholds.}
+\abstract{Aspect-Based Sentiment Analysis (ABSA) remains largely unexplored for Uzbek, a low-resource Turkic language with limited representation in current foundation models. This study presents, to the best of our knowledge, the first systematic investigation of parameter-efficient fine-tuning for Uzbek ABSA, comparing three open-source large language models---Qwen~2.5-7B, Llama~3.1-8B, and DeepSeek-R1-Distill-Qwen-7B---each evaluated under identical QLoRA configurations on a SemEval-format restaurant review dataset comprising 6,175 annotated sentences. ABSA is reformulated as a generation task with Uzbek-language instruction tuning, enabling models to jointly extract aspect terms and classify sentiment polarity in a single pass, producing structured JSON output. Evaluation on 609 validation examples demonstrates that Qwen~2.5-7B achieves the highest aspect term extraction F1 score of 0.6603 with a perfect 100\% JSON parse rate, while Llama~3.1-8B leads in end-to-end pair F1 (0.5805) and sentiment accuracy (0.8864). Importantly, training loss does not reliably predict downstream task performance: Qwen surpasses Llama in extraction despite a 31\% higher validation loss. Based on these findings, a three-layer model-assisted annotation pipeline is proposed, integrating local inference, LLM-as-Judge quality scoring, and quality-tiered assembly. Application of this pipeline to 5,038 multi-domain Uzbek business reviews across 23 categories produces a novel silver-standard dataset containing 9,884 aspect–sentiment pairs, with 63.5\% of judged annotations meeting inclusion quality thresholds.}
 
 % Keywords
 \keyword{Aspect-Based Sentiment Analysis; Low-Resource NLP; Uzbek Language; Parameter-Efficient Fine-Tuning; QLoRA; Large Language Models; Multi-Domain Dataset} 
@@ -179,7 +179,7 @@ $^{3}$ \quad Faculty of Mathematics, Natural Science and Information Technologie
 
 \section{Introduction}
 \label{sec:introduction}
-Aspect-Based Sentiment Analysis (ABSA) identifies specific aspects and their polarities in text \cite{pontiki-etal-2014-semeval}. While high-resource languages dominate the field, Uzbek—a Turkic language with almost 38 million speakers\footnote{https://www.worldometers.info/world-population/uzbekistan-population/} which remains less explored due to script duality (Latin/Cyrillic), agglutinative morphology, and limited representation in multilingual pre-training. Recent 7-8B parameter LLMs like Qwen 2.5 \cite{Qwen2024-kr}, Llama 3.1 \cite{Grattafiori2024-ka}, and DeepSeek-R1 \cite{DeepSeek-AI2026-vt} offer cross-lingual potential. Using QLoRA \cite{10.5555/3666122.3666563}, we adapt these models on consumer hardware by reformulating ABSA as a single-pass JSON generation task.
+Aspect-Based Sentiment Analysis (ABSA) identifies specific aspects and their polarities in text \cite{pontiki-etal-2014-semeval}. While high-resource languages dominate the field, Uzbek---a Turkic language with almost 38 million speakers\footnote{\url{https://www.worldometers.info/world-population/uzbekistan-population/}}---remains comparatively under-explored, owing to script duality (Latin/Cyrillic), agglutinative morphology, and limited representation in multilingual pre-training corpora. Recent 7--8B-parameter LLMs such as Qwen~2.5~\cite{Qwen2024-kr}, Llama~3.1~\cite{Grattafiori2024-ka}, and DeepSeek-R1~\cite{DeepSeek-AI2026-vt} offer cross-lingual transfer potential. Using QLoRA~\cite{10.5555/3666122.3666563}, we adapt these models on consumer hardware by reformulating ABSA as a single-pass JSON generation task.
 
 \begin{description}
 \item[\textbf{RQ1.}] To what extent can parameter-efficient fine-tuning (QLoRA) of open-source LLMs achieve effective joint aspect extraction and sentiment classification for Uzbek text?
@@ -196,7 +196,7 @@ Aspect-Based Sentiment Analysis (ABSA) identifies specific aspects and their pol
 
 \item \textbf{A scalable model-assisted annotation pipeline} combining local inference, LLM-as-Judge quality scoring via GPT-4o-mini, and quality-tiered dataset assembly---a practical and reproducible methodology for creating ABSA resources in low-resource settings.
 
-\item \textbf{A novel multi-domain silver-standard Uzbek ABSA dataset} covering 5{,}038 reviews across 23~business categories with 9{,}884 annotated aspect--sentiment pairs and per-annotation quality metadata.
+\item \textbf{A novel multi-domain silver-standard Uzbek ABSA dataset} covering 5{,}038 reviews across 23~business categories with 9{,}884 annotated aspect--sentiment pairs and per-annotation quality metadata, together with a domain-specific aspect sub-category taxonomy of 119 fine-grained sub-categories across 18 business domains (e.g., \textit{kredit}, \textit{foiz\_stavka} for banking; \textit{shifokor\_malakasi}, \textit{diagnostika} for healthcare) designed to extend the flat 5-label restaurant taxonomy to specialised domains.
 
 \item \textbf{Empirical evidence} that training cross-entropy loss does not reliably predict ABSA task performance: the model with the lowest validation loss (Llama~3.1-8B) is outperformed on aspect extraction by Qwen~2.5-7B, which exhibits 31\% higher loss---a finding with methodological implications for model selection in structured output tasks.
 \end{enumerate}
@@ -222,11 +222,12 @@ Prior work reports strong results for parameter-efficient adaptation on several 
 
 \textbf{Uzbek Natural Language Processing}. Early work addressed core infrastructure: Aripov et al. \cite{10.1007/978-3-031-05328-3_6} studied multilingual MT with Uzbek, highlighting challenges from agglutinative morphology, while \cite{sharipov-et-all,sharipov2023uzbektagger} introduced UzbekTagger, a rule-based POS tagger and one of the few public morphological tools. Script variation is another persistent obstacle: after the 1993 shift from Cyrillic to Latin, much user text still appears in Cyrillic; Salaev et al.\cite{Salaev2024} proposed a transliteration tool to normalize across scripts.
 
-For sentiment analysis, Kuriyozov and Matlatipov~\cite{kuriyozov2019building} created an early sentence-level Uzbek dataset with baseline classifiers, later extended by \cite{kuriyozov2022construction} through a broader study of low-resource sentiment dataset construction and benchmarking. Matlatipov et al.\cite{Matlatipov2009,uzbekendingssanat} further examined restaurant-domain sentiment classification on locally collected reviews. The closest resource to our study is UzABSA~\cite{matlatipov2024uzabsa}, the first Uzbek ABSA dataset, following the SemEval-2014 Task~4 scheme~\cite{pontiki-etal-2014-semeval,annoation}, with 6{,}175 annotated restaurant sentences, 7{,}412 aspect-term spans with polarity, and 7{,}724 aspect-category labels over five categories (\textit{ovqat}, \textit{muhit}, \textit{xizmat}, \textit{narx}, \textit{boshqalar}).
+For sentiment analysis, Kuriyozov and Matlatipov~\cite{kuriyozov2019building} created an early sentence-level Uzbek dataset with baseline classifiers, later extended by \cite{kuriyozov2022construction} through a broader study of low-resource sentiment dataset construction and benchmarking. Matlatipov et al.\cite{Matlatipov2009,uzbekendingssanat} further examined restaurant-domain sentiment classification on locally collected reviews. The closest resource to our study is UzABSA~\cite{matlatipov2024uzabsa}, the first Uzbek ABSA dataset, following the SemEval-2014 Task~4 scheme~\cite{pontiki-etal-2014-semeval}, with 6{,}175 annotated restaurant sentences, 7{,}412 aspect-term spans with polarity, and 7{,}724 aspect-category labels over five categories (\textit{ovqat}, \textit{muhit}, \textit{xizmat}, \textit{narx}, \textit{boshqalar}).
 
-Overall, prior Uzbek NLP,including UzABSA\cite{matlatipov2024uzabsa}, has mainly used rule-based, traditional ML, or encoder-based neural models; to our knowledge, no published work has fine-tuned LLMs (full or parameter-efficient) for Uzbek. We address this gap by applying instruction-tuned LLMs with QLoRA-based adaptation to Uzbek NLP.% ----------------------------------------------------------------------
+Overall, prior Uzbek NLP work, including UzABSA~\cite{matlatipov2024uzabsa}, has mainly relied on rule-based methods, traditional machine learning, or encoder-based neural models; to the best of our knowledge, no published work has fine-tuned LLMs (full or parameter-efficient) for Uzbek ABSA, a gap directly addressed by the present study.% ----------------------------------------------------------------------
 
-\textbf{LLM-as-Judge for Annotation Quality}. LLM-as-Judge uses large language models as automated evaluators, providing a scalable alternative to human assessment of generated text. Zheng et al.\cite{10.5555/3666122.3668142} introduced MT-Bench and Chatbot Arena, showing that strong LLMs (e.g., GPT-4) can yield scores that correlate with human preferences in open-ended dialogue. This approach has since been applied to instruction-following, summarization, and translation, offering cost efficiency, reproducibility, and scalability when human annotation, especially for low-resource languages which is expensive or impractical. However, LLM judges may suffer from positional bias, self-enhancement bias, and session-to-session score drift\cite{2506.22316}. While these issues are documented for chat-style evaluation, they are less studied for structured tasks such as information extraction or ABSA.
+\phantomsection\label{sec:rw_judge}
+\textbf{LLM-as-Judge for Annotation Quality}. LLM-as-Judge uses large language models as automated evaluators, providing a scalable alternative to human assessment of generated text. Zheng et al.\cite{10.5555/3666122.3668142} introduced MT-Bench and Chatbot Arena, showing that strong LLMs (e.g., GPT-4) can yield scores that correlate with human preferences in open-ended dialogue. This approach has since been extended to instruction-following, summarisation, and translation, offering cost efficiency, reproducibility, and scalability when human annotation is expensive or impractical---particularly for low-resource languages. However, LLM judges may suffer from positional bias, self-enhancement bias, and session-to-session score drift~\cite{2506.22316}. While these issues are documented for chat-style evaluation, they are less studied for structured tasks such as information extraction or ABSA.
 
 We use LLM-as-Judge for a different goal: assessing structured ABSA annotations produced by a fine-tuned model in a low-resource setting without gold references. Concretely, GPT-4o-mini scores Uzbek aspect--sentiment outputs on five rubric dimensions (completeness, accuracy, sentiment correctness, relevance, overall quality) using a 1--5 Likert scale. Unlike prior work, our target is structured extraction rather than free-form text, and the judge must understand Uzbek input; we then apply stratified sampling over 23 domains and quality thresholds to guide dataset assembly (\Cref{sec:meth_pipeline}).
 
@@ -237,7 +238,7 @@ We use LLM-as-Judge for a different goal: assessing structured ABSA annotations 
 
 \section{Datasets}
 \label{sec:datasets}
-This study draws on two complementary corpora. The first is the UzABSA dataset~\cite{matlatipov2024uzabsa}, a publicly available collection of 6{,}175 annotated Uzbek restaurant review sentences hosted on HuggingFace.\footnote{\url{https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek}} After preprocessing and converting the original 6{,}175 examples into ChatML instruction which response instances, we retain 6{,}089 usable training instances, which we split 90/10 into 5{,}480 training and 609 validation examples (seed=42). Each sentence is annotated following the SemEval-2014 Task~4 scheme~\cite{pontiki-etal-2014-semeval}: aspect terms are marked with character-level spans and assigned one of four polarity labels (\textit{positive}, \textit{negative}, \textit{neutral}, \textit{conflict}), and aspect categories are independently labeled with polarity. The dataset contains 7{,}412 aspect term annotations and 7{,}724 aspect category annotations distributed across five domain-specific categories: \textit{ovqat} (food), \textit{muhit} (ambiance), \textit{xizmat} (service), \textit{narx} (price), and \textit{boshqalar} (other). On average, each sentence contains 2.53 aspect annotations and 6.42 words.
+This study draws on two complementary corpora. The first is the UzABSA dataset~\cite{matlatipov2024uzabsa}, a publicly available collection of 6{,}175 annotated Uzbek restaurant review sentences hosted on HuggingFace.\footnote{\url{https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek}} After preprocessing and converting the original 6{,}175 examples into ChatML-formatted instruction--response pairs, we retain 6{,}089 usable training instances, which we split 90/10 into 5{,}480 training and 609 validation examples (seed=42). Each sentence is annotated following the SemEval-2014 Task~4 scheme~\cite{pontiki-etal-2014-semeval}: aspect terms are marked with character-level spans and assigned one of four polarity labels (\textit{positive}, \textit{negative}, \textit{neutral}, \textit{conflict}), and aspect categories are independently labeled with polarity. The dataset contains 7{,}412 aspect term annotations and 7{,}724 aspect category annotations distributed across five domain-specific categories: \textit{ovqat} (food), \textit{muhit} (ambiance), \textit{xizmat} (service), \textit{narx} (price), and \textit{boshqalar} (other). On average, each sentence contains 2.53 aspect annotations and 6.42 words.
 
 A notable characteristic of the dataset is class imbalance: positive polarity accounts for 56\% of term-level annotations (4{,}153 of 7{,}412), followed by neutral (21.6\%), negative (21.0\%), and conflict (1.4\%). This skew toward positive sentiment reflects the natural distribution of restaurant reviews but may bias model predictions toward the majority class. We report per-class metrics alongside micro-averaged scores to quantify this effect (\Cref{sec:results}).  \Cref{tab:dataset_stats} summarizes the key statistics.
 \begin{table}[t]
@@ -265,7 +266,7 @@ Avg.\ words per sentence & 6.42 & & \\
 
 The second corpus is a novel collection of business reviews scraped from Sharh,\footnote{\url{https://sharh.commeta.uz/en}} a publicly accessible Uzbek-language business review platform. After deduplication and minimum-length filtering (removing entries with fewer than five words), the corpus comprises 5{,}038 reviews spanning 630~unique businesses across 23~business domains. This corpus is not used for training; it serves exclusively as the annotation target for the model-assisted pipeline described in \Cref{sec:meth_pipeline}.
 
-Data collection and usage were conducted with explicit permission from the data owner, as noted in \Cref{sec:acknowledgement}. The annotated corpus derived from these reviews is publicly released on Zenodo to facilitate further research on low-resource ABSA.\footnote{\url{https://doi.org/10.5281/zenodo.18790639}}
+Data collection and usage were conducted with explicit permission from the data owner, as noted in \Cref{sec:acknowledgement}. The annotated corpus derived from these reviews is publicly released on Zenodo to facilitate further research on low-resource ABSA.\footnote{\url{https://doi.org/10.5281/zenodo.18790639}} To support future domain-adaptive annotation work, we also release a domain-specific aspect sub-category taxonomy comprising 119 fine-grained sub-categories across 18 of the 23 business domains (e.g., \textit{kredit}, \textit{foiz\_stavka}, \textit{karta\_xizmati} for banking; \textit{shifokor\_malakasi}, \textit{diagnostika} for healthcare), available alongside the dataset on GitHub.
 
 The domain distribution is highly skewed: \textit{Restoran/Ovqatlanish} (restaurants and food service) is the largest domain with 1{,}626 reviews (32.3\%), followed by \textit{Bank/Moliya} (banking and finance) with 577 reviews (11.5\%). The ten most frequent domains together account for approximately 89.9\% of the corpus; \Cref{tab:domain_dist} lists their counts and proportions.
 
@@ -505,7 +506,7 @@ Completeness & 3.32 & Main opinions captured; some missed \\
 
 Quality-tier assignment using the overall score yields 63.5\% \emph{Include} ($\geq$3.5; $n$=195), 28.0\% \emph{Flag} (2.5--3.49; $n$=86), and 8.5\% \emph{Exclude} ($<$2.5; $n$=26). The high accuracy score (4.47) confirms that the model rarely hallucinates aspects; the lower completeness score (3.32) reflects a tendency to miss subsidiary or domain-specific opinions.
 
-\textbf{Domain-Level Quality Gradient.} \Cref{tab:domain_quality} presents per-domain overall scores for selected domains spanning the quality spectrum. A clear gradient emerges from in-domain to out-of-domain categories: the model trained exclusively on restaurant reviews achieves its highest quality on \emph{Restoran} (4.24) and near-domain categories sharing overlapping aspect vocabularies (e.g., \emph{Sayohat/Turizm}, 4.40), while performance degrades on domains with specialised terminology such as \emph{Telekommunikatsiya} (3.32) and \emph{Ta'lim} (3.25). The most distant domains---\emph{Sug'urta} (insurance) and \emph{Investitsiya} (investment)---drop to~2.67, driven by completeness failures rather than accuracy: the accuracy sub-score remains $\geq$3.67 across all 23~domains. Overall, 15 of 23 domains (65\%) meet the inclusion threshold ($\geq$3.5).
+\textbf{Domain-Level Quality Gradient.} \Cref{tab:domain_quality} presents per-domain overall scores for representative domains spanning the quality spectrum; complete scores for all 23 domains are provided in \Cref{tab:domain_quality_full} (\Cref{sec:appendix_domains}). A clear gradient emerges from in-domain to out-of-domain categories: the model trained exclusively on restaurant reviews achieves its highest quality on \emph{Restoran} (4.24) and near-domain categories sharing overlapping aspect vocabularies (e.g., \emph{Sayohat/Turizm}, 4.40), while performance degrades on domains with specialised terminology such as \emph{Telekommunikatsiya} (3.32) and \emph{Ta'lim} (3.25). The most distant domains---\emph{Sug'urta} (insurance) and \emph{Investitsiya} (investment)---drop to~2.67, driven by completeness failures rather than accuracy: the accuracy sub-score remains $\geq$3.67 across all 23~domains. Overall, 15 of 23 domains (65\%) meet the inclusion threshold ($\geq$3.5).
 
 \begin{table}[t]
 \centering
@@ -543,7 +544,7 @@ In-domain    & Restoran       & 50 & 3.68 & 4.76 & 4.56 & 4.66 & 4.24 \\
 \label{sec:discussion}
 
 % ----------------------------------------------------------------------
-\textbf{The Completeness Bottleneck}. Completeness (mean 3.32/5) is the weakest quality dimension: the model reliably extracts aspects present in the text but often misses domain-specific or subtle opinions, especially outside the restaurant domain. This is primarily due to the training data's narrow coverage—only five aspect categories—forcing the model to map unfamiliar aspects to the generic "boshqalar" (miscellaneous) label, which dominates at 45.5\%. Addressing this bottleneck will require domain-adaptive fine-tuning or expanding the aspect taxonomy to better capture out-of-domain phenomena.
+\textbf{The Completeness Bottleneck}. Completeness (mean 3.32/5) is the weakest quality dimension: the model reliably extracts aspects present in the text but often misses domain-specific or subtle opinions, especially outside the restaurant domain. This is primarily due to the training data's narrow coverage---only five aspect categories---forcing the model to map unfamiliar aspects to the generic \textit{boshqalar} (miscellaneous) label, which dominates at 45.5\%. Addressing this bottleneck will require domain-adaptive fine-tuning or expanding the aspect taxonomy to better capture out-of-domain phenomena.
 
 % ----------------------------------------------------------------------
 \textbf{Architecture vs.\ Pre-Training Effects}. DeepSeek's R1 reasoning distillation does not benefit structured ABSA: despite sharing the Qwen-7B backbone, it underperforms both Qwen and Llama, likely due to reasoning-oriented output patterns conflicting with strict JSON formatting. Llama achieves the lowest loss and best sentiment accuracy, but Qwen is superior for reliable extraction and instruction following (100\% parse rate, highest ATE recall). For annotation pipelines, robust JSON compliance and extraction coverage are more critical than marginal gains in sentiment metrics.
@@ -599,7 +600,9 @@ read and agreed to the published version of the manuscript.}
 
 \funding{This research received no external funding}
 
-\institutionalreview{Not applicable}
+\institutionalreview{Not applicable.}
+
+\informedconsent{Not applicable. The study did not involve human or animal subjects; the analysed reviews are publicly available user-generated content collected with the explicit permission of the platform owner (see \Cref{sec:acknowledgement}).}
 
 \dataavailability{The primary Uzbek aspect-based sentiment analysis dataset used for model fine-tuning is publicly available on Hugging Face at \url{https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek}. The multi-domain Uzbek business review corpus generated in this study is publicly available on Zenodo at \url{https://zenodo.org/records/18790639} with DOI: \href{https://doi.org/10.5281/zenodo.18790639}{10.5281/zenodo.18790639}. The fine-tuned model checkpoints and related resources are available on Hugging Face at \url{https://huggingface.co/Sanatbek/UzABSA-LLM}, and the implementation code is available at \url{https://github.com/SanatbekMatlatipov/UzABSA-LLM}.}
 
@@ -642,29 +645,52 @@ RQ & Research Question
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Optional
-\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixtitles{yes}
 \appendixstart
 \appendix
-\section[\appendixname~\thesection]{}
-\subsection[\appendixname~\thesubsection]{}
-The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+\section[\appendixname~\thesection]{Full Per-Domain LLM-as-Judge Quality Scores}
+\label{sec:appendix_domains}
 
-\begin{table}[H] 
-\caption{This is a table caption.\label{tab5}}
-%\newcolumntype{C}{>{\centering\arraybackslash}X}
-\begin{tabularx}{\textwidth}{CCC}
+\Cref{tab:domain_quality_full} reports LLM-as-Judge quality scores for all 23 business domains in the stratified evaluation sample (307 reviews total). The main text (\Cref{tab:domain_quality}) presents a selected subset grouped by training-distribution proximity; this table provides the complete picture, sorted by overall quality score in descending order. Scores are on a 1--5 Likert scale across five dimensions: Completeness, Accuracy (hallucination control), Sentiment Correctness, Relevance (category--domain fit), and Overall. Domains with $N \leq 5$ should be interpreted with caution due to small sample sizes. The ``Include'' threshold (Overall $\geq 3.5$) is shown as a dashed reference.
+
+\begin{table}[H]
+\centering
+\caption{LLM-as-Judge (GPT-4o-mini) quality scores for all 23 business domains, sorted by Overall score (descending). Stratified evaluation sample: 307 reviews. Scale: 1--5 (higher is better). $\dagger$~Small sample ($N \leq 5$): interpret with caution.\label{tab:domain_quality_full}}
+\setlength{\tabcolsep}{3.5pt}
+\small
+\begin{tabular}{llccccc}
 \toprule
-\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+\textbf{Domain (Uzbek / English)} & $N$ & \textbf{Comp.} & \textbf{Acc.} & \textbf{Sent.} & \textbf{Rel.} & \textbf{Overall} \\
 \midrule
-Entry 1		& Data			& Data\\
-Entry 2		& Data			& Data\\
+Bozor/BSC (Market/Shopping centre)$^\dagger$ & 3  & 3.67 & 5.00 & 5.00 & 5.00 & 4.67 \\
+Sayohat/Turizm (Tourism/Travel)$^\dagger$   & 5  & 4.00 & 4.80 & 4.60 & 4.40 & 4.40 \\
+Din/Madaniyat (Religion/Culture)$^\dagger$   & 3  & 4.33 & 5.00 & 4.00 & 5.00 & 4.33 \\
+Yetkazib berish (Delivery)$^\dagger$          & 3  & 3.67 & 5.00 & 4.67 & 4.33 & 4.33 \\
+Restoran/Ovqatlanish (Restaurant/Dining)      & 50 & 3.68 & 4.76 & 4.56 & 4.66 & 4.24 \\
+Go'zallik (Beauty services)$^\dagger$         & 3  & 3.33 & 4.67 & 5.00 & 4.00 & 4.00 \\
+Texnologiya/Media (Technology/Media)          & 8  & 2.88 & 4.50 & 5.00 & 3.88 & 3.88 \\
+Boshqa (Other/Miscellaneous)                  & 37 & 3.43 & 4.54 & 3.89 & 4.38 & 3.81 \\
+Elektron tijorat (E-commerce)                 & 21 & 3.43 & 4.48 & 4.10 & 4.14 & 3.81 \\
+Oziq-ovqat do'konlari (Grocery stores)        & 15 & 3.47 & 4.33 & 4.47 & 4.13 & 3.80 \\
+Tibbiyot/Sog'liqni saqlash (Healthcare)       & 25 & 3.40 & 4.60 & 4.20 & 4.36 & 3.80 \\
+Bank/Moliya (Banking/Finance)                 & 30 & 3.40 & 4.47 & 4.17 & 3.90 & 3.70 \\
+Ko'ngilochar (Entertainment)$^\dagger$        & 3  & 3.33 & 4.67 & 4.33 & 4.00 & 3.67 \\
+Transport/Yo'l (Transport/Roads)$^\dagger$    & 3  & 3.33 & 4.00 & 4.00 & 4.00 & 3.67 \\
+Gul/Sovg'a (Flowers/Gifts)                    & 12 & 3.08 & 4.08 & 4.83 & 3.67 & 3.58 \\
+To'lov tizimlari (Payment systems)            & 24 & 3.00 & 4.29 & 4.38 & 3.54 & 3.54 \\
+\midrule
+\multicolumn{7}{l}{\textit{Below inclusion threshold (Overall $< 3.5$)}} \\
+\midrule
+Davlat xizmatlari (Government services)$^\dagger$ & 3 & 3.00 & 4.00 & 4.33 & 3.67 & 3.33 \\
+Telekommunikatsiya (Telecommunications)       & 25 & 3.04 & 4.36 & 3.64 & 3.64 & 3.32 \\
+Ta'lim (Education)                            & 20 & 2.90 & 4.20 & 3.80 & 3.45 & 3.25 \\
+Sport/Fitnes (Gyms/Fitness)$^\dagger$          & 4  & 2.75 & 4.25 & 4.25 & 3.00 & 3.25 \\
+Kitob/Nashriyot (Books/Publishing)$^\dagger$  & 4  & 3.00 & 4.25 & 4.00 & 3.00 & 3.00 \\
+Sug'urta (Insurance)$^\dagger$                & 3  & 2.33 & 3.67 & 2.67 & 3.33 & 2.67 \\
+Investitsiya/Trading (Investment)$^\dagger$   & 3  & 2.33 & 4.00 & 3.67 & 3.00 & 2.67 \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{table}
-
-\section[\appendixname~\thesection]{}
-All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\isPreprints{}{% This command is only used for ``preprints''.
