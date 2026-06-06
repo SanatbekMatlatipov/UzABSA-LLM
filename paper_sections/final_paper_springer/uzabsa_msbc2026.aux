@@ -1,0 +1,159 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Hua2024,ZohrehMadhoushi2019}
+\citation{pontiki-etal-2014-semeval}
+\citation{Hua2024}
+\citation{devlin-etal-2019-bert,blasi-etal-2022-systematic}
+\citation{kuriyozov-etal-2024-bertbek,Mamasaidov2023TahrirchiBERT}
+\citation{matlatipov2024uzabsa}
+\@writefile{toc}{\contentsline {title}{Large Language Models for Aspect-Based Sentiment Analysis of Uzbek Service Sector Reviews}{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\authcount {2}}
+\@writefile{toc}{\contentsline {author}{Mersaid Aripov \and Sanatbek Matlatipov}{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{Qwen2024-kr}
+\citation{Grattafiori2024-ka}
+\citation{DeepSeek-AI2026-vt}
+\citation{scaria-etal-2024-instructabsa,10.1145/3777411}
+\citation{10.5555/3666122.3666563}
+\citation{10.5555/3666122.3668142,2506.22316}
+\citation{pontiki-etal-2014-semeval}
+\citation{ma-etal-2019-exploring}
+\citation{10.1145/3721844}
+\citation{hu-etal-2021-multi-label}
+\citation{electronics12030515}
+\citation{Hua2024,ZohrehMadhoushi2019}
+\citation{scaria-etal-2024-instructabsa}
+\citation{kuriyozov2019building,matlatipov2022uzbek,uzbekendingssanat,sharipov2023uzbektagger,annoation}
+\citation{kuriyozov2022construction}
+\citation{kuriyozov2022a}
+\citation{Salaev2024}
+\citation{kuriyozov-etal-2024-bertbek}
+\citation{Mamasaidov2023TahrirchiBERT}
+\citation{matlatipov2024uzabsa}
+\citation{10.5555/3666122.3666563}
+\citation{10.1145/3777411}
+\citation{10.5555/3666122.3668142}
+\citation{2506.22316}
+\citation{Hua2024}
+\citation{matlatipov2024uzabsa}
+\citation{matlatipov2024uzabsa}
+\citation{matlatipov2024uzabsa}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{3}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{ABSA: from sequence labelling to instruction tuning.}{3}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Uzbek NLP and Uzbek ABSA.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{QLoRA, LLM-as-Judge, and service-review data.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Data: A Social-Behavioural Corpus of Uzbek Service Reviews}{3}{section.3}\protected@file@percent }
+\newlabel{sec:data}{{3}{3}{Data: A Social-Behavioural Corpus of Uzbek Service Reviews}{section.3}{}}
+\citation{matlatipov2024uzabsa}
+\citation{scaria-etal-2024-instructabsa}
+\citation{Qwen2024-kr}
+\@writefile{toc}{\contentsline {paragraph}{UzABSA (annotated).}{4}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multi-domain raw corpus.}{4}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Domain-aware aspect taxonomy.}{4}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Ethics and licensing.}{4}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Method}{4}{section.4}\protected@file@percent }
+\newlabel{sec:method}{{4}{4}{Method}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}ABSA as instruction-tuned generation}{4}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:method:formulation}{{4.1}{4}{ABSA as instruction-tuned generation}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}QLoRA fine-tuning configuration}{4}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:method:qlora}{{4.2}{4}{QLoRA fine-tuning configuration}{subsection.4.2}{}}
+\citation{Qwen2024-kr}
+\citation{Grattafiori2024-ka}
+\citation{DeepSeek-AI2026-vt}
+\citation{10.5555/3666122.3668142}
+\newlabel{lst:prompt}{{1.1}{5}{Production prompt (abridged) and target output. The system message is in Uzbek; the assistant message is a strict JSON object}{lstlisting.1.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1.1}Production prompt (abridged) and target output. The system message is in Uzbek; the assistant message is a strict JSON object.}{5}{lstlisting.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Three base models}{5}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:method:models}{{4.3}{5}{Three base models}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Three-layer model-assisted annotation pipeline}{5}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:method:pipeline}{{4.4}{5}{Three-layer model-assisted annotation pipeline}{subsection.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces End-to-end UzABSA-LLM pipeline. Three LLMs are QLoRA-fine-tuned on UzABSA; the best (Qwen-2.5-7B) is re-deployed as an annotator for the multi-domain raw corpus, gated by an LLM-as-Judge layer and calibrated by a 50-review human verification step.}}{6}{figure.1}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{6}{End-to-end UzABSA-LLM pipeline. Three LLMs are QLoRA-fine-tuned on UzABSA; the best (Qwen-2.5-7B) is re-deployed as an annotator for the multi-domain raw corpus, gated by an LLM-as-Judge layer and calibrated by a 50-review human verification step}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Setup}{6}{section.5}\protected@file@percent }
+\newlabel{sec:setup}{{5}{6}{Experimental Setup}{section.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Hardware and software.}{6}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Metrics.}{6}{section*.10}\protected@file@percent }
+\citation{blasi-etal-2022-systematic}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Weights\,\&\,Biases dashboard for the three QLoRA fine-tuning runs. Each model is trained for 1{,}000 steps under an identical configuration; only the base model differs. The dashboard tracks training loss, evaluation loss, learning-rate schedule, gradient norm and GPU memory in real time, supporting the controlled comparison reported in Section~\ref {sec:results:finetuned}.}}{7}{figure.2}\protected@file@percent }
+\newlabel{fig:wandb}{{2}{7}{Weights\,\&\,Biases dashboard for the three QLoRA fine-tuning runs. Each model is trained for 1{,}000 steps under an identical configuration; only the base model differs. The dashboard tracks training loss, evaluation loss, learning-rate schedule, gradient norm and GPU memory in real time, supporting the controlled comparison reported in Section~\ref {sec:results:finetuned}}{figure.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Baselines.}{7}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Judge configuration.}{7}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{7}{section.6}\protected@file@percent }
+\newlabel{sec:results}{{6}{7}{Results}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tokenizer fertility on Uzbek}{7}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:results:fertility}{{6.1}{7}{Tokenizer fertility on Uzbek}{subsection.6.1}{}}
+\citation{10.1145/3777411}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Zero-/few-shot baselines vs. fine-tuned}{8}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:results:baselines}{{6.2}{8}{Zero-/few-shot baselines vs. fine-tuned}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Fine-tuned model comparison}{8}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:results:finetuned}{{6.3}{8}{Fine-tuned model comparison}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Loss-versus-task dissociation.}{8}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{TASD on the aligned subset.}{8}{section*.14}\protected@file@percent }
+\citation{10.5555/3666122.3668142}
+\citation{electronics12030515}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Multi-domain LLM-as-Judge quality matrix}{9}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:results:judge}{{6.4}{9}{Multi-domain LLM-as-Judge quality matrix}{subsection.6.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Human verification (Layer 3)}{9}{subsection.6.5}\protected@file@percent }
+\newlabel{sec:results:human}{{6.5}{9}{Human verification (Layer 3)}{subsection.6.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion: A Social-Behavioural Reading}{9}{section.7}\protected@file@percent }
+\newlabel{sec:discussion}{{7}{9}{Discussion: A Social-Behavioural Reading}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{What the silver corpus says about Uzbek service experience.}{9}{section*.15}\protected@file@percent }
+\citation{2506.22316}
+\citation{blasi-etal-2022-systematic,uzbekendingssanat}
+\@writefile{toc}{\contentsline {paragraph}{Loss does not equal social signal, and completeness is the bottleneck.}{10}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{10}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion and Future Work}{10}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{8}{10}{Conclusion and Future Work}{section.8}{}}
+\bibstyle{splncs04}
+\bibdata{mybibliography}
+\bibcite{annoation}{1}
+\bibcite{blasi-etal-2022-systematic}{2}
+\bibcite{electronics12030515}{3}
+\bibcite{DeepSeek-AI2026-vt}{4}
+\bibcite{10.5555/3666122.3666563}{5}
+\bibcite{devlin-etal-2019-bert}{6}
+\bibcite{Grattafiori2024-ka}{7}
+\bibcite{hu-etal-2021-multi-label}{8}
+\bibcite{Hua2024}{9}
+\@writefile{toc}{\contentsline {subsubsection}{Acknowledgments.}{11}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Disclosure of Interests.}{11}{section*.19}\protected@file@percent }
+\bibcite{kuriyozov2019building}{10}
+\bibcite{kuriyozov2022construction}{11}
+\bibcite{kuriyozov-etal-2024-bertbek}{12}
+\bibcite{2506.22316}{13}
+\bibcite{ma-etal-2019-exploring}{14}
+\bibcite{Mamasaidov2023TahrirchiBERT}{15}
+\bibcite{matlatipov2022uzbek}{16}
+\bibcite{uzbekendingssanat}{17}
+\bibcite{matlatipov2024uzabsa}{18}
+\bibcite{pontiki-etal-2014-semeval}{19}
+\bibcite{Qwen2024-kr}{20}
+\bibcite{Salaev2024}{21}
+\bibcite{kuriyozov2022a}{22}
+\bibcite{scaria-etal-2024-instructabsa}{23}
+\bibcite{sharipov2023uzbektagger}{24}
+\bibcite{10.1145/3721844}{25}
+\bibcite{10.1145/3777411}{26}
+\bibcite{10.5555/3666122.3668142}{27}
+\bibcite{ZohrehMadhoushi2019}{28}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Corpus statistics. The annotated split follows SemEval-2014 Task~4 format; the raw multi-domain corpus is used both for tokenizer profiling and as the substrate for the model-assisted annotation pipeline of Section~\ref {sec:method}.}}{14}{table.1}\protected@file@percent }
+\newlabel{tab:corpus}{{1}{14}{Corpus statistics. The annotated split follows SemEval-2014 Task~4 format; the raw multi-domain corpus is used both for tokenizer profiling and as the substrate for the model-assisted annotation pipeline of Section~\ref {sec:method}}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Top business domains in the multi-domain corpus (5{,}038 reviews $\to $ 23 domains). Domains explicitly named in the conference framing -- banking, retail, HoReCa -- are well represented.}}{15}{table.2}\protected@file@percent }
+\newlabel{tab:domains}{{2}{15}{Top business domains in the multi-domain corpus (5{,}038 reviews $\to $ 23 domains). Domains explicitly named in the conference framing -- banking, retail, HoReCa -- are well represented}{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Tokenizer fertility (tokens per whitespace-separated word) on Uzbek text, computed on the UzABSA annotated set and on the 5{,}038-review multi-domain corpus, broken down by dominant script. Lower is better. Qwen-family tokenisers are markedly more compact on Uzbek-Latin than the Llama tokeniser, especially in the Cyrillic buckets.}}{15}{table.3}\protected@file@percent }
+\newlabel{tab:fertility}{{3}{15}{Tokenizer fertility (tokens per whitespace-separated word) on Uzbek text, computed on the UzABSA annotated set and on the 5{,}038-review multi-domain corpus, broken down by dominant script. Lower is better. Qwen-family tokenisers are markedly more compact on Uzbek-Latin than the Llama tokeniser, especially in the Cyrillic buckets}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Zero-shot, 3-shot and fine-tuned ABSA performance on the 618-sentence held-out test split. ATE-F1 is exact-match; E2E-F1 is the joint aspect--polarity pair F1; ``\%JSON'' is the JSON parse success rate. Best per column in \textbf  {bold}.}}{15}{table.4}\protected@file@percent }
+\newlabel{tab:baselines}{{4}{15}{Zero-shot, 3-shot and fine-tuned ABSA performance on the 618-sentence held-out test split. ATE-F1 is exact-match; E2E-F1 is the joint aspect--polarity pair F1; ``\%JSON'' is the JSON parse success rate. Best per column in \textbf {bold}}{table.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Fine-tuned three-model ABSA comparison on the 618-sentence test split, with matched QLoRA training-efficiency figures. ``Pair F1'' is E2E aspect--polarity F1 (primary metric); ``Acc.''/``Mac-F1'' are sentiment-classification metrics on matched pairs; ``Loss'' is the best evaluation cross-entropy; ``Min'' is wall-clock training time.}}{15}{table.5}\protected@file@percent }
+\newlabel{tab:finetune}{{5}{15}{Fine-tuned three-model ABSA comparison on the 618-sentence test split, with matched QLoRA training-efficiency figures. ``Pair F1'' is E2E aspect--polarity F1 (primary metric); ``Acc.''/``Mac-F1'' are sentiment-classification metrics on matched pairs; ``Loss'' is the best evaluation cross-entropy; ``Min'' is wall-clock training time}{table.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces LLM-as-Judge aggregate scores (1--5 scale; 307 stratified reviews; GPT-4o-mini). Accuracy is high across the board; the bottleneck is \emph  {Completeness}, i.e.\ aspects that exist in the text but are missed by the model.}}{16}{table.6}\protected@file@percent }
+\newlabel{tab:judge-agg}{{6}{16}{LLM-as-Judge aggregate scores (1--5 scale; 307 stratified reviews; GPT-4o-mini). Accuracy is high across the board; the bottleneck is \emph {Completeness}, i.e.\ aspects that exist in the text but are missed by the model}{table.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Per-domain LLM-as-Judge Overall scores for the three sectors foregrounded by this paper, plus selected near-domain and out-of-domain comparisons. ``N'' is the per-domain sample size used by the judge. Domains above the 3.5 inclusion threshold are shaded grey.}}{16}{table.7}\protected@file@percent }
+\newlabel{tab:judge-domain}{{7}{16}{Per-domain LLM-as-Judge Overall scores for the three sectors foregrounded by this paper, plus selected near-domain and out-of-domain comparisons. ``N'' is the per-domain sample size used by the judge. Domains above the 3.5 inclusion threshold are shaded grey}{table.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Human verification on a 50-review subset, stratified across domains and judge tiers. Authors independently labelled each review as \textit  {correct} (aspects accurately reflect text) or \textit  {incorrect}. Spearman $\rho $ is computed between the judge Overall score and the binary human verdict on the same 50 reviews.}}{16}{table.8}\protected@file@percent }
+\newlabel{tab:human}{{8}{16}{Human verification on a 50-review subset, stratified across domains and judge tiers. Authors independently labelled each review as \textit {correct} (aspects accurately reflect text) or \textit {incorrect}. Spearman $\rho $ is computed between the judge Overall score and the binary human verdict on the same 50 reviews}{table.8}{}}
+\gdef \@abspage@last{16}
