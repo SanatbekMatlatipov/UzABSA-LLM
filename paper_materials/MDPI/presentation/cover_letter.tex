@@ -1,0 +1,73 @@
+%=================================================================
+% Cover Letter for submission to MDPI Computers
+% Manuscript: UzABSA-LLM: Parameter-Efficient Fine-Tuning and
+%             Multi-Domain Annotation for Uzbek Aspect-Based Sentiment Analysis
+%=================================================================
+\documentclass[11pt]{letter}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7em}
+
+\signature{%
+  Sanatbek Matlatipov\\
+  on behalf of all co-authors\\
+  Faculty of Applied Mathematics and Intelligent Technologies\\
+  National University of Uzbekistan named after Mirzo Ulugbek\\
+  Tashkent 100174, Uzbekistan\\
+  Email: s.matlatipov@nuu.uz}
+
+\address{%
+  Sanatbek Matlatipov (Corresponding Author)\\
+  Faculty of Applied Mathematics and Intelligent Technologies\\
+  National University of Uzbekistan named after Mirzo Ulugbek\\
+  Tashkent 100174, Uzbekistan}
+
+\begin{document}
+
+\begin{letter}{%
+  Dr.\ Ming Liu\\
+  Guest Editor, Special Issue\\
+  ``Natural Language Processing and Language Models''\\
+  \textit{Computers} (MDPI)\\
+  School of Information Technology, Deakin University\\
+  Geelong, VIC 3216, Australia}
+
+\opening{Dear Dr.\ Liu,}
+
+We are pleased to submit our manuscript entitled \textbf{``UzABSA-LLM: Parameter-Efficient Fine-Tuning and Multi-Domain Annotation for Uzbek Aspect-Based Sentiment Analysis''} for consideration as an original research article in \textit{Computers}.
+
+\textbf{Significance of the work.}
+Aspect-Based Sentiment Analysis (ABSA) is a well-established task for high-resource languages. However, Uzbek, a Turkic language spoken by over 38 million people worldwide, remains significantly under-explored as a result of its sparse representation in multilingual pre-training corpora, agglutinative morphology, and script duality (Latin/Cyrillic). The \emph{first systematic investigation} of parameter-efficient fine-tuning (QLoRA) of open-source large language models for Uzbek ABSA is presented in our study. The ABSA task is reformulated as a single-pass generative task with Uzbek-language instruction tuning. This allows models to extract aspect terms and classify sentiment polarity in tandem, while simultaneously generating structured JSON output that is directly applicable to downstream annotation pipelines.
+
+\textbf{Findings in the context of existing work.}
+Prior Uzbek NLP work, including the original UzABSA dataset, has relied almost exclusively on rule-based methods, traditional machine learning, or encoder-based neural models; to the best of our knowledge, no published work has fine-tuned large language models---full or parameter-efficient---for Uzbek ABSA. Building on the generative ABSA paradigm that has so far focused on English, we extend it to a low-resource, morphologically rich language and contribute the following:
+
+\begin{itemize}
+  \item A controlled comparison of three architectures (Qwen~2.5-7B, Llama~3.1-8B, and DeepSeek-R1-Distill-Qwen-7B) at the same parameter scale under identical QLoRA configurations, isolating architectural and pre-training effects.
+  \item Empirical evidence that training cross-entropy loss does \emph{not} reliably predict downstream ABSA performance: the model with the lowest validation loss is outperformed on aspect extraction by a model with 31\% higher loss---a result with practical implications for model selection in structured-output tasks.
+  \item A scalable, reproducible three-layer model-assisted annotation pipeline combining local inference, LLM-as-Judge quality scoring, and quality-tiered assembly.
+  \item A novel multi-domain silver-standard Uzbek ABSA dataset covering 5{,}038 reviews across 23 business categories with 9{,}884 annotated aspect--sentiment pairs and per-annotation quality metadata.
+\end{itemize}
+
+To support reproducible research in low-resource NLP, all code, datasets, and fine-tuned models are made publicly available on GitHub, HuggingFace, and Zenodo.
+
+\textbf{Fit to the scope of the journal.}
+\textit{Computers} publishes research across computer science and its applications, including artificial intelligence, machine learning, and natural language processing. Our manuscript sits squarely within this scope: it advances practical, resource-efficient methods for adapting large language models to under-served languages on consumer-grade hardware, and it delivers an openly released dataset and methodology that the broader computing community can reuse and extend. We therefore believe the work will be of direct interest to the journal's readership.
+
+We confirm that neither the manuscript nor any parts of its content are currently under consideration for publication with or published in another journal. All authors have approved the manuscript and agree with its submission to \textit{Computers}.
+
+We have no prior submissions of this manuscript to any MDPI journal to acknowledge.
+
+Thank you for considering our manuscript. We look forward to your response and would be happy to provide any further information required.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}
