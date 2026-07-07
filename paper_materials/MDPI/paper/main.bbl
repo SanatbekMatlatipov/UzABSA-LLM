@@ -1,0 +1,212 @@
+\begin{thebibliography}{999}
+
+\bibitem[Pontiki et~al.(2014)Pontiki, Galanis, Pavlopoulos, Papageorgiou,
+  Androutsopoulos, and Manandhar]{pontiki-etal-2014-semeval}
+Pontiki, M.; Galanis, D.; Pavlopoulos, J.; Papageorgiou, H.; Androutsopoulos,
+  I.; Manandhar, S.
+\newblock {S}em{E}val-2014 Task 4: Aspect Based Sentiment Analysis.
+\newblock In Proceedings of the Proceedings of the 8th International Workshop
+  on Semantic Evaluation ({S}em{E}val 2014); Nakov, P.; Zesch, T., Eds.,
+  Dublin, Ireland,  August 2014; pp. 27--35.
+\newblock {\url{https://doi.org/10.3115/v1/S14-2004}}.
+
+\bibitem[{Qwen} et~al.(2024){Qwen}, Yang, Yang, Zhang, Hui, Zheng, Yu, Li, Liu,
+  Huang, Wei, Lin, Yang, Tu, Zhang, Yang, Yang, Zhou, Lin, Dang, Lu, Bao, Yang,
+  Yu, Li, Xue, Zhang, Zhu, Men, Lin, Li, Tang, Xia, Ren, Ren, Fan, Su, Zhang,
+  Wan, Liu, Cui, Zhang, and Qiu]{Qwen2024-kr}
+{Qwen}.; Yang, A.; Yang, B.; Zhang, B.; Hui, B.; Zheng, B.; Yu, B.; Li, C.;
+  Liu, D.; Huang, F.;  et~al.
+\newblock Qwen2.5 Technical Report.
+\newblock {\em arXiv preprint} {\bf 2024},
+  \href{http://arxiv.org/abs/2412.15115}{{\normalfont
+  [arXiv:cs.CL/2412.15115]}}.
+
+\bibitem[Grattafiori et~al.(2024)Grattafiori, Dubey, Jauhri,
+  et~al.]{Grattafiori2024-ka}
+Grattafiori, A.; Dubey, A.; Jauhri, A.;  et~al.
+\newblock The Llama 3 herd of models.
+\newblock {\em arXiv preprint} {\bf 2024},
+  \href{http://arxiv.org/abs/2407.21783}{{\normalfont
+  [arXiv:cs.AI/2407.21783]}}.
+
+\bibitem[{DeepSeek-AI} et~al.(2026){DeepSeek-AI}, Guo, Yang, Zhang, Song, Wang,
+  et~al.]{DeepSeek-AI2026-vt}
+{DeepSeek-AI}.; Guo, D.; Yang, D.; Zhang, H.; Song, J.; Wang, P.;  et~al.
+\newblock {DeepSeek-R1}: Incentivizing Reasoning Capability in {LLMs} via
+  Reinforcement Learning.
+\newblock {\em arXiv preprint} {\bf 2026},
+  \href{http://arxiv.org/abs/2501.12948}{{\normalfont
+  [arXiv:cs.CL/2501.12948]}}.
+
+\bibitem[Dettmers et~al.(2023)Dettmers, Pagnoni, Holtzman, and
+  Zettlemoyer]{10.5555/3666122.3666563}
+Dettmers, T.; Pagnoni, A.; Holtzman, A.; Zettlemoyer, L.
+\newblock QLORA: efficient finetuning of quantized LLMs.
+\newblock In Proceedings of the Proceedings of the 37th International
+  Conference on Neural Information Processing Systems, Red Hook, NY, USA,
+  2023; NIPS '23.
+
+\bibitem[Ma et~al.(2019)Ma, Li, Wu, Xie, and Wang]{ma-etal-2019-exploring}
+Ma, D.; Li, S.; Wu, F.; Xie, X.; Wang, H.
+\newblock Exploring Sequence-to-Sequence Learning in Aspect Term Extraction.
+\newblock In Proceedings of the Proceedings of the 57th Annual Meeting of the
+  Association for Computational Linguistics; Korhonen, A.; Traum, D.;
+  M{\`a}rquez, L., Eds., Florence, Italy,  July 2019; pp. 3538--3547.
+\newblock {\url{https://doi.org/10.18653/v1/P19-1344}}.
+
+\bibitem[Hu et~al.(2021)Hu, Zhao, Guo, Xue, Gao, Gao, Cheng, and
+  Su]{hu-etal-2021-multi-label}
+Hu, M.; Zhao, S.; Guo, H.; Xue, C.; Gao, H.; Gao, T.; Cheng, R.; Su, Z.
+\newblock Multi-Label Few-Shot Learning for Aspect Category Detection.
+\newblock In Proceedings of the Proceedings of the 59th Annual Meeting of the
+  Association for Computational Linguistics and the 11th International Joint
+  Conference on Natural Language Processing (Volume 1: Long Papers); Zong, C.;
+  Xia, F.; Li, W.; Navigli, R., Eds., Online,  August 2021; pp. 6330--6340.
+\newblock {\url{https://doi.org/10.18653/v1/2021.acl-long.495}}.
+
+\bibitem[Sun et~al.(2025)Sun, Mi, and Li]{10.1145/3721844}
+Sun, X.; Mi, Y.; Li, H.
+\newblock Enhancing Aspect Sentiment Classification with Dual-Channel Graph
+  Convolutional Network.
+\newblock {\em ACM Trans. Intell. Syst. Technol.} {\bf 2025}, {\em 16}.
+\newblock {\url{https://doi.org/10.1145/3721844}}.
+
+\bibitem[Hua et~al.(2024)Hua, Denny, Wicker, and Taskova]{Hua2024}
+Hua, Y.C.; Denny, P.; Wicker, J.; Taskova, K.
+\newblock A systematic review of aspect-based sentiment analysis: domains,
+  methods, and trends.
+\newblock {\em Artificial Intelligence Review} {\bf 2024}, {\em 57},~296.
+\newblock {\url{https://doi.org/10.1007/s10462-024-10906-z}}.
+
+\bibitem[Zohreh~Madhoushi et~al.(2019)Zohreh~Madhoushi, Hamdan, and
+  Zainudin]{ZohrehMadhoushi2019}
+Zohreh~Madhoushi, Z.M.; Hamdan, A.R.; Zainudin, S.
+\newblock Aspect-Based Sentiment Analysis Methods in Recent Years.
+\newblock {\em Asia-Pacific Journal of Information Technology; Multimedia} {\bf
+  2019}, {\em 08},~79–96.
+\newblock {\url{https://doi.org/10.17576/apjitm-2019-0801-07}}.
+
+\bibitem[Chouikhi et~al.(2023)Chouikhi, Alsuhaibani, and
+  Jarray]{electronics12030515}
+Chouikhi, H.; Alsuhaibani, M.; Jarray, F.
+\newblock BERT-Based Joint Model for Aspect Term Extraction and Aspect Polarity
+  Detection in Arabic Text.
+\newblock {\em Electronics} {\bf 2023}, {\em 12}.
+\newblock {\url{https://doi.org/10.3390/electronics12030515}}.
+
+\bibitem[Scaria et~al.(2024)Scaria, Gupta, Goyal, Sawant, Mishra, and
+  Baral]{scaria-etal-2024-instructabsa}
+Scaria, K.; Gupta, H.; Goyal, S.; Sawant, S.; Mishra, S.; Baral, C.
+\newblock {I}nstruct{ABSA}: Instruction Learning for Aspect Based Sentiment
+  Analysis.
+\newblock In Proceedings of the Proceedings of the 2024 Conference of the North
+  American Chapter of the Association for Computational Linguistics: Human
+  Language Technologies (Volume 2: Short Papers); Duh, K.; Gomez, H.; Bethard,
+  S., Eds., Mexico City, Mexico,  June 2024; pp. 720--736.
+\newblock {\url{https://doi.org/10.18653/v1/2024.naacl-short.63}}.
+
+\bibitem[Touvron et~al.(2023)Touvron, Lavril, Izacard, Martinet, Lachaux,
+  Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, Rodriguez, Joulin, Grave, and
+  Lample]{Touvron2023-lf}
+Touvron, H.; Lavril, T.; Izacard, G.; Martinet, X.; Lachaux, M.A.; Lacroix, T.;
+  Rozi{\`e}re, B.; Goyal, N.; Hambro, E.; Azhar, F.;  et~al.
+\newblock {LLaMA}: Open and efficient foundation language models.
+\newblock {\em arXiv preprint} {\bf 2023},
+  \href{http://arxiv.org/abs/2302.13971}{{\normalfont
+  [arXiv:cs.CL/2302.13971]}}.
+
+\bibitem[Hu et~al.(2022)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{hu2022lora}
+Hu, E.J.; Shen, Y.; Wallis, P.; Allen-Zhu, Z.; Li, Y.; Wang, S.; Wang, L.;
+  Chen, W.
+\newblock LoRA: Low-Rank Adaptation of Large Language Models.
+\newblock In Proceedings of the International Conference on Learning
+  Representations,  2022.
+
+\bibitem[Aripov et~al.(2022)Aripov, Khakimov, Matlatipov, and
+  Sirojiddinov]{10.1007/978-3-031-05328-3_6}
+Aripov, M.; Khakimov, M.; Matlatipov, S.; Sirojiddinov, Z.
+\newblock Analysis and Processing of the Uzbek Language on the Multi-language
+  Modelled Computer Translator Technology.
+\newblock In Proceedings of the Human Language Technology. Challenges for
+  Computer Science and Linguistics; Vetulani, Z.; Paroubek, P.; Kubis, M.,
+  Eds., Cham,  2022; pp. 81--95.
+
+\bibitem[Sharipov et~al.(2023{\natexlab{a}})Sharipov, Kuriyozov, Yuldashev, and
+  Sobirov]{sharipov-et-all}
+Sharipov, M.; Kuriyozov, E.; Yuldashev, O.; Sobirov, O.
+\newblock UzbekTagger: The rule-based POS tagger for Uzbek language,  2023,
+  \href{http://arxiv.org/abs/arXiv:2301.12711}{{\normalfont
+  [arXiv:2301.12711]}}.
+
+\bibitem[Sharipov et~al.(2023{\natexlab{b}})Sharipov, Kuriyozov, Yuldashev, and
+  Sobirov]{sharipov2023uzbektagger}
+Sharipov, M.; Kuriyozov, E.; Yuldashev, O.; Sobirov, O.
+\newblock UzbekTagger: The rule-based POS tagger for Uzbek language.
+\newblock In Proceedings of the 10th Language \& Technology Conference: Human
+  Language Technologies as a Challenge for Computer Science and Linguistics,
+  2023.
+
+\bibitem[Salaev(2024)]{Salaev2024}
+Salaev, U.
+\newblock UzMorphAnalyser: A morphological analysis model for the Uzbek
+  language using inflectional endings.
+\newblock {\em AIP Conference Proceedings} {\bf 2024}, {\em 3244},~030058.
+\newblock {\url{https://doi.org/10.1063/5.0241461}}.
+
+\bibitem[Kuriyozov and Matlatipov(2019)]{kuriyozov2019building}
+Kuriyozov, E.; Matlatipov, S.
+\newblock Building a new sentiment analysis dataset for {U}zbek language and
+  creating baseline models.
+\newblock In Proceedings of the Multidisciplinary Digital Publishing Institute
+  Proceedings,  2019, Vol.~21, p.~37.
+
+\bibitem[Kuriyozov et~al.(2022)Kuriyozov, Matlatipov, Alonso, and
+  G{\'o}mez-Rodr{\'i}guez]{kuriyozov2022construction}
+Kuriyozov, E.; Matlatipov, S.; Alonso, M.A.; G{\'o}mez-Rodr{\'i}guez, C.
+\newblock Construction and Evaluation of Sentiment Datasets for Low-Resource
+  Languages: The Case of {U}zbek.
+\newblock {\em Lecture Notes in Artificial Intelligence} {\bf 2022}, {\em
+  13212},~232--243.
+\newblock {\url{https://doi.org/10.1007/978-3-031-05328-3\_15}}.
+
+\bibitem[Matlatipov and Vetulani(2009)]{Matlatipov2009}
+Matlatipov, G.; Vetulani, Z.
+\newblock Representation of Uzbek Morphology in Prolog. In {\em Aspects of
+  Natural Language Processing: Essays Dedicated to Leonard Bolc on the Occasion
+  of His 75th Birthday}; Marciniak, M.; Mykowiecka, A., Eds.; Springer Berlin
+  Heidelberg: Berlin, Heidelberg,  2009; pp. 83--110.
+\newblock {\url{https://doi.org/10.1007/978-3-642-04735-0_4}}.
+
+\bibitem[Matlatipov et~al.(2020)Matlatipov, Tukeyev, and
+  Aripov]{uzbekendingssanat}
+Matlatipov, S.; Tukeyev, U.; Aripov, M.
+\newblock Towards the Uzbek Language Endings as a Language Resource.
+\newblock In Proceedings of the Advances in Computational Collective
+  Intelligence; Hernes, M.; Wojtkiewicz, K.; Szczerbicki, E., Eds., Cham,
+  2020; pp. 729--740.
+
+\bibitem[Matlatipov et~al.(2024)Matlatipov, Rajabov, Kuriyozov, and
+  Aripov]{matlatipov2024uzabsa}
+Matlatipov, S.G.; Rajabov, J.; Kuriyozov, E.; Aripov, M.
+\newblock UzABSA: Aspect-Based Sentiment Analysis for the Uzbek Language.
+\newblock In Proceedings of the Proceedings of the 3rd Annual Meeting of the
+  Special Interest Group on Under-resourced Languages@ LREC-COLING 2024,  2024,
+  pp. 394--403.
+
+\bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
+  Li, Xing, Zhang, Gonzalez, and Stoica]{10.5555/3666122.3668142}
+Zheng, L.; Chiang, W.L.; Sheng, Y.; Zhuang, S.; Wu, Z.; Zhuang, Y.; Lin, Z.;
+  Li, Z.; Li, D.; Xing, E.P.;  et~al.
+\newblock Judging LLM-as-a-judge with MT-bench and Chatbot Arena.
+\newblock In Proceedings of the Proceedings of the 37th International
+  Conference on Neural Information Processing Systems, Red Hook, NY, USA,
+  2023; NIPS '23.
+
+\bibitem[Li et~al.(2025)Li, Dou, Shao, Chen, and Hu]{2506.22316}
+Li, Q.; Dou, S.; Shao, K.; Chen, C.; Hu, H.
+\newblock Evaluating Scoring Bias in LLM-as-a-Judge,  2025,
+  \href{http://arxiv.org/abs/arXiv:2506.22316}{{\normalfont
+  [arXiv:2506.22316]}}.
+
+\end{thebibliography}
