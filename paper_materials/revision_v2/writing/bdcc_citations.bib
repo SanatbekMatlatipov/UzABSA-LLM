@@ -1,0 +1,56 @@
+% ---------------------------------------------------------------------------
+% Candidate BDCC in-special-issue citations for UzABSA-LLM resubmission.
+% Citing papers from the SAME special issue ("AI and NLP", W633E7395P) is a strong
+% editorial-fit signal. DOIs below follow MDPI's regular scheme (10.3390/bdcc<vol><iss><art>)
+% and SHOULD BE VERIFIED to resolve before adding \cite{} to main.tex.
+%
+% Recommended placement in main.tex:
+%   - bdcc_ner_disaster : Related Work (PEFT + LLM), and as a peer using LoRA on a 7B
+%     model benchmarked against BERT+CRF — mirrors our design most closely. HIGH priority.
+%   - bdcc_collectivia  : Related Work (low-resource / multilingual NLP). MEDIUM.
+%   - bdcc_katakana     : Related Work (fine-tuning PLMs for a lower-resource setting). LOW.
+% ---------------------------------------------------------------------------
+
+@article{bdcc_ner_disaster,
+  title   = {Named Entity Recognition Method for Natural Disaster Emergencies Based on Instruction Tuning and Graph Retrieval-Augmented Generation},
+  journal = {Big Data and Cognitive Computing},
+  volume  = {10},
+  number  = {6},
+  pages   = {185},
+  year    = {2026},
+  doi     = {10.3390/bdcc10060185},
+  note    = {VERIFY DOI. Uses LoRA PEFT of Qwen2-7B-Instruct; benchmarked vs. BERT+CRF.}
+}
+
+@article{bdcc_collectivia,
+  title   = {CollectivIA: Two-Pipeline Multilingual Legal RAG for Moroccan Territorial Governance with LLM-Assisted and Regex-Based Chunking},
+  journal = {Big Data and Cognitive Computing},
+  volume  = {10},
+  number  = {7},
+  pages   = {212},
+  year    = {2026},
+  doi     = {10.3390/bdcc10070212},
+  note    = {VERIFY DOI. Low-resource / multilingual (Moroccan Darija) NLP.}
+}
+
+@article{bdcc_katakana,
+  title   = {Validating the Effectiveness of Fine-Tuning for Semantic Classification of Japanese Katakana Words: An Analysis of Frequency and Polysemy Effects on Accuracy},
+  journal = {Big Data and Cognitive Computing},
+  volume  = {10},
+  number  = {3},
+  pages   = {67},
+  year    = {2026},
+  doi     = {10.3390/bdcc10030067},
+  note    = {VERIFY DOI. Fine-tuning a PLM (DeBERTa V3) for a semantically hard setting.}
+}
+
+@article{bdcc_offensive_lowresource,
+  title   = {Investigating Offensive Language Detection in a Low-Resource Setting with a Robustness Perspective},
+  journal = {Big Data and Cognitive Computing},
+  volume  = {8},
+  number  = {12},
+  pages   = {170},
+  year    = {2024},
+  doi     = {10.3390/bdcc8120170},
+  note    = {DOI from web search result; low-resource NLP in BDCC. Verify.}
+}
