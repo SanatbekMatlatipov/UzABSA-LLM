@@ -1,0 +1,2764 @@
+[
+  {
+    "review_id": "rev_00272",
+    "text": "TBC bankni boshqa banklarga qaraganda juda ham qulayliklari koʻp.Men bu bankdan anchadan buyon foydalanib kelaman va oʻz minnatdorchiligimni bildirib qolaman.",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "TBC bankni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "qulayliklar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "qulayliklar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00296",
+    "text": "Juda zo'r bank. Bu bankda barcha qulayliklar mavjud. Men hamkorbank bilan omonatlarimni ishonchli saqlayabman. Hammaga tavsiya qilamn.",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "hammaga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      },
+      {
+        "term": "qulayliklar",
+        "polarity": "positive"
+      },
+      {
+        "term": "omonat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      },
+      {
+        "term": "qulayliklar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00331",
+    "text": "Yaqinda doslari bilan bordi dostim taklif qildi menga yoqdi zor ekan",
+    "business_category": "Restoran/Ovqatlanish",
+    "model_aspects": [
+      {
+        "term": "dostim",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [],
+    "gold_aspects_annotator2": [],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00347",
+    "text": "Men hardoim UzMobile kompaniyasi obanentiman juda zo'r kompaniya interneti zo'r ishlaydi",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "interneti",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kompaniya",
+        "polarity": "positive"
+      },
+      {
+        "term": "internet",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kompaniya",
+        "polarity": "positive"
+      },
+      {
+        "term": "internet",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00474",
+    "text": "Bu bank xodimlari juda yaxshi xush momlali",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "xodimlari",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "xodimlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "xodimlar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00480",
+    "text": "Tez va qulay chet eldan koʻp oʻtkazmalar amalga oshiraman onlayn plastik karta ochsa ham boʻladi juda zoʻr",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "chet eldan",
+        "category": "xizmat",
+        "polarity": "negative"
+      },
+      {
+        "term": "plastik karta",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "otkazmalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "plastik karta",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "otkazmalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "plastik karta",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00550",
+    "text": "Click menga juda yoqdi bu pragrammani yuklab olishni maslahat beraman",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Click",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00559",
+    "text": "Bu bank juda yaxshi ekan men shu bank kartasidan foydalanam. Menga juda yoqdi qulayliklari juda koʻp ekan hammaga tafsiya etaman",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "bank kartasidan",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "hammaga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "qulayliklari",
+        "category": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      },
+      {
+        "term": "qulayliklar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      },
+      {
+        "term": "qulayliklar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00617",
+    "text": "Shu kungacha foydasi tegmagan bo’sayam lekin onlayn xizmatini yaxshi yo’lga qo’ygan.",
+    "business_category": "Sug'urta",
+    "model_aspects": [
+      {
+        "term": "onlayn xizmatini",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "kungacha",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "foyda",
+        "polarity": "negative"
+      },
+      {
+        "term": "onlayn xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "foyda",
+        "polarity": "negative"
+      },
+      {
+        "term": "onlayn xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00633",
+    "text": "Payme juda qulay ilova pul muomalasi uchun Oʻzbekistondagi qulay online bank tizimi 2 yildan beri foydalanaman",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Oline bank tizimi",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00634",
+    "text": "Bu o'quv markaz juda tez fursatda yuqori cho'qinni zab etti hozirgi kunda bu ilm markazini deyarli butun o'zbekiston taniydi",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "ilm markazini",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "oquv markaz",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "oquv markaz",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00705",
+    "text": "Bu sport bilan shug’ilanmoqchi bo’lgan insonlar uchun juda qol keladigan ilova bo’lib sizni maksimal shug’ilanishingizga yordam beradi.",
+    "business_category": "Sport/Fitnes",
+    "model_aspects": [
+      {
+        "term": "sport",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00747",
+    "text": "Yashil enirgiya juda yaxshi ammo oddiy aholiga oʻrnatish qimmatlik qiladi kiridit larni foyizini kamaytirish kerak",
+    "business_category": "Davlat xizmatlari",
+    "model_aspects": [
+      {
+        "term": "kiridit larni",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "term": "Yashil enirgiya",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "yashil energiya",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "yashil energiya",
+        "polarity": "positive"
+      },
+      {
+        "term": "ornatish",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00817",
+    "text": "Vatanparvar avtomaktabida malakali mutaxasislar dars otishadi amaliy va nazariy bilimlar yuqori darajada beriladi",
+    "business_category": "Davlat xizmatlari",
+    "model_aspects": [
+      {
+        "term": "mutaxasislar",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "bilimlar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "mutaxassislar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bilimlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "mutaxassislar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bilimlar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00863",
+    "text": "Bolalar kelajagini xozirdan yaratishimiz kerak musiqa bolalarni rivojlanishida kata yordam beradi",
+    "business_category": "Boshqa",
+    "model_aspects": [
+      {
+        "term": "musiqa",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "musiqa",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "musiqa",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00877",
+    "text": "Yaqinda ochilganiga qaramay tezda yuqori korsatgichlarga erishishmoqda ustozlar bilim berish darajasi juda baland",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "ochilganiga",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "korsatgichlarga",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "bilim berish",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "korsatkichlar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bilim berish",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "korsatkichlar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bilim berish",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_00965",
+    "text": "odamlar salomatligini yolida sport bn shugullanish un sharoitlar yaratlgan",
+    "business_category": "Sport/Fitnes",
+    "model_aspects": [
+      {
+        "term": "sport",
+        "category": "muhit",
+        "polarity": "neutral"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "sharoitlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "sharoitlar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01024",
+    "text": "Juda zor ilova ekan vaqtimni tejayapman otrgan joyimda ishlarimni xal qilyapman",
+    "business_category": "Sug'urta",
+    "model_aspects": [
+      {
+        "term": "joyimda",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01277",
+    "text": "Clik eng zur tarmoq . Pullarimni bemalol click orqali utkazaman",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Pullarimni",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "Clik",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "tarmoq",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "tarmoq",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01289",
+    "text": "Eng arzon treding kursi Grand Invest hisoblanadi juda te fursatda orgatadiva pul usgan ob chiqadi",
+    "business_category": "Investitsiya/Trading",
+    "model_aspects": [
+      {
+        "term": "Grand Invest",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kurs",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "narx",
+        "polarity": "positive"
+      },
+      {
+        "term": "kurs",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01339",
+    "text": "Mazza qilib aylandik bollar ozidayoq xursand oyingoxlaRida rosa uchishdi Yana boramz xudo xolas",
+    "business_category": "Ko'ngilochar",
+    "model_aspects": [
+      {
+        "term": "bollar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "oyinglaRida",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "rosa",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "xolas",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "oyingoхlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "oyingoхlar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01347",
+    "text": "Eng yaxshi ilova mikrokredit muddatli toʻlov va pul oʻtkazmalari uchun",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "mikrokredit",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "mikrokredit",
+        "polarity": "positive"
+      },
+      {
+        "term": "pul otkazma",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "mikrokredit",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01531",
+    "text": "Men bu yerga ko'p marotaba borganman va bu yerda sendwichning mazasi menga yoqadi lavashga esa gap yo'q",
+    "business_category": "Restoran/Ovqatlanish",
+    "model_aspects": [
+      {
+        "term": "lavashga",
+        "category": "ovqat",
+        "polarity": "positive"
+      },
+      {
+        "term": "sendwichning",
+        "category": "ovqat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "sendvich",
+        "polarity": "positive"
+      },
+      {
+        "term": "lavash",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "sendvich",
+        "polarity": "positive"
+      },
+      {
+        "term": "lavash",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01544",
+    "text": "Oʻqituvchilar juda tajribali, dars davomida har bir mavzuni batafsil tushuntirib berishadi. Bu yerda qisqa vaqt ichida katta natijaga erishdim!",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "Oʻqituvchilar",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "natijaga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "oqituvchilar",
+        "polarity": "positive"
+      },
+      {
+        "term": "natija",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "oqituvchilar",
+        "polarity": "positive"
+      },
+      {
+        "term": "natija",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01560",
+    "text": "Beeline yaxshi ishlaydi lekin tariflari qimmat mg daq smsni kam beradi",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "Beeline",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflari",
+        "category": "narx",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01579",
+    "text": "Assalomu aleykum Ums aloqa kompaniyasidan 8 yillidan buyon ishlatib kelaman lekin so'ngi 1 yillida internet sifati va aloqa xizmati yomonlashganday tuyilmoqda.",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "internet",
+        "category": "xizmat",
+        "polarity": "negative"
+      },
+      {
+        "term": "aloqa",
+        "category": "xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "internet sifati",
+        "polarity": "negative"
+      },
+      {
+        "term": "aloqa xizmati",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "internet",
+        "polarity": "negative"
+      },
+      {
+        "term": "aloqa",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01608",
+    "text": "Biz doim kitoblarni shu dukondan topamiz va olamiz ham dastafkasi ham bor bu juda yaxshi uyda utirib ham kitoblarimizni bemalol zakas qila olamiza",
+    "business_category": "Kitob/Nashriyot",
+    "model_aspects": [
+      {
+        "term": "kitoblarni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kitoblar",
+        "polarity": "positive"
+      },
+      {
+        "term": "dastafka",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kitoblar",
+        "polarity": "positive"
+      },
+      {
+        "term": "yetkazib berish",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01705",
+    "text": "Juda zo'r maktab.Bu yerda o'qib professional haydovchi bulishingiz mumkin.Yana yaxshi tomonlaridan biri bu maktab har doim ishlaydi va ochiq.",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "maktab",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "maktab",
+        "polarity": "positive"
+      },
+      {
+        "term": "ishlash rejimi",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "maktab",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01746",
+    "text": "Anor bank mijozlaridanmiz, va sizga ham tafsiya qilaman , bu bankdan kredit rasmiylashtirish juda tez va oson , karta ham buyurtma bersangiz boʻladi",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "kredit",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "karta",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "Anor bank",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      },
+      {
+        "term": "karta",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      },
+      {
+        "term": "karta",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01856",
+    "text": "Payne qulay oson va juda tez bu ilova ni tushunish qiyin emas",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Payne",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01880",
+    "text": "Men 7 yildan beri usel ishlataman yaxshi kampaniya lekin antenna unchalik yaxshimasda aloqani yaxshilash kerak",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "antenna",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "kampaniya",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kompaniya",
+        "polarity": "positive"
+      },
+      {
+        "term": "antenna",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kompaniya",
+        "polarity": "positive"
+      },
+      {
+        "term": "antenna",
+        "polarity": "negative"
+      },
+      {
+        "term": "aloqa",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01907",
+    "text": "Qamar kitoblar doʻkoni qulay va sifatli kitoblar sotadi kitoblar arzon har qanday kitobni shu yerda topsa boladi",
+    "business_category": "Kitob/Nashriyot",
+    "model_aspects": [
+      {
+        "term": "kitoblar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kitoblar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kitoblar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kitobni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kitoblar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      },
+      {
+        "term": "assortiment",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kitoblar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01914",
+    "text": "TBC bank ilovasidan men foydalanaman zor bank uyin shartlari bor bonuslari bor bir ikki marta yutuq hm olganman yolgon emasakan uyin uynap pul ham yutib olganman bir kunda pulni tushirip berishadi gapyuq zor ilova",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "TBC bank",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "shartlari",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "bonuslari",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "yutuq",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "yolgon",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "uyin",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "pul",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "bonuslar",
+        "polarity": "positive"
+      },
+      {
+        "term": "oyin",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "bonuslar",
+        "polarity": "positive"
+      },
+      {
+        "term": "oyin",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_01919",
+    "text": "Abonimentni sotib olish juda oson, shaharning barcha jabhalarini qamrab olgan, sport bilan muntazam shug'ullanish uchun zo'r tanlov.",
+    "business_category": "Sport/Fitnes",
+    "model_aspects": [
+      {
+        "term": "Abonimentni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "jabhalarini",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "sport",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "aboniment",
+        "polarity": "positive"
+      },
+      {
+        "term": "qamrov",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "aboniment",
+        "polarity": "positive"
+      },
+      {
+        "term": "qamrov",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02100",
+    "text": "Eng zur bank tulovlar foisiz amalga oshirsa buladi va eng iwonchli bank kredit olish ham qulay",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "kredit",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "tulovlar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "tolovlar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "tolovlar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02218",
+    "text": "Doimiy ishlashi qulay, lekin ta'lim sifati biroz yaxshilanishi kerak.",
+    "business_category": "Boshqa",
+    "model_aspects": [
+      {
+        "term": "ta'lim",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "ishlashi",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ishlash",
+        "polarity": "positive"
+      },
+      {
+        "term": "talim sifati",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ishlash",
+        "polarity": "positive"
+      },
+      {
+        "term": "talim sifati",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02234",
+    "text": "Muhit juda samimiy, darslar sifatli. Lekin joylashuvi biroz noqulay bo'lishi mumkin.",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "Muhit",
+        "category": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "darslar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "joylashuvi",
+        "category": "muhit",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "darslar",
+        "polarity": "positive"
+      },
+      {
+        "term": "joylashuv",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "darslar",
+        "polarity": "positive"
+      },
+      {
+        "term": "joylashuv",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02245",
+    "text": "Kitoblarni sifatiga va muqovasiga gap bo'lishi mumkin emas. Just super !",
+    "business_category": "Kitob/Nashriyot",
+    "model_aspects": [
+      {
+        "term": "Kitoblarni",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "sifat",
+        "polarity": "positive"
+      },
+      {
+        "term": "muqova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "sifat",
+        "polarity": "positive"
+      },
+      {
+        "term": "muqova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02249",
+    "text": "Ajoyib kitob doʻkon barcha turdagi kitoblarni topish mumkin. Eng asosiysi hamyonbob narxlarda :) Ishlarizga omad. Ilm ulashishdan charchamayla ibook jamoasi.",
+    "business_category": "Kitob/Nashriyot",
+    "model_aspects": [
+      {
+        "term": "kitob doʻkon",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "kitoblarni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narxlarda",
+        "category": "narx",
+        "polarity": "positive"
+      },
+      {
+        "term": "Ishlarizga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "ibook jamoasi",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kitob dokon",
+        "polarity": "positive"
+      },
+      {
+        "term": "assortiment",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kitob dokon",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02269",
+    "text": "Bank xodimlari muomalasi yaxshi ham qulay bank",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "xodimlari",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "xodimlar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "xodimlar",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02350",
+    "text": "Fresh bazar juda zur narxlarixam uncha qimmat emas narsalarixam sifatli",
+    "business_category": "Oziq-ovqat do'konlari",
+    "model_aspects": [
+      {
+        "term": "narxlarixam",
+        "category": "narx",
+        "polarity": "neutral"
+      },
+      {
+        "term": "sifatli",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "narx",
+        "polarity": "neutral"
+      },
+      {
+        "term": "sifat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "narx",
+        "polarity": "neutral"
+      },
+      {
+        "term": "sifat",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02356",
+    "text": "Kridit olishda qiyinchiliklar yoq judayam qulay bank",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "Kridit",
+        "category": "xizmat",
+        "polarity": "negative"
+      },
+      {
+        "term": "bank",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      },
+      {
+        "term": "bank",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02461",
+    "text": "Iltios mijozlarga telgram mesnjer oqali ham hizmat qilshni yo'ga qo'yinglar",
+    "business_category": "Sug'urta",
+    "model_aspects": [
+      {
+        "term": "telgram mesnjer",
+        "category": "xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "telegram xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "telegram xizmat",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02537",
+    "text": "Ucell ishlatishni boshlaganimga roppa rosa 1yil bo'ldi Shu 1yil ichida Ucelldan zo'rini ko'rmadim, tariflariham hamyonbop qulay",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "Ucell",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02663",
+    "text": "Интернет Зур ишлайди тарифлари арзон",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "Интернет",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "тарифлари",
+        "category": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "internet",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "internet",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02771",
+    "text": "Uzmobile interneti tezkor, barqaror va ishonchli – onlayn faoliyatingizni mukammal qo‘llab-quvvatlaydi.",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "Uzmobile",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "internet",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "internet",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02799",
+    "text": "Cambridge Learning Centre oʻquv markazi juda ham zor.O'qituvchilari ham yaxshi dars berishadi.Hammaga tavsiya etama.❤️❤️",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "O'qituvchilari",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "ham zor",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "tavsiya",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "oquv markaz",
+        "polarity": "positive"
+      },
+      {
+        "term": "oqituvchilar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "oquv markaz",
+        "polarity": "positive"
+      },
+      {
+        "term": "oqituvchilar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02808",
+    "text": "Payme ilovasi juda qulay tulov xizmatlari",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "xizmatlari",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "tulov xizmatlari",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "tulov xizmatlari",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02858",
+    "text": "Tez va oson til o'rganing ham hamyonbop til bilgan el biladi kurslar juda qiziqarli ekan",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "kurslar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kurslar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kurslar",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_02962",
+    "text": "Tbs bank juda tezkor.va qulay xalq uchun",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "Tbs bank",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03149",
+    "text": "Bankda xizmat ko'tsatish yaxshi lekin bir narsadan bugun juda noroziman.Bankning Joyida ilovasi orqali kartadan kartaga foizsiz pul o'tkazmalarini amalga oshirish mumkin deyishgandi.Men bu ilovaga Turon bankning kartasini uladim va o'tkazmani amalga oshirganimda kartamdan komissiya uchun ham alohida pul mablag'i yechib olindi.Bu qoraning oq bo'lib chiqishimi yoki oqning qora bo'lib chiqishimi?",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "xizmat",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "ilovasi",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "komissiya",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "ilova",
+        "polarity": "negative"
+      },
+      {
+        "term": "komissiya",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "komissiya",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03282",
+    "text": "Bu kapaniya juda zor mb beradi internet yaxwi ishldi",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "kapaniya",
+        "category": "boshqalar",
+        "polarity": "negative"
+      },
+      {
+        "term": "internet",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kompaniya",
+        "polarity": "positive"
+      },
+      {
+        "term": "internet",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kompaniya",
+        "polarity": "positive"
+      },
+      {
+        "term": "internet",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03489",
+    "text": "Najot Talimda dasturlashni õrganmoqchiman eng yaxshisi shu hozir",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "Najot Talimda",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "oquv markaz",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "oquv markaz",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03498",
+    "text": "Ucell aloqa operatori yaxshi ishonchli",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "Ucell",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03522",
+    "text": "Suzish havzasi yaxshi va chiroyli ekan suzish odam uchun juda foydalidir",
+    "business_category": "Tibbiyot/Sog'liqni saqlash",
+    "model_aspects": [
+      {
+        "term": "Suzish havzasi",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "suzish havzasi",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "suzish havzasi",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03534",
+    "text": "doimiy foydalanaman ajoyib hamroh zrikmaysiz bu bilan",
+    "business_category": "Texnologiya/Media",
+    "model_aspects": [
+      {
+        "term": "hamroh",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03583",
+    "text": "Xazna toʻlov ilovasi menga juda yoqdi. Xazna ilovasi oson,, oddiy ilova ekan",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Xazna",
+        "category": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03594",
+    "text": "Mobi uz eng tez internetga ega tariflar arzon ishlatish uchun qulay sizlarga ham tavsiya beraman",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "internetga",
+        "category": "boshqalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "category": "narx",
+        "polarity": "positive"
+      },
+      {
+        "term": "qulay",
+        "category": "muhit",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "internet",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "internet",
+        "polarity": "positive"
+      },
+      {
+        "term": "tariflar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03610",
+    "text": "Mobi uz juda zõr va qulay mobi uz ni har tamonlama qulay",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "mobi uz",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "aloqa",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03639",
+    "text": "Bu ilova orqali endi men o’z sog’ligimga befarq emasman❤️❤️❤️",
+    "business_category": "Sport/Fitnes",
+    "model_aspects": [
+      {
+        "term": "ilova",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03663",
+    "text": "Click ilovasi juda xam zor otkazmalar va barcha komunal tolovlarga brzumda tolash mumkin 💯💯💯💯",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Click ilovasi",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "otkazmalar",
+        "polarity": "positive"
+      },
+      {
+        "term": "komunal tolovlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "otkazmalar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03764",
+    "text": "Flowers uz gullar doʻkonidan xarid qildim bir-biridan chiroyli gullar sotilar ekan menga juda yoqdi ishlariga omad",
+    "business_category": "Gul/Sovg'a",
+    "model_aspects": [
+      {
+        "term": "gullar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "gullar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "gullar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03780",
+    "text": "Antennasi yaxshi chiqmeydi kam megabayt beradi.",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "Antennasi",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "antenna",
+        "polarity": "negative"
+      },
+      {
+        "term": "megabayt",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "antenna",
+        "polarity": "negative"
+      },
+      {
+        "term": "megabayt",
+        "polarity": "negative"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03904",
+    "text": "uztelekom eng zur simkarta men bumdan foydalanman zor ishledi gap yoq ❤️❤️",
+    "business_category": "Telekommunikatsiya",
+    "model_aspects": [
+      {
+        "term": "uztelekom",
+        "category": "boshqalar",
+        "polarity": "negative"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "simkarta",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "simkarta",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03931",
+    "text": "Bu universitetida talabalar uzlariga kerakli bulgan bilimlarni olishi mumkin chunki bu yerda yutuk kadrlar yetishib chiqadi",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "yutuk kadrlar",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "bilimlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "bilimlar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_03982",
+    "text": "Bank bilan salkam 7 yildan beri hamkorlikdaman yoki bankning mijoziman.Xizmat ko'rsatish va muomila madaniyati \"best of the best\".",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "Xizmat",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "muomila",
+        "category": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "Bank",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "muomila",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "xizmat",
+        "polarity": "positive"
+      },
+      {
+        "term": "muomila",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04003",
+    "text": "Click ilovasi ajoyib kop yutuqlar oynaladi",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "kop yutuqlar",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "yutuqlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04013",
+    "text": "Xalq banki eng ishonchli qulay bank",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "Xalq banki",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "bank",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04127",
+    "text": "Az Capital tradingni òrganmoqchiman.men uchun qiziqarli va foydali boladi deb oyliman",
+    "business_category": "Investitsiya/Trading",
+    "model_aspects": [
+      {
+        "term": "Az Capital tradingni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kurs",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kurs",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04133",
+    "text": "Vatanparvar eng zor mashina xaydashni malakali murabbiylar orgatadi.",
+    "business_category": "Davlat xizmatlari",
+    "model_aspects": [
+      {
+        "term": "mashina xaydashni",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "murabbiylar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "murabbiylar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04149",
+    "text": "Ake fx doim 1chilardan,o’quv jarayonlari juda zo’r prosta bomba ake fxda bilimlarimi oshirib hozirda yaxwi yutuqlarga erishmoqdaman,Ake fx birgalikda bir kuchmiz✊🏻",
+    "business_category": "Investitsiya/Trading",
+    "model_aspects": [
+      {
+        "term": "fx",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "oquv jarayonlar",
+        "polarity": "positive"
+      },
+      {
+        "term": "yutuqlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "oquv jarayonlar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04219",
+    "text": "Xazna ilovasidan doim foydalanaman bir zumda onlayn kredit olishingiz mumkin har bir otkazmalar va tlovlar uchun kesh back ham beradi.",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Xazna",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      },
+      {
+        "term": "keshback",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "ilova",
+        "polarity": "positive"
+      },
+      {
+        "term": "kredit",
+        "polarity": "positive"
+      },
+      {
+        "term": "keshback",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04413",
+    "text": "Eng yaxshi va arzon avto moyka",
+    "business_category": "Transport/Yo'l",
+    "model_aspects": [
+      {
+        "term": "avto moyka",
+        "category": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "avto moyka",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "avto moyka",
+        "polarity": "positive"
+      },
+      {
+        "term": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04448",
+    "text": "Tez oson va qulay pul otkazadiii",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "pul",
+        "category": "narx",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "pul otkazma",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "pul otkazma",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04499",
+    "text": "Sherin kalbasa brendiga gap yoq sfatli va mazali va halol",
+    "business_category": "Restoran/Ovqatlanish",
+    "model_aspects": [
+      {
+        "term": "kalbasa",
+        "category": "ovqat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "kolbasa",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "kolbasa",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04503",
+    "text": "KIUT (yeoju)juda zoʻr universitet.Talim sifati juda a'lo oʻzvekistonda bunaqa universitet yuq.Oʻzim shu unversitetda oʻqiyman sharoitlari juda zoʻr talabalar ham juda koʻp. Umumiy olgandazoʻr🔥🔥🔥",
+    "business_category": "Ta'lim",
+    "model_aspects": [
+      {
+        "term": "universitet",
+        "category": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "talabalar",
+        "category": "boshqalar",
+        "polarity": "neutral"
+      },
+      {
+        "term": "sharoitlari",
+        "category": "muhit",
+        "polarity": "positive"
+      },
+      {
+        "term": "Talim",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "talim sifati",
+        "polarity": "positive"
+      },
+      {
+        "term": "sharoitlar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "talim sifati",
+        "polarity": "positive"
+      },
+      {
+        "term": "sharoitlar",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04551",
+    "text": "Hizmat ko'rsatishi bo'yicha mamnunman.Tezkor yordam ko'rsatishadi va vaqtim behuda ketmaydi.",
+    "business_category": "Bank/Moliya",
+    "model_aspects": [
+      {
+        "term": "Hizmat",
+        "category": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "xizmat",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04758",
+    "text": "Tomchi somsasi juda shirin mazzali",
+    "business_category": "Restoran/Ovqatlanish",
+    "model_aspects": [
+      {
+        "term": "Tomchi",
+        "category": "ovqat",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "somsa",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "somsa",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04875",
+    "text": "Men bu yerdan katta buket gul zakaz bergandim tez yetib keldi",
+    "business_category": "Gul/Sovg'a",
+    "model_aspects": [
+      {
+        "term": "buket gul",
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "gul",
+        "polarity": "positive"
+      },
+      {
+        "term": "yetkazib berish",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "gul",
+        "polarity": "positive"
+      },
+      {
+        "term": "yetkazib berish",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  },
+  {
+    "review_id": "rev_04885",
+    "text": "Alimobi kartasi kartadan kartaga 5 milliongacha foyiz olmaydi tavsiya beraman hammag tavsiya beraman.",
+    "business_category": "To'lov tizimlari",
+    "model_aspects": [
+      {
+        "term": "Alimobi kartasi kartadan kartaga",
+        "category": "narx",
+        "polarity": "negative"
+      },
+      {
+        "category": "boshqalar",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator1": [
+      {
+        "term": "komissiya",
+        "polarity": "positive"
+      }
+    ],
+    "gold_aspects_annotator2": [
+      {
+        "term": "komissiya",
+        "polarity": "positive"
+      }
+    ],
+    "human_verified": true,
+    "note": "Two-stage annotation by two native-speaker authors: independent first pass, then convention reconciliation (residual exact-span agreement F1 0.927, polarity 100%)."
+  }
+]

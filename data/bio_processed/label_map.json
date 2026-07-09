@@ -1,0 +1,11 @@
+{
+  "O": 0,
+  "B-positive": 1,
+  "I-positive": 2,
+  "B-negative": 3,
+  "I-negative": 4,
+  "B-neutral": 5,
+  "I-neutral": 6,
+  "B-conflict": 7,
+  "I-conflict": 8
+}
