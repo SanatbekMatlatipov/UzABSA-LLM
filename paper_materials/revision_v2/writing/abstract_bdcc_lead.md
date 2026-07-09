@@ -12,8 +12,7 @@ comparison. Use only if you want to lean into venue fit; the current opening is 
 > systematic comparison of QLoRA-fine-tuned 7–8B LLMs (Qwen 2.5, Llama 3.1, DeepSeek-R1-Distill)
 > for Uzbek ABSA, benchmarked against fine-tuned Uzbek BERT encoders …
 
-Then continue with the existing sentences (dataset sizes, results, judge scores). Keep total
+Then continue with the existing sentences (dataset sizes, results judge scores). Keep total
 abstract under ~250 words.
 
-Note: MDPI abstracts must be a single unstructured paragraph with no citations and no line
-breaks — keep it one block when pasting into `main.tex`.
+Note: MDPI abstracts must be a single unstructured paragraph with no citations and no line breaks — keep it one block when pasting into `main.tex`.

@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.6694,
+    "ate_partial_f1": 0.7964,
+    "pair_f1": 0.5615,
+    "sentiment_accuracy": 0.8388
+  },
+  "B": {
+    "ate_exact_f1": 0.6528,
+    "ate_partial_f1": 0.7746,
+    "pair_f1": 0.5505,
+    "sentiment_accuracy": 0.8432
+  },
+  "n_examples": 609,
+  "n_boot": 5000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.0166,
+      "ci95": [
+        -0.0077,
+        0.04
+      ],
+      "p_value": 0.1796,
+      "significant_at_0.05": false
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.0218,
+      "ci95": [
+        0.0031,
+        0.0406
+      ],
+      "p_value": 0.0232,
+      "significant_at_0.05": true
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.011,
+      "ci95": [
+        -0.0179,
+        0.0402
+      ],
+      "p_value": 0.4616,
+      "significant_at_0.05": false
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": -0.0044,
+      "ci95": [
+        -0.0397,
+        0.0311
+      ],
+      "p_value": 0.804,
+      "significant_at_0.05": false
+    }
+  },
+  "A_name": "BERTbek",
+  "B_name": "TahrirchiBERT"
+}

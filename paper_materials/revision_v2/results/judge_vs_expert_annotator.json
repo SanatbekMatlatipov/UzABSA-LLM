@@ -1,0 +1,42 @@
+{
+  "completeness": {
+    "n": 150,
+    "spearman_rho": 0.4364,
+    "p": 0.0,
+    "mae": 0.9467,
+    "human_mean": 3.99,
+    "judge_mean": 3.3
+  },
+  "accuracy": {
+    "n": 150,
+    "spearman_rho": 0.4373,
+    "p": 0.0,
+    "mae": 0.54,
+    "human_mean": 4.15,
+    "judge_mean": 4.44
+  },
+  "sentiment": {
+    "n": 150,
+    "spearman_rho": 0.7952,
+    "p": 0.0,
+    "mae": 0.3333,
+    "human_mean": 4.24,
+    "judge_mean": 4.24
+  },
+  "relevance": {
+    "n": 150,
+    "spearman_rho": 0.683,
+    "p": 0.0,
+    "mae": 0.48,
+    "human_mean": 3.78,
+    "judge_mean": 3.97
+  },
+  "overall": {
+    "n": 150,
+    "spearman_rho": 0.6331,
+    "p": 0.0,
+    "mae": 0.5667,
+    "human_mean": 3.77,
+    "judge_mean": 3.75
+  }
+}

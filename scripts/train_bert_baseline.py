@@ -96,7 +96,14 @@ def main():
     from transformers import (AutoTokenizer, AutoModelForTokenClassification,
                               DataCollatorForTokenClassification, Trainer,
                               TrainingArguments, set_seed)
-    import evaluate as hf_evaluate
+    # NOTE: we call seqeval directly rather than the HuggingFace `evaluate` library.
+    # Running `python scripts/train_bert_baseline.py` puts scripts/ on sys.path[0], which
+    # shadows the pip `evaluate` package with this repo's scripts/evaluate.py — so
+    # `import evaluate` would fail with "no attribute 'load'". seqeval avoids the clash.
+    from seqeval.metrics import (precision_score as seq_precision,
+                                 recall_score as seq_recall,
+                                 f1_score as seq_f1,
+                                 accuracy_score as seq_accuracy)
 
     set_seed(args.seed)
     device = get_device(args.device if args.device != "auto" else "auto")
@@ -120,7 +127,6 @@ def main():
     model = AutoModelForTokenClassification.from_pretrained(
         args.model, num_labels=len(label2id), id2label=id2label, label2id=label2id)
 
-    seqeval = hf_evaluate.load("seqeval")
     label_list = [id2label[i] for i in range(len(id2label))]
 
     def compute_metrics(p):
@@ -130,9 +136,11 @@ def main():
             tp = [label_list[pr] for pr, l in zip(pred, lab) if l != -100]
             tl = [label_list[l] for pr, l in zip(pred, lab) if l != -100]
             true_preds.append(tp); true_labs.append(tl)
-        r = seqeval.compute(predictions=true_preds, references=true_labs)
-        return {"precision": r["overall_precision"], "recall": r["overall_recall"],
-                "f1": r["overall_f1"], "accuracy": r["overall_accuracy"]}
+        # seqeval signature is (y_true, y_pred)
+        return {"precision": seq_precision(true_labs, true_preds),
+                "recall": seq_recall(true_labs, true_preds),
+                "f1": seq_f1(true_labs, true_preds),
+                "accuracy": seq_accuracy(true_labs, true_preds)}
 
     targs = TrainingArguments(
         output_dir=str(out / "hf_trainer"),
@@ -147,11 +155,18 @@ def main():
         dataloader_pin_memory=False, report_to=[],
         use_cpu=(device == "cpu"),
     )
-    trainer = Trainer(
+    # Newer transformers (>=4.46) renamed Trainer's `tokenizer` arg to `processing_class`;
+    # older versions only accept `tokenizer`. Pick whichever this install supports.
+    import inspect
+    trainer_kwargs = dict(
         model=model, args=targs, train_dataset=ds_train, eval_dataset=ds_val,
-        tokenizer=tokenizer,
         data_collator=DataCollatorForTokenClassification(tokenizer),
         compute_metrics=compute_metrics)
+    if "processing_class" in inspect.signature(Trainer.__init__).parameters:
+        trainer_kwargs["processing_class"] = tokenizer
+    else:
+        trainer_kwargs["tokenizer"] = tokenizer
+    trainer = Trainer(**trainer_kwargs)
 
     log.info("Starting training...")
     trainer.train()

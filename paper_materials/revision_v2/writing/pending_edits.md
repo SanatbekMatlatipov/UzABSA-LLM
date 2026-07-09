@@ -1,72 +1,45 @@
-# Pending manuscript edits — do these once experiment numbers arrive
+# Pending manuscript edits — status after 2026-07-08 integration
 
-The safe, standalone writing fixes (P0-B) are **already applied** to
-`paper_materials/MDPI/paper/main.tex` and the file compiles clean. The edits below are
-**contingent on results** and must be completed before submission.
+Most of the original list is **DONE and applied** to `paper_materials/MDPI/paper/main.tex`
+(compiles clean: 0 undefined refs). What remains:
 
-## ⚠️ Forward references already placed in main.tex (must be backed by real results)
+## Still pending
 
-I added three forward-looking claims. They are TRUE only after the corresponding
-experiment runs. If an experiment is dropped, revert the matching claim.
+1. **IAA numbers in §Human Validation** — blocked on the rubric redo
+   (`human_validation/REDO_RUBRIC_INSTRUCTIONS.md`, ~2–3h for Sanatbek). After the redo:
+   re-run `python scripts/analyze_human_validation.py`, then add one sentence to
+   `sec:res_human` reporting weighted Cohen's κ and Krippendorff's α per dimension.
+   Until then the paper honestly claims only a single-expert calibration (no IAA claim).
 
-| Claim now in text | Location | Backed by |
-|---|---|---|
-| "benchmarked against fine-tuned Uzbek BERT encoders" | Intro contribution 1 ([main.tex:187]) + Conclusion | **P1 BERT baselines** must run |
-| "a human-validation study (IAA, judge calibration, gold-verified subset)" | Intro contribution 2 + Conclusion + Limitations | **P0-A** annotators must return files |
-| "quality degrades measurably with domain distance" | Conclusion + Limitations | Already supported by judge scores; strengthened by P0-A per-proximity F1 |
+2. **LLM significance tests (optional strengthening)** — run on the Mac:
+   `python scripts/dump_llm_preds.py --model <merged Qwen> --out .../qwen_preds.jsonl`
+   (and Llama), then `scripts/significance_test.py` for Qwen-vs-Llama and Qwen-vs-BERTbek.
+   Current text phrases LLM-vs-encoder gaps descriptively and reports only the
+   encoder-pair bootstrap (done: only partial-ATE significant, p=0.023).
 
-## Numbers-dependent edits (fill when results land)
+3. **Zenodo upload** — the paper's Data Availability now mentions the gold-verified subset;
+   upload `data/final_dataset/uzbek_multi_domain_absa_gold80.json` to the Zenodo record
+   (new version) so the claim is true at submission time.
 
-1. **Baseline rows in the results table** (`tab:absa_results`, [main.tex:~430]).
-   Add two rows (Tahrirchi-BERT, BERTbek) with ATE exact/partial F1, pair F1, sentiment
-   acc/macro-F1 from `baselines/*/eval_results.json`. Add 1–2 sentences in
-   §Results stating whether the LLM formulation beats the encoders (answers R1).
-   Also report the BIO **term-alignment rate** from `data/bio_processed/stats.json` as a
-   footnote caveat (BERT could only be trained on alignable gold terms).
+4. **BDCC citations** — verified entries live in `writing/bdcc_citations.bib`; still optional
+   to add 1–2 `\cite{}`s in Related Work (top pick: `bdcc_ner_disaster`, same SI, LoRA on
+   Qwen2-7B vs BERT+CRF). Low-effort editorial-fit signal.
 
-2. **New subsection "Human Validation of the Silver Dataset"** (after §4.2
-   Multi-Domain Quality Assessment). Pull from `results/human_validation_report.json`:
-   - IAA: weighted Cohen's κ + Krippendorff's α per rubric dimension (+ gold aspect/polarity κ).
-   - Judge calibration (R6): Spearman ρ + MAE, human vs GPT-4o-mini, per dimension. State
-     whether the judge is trustworthy (ρ target > 0.5–0.7).
-   - Silver quality (R3): model-vs-human ATE/pair F1 on the 80 gold reviews; the gold-vs-gold
-     ceiling; the per-proximity breakdown (in/near/out/distant) → substantiates R2 framing.
-   - Mention release of the gold-verified subset (`*_gold_verified.json`, flip
-     `human_verified: true` on those records in `data/final_dataset/`).
+5. **Pre-submission email** — `writing/presubmission_email.md` is ready to send (its abstract
+   already reflects encoder baselines + human validation).
 
-3. **Significance statements** (§Results, near the Qwen-vs-Llama comparison,
-   [main.tex:~458]). Replace bold "winner" phrasing with the paired-bootstrap result from
-   `significance/qwen_vs_llama.json` — expected: pair-F1 delta not significant → report as
-   a statistical tie with 95% CI. Do the same for best-LLM vs best-BERT.
+6. **Authorship decision** — single corresponding author (you); statistician co-author's
+   concrete role = bootstrap significance + agreement statistics. Update
+   `\authorcontributions{}` before submission.
 
-4. **Abstract additions** ([main.tex:124]). After the human-validation + BERT numbers exist,
-   add one sentence each: (a) "Fine-tuned Uzbek BERT baselines reach ATE F1 of X, vs Y for
-   the best LLM"; (b) "A native-speaker validation of N reviews yields Cohen's κ = … and a
-   judge–human Spearman ρ = …, and releases a gold-verified subset." Keep it tight.
-
-5. **BDCC citations.** Verified DOIs in `writing/bdcc_citations.bib`. Add `bdcc_ner_disaster`
-   (same SI; LoRA on Qwen2-7B vs BERT+CRF — cite as a close peer in Related Work / PEFT),
-   `bdcc_collectivia` (low-resource multilingual), optionally `bdcc_katakana`. Append these
-   entries to `mybibliography.bib` and add `\cite{}`s, then recompile.
-
-6. **Optional BDCC reframing of the abstract lead.** For a *Big Data and Cognitive Computing*
-   venue, consider leading the abstract with the scalable annotation-pipeline / data-creation
-   contribution, with the model comparison as the enabling study. A drop-in alternative
-   opening is in `writing/abstract_bdcc_lead.md`. Judgement call — current lead is acceptable.
-
-## Applied already (P0-B, no numbers needed) — for the record
-- Abstract grammar fixed ("models (Qwen…", "each evaluated…"); "first systematic" qualified
-  with "to the best of our knowledge".
-- RQ description-list → flowing prose; RQ tags removed from two subsection titles and the
-  loss paragraph; conclusion rewritten to match (no bold RQ callouts).
-- Contribution list trimmed 4→3 + de-superlatived; loss "finding" demoted to an observation
-  in both Intro and Discussion.
-- Limitations paragraph rewritten (removes now-addressed "no encoder baselines"/"no human
-  gold" claims; states compute constraint on the test split honestly).
-- Confirmed MDPI `main.tex` compiles with **zero undefined references / no `??`** (the
-  reviewer's broken citation was in the older Springer version, not this file).
-
-## Authorship optics (from P0-B.7) — your decision
-- Consider a single corresponding author (you). Give the statistician co-author a concrete,
-  visible role: the **paired-bootstrap significance analysis** (P2-C) and IAA statistics.
-  Update `\authorcontributions{}` accordingly.
+## Done (applied 2026-07-07/08) — for the record
+- P0-B writing pass (grammar, RQ de-templatizing, claim qualification, loss demotion,
+  limitations rewrite); confirmed no `??`/undefined refs (reviewer's broken cite was in the
+  old Springer version).
+- Encoder baselines: §Methodology subsection, 5-system results table with corrected bolds,
+  results finding paragraph, Discussion "When is a 7B LLM Worth It?", verified bib entries.
+- Human validation: §Results subsection + judge-calibration table (expert = annotator with
+  valid ratings), model-vs-gold + inter-human ceiling numbers, per-proximity gradient,
+  gold80 release file built, Data Availability updated.
+- Abstract rewritten (fixed now-inaccurate "highest ATE F1" claim; added BERT trade-off,
+  judge calibration, gold subset).
