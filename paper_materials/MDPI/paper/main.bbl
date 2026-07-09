@@ -123,6 +123,13 @@ Hu, E.J.; Shen, Y.; Wallis, P.; Allen-Zhu, Z.; Li, Y.; Wang, S.; Wang, L.;
 \newblock In Proceedings of the International Conference on Learning
   Representations,  2022.
 
+\bibitem[Zhang et~al.(2026)Zhang, Lin, Wang, Yu, and Chen]{bdcc_ner_disaster}
+Zhang, K.; Lin, X.; Wang, M.; Yu, H.; Chen, L.
+\newblock Named Entity Recognition Method for Natural Disaster Emergencies
+  Based on Instruction Tuning and Graph Retrieval-Augmented Generation.
+\newblock {\em Big Data and Cognitive Computing} {\bf 2026}, {\em 10},~185.
+\newblock {\url{https://doi.org/10.3390/bdcc10060185}}.
+
 \bibitem[Aripov et~al.(2022)Aripov, Khakimov, Matlatipov, and
   Sirojiddinov]{10.1007/978-3-031-05328-3_6}
 Aripov, M.; Khakimov, M.; Matlatipov, S.; Sirojiddinov, Z.
@@ -193,6 +200,23 @@ Matlatipov, S.G.; Rajabov, J.; Kuriyozov, E.; Aripov, M.
 \newblock In Proceedings of the Proceedings of the 3rd Annual Meeting of the
   Special Interest Group on Under-resourced Languages@ LREC-COLING 2024,  2024,
   pp. 394--403.
+
+\bibitem[Kuriyozov et~al.(2024)Kuriyozov, Vilares, and
+  G{\'o}mez-Rodr{\'i}guez]{kuriyozov2024bertbek}
+Kuriyozov, E.; Vilares, D.; G{\'o}mez-Rodr{\'i}guez, C.
+\newblock {BERTbek}: A Pretrained Language Model for {U}zbek.
+\newblock In Proceedings of the Proceedings of the 3rd Annual Meeting of the
+  Special Interest Group on Under-resourced Languages @ LREC-COLING 2024,
+  Torino, Italy,  2024; pp. 33--44.
+
+\bibitem[Mamasaidov and Shopulatov(2023)]{tahrirchibert2023}
+Mamasaidov, M.; Shopulatov, A.
+\newblock {TahrirchiBERT} base: A {RoBERTa}-based Language Model Pre-trained on
+  5{B} Tokens of {U}zbek Latin-script Text.
+\newblock Hugging Face model card,  2023.
+\newblock Available online:
+  \url{https://huggingface.co/tahrirchi/tahrirchi-bert-base} (accessed on 8
+  July 2026).
 
 \bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
   Li, Xing, Zhang, Gonzalez, and Stoica]{10.5555/3666122.3668142}

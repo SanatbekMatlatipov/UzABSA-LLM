@@ -121,10 +121,10 @@ $^{2}$ \quad Department of Statistics, Faculty of Science, King Abdulaziz Univer
 %\conference{} % An extended version of a conference paper
 
 % Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{To the best of our knowledge, this study is the first systematic investigation of parameter-efficient fine-tuning for Uzbek ABSA. We compare three open-source large language models (Qwen~2.5-7B, Llama~3.1-8B, and DeepSeek-R1-Distill-Qwen-7B), each evaluated under identical QLoRA configurations on the UzABSA restaurant-review dataset, which contains 6{,}175 original annotated sentences and 6{,}089 usable ChatML-formatted instances after preprocessing. ABSA is reformulated as a GenAI task with Uzbek-language instruction tuning, enabling models to jointly extract aspect terms and classify sentiment polarity in a single pass, producing structured JSON output. Evaluation on 609 validation examples demonstrates that Qwen~2.5-7B achieves the highest aspect term extraction F1 score of 0.6603 with a perfect 100\% JSON parse rate, while Llama~3.1-8B leads in end-to-end pair F1 (0.5805) and sentiment accuracy (0.8864). Importantly, training loss does not reliably predict downstream task performance: Qwen surpasses Llama in extraction despite a 31\% higher validation loss. Based on these findings, a three-layer model-assisted annotation pipeline is proposed, integrating local inference, LLM-as-Judge quality scoring, and quality-tiered assembly. Application of this pipeline to 5,038 multi-domain Uzbek business reviews across 23 categories produces a novel silver-standard dataset containing 9,884 aspect–sentiment pairs, with 63.5\% of judged annotations meeting inclusion quality thresholds.}
+\abstract{Uzbek, a Turkic language with almost 38 million speakers, remains under-served in aspect-based sentiment analysis (ABSA). We present, to our knowledge, the first systematic study of parameter-efficient fine-tuning of open-source large language models (LLMs) for Uzbek ABSA: Qwen~2.5-7B, Llama~3.1-8B, and DeepSeek-R1-Distill-7B are fine-tuned under identical QLoRA configurations to jointly extract aspect terms and classify sentiment as structured JSON. On a 609-example evaluation set, Qwen achieves the best LLM extraction F1 (0.660) with a 100\% parse rate, while Llama leads in end-to-end pair F1 (0.581) and sentiment accuracy (0.886). Benchmarking against fine-tuned Uzbek BERT encoders reveals a task-dependent trade-off: a 110M-parameter encoder slightly surpasses the LLMs at span extraction, whereas the LLMs are clearly stronger at sentiment and joint prediction. We then propose a three-layer model-assisted annotation pipeline---local inference, LLM-as-Judge quality scoring, and quality-tiered assembly---and apply it to 5{,}038 business reviews from 23 domains, producing a multi-domain Uzbek ABSA dataset of 9{,}884 aspect--sentiment pairs. A native-speaker validation study calibrates the LLM judge against human ratings (Spearman $\rho=0.66$ for overall quality) and contributes an 80-review gold-verified subset. All code, models, and datasets are publicly released.}
 
 % Keywords
-\keyword{Aspect-Based Sentiment Analysis; Low-Resource NLP; Uzbek Language; Parameter-Efficient Fine-Tuning; QLoRA; Large Language Models; Multi-Domain Dataset} 
+\keyword{Aspect-Based Sentiment Analysis; Low-Resource NLP; Uzbek Language; Parameter-Efficient Fine-Tuning; QLoRA; Large Language Models; LLM-as-Judge; Multi-Domain Dataset}
 
 % The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
 %\PACS{J0101}
@@ -186,7 +186,7 @@ This work is guided by three questions. First, we ask to what extent parameter-e
 \begin{enumerate}
 \item To our knowledge, the first systematic evaluation of QLoRA-fine-tuned open-source LLMs for Uzbek ABSA, comparing three architectures at the same parameter scale under identical training conditions, and benchmarked against fine-tuned Uzbek BERT encoders.
 
-\item A scalable model-assisted annotation pipeline that combines local inference, LLM-as-Judge quality scoring, and quality-tiered assembly, together with a human-validation study (inter-annotator agreement, judge calibration, and a gold-verified subset) that quantifies the reliability of the resulting resource.
+\item A scalable model-assisted annotation pipeline that combines local inference, LLM-as-Judge quality scoring, and quality-tiered assembly, together with a native-speaker validation study (a two-stage annotation-agreement analysis, calibration of the LLM judge, and a gold-verified subset) that quantifies the reliability of the resulting resource.
 
 \item A multi-domain Uzbek ABSA dataset covering 5{,}038 reviews across 23~business categories with 9{,}884 aspect--sentiment pairs and per-annotation quality metadata. The present experiments use the original five-category UzABSA label space; a separate 119-subcategory taxonomy is released as an auxiliary resource for future domain-adaptive annotation.
 \end{enumerate}
@@ -210,13 +210,13 @@ SemEval-2014 Task~4~\cite{pontiki-etal-2014-semeval} established the modern ABSA
 Recent work increasingly reframes ABSA as generation: Scaria et al. \cite{scaria-etal-2024-instructabsa} propose InstructABSA, using instruction-tuned LLMs to jointly extract aspect terms and predict sentiment in a single step by generating structured text, enabling unified modeling and more open-ended aspect vocabularies. However, generative ABSA has largely focused on English, leaving morphologically rich, low-resource languages underexplored; we extend this paradigm to Uzbek by fine-tuning open-source instruction-tuned LLMs to produce structured JSON outputs.% ----------------------------------------------------------------------
 
 \textbf{LLM Fine-Tuning for Low-Resource Languages}. Large multilingual foundation models have broadened NLP beyond English. Architectures such as mT5, BLOOM, Llama~\cite{Touvron2023-lf,Grattafiori2024-ka}, and Qwen~\cite{Qwen2024-kr} differ in low-resource coverage, largely reflecting their pre-training data; for Turkic languages, Qwen~2.5 reports broader multilingual coverage than Llama~3.1, but neither explicitly guarantees Uzbek support. Task adaptation in low-resource settings is constrained by the cost of full fine-tuning for 7--8B models (tens of GB VRAM and substantial compute). Parameter-efficient methods mitigate this: LoRA~\cite{hu2022lora} adds trainable low-rank adapters to attention while freezing base weights, and QLoRA~\cite{10.5555/3666122.3666563} combines LoRA with 4-bit NormalFloat quantization to reduce memory to $<6$~GB for 7B-scale models, enabling single-GPU fine-tuning.
-Prior work reports strong results for parameter-efficient adaptation on several non-English/low-resource tasks (e.g., Arabic sentiment analysis, Turkish NER, Korean QA), yet, to our knowledge, LoRA/QLoRA has not been applied to Uzbek NLP. We address this gap by systematically evaluating QLoRA-adapted LLMs for Uzbek ABSA under controlled conditions.% ----------------------------------------------------------------------
+Prior work reports strong results for parameter-efficient adaptation on several non-English/low-resource tasks (e.g., Arabic sentiment analysis, Turkish NER, Korean QA), and recent studies pair LoRA-tuned 7B models with encoder baselines for structured extraction, finding the generative approach competitive with supervised BERT-style taggers~\cite{bdcc_ner_disaster}. Yet, to our knowledge, LoRA/QLoRA has not been applied to Uzbek NLP. We address this gap by systematically evaluating QLoRA-adapted LLMs for Uzbek ABSA under controlled conditions, benchmarked against fine-tuned monolingual Uzbek encoders.% ----------------------------------------------------------------------
 
 \textbf{Uzbek Natural Language Processing}. Early work addressed core infrastructure: Aripov et al. \cite{10.1007/978-3-031-05328-3_6} studied multilingual MT with Uzbek, highlighting challenges from agglutinative morphology, while \cite{sharipov-et-all,sharipov2023uzbektagger} introduced UzbekTagger, a rule-based POS tagger and one of the few public morphological tools. Script variation is another persistent obstacle: after the 1993 shift from Cyrillic to Latin, much user text still appears in Cyrillic; Salaev et al.\cite{Salaev2024} proposed a transliteration tool to normalize across scripts.
 
 For sentiment analysis, Kuriyozov and Matlatipov~\cite{kuriyozov2019building} created an early sentence-level Uzbek dataset with baseline classifiers, later extended by \cite{kuriyozov2022construction} through a broader study of low-resource sentiment dataset construction and benchmarking. Matlatipov et al.\cite{Matlatipov2009,uzbekendingssanat} further examined restaurant-domain sentiment classification on locally collected reviews. The closest resource to our study is UzABSA~\cite{matlatipov2024uzabsa}, the first Uzbek ABSA dataset, following the SemEval-2014 Task~4 scheme~\cite{pontiki-etal-2014-semeval}, with 6{,}175 annotated restaurant sentences, 7{,}412 aspect-term spans with polarity, and 7{,}724 aspect-category labels over five categories (\textit{ovqat}, \textit{muhit}, \textit{xizmat}, \textit{narx}, \textit{boshqalar}).
 
-Overall, prior Uzbek NLP work, including UzABSA~\cite{matlatipov2024uzabsa}, has mainly relied on rule-based methods, traditional machine learning, or encoder-based neural models; to the best of our knowledge, no published work has fine-tuned LLMs (full or parameter-efficient) for Uzbek ABSA, a gap directly addressed by the present study.% ----------------------------------------------------------------------
+On the modeling side, monolingual Uzbek encoders have recently become available, notably BERTbek~\cite{kuriyozov2024bertbek}, trained on Uzbek news text, and TahrirchiBERT~\cite{tahrirchibert2023}, trained on $\sim$5B tokens of Latin-script Uzbek; we employ both as fine-tuned baselines in this study (\Cref{sec:meth_encoder}). Overall, prior Uzbek NLP work, including UzABSA~\cite{matlatipov2024uzabsa}, has mainly relied on rule-based methods, traditional machine learning, or encoder-based neural models; to the best of our knowledge, no published work has fine-tuned LLMs (full or parameter-efficient) for Uzbek ABSA, a gap directly addressed by the present study.% ----------------------------------------------------------------------
 
 \phantomsection\label{sec:rw_judge}
 \textbf{LLM-as-Judge for Annotation Quality}. LLM-as-Judge uses large language models as automated evaluators, providing a scalable alternative to human assessment of generated text. Zheng et al.\cite{10.5555/3666122.3668142} introduced MT-Bench and Chatbot Arena, showing that strong LLMs (e.g., GPT-4) can yield scores that correlate with human preferences in open-ended dialogue. This approach has since been extended to instruction-following, summarisation, and translation, offering cost efficiency, reproducibility, and scalability when human annotation is expensive or impractical---particularly for low-resource languages. However, LLM judges may suffer from positional bias, self-enhancement bias, and session-to-session score drift~\cite{2506.22316}. While these issues are documented for chat-style evaluation, they are less studied for structured tasks such as information extraction or ABSA.
@@ -362,6 +362,13 @@ Qwen~2.5-7B-Instruct~\cite{Qwen2024-kr} is a 7.6B decoder-only transformer with 
 
 We adopt QLoRA~\cite{10.5555/3666122.3666563} for parameter-efficient adaptation. Base weights are quantized to 4-bit NormalFloat (NF4) with double quantization and BFloat16 compute. LoRA adapters ($r{=}16$, $\alpha{=}32$, dropout $0.05$, no bias) are applied to all attention and feed-forward linear projections, yielding 40.4M trainable parameters ($\sim$0.92\% of total for the 7B models). Training is performed via the SFTTrainer with Unsloth's optimized fused kernels and gradient checkpointing to minimize memory footprint. All three models are trained under strictly identical hyperparameters to isolate architectural differences: 8-bit AdamW optimizer, learning rate of $2{\times}10^{-4}$ with a cosine schedule and 0.1 warmup ratio, 0.01 weight decay, and gradient clipping at 1.0. We train for 1{,}000 steps on the 5{,}480-example split using a maximum sequence length of 2{,}048 tokens and an effective batch size of 16 (per-device batch 4, 4 accumulation steps).
 % ----------------------------------------------------------------------
+\subsection{Encoder Baselines}
+\label{sec:meth_encoder}
+
+To situate the generative formulation against classical ABSA architectures, we fine-tune two monolingual Uzbek encoders as token-classification baselines: BERTbek~\cite{kuriyozov2024bertbek}, a BERT-base model pre-trained on Uzbek news text, and TahrirchiBERT~\cite{tahrirchibert2023}, a RoBERTa-base model pre-trained on approximately 5B tokens of Uzbek Latin-script text. Both have $\sim$110M parameters---roughly 1.5\% of the size of the 7--8B LLMs.
+
+Joint extraction and polarity classification is cast as BIO tagging with polarity-augmented labels (\texttt{O}, \texttt{B-}/\texttt{I-}\{\textit{positive, negative, neutral, conflict}\}), so a single encoder predicts aspect spans and their sentiment simultaneously; decoded spans are converted to the same \{term, polarity\} structure used by the generative models, enabling identical scoring. Gold character spans are projected onto whitespace/punctuation word tokens; 98.2\% of training and 98.5\% of validation aspect terms could be localized this way (unlocalizable terms are dropped from encoder \emph{training} only---evaluation for all systems uses the full reference set). Both encoders are trained on the identical 5{,}480-example split used for the LLMs (learning rate $3{\times}10^{-5}$, 4~epochs, batch size 16, maximum length 192, seed 42) and evaluated on the same 609-example set. Notably, the encoder baselines require no GPU-server infrastructure: each fine-tuning run completes in approximately 10~minutes on an Apple~M2 laptop.
+% ----------------------------------------------------------------------
 \subsection{Multi-Domain Annotation Pipeline}
 \label{sec:meth_pipeline}
 
@@ -395,7 +402,7 @@ All inference is performed with near-greedy decoding (\texttt{temperature}$=$0.1
 \label{sec:results}
 
 % ----------------------------------------------------------------------
-All experiments run on a single NVIDIA RTX A6000 GPU (48\,GB VRAM) using Python~3.10 with Unsloth, TRL, PEFT, and bitsandbytes. The UzABSA dataset is split 90/10 into training (5{,}480) and validation (609) sets with a fixed seed of~42. Each of the three models is trained for exactly 1{,}000 gradient steps under the QLoRA configuration described in \Cref{sec:meth_qlora}; the \emph{only} variable across runs is the base model. We use the term validation set because the processed split was originally prepared for controlled model comparison; no additional hyperparameter search was performed on this split after observing downstream ABSA metrics. A fully separate held-out test split and zero-shot or encoder-based baselines are left for future work. \Cref{tab:train_efficiency} summarises the resulting training efficiency.
+All experiments run on a single NVIDIA RTX A6000 GPU (48\,GB VRAM) using Python~3.10 with Unsloth, TRL, PEFT, and bitsandbytes. The UzABSA dataset is split 90/10 into training (5{,}480) and validation (609) sets with a fixed seed of~42. Each of the three models is trained for exactly 1{,}000 gradient steps under the QLoRA configuration described in \Cref{sec:meth_qlora}; the \emph{only} variable across runs is the base model. We use the term validation set because the processed split was originally prepared for controlled model comparison; no additional hyperparameter search was performed on this split after observing downstream ABSA metrics. A fully separate held-out test split and zero-/few-shot prompting baselines are left for future work; fine-tuned encoder baselines are evaluated on the same split (\Cref{sec:meth_encoder}). \Cref{tab:train_efficiency} summarises the resulting training efficiency.
 
 \begin{table}[t]
 \centering
@@ -419,46 +426,51 @@ Best eval loss           & 0.3656 & 0.2785 & 0.3363 \\
 \subsection{Three-Model ABSA Comparison}
 \label{sec:res_comparison}
 
-\Cref{tab:absa_results} presents the full evaluation on the 609-example validation set. Three complementary findings emerge.
+\Cref{tab:absa_results} presents the full evaluation on the 609-example evaluation set, covering the three QLoRA-fine-tuned LLMs and the two fine-tuned Uzbek encoder baselines (\Cref{sec:meth_encoder}). Four complementary findings emerge.
 
 \begin{table}[t]
 \centering
-\caption{ABSA evaluation on the validation set (609 examples). Best scores per metric are \textbf{bold}. All models use greedy decoding (\texttt{temperature}$=$0.1).}
+\caption{ABSA evaluation on the 609-example evaluation set. Best scores per metric are \textbf{bold}. LLMs use greedy decoding (\texttt{temperature}$=$0.1); encoder baselines (BERTbek, TahrirchiBERT) use BIO-polarity token classification (\Cref{sec:meth_encoder}) and produce structured output by construction, so the JSON parse rate does not apply. Several inter-system gaps are not statistically significant (see text).}
 \label{tab:absa_results}
-\setlength{\tabcolsep}{3.5pt}
-\begin{tabular}{llccc}
+\setlength{\tabcolsep}{2.5pt}
+\small
+\begin{tabular}{llccccc}
 \toprule
-\textbf{Task} & \textbf{Metric} & \textbf{Qwen 2.5-7B} & \textbf{Llama 3.1-8B} & \textbf{DeepSeek-R1-7B} \\
+& & \multicolumn{3}{c}{\textbf{Fine-tuned LLMs (QLoRA, 7--8B)}} & \multicolumn{2}{c}{\textbf{Encoders ($\sim$110M)}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-7}
+\textbf{Task} & \textbf{Metric} & \textbf{Qwen 2.5} & \textbf{Llama 3.1} & \textbf{DeepSeek-R1} & \textbf{BERTbek} & \textbf{Tahrirchi} \\
 \midrule
 \multirow{3}{*}{ATE (exact)}
-  & Precision & 0.6138 & \textbf{0.6394} & 0.5348 \\
-  & Recall    & \textbf{0.7143} & 0.6713 & 0.6921 \\
-  & F1        & \textbf{0.6603} & 0.6549 & 0.6034 \\
+  & Precision & 0.6138 & 0.6394 & 0.5348 & \textbf{0.6595} & 0.6510 \\
+  & Recall    & \textbf{0.7143} & 0.6713 & 0.6921 & 0.6796 & 0.6546 \\
+  & F1        & 0.6603 & 0.6549 & 0.6034 & \textbf{0.6694} & 0.6528 \\
 \midrule
 \multirow{3}{*}{ATE (partial)}
-  & Precision & 0.7163 & \textbf{0.7411} & 0.6452 \\
-  & Recall    & \textbf{0.8336} & 0.7781 & 0.8350 \\
-  & F1        & \textbf{0.7705} & 0.7591 & 0.7279 \\
+  & Precision & 0.7163 & 0.7411 & 0.6452 & \textbf{0.7833} & 0.7724 \\
+  & Recall    & 0.8336 & 0.7781 & \textbf{0.8350} & 0.8072 & 0.7767 \\
+  & F1        & 0.7705 & 0.7591 & 0.7279 & \textbf{0.7951} & 0.7746 \\
 \midrule
 \multirow{3}{*}{E2E Pair}
-  & Precision & 0.5387 & \textbf{0.5667} & 0.4448 \\
-  & Recall    & \textbf{0.6269} & 0.5950 & 0.5756 \\
-  & F1        & 0.5795 & \textbf{0.5805} & 0.5018 \\
+  & Precision & 0.5387 & \textbf{0.5667} & 0.4448 & 0.5532 & 0.5490 \\
+  & Recall    & \textbf{0.6269} & 0.5950 & 0.5756 & 0.5700 & 0.5520 \\
+  & F1        & 0.5795 & \textbf{0.5805} & 0.5018 & 0.5615 & 0.5505 \\
 \midrule
 \multirow{2}{*}{Sentiment}
-  & Accuracy  & 0.8777 & \textbf{0.8864} & 0.8317 \\
-  & Macro-F1  & 0.8113 & \textbf{0.8435} & 0.7717 \\
+  & Accuracy  & 0.8777 & \textbf{0.8864} & 0.8317 & 0.8388 & 0.8432 \\
+  & Macro-F1  & 0.8113 & \textbf{0.8435} & 0.7717 & 0.7691 & 0.7673 \\
 \midrule
-JSON parse & Success rate & \textbf{100.0\%} & 95.9\% & 95.4\% \\
+JSON parse & Success rate & \textbf{100.0\%} & 95.9\% & 95.4\% & --- & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Qwen excels at aspect extraction.} Qwen~2.5-7B achieves the highest ATE F1 on both exact (0.6603) and partial match (0.7705), driven by the best recall across all extraction metrics. It also attains a perfect 100\% JSON parse rate---a critical advantage for production annotation pipelines.
+\textbf{Qwen excels at aspect extraction among the LLMs.} Qwen~2.5-7B achieves the highest LLM ATE F1 on both exact (0.6603) and partial match (0.7705), driven by the best recall across all extraction metrics. It also attains a perfect 100\% JSON parse rate---a critical advantage for production annotation pipelines.
 
-\textbf{Llama leads on sentiment and end-to-end performance.} Llama~3.1-8B obtains the highest E2E Pair F1 (0.5805), sentiment accuracy (0.8864), and sentiment macro-F1 (0.8435). Its precision-oriented extraction compensates for slightly lower recall, yielding the best aspect--polarity pair matching. Notably, the Pair F1 gap between Llama and Qwen is only 0.001---effectively a tie.
+\textbf{Llama leads on sentiment and end-to-end performance.} Llama~3.1-8B obtains the highest E2E Pair F1 (0.5805), sentiment accuracy (0.8864), and sentiment macro-F1 (0.8435) of any system. Its precision-oriented extraction compensates for slightly lower recall, yielding the best aspect--polarity pair matching. Notably, the Pair F1 gap between Llama and Qwen is only 0.001---effectively a tie.
 
 \textbf{DeepSeek underperforms despite reasoning distillation.} DeepSeek-R1-Distill-Qwen-7B scores lowest on every ABSA metric. It over-predicts aspects substantially (933 predictions vs.\ 721 gold; ratio 1.29), whereas Llama is closest to the gold count (757; ratio 1.05) and Qwen moderately over-predicts (839; ratio 1.16). The R1 reasoning distillation, while designed for chain-of-thought tasks, appears detrimental to direct structured JSON extraction.
+
+\textbf{Encoders are competitive at extraction; LLMs win on sentiment.} The fine-tuned Uzbek encoders are strong extraction baselines: BERTbek attains the best exact (0.6694) and partial (0.7951) ATE F1 of any system, despite having $\sim$1.5\% of the LLMs' parameters, and its exact-ATE margin over Qwen is small (+0.009). The LLM advantage concentrates elsewhere: sentiment macro-F1 (Llama 0.8435, Qwen 0.8113 vs.\ $\approx$0.77 for both encoders) and end-to-end pair F1 (0.5805/0.5795 vs.\ 0.5615/0.5505). A paired bootstrap (10{,}000 resamples) between the two encoders finds only their partial-match ATE difference significant ($p=0.023$); their exact-ATE, pair-F1, and sentiment differences are statistical ties. These results indicate that for pure span extraction in Uzbek, a laptop-trainable 110M encoder remains a highly competitive choice, whereas the generative LLMs deliver their value in joint aspect--sentiment prediction, categorical labeling within the same output structure, and the instruction-following flexibility that the annotation pipeline in \Cref{sec:meth_pipeline} depends on.
 
 \textbf{Training Loss vs.\ Task Performance.} Consistent with our second research question, ranking the models by validation loss, as visualized in Fig. \ref{fig:loss_curves}, diverges from ranking them by downstream task metrics.
 Llama achieves the lowest evaluation loss (0.2785) and the highest E2E Pair F1 (0.5805), yet Qwen surpasses it on exact ATE F1 (0.6603 vs.\ 0.6549) despite having a 31\% higher validation loss (0.3656). Furthermore, DeepSeek holds the second-best evaluation loss (0.3363) but yields the worst ABSA scores across the board (ATE F1 0.6034; Pair F1 0.5018). Cross-entropy loss captures token-level prediction quality but is blind to structured output correctness---aspect boundary precision, JSON formatting, and polarity alignment. This finding implies that model selection for structured extraction tasks should not rely on validation loss alone.
@@ -530,6 +542,35 @@ In-domain    & Restoran       & 50 & 3.68 & 4.76 & 4.56 & 4.66 & 4.24 \\
 
 \textbf{Annotation Pipeline Output.} Batch annotation of the full 5{,}038-review corpus produces 9{,}884 aspects (average 1.96 per review) with a 100\% JSON parse rate across all 23~domains. The polarity distribution is 75.1\% positive, 16.5\% negative, and 8.4\% neutral---reflecting a natural skew in user-generated reviews. The aspect category distribution reveals a notable pattern: \emph{boshqalar} (miscellaneous) dominates at 45.5\%, followed by \emph{ovqat} (17.9\%), \emph{xizmat} (15.9\%), \emph{muhit} (10.7\%), and \emph{narx} (9.0\%).
 
+% ----------------------------------------------------------------------
+\subsection{Human Validation of Annotation Quality}
+\label{sec:res_human}
+
+Because both the silver annotations and their quality scores originate from models, we validate a subsample against native-speaker judgement. Two native Uzbek-speaking authors annotated a stratified subsample of 150 reviews drawn from the 307 judged reviews (all 23 domains represented, deliberately oversampling distant and low-scoring domains), performing two tasks: (i) rating the model's predicted annotations on the same five-dimension 1--5 rubric used by the LLM judge, and (ii) re-annotating a subset of 80 reviews from scratch to obtain human gold references.
+
+Gold annotation followed a two-stage protocol. In the first, fully independent pass, the two annotators' span-level agreement was low (exact-match F1 0.277, partial 0.415)---not because they disagreed about opinions, but because their segmentation and normalization conventions diverged (lemmatized vs.\ surface forms; naming the referent rather than the mention); polarity agreement on matched terms was perfect. In the second stage the annotators reconciled conventions and produced a consolidated gold standard with high residual span agreement (exact F1 0.927, polarity 100\%), released as the gold-verified subset alongside the silver corpus. This two-stage outcome is itself informative: even for native speakers, \emph{what counts as the aspect span} is the dominant source of ABSA annotation disagreement in Uzbek, while polarity is essentially unambiguous.
+
+\textbf{Judge calibration.} \Cref{tab:judge_calibration} compares GPT-4o-mini's scores with the mean human rating on the same 150 reviews (rubric ratings were produced after joint calibration of the scale; the raters' post-calibration consistency is high, with quadratic-weighted $\kappa$ of 0.91--0.97 across dimensions). Rank correlations are moderate to strong on the dimensions that drive dataset assembly---sentiment ($\rho=0.81$), relevance ($\rho=0.67$), and the tier-defining overall score ($\rho=0.66$; all $p<10^{-6}$)---and the judge's mean overall score (3.75) closely matches the human mean (3.84). Correlations are weaker for completeness and accuracy ($\rho\approx0.43$--0.46), where the judge is systematically harsher on completeness (mean 3.30 vs.\ 4.04). We conclude that the LLM judge is a usable, though imperfect, proxy for native-speaker quality judgement, and that its quality tiers rank annotations in an order humans broadly agree with.
+
+\begin{table}[t]
+\centering
+\caption{Calibration of the GPT-4o-mini judge against the mean rating of two native-speaker annotators on the same 150 reviews (Spearman $\rho$, all $p<10^{-6}$; MAE on the 1--5 scale).}
+\label{tab:judge_calibration}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Dimension} & \textbf{$\rho$} & \textbf{MAE} & \textbf{Human mean} & \textbf{Judge mean} \\
+\midrule
+Sentiment    & 0.806 & 0.34 & 4.25 & 4.24 \\
+Relevance    & 0.667 & 0.50 & 3.85 & 3.97 \\
+Overall      & 0.657 & 0.55 & 3.84 & 3.75 \\
+Accuracy     & 0.433 & 0.54 & 4.19 & 4.44 \\
+Completeness & 0.462 & 0.94 & 4.04 & 3.30 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Model vs.\ human gold.} Against the consolidated gold references, the model achieves exact-match ATE F1 of 0.209--0.224 and partial-match F1 of 0.425--0.433 (per annotator), with 100\% polarity agreement on exactly matched terms. Two reference points contextualize these scores. First, the model's partial-match agreement ($\approx$0.43) matches the level two humans reach \emph{before} convention reconciliation (0.415), while falling well short of the reconciled ceiling (0.93)---the gap is concentrated in span segmentation, not in opinion detection or polarity. Second, across domain-proximity groups the human-measured quality reproduces the judge's gradient, falling from 0.244 exact pair F1 on general out-of-domain reviews to 0.170 on the most distant domains. We note the scope of this study: the annotators are authors of this paper, and the sample sizes per domain are small; a larger validation with external annotators is left for future work.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -543,10 +584,13 @@ In-domain    & Restoran       & 50 & 3.68 & 4.76 & 4.56 & 4.66 & 4.24 \\
 \textbf{Architecture vs.\ Pre-Training Effects}. DeepSeek's R1 reasoning distillation does not benefit structured ABSA: despite sharing the Qwen-7B backbone, it underperforms both Qwen and Llama, likely due to reasoning-oriented output patterns conflicting with strict JSON formatting. Llama achieves the lowest loss and best sentiment accuracy, but Qwen is superior for reliable extraction and instruction following (100\% parse rate, highest ATE recall). For annotation pipelines, robust JSON compliance and extraction coverage are more critical than marginal gains in sentiment metrics.
 
 % ----------------------------------------------------------------------
+\textbf{When is a 7B LLM Worth It?} The encoder baselines sharpen the practical picture. A 110M monolingual encoder, fine-tuned in ten minutes on a laptop, matches or exceeds the 7--8B LLMs at aspect-term extraction---a reminder that for span identification in a morphologically rich language, targeted monolingual pre-training (BERTbek, TahrirchiBERT) remains remarkably effective. The LLMs justify their cost where the task is genuinely joint and generative: sentiment macro-F1 (+4--7 points over the encoders), unified term--category--polarity output, and the ability to follow natural-language instructions on unseen domains, which is what the multi-domain annotation pipeline exploits. Teams building Uzbek ABSA systems under tight compute budgets should therefore consider encoders for extraction-only workloads and reserve LLMs for joint prediction and annotation-generation scenarios.
+
+% ----------------------------------------------------------------------
 \textbf{Loss as a Model Selection Proxy}. Validation loss ranking diverges from ABSA performance: Llama's lowest loss does not translate to the best extraction, while Qwen outperforms on ATE F1 despite higher loss. Cross-entropy loss captures token-level likelihood but not structured-output quality such as JSON validity or aspect-boundary precision. This divergence is expected for structured-generation tasks, yet it is easy to overlook in practice; model selection for ABSA is therefore better guided by task-specific metrics than by validation loss alone.
 
 % ----------------------------------------------------------------------
-\textbf{Limitations}. This study trains exclusively on restaurant reviews, without domain-adaptive fine-tuning; cross-domain performance should therefore be read as a demonstration of pipeline feasibility rather than a claim of uniform quality, and indeed we observe measurable degradation on distant domains. While we validate a stratified subset of the multi-domain corpus against native-speaker annotations (\Cref{sec:res_multidomain}), the released dataset remains predominantly silver-standard: the human-verified portion is a subset, and the remaining annotations carry only model- and judge-derived quality estimates. Positive polarity dominates both datasets, and compute constraints (no GPU for retraining) meant the model comparison reuses the fixed evaluation split rather than a separately retrained held-out test set. Tokenizer efficiency and larger-scale human verification remain for future work.
+\textbf{Limitations}. This study trains exclusively on restaurant reviews, without domain-adaptive fine-tuning; cross-domain performance should therefore be read as a demonstration of pipeline feasibility rather than a claim of uniform quality, and indeed we observe measurable degradation on distant domains. While we validate a stratified subset of the multi-domain corpus against native-speaker annotations (\Cref{sec:res_human}), the released dataset remains predominantly silver-standard: the human-verified portion is an 80-review subset produced by two author--annotators under a two-stage reconciliation protocol, and the remaining annotations carry only model- and judge-derived quality estimates. Positive polarity dominates both datasets, and compute constraints meant the model comparison reuses the fixed evaluation split rather than a separately retrained held-out test set; for the same reason, statistical significance testing covers the encoder pair, while the LLM--encoder gaps are reported descriptively. Tokenizer efficiency and larger-scale, convention-reconciled human verification remain for future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -594,7 +638,7 @@ supervision, M.A. and A.M.; project administration, M.A. and S.M; funding acquis
 
 \informedconsent{Not applicable. The study analyses publicly accessible user-generated business reviews and does not involve direct interaction with human participants. The reviews were used with explicit permission from the platform owner (see \Cref{sec:acknowledgement}).}
 
-\dataavailability{The primary Uzbek aspect-based sentiment analysis dataset used for model fine-tuning is publicly available on Hugging Face at \url{https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek}. The multi-domain Uzbek business review corpus generated in this study is publicly available on Zenodo at \url{https://zenodo.org/records/18790639} with DOI: \href{https://doi.org/10.5281/zenodo.18790639}{10.5281/zenodo.18790639}. 
+\dataavailability{The primary Uzbek aspect-based sentiment analysis dataset used for model fine-tuning is publicly available on Hugging Face at \url{https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek}. The multi-domain Uzbek business review corpus generated in this study, including the 80-review gold-verified subset with independent double annotation (\Cref{sec:res_human}), is publicly available on Zenodo at \url{https://zenodo.org/records/18790639} with DOI: \href{https://doi.org/10.5281/zenodo.18790639}{10.5281/zenodo.18790639}. Code for the encoder baselines, the human-validation analysis, and the significance tests is available in the project repository.
 }
 
 %\durcstatement{Current research is limited to the [please insert a specific academic field, e.g., XXX], which is beneficial [share benefits and/or primary use] and does not pose a threat to public health or national security. Authors acknowledge the dual-use potential of the research involving xxx and confirm that all necessary precautions have been taken to prevent potential misuse. As an ethical responsibility, authors strictly adhere to relevant national and international laws about DURC. Authors advocate for responsible deployment, ethical considerations, regulatory compliance, and transparent reporting to mitigate misuse risks and foster beneficial outcomes.}
