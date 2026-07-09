@@ -1,11 +1,61 @@
 # BERT baselines — how to run on your Mac M2 Max
 
-These three commands add the classical encoder baselines the reviewers asked for (R1).
-Everything runs on Apple MPS (no CUDA, no bitsandbytes). Run from the repo root in the
-**project env** (the one with `torch`, `transformers`, `datasets`, `evaluate`, `seqeval`).
+These commands add the classical encoder baselines the reviewers asked for (R1).
+Everything runs on Apple MPS (no CUDA, no bitsandbytes, no unsloth — none of that installs
+usefully on Apple Silicon and none of it is needed for a BERT-base token classifier).
 
-> Verify the env first: `python -c "import torch;print(torch.backends.mps.is_available())"`
-> should print `True`. If `evaluate`/`seqeval` are missing: `pip install evaluate seqeval`.
+## 0. Set up a dedicated environment (do this once)
+
+**Check you have a native arm64 Python first.** MPS acceleration only works if Python
+itself is an arm64 build — an x86_64 build (e.g. an Intel-Rosetta pyenv install) silently
+falls back to CPU with no error, just much slower.
+
+```bash
+python3 -c "import platform; print(platform.machine())"
+# must print: arm64        (x86_64 => wrong Python build, see fix below)
+```
+
+If it prints `x86_64`, install a native build and use that instead, e.g.:
+```bash
+# Homebrew Python (arm64 by default on Apple Silicon):
+brew install python@3.11
+/opt/homebrew/bin/python3.11 -m venv .venv-bert
+# or, with pyenv, make sure the arm64 toolchain is used:
+#   arch -arm64 pyenv install 3.11.9   (then use that version below)
+```
+
+Create the venv and install dependencies **for this baseline only** (do NOT run the
+project's root `requirements.txt` — it's CUDA/unsloth-oriented and will try to pull in
+bitsandbytes/trl, which are irrelevant here and may fail to build on Apple Silicon):
+
+```bash
+python3 -m venv .venv-bert
+source .venv-bert/bin/activate
+
+# Install torch first (no --index-url needed — the default PyPI wheel for macOS
+# already ships Apple MPS support, unlike the CUDA case in the main requirements.txt).
+pip install --upgrade pip
+pip install torch
+
+# Then the rest of this baseline's dependencies:
+pip install -r paper_materials/revision_v2/baselines/requirements_bert_baseline.txt
+```
+
+**Verify the setup** before running anything else:
+```bash
+python3 -c "
+import platform, torch, transformers, datasets, seqeval, sklearn, scipy
+print('arch      :', platform.machine())
+print('torch     :', torch.__version__)
+print('mps avail :', torch.backends.mps.is_available())
+print('transformers:', transformers.__version__)
+"
+```
+Expect `arch: arm64` and `mps avail: True`. If `mps avail` is `False` on an arm64 Mac,
+reinstall torch (`pip install --upgrade --force-reinstall torch`) — very old torch
+versions (<2.0) predate MPS support.
+
+Run everything below **from the repo root**, with this venv activated.
 
 ## 1. Build the BIO dataset (once, ~seconds)
 

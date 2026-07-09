@@ -1,0 +1,30 @@
+# =============================================================================
+# Minimal dependencies for the BERT ABSA baselines (P1) — Mac M2 Max / Apple MPS
+# =============================================================================
+# Deliberately EXCLUDES everything only needed for the LLM/QLoRA side of the
+# project (unsloth, bitsandbytes, trl, wandb, tensorboard, jupyter, dev tools).
+# None of those install cleanly (or usefully) on Apple Silicon anyway.
+#
+# torch is NOT pinned here — install it separately first (see README step 1),
+# same pattern the main requirements.txt uses for CUDA, just without an
+# --index-url: the default PyPI build already ships Apple MPS support.
+# -----------------------------------------------------------------------------
+
+# Hugging Face core (model, tokenizer, dataset loading, Trainer)
+transformers>=4.45.0
+datasets>=2.18.0
+accelerate>=0.27.0
+tokenizers>=0.15.0
+safetensors>=0.4.0
+
+# Metrics used by train_bert_baseline.py / eval_bert_baseline.py /
+# significance_test.py / analyze_human_validation.py.
+# NOTE: we use seqeval directly (NOT the HuggingFace `evaluate` library) because the
+# repo's scripts/evaluate.py shadows the `evaluate` package when scripts/ is on sys.path.
+seqeval>=1.2.2
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# Data handling
+numpy>=1.24.0
+tqdm>=4.66.0

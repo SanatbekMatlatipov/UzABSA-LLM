@@ -131,3 +131,148 @@ human-validation claims are now in Intro/Conclusion and MUST be backed by P1/P0-
 
 **🧑 NEXT:** (1) send the pre-submission email; (2) run P1 (BERT) + hand out P0-A annotation;
 (3) once numbers land, I complete the edits in `pending_edits.md`.
+
+## 2026-07-07 — README updated with a minimal, Mac-only install path 🤖
+
+**Added:** `baselines/requirements_bert_baseline.txt` — 11 packages needed for the BERT
+baseline ONLY (transformers, datasets, accelerate, tokenizers, safetensors, evaluate,
+seqeval, scikit-learn, scipy, numpy, tqdm). Deliberately excludes unsloth/bitsandbytes/trl/
+wandb/tensorboard/jupyter/dev-tools from the root `requirements.txt` — those are CUDA/LLM-
+training-only, irrelevant here, and some may not build on Apple Silicon at all.
+
+**Updated `baselines/README_RUN_ON_MAC.md`** with a new "Step 0" covering:
+- **arm64 check** — the earlier `platform.machine()` probe in this session returned
+  `x86_64` on the user's system Python, which means MPS acceleration will silently fall
+  back to CPU (no error) if that Python is used. Added an explicit check + fix (Homebrew
+  arm64 Python, or `arch -arm64 pyenv install`).
+- venv creation + `pip install torch` (no `--index-url` needed on macOS — the default
+  PyPI wheel ships MPS support) + `pip install -r requirements_bert_baseline.txt`.
+- A verification one-liner confirming `arch: arm64` and `mps avail: True` before proceeding.
+
+**🧑 NEXT:** run Step 0 first — if `platform.machine()` still prints `x86_64` after creating
+the new venv, the BERT training will silently run on CPU (slower, ~2-4x, but should still
+finish; not blocking). Then proceed to steps 1-4 as before.
+
+## 2026-07-08 — Fixed `evaluate` module-shadowing bug in BERT trainer 🤖
+
+**Symptom:** `AttributeError: module 'evaluate' has no attribute 'load'` at
+`train_bert_baseline.py` startup (after the model downloaded fine).
+
+**Cause:** running `python scripts/train_bert_baseline.py` puts `scripts/` on `sys.path[0]`,
+so `import evaluate` resolved to this repo's `scripts/evaluate.py` instead of the HuggingFace
+`evaluate` library. (The BERT "LOAD REPORT" above the error is benign — MLM head dropped, a
+fresh token-classification head initialized, as intended.)
+
+**Fix:** removed the `evaluate` dependency from the trainer; now calls `seqeval` directly
+(`from seqeval.metrics import precision_score, recall_score, f1_score, accuracy_score`,
+signature `(y_true, y_pred)`). Also dropped `evaluate` from `requirements_bert_baseline.txt`.
+No behaviour change to the reported span metrics.
+
+**🧑 NEXT:** ensure `seqeval` is installed (`pip install seqeval`), then re-run the same
+`train_bert_baseline.py` command — it will proceed past this point.
+
+## 2026-07-08 — Fixed Trainer `tokenizer` arg for new transformers 🤖
+
+**Symptom:** `TypeError: Trainer.__init__() got an unexpected keyword argument 'tokenizer'`
+(after the `evaluate` shadowing fix — training reached Trainer construction).
+
+**Cause:** transformers >=4.46 renamed `Trainer(tokenizer=...)` to `processing_class=...`.
+User's env is bleeding-edge (torch 2.12.1).
+
+**Fix:** build Trainer kwargs and pick `processing_class` vs `tokenizer` via
+`inspect.signature(Trainer.__init__)`, so it works on old and new transformers. Also confirmed
+`eval_strategy` (not the deprecated `evaluation_strategy`) is used — correct for new versions.
+
+## 2026-07-08 — BERT baselines + human validation integrated into main.tex 🤖
+
+### BERT baseline results (609-example set, identical gold to LLM eval)
+| System | ATE exact F1 | ATE partial F1 | Pair F1 | Sent. Acc | Sent. macro-F1 |
+|---|---|---|---|---|---|
+| **BERTbek** (elmurod1202/bertbek-news-big-cased) | **0.6694** | **0.7951** | 0.5615 | 0.8388 | 0.7691 |
+| **TahrirchiBERT** (tahrirchi/tahrirchi-bert-base) | 0.6528 | 0.7746 | 0.5505 | 0.8432 | 0.7673 |
+
+- BIO term-alignment: 98.2% train / 98.5% val (`data/bio_processed/stats.json`).
+- Training: ~10 min each on M2 Max (lr 3e-5, 4 epochs, batch 16, seed 42).
+- **Story:** BERTbek BEATS all LLMs at extraction (0.6694 vs Qwen 0.6603); LLMs win sentiment
+  (macro-F1 0.8435/0.8113 vs ~0.77) and pair F1 (0.5805/0.5795 vs 0.5615). Honest trade-off.
+- Paired bootstrap BERTbek-vs-Tahrirchi (5000 resamples,
+  `significance/bertbek_vs_tahrirchi.json`): only partial-ATE significant (p=0.023);
+  exact-ATE p=0.18, pair p=0.46, sentiment p=0.80 — ties.
+
+### Human validation — what the returned data showed
+- `rubric_Sanatbek.csv` is DEGENERATE (sentiment & relevance 150×5; overall 145×5) → IAA
+  unusable (κ 0.0–0.08, α negative). See `human_validation/REDO_RUBRIC_INSTRUCTIONS.md`
+  (~2–3h redo; then κ/α go into sec:res_human).
+- `rubric_Jaloliddin.csv` has realistic spread → used as the expert for judge calibration:
+  ρ sentiment 0.795, relevance 0.683, **overall 0.633**, accuracy 0.437, completeness 0.436
+  (all p<1e-6, n=150); judge overall mean 3.75 vs expert 3.77; judge harsher on completeness
+  (3.30 vs 3.99). Saved: `results/judge_vs_expert_annotator.json`.
+- Gold task: both files genuine & independent (verified per-review: 31/80 differing counts).
+  Model-vs-expert(J): ATE exact 0.209 / partial 0.433; 100% polarity on exact-matched terms.
+  **Inter-human ceiling: exact 0.277 / partial 0.415** → model's partial agreement AT the
+  human-human level. Per-proximity exact pair F1: out 0.244, distant 0.170 (mirrors judge
+  gradient). Annotator2 gold much sparser (54 vs 134 aspects) — convention divergence,
+  disclosed in the paper.
+- Released `data/final_dataset/uzbek_multi_domain_absa_gold80.json` (80 reviews, double
+  annotation, human_verified=true).
+
+### main.tex changes (compiles clean: 0 undefined refs, 0 overfull)
+- New §Methodology "Encoder Baselines" (sec:meth_encoder) + bib entries kuriyozov2024bertbek,
+  tahrirchibert2023 (both verified).
+- tab:absa_results extended to 5 systems (grouped LLM/encoder header); bold corrected
+  (BERTbek now holds ATE bolds); caption notes non-significance.
+- New results finding paragraph "Encoders are competitive at extraction; LLMs win on
+  sentiment" incl. bootstrap result.
+- New §"Human Validation of Annotation Quality" (sec:res_human) + tab:judge_calibration;
+  scope honestly limited (author-annotators, no IAA claim yet, convention divergence stated).
+- New Discussion paragraph "When is a 7B LLM Worth It?".
+- Limitations updated (gold-subset caveats; significance scope).
+- Abstract rewritten back half: BERT trade-off + judge calibration + gold subset; fixed the
+  now-inaccurate "highest ATE F1" claim (BERTbek exceeds Qwen).
+- Data availability: gold subset + baseline/validation code mentioned.
+
+### Still open
+1. 🧑 Rubric redo (REDO_RUBRIC_INSTRUCTIONS.md) → then add IAA sentence to sec:res_human.
+2. 🧑 Optional: `dump_llm_preds.py` for Qwen+Llama → LLM-vs-BERT + Qwen-vs-Llama bootstrap
+   (currently described descriptively; encoder-pair test done).
+3. 🧑 Upload gold80 file to the Zenodo record (paper says it's there).
+4. Send pre-submission email (writing/presubmission_email.md) — update its abstract to
+   mention encoder baselines are DONE (it already does).
+
+## 2026-07-08 (later) — Redone annotations integrated; full-paper review pass 🤖
+
+### Redone annotation data (returned/ overwritten in place)
+- Rubric (Sanatbek v2): realistic spread. Row-level agreement with Jaloliddin: 84–91%
+  exact per dimension, all disagreements ±1 → weighted κ 0.91–0.97, α 0.91–0.97.
+- Gold (Sanatbek v2): 125 aspects (was 54). Inter-annotator gold agreement now exact F1
+  0.9266, polarity 100% (was 0.277).
+- **User confirmed the redo consulted/aligned with Jaloliddin's files** → reported in the
+  paper as a two-stage annotate-then-reconcile protocol: round-1 INDEPENDENT agreement =
+  exact 0.277/partial 0.415 (convention divergence); round-2 reconciled consolidated gold
+  (residual agreement 0.927). Rubric κ reported as post-calibration consistency, NOT
+  independent IAA. Judge calibration now vs MEAN human rating: ρ overall 0.657, sentiment
+  0.806, relevance 0.667, completeness 0.462, accuracy 0.433; human/judge means 3.84/3.75.
+- Model vs consolidated gold: exact 0.209–0.224 / partial 0.425–0.433 per annotator;
+  100% polarity on matched. Gold80 release file REBUILT with reconciled data.
+
+### main.tex changes (compiles clean: 0 undefined, 0 overfull, 0 bibtex warnings)
+- §Human Validation rewritten: two-stage protocol narrative; updated calibration table
+  (mean-human); model-vs-gold with two reference points (pre-reconciliation human agreement
+  ≈ model's 0.43 partial; reconciled ceiling 0.93 → gap is span segmentation, not opinion
+  detection); scope caveat (author-annotators) retained.
+- **Abstract cut ~280 → ~190 words** (dropped preprocessing counts, loss-vs-performance
+  sentence, 63.5% inclusion detail; kept: first-study claim, key numbers, encoder trade-off,
+  pipeline, judge calibration ρ=0.66, gold subset, public release).
+- Fixed leftover contradiction: "encoder-based baselines left for future work" (Results
+  setup ¶) → now points at sec:meth_encoder. "Qwen highest ATE F1" → "highest LLM ATE F1".
+- Related Work: added BERTbek/TahrirchiBERT sentence (Uzbek NLP ¶) and in-venue BDCC
+  citation (Zhang et al. 2026, BDCC 10(6):185 — LoRA Qwen2-7B vs BERT+CRF; authors fetched
+  via CrossRef) in the PEFT ¶. Keywords: added "LLM-as-Judge".
+- Contribution 2 harmonized ("two-stage annotation-agreement analysis...").
+- Limitations updated to reconciliation phrasing.
+
+### Remaining before submission
+1. 🧑 Upload gold80 (rebuilt) to Zenodo record.
+2. 🧑 Send pre-submission email (writing/presubmission_email.md).
+3. 🧑 Optional: dump_llm_preds for LLM-vs-encoder significance.
+4. 🧑 Authorship: single corresponding author + statistician role in \authorcontributions.
