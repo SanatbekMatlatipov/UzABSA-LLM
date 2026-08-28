@@ -225,3 +225,12 @@ __marimo__/
 paper_materials/final_paper_springer/llncs.cls
 paper_materials/final_paper_springer/history.txt
 paper_materials/MDPI/response/1807.eml
+paper_materials/revision_v2/zenodo_release/*
+
+# BERT baselines - ignore large model weights & checkpoints, keep metrics/logs
+# Tracked:  eval_results.json, train_summary.json, training_log.txt, preds_per_example.jsonl
+# Ignored:  hf_trainer/checkpoint-*/, model/
+paper_materials/revision_v2/baselines/bertbek/hf_trainer/checkpoint-*/
+paper_materials/revision_v2/baselines/bertbek/model/
+paper_materials/revision_v2/baselines/tahrirchi-bert/hf_trainer/checkpoint-*/
+paper_materials/revision_v2/baselines/tahrirchi-bert/model/

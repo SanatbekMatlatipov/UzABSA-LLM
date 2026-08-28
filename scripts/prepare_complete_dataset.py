@@ -191,11 +191,15 @@ def main():
         })
         
         # Apply instruction formatting
+        # NOTE: do NOT pass system_prompt=None here. Passing None overrides the
+        # function's DEFAULT_SYSTEM_PROMPT default and gets interpolated into the
+        # ChatML template as the literal string "None", which is what produced the
+        # `<|im_start|>system\nNone<|im_end|>` header in the previously released
+        # data/processed splits. Omit the argument to take the real default.
         formatted_dataset = format_for_instruction_tuning(
             formatted_dataset,
             text_column="text",
             aspects_column="aspects",
-            system_prompt=None,  # Will use default
             use_chatml=True,
         )
         

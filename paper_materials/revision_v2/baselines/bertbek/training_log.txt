@@ -1,0 +1,27 @@
+2026-07-08 00:24:19,454 INFO Model: elmurod1202/bertbek-news-big-cased | device: mps | torch 2.12.1
+2026-07-08 00:24:19,478 INFO train=5480 val=609 labels=['O', 'B-positive', 'I-positive', 'B-negative', 'I-negative', 'B-neutral', 'I-neutral', 'B-conflict', 'I-conflict']
+2026-07-08 00:24:20,015 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:24:20,015 WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-08 00:24:20,285 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/config.json "HTTP/1.1 200 OK"
+2026-07-08 00:24:20,509 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/config.json "HTTP/1.1 200 OK"
+2026-07-08 00:24:20,737 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:24:20,959 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-08 00:24:21,182 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-08 00:24:21,419 INFO HTTP Request: GET https://huggingface.co/api/models/elmurod1202/bertbek-news-big-cased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-08 00:24:21,754 INFO HTTP Request: GET https://huggingface.co/api/models/elmurod1202/bertbek-news-big-cased/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-07-08 00:24:21,975 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:24:22,196 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/vocab.txt "HTTP/1.1 200 OK"
+2026-07-08 00:24:22,432 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/vocab.txt "HTTP/1.1 200 OK"
+2026-07-08 00:24:22,811 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/tokenizer.json "HTTP/1.1 404 Not Found"
+2026-07-08 00:24:23,031 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-07-08 00:24:23,318 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:24:23,541 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-07-08 00:24:23,780 INFO HTTP Request: GET https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-07-08 00:24:24,005 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-07-08 00:24:24,451 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:24:24,564 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/elmurod1202/bertbek-news-big-cased/4047c1471c1a5bb4854db127dec5020d01a56582/config.json "HTTP/1.1 200 OK"
+2026-07-08 00:24:24,831 INFO HTTP Request: HEAD https://huggingface.co/elmurod1202/bertbek-news-big-cased/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-07-08 00:26:05,007 INFO Starting training...
+2026-07-08 00:35:51,819 INFO Final seqeval (token-span) metrics: {'eval_loss': 0.41125017404556274, 'eval_precision': 0.5635876840696118, 'eval_recall': 0.5929577464788732, 'eval_f1': 0.5778997940974606, 'eval_accuracy': 0.8766409266409266, 'eval_runtime': 1.0999, 'eval_samples_per_second': 553.701, 'eval_steps_per_second': 35.459, 'epoch': 4.0}
+2026-07-08 00:35:52,656 INFO Saved model -> paper_materials/revision_v2/baselines/bertbek/model
+2026-07-08 00:35:52,656 INFO NOTE: seqeval numbers above are token-span level; run eval_bert_baseline.py for the ABSA metrics comparable to the LLMs.

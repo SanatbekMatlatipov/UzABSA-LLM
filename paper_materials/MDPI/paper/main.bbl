@@ -29,12 +29,12 @@ Grattafiori, A.; Dubey, A.; Jauhri, A.;  et~al.
   \href{http://arxiv.org/abs/2407.21783}{{\normalfont
   [arXiv:cs.AI/2407.21783]}}.
 
-\bibitem[{DeepSeek-AI} et~al.(2026){DeepSeek-AI}, Guo, Yang, Zhang, Song, Wang,
+\bibitem[{DeepSeek-AI} et~al.(2025){DeepSeek-AI}, Guo, Yang, Zhang, Song, Wang,
   et~al.]{DeepSeek-AI2026-vt}
 {DeepSeek-AI}.; Guo, D.; Yang, D.; Zhang, H.; Song, J.; Wang, P.;  et~al.
 \newblock {DeepSeek-R1}: Incentivizing Reasoning Capability in {LLMs} via
   Reinforcement Learning.
-\newblock {\em arXiv preprint} {\bf 2026},
+\newblock {\em arXiv preprint} {\bf 2025},
   \href{http://arxiv.org/abs/2501.12948}{{\normalfont
   [arXiv:cs.CL/2501.12948]}}.
 
@@ -94,6 +94,29 @@ Chouikhi, H.; Alsuhaibani, M.; Jarray, F.
 \newblock {\em Electronics} {\bf 2023}, {\em 12}.
 \newblock {\url{https://doi.org/10.3390/electronics12030515}}.
 
+\bibitem[Zou et~al.(2026)Zou, Zou, Guo, Wang, Weng, Fang, Jiang, and
+  Wu]{bdcc10050161}
+Zou, F.; Zou, L.; Guo, F.; Wang, X.; Weng, J.; Fang, T.; Jiang, H.; Wu, X.
+\newblock Enhanced Quantum-Inspired Deep Learning with Multi-Head Attention and
+  Contrastive Learning for Text-Based Dialogue Sentiment Classification.
+\newblock {\em Big Data and Cognitive Computing} {\bf 2026}, {\em 10}.
+\newblock {\url{https://doi.org/10.3390/bdcc10050161}}.
+
+\bibitem[Liao et~al.(2025)Liao, Wang, Yeh, and Lin]{electronics14040690}
+Liao, S.w.; Wang, C.S.; Yeh, C.C.; Lin, J.W.
+\newblock Aspect-Based Sentiment Analysis with Enhanced Opinion Tree Parsing
+  and Parameter-Efficient Fine-Tuning for Edge AI.
+\newblock {\em Electronics} {\bf 2025}, {\em 14}.
+\newblock {\url{https://doi.org/10.3390/electronics14040690}}.
+
+\bibitem[Alotaibi and Nadeem(2025)]{smartcities8020062}
+Alotaibi, A.; Nadeem, F.
+\newblock An Unsupervised Integrated Framework for Arabic Aspect-Based
+  Sentiment Analysis and Abstractive Text Summarization of Traffic Services
+  Using Transformer Models.
+\newblock {\em Smart Cities} {\bf 2025}, {\em 8}.
+\newblock {\url{https://doi.org/10.3390/smartcities8020062}}.
+
 \bibitem[Scaria et~al.(2024)Scaria, Gupta, Goyal, Sawant, Mishra, and
   Baral]{scaria-etal-2024-instructabsa}
 Scaria, K.; Gupta, H.; Goyal, S.; Sawant, S.; Mishra, S.; Baral, C.
@@ -104,6 +127,12 @@ Scaria, K.; Gupta, H.; Goyal, S.; Sawant, S.; Mishra, S.; Baral, C.
   Language Technologies (Volume 2: Short Papers); Duh, K.; Gomez, H.; Bethard,
   S., Eds., Mexico City, Mexico,  June 2024; pp. 720--736.
 \newblock {\url{https://doi.org/10.18653/v1/2024.naacl-short.63}}.
+
+\bibitem[Simmering and Huoviala(2023)]{simmering2023llmabsa}
+Simmering, P.F.; Huoviala, P.
+\newblock Large Language Models for Aspect-Based Sentiment Analysis.
+\newblock {\em arXiv preprint arXiv:2310.18025} {\bf 2023}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2310.18025}}.
 
 \bibitem[Touvron et~al.(2023)Touvron, Lavril, Izacard, Martinet, Lachaux,
   Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, Rodriguez, Joulin, Grave, and
@@ -129,6 +158,23 @@ Zhang, K.; Lin, X.; Wang, M.; Yu, H.; Chen, L.
   Based on Instruction Tuning and Graph Retrieval-Augmented Generation.
 \newblock {\em Big Data and Cognitive Computing} {\bf 2026}, {\em 10},~185.
 \newblock {\url{https://doi.org/10.3390/bdcc10060185}}.
+
+\bibitem[Pingua et~al.(2025)Pingua, Sahoo, Kandpal, Murmu, Rautaray, Barik, and
+  Saikia]{bioengineering12070687}
+Pingua, B.; Sahoo, A.; Kandpal, M.; Murmu, D.; Rautaray, J.; Barik, R.K.;
+  Saikia, M.J.
+\newblock Medical LLMs: Fine-Tuning vs. Retrieval-Augmented Generation.
+\newblock {\em Bioengineering} {\bf 2025}, {\em 12}.
+\newblock {\url{https://doi.org/10.3390/bioengineering12070687}}.
+
+\bibitem[Abdellaoui et~al.(2024)Abdellaoui, Ibrahimi, El~Bouni, Mourhir,
+  Driouech, and Aghzal]{bdcc_offensive_lowresource}
+Abdellaoui, I.; Ibrahimi, A.; El~Bouni, M.A.; Mourhir, A.; Driouech, S.;
+  Aghzal, M.
+\newblock Investigating Offensive Language Detection in a Low-Resource Setting
+  with a Robustness Perspective.
+\newblock {\em Big Data and Cognitive Computing} {\bf 2024}, {\em 8},~170.
+\newblock {\url{https://doi.org/10.3390/bdcc8120170}}.
 
 \bibitem[Aripov et~al.(2022)Aripov, Khakimov, Matlatipov, and
   Sirojiddinov]{10.1007/978-3-031-05328-3_6}
@@ -218,6 +264,14 @@ Mamasaidov, M.; Shopulatov, A.
   \url{https://huggingface.co/tahrirchi/tahrirchi-bert-base} (accessed on 8
   July 2026).
 
+\bibitem[Yusufu et~al.(2026)Yusufu, Liu, Aziz, Ainiwaer, Li, Li, Ji, and
+  Yusufu]{yusufu2026lasq}
+Yusufu, A.; Liu, J.; Aziz, K.; Ainiwaer, A.; Li, B.; Li, F.; Ji, D.; Yusufu, A.
+\newblock {LASQ}: A Low-resource Aspect-based Sentiment Quadruple Extraction
+  Dataset.
+\newblock {\em arXiv preprint arXiv:2604.10417} {\bf 2026}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2604.10417}}.
+
 \bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
   Li, Xing, Zhang, Gonzalez, and Stoica]{10.5555/3666122.3668142}
 Zheng, L.; Chiang, W.L.; Sheng, Y.; Zhuang, S.; Wu, Z.; Zhuang, Y.; Lin, Z.;
@@ -232,5 +286,12 @@ Li, Q.; Dou, S.; Shao, K.; Chen, C.; Hu, H.
 \newblock Evaluating Scoring Bias in LLM-as-a-Judge,  2025,
   \href{http://arxiv.org/abs/arXiv:2506.22316}{{\normalfont
   [arXiv:2506.22316]}}.
+
+\bibitem[Koehn(2004)]{koehn-2004-statistical}
+Koehn, P.
+\newblock Statistical Significance Tests for Machine Translation Evaluation.
+\newblock In Proceedings of the Proceedings of the 2004 Conference on Empirical
+  Methods in Natural Language Processing, Barcelona, Spain,  2004; pp.
+  388--395.
 
 \end{thebibliography}

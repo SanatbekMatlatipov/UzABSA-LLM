@@ -21,6 +21,8 @@ License: MIT
 
 import json
 import logging
+import random
+import re
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 from datasets import Dataset, DatasetDict, load_dataset
@@ -323,7 +325,14 @@ def format_for_instruction_tuning(
         dict_keys(['text'])
     """
     logger.info("Formatting dataset for instruction tuning...")
-    
+
+    # Callers that explicitly pass system_prompt=None mean "use the default";
+    # without this coercion None is interpolated into the ChatML template as the
+    # literal string "None", silently corrupting every training example.
+    if system_prompt is None:
+        system_prompt = DEFAULT_SYSTEM_PROMPT
+        logger.warning("system_prompt=None received; falling back to DEFAULT_SYSTEM_PROMPT")
+
     def format_fn(example: Dict[str, Any]) -> Dict[str, str]:
         """Wrapper function for dataset.map()"""
         return format_single_example(
@@ -361,6 +370,7 @@ def create_train_val_split(
     val_size: float = 0.1,
     seed: int = 42,
     stratify_column: Optional[str] = None,
+    group_by_text: bool = True,
 ) -> DatasetDict:
     """
     Create train and validation splits from a dataset.
@@ -387,18 +397,72 @@ def create_train_val_split(
         })
     """
     logger.info(f"Creating train/val split with val_size={val_size}")
-    
+
+    if group_by_text:
+        return _grouped_train_val_split(dataset, val_size=val_size, seed=seed)
+
     # Use train_test_split from datasets
     split_dataset = dataset.train_test_split(
         test_size=val_size,
         seed=seed,
         shuffle=True,
     )
-    
+
     # Rename 'test' to 'validation' for clarity
     return DatasetDict({
         "train": split_dataset["train"],
         "validation": split_dataset["test"],
+    })
+
+
+def _review_key(chatml_text: str) -> str:
+    """Normalized review text, used to keep duplicates on one side of the split.
+
+    Short Uzbek reviews repeat verbatim across the corpus ("Ajoyib!", "Mazali."),
+    so a naive random split leaks ~10% of the validation set into training. Keying
+    on the normalized review string groups every copy into the same split.
+    """
+    m = re.search(r'Matn:\s*"(.*?)"', chatml_text, re.S)
+    raw = m.group(1) if m else chatml_text
+    return re.sub(r"\s+", " ", raw).strip().lower()
+
+
+def _grouped_train_val_split(
+    dataset: Dataset,
+    val_size: float,
+    seed: int,
+) -> DatasetDict:
+    """Split so that identical review texts never straddle train and validation."""
+    keys = [_review_key(t) for t in dataset["text"]]
+
+    groups: Dict[str, List[int]] = {}
+    for idx, k in enumerate(keys):
+        groups.setdefault(k, []).append(idx)
+
+    unique_keys = sorted(groups)
+    rng = random.Random(seed)
+    rng.shuffle(unique_keys)
+
+    target = int(round(len(dataset) * val_size))
+    val_idx: List[int] = []
+    for k in unique_keys:
+        if len(val_idx) >= target:
+            break
+        val_idx.extend(groups[k])
+
+    val_set = set(val_idx)
+    train_idx = [i for i in range(len(dataset)) if i not in val_set]
+
+    n_dupe_groups = sum(1 for g in groups.values() if len(g) > 1)
+    logger.info(
+        f"Grouped split: {len(dataset)} examples -> {len(unique_keys)} unique review texts "
+        f"({n_dupe_groups} appear more than once). "
+        f"train={len(train_idx)}, validation={len(val_idx)}, leakage=0 by construction."
+    )
+
+    return DatasetDict({
+        "train": dataset.select(train_idx),
+        "validation": dataset.select(val_idx),
     })
 
 

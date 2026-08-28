@@ -276,3 +276,113 @@ User's env is bleeding-edge (torch 2.12.1).
 2. 🧑 Send pre-submission email (writing/presubmission_email.md).
 3. 🧑 Optional: dump_llm_preds for LLM-vs-encoder significance.
 4. 🧑 Authorship: single corresponding author + statistician role in \authorcontributions.
+
+## 2026-08-28 — BDCC submission-readiness pass 🤖 (applied to main.tex)
+
+Target: **MDPI BDCC** (user-selected SI `O9A9UWB542`; page not machine-readable — title/deadline
+to be confirmed by Sanatbek in susy.mdpi.com before submission).
+
+**Applied to `paper_materials/MDPI/paper/main.tex` (compiles clean, 0 undefined refs, 0 overfull boxes, 20 pp):**
+- **Class fix (critical):** `\documentclass[computers,...]` → `[bdcc,...]` — the manuscript was
+  branded for the wrong journal; running head/DOI placeholder now show Big Data Cogn. Comput.
+- **Formalization added:** SFT objective (Eq. 1, §Task Formulation); LoRA/QLoRA forward-pass
+  equations (Eqs. 2–3, §QLoRA); matching predicates + micro P/R/F1 + pair-F1 + macro-F1
+  (Eqs. 4–7, §Evaluation Framework); paired-bootstrap p-value (Eq. 8) in a new
+  "Statistical Significance" paragraph citing Koehn (2004).
+- **Algorithm 1:** three-layer annotation pipeline pseudo-code (algorithm/algpseudocode).
+- **Figure 2 (new):** TikZ pipeline schematic with human-validation branch.
+- **Figure 4 (new):** pgfplots 23-domain quality bar chart (sorted, N per domain, 3.5 threshold
+  line, blue=include / gray=below) — data from `data/judged/judge_report.json`.
+- **BDCC scope paragraph** added to Introduction (big-data annotation bottleneck + calibrated
+  cognitive evaluation layer; pipeline framed as model-agnostic/transferable).
+- **Citations woven into Related Work** (all DOIs verified via doi.org + Crossref):
+  `bdcc10050161`, `electronics14040690`, `smartcities8020062` (¶1);
+  `bioengineering12070687`, `bdcc_offensive_lowresource` (LLM-FT ¶). `bdcc_ner_disaster`
+  was already cited. New bib entries added: `bdcc_offensive_lowresource`, `koehn-2004-statistical`.
+  All 8 MDPI DOIs in the bib verified to resolve with matching titles/authors/volumes.
+- Preamble: + algorithm, algpseudocode, pgfplots (compat 1.18), tikz positioning/arrows.meta,
+  dsfont (`\ind` indicator macro — mathpazo has no \mathbb digits).
+
+## 2026-08-28 — Authorship change, IAA integration, Zenodo bundle 🤖
+
+**Authorship (per Sanatbek's instruction).** New list: Sanatbek Matlatipov (1st, corresponding,
+NUU) · Gusein Djalilov (2nd, Independent Researcher, Tashkent, ORCID 0009-0007-3089-0867) ·
+Mersaid Aripov (3rd, NUU). Removed: Jaloliddin Rajabov, Abdullah M. Almarashi. King Abdulaziz
+University affiliation dropped; `\corres` now lists only s.matlatipov@nuu.uz;
+`\authorcontributions{}` rewritten for the three authors.
+⚠️ `TODO-ARIPOV-EMAIL` placeholder left in the affiliation block — MDPI requires it.
+
+**Knock-on fix (important).** Rajabov was one of the two human annotators, so three claims went
+stale the moment he left the author list. Corrected: `sec:res_human` → "the first author and an
+independent trained annotator"; Limitations → "one of the two annotators is the first author";
+Acknowledgments → thanks Rajabov for the annotation work. Also rewrote the `note` field in
+`uzbek_multi_domain_absa_gold80.json` (80/80 records) from "two native-speaker authors" to
+"two native Uzbek speakers".
+
+**P0-A item 1 (IAA) — CLOSED.** Re-ran `scripts/analyze_human_validation.py` over the 4 returned
+files; regenerated `results/human_validation_report.json`. Added `\Cref{tab:iaa}` +
+"Inter-annotator agreement" paragraph to `sec:res_human`:
+sentiment κ=0.970 · accuracy κ=0.936 · completeness κ=0.930 · overall κ=0.923 · relevance
+κ=0.911 (Krippendorff's α within 0.001 of κ throughout; Spearman ρ 0.920–0.941; n=150).
+Removed the now-redundant "κ of 0.91–0.97" parenthetical from the judge-calibration paragraph.
+
+**P2-B/C item 2 (LLM significance) — STILL BLOCKED, now for a concrete reason.** The merged
+models are not on this Mac (`outputs/my_run/*` holds ~440 KB of metrics each, not weights), and
+the disk has **2.6 GB free of 926 GB** — the two ~14 GB models cannot be fetched from HF Hub.
+Commands to run after freeing ~35 GB are recorded in `writing/pending_edits.md`.
+
+**Zenodo.** New `scripts/build_zenodo_release.py` builds `revision_v2/zenodo_release/`
+(9 files, 11.3 MB). Diagnosed the record's "Cannot preview file" error: Zenodo's JSON previewer
+caps at ~1 MB and the record leads with a 3.3 MB JSON. Bundle now leads with
+`00_PREVIEW_uzbek_absa_sample.csv` (80 KB, 296 rows, all 23 domains) which renders in Zenodo's
+interactive table previewer, plus `01_README.md`. Upload steps in `writing/pending_edits.md`.
+
+## 2026-08-28 — External critique audited; preprocessing bugs fixed 🤖
+
+An external review made specific, checkable claims about the repo. Verified each against
+the code and data rather than accepting them. **Four blockers confirmed:**
+
+1. **System prompt bug — CONFIRMED, severe.** `prepare_complete_dataset.py` passed
+   `system_prompt=None`, which overrode `DEFAULT_SYSTEM_PROMPT` and was interpolated as the
+   literal string. **5480/5480 (100%)** of released training examples carry
+   `<|im_start|>system\nNone<|im_end|>`, while `src/inference.py` serves `SYSTEM_PROMPT_UZ`
+   at eval time — a genuine train/inference mismatch, and Figure 1 depicted neither.
+   FIXED at the call site and defensively in `format_for_instruction_tuning()`.
+2. **Task schema — CONFIRMED.** 0 full triples in the data; first 2000 train examples hold
+   2339 term-only + 2458 category-only records. UzABSA annotates the two layers
+   independently. Manuscript + Figure 1 now describe two layers honestly and state that
+   "pair F1" is aspect--polarity, not a triple.
+3. **`conflict` dropped — CONFIRMED.** Processed splits contain only
+   positive/neutral/negative. Macro-F1 was 3-class while the paper claimed 4. Manuscript
+   corrected in three places.
+4. **Split leakage — CONFIRMED.** Measured **61/608 (10.0%)** validation items with exact-text
+   twins in train across 51 distinct strings (reviewer said 63/609; same finding). Mostly
+   trivial short reviews ("mazali.", "ajoyib"). FIXED: `create_train_val_split(group_by_text=True)`
+   groups identical normalized review texts into one side. Verified: 6089 examples →
+   5515 unique texts (222 duplicated), train=5480/val=609 (sizes preserved), **leakage=0**.
+
+**Also confirmed and corrected in the manuscript:** failed JSON parses are scored as empty
+predictions, not excluded (paper claimed the opposite); `temperature=0.1` is inert under
+`do_sample=False`; the 13.55-vs-6.42-word comparison was backwards; DeepSeek-R1 bib year
+2026→2025; "open-source, permissively licensed"→"open-weight"; causal language
+("isolates architectural effects", "is detrimental") softened; `\funding{}` added (MDPI
+requires it).
+
+**Trainable parameters — reviewer correct, verified analytically.** For r=16 over 7 modules:
+Qwen (28 layers × 3584 hidden) = 40,370,176; Llama (32 × 4096) = 41,943,040. The paper quoted
+40.4M for all three, and 0.92% came from packed 4-bit tensor counts (true share ≈0.53%).
+Both corrected.
+
+**Novelty — narrowed.** `yusufu2026lasq` (LASQ, arXiv:2604.10417, Apr 2026) covers Uzbek
+aspect-sentiment quadruples and is now cited and differentiated in Related Work; the blanket
+"first" claim is replaced with "first controlled comparison of QLoRA-adapted open-weight
+7--8B models on the UzABSA benchmark". Also added `simmering2023llmabsa`.
+
+**Claims that did NOT hold up:** the AI-use disclosure *is* present in the built PDF, and the
+`\documentclass` is already `bdcc`.
+
+**⚠️ NOT fixable without a rerun.** The headline table still comes from models trained on the
+`None`-prompt data and scored on the leaky split. The code is now correct, so regenerating
+`data/processed` and retraining is the path to defensible numbers. Blocked here: no GPU and
+2.6 GB free disk. Until that rerun, the manuscript describes its own limitations accurately
+but the numbers should be treated as provisional.

@@ -1,0 +1,17 @@
+2026-07-08 00:08:33,625 INFO Model: tahrirchi/tahrirchi-bert-base | device: mps | torch 2.12.1
+2026-07-08 00:08:33,647 INFO train=5480 val=609 labels=['O', 'B-positive', 'I-positive', 'B-negative', 'I-negative', 'B-neutral', 'I-neutral', 'B-conflict', 'I-conflict']
+2026-07-08 00:08:34,161 INFO HTTP Request: HEAD https://huggingface.co/tahrirchi/tahrirchi-bert-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:08:34,163 WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-08 00:08:34,253 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/tahrirchi/tahrirchi-bert-base/e9961825524fe3dfc2b7e73612a4f6c3b1cf0251/config.json "HTTP/1.1 200 OK"
+2026-07-08 00:08:34,475 INFO HTTP Request: HEAD https://huggingface.co/tahrirchi/tahrirchi-bert-base/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:08:34,565 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/tahrirchi/tahrirchi-bert-base/e9961825524fe3dfc2b7e73612a4f6c3b1cf0251/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-08 00:08:34,784 INFO HTTP Request: HEAD https://huggingface.co/tahrirchi/tahrirchi-bert-base/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:08:34,877 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/tahrirchi/tahrirchi-bert-base/e9961825524fe3dfc2b7e73612a4f6c3b1cf0251/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-08 00:08:35,092 INFO HTTP Request: GET https://huggingface.co/api/models/tahrirchi/tahrirchi-bert-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-08 00:08:35,320 INFO HTTP Request: GET https://huggingface.co/api/models/tahrirchi/tahrirchi-bert-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-07-08 00:08:36,140 INFO HTTP Request: HEAD https://huggingface.co/tahrirchi/tahrirchi-bert-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-08 00:08:36,231 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/tahrirchi/tahrirchi-bert-base/e9961825524fe3dfc2b7e73612a4f6c3b1cf0251/config.json "HTTP/1.1 200 OK"
+2026-07-08 00:08:36,530 INFO Starting training...
+2026-07-08 00:18:59,447 INFO Final seqeval (token-span) metrics: {'eval_loss': 0.45374757051467896, 'eval_precision': 0.5624142661179699, 'eval_recall': 0.5774647887323944, 'eval_f1': 0.5698401667824878, 'eval_accuracy': 0.8754826254826255, 'eval_runtime': 1.2129, 'eval_samples_per_second': 502.107, 'eval_steps_per_second': 32.155, 'epoch': 4.0}
+2026-07-08 00:19:00,032 INFO Saved model -> paper_materials/revision_v2/baselines/tahrirchi-bert/model
+2026-07-08 00:19:00,032 INFO NOTE: seqeval numbers above are token-span level; run eval_bert_baseline.py for the ABSA metrics comparable to the LLMs.
