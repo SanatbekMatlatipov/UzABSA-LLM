@@ -1,0 +1,40 @@
+{
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "estimate": 0.7036,
+      "ci95": [
+        0.67,
+        0.7373
+      ],
+      "half_width": 0.0336
+    },
+    "ate_partial_f1": {
+      "estimate": 0.8006,
+      "ci95": [
+        0.7725,
+        0.8284
+      ],
+      "half_width": 0.028
+    },
+    "pair_f1": {
+      "estimate": 0.651,
+      "ci95": [
+        0.6154,
+        0.6865
+      ],
+      "half_width": 0.0356
+    },
+    "sentiment_accuracy": {
+      "estimate": 0.9252,
+      "ci95": [
+        0.9012,
+        0.9471
+      ],
+      "half_width": 0.023
+    }
+  },
+  "system": "Llama 3.1-8B (v2)",
+  "preds_file": "paper_materials/revision_v2/results_v2/llama3.1-8b_preds.jsonl"
+}

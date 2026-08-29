@@ -1,0 +1,35 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.7106,
+      "recall": 0.7096,
+      "f1": 0.7101
+    },
+    "partial_match": {
+      "precision": 0.8152,
+      "recall": 0.8141,
+      "f1": 0.8147
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6554,
+    "pair_recall": 0.6554,
+    "pair_f1": 0.6554,
+    "sentiment_accuracy": 0.9235,
+    "sentiment_macro_f1": 0.8845,
+    "total_predictions": 737,
+    "total_references": 737
+  },
+  "json_parse_rate": 100.0,
+  "json_parse_successes": 609,
+  "json_parse_failures": 0,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "paper_materials\\revision_v2\\results_v2\\qwen2.5-7b_seed43_preds.jsonl",
+  "metadata": {
+    "model_path": "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/merged_model",
+    "test_data": "./data/processed",
+    "timestamp": "2026-08-29T17:51:10.304298",
+    "num_samples": 609
+  }
+}

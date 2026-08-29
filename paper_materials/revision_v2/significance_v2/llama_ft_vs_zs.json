@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.7036,
+    "ate_partial_f1": 0.8006,
+    "pair_f1": 0.651,
+    "sentiment_accuracy": 0.9252
+  },
+  "B": {
+    "ate_exact_f1": 0.2843,
+    "ate_partial_f1": 0.4893,
+    "pair_f1": 0.1999,
+    "sentiment_accuracy": 0.7036
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.4193,
+      "ci95": [
+        0.3805,
+        0.4576
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.3113,
+      "ci95": [
+        0.2747,
+        0.3484
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.4511,
+      "ci95": [
+        0.4114,
+        0.4914
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": 0.2216,
+      "ci95": [
+        0.1668,
+        0.2779
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    }
+  },
+  "A_name": "LlamaFT",
+  "B_name": "LlamaZS"
+}

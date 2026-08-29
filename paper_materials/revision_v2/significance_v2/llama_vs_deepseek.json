@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.7036,
+    "ate_partial_f1": 0.8006,
+    "pair_f1": 0.651,
+    "sentiment_accuracy": 0.9252
+  },
+  "B": {
+    "ate_exact_f1": 0.6776,
+    "ate_partial_f1": 0.7874,
+    "pair_f1": 0.6034,
+    "sentiment_accuracy": 0.8905
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.026,
+      "ci95": [
+        -0.0004,
+        0.0536
+      ],
+      "p_value": 0.0564,
+      "significant_at_0.05": false
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.0132,
+      "ci95": [
+        -0.0095,
+        0.0355
+      ],
+      "p_value": 0.2514,
+      "significant_at_0.05": false
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.0476,
+      "ci95": [
+        0.0194,
+        0.0771
+      ],
+      "p_value": 0.0016,
+      "significant_at_0.05": true
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": 0.0347,
+      "ci95": [
+        0.0081,
+        0.0623
+      ],
+      "p_value": 0.0096,
+      "significant_at_0.05": true
+    }
+  },
+  "A_name": "Llama",
+  "B_name": "DeepSeek"
+}

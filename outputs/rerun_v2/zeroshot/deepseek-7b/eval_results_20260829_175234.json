@@ -1,0 +1,35 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.208,
+      "recall": 0.2266,
+      "f1": 0.2169
+    },
+    "partial_match": {
+      "precision": 0.3051,
+      "recall": 0.3324,
+      "f1": 0.3182
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.1473,
+    "pair_recall": 0.1615,
+    "pair_f1": 0.154,
+    "sentiment_accuracy": 0.7126,
+    "sentiment_macro_f1": 0.5683,
+    "total_predictions": 808,
+    "total_references": 737
+  },
+  "json_parse_rate": 46.31,
+  "json_parse_successes": 282,
+  "json_parse_failures": 327,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "paper_materials\\revision_v2\\results_v2\\deepseek-7b_zeroshot_preds.jsonl",
+  "metadata": {
+    "model_path": "unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit",
+    "test_data": "./data/processed",
+    "timestamp": "2026-08-29T17:52:34.656806",
+    "num_samples": 609
+  }
+}
