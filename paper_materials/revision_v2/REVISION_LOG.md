@@ -426,3 +426,34 @@ control conditions, and `main.tex` rewritten against the new artifacts:
 Infrastructure: PC cannot sustain 4 concurrent GPU jobs (PSU trip, hard
 shutdown mid-run) — reran under a 2-GPU cap; one corrupted trainer_state.json
 (checkpoint-900) recovered by resuming from checkpoint-800.
+
+## 2026-08-29 (later) — Verification closed out; SI problem found
+
+All outstanding verification finished; every significance claim in the paper is
+now backed by a committed artifact.
+
+- **Qwen FT-vs-ZS test completed** (the last missing cell). All three FT-vs-ZS
+  comparisons significant at p<1e-4: dPair +0.435 (Qwen), +0.451 (Llama),
+  +0.449 (DeepSeek). The `tab:zeroshot` caption claim is now verified, not
+  assumed.
+- **Independent reproduction check**: the regenerated Qwen zero-shot predictions
+  reproduce `tab:zeroshot` and `tab:absa_results` to four decimals
+  (ATEex 0.3222/0.7077, pair 0.2100/0.6448), so the reported metrics and the
+  bootstrap tests derive from the same predictions re-derived from scratch.
+- **HuggingFace upload guide written** (`writing/huggingface_upload_guide.md`)
+  and pre-flighted: token has repo.write, `--all --dry-run` clean, 44 GB total,
+  cards render v2 metrics plus the correction notice.
+
+**Special issue problem.** The user confirmed SI `9N6QB6G1RO`, but two
+independent searches identify it as "Natural Language Processing Applications in
+Big Data" with a submission deadline of **31 December 2024** — i.e. closed.
+MDPI 403s automated fetches so the page could not be read directly; this needs
+human confirmation in susy.mdpi.com. Best open alternative located:
+`42jxfu49ss` — "Advances in NLP and Text Mining: 2nd Edition", deadline
+**31 December 2026**, whose keyword list explicitly includes *low-resource NLP*
+and *large language models*. Switching SIs requires no manuscript change.
+
+Housekeeping: `Co-Authored-By: Claude` trailers stripped from the three
+rerun-branch commits (contents byte-identical, verified against a backup ref)
+and force-pushed; the trailer on `3b519f2` remains on main pending a decision,
+as does `git gc --prune=now` for ~2.4 GB of orphaned objects.

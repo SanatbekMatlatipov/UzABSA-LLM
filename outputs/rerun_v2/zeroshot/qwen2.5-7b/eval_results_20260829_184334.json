@@ -1,0 +1,35 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.2504,
+      "recall": 0.4518,
+      "f1": 0.3222
+    },
+    "partial_match": {
+      "precision": 0.4346,
+      "recall": 0.7843,
+      "f1": 0.5593
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.1632,
+    "pair_recall": 0.2944,
+    "pair_f1": 0.21,
+    "sentiment_accuracy": 0.6517,
+    "sentiment_macro_f1": 0.4719,
+    "total_predictions": 1330,
+    "total_references": 737
+  },
+  "json_parse_rate": 99.84,
+  "json_parse_successes": 608,
+  "json_parse_failures": 1,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "paper_materials\\revision_v2\\results_v2\\qwen2.5-7b_zeroshot_preds.jsonl",
+  "metadata": {
+    "model_path": "unsloth/Qwen2.5-7B-Instruct-bnb-4bit",
+    "test_data": "./data/processed",
+    "timestamp": "2026-08-29T18:43:34.580919",
+    "num_samples": 609
+  }
+}

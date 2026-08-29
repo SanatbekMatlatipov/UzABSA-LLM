@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.7077,
+    "ate_partial_f1": 0.8022,
+    "pair_f1": 0.6448,
+    "sentiment_accuracy": 0.911
+  },
+  "B": {
+    "ate_exact_f1": 0.3222,
+    "ate_partial_f1": 0.5593,
+    "pair_f1": 0.21,
+    "sentiment_accuracy": 0.6517
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.3855,
+      "ci95": [
+        0.349,
+        0.4213
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.2429,
+      "ci95": [
+        0.2105,
+        0.2744
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.4348,
+      "ci95": [
+        0.3958,
+        0.4724
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": 0.2593,
+      "ci95": [
+        0.2041,
+        0.3163
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    }
+  },
+  "A_name": "QwenFT",
+  "B_name": "QwenZS"
+}
