@@ -104,7 +104,10 @@ def main():
     from transformers import AutoTokenizer, AutoModelForTokenClassification
 
     device = get_device(args.device if args.device != "auto" else "auto")
-    tokenizer = AutoTokenizer.from_pretrained(args.model_dir)
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(args.model_dir, add_prefix_space=True)
+    except (TypeError, ValueError):
+        tokenizer = AutoTokenizer.from_pretrained(args.model_dir)
     model = AutoModelForTokenClassification.from_pretrained(args.model_dir).to(device).eval()
     print(f"Loaded {args.model_dir} on {device}")
 

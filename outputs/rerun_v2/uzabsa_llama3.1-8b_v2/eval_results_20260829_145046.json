@@ -1,0 +1,35 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.7185,
+      "recall": 0.6893,
+      "f1": 0.7036
+    },
+    "partial_match": {
+      "precision": 0.8175,
+      "recall": 0.7843,
+      "f1": 0.8006
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6648,
+    "pair_recall": 0.6377,
+    "pair_f1": 0.651,
+    "sentiment_accuracy": 0.9252,
+    "sentiment_macro_f1": 0.8867,
+    "total_predictions": 707,
+    "total_references": 737
+  },
+  "json_parse_rate": 97.37,
+  "json_parse_successes": 593,
+  "json_parse_failures": 16,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "paper_materials\\revision_v2\\results_v2\\llama3.1-8b_preds.jsonl",
+  "metadata": {
+    "model_path": "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/merged_model",
+    "test_data": "./data/processed",
+    "timestamp": "2026-08-29T14:50:46.769276",
+    "num_samples": 609
+  }
+}

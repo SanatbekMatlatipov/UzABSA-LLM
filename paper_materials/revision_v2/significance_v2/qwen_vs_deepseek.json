@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.7077,
+    "ate_partial_f1": 0.8022,
+    "pair_f1": 0.6448,
+    "sentiment_accuracy": 0.911
+  },
+  "B": {
+    "ate_exact_f1": 0.6776,
+    "ate_partial_f1": 0.7874,
+    "pair_f1": 0.6034,
+    "sentiment_accuracy": 0.8905
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.0301,
+      "ci95": [
+        0.0,
+        0.0609
+      ],
+      "p_value": 0.0502,
+      "significant_at_0.05": false
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.0148,
+      "ci95": [
+        -0.0117,
+        0.0421
+      ],
+      "p_value": 0.2822,
+      "significant_at_0.05": false
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.0414,
+      "ci95": [
+        0.0105,
+        0.0735
+      ],
+      "p_value": 0.009,
+      "significant_at_0.05": true
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": 0.0205,
+      "ci95": [
+        -0.007,
+        0.049
+      ],
+      "p_value": 0.1496,
+      "significant_at_0.05": false
+    }
+  },
+  "A_name": "Qwen",
+  "B_name": "DeepSeek"
+}

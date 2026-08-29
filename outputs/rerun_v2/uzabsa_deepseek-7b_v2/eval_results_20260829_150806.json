@@ -1,0 +1,35 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.7143,
+      "recall": 0.6445,
+      "f1": 0.6776
+    },
+    "partial_match": {
+      "precision": 0.8301,
+      "recall": 0.749,
+      "f1": 0.7874
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6361,
+    "pair_recall": 0.5739,
+    "pair_f1": 0.6034,
+    "sentiment_accuracy": 0.8905,
+    "sentiment_macro_f1": 0.8314,
+    "total_predictions": 665,
+    "total_references": 737
+  },
+  "json_parse_rate": 96.88,
+  "json_parse_successes": 590,
+  "json_parse_failures": 19,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "paper_materials\\revision_v2\\results_v2\\deepseek-7b_preds.jsonl",
+  "metadata": {
+    "model_path": "outputs/rerun_v2/uzabsa_deepseek-7b_v2/merged_model",
+    "test_data": "./data/processed",
+    "timestamp": "2026-08-29T15:08:06.554030",
+    "num_samples": 609
+  }
+}

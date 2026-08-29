@@ -28,10 +28,10 @@ model-index:
           split: validation
         metrics:
           - type: f1
-            value: 0.6603
+            value: 0.7077
             name: ATE Exact F1
           - type: f1
-            value: 0.7705
+            value: 0.8022
             name: ATE Partial F1
       - task:
           type: text-classification
@@ -42,10 +42,10 @@ model-index:
           split: validation
         metrics:
           - type: accuracy
-            value: 0.8777
+            value: 0.9110
             name: Sentiment Accuracy
           - type: f1
-            value: 0.8113
+            value: 0.8622
             name: Sentiment Macro-F1
 ---
 
@@ -54,6 +54,24 @@ model-index:
 A **7.6B** parameter LLM fine-tuned for **Aspect-Based Sentiment Analysis (ABSA)** in Uzbek using QLoRA. Extracts aspect terms, categories, and sentiment polarities from Uzbek text reviews as structured JSON.
 
 > This is the **`qwen2.5-7b`** branch of [Sanatbek/UzABSA-LLM](https://huggingface.co/Sanatbek/UzABSA-LLM). See the [main branch](https://huggingface.co/Sanatbek/UzABSA-LLM) for a comparison of all models.
+
+> [!IMPORTANT]
+> **Corrected release (2026-08-29).** These weights supersede an earlier upload on
+> this branch. Two defects in the data pipeline were found and fixed, and every
+> model was retrained from scratch:
+>
+> 1. **Malformed system prompt.** The preprocessing script passed
+>    `system_prompt=None`, which overrode the default instead of selecting it, so
+>    all 5,480 training examples carried the literal string `"None"` as their
+>    system prompt while inference served the real Uzbek instruction. Training and
+>    inference were therefore mismatched.
+> 2. **Train/evaluation overlap.** The split was drawn over annotation records
+>    without deduplication, so 61 of 609 evaluation items (10.0%) had an
+>    exact-text twin in training. The split is now grouped by normalised review
+>    text; sizes are unchanged (5,480/609).
+>
+> If you downloaded this branch before 2026-08-29, please re-pull. Metrics below
+> come from the corrected pipeline and are not comparable to the earlier card.
 
 ## Model Details
 
@@ -66,8 +84,8 @@ A **7.6B** parameter LLM fine-tuned for **Aspect-Based Sentiment Analysis (ABSA)
 | Framework | Unsloth + HuggingFace TRL |
 | Task | Aspect-Based Sentiment Analysis |
 | Language | Uzbek (uz) |
-| Merged model size | 14.2 GB |
-| LoRA adapter size | 154 MB |
+| Merged model size | 15.0 GB |
+| LoRA adapter size | 170 MB |
 
 ## Evaluation Results
 
@@ -75,11 +93,11 @@ Evaluated on 609 held-out validation examples:
 
 | Metric | Score |
 |--------|:-----:|
-| **ATE Exact F1** | 0.6603 |
-| **ATE Partial F1** | 0.7705 |
-| **Pair F1** (aspect + sentiment) | 0.5795 |
-| **Sentiment Accuracy** | 0.8777 |
-| **Sentiment Macro-F1** | 0.8113 |
+| **ATE Exact F1** | 0.7077 |
+| **ATE Partial F1** | 0.8022 |
+| **Pair F1** (aspect + sentiment) | 0.6448 |
+| **Sentiment Accuracy** | 0.9110 |
+| **Sentiment Macro-F1** | 0.8622 |
 | **JSON Parse Rate** | 100.0% |
 
 ## Usage
@@ -110,7 +128,7 @@ response = tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_spe
 print(response)
 ```
 
-### Load LoRA Adapter Only (~154 MB)
+### Load LoRA Adapter Only (~170 MB)
 
 ```python
 from peft import PeftModel
@@ -162,9 +180,9 @@ FastLanguageModel.for_inference(model)
 | Precision | bf16 |
 | Max seq length | 2048 |
 | Seed | 42 |
-| Final train loss | 0.4010 |
-| Best eval loss | 0.3656 |
-| Training time | 282.6 min |
+| Final train loss | 0.0264 |
+| Best eval loss | 0.1756 |
+| Training time | 64.7 min |
 
 ## Training Data
 

@@ -9,11 +9,21 @@ models_cache/
 #           training_curves.png, lr_schedule.png, gpu_memory.png,
 #           eval_results_*.json, README.md
 # Ignored:  merged_model/, lora_adapters/, checkpoint-*/, model/, logs/
-outputs/my_run/*/merged_model/
-outputs/my_run/*/lora_adapters/
-outputs/my_run/*/checkpoint-*/
-outputs/my_run/*/model/
-outputs/my_run/*/logs/
+# Same rule for every run directory, not just my_run — a new run tree must not
+# silently start tracking ~15 GB of weights per model.
+outputs/*/*/merged_model/
+outputs/*/*/lora_adapters/
+outputs/*/*/checkpoint-*/
+outputs/*/*/model/
+outputs/*/*/logs/
+# HF snapshot caches that save_pretrained_merged leaves inside merged_model/
+outputs/**/.cache/
+
+# Superseded pre-fix splits, kept locally for the contamination comparison only
+data/processed_v1_buggy_backup/
+data/bio_processed_v1_backup/
+# HF map() caches inside dataset dirs
+data/*/*/cache-*.arrow
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -233,7 +243,7 @@ paper_materials/revision_v2/zenodo_release/*
 # BERT baselines - ignore large model weights & checkpoints, keep metrics/logs
 # Tracked:  eval_results.json, train_summary.json, training_log.txt, preds_per_example.jsonl
 # Ignored:  hf_trainer/checkpoint-*/, model/
-paper_materials/revision_v2/baselines/bertbek/hf_trainer/checkpoint-*/
-paper_materials/revision_v2/baselines/bertbek/model/
-paper_materials/revision_v2/baselines/tahrirchi-bert/hf_trainer/checkpoint-*/
-paper_materials/revision_v2/baselines/tahrirchi-bert/model/
+# Matched for every baselines* tree (baselines/, baselines_v2/, ...) so a rerun
+# does not start tracking 5 GB of encoder checkpoints per model.
+paper_materials/revision_v2/baselines*/*/hf_trainer/
+paper_materials/revision_v2/baselines*/*/model/
