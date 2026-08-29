@@ -33,6 +33,13 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
+# Windows terminals default to cp1252, which cannot encode the arrows and box
+# glyphs this script prints. Without this the script dies on its first banner
+# line — before uploading anything — with a UnicodeEncodeError.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
@@ -42,36 +49,36 @@ REPO_ID = "Sanatbek/UzABSA-LLM"
 MODELS = {
     "qwen2.5-7b": {
         "branch": "qwen2.5-7b",
-        "local_dir": "outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629",
+        "local_dir": "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2",
         "display_name": "UzABSA Qwen 2.5-7B",
         "base_model": "unsloth/Qwen2.5-7B-Instruct-bnb-4bit",
         "base_model_full": "Qwen/Qwen2.5-7B-Instruct",
         "architecture": "Qwen2ForCausalLM",
         "params": "7.6B",
-        "merged_size": "14.2 GB",
-        "lora_size": "154 MB",
+        "merged_size": "15.0 GB",
+        "lora_size": "170 MB",
     },
     "llama3.1-8b": {
         "branch": "llama3.1-8b",
-        "local_dir": "outputs/my_run/uzabsa_llama3.1-8b_20260222_182459",
+        "local_dir": "outputs/rerun_v2/uzabsa_llama3.1-8b_v2",
         "display_name": "UzABSA Llama 3.1-8B",
         "base_model": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
         "base_model_full": "meta-llama/Llama-3.1-8B-Instruct",
         "architecture": "LlamaForCausalLM",
         "params": "8.0B",
         "merged_size": "15.0 GB",
-        "lora_size": "160 MB",
+        "lora_size": "177 MB",
     },
     "deepseek-r1-7b": {
         "branch": "deepseek-r1-7b",
-        "local_dir": "outputs/my_run/uzabsa_deepseek-7b",
+        "local_dir": "outputs/rerun_v2/uzabsa_deepseek-7b_v2",
         "display_name": "UzABSA DeepSeek-R1-Distill-Qwen-7B",
         "base_model": "unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit",
         "base_model_full": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
         "architecture": "Qwen2ForCausalLM",
         "params": "7.6B",
-        "merged_size": "14.2 GB",
-        "lora_size": "154 MB",
+        "merged_size": "15.0 GB",
+        "lora_size": "165 MB",
     },
 }
 
@@ -127,6 +134,58 @@ def load_experiment_summary(model_dir: Path) -> dict | None:
 # Model card generators
 # ---------------------------------------------------------------------------
 
+# Metrics shown in the main-branch comparison table: (label, path, is_percent)
+_COMPARISON_ROWS = [
+    ("ATE Exact F1", ("aspect_term_extraction", "exact_match", "f1"), False),
+    ("ATE Partial F1", ("aspect_term_extraction", "partial_match", "f1"), False),
+    ("Pair F1", ("aspect_polarity_pairs", "pair_f1"), False),
+    ("Sentiment Accuracy", ("aspect_polarity_pairs", "sentiment_accuracy"), False),
+    ("Sentiment Macro-F1", ("aspect_polarity_pairs", "sentiment_macro_f1"), False),
+    ("JSON Parse Rate", ("json_parse_rate",), True),
+]
+
+
+def _dig(d, path):
+    for k in path:
+        if not isinstance(d, dict) or k not in d:
+            return None
+        d = d[k]
+    return d
+
+
+def build_comparison_table(results: dict) -> str:
+    """Render the main-branch comparison table from the runs' eval_results files.
+
+    Hardcoding these numbers previously let the published card drift away from the
+    artifacts; generating them means the card is wrong only if the runs are.
+    """
+    keys = list(MODELS.keys())
+    short = {"qwen2.5-7b": "Qwen", "llama3.1-8b": "Llama", "deepseek-r1-7b": "DeepSeek"}
+    header = "| Metric | " + " | ".join(MODELS[k]["display_name"].replace("UzABSA ", "")
+                                        for k in keys) + " | Best |"
+    sep = "|--------|" + "|".join([":-----------:"] * len(keys)) + "|:----:|"
+    lines = [header, sep]
+    for label, path, pct in _COMPARISON_ROWS:
+        vals = [_dig(results.get(k) or {}, path) for k in keys]
+        present = [v for v in vals if isinstance(v, (int, float))]
+        best = max(present) if present else None
+        cells = []
+        for v in vals:
+            if not isinstance(v, (int, float)):
+                cells.append("N/A")
+                continue
+            txt = f"{v:.2f}%" if pct else f"{v:.4f}"
+            cells.append(f"**{txt}**" if best is not None and abs(v - best) < 1e-12 else txt)
+        winner = "--"
+        if best is not None:
+            for k, v in zip(keys, vals):
+                if isinstance(v, (int, float)) and abs(v - best) < 1e-12:
+                    winner = short.get(k, k)
+                    break
+        lines.append(f"| **{label}** | " + " | ".join(cells) + f" | {winner} |")
+    return "\n".join(lines)
+
+
 def generate_main_readme() -> str:
     """Generate the main branch README with project overview + comparison."""
     root = get_project_root()
@@ -136,6 +195,8 @@ def generate_main_readme() -> str:
     for key, cfg in MODELS.items():
         model_dir = root / cfg["local_dir"]
         results[key] = load_eval_results(model_dir)
+
+    comparison_table = build_comparison_table(results)
 
     card = f"""---
 language:
@@ -176,19 +237,12 @@ Each model is stored on a separate branch. Load with `revision=`:
 
 All models evaluated on the same held-out validation set (609 examples).
 
-| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B | Best |
-|--------|:-----------:|:------------:|:--------------:|:----:|
-| **ATE Exact F1** | **0.6603** | 0.6549 | 0.6034 | Qwen |
-| **ATE Partial F1** | **0.7705** | 0.7591 | 0.7279 | Qwen |
-| **Pair F1** | 0.5795 | **0.5805** | 0.5018 | Llama |
-| **Sentiment Accuracy** | 0.8777 | **0.8864** | 0.8317 | Llama |
-| **Sentiment Macro-F1** | 0.8113 | **0.8435** | 0.7717 | Llama |
-| **JSON Parse Rate** | **100.0%** | 95.89% | 95.40% | Qwen |
+{comparison_table}
 
 **Key findings:**
 - **Qwen 2.5-7B** leads in aspect term extraction (ATE) and achieves a perfect 100% JSON parse rate — the most reliable for structured output.
 - **Llama 3.1-8B** leads in sentiment classification accuracy and end-to-end pair-level F1, making it the best choice when sentiment precision matters most.
-- **DeepSeek-R1-Distill-Qwen-7B** trails on all metrics, suggesting R1 distillation doesn't benefit structured ABSA extraction tasks.
+- **DeepSeek-R1-Distill-Qwen-7B** trails on every headline F1 metric, a pattern consistent with R1-style reasoning distillation conferring no advantage on direct structured extraction.
 
 ## Quick Start
 
@@ -422,6 +476,24 @@ model-index:
 A **{cfg['params']}** parameter LLM fine-tuned for **Aspect-Based Sentiment Analysis (ABSA)** in Uzbek using QLoRA. Extracts aspect terms, categories, and sentiment polarities from Uzbek text reviews as structured JSON.
 
 > This is the **`{cfg['branch']}`** branch of [{REPO_ID}](https://huggingface.co/{REPO_ID}). See the [main branch](https://huggingface.co/{REPO_ID}) for a comparison of all models.
+
+> [!IMPORTANT]
+> **Corrected release (2026-08-29).** These weights supersede an earlier upload on
+> this branch. Two defects in the data pipeline were found and fixed, and every
+> model was retrained from scratch:
+>
+> 1. **Malformed system prompt.** The preprocessing script passed
+>    `system_prompt=None`, which overrode the default instead of selecting it, so
+>    all 5,480 training examples carried the literal string `"None"` as their
+>    system prompt while inference served the real Uzbek instruction. Training and
+>    inference were therefore mismatched.
+> 2. **Train/evaluation overlap.** The split was drawn over annotation records
+>    without deduplication, so 61 of 609 evaluation items (10.0%) had an
+>    exact-text twin in training. The split is now grouped by normalised review
+>    text; sizes are unchanged (5,480/609).
+>
+> If you downloaded this branch before 2026-08-29, please re-pull. Metrics below
+> come from the corrected pipeline and are not comparable to the earlier card.
 
 ## Model Details
 
