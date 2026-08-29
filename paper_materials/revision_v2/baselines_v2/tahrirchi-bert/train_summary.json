@@ -1,0 +1,25 @@
+{
+  "model": "tahrirchi/tahrirchi-bert-base",
+  "seqeval_span_metrics": {
+    "eval_loss": 0.34521540999412537,
+    "eval_precision": 0.653566229985444,
+    "eval_recall": 0.6167582417582418,
+    "eval_f1": 0.6346289752650176,
+    "eval_accuracy": 0.8911274699728787,
+    "eval_runtime": 0.59,
+    "eval_samples_per_second": 1032.176,
+    "eval_steps_per_second": 66.1,
+    "epoch": 4.0
+  },
+  "args": {
+    "model": "tahrirchi/tahrirchi-bert-base",
+    "bio_dir": "./data/bio_processed",
+    "out": "paper_materials/revision_v2/baselines_v2/tahrirchi-bert",
+    "epochs": 4.0,
+    "lr": 3e-05,
+    "batch_size": 16,
+    "max_length": 192,
+    "seed": 42,
+    "device": "cuda"
+  }
+}

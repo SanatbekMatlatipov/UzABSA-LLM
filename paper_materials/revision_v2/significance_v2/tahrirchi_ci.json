@@ -1,0 +1,40 @@
+{
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "estimate": 0.7005,
+      "ci95": [
+        0.6667,
+        0.7336
+      ],
+      "half_width": 0.0335
+    },
+    "ate_partial_f1": {
+      "estimate": 0.7865,
+      "ci95": [
+        0.7584,
+        0.8143
+      ],
+      "half_width": 0.028
+    },
+    "pair_f1": {
+      "estimate": 0.6225,
+      "ci95": [
+        0.5858,
+        0.657
+      ],
+      "half_width": 0.0356
+    },
+    "sentiment_accuracy": {
+      "estimate": 0.8893,
+      "ci95": [
+        0.8619,
+        0.9154
+      ],
+      "half_width": 0.0267
+    }
+  },
+  "system": "TahrirchiBERT (v2 split)",
+  "preds_file": "paper_materials/revision_v2/baselines_v2/tahrirchi-bert/preds_per_example.jsonl"
+}

@@ -1,14 +1,14 @@
 {
   "train": {
     "n_examples": 5480,
-    "n_gold_terms": 6588,
-    "n_aligned_terms": 6467,
-    "alignment_rate": 0.9816
+    "n_gold_terms": 6572,
+    "n_aligned_terms": 6449,
+    "alignment_rate": 0.9813
   },
   "validation": {
     "n_examples": 609,
-    "n_gold_terms": 721,
-    "n_aligned_terms": 710,
-    "alignment_rate": 0.9847
+    "n_gold_terms": 737,
+    "n_aligned_terms": 728,
+    "alignment_rate": 0.9878
   }
 }

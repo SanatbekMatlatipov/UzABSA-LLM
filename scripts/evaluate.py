@@ -84,7 +84,15 @@ def main():
         default=None,
         help="Maximum number of samples to evaluate (for quick testing)"
     )
-    
+    parser.add_argument(
+        "--save-preds",
+        type=str,
+        default=None,
+        help="JSONL path for per-example predictions, in the format "
+             "significance_test.py and bootstrap_ci.py consume. Using this avoids "
+             "a second full inference pass with dump_llm_preds.py."
+    )
+
     args = parser.parse_args()
     
     # Create output directory
@@ -135,6 +143,7 @@ def main():
         test_dataset=test_dataset,
         batch_size=args.batch_size,
         use_uzbek=not args.use_english,
+        save_preds=args.save_preds,
     )
     
     # Add metadata

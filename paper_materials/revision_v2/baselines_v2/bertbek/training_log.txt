@@ -1,0 +1,7 @@
+2026-08-29 11:22:59,535 WARNING Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.16.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+2026-08-29 11:22:59,987 INFO Model: elmurod1202/bertbek-news-big-cased | device: cuda | torch 2.6.0+cu124
+2026-08-29 11:23:00,028 INFO train=5480 val=609 labels=['O', 'B-positive', 'I-positive', 'B-negative', 'I-negative', 'B-neutral', 'I-neutral', 'B-conflict', 'I-conflict']
+2026-08-29 11:23:03,254 INFO Starting training...
+2026-08-29 11:24:14,491 INFO Final seqeval (token-span) metrics: {'eval_loss': 0.377157062292099, 'eval_precision': 0.6020806241872562, 'eval_recall': 0.635989010989011, 'eval_f1': 0.6185704742818972, 'eval_accuracy': 0.8822846079380445, 'eval_runtime': 0.4825, 'eval_samples_per_second': 1262.048, 'eval_steps_per_second': 80.821, 'epoch': 4.0}
+2026-08-29 11:24:14,738 INFO Saved model -> paper_materials\revision_v2\baselines_v2\bertbek\model
+2026-08-29 11:24:14,738 INFO NOTE: seqeval numbers above are token-span level; run eval_bert_baseline.py for the ABSA metrics comparable to the LLMs.

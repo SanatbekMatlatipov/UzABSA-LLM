@@ -116,7 +116,14 @@ def main():
     val = json.load(open(bio / "validation.json", encoding="utf-8"))
     log.info(f"train={len(train)} val={len(val)} labels={list(label2id)}")
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model)
+    # TahrirchiBERT ships a RoBERTa-style BPE tokenizer, which refuses
+    # is_split_into_words=True unless add_prefix_space is set. WordPiece
+    # tokenizers accept and ignore the flag, so pass it unconditionally and
+    # fall back only for tokenizers that reject the kwarg outright.
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(args.model, add_prefix_space=True)
+    except (TypeError, ValueError):
+        tokenizer = AutoTokenizer.from_pretrained(args.model)
     ds_train = Dataset.from_list(train).map(
         lambda e: align_labels(tokenizer, e, max_length=args.max_length),
         batched=True, remove_columns=["tokens", "ner_tags", "text", "aspects"])

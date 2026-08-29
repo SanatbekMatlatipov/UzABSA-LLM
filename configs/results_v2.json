@@ -1,0 +1,17 @@
+{
+  "_comment": "Systems in the order they appear as columns in the paper's main results table. Paths point at run directories; the collector picks the newest eval_results*.json in each.",
+  "systems": [
+    {"name": "Qwen 2.5-7B",   "results": "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2"},
+    {"name": "Llama 3.1-8B",  "results": "outputs/rerun_v2/uzabsa_llama3.1-8b_v2"},
+    {"name": "DeepSeek-R1",   "results": "outputs/rerun_v2/uzabsa_deepseek-7b_v2"},
+    {"name": "BERTbek",       "results": "paper_materials/revision_v2/baselines_v2/bertbek"},
+    {"name": "TahrirchiBERT", "results": "paper_materials/revision_v2/baselines_v2/tahrirchi-bert"}
+  ],
+  "old": [
+    {"name": "Qwen 2.5-7B",   "results": "outputs/my_run/uzabsa_qwen2.5-7b_20260222_001629"},
+    {"name": "Llama 3.1-8B",  "results": "outputs/my_run/uzabsa_llama3.1-8b_20260222_182459"},
+    {"name": "DeepSeek-R1",   "results": "outputs/my_run/uzabsa_deepseek-7b"},
+    {"name": "BERTbek",       "results": "paper_materials/revision_v2/baselines/bertbek"},
+    {"name": "TahrirchiBERT", "results": "paper_materials/revision_v2/baselines/tahrirchi-bert"}
+  ]
+}

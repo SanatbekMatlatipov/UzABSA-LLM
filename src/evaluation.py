@@ -19,6 +19,7 @@ import json
 import logging
 import re
 from collections import defaultdict
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
@@ -278,6 +279,7 @@ def evaluate_model(
     aspects_column: str = "aspects",
     batch_size: int = 8,
     use_uzbek: bool = True,
+    save_preds: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Run full evaluation on a test dataset.
@@ -294,6 +296,9 @@ def evaluate_model(
         aspects_column: Column name for ground truth aspects.
         batch_size: Batch size for inference.
         use_uzbek: Whether to use Uzbek prompts.
+        save_preds: Optional JSONL path for per-example predictions. Writing them
+            here means the significance tests reuse this single inference pass
+            instead of regenerating every prediction with dump_llm_preds.py.
 
     Returns:
         Comprehensive evaluation results.
@@ -315,6 +320,7 @@ def evaluate_model(
     parse_successes = 0
     parse_failures = 0
     empty_gold = 0
+    pred_records = []
 
     for example in tqdm(test_dataset, desc="Evaluating"):
         if is_chatml:
@@ -340,6 +346,14 @@ def evaluate_model(
 
         all_predictions.append(pred_aspects)
         all_references.append(ref_aspects)
+        if save_preds is not None:
+            pred_records.append({
+                "idx": len(all_predictions) - 1,
+                "text": review_text,
+                "pred_aspects": [a for a in pred_aspects if a.get("term")],
+                "gold_aspects": [a for a in ref_aspects if a.get("term")],
+                "parse_success": bool(result.get("parse_success", False)),
+            })
 
     total_evaluated = len(all_predictions)
     parse_rate = parse_successes / total_evaluated * 100 if total_evaluated > 0 else 0
@@ -373,6 +387,15 @@ def evaluate_model(
         "num_examples": total_evaluated,
         "skipped_empty_gold": empty_gold,
     }
+
+    if save_preds is not None:
+        out = Path(save_preds)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with open(out, "w", encoding="utf-8") as f:
+            for rec in pred_records:
+                print(json.dumps(rec, ensure_ascii=False), file=f)
+        logger.info(f"Saved {len(pred_records)} per-example predictions to {out}")
+        results["preds_file"] = str(out)
     
     # Print report
     print("\n" + "=" * 60)
