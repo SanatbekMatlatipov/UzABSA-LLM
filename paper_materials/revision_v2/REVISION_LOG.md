@@ -457,3 +457,18 @@ Housekeeping: `Co-Authored-By: Claude` trailers stripped from the three
 rerun-branch commits (contents byte-identical, verified against a backup ref)
 and force-pushed; the trailer on `3b519f2` remains on main pending a decision,
 as does `git gc --prune=now` for ~2.4 GB of orphaned objects.
+
+### Correction (same day): special issue is OPEN
+
+The SI-closed alarm in the entry above was **wrong**. The author checked the live
+MDPI page: `9N6QB6G1RO` "Natural Language Processing Applications in Big Data"
+has a **submission deadline of 22 October 2026** and is open (31,686 views).
+The 31-Dec-2024 date came from stale search-engine snapshots of the original
+deadline, which MDPI later extended; because MDPI 403s automated fetches, the
+page itself could not be read to catch the discrepancy. No alternative SI is
+needed and no manuscript change follows — scope fit is already good, since the
+Introduction frames the work as large-scale text analytics, which matches the
+SI's big-data angle.
+
+Lesson for this repo: for MDPI SI status, a live human check beats web search;
+search results here were a year out of date.

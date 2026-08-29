@@ -5,27 +5,24 @@ the **v2 (deduplicated-split, fixed-prompt) results** throughout, with zero-shot
 controls, split-effect analysis, all-pairs paired bootstraps, and a vector
 training-curves figure. PDF compiles clean (verified in Overleaf 2026-08-29).
 
-## Blocking — needs a decision
+## Special issue — CONFIRMED OPEN
 
-**The target special issue appears CLOSED.** `9N6QB6G1RO` =
-*"Natural Language Processing Applications in Big Data"* (guest editors Xingyi
-Song, Ye Jiang, Yunfei Long), and two independent web searches report its
-manuscript deadline as **31 December 2024**. MDPI serves 403 to automated
-fetches, so this could not be confirmed on the page itself — **verify by logging
-into susy.mdpi.com and checking whether it still accepts submissions.**
+Target: **`9N6QB6G1RO` — "Natural Language Processing Applications in Big Data"**
+(Big Data and Cognitive Computing, ISSN 2504-2289).
+**Deadline for manuscript submissions: 22 October 2026.** Confirmed by the author
+on the live MDPI page 2026-08-29.
 
-If it is closed, the best-matching open alternative found:
+(For the record: automated search reported a stale 31-Dec-2024 deadline for this
+SI, and MDPI serves 403 to automated fetches, so the page could not be read
+directly. The deadline was extended; the search index had not caught up. Trust
+the live page over search results here.)
 
-| SI | Title | Deadline | Why it fits |
-|---|---|---|---|
-| `42jxfu49ss` | Advances in NLP and Text Mining: **2nd Edition** | **31 Dec 2026** | Keywords explicitly include *low-resource NLP*, *large language models*, *text mining* — a direct match for this paper |
-| `JEISHYZ92J` | Advances in NLP and Text Mining (1st ed.) | check | same scope, earlier edition |
-
-Note the previously targeted `W633E7395P` ("AI and NLP") closed 20 July 2026, and
-`O9A9UWB542` (targeted before that) was never confirmed. The manuscript itself is
-SI-agnostic — no LaTeX change is required to switch; the SI is chosen in the SuSy
-submission form. Only the Introduction's scope framing would benefit from tuning
-if the chosen SI is narrower than generic NLP.
+Scope fit is good and needs no manuscript change: the SI is about NLP applied to
+big-data settings, and the Introduction already frames the work as "a problem
+generic to large-scale text analytics" — turning a heterogeneous stream of
+user-generated reviews into a quality-controlled analytical resource — which is
+exactly the SI's angle. The 5,038-review multi-domain corpus and the
+model-assisted annotation pipeline are the big-data contribution.
 
 ## Remaining before submission
 
@@ -35,7 +32,8 @@ if the chosen SI is narrower than generic NLP.
    notice. The currently published weights are the **defective v1** ones, so this
    should happen before the Data Availability statement is relied on.
 
-2. **Confirm the SI** (above) and select it in SuSy.
+2. **Select SI `9N6QB6G1RO`** in the SuSy submission form (confirmed open,
+   deadline 22 October 2026).
 
 ## Done — 2026-08-29
 
