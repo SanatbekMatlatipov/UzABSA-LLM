@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%	MDPI class for LaTeX files	 27 July 2026
+%%%%	MDPI class for LaTeX files	 13 March 2026
 %% %%	For any information please send an e-mail to:
 %% %%		latex@mdpi.com
 %% %%
@@ -24,7 +24,7 @@
 
 %% IDENTIFICATION
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{Definitions/mdpi}[27/07/2026 MDPI paper class]
+\ProvidesClass{Definitions/mdpi}[13/03/2026 MDPI paper class]
 
  %% PRELIMINARY DECLARATIONS
 \LoadClass[10pt,a4paper]{article}
@@ -33,7 +33,7 @@
 \RequirePackage{calc}
 \RequirePackage{indentfirst}
 \RequirePackage{fancyhdr}
-\RequirePackage{graphicx}
+\RequirePackage{graphicx,epstopdf}
 \RequirePackage{lastpage}
 \RequirePackage{ifthen}
 \RequirePackage{float}
@@ -270,22 +270,92 @@
 \renewcommand{\right}{\aftergroup\egroup\originalright} 
 
 %%%% Chicago style journals
-\newcommand{\isChicagoStyle}{%
-	\ifthenelse{\equal{\@journaltype}{Chicago}
-	}
+\newcommand{\isChicagoStyle}{
+	\ifthenelse{\equal{\@journal}{arts}
+		\OR \equal{\@journal}{genealogy}
+		\OR \equal{\@journal}{histories}
+		\OR \equal{\@journal}{humanities}
+		\OR \equal{\@journal}{laws}
+		\OR \equal{\@journal}{literature}
+		\OR \equal{\@journal}{religions}
+		\OR \equal{\@journal}{risks}
+		\OR \equal{\@journal}{socsci}
+             \OR \equal{\@journal}{preprintschicago} %% Just use for preprints, not a real Chicago journal
+             \OR \equal{\@journal}{chicagojournal} %% Just use for chicago submission, not a real Chicago journal
+		}
 }
 
 %%%% APA style journals
-\newcommand{\isAPAStyle}{%
-	\ifthenelse{\equal{\@journaltype}{APA}
-	}
+\newcommand{\isAPAStyle}{
+	\ifthenelse{\equal{\@journal}{admsci}       % Transfer to APA type
+		\OR \equal{\@journal}{aieduc}       
+		\OR \equal{\@journal}{behavsci}       % Transfer to APA type
+		\OR \equal{\@journal}{businesses}    % Transfer to APA type
+		\OR \equal{\@journal}{econometrics}% Transfer to APA type
+		\OR \equal{\@journal}{economies}    % Transfer to APA type
+		\OR \equal{\@journal}{education}     % Transfer to APA type
+		\OR \equal{\@journal}{ejihpe}           % Transfer to APA type
+		\OR \equal{\@journal}{famsci}           % Transfer to APA type
+		\OR \equal{\@journal}{games}          % Transfer to APA type
+		\OR \equal{\@journal}{humans}         % Transfer to APA type
+		\OR \equal{\@journal}{ijcs}               % Transfer to APA type
+		\OR \equal{\@journal}{ijfs}               % Transfer to APA type
+		\OR \equal{\@journal}{jintelligence}   % Transfer to APA type from 19 Dec. 2025
+		\OR \equal{\@journal}{journalmedia} % Transfer to APA type
+		\OR \equal{\@journal}{jrfm}              % Transfer to APA type
+		\OR \equal{\@journal}{jsam}             % New APA Journal
+		\OR \equal{\@journal}{languages}      % Transfer to APA type
+		\OR \equal{\@journal}{peacestud}      % New APA Journal
+		\OR \equal{\@journal}{projmanag}      % New APA Journal
+		\OR \equal{\@journal}{psycholint}      % Transfer to APA type
+		\OR \equal{\@journal}{publications}   % Transfer to APA type
+		\OR \equal{\@journal}{tourismhosp}   % Transfer to APA type
+		\OR \equal{\@journal}{youth}             % Transfer to APA type
+             \OR \equal{\@journal}{preprintsapa} %% Just use for preprints, not a real APA journal
+             \OR \equal{\@journal}{apajournal} %% Just use for APA submission, not a real APA journal
+		}
 }
 
 %%%% Chicago style journals
-\newcommand{\isAPAandChicago}{%
-	\ifthenelse{\equal{\@journaltype}{APA} 
-		\OR \equal{\@journaltype}{Chicago}
-	}
+\newcommand{\isAPAandChicago}{
+	\ifthenelse{\equal{\@journal}{arts}
+		\OR \equal{\@journal}{genealogy}
+		\OR \equal{\@journal}{histories}
+		\OR \equal{\@journal}{humanities}
+		\OR \equal{\@journal}{jintelligence}
+		\OR \equal{\@journal}{laws}
+		\OR \equal{\@journal}{literature}
+		\OR \equal{\@journal}{religions}
+		\OR \equal{\@journal}{risks}
+		\OR \equal{\@journal}{socsci}
+             \OR \equal{\@journal}{preprintschicago} 
+	      \OR \equal{\@journal}{admsci}       
+		\OR \equal{\@journal}{aieduc}      
+		\OR \equal{\@journal}{behavsci}       
+		\OR \equal{\@journal}{businesses}   
+		\OR \equal{\@journal}{econometrics}
+		\OR \equal{\@journal}{economies}    
+		\OR \equal{\@journal}{education}     
+		\OR \equal{\@journal}{ejihpe}    
+		\OR \equal{\@journal}{famsci}       
+		\OR \equal{\@journal}{games}          
+		\OR \equal{\@journal}{humans}  
+		\OR \equal{\@journal}{ijcs}                      
+		\OR \equal{\@journal}{ijfs}              
+		\OR \equal{\@journal}{journalmedia}
+		\OR \equal{\@journal}{jrfm}             
+		\OR \equal{\@journal}{jsam}
+		\OR \equal{\@journal}{languages}
+		\OR \equal{\@journal}{peacestud}
+		\OR \equal{\@journal}{projmanag}
+		\OR \equal{\@journal}{psycholint}      
+		\OR \equal{\@journal}{publications}   
+		\OR \equal{\@journal}{tourismhosp}   
+		\OR \equal{\@journal}{youth}             
+             \OR \equal{\@journal}{preprintsapa} 
+             \OR \equal{\@journal}{chicagojournal} %% Just use for chicago submission, not a real Chicago journal
+             \OR \equal{\@journal}{apajournal} %% Just use for APA submission, not a real APA journal
+		}
 }
 
 %%%% References
@@ -1525,11 +1595,6 @@
 
 \captionsetup[graph]{position=bottom, 	labelfont={bf, small, stretch=1.17}, labelsep=period, textfont={small, stretch=1.17}, aboveskip=6pt, belowskip=-6pt, singlelinecheck=off, justification=justified}
 }
-
-%% Non-floating figure block with long caption (\captionof{figure}{...}).
-%% TL2026 + \DocumentMetadata: use float tagging sockets (PDF/UA-2).
-%% TL2023 / no tagging: \UseTaggingSocket may be undefined -- skip safely.
-\newcommand{\mdpi@tagsocket}[1]{\ifdefined\UseTaggingSocket\UseTaggingSocket{#1}\fi}
 
 %% For table footnotes
 \newsavebox{\@justcentbox}

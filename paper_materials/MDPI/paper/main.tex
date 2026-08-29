@@ -2,8 +2,8 @@
 %  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
 
 %=================================================================
-\documentclass[bdcc,article,submit,pdftex,moreauthors]{Definitions/mdpi}
-%\documentclass[preprints,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+\documentclass[bdcc,article,submit,moreauthors]{Definitions/mdpi}
+%\documentclass[preprints,article,submit,moreauthors]{Definitions/mdpi} 
 % For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
 
 % Below journals will use APA reference format:
@@ -513,7 +513,7 @@ All inference is performed with greedy decoding (\texttt{do\_sample}$=$\texttt{F
 \label{sec:results}
 
 % ----------------------------------------------------------------------
-All experiments run on a single NVIDIA RTX A6000 GPU (48\,GB VRAM) using Python~3.10 with Unsloth, TRL, PEFT, and bitsandbytes. The UzABSA dataset is split 90/10 into training (5{,}480) and validation (609) sets with a fixed seed of~42. Each of the three models is trained for exactly 1{,}000 gradient steps under the QLoRA configuration described in \Cref{sec:meth_qlora}; the \emph{only} variable across runs is the base model. We use the term validation set because the processed split was originally prepared for controlled model comparison; no additional hyperparameter search was performed on this split after observing downstream ABSA metrics. A fully separate held-out test split and zero-/few-shot prompting baselines are left for future work; fine-tuned encoder baselines are evaluated on the same split (\Cref{sec:meth_encoder}). \Cref{tab:train_efficiency} summarises the resulting training efficiency.
+All experiments run on NVIDIA RTX A6000 GPUs (48\,GB VRAM) using Python~3.13 with Unsloth, TRL, PEFT, and bitsandbytes; each run occupies a single GPU. The UzABSA dataset is split 90/10 into training (5{,}480) and evaluation (609) sets with a fixed seed of~42. The split is \emph{grouped by review text}: all annotation records sharing a normalised review string are assigned to the same side, so no review can appear on both sides of the partition. This matters because the corpus annotates aspect terms and aspect categories as separate records (\Cref{sec:data_task}) and because short formulaic reviews recur verbatim, so a naive record-level random split leaks reviews across the partition; \Cref{sec:res_split} quantifies what that leakage does to the reported numbers. Each of the three models is trained for exactly 1{,}000 gradient steps under the QLoRA configuration described in \Cref{sec:meth_qlora}; the \emph{only} variable across runs is the base model. We use the term evaluation set rather than test set because the same partition is monitored during training; no hyperparameter search was performed on it after observing downstream ABSA metrics. The fine-tuned encoder baselines (\Cref{sec:meth_encoder}) and the unadapted zero-shot baselines (\Cref{sec:res_zeroshot}) are evaluated on this identical partition, so all systems in \Cref{tab:absa_results} are directly comparable. \Cref{tab:train_efficiency} summarises the resulting training efficiency.
 
 \begin{table}[t]
 \centering
