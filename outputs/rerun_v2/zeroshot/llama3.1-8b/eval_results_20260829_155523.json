@@ -1,0 +1,35 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.2271,
+      "recall": 0.3799,
+      "f1": 0.2843
+    },
+    "partial_match": {
+      "precision": 0.3933,
+      "recall": 0.6581,
+      "f1": 0.4924
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.1596,
+    "pair_recall": 0.2673,
+    "pair_f1": 0.1999,
+    "sentiment_accuracy": 0.7036,
+    "sentiment_macro_f1": 0.628,
+    "total_predictions": 1234,
+    "total_references": 737
+  },
+  "json_parse_rate": 95.4,
+  "json_parse_successes": 581,
+  "json_parse_failures": 28,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "paper_materials\\revision_v2\\results_v2\\llama3.1-8b_zeroshot_preds.jsonl",
+  "metadata": {
+    "model_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+    "test_data": "./data/processed",
+    "timestamp": "2026-08-29T15:55:23.737241",
+    "num_samples": 609
+  }
+}

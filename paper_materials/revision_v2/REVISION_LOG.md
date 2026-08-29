@@ -386,3 +386,43 @@ aspect-sentiment quadruples and is now cited and differentiated in Related Work;
 `data/processed` and retraining is the path to defensible numbers. Blocked here: no GPU and
 2.6 GB free disk. Until that rerun, the manuscript describes its own limitations accurately
 but the numbers should be treated as provisional.
+
+## 2026-08-29 — Full rerun integrated into the manuscript 🤖
+
+All five systems retrained/re-evaluated on the corrected pipeline (real system
+prompt; review-grouped deduplicated split, 5480/609 preserved) plus three new
+control conditions, and `main.tex` rewritten against the new artifacts:
+
+- **Headline table (tab:absa_results) now v2.** Qwen 0.7077 exact-ATE F1 (best),
+  Llama 0.6510 pair F1 / 0.9252 sent-acc (best). Every system improved vs. v1.
+- **New §"What Does Fine-Tuning Buy?" (tab:zeroshot).** Zero-shot controls for
+  all three LLMs: FT roughly doubles exact-ATE and triples pair F1. Base models
+  already emit JSON (Qwen 99.8% ZS parse) — fine-tuning buys task competence and
+  prediction-count calibration (ratio 1.10–1.80 → 0.90–0.98), not format
+  compliance. Exception: DeepSeek-R1 ZS parse rate 46.3% (reasoning traces),
+  restored to 96.9% by FT.
+- **New §"Effect of Deduplication-Aware Splitting" (tab:split_effect).**
+  Leakage *depressed* scores (all systems improve on the clean split) and
+  manufactured a false encoder significance (p=0.023 → p=0.13). Encoder deltas
+  isolate the split effect; LLM deltas include the prompt fix.
+- **Significance tests all-pairs (significance_v2/).** Qwen–Llama: statistical
+  tie on everything (p=0.27–1.00). DeepSeek significantly below both on pair F1
+  (p=0.009/0.002). Encoder–encoder and Qwen–encoder extraction: ties.
+- **Seed replicate** (Qwen, seed 43): exact-ATE 0.7101 / pair 0.6554 → ±0.01
+  seed noise, quoted in the paper next to the 0.004–0.006 Qwen–Llama gaps.
+- **Figure 2 replaced**: W&B screenshot → pgfplots vector figure generated from
+  the released trainer logs (train loss log-scale, eval loss, LR schedule).
+- **Table 5 (train efficiency)**: v2 eval losses (Llama 0.1476 best; Qwen
+  0.1726@700; DeepSeek 0.1744); wall-clock honestly reported only for the one
+  uninterrupted run (DeepSeek, 84 min) — Qwen/Llama were checkpoint-resumed
+  after a power interruption.
+- **Limitations rewritten**: leakage + missing-zero-shot paragraphs replaced by
+  what remains true (dev-set reuse, partial seed coverage, no few-shot band,
+  silver dataset produced by the pre-fix annotator model — flagged with a
+  footnote in §pipeline, regeneration planned for next dataset version).
+- Abstract/contributions/discussion/conclusion updated to match; Aripov email
+  now filled in (mirsaid.aripov@nuu.uz, added by the author).
+
+Infrastructure: PC cannot sustain 4 concurrent GPU jobs (PSU trip, hard
+shutdown mid-run) — reran under a 2-GPU cap; one corrupted trainer_state.json
+(checkpoint-900) recovered by resuming from checkpoint-800.

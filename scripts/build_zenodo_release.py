@@ -150,6 +150,28 @@ def main():
         n_gold = len(json.loads(gold_path.read_text(encoding="utf-8")))
     cats = sorted({r.get("business_category", "") for r in full if r.get("business_category")})
 
+    # Describe the aspect labels from the data itself rather than from the intended
+    # schema — the annotating model emits a small tail of nulls and off-taxonomy
+    # values, and a released corpus should say so up front.
+    TAXONOMY = {"ovqat", "muhit", "xizmat", "narx", "boshqalar"}
+    aspects = [a for r in full for a in (r.get("aspects") or [])]
+    n_noterm = sum(1 for a in aspects if not a.get("term"))
+    pct_noterm = 100.0 * n_noterm / max(1, len(aspects))
+    n_null_cat = sum(1 for a in aspects if not a.get("category"))
+    off_tax = sorted({a["category"] for a in aspects
+                      if a.get("category") and a["category"] not in TAXONOMY})
+    notes = []
+    if n_null_cat:
+        notes.append(f"{n_null_cat} aspects ({100.0*n_null_cat/max(1,len(aspects)):.1f}%) "
+                     f"carry a null category")
+    if off_tax:
+        n_off = sum(1 for a in aspects if a.get("category") in off_tax)
+        notes.append(f"a further {n_off} carr{'ies' if n_off == 1 else 'y'} the off-taxonomy "
+                     f"value{'' if len(off_tax) == 1 else 's'} "
+                     + ", ".join(f"`{c}`" for c in off_tax))
+    cat_note = ("These are left uncorrected: " + "; ".join(notes) + ". Filter on the five "
+                "values above if you need a closed label set.") if notes else ""
+
     readme = out / "01_README.md"
     readme.write_text(f"""# UzABSA Multi-Domain: an Uzbek Aspect-Based Sentiment Analysis dataset ({args.version})
 
@@ -176,9 +198,12 @@ A {n_gold}-review subset is verified against native-speaker gold annotations.
 `aspect_term`, `aspect_category`, `polarity`, `quality_tier`, `judge_overall`,
 `human_verified`, `annotation_source`, `review_text`
 
-- **aspect_category** is one of `ovqat` (food), `muhit` (ambiance), `xizmat` (service),
-  `narx` (price), `boshqalar` (other).
-- **polarity** is one of `positive`, `negative`, `neutral`, `conflict`.
+- **aspect_category** is drawn from `ovqat` (food), `muhit` (ambiance), `xizmat` (service),
+  `narx` (price), `boshqalar` (other). {cat_note}
+- **polarity** is one of `positive`, `negative`, `neutral`. The `conflict` label used by
+  SemEval-style corpora does not occur here.
+- **aspect_term** is empty for {n_noterm} aspects ({pct_noterm:.1f}%), where the annotating
+  model emitted a category-level judgement with no supporting span.
 - **quality_tier** is `include` (judge overall >= 3.5), `flag` (2.5-3.49),
   `exclude` (< 2.5), or `unjudged` (not in the judged sample).
 

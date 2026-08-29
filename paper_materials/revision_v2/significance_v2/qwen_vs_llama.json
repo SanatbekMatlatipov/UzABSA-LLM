@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.7077,
+    "ate_partial_f1": 0.8008,
+    "pair_f1": 0.6448,
+    "sentiment_accuracy": 0.911
+  },
+  "B": {
+    "ate_exact_f1": 0.7036,
+    "ate_partial_f1": 0.8006,
+    "pair_f1": 0.651,
+    "sentiment_accuracy": 0.9252
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.0041,
+      "ci95": [
+        -0.0239,
+        0.0315
+      ],
+      "p_value": 0.7932,
+      "significant_at_0.05": false
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.0002,
+      "ci95": [
+        -0.0251,
+        0.0252
+      ],
+      "p_value": 0.9978,
+      "significant_at_0.05": false
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": -0.0062,
+      "ci95": [
+        -0.0375,
+        0.0247
+      ],
+      "p_value": 0.6822,
+      "significant_at_0.05": false
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": -0.0142,
+      "ci95": [
+        -0.0388,
+        0.0105
+      ],
+      "p_value": 0.265,
+      "significant_at_0.05": false
+    }
+  },
+  "A_name": "Qwen",
+  "B_name": "Llama"
+}

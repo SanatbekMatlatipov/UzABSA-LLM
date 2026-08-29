@@ -37,19 +37,19 @@ Each model is stored on a separate branch. Load with `revision=`:
 
 All models evaluated on the same held-out validation set (609 examples).
 
-| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-7B | Best |
-|--------|:-----------:|:------------:|:--------------:|:----:|
-| **ATE Exact F1** | **0.6603** | 0.6549 | 0.6034 | Qwen |
-| **ATE Partial F1** | **0.7705** | 0.7591 | 0.7279 | Qwen |
-| **Pair F1** | 0.5795 | **0.5805** | 0.5018 | Llama |
-| **Sentiment Accuracy** | 0.8777 | **0.8864** | 0.8317 | Llama |
-| **Sentiment Macro-F1** | 0.8113 | **0.8435** | 0.7717 | Llama |
-| **JSON Parse Rate** | **100.0%** | 95.89% | 95.40% | Qwen |
+| Metric | Qwen 2.5-7B | Llama 3.1-8B | DeepSeek-R1-Distill-Qwen-7B | Best |
+|--------|:-----------:|:-----------:|:-----------:|:----:|
+| **ATE Exact F1** | **0.7077** | 0.7036 | 0.6776 | Qwen |
+| **ATE Partial F1** | **0.8022** | 0.8006 | 0.7874 | Qwen |
+| **Pair F1** | 0.6448 | **0.6510** | 0.6034 | Llama |
+| **Sentiment Accuracy** | 0.9110 | **0.9252** | 0.8905 | Llama |
+| **Sentiment Macro-F1** | 0.8622 | **0.8867** | 0.8314 | Llama |
+| **JSON Parse Rate** | **100.00%** | 97.37% | 96.88% | Qwen |
 
 **Key findings:**
 - **Qwen 2.5-7B** leads in aspect term extraction (ATE) and achieves a perfect 100% JSON parse rate — the most reliable for structured output.
 - **Llama 3.1-8B** leads in sentiment classification accuracy and end-to-end pair-level F1, making it the best choice when sentiment precision matters most.
-- **DeepSeek-R1-Distill-Qwen-7B** trails on all metrics, suggesting R1 distillation doesn't benefit structured ABSA extraction tasks.
+- **DeepSeek-R1-Distill-Qwen-7B** trails on every headline F1 metric, a pattern consistent with R1-style reasoning distillation conferring no advantage on direct structured extraction.
 
 ## Quick Start
 

@@ -1,0 +1,7 @@
+2026-08-29 11:26:07,952 WARNING Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.16.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+2026-08-29 11:26:08,474 INFO Model: tahrirchi/tahrirchi-bert-base | device: cuda | torch 2.6.0+cu124
+2026-08-29 11:26:08,502 INFO train=5480 val=609 labels=['O', 'B-positive', 'I-positive', 'B-negative', 'I-negative', 'B-neutral', 'I-neutral', 'B-conflict', 'I-conflict']
+2026-08-29 11:26:12,043 INFO Starting training...
+2026-08-29 11:27:32,703 INFO Final seqeval (token-span) metrics: {'eval_loss': 0.34521540999412537, 'eval_precision': 0.653566229985444, 'eval_recall': 0.6167582417582418, 'eval_f1': 0.6346289752650176, 'eval_accuracy': 0.8911274699728787, 'eval_runtime': 0.59, 'eval_samples_per_second': 1032.176, 'eval_steps_per_second': 66.1, 'epoch': 4.0}
+2026-08-29 11:27:33,028 INFO Saved model -> paper_materials\revision_v2\baselines_v2\tahrirchi-bert\model
+2026-08-29 11:27:33,028 INFO NOTE: seqeval numbers above are token-span level; run eval_bert_baseline.py for the ABSA metrics comparable to the LLMs.

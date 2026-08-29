@@ -1,0 +1,40 @@
+{
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "estimate": 0.692,
+      "ci95": [
+        0.6572,
+        0.7255
+      ],
+      "half_width": 0.0342
+    },
+    "ate_partial_f1": {
+      "estimate": 0.8,
+      "ci95": [
+        0.7735,
+        0.8257
+      ],
+      "half_width": 0.0261
+    },
+    "pair_f1": {
+      "estimate": 0.608,
+      "ci95": [
+        0.5707,
+        0.6442
+      ],
+      "half_width": 0.0368
+    },
+    "sentiment_accuracy": {
+      "estimate": 0.8786,
+      "ci95": [
+        0.8505,
+        0.9057
+      ],
+      "half_width": 0.0276
+    }
+  },
+  "system": "BERTbek (v2 split)",
+  "preds_file": "paper_materials/revision_v2/baselines_v2/bertbek/preds_per_example.jsonl"
+}

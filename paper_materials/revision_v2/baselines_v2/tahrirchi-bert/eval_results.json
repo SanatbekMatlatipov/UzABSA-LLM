@@ -1,0 +1,25 @@
+{
+  "model_dir": "paper_materials/revision_v2/baselines_v2/tahrirchi-bert/model",
+  "num_examples": 609,
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.7287,
+      "recall": 0.6744,
+      "f1": 0.7005
+    },
+    "partial_match": {
+      "precision": 0.8182,
+      "recall": 0.7571,
+      "f1": 0.7865
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6471,
+    "pair_recall": 0.5997,
+    "pair_f1": 0.6225,
+    "sentiment_accuracy": 0.8893,
+    "sentiment_macro_f1": 0.814,
+    "total_predictions": 683,
+    "total_references": 737
+  }
+}

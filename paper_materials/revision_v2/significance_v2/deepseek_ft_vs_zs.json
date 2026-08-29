@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.6776,
+    "ate_partial_f1": 0.7874,
+    "pair_f1": 0.6034,
+    "sentiment_accuracy": 0.8905
+  },
+  "B": {
+    "ate_exact_f1": 0.2169,
+    "ate_partial_f1": 0.3182,
+    "pair_f1": 0.154,
+    "sentiment_accuracy": 0.7126
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.4607,
+      "ci95": [
+        0.4229,
+        0.4997
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.4692,
+      "ci95": [
+        0.4349,
+        0.5038
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.4494,
+      "ci95": [
+        0.4106,
+        0.4887
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": 0.1779,
+      "ci95": [
+        0.1039,
+        0.2541
+      ],
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    }
+  },
+  "A_name": "DSFT",
+  "B_name": "DSZS"
+}

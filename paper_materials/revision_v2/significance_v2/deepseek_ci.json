@@ -1,0 +1,40 @@
+{
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "estimate": 0.6776,
+      "ci95": [
+        0.6419,
+        0.7136
+      ],
+      "half_width": 0.0358
+    },
+    "ate_partial_f1": {
+      "estimate": 0.7874,
+      "ci95": [
+        0.7581,
+        0.8167
+      ],
+      "half_width": 0.0293
+    },
+    "pair_f1": {
+      "estimate": 0.6034,
+      "ci95": [
+        0.566,
+        0.6403
+      ],
+      "half_width": 0.0372
+    },
+    "sentiment_accuracy": {
+      "estimate": 0.8905,
+      "ci95": [
+        0.8604,
+        0.9181
+      ],
+      "half_width": 0.0288
+    }
+  },
+  "system": "DeepSeek-R1-7B (v2)",
+  "preds_file": "paper_materials/revision_v2/results_v2/deepseek-7b_preds.jsonl"
+}

@@ -1,0 +1,40 @@
+{
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "estimate": 0.7077,
+      "ci95": [
+        0.6736,
+        0.7404
+      ],
+      "half_width": 0.0334
+    },
+    "ate_partial_f1": {
+      "estimate": 0.8022,
+      "ci95": [
+        0.7749,
+        0.8294
+      ],
+      "half_width": 0.0272
+    },
+    "pair_f1": {
+      "estimate": 0.6448,
+      "ci95": [
+        0.6081,
+        0.6803
+      ],
+      "half_width": 0.0361
+    },
+    "sentiment_accuracy": {
+      "estimate": 0.911,
+      "ci95": [
+        0.8857,
+        0.9348
+      ],
+      "half_width": 0.0245
+    }
+  },
+  "system": "Qwen 2.5-7B (v2)",
+  "preds_file": "paper_materials/revision_v2/results_v2/qwen2.5-7b_preds.jsonl"
+}
