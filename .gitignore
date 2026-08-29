@@ -1,6 +1,9 @@
 wandb/*
 unsloth_compiled_cache/*
 
+# HuggingFace hub cache (base-model downloads, xet shard cache, auth token) — never commit
+models_cache/
+
 # outputs - ignore large model weights & checkpoints, keep experiment metadata
 # Tracked:  experiment_summary.json, training_history.json/csv,
 #           training_curves.png, lr_schedule.png, gpu_memory.png,
