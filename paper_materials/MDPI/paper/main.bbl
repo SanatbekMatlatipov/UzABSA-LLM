@@ -29,17 +29,30 @@ Grattafiori, A.; Dubey, A.; Jauhri, A.;  et~al.
   \href{http://arxiv.org/abs/2407.21783}{{\normalfont
   [arXiv:cs.AI/2407.21783]}}.
 
-\bibitem[{DeepSeek-AI} et~al.(2025){DeepSeek-AI}, Guo, Yang, Zhang, Song, Wang,
-  et~al.]{DeepSeek-AI2026-vt}
-{DeepSeek-AI}.; Guo, D.; Yang, D.; Zhang, H.; Song, J.; Wang, P.;  et~al.
-\newblock {DeepSeek-R1}: Incentivizing Reasoning Capability in {LLMs} via
-  Reinforcement Learning.
-\newblock {\em arXiv preprint} {\bf 2025},
-  \href{http://arxiv.org/abs/2501.12948}{{\normalfont
-  [arXiv:cs.CL/2501.12948]}}.
+\bibitem[Guo et~al.(2025)Guo, Yang, Zhang, Song, Wang, Zhu, Xu, Zhang, Ma, Bi,
+  Zhang, Yu, Wu, Wu, Gou, Shao, Li, Gao, Liu, Xue, Wang, Wu, Feng, Lu, Zhao,
+  Deng, Ruan, Dai, Chen, Ji, Li, Lin, Dai, Luo, Hao, Chen, Li, Zhang, Xu, Ding,
+  Gao, Qu, Li, Guo, Li, Chen, Yuan, Tu, Qiu, Li, Cai, Ni, Liang, Chen, Dong,
+  Hu, You, Gao, Guan, Huang, Yu, Wang, Zhang, Zhao, Wang, Zhang, Xu, Xia,
+  Zhang, Zhang, Tang, Zhou, Li, Wang, Li, Tian, Huang, Zhang, Wang, Chen, Du,
+  Ge, Zhang, Pan, Wang, Chen, Jin, Chen, Lu, Zhou, Chen, Ye, Wang, Yu, Zhou,
+  Pan, Li, Zhou, Wu, Yun, Pei, Sun, Wang, Zeng, Liu, Liang, Gao, Yu, Zhang,
+  Xiao, An, Liu, Wang, Chen, Nie, Cheng, Liu, Xie, Liu, Yang, Li, Su, Lin, Li,
+  Jin, Shen, Chen, Sun, Wang, Song, Zhou, Wang, Shan, Li, Wang, Wei, Zhang, Xu,
+  Li, Zhao, Sun, Wang, Yu, Zhang, Shi, Xiong, He, Piao, Wang, Tan, Ma, Liu,
+  Guo, Ou, Wang, Gong, Zou, He, Xiong, Luo, You, Liu, Zhou, Zhu, Huang, Li,
+  Zheng, Zhu, Ma, Tang, Zha, Yan, Ren, Ren, Sha, Fu, Xu, Xie, Zhang, Hao, Ma,
+  Yan, Wu, Gu, Zhu, Liu, Li, Xie, Song, Pan, Huang, Xu, Zhang, and
+  Zhang]{Guo2025}
+Guo, D.; Yang, D.; Zhang, H.; Song, J.; Wang, P.; Zhu, Q.; Xu, R.; Zhang, R.;
+  Ma, S.; Bi, X.;  et~al.
+\newblock DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement
+  learning.
+\newblock {\em Nature} {\bf 2025}, {\em 645},~633--638.
+\newblock {\url{https://doi.org/10.1038/s41586-025-09422-z}}.
 
 \bibitem[Dettmers et~al.(2023)Dettmers, Pagnoni, Holtzman, and
-  Zettlemoyer]{10.5555/3666122.3666563}
+  Zettlemoyer]{3666122.3666563}
 Dettmers, T.; Pagnoni, A.; Holtzman, A.; Zettlemoyer, L.
 \newblock QLORA: efficient finetuning of quantized LLMs.
 \newblock In Proceedings of the Proceedings of the 37th International
@@ -210,7 +223,7 @@ Matlatipov, G.; Vetulani, Z., Representation of Uzbek Morphology in Prolog.
 \newblock {\url{https://doi.org/10.1007/978-3-642-04735-0_4}}.
 
 \bibitem[Matlatipov et~al.(2020)Matlatipov, Tukeyev, and
-  Aripov]{uzbekendingssanat}
+  Aripov]{10.1007/978-3-030-63119-2_59}
 Matlatipov, S.; Tukeyev, U.; Aripov, M.
 \newblock Towards the Uzbek Language Endings as a Language Resource.
 \newblock In Proceedings of the Advances in Computational Collective
@@ -227,12 +240,12 @@ Aripov, M.; Khakimov, M.; Matlatipov, S.; Sirojiddinov, Z.
   Eds., Cham,  2022; pp. 81--95.
 
 \bibitem[Sharipov et~al.(2023)Sharipov, Kuriyozov, Yuldashev, and
-  Sobirov]{sharipov2023uzbektagger}
+  Sobirov]{Sharipov2023-ud}
 Sharipov, M.; Kuriyozov, E.; Yuldashev, O.; Sobirov, O.
-\newblock UzbekTagger: The rule-based POS tagger for Uzbek language.
-\newblock In Proceedings of the 10th Language \& Technology Conference: Human
-  Language Technologies as a Challenge for Computer Science and Linguistics,
-  2023.
+\newblock {UzbekTagger}: The rule-based {POS} tagger for Uzbek language.
+\newblock {\em arXiv preprint arXiv:2301.12711} {\bf 2023},
+  \href{http://arxiv.org/abs/2301.12711}{{\normalfont
+  [arXiv:cs.CL/2301.12711]}}.
 
 \bibitem[Salaev(2024)]{Salaev2024}
 Salaev, U.
@@ -250,12 +263,44 @@ Salaev, U.; Kuriyozov, E.; G{\'o}mez-Rodr{\'i}guez, C.
   Language Processing ({ALTNLP}), Koper, Slovenia,  2022.
 \newblock {\url{https://doi.org/10.48550/arXiv.2205.09578}}.
 
-\bibitem[Kuriyozov and Matlatipov(2019)]{kuriyozov2019building}
+\bibitem[Matlatipov et~al.(2026{\natexlab{a}})Matlatipov, Aripov, Bobokandov,
+  and Matlatipov]{MATLATIPOV2026112857}
+Matlatipov, S.; Aripov, M.; Bobokandov, M.; Matlatipov, G.
+\newblock Annotated universal dependencies dataset for literary and educational
+  Uzbek texts.
+\newblock {\em Data in Brief} {\bf 2026}, {\em 66},~112857.
+\newblock {\url{https://doi.org/https://doi.org/10.1016/j.dib.2026.112857}}.
+
+\bibitem[Matlatipov et~al.(2026{\natexlab{b}})Matlatipov, Ismoilova, and
+  Aripov]{11632281}
+Matlatipov, S.; Ismoilova, M.; Aripov, M.
+\newblock Graph-Based vs Transition-Based Dependency Parsing for Uzbek.
+\newblock In Proceedings of the 2026 IEEE 27th International Conference of
+  Young Professionals in Electron Devices and Materials (EDM),  2026, pp. 1--6.
+\newblock {\url{https://doi.org/10.1109/EDM69524.2026.11632281}}.
+
+\bibitem[Matlatipov(2027)]{10.1007/978-3-032-29532-3_15}
+Matlatipov, S.
+\newblock Towards Robust Uzbek Neural Dependency Parsing: Cross-Treebank
+  Training.
+\newblock In Proceedings of the Natural Language Processing and Information
+  Systems; Cabrio, E.; Monteiro, E., Eds., Cham,  2027; pp. 204--218.
+
+\bibitem[Yusufu et~al.(2026)Yusufu, Liu, Aziz, Ainiwaer, Li, Li, Ji, and
+  Yusufu]{Yusufu2026}
+Yusufu, A.; Liu, J.; Aziz, K.; Ainiwaer, A.; Li, B.; Li, F.; Ji, D.; Yusufu, A.
+\newblock LASQ: A low-resource aspect-based sentiment quadruple extraction
+  dataset.
+\newblock {\em Journal of King Saud University Computer and Information
+  Sciences} {\bf 2026}, {\em 38},~337.
+\newblock {\url{https://doi.org/10.1007/s44443-026-00701-x}}.
+
+\bibitem[Kuriyozov and Matlatipov(2019)]{proceedings2019021037}
 Kuriyozov, E.; Matlatipov, S.
-\newblock Building a new sentiment analysis dataset for {U}zbek language and
-  creating baseline models.
-\newblock In Proceedings of the Multidisciplinary Digital Publishing Institute
-  Proceedings,  2019, Vol.~21, p.~37.
+\newblock Building a New Sentiment Analysis Dataset for Uzbek Language and
+  Creating Baseline Models.
+\newblock {\em Proceedings} {\bf 2019}, {\em 21}.
+\newblock {\url{https://doi.org/10.3390/proceedings2019021037}}.
 
 \bibitem[Kuriyozov et~al.(2022)Kuriyozov, Matlatipov, Alonso, and
   G{\'o}mez-Rodr{\'i}guez]{kuriyozov2022construction}
@@ -267,20 +312,21 @@ Kuriyozov, E.; Matlatipov, S.; Alonso, M.A.; G{\'o}mez-Rodr{\'i}guez, C.
 \newblock {\url{https://doi.org/10.1007/978-3-031-05328-3\_15}}.
 
 \bibitem[Matlatipov et~al.(2022)Matlatipov, Rahimboeva, Rajabov, and
-  Kuriyozov]{matlatipov2022uzbek}
+  Kuriyozov]{Matlatipov2022-yd}
 Matlatipov, S.; Rahimboeva, H.; Rajabov, J.; Kuriyozov, E.
 \newblock Uzbek Sentiment Analysis based on local Restaurant Reviews.
-\newblock In Proceedings of the Proceedings of The International Conference and
-  Workshop on Agglutinative Language Technologies as a challenge of Natural
-  Language Processing ({ALTNLP}), Koper, Slovenia,  2022.
+\newblock {\em arXiv preprint arXiv:2205.15930} {\bf 2022},
+  \href{http://arxiv.org/abs/2205.15930}{{\normalfont
+  [arXiv:cs.CL/2205.15930]}}.
 
 \bibitem[Matlatipov et~al.(2024)Matlatipov, Rajabov, Kuriyozov, and
-  Aripov]{matlatipov2024uzabsa}
+  Aripov]{matlatipov-etal-2024-uzabsa}
 Matlatipov, S.G.; Rajabov, J.; Kuriyozov, E.; Aripov, M.
-\newblock UzABSA: Aspect-Based Sentiment Analysis for the Uzbek Language.
+\newblock {U}z{ABSA}: Aspect-Based Sentiment Analysis for the {U}zbek Language.
 \newblock In Proceedings of the Proceedings of the 3rd Annual Meeting of the
-  Special Interest Group on Under-resourced Languages@ LREC-COLING 2024,  2024,
-  pp. 394--403.
+  Special Interest Group on Under-resourced Languages @ LREC-COLING 2024;
+  Melero, M.; Sakti, S.; Soria, C., Eds., Torino, Italia,  May 2024; pp.
+  394--403.
 
 \bibitem[Kuriyozov et~al.(2024)Kuriyozov, Vilares, and
   G{\'o}mez-Rodr{\'i}guez]{kuriyozov-etal-2024-bertbek}
@@ -300,17 +346,8 @@ Mamasaidov, M.; Shopulatov, A.
   \url{https://huggingface.co/tahrirchi/tahrirchi-bert-base} (accessed on 8
   July 2026).
 
-\bibitem[Yusufu et~al.(2026)Yusufu, Liu, Aziz, Ainiwaer, Li, Li, Ji, and
-  Yusufu]{Yusufu2026}
-Yusufu, A.; Liu, J.; Aziz, K.; Ainiwaer, A.; Li, B.; Li, F.; Ji, D.; Yusufu, A.
-\newblock LASQ: A low-resource aspect-based sentiment quadruple extraction
-  dataset.
-\newblock {\em Journal of King Saud University Computer and Information
-  Sciences} {\bf 2026}, {\em 38},~337.
-\newblock {\url{https://doi.org/10.1007/s44443-026-00701-x}}.
-
 \bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
-  Li, Xing, Zhang, Gonzalez, and Stoica]{10.5555/3666122.3668142}
+  Li, Xing, Zhang, Gonzalez, and Stoica]{3666122.3668142}
 Zheng, L.; Chiang, W.L.; Sheng, Y.; Zhuang, S.; Wu, Z.; Zhuang, Y.; Lin, Z.;
   Li, Z.; Li, D.; Xing, E.P.;  et~al.
 \newblock Judging LLM-as-a-judge with MT-bench and Chatbot Arena.

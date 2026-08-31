@@ -5,7 +5,7 @@ Year = {2025},
 Eprint = {arXiv:2506.22316},
 }
 
-@InProceedings{uzbekendingssanat,
+@InProceedings{10.1007/978-3-030-63119-2_59,
 author="Matlatipov, Sanatbek
 and Tukeyev, Ualsher
 and Aripov, Mersaid",
@@ -22,7 +22,7 @@ abstract="The Uzbek language belongs to low-resource languages. It is very impor
 isbn="978-3-030-63119-2"
 }
 
-@inproceedings{10.5555/3666122.3668142,
+@inproceedings{3666122.3668142,
 author = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric P. and Zhang, Hao and Gonzalez, Joseph E. and Stoica, Ion},
 title = {Judging LLM-as-a-judge with MT-bench and Chatbot Arena},
 year = {2023},
@@ -84,19 +84,60 @@ series = {NIPS '23}
     abstract = "We introduce InstructABSA, an instruction learning paradigm for Aspect-Based Sentiment Analysis (ABSA) subtasks.Our method introduces positive, negative, and neutral examples to each training sample, and instruction tune the model (T$k$-Instruct) for ABSA subtasks, yielding significant performance improvements. Experimental results on the Sem Eval 2014, 15, and 16 datasets demonstrate that InstructABSA outperforms the previous state-of-the-art (SOTA) approaches on Term Extraction (ATE), Sentiment Classification(ATSC) and Sentiment Pair Extraction (ASPE) subtasks.In particular, InstructABSA outperforms the previous state-of-the-art (SOTA) on the Rest14 ATE subtask by 5.69{\%} points, the Rest15 ATSC subtask by 9.59{\%} points, and the Lapt14 AOPE subtask by 3.37{\%} points, surpassing 7x larger models.We get competitive results on AOOE, AOPE, AOSTE, and ACOSQE subtasks indicating strong generalization ability to all subtasks. Exploring sample efficiency reveals that just 50{\%} train data is required to get competitive results with other instruction tuning approaches. Lastly, we assess the quality of instructions and observe that InstructABSA{'}s performance experiences a decline of {\textasciitilde}10{\%} when adding misleading examples"
 }
 
-@inproceedings{matlatipov2024uzabsa,
-  title={UzABSA: Aspect-Based Sentiment Analysis for the Uzbek Language},
-  author={Matlatipov, Sanatbek Gayratovich and Rajabov, Jaloliddin and Kuriyozov, Elmurod and Aripov, Mersaid},
-  booktitle={Proceedings of the 3rd Annual Meeting of the Special Interest Group on Under-resourced Languages@ LREC-COLING 2024},
-  pages={394--403},
-  year={2024}
+@inproceedings{matlatipov-etal-2024-uzabsa,
+    title = "{U}z{ABSA}: Aspect-Based Sentiment Analysis for the {U}zbek Language",
+    author = "Matlatipov, Sanatbek Gayratovich  and
+      Rajabov, Jaloliddin  and
+      Kuriyozov, Elmurod  and
+      Aripov, Mersaid",
+    editor = "Melero, Maite  and
+      Sakti, Sakriani  and
+      Soria, Claudia",
+    booktitle = "Proceedings of the 3rd Annual Meeting of the Special Interest Group on Under-resourced Languages @ LREC-COLING 2024",
+    month = {May},
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.sigul-1.47/",
+    pages = "394--403",
+    abstract = "The objective of enhancing the availability of natural language processing technologies for low-resource languages has significant importance in facilitating technological accessibility within the populations of speakers of these languages. Our current grasping shows that there are no established linguistic resources available open source to develop aspect-based sentiment analysis (ABSA) tools tailored to the Uzbek language. This work aims to address the aforementioned gap by presenting the first high-quality annotated ABSA dataset - UzABSA. The data used in this study was obtained from a compilation of online reviews of Uzbek restaurants. Consequently, the constructed dataset has a length of 3500 reviews at the document level and 6100+ sentences at the sentence level. The popular approach to language resources of this kind explores four distinctive characteristics, namely Aspect Terms, Aspect Term Polarities, Aspect Category Terms, as well as Aspect Category Polarities. To the best of our knowledge, it is the first and the largest ABSA dataset for the Uzbek language. To evaluate the annotation process of our dataset, we used established statistical techniques such as Cohen{'}s kappa coefficient and Krippendorff{'}s $\alpha$ to assess agreement between annotators. Subsequently, a classification model, namely K-Nearest Neighbour (KNN), was used to evaluate the performance of the created dataset. Both sets of evaluation techniques demonstrate comparable levels of accuracy. The first findings across the various tasks showed promising outcomes, with accuracy rates ranging from 72{\%} to 88{\%}. This study not only highlights the significance of our acquired dataset but also plays a valuable tool for scholars interested in furthering sentiment analysis in the Uzbek language."
 }
 
-@inproceedings{sharipov2023uzbektagger,
-  title={UzbekTagger: The rule-based POS tagger for Uzbek language},
-  author={Sharipov, Maksud and Kuriyozov, Elmurod and Yuldashev, Ollabergan and Sobirov, Ogabek},
-  booktitle={10th Language \& Technology Conference: Human Language Technologies as a Challenge for Computer Science and Linguistics},
-  year={2023}
+@ARTICLE{Sharipov2023-ud,
+  title         = "{UzbekTagger}: The rule-based {POS} tagger for Uzbek
+                   language",
+  author        = "Sharipov, Maksud and Kuriyozov, Elmurod and Yuldashev,
+                   Ollabergan and Sobirov, Ogabek",
+  abstract      = "This research paper presents a part-of-speech (POS)
+                   annotated dataset and tagger tool for the low-resource Uzbek
+                   language. The dataset includes 12 tags, which were used to
+                   develop a rule-based POS-tagger tool. The corpus text used
+                   in the annotation process was made sure to be balanced over
+                   20 different fields in order to ensure its
+                   representativeness. Uzbek being an agglutinative language so
+                   the most of the words in an Uzbek sentence are formed by
+                   adding suffixes. This nature of it makes the POS-tagging
+                   task difficult to find the stems of words and the right
+                   part-of-speech they belong to. The methodology proposed in
+                   this research is the stemming of the words with an
+                   affix/suffix stripping approach including database of the
+                   stem forms of the words in the Uzbek language. The tagger
+                   tool was tested on the annotated dataset and showed high
+                   accuracy in identifying and tagging parts of speech in Uzbek
+                   text. This newly presented dataset and tagger tool can be
+                   used for a variety of natural language processing tasks such
+                   as language modeling, machine translation, and
+                   text-to-speech synthesis. The presented dataset is the first
+                   of its kind to be made publicly available for Uzbek, and the
+                   POS-tagger tool created can also be used as a pivot to use
+                   as a base for other closely-related Turkic languages.",
+  journal       = "arXiv preprint arXiv:2301.12711",
+  month         =  {January},
+  year          =  2023,
+  copyright     = "http://creativecommons.org/licenses/by/4.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  eprint        = "2301.12711"
 }
 
 @article{kuriyozov2022construction,
@@ -115,23 +156,53 @@ series = {NIPS '23}
     doi={10.1007/978-3-031-05328-3\_15}
 }
 
-@inproceedings{matlatipov2022uzbek,
-    title = "Uzbek Sentiment Analysis based on local Restaurant Reviews",
-    author = "Matlatipov, Sanatbek and Rahimboeva, Hulkar and Rajabov, Jaloliddin and Kuriyozov, Elmurod",
-    booktitle={Proceedings of The International Conference and Workshop on Agglutinative Language Technologies as a challenge of Natural Language Processing ({ALTNLP})},
-    year = "2022",
-    address = "Koper, Slovenia",
-    publisher = "CEUR Workshop Proceedings"
+@ARTICLE{Matlatipov2022-yd,
+  title         = "Uzbek Sentiment Analysis based on local Restaurant Reviews",
+  author        = "Matlatipov, Sanatbek and Rahimboeva, Hulkar and Rajabov,
+                   Jaloliddin and Kuriyozov, Elmurod",
+  abstract      = "Extracting useful information for sentiment analysis and
+                   classification problems from a big amount of user-generated
+                   feedback, such as restaurant reviews, is a crucial task of
+                   natural language processing, which is not only for customer
+                   satisfaction where it can give personalized services, but
+                   can also influence the further development of a company. In
+                   this paper, we present a work done on collecting restaurant
+                   reviews data as a sentiment analysis dataset for the Uzbek
+                   language, a member of the Turkic family which is heavily
+                   affected by the low-resource constraint, and provide some
+                   further analysis of the novel dataset by evaluation using
+                   different techniques, from logistic regression based models,
+                   to support vector machines, and even deep learning models,
+                   such as recurrent neural networks, as well as convolutional
+                   neural networks. The paper includes detailed information on
+                   how the data was collected, how it was pre-processed for
+                   better quality optimization, as well as experimental setups
+                   for the evaluation process. The overall evaluation results
+                   indicate that by performing pre-processing steps, such as
+                   stemming for agglutinative languages, the system yields
+                   better results, eventually achieving 91\% accuracy result in
+                   the best performing model",
+  journal       = "arXiv preprint arXiv:2205.15930",
+  month         =  {May},
+  year          =  2022,
+  copyright     = "http://creativecommons.org/licenses/by/4.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  eprint        = "2205.15930"
 }
 
-@inproceedings{kuriyozov2019building,
-  title={Building a new sentiment analysis dataset for {U}zbek language and creating baseline models},
-  author={Kuriyozov, Elmurod and Matlatipov, Sanatbek},
-  booktitle={Multidisciplinary Digital Publishing Institute Proceedings},
-  volume={21},
-  pages={37},
-  year={2019},
-  url={https://www.mdpi.com/books/pdfdownload/book/1531#page=118}
+@Article{proceedings2019021037,
+AUTHOR = {Kuriyozov, Elmurod and Matlatipov, Sanatbek},
+TITLE = {Building a New Sentiment Analysis Dataset for Uzbek Language and Creating Baseline Models},
+JOURNAL = {Proceedings},
+VOLUME = {21},
+YEAR = {2019},
+NUMBER = {1},
+ARTICLE-NUMBER = {37},
+URL = {https://www.mdpi.com/2504-3900/21/1/37},
+ISSN = {2504-3900},
+ABSTRACT = {Making natural language processing technologies available for low-resource languages is an important goal to improve the access to technology in their communities of speakers. In this paper, we provide the first annotated corpora for polarity classification for Uzbek language. Our methodology considers collecting a medium-size manually annotated dataset and a larger-size dataset automatically translated from existing resources. Then, we use these datasets to train sentiment analysis models on the Uzbek language, using both traditional machine learning techniques and recent deep learning models.},
+DOI = {10.3390/proceedings2019021037}
 }
 
 @InProceedings{10.1007/978-3-031-05328-3_6,
@@ -266,7 +337,7 @@ keywords = {Aspect sentiment classification, Graph convolutional neural network,
     abstract = "Aspect term extraction (ATE) aims at identifying all aspect terms in a sentence and is usually modeled as a sequence labeling problem. However, sequence labeling based methods cannot make full use of the overall meaning of the whole sentence and have the limitation in processing dependencies between labels. To tackle these problems, we first explore to formalize ATE as a sequence-to-sequence (Seq2Seq) learning task where the source sequence and target sequence are composed of words and labels respectively. At the same time, to make Seq2Seq learning suit to ATE where labels correspond to words one by one, we design the gated unit networks to incorporate corresponding word representation into the decoder, and position-aware attention to pay more attention to the adjacent words of a target word. The experimental results on two datasets show that Seq2Seq learning is effective in ATE accompanied with our proposed gated unit networks and position-aware attention mechanism."
 }
 
-@inproceedings{10.5555/3666122.3666563,
+@inproceedings{3666122.3666563,
 author = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
 title = {QLORA: efficient finetuning of quantized LLMs},
 year = {2023},
@@ -280,39 +351,213 @@ location = {New Orleans, LA, USA},
 series = {NIPS '23}
 }
 
-@ARTICLE{DeepSeek-AI2026-vt,
-  title         = "{DeepSeek-R1}: Incentivizing Reasoning Capability in {LLMs}
-                   via Reinforcement Learning",
-  author        = "{DeepSeek-AI} and Guo, Daya and Yang, Dejian and Zhang,
-                   Haowei and Song, Junxiao and Wang, Peiyi and others",
-  abstract      = "General reasoning represents a long-standing and formidable
-                   challenge in artificial intelligence. Recent breakthroughs,
-                   exemplified by large language models (LLMs) and
-                   chain-of-thought prompting, have achieved considerable
-                   success on foundational reasoning tasks. However, this
-                   success is heavily contingent upon extensive human-annotated
-                   demonstrations, and models' capabilities are still
-                   insufficient for more complex problems. Here we show that
-                   the reasoning abilities of LLMs can be incentivized through
-                   pure reinforcement learning (RL), obviating the need for
-                   human-labeled reasoning trajectories. The proposed RL
-                   framework facilitates the emergent development of advanced
-                   reasoning patterns, such as self-reflection, verification,
-                   and dynamic strategy adaptation. Consequently, the trained
-                   model achieves superior performance on verifiable tasks such
-                   as mathematics, coding competitions, and STEM fields,
-                   surpassing its counterparts trained via conventional
-                   supervised learning on human demonstrations. Moreover, the
-                   emergent reasoning patterns exhibited by these large-scale
-                   models can be systematically harnessed to guide and enhance
-                   the reasoning capabilities of smaller models.",
-  month         =  {January},
-  year          =  2025,
-  copyright     = "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-  journal       = {arXiv preprint},
-  archivePrefix = "arXiv",
-  primaryClass  = "cs.CL",
-  eprint        = "2501.12948"
+@Article{Guo2025,
+author={Guo, Daya
+and Yang, Dejian
+and Zhang, Haowei
+and Song, Junxiao
+and Wang, Peiyi
+and Zhu, Qihao
+and Xu, Runxin
+and Zhang, Ruoyu
+and Ma, Shirong
+and Bi, Xiao
+and Zhang, Xiaokang
+and Yu, Xingkai
+and Wu, Yu
+and Wu, Z. F.
+and Gou, Zhibin
+and Shao, Zhihong
+and Li, Zhuoshu
+and Gao, Ziyi
+and Liu, Aixin
+and Xue, Bing
+and Wang, Bingxuan
+and Wu, Bochao
+and Feng, Bei
+and Lu, Chengda
+and Zhao, Chenggang
+and Deng, Chengqi
+and Ruan, Chong
+and Dai, Damai
+and Chen, Deli
+and Ji, Dongjie
+and Li, Erhang
+and Lin, Fangyun
+and Dai, Fucong
+and Luo, Fuli
+and Hao, Guangbo
+and Chen, Guanting
+and Li, Guowei
+and Zhang, H.
+and Xu, Hanwei
+and Ding, Honghui
+and Gao, Huazuo
+and Qu, Hui
+and Li, Hui
+and Guo, Jianzhong
+and Li, Jiashi
+and Chen, Jingchang
+and Yuan, Jingyang
+and Tu, Jinhao
+and Qiu, Junjie
+and Li, Junlong
+and Cai, J. L.
+and Ni, Jiaqi
+and Liang, Jian
+and Chen, Jin
+and Dong, Kai
+and Hu, Kai
+and You, Kaichao
+and Gao, Kaige
+and Guan, Kang
+and Huang, Kexin
+and Yu, Kuai
+and Wang, Lean
+and Zhang, Lecong
+and Zhao, Liang
+and Wang, Litong
+and Zhang, Liyue
+and Xu, Lei
+and Xia, Leyi
+and Zhang, Mingchuan
+and Zhang, Minghua
+and Tang, Minghui
+and Zhou, Mingxu
+and Li, Meng
+and Wang, Miaojun
+and Li, Mingming
+and Tian, Ning
+and Huang, Panpan
+and Zhang, Peng
+and Wang, Qiancheng
+and Chen, Qinyu
+and Du, Qiushi
+and Ge, Ruiqi
+and Zhang, Ruisong
+and Pan, Ruizhe
+and Wang, Runji
+and Chen, R. J.
+and Jin, R. L.
+and Chen, Ruyi
+and Lu, Shanghao
+and Zhou, Shangyan
+and Chen, Shanhuang
+and Ye, Shengfeng
+and Wang, Shiyu
+and Yu, Shuiping
+and Zhou, Shunfeng
+and Pan, Shuting
+and Li, S. S.
+and Zhou, Shuang
+and Wu, Shaoqing
+and Yun, Tao
+and Pei, Tian
+and Sun, Tianyu
+and Wang, T.
+and Zeng, Wangding
+and Liu, Wen
+and Liang, Wenfeng
+and Gao, Wenjun
+and Yu, Wenqin
+and Zhang, Wentao
+and Xiao, W. L.
+and An, Wei
+and Liu, Xiaodong
+and Wang, Xiaohan
+and Chen, Xiaokang
+and Nie, Xiaotao
+and Cheng, Xin
+and Liu, Xin
+and Xie, Xin
+and Liu, Xingchao
+and Yang, Xinyu
+and Li, Xinyuan
+and Su, Xuecheng
+and Lin, Xuheng
+and Li, X. Q.
+and Jin, Xiangyue
+and Shen, Xiaojin
+and Chen, Xiaosha
+and Sun, Xiaowen
+and Wang, Xiaoxiang
+and Song, Xinnan
+and Zhou, Xinyi
+and Wang, Xianzu
+and Shan, Xinxia
+and Li, Y. K.
+and Wang, Y. Q.
+and Wei, Y. X.
+and Zhang, Yang
+and Xu, Yanhong
+and Li, Yao
+and Zhao, Yao
+and Sun, Yaofeng
+and Wang, Yaohui
+and Yu, Yi
+and Zhang, Yichao
+and Shi, Yifan
+and Xiong, Yiliang
+and He, Ying
+and Piao, Yishi
+and Wang, Yisong
+and Tan, Yixuan
+and Ma, Yiyang
+and Liu, Yiyuan
+and Guo, Yongqiang
+and Ou, Yuan
+and Wang, Yuduan
+and Gong, Yue
+and Zou, Yuheng
+and He, Yujia
+and Xiong, Yunfan
+and Luo, Yuxiang
+and You, Yuxiang
+and Liu, Yuxuan
+and Zhou, Yuyang
+and Zhu, Y. X.
+and Huang, Yanping
+and Li, Yaohui
+and Zheng, Yi
+and Zhu, Yuchen
+and Ma, Yunxian
+and Tang, Ying
+and Zha, Yukun
+and Yan, Yuting
+and Ren, Z. Z.
+and Ren, Zehui
+and Sha, Zhangli
+and Fu, Zhe
+and Xu, Zhean
+and Xie, Zhenda
+and Zhang, Zhengyan
+and Hao, Zhewen
+and Ma, Zhicheng
+and Yan, Zhigang
+and Wu, Zhiyu
+and Gu, Zihui
+and Zhu, Zijia
+and Liu, Zijun
+and Li, Zilin
+and Xie, Ziwei
+and Song, Ziyang
+and Pan, Zizheng
+and Huang, Zhen
+and Xu, Zhipeng
+and Zhang, Zhongyu
+and Zhang, Zhen},
+title={DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning},
+journal={Nature},
+year={2025},
+month={Sep},
+day={01},
+volume={645},
+number={8081},
+pages={633-638},
+abstract={General reasoning represents a long-standing and formidable challenge in artificial intelligence (AI). Recent breakthroughs, exemplified by large language models (LLMs)1,2 and chain-of-thought (CoT) prompting3, have achieved considerable success on foundational reasoning tasks. However, this success is heavily contingent on extensive human-annotated demonstrations and the capabilities of models are still insufficient for more complex problems. Here we show that the reasoning abilities of LLMs can be incentivized through pure reinforcement learning (RL), obviating the need for human-labelled reasoning trajectories. The proposed RL framework facilitates the emergent development of advanced reasoning patterns, such as self-reflection, verification and dynamic strategy adaptation. Consequently, the trained model achieves superior performance on verifiable tasks such as mathematics, coding competitions and STEM fields, surpassing its counterparts trained through conventional supervised learning on human demonstrations. Moreover, the emergent reasoning patterns exhibited by these large-scale models can be systematically used to guide and enhance the reasoning capabilities of smaller models.},
+issn={1476-4687},
+doi={10.1038/s41586-025-09422-z},
+url={https://doi.org/10.1038/s41586-025-09422-z}
 }
 
 @ARTICLE{Qwen2024-kr,
@@ -718,4 +963,43 @@ url={https://doi.org/10.1007/s13042-025-02711-z}
   editor = {Piperidis, Stelios and Bel, Núria and van den Heuvel, Henk and Ide, Nancy and Krek, Simon and Toral, Antonio},
   doi = {10.63317/43srcdyc52cd},
   abstract = {Training models for Aspect-Based Sentiment Analysis (ABSA) tasks requires manually annotated data, which is expensive and time-consuming to obtain. This paper introduces LA-ABSA, a novel approach that leverages Large Language Model (LLM)-generated annotations to fine-tune lightweight models for complex ABSA tasks. We evaluate our approach on five datasets for Target Aspect Sentiment Detection (TASD) and Aspect Sentiment Quad Prediction (ASQP). Our approach outperformed previously reported augmentation strategies and achieved competitive performance with LLM-prompting in low-resource scenarios, while providing substantial energy efficiency benefits. For example, using 50 annotated examples for in-context learning (ICL) to guide the annotation of unlabeled data, LA-ABSA achieved an F1 score of 49.85 for ASQP on the SemEval Rest16 dataset, closely matching the performance of ICL prompting with Gemma-3-27B (51.10), while requiring significantly lower computational resources.}
+}
+
+@INPROCEEDINGS{11632281,
+  author={Matlatipov, Sanatbek and Ismoilova, Maftuna and Aripov, Mersaid},
+  booktitle={2026 IEEE 27th International Conference of Young Professionals in Electron Devices and Materials (EDM)}, 
+  title={Graph-Based vs Transition-Based Dependency Parsing for Uzbek}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Architecture;Computer architecture;Modeling;Bit error rate;Training;Labeling;Natural language processing;Tagging;Head;Merging;dependency parsing;Uzbek language;natural language processing;graph-based parsing;transition-based parsing;BERT;Universal Dependencies;morphosyntactic tagging},
+  doi={10.1109/EDM69524.2026.11632281}}
+
+@InProceedings{10.1007/978-3-032-29532-3_15,
+author="Matlatipov, Sanatbek",
+editor="Cabrio, Elena
+and Monteiro, Eric",
+title="Towards Robust Uzbek Neural Dependency Parsing: Cross-Treebank Training",
+booktitle="Natural Language Processing and Information Systems",
+year="2027",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="204--218",
+abstract="Efficient low-resource dependency parsing requires extracting maximal syntactic signal from limited supervision with minimal additional machinery. We introduce UzUDT, a newly created gold-standard Universal Dependencies treebank for Uzbek, manually annotated in INCEpTION by six annotators with full adjudication (684 sentences, {\$}{\$}{\backslash}sim {\$}{\$}∼7.8k tokens); UzUDT is currently the largest publicly available Uzbek UD treebank. We then study two complementary robustness strategies that remain lightweight in practice: (i) linguistically-motivated last-subword fusion, a positional heuristic for aggregating BERT WordPieces into UD token representations, and (ii) cross-treebank training by merging genre-complementary Uzbek UD resources. Using a Stanza-based BiLSTM tagger and biaffine parser augmented with monolingual contextual embeddings (TahrirchiBERT), we conduct a controlled factorial comparison across three embedding/fusion configurations and two data settings. Cross-treebank training yields the largest gains, improving LAS by 9.62--11.16 points while nearly doubling the training set (451 {\$}{\$}{\backslash}rightarrow {\$}{\$}{\textrightarrow} 781 sentences). The best configuration (TahrirchiBERT with last-subword fusion on merged data) achieves 85.08 UPOS, 72.39 UAS, and 63.81 LAS.",
+isbn="978-3-032-29532-3"
+}
+
+@article{MATLATIPOV2026112857,
+title = {Annotated universal dependencies dataset for literary and educational Uzbek texts},
+journal = {Data in Brief},
+volume = {66},
+pages = {112857},
+year = {2026},
+issn = {2352-3409},
+doi = {https://doi.org/10.1016/j.dib.2026.112857},
+url = {https://www.sciencedirect.com/science/article/pii/S2352340926004099},
+author = {Sanatbek Matlatipov and Mersaid Aripov and Makhmud Bobokandov and Gayrat Matlatipov},
+keywords = {Dependency treebank, Natural language processing, Turkic languages, Uzbek language, Syntax, Morphological features, Low-resource languages, Part-of-Speech Tagging},
+abstract = {This data article describes an Uzbek Universal Dependencies (UD) treebank released as a manually curated gold-standard dataset. The resource contains 681 sentences (7542 tokens) drawn from literary and educational Uzbek texts, providing a domain-specific complement to previously available web-based or news-oriented materials. Annotation was carried out in the INCEpTION environment by a five-member team comprising three linguists and two NLP engineers. The workflow followed the UD v2 framework and included calibration-stage agreement assessment, full-corpus double annotation, and adjudication to improve annotation consistency. Agreement measured on the shared calibration material was high across lemmatization, universal part-of-speech annotation, and complete morphological feature–value bundles. The released dataset contains final adjudicated gold-standard annotations, including lemmas, UPOS tags, morphological features, and basic dependency relations in standard CoNLL-U format, and has been validated for compatibility with the Universal Dependencies ecosystem. As an openly reusable Uzbek syntactic resource, it can support the development and evaluation of POS taggers, morphological analyzers, and dependency parsers, while also enabling comparative and cross-lingual studies for low-resource languages.}
 }
