@@ -517,14 +517,14 @@ All experiments run on NVIDIA RTX A6000 GPUs (48\,GB VRAM) using Python~3.13 wit
 
 \begin{table}[t]
 \centering
-\caption{Training characteristics on a single RTX A6000. All runs use identical QLoRA hyperparameters; the adapter size differs slightly with backbone geometry (40.4\,M trainable parameters for the Qwen-architecture models, 41.9\,M for Llama~3.1-8B). Wall-clock time is reported only for the one run that was uninterrupted end-to-end; the other two runs were resumed from optimizer checkpoints after a power interruption, so their wall-clock and throughput are not clean efficiency measurements and are omitted rather than estimated.}
+\caption{Training characteristics on a single RTX A6000. All runs use identical QLoRA hyperparameters; the adapter size differs slightly with backbone geometry (40.4\,M trainable parameters for the Qwen-architecture models, 41.9\,M for Llama~3.1-8B). Wall-clock time is reported only for the one run that was uninterrupted end-to-end; the other two runs were resumed from optimizer checkpoints after a power interruption, so their wall-clock and throughput are not clean efficiency measurements and are omitted rather than estimated ($^{*}$).}
 \label{tab:train_efficiency}
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{lccc}
 \toprule
 \textbf{Metric} & \textbf{Qwen 2.5-7B} & \textbf{Llama 3.1-8B} & \textbf{DeepSeek-R1-7B} \\
 \midrule
-Compute time (min)       & ---$^{\dagger}$   & ---$^{\dagger}$   & 84   \\
+Compute time (min)       & ---$^{*}$   & ---$^{*}$   & 84   \\
 GPU mem.\ allocated (GB) & 5.4  & 5.6  & 5.5  \\
 Total FLOPs              & $2.19\!\times\!10^{17}$ & $2.49\!\times\!10^{17}$ & $2.37\!\times\!10^{17}$ \\
 Best eval loss (step)    & 0.1726 (700) & \textbf{0.1476} (1000) & 0.1744 (1000) \\
@@ -1023,39 +1023,39 @@ RQ & Research Question
 
 \begin{table}[H]
 \centering
-\caption{LLM-as-Judge (GPT-4o-mini) quality scores for all 23 business domains, sorted by Overall score (descending). Stratified evaluation sample: 307 reviews. Scale: 1--5 (higher is better). $\dagger$~Small sample ($N \leq 5$): interpret with caution.\label{tab:domain_quality_full}}
+\caption{LLM-as-Judge (GPT-4o-mini) quality scores for all 23 business domains, sorted by Overall score (descending). Stratified evaluation sample: 307 reviews. Scale: 1--5 (higher is better). $^{*}$~Small sample ($N \leq 5$): interpret with caution.\label{tab:domain_quality_full}}
 \setlength{\tabcolsep}{3.5pt}
 \small
 \begin{tabular}{llccccc}
 \toprule
 \textbf{Domain (Uzbek / English)} & $N$ & \textbf{Comp.} & \textbf{Acc.} & \textbf{Sent.} & \textbf{Rel.} & \textbf{Overall} \\
 \midrule
-Bozor/BSC (Market/Shopping centre)$^\dagger$ & 3  & 3.67 & 5.00 & 5.00 & 5.00 & 4.67 \\
-Sayohat/Turizm (Tourism/Travel)$^\dagger$   & 5  & 4.00 & 4.80 & 4.60 & 4.40 & 4.40 \\
-Din/Madaniyat (Religion/Culture)$^\dagger$   & 3  & 4.33 & 5.00 & 4.00 & 5.00 & 4.33 \\
-Yetkazib berish (Delivery)$^\dagger$          & 3  & 3.67 & 5.00 & 4.67 & 4.33 & 4.33 \\
+Bozor/BSC (Market/Shopping centre)$^{*}$ & 3  & 3.67 & 5.00 & 5.00 & 5.00 & 4.67 \\
+Sayohat/Turizm (Tourism/Travel)$^{*}$   & 5  & 4.00 & 4.80 & 4.60 & 4.40 & 4.40 \\
+Din/Madaniyat (Religion/Culture)$^{*}$   & 3  & 4.33 & 5.00 & 4.00 & 5.00 & 4.33 \\
+Yetkazib berish (Delivery)$^{*}$          & 3  & 3.67 & 5.00 & 4.67 & 4.33 & 4.33 \\
 Restoran/Ovqatlanish (Restaurant/Dining)      & 50 & 3.68 & 4.76 & 4.56 & 4.66 & 4.24 \\
-Go'zallik (Beauty services)$^\dagger$         & 3  & 3.33 & 4.67 & 5.00 & 4.00 & 4.00 \\
+Go'zallik (Beauty services)$^{*}$         & 3  & 3.33 & 4.67 & 5.00 & 4.00 & 4.00 \\
 Texnologiya/Media (Technology/Media)          & 8  & 2.88 & 4.50 & 5.00 & 3.88 & 3.88 \\
 Boshqa (Other/Miscellaneous)                  & 37 & 3.43 & 4.54 & 3.89 & 4.38 & 3.81 \\
 Elektron tijorat (E-commerce)                 & 21 & 3.43 & 4.48 & 4.10 & 4.14 & 3.81 \\
 Oziq-ovqat do'konlari (Grocery stores)        & 15 & 3.47 & 4.33 & 4.47 & 4.13 & 3.80 \\
 Tibbiyot/Sog'liqni saqlash (Healthcare)       & 25 & 3.40 & 4.60 & 4.20 & 4.36 & 3.80 \\
 Bank/Moliya (Banking/Finance)                 & 30 & 3.40 & 4.47 & 4.17 & 3.90 & 3.70 \\
-Ko'ngilochar (Entertainment)$^\dagger$        & 3  & 3.33 & 4.67 & 4.33 & 4.00 & 3.67 \\
-Transport/Yo'l (Transport/Roads)$^\dagger$    & 3  & 3.33 & 4.00 & 4.00 & 4.00 & 3.67 \\
+Ko'ngilochar (Entertainment)$^{*}$        & 3  & 3.33 & 4.67 & 4.33 & 4.00 & 3.67 \\
+Transport/Yo'l (Transport/Roads)$^{*}$    & 3  & 3.33 & 4.00 & 4.00 & 4.00 & 3.67 \\
 Gul/Sovg'a (Flowers/Gifts)                    & 12 & 3.08 & 4.08 & 4.83 & 3.67 & 3.58 \\
 To'lov tizimlari (Payment systems)            & 24 & 3.00 & 4.29 & 4.38 & 3.54 & 3.54 \\
 \midrule
 \multicolumn{7}{l}{\textit{Below inclusion threshold (Overall $< 3.5$)}} \\
 \midrule
-Davlat xizmatlari (Government services)$^\dagger$ & 3 & 3.00 & 4.00 & 4.33 & 3.67 & 3.33 \\
+Davlat xizmatlari (Government services)$^{*}$ & 3 & 3.00 & 4.00 & 4.33 & 3.67 & 3.33 \\
 Telekommunikatsiya (Telecommunications)       & 25 & 3.04 & 4.36 & 3.64 & 3.64 & 3.32 \\
 Ta'lim (Education)                            & 20 & 2.90 & 4.20 & 3.80 & 3.45 & 3.25 \\
-Sport/Fitnes (Gyms/Fitness)$^\dagger$          & 4  & 2.75 & 4.25 & 4.25 & 3.00 & 3.25 \\
-Kitob/Nashriyot (Books/Publishing)$^\dagger$  & 4  & 3.00 & 4.25 & 4.00 & 3.00 & 3.00 \\
-Sug'urta (Insurance)$^\dagger$                & 3  & 2.33 & 3.67 & 2.67 & 3.33 & 2.67 \\
-Investitsiya/Trading (Investment)$^\dagger$   & 3  & 2.33 & 4.00 & 3.67 & 3.00 & 2.67 \\
+Sport/Fitnes (Gyms/Fitness)$^{*}$          & 4  & 2.75 & 4.25 & 4.25 & 3.00 & 3.25 \\
+Kitob/Nashriyot (Books/Publishing)$^{*}$  & 4  & 3.00 & 4.25 & 4.00 & 3.00 & 3.00 \\
+Sug'urta (Insurance)$^{*}$                & 3  & 2.33 & 3.67 & 2.67 & 3.33 & 2.67 \\
+Investitsiya/Trading (Investment)$^{*}$   & 3  & 2.33 & 4.00 & 3.67 & 3.00 & 2.67 \\
 \bottomrule
 \end{tabular}
 \end{table}
