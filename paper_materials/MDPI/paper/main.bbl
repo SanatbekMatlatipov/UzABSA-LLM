@@ -134,22 +134,23 @@ Simmering, P.F.; Huoviala, P.
 \newblock {\em arXiv preprint arXiv:2310.18025} {\bf 2023}.
 \newblock {\url{https://doi.org/10.48550/arXiv.2310.18025}}.
 
-\bibitem[{\v{S}}m{\'i}d et~al.(2024){\v{S}}m{\'i}d, P{\v{r}}ib{\'a}{\v{n}}, and
-  Kr{\'a}l]{smid2024llama}
-{\v{S}}m{\'i}d, J.; P{\v{r}}ib{\'a}{\v{n}}, P.; Kr{\'a}l, P.
+\bibitem[{\v{S}}m{\'i}d et~al.(2024){\v{S}}m{\'i}d, Priban, and
+  Kral]{smid-etal-2024-llama}
+{\v{S}}m{\'i}d, J.; Priban, P.; Kral, P.
 \newblock {LL}a{MA}-Based Models for Aspect-Based Sentiment Analysis.
 \newblock In Proceedings of the Proceedings of the 14th Workshop on
-  Computational Approaches to Subjectivity, Sentiment, and Social Media
-  Analysis ({WASSA}), Bangkok, Thailand,  2024; pp. 63--70.
+  Computational Approaches to Subjectivity, Sentiment, {\&} Social Media
+  Analysis; De~Clercq, O.; Barriere, V.; Barnes, J.; Klinger, R.; Sedoc, J.;
+  Tafreshi, S., Eds., Bangkok, Thailand,  August 2024; pp. 63--70.
 \newblock {\url{https://doi.org/10.18653/v1/2024.wassa-1.6}}.
 
-\bibitem[Wu et~al.(2025)Wu, Ma, Zhang, Deng, He, and Xue]{wu2024zeroshot}
+\bibitem[Wu et~al.(2025)Wu, Ma, Zhang, Deng, He, and Xue]{Wu2025}
 Wu, C.; Ma, B.; Zhang, Z.; Deng, N.; He, Y.; Xue, Y.
 \newblock Evaluating zero-shot multilingual aspect-based sentiment analysis
   with large language models.
 \newblock {\em International Journal of Machine Learning and Cybernetics} {\bf
-  2025}.
-\newblock {\url{https://doi.org/10.1007/s13042-025-02735-5}}.
+  2025}, {\em 16},~8079--8101.
+\newblock {\url{https://doi.org/10.1007/s13042-025-02711-z}}.
 
 \bibitem[Liskowski and Jankowski(2026)]{liskowski2026arctic}
 Liskowski, P.; Jankowski, K.
@@ -168,19 +169,20 @@ Touvron, H.; Lavril, T.; Izacard, G.; Martinet, X.; Lachaux, M.A.; Lacroix, T.;
   \href{http://arxiv.org/abs/2302.13971}{{\normalfont
   [arXiv:cs.CL/2302.13971]}}.
 
-\bibitem[Hu et~al.(2022)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
-  Chen]{hu2022lora}
+\bibitem[Hu et~al.(2021)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{Hu2021-fz}
 Hu, E.J.; Shen, Y.; Wallis, P.; Allen-Zhu, Z.; Li, Y.; Wang, S.; Wang, L.;
   Chen, W.
-\newblock LoRA: Low-Rank Adaptation of Large Language Models.
-\newblock In Proceedings of the International Conference on Learning
-  Representations,  2022.
+\newblock {LoRA}: {Low-Rank} Adaptation of large language models.
+\newblock {\em arXiv preprint arXiv:2106.09685} {\bf 2021},
+  \href{http://arxiv.org/abs/2106.09685}{{\normalfont
+  [arXiv:cs.CL/2106.09685]}}.
 
-\bibitem[Zhang et~al.(2026)Zhang, Lin, Wang, Yu, and Chen]{bdcc_ner_disaster}
+\bibitem[Zhang et~al.(2026)Zhang, Lin, Wang, Yu, and Chen]{bdcc10060185}
 Zhang, K.; Lin, X.; Wang, M.; Yu, H.; Chen, L.
 \newblock Named Entity Recognition Method for Natural Disaster Emergencies
   Based on Instruction Tuning and Graph Retrieval-Augmented Generation.
-\newblock {\em Big Data and Cognitive Computing} {\bf 2026}, {\em 10},~185.
+\newblock {\em Big Data and Cognitive Computing} {\bf 2026}, {\em 10}.
 \newblock {\url{https://doi.org/10.3390/bdcc10060185}}.
 
 \bibitem[Pingua et~al.(2025)Pingua, Sahoo, Kandpal, Murmu, Rautaray, Barik, and
@@ -192,19 +194,18 @@ Pingua, B.; Sahoo, A.; Kandpal, M.; Murmu, D.; Rautaray, J.; Barik, R.K.;
 \newblock {\url{https://doi.org/10.3390/bioengineering12070687}}.
 
 \bibitem[Abdellaoui et~al.(2024)Abdellaoui, Ibrahimi, El~Bouni, Mourhir,
-  Driouech, and Aghzal]{bdcc_offensive_lowresource}
+  Driouech, and Aghzal]{bdcc8120170}
 Abdellaoui, I.; Ibrahimi, A.; El~Bouni, M.A.; Mourhir, A.; Driouech, S.;
   Aghzal, M.
 \newblock Investigating Offensive Language Detection in a Low-Resource Setting
   with a Robustness Perspective.
-\newblock {\em Big Data and Cognitive Computing} {\bf 2024}, {\em 8},~170.
+\newblock {\em Big Data and Cognitive Computing} {\bf 2024}, {\em 8}.
 \newblock {\url{https://doi.org/10.3390/bdcc8120170}}.
 
 \bibitem[Matlatipov and Vetulani(2009)]{Matlatipov2009}
-Matlatipov, G.; Vetulani, Z.
-\newblock Representation of Uzbek Morphology in Prolog. In {\em Aspects of
-  Natural Language Processing: Essays Dedicated to Leonard Bolc on the Occasion
-  of His 75th Birthday}; Marciniak, M.; Mykowiecka, A., Eds.; Springer Berlin
+Matlatipov, G.; Vetulani, Z., Representation of Uzbek Morphology in Prolog.
+\newblock In {\em Aspects of Natural Language Processing: Essays Dedicated to
+  Leonard Bolc on the Occasion of His 75th Birthday}; Springer Berlin
   Heidelberg: Berlin, Heidelberg,  2009; pp. 83--110.
 \newblock {\url{https://doi.org/10.1007/978-3-642-04735-0_4}}.
 
@@ -225,14 +226,7 @@ Aripov, M.; Khakimov, M.; Matlatipov, S.; Sirojiddinov, Z.
   Computer Science and Linguistics; Vetulani, Z.; Paroubek, P.; Kubis, M.,
   Eds., Cham,  2022; pp. 81--95.
 
-\bibitem[Sharipov et~al.(2023{\natexlab{a}})Sharipov, Kuriyozov, Yuldashev, and
-  Sobirov]{sharipov-et-all}
-Sharipov, M.; Kuriyozov, E.; Yuldashev, O.; Sobirov, O.
-\newblock UzbekTagger: The rule-based POS tagger for Uzbek language,  2023,
-  \href{http://arxiv.org/abs/arXiv:2301.12711}{{\normalfont
-  [arXiv:2301.12711]}}.
-
-\bibitem[Sharipov et~al.(2023{\natexlab{b}})Sharipov, Kuriyozov, Yuldashev, and
+\bibitem[Sharipov et~al.(2023)Sharipov, Kuriyozov, Yuldashev, and
   Sobirov]{sharipov2023uzbektagger}
 Sharipov, M.; Kuriyozov, E.; Yuldashev, O.; Sobirov, O.
 \newblock UzbekTagger: The rule-based POS tagger for Uzbek language.
@@ -289,12 +283,13 @@ Matlatipov, S.G.; Rajabov, J.; Kuriyozov, E.; Aripov, M.
   pp. 394--403.
 
 \bibitem[Kuriyozov et~al.(2024)Kuriyozov, Vilares, and
-  G{\'o}mez-Rodr{\'i}guez]{kuriyozov2024bertbek}
+  G{\'o}mez-Rodr{\'i}guez]{kuriyozov-etal-2024-bertbek}
 Kuriyozov, E.; Vilares, D.; G{\'o}mez-Rodr{\'i}guez, C.
-\newblock {BERTbek}: A Pretrained Language Model for {U}zbek.
+\newblock {BERT}bek: A Pretrained Language Model for {U}zbek.
 \newblock In Proceedings of the Proceedings of the 3rd Annual Meeting of the
-  Special Interest Group on Under-resourced Languages @ LREC-COLING 2024,
-  Torino, Italy,  2024; pp. 33--44.
+  Special Interest Group on Under-resourced Languages @ LREC-COLING 2024;
+  Melero, M.; Sakti, S.; Soria, C., Eds., Torino, Italia,  May 2024; pp.
+  33--44.
 
 \bibitem[Mamasaidov and Shopulatov(2023)]{tahrirchibert2023}
 Mamasaidov, M.; Shopulatov, A.
@@ -306,12 +301,13 @@ Mamasaidov, M.; Shopulatov, A.
   July 2026).
 
 \bibitem[Yusufu et~al.(2026)Yusufu, Liu, Aziz, Ainiwaer, Li, Li, Ji, and
-  Yusufu]{yusufu2026lasq}
+  Yusufu]{Yusufu2026}
 Yusufu, A.; Liu, J.; Aziz, K.; Ainiwaer, A.; Li, B.; Li, F.; Ji, D.; Yusufu, A.
-\newblock {LASQ}: A Low-resource Aspect-based Sentiment Quadruple Extraction
-  Dataset.
-\newblock {\em arXiv preprint arXiv:2604.10417} {\bf 2026}.
-\newblock {\url{https://doi.org/10.48550/arXiv.2604.10417}}.
+\newblock LASQ: A low-resource aspect-based sentiment quadruple extraction
+  dataset.
+\newblock {\em Journal of King Saud University Computer and Information
+  Sciences} {\bf 2026}, {\em 38},~337.
+\newblock {\url{https://doi.org/10.1007/s44443-026-00701-x}}.
 
 \bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
   Li, Xing, Zhang, Gonzalez, and Stoica]{10.5555/3666122.3668142}
@@ -329,20 +325,21 @@ Li, Q.; Dou, S.; Shao, K.; Chen, C.; Hu, H.
   [arXiv:2506.22316]}}.
 
 \bibitem[Hellwig et~al.(2026)Hellwig, Fehle, Kruschwitz, and
-  Wolff]{hellwig2026llmannotator}
+  Wolff]{hellwig-etal-2026-llm}
 Hellwig, N.C.; Fehle, J.; Kruschwitz, U.; Wolff, C.
-\newblock {LLM}-as-an-Annotator: Training Lightweight Models with
-  {LLM}-Annotated Examples for Aspect Sentiment Tuple Prediction.
-\newblock In Proceedings of the Proceedings of the 2026 Joint International
-  Conference on Computational Linguistics, Language Resources and Evaluation
-  ({LREC}),  2026.
-\newblock {\url{https://doi.org/10.48550/arXiv.2603.01778}}.
+\newblock LLM-as-an-Annotator: Training Lightweight Models with LLM-Annotated
+  Examples for Aspect Sentiment Tuple Prediction.
+\newblock In Proceedings of the Proceedings of the Fifteenth Language Resources
+  and Evaluation Conference (LREC 2026); Piperidis, S.; Bel, N.; van~den
+  Heuvel, H.; Ide, N.; Krek, S.; Toral, A., Eds., Palma, Mallorca, Spain,  May
+  2026; pp. 7955--7972.
+\newblock {\url{https://doi.org/10.63317/43srcdyc52cd}}.
 
 \bibitem[Koehn(2004)]{koehn-2004-statistical}
 Koehn, P.
 \newblock Statistical Significance Tests for Machine Translation Evaluation.
 \newblock In Proceedings of the Proceedings of the 2004 Conference on Empirical
-  Methods in Natural Language Processing, Barcelona, Spain,  2004; pp.
-  388--395.
+  Methods in Natural Language Processing; Lin, D.; Wu, D., Eds., Barcelona,
+  Spain,  July 2004; pp. 388--395.
 
 \end{thebibliography}

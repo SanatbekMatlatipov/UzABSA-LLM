@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: Definitions/mdpi.bst
 Database file #1: mybibliography.bib
-You've used 42 entries,
+You've used 41 entries,
             2887 wiz_defined-function locations,
-            855 strings with 17067 characters,
-and the built_in function-call counts, 20187 in all, are:
-= -- 1623
-> -- 1657
-< -- 21
-+ -- 704
-- -- 451
-* -- 1734
-:= -- 3191
-add.period$ -- 149
-call.type$ -- 42
-change.case$ -- 42
+            869 strings with 17416 characters,
+and the built_in function-call counts, 20454 in all, are:
+= -- 1649
+> -- 1690
+< -- 22
++ -- 717
+- -- 458
+* -- 1783
+:= -- 3222
+add.period$ -- 146
+call.type$ -- 41
+change.case$ -- 41
 chr.to.int$ -- 41
-cite$ -- 42
-duplicate$ -- 856
-empty$ -- 1391
-format.name$ -- 552
-if$ -- 4287
-int.to.chr$ -- 2
-int.to.str$ -- 42
-missing$ -- 39
-newline$ -- 235
-num.names$ -- 140
-pop$ -- 507
+cite$ -- 41
+duplicate$ -- 854
+empty$ -- 1382
+format.name$ -- 560
+if$ -- 4343
+int.to.chr$ -- 1
+int.to.str$ -- 41
+missing$ -- 40
+newline$ -- 231
+num.names$ -- 143
+pop$ -- 500
 preamble$ -- 0
-purify$ -- 42
+purify$ -- 41
 quote$ -- 0
-skip$ -- 666
+skip$ -- 683
 stack$ -- 0
-substring$ -- 510
-swap$ -- 204
-text.length$ -- 13
+substring$ -- 566
+swap$ -- 213
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 294
+type$ -- 284
 warning$ -- 0
-while$ -- 132
+while$ -- 136
 width$ -- 0
-write$ -- 578
+write$ -- 571
