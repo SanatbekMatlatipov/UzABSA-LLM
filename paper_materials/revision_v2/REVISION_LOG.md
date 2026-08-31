@@ -472,3 +472,111 @@ SI's big-data angle.
 
 Lesson for this repo: for MDPI SI status, a live human check beats web search;
 search results here were a year out of date.
+
+## 2026-08-31 — External (ChatGPT) pre-submission review triaged and applied 🤖
+
+An external LLM review recommended "major revision before submission" against the
+BDCC SI (deadline 22 Oct 2026). Each claim was checked against the repo before acting.
+**Applied to `main.tex` (compiles clean: 0 errors, 0 undefined refs, 0 bibtex errors,
+1 pre-existing overfull box, 25 pp).**
+
+### Confirmed and fixed
+
+1. **Abstract**: was 301 words in the built PDF and ungrammatical. Rewritten to
+   **196 words**, grammar corrected, claim order preserved. (BDCC asks ~200 max.)
+2. **Eq. 7 `K=4` → `K=3`** — `conflict` is dropped in preprocessing, so macro-F1 was
+   already 3-class. The equation contradicted the surrounding text.
+3. **Zenodo DOI was pointing at v1 (10.5281/zenodo.18790639)** — the *defective-pipeline*
+   release. Live record is **v3, 10.5281/zenodo.22146677** (verified on Zenodo; v1 page
+   shows a "newer version" banner). Fixed in all 3 places (§data_multidomain footnote,
+   Layer 3, `\dataavailability`).
+4. **Miscited references** — `Matlatipov2009` (Prolog morphology) and `uzbekendingssanat`
+   (inflectional endings) were cited as *restaurant-domain sentiment* work. Replaced with
+   `matlatipov2022uzbek` ("Uzbek Sentiment Analysis based on local Restaurant Reviews",
+   already in the bib, uncited). The two morphology papers moved to the Uzbek-NLP
+   infrastructure sentence where they belong. `Salaev2024` is UzMorphAnalyser, **not**
+   transliteration — added `salaev2022translit` (arXiv:2205.09578, verified) for the
+   transliteration claim and kept Salaev2024 for morphological analysis.
+5. **"Statistically tied"/"indistinguishable" → "no statistically significant difference
+   was detected"** (4 sites: abstract, results finding, discussion, conclusion), with an
+   explicit "absence of significance is not evidence of equivalence" note.
+6. **Stale Limitations claim** — said LLM–encoder gaps were "reported descriptively",
+   but §5.1 reports their p-values. Rewritten.
+7. **"Roughly ±0.03" CIs → exact CIs.** New **\Cref{tab:cis}** (Appendix
+   `sec:appendix_cis`) with all 20 per-system percentile-bootstrap intervals from
+   `significance_v2/*_ci.json`. True half-width range ±0.023–±0.037.
+8. **Multiple comparisons** — added a Holm–Bonferroni correction over the 28 post-hoc
+   tests (7 pairs × 4 metrics) to §Statistical Significance. **Only Llama–DeepSeek pair F1
+   survives** (raw p=0.0016 → corrected p=0.045), plus the three FT-vs-ZS contrasts.
+   Other sub-0.05 results relabeled exploratory in §5.1 and Limitations.
+9. **Set-based / non-bipartite matching disclosed** in §Evaluation Framework: terms are
+   lower-cased and set-compared (repeats collapse), partial matching does not enforce
+   one-to-one alignment. Noted as applying identically to all systems.
+10. **"Gold-verified" → "reconciled double-annotated"** throughout (6 sites) — the 80-review
+    file holds two reconciled annotator lists by the *same* two people, not third-party
+    adjudicated gold. Independent adjudication named as an open item.
+11. **Quality-tiering overclaim** — Layer 3 said it exports a "filtered" silver subset;
+    only 307/5,038 are judged. Reworded, and the 63.5% sample inclusion rate is now
+    accompanied by a **domain-weighted corpus estimate: 67.3% (95% CI [62.1%, 72.6%])**,
+    computed from the per-domain judged rates against the true corpus domain distribution.
+12. **AI disclosure** — `\useofartificialintelligence{}` was **commented out**. Now filled
+    in and split into (i) gpt-4o-mini as the *studied* judging component (provider, exact
+    snapshot, access date 25 Feb 2026, temperature 0.1, 300-token cap, 1 call/review,
+    307/307 parsed, prompt released) and (ii) manuscript language editing.
+13. **New efficiency paragraph** (§Discussion, "Cost of the Pipeline") with measured
+    numbers: training 35/48/84 min pure (65–107 min wall) on one RTX A6000; annotation
+    **4.3 s/review, ~840 reviews/h, ~6 GPU-h** for the corpus (from `annotation_log.txt`);
+    judging **~$0.05** for 307 and **<$1** for all 5,038. Directly addresses the "report
+    throughput/cost" and "big data contribution" comments.
+14. **Missing PII assurance** added to `\dataavailability`: released records exclude user
+    names, review URLs and timestamps (verified — the 4 released JSONs carry none;
+    only the *unreleased* `data/raw/reviews.csv` has them).
+15. **4 new references added and verified** (title/authors/venue fetched): `smid2024llama`
+    (WASSA 2024), `wu2024zeroshot` (IJMLC 2025), `liskowski2026arctic` (arXiv:2601.03940),
+    `hellwig2026llmannotator` (LREC 2026). Woven into Related Work.
+16. **Latent bib bug surfaced and fixed**: `matlatipov2022uzbek` had a stray comma
+    ("Matlatipov, Sanatbek, and Rahimboeva...") that produced 3 BibTeX errors the moment
+    it was cited. Now 0.
+
+### Assessed and NOT actioned (with reasons)
+
+- **"Regenerate all 5,038 annotations with the corrected checkpoint"** — the review's #1
+  item, and correct. Needs GPU (~6 h) + the merged Qwen v2 weights, which are not on this
+  Mac. The manuscript already discloses this honestly (footnote in §pipeline + Limitations).
+  **This remains the single biggest reviewer risk.**
+- **Three-way train/dev/test split + 3 seeds** — needs retraining all five systems. The
+  dev-set-reuse caveat is already stated in Limitations.
+- **Judge all 5,038 reviews** — *not* GPU-bound; costs **<$1** in API spend and is the
+  highest value-per-effort open item. Script exists (`scripts/llm_judge.py`).
+- **Third-annotator adjudication of the 80-review gold set** — human work.
+- **Data licensing conflict (CC BY 4.0 on Zenodo vs "exclusively for academic research"
+  permission in the Acknowledgments)** — a real contradiction, but resolving it requires
+  written confirmation from the data owner. Flagged, not silently reworded.
+- **HF model card / repo license inconsistencies** (GPL-3.0 repo vs MIT headers vs
+  Apache-2.0 HF; Llama branch cannot be Apache-2.0) — outside `main.tex`; see
+  `writing/pending_edits.md`.
+
+## 2026-08-31 (later) — AI-use disclosure: plain MDPI template in Acknowledgments 🤖
+
+Author rejected a first attempt that filled in `\useofartificialintelligence{}`
+with a long two-part statement (studied gpt-4o-mini judge component + manuscript
+tooling). **That block is reverted to its original commented-out placeholder.**
+
+Final form: `\useofartificialintelligence{}` stays commented out, and the MDPI
+GenAI template sentence is the **last sentence of `\acknowledgments{}`**:
+
+> During the preparation of this manuscript/study, the authors used OpenAI GPT
+> and Anthropic Claude (Sonnet 5 and Opus 5) for the purposes of paraphrasing,
+> language editing, and manuscript revision. The authors have reviewed and
+> edited the output and take full responsibility for the content of this
+> publication.
+
+This restores the author's original placement and wording, with Claude added.
+Compiles clean (0 errors, 0 undefined, 25 pp).
+
+**Correction to an earlier claim in this log:** a "probe compile" was cited as
+proving the `\useofartificialintelligence{}` block rendered (25 pp with, 23 pp
+without). That probe used a `sed`-inserted `\iffalse ... \fi` whose `\fi`
+placement was not verified, so it likely suppressed more than the intended
+block; the 2-page delta should not be trusted. The current disclosure needs no
+such check — it sits inside `\acknowledgments{}`, which already renders.

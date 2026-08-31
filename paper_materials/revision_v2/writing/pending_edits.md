@@ -35,6 +35,46 @@ model-assisted annotation pipeline are the big-data contribution.
 2. **Select SI `9N6QB6G1RO`** in the SuSy submission form (confirmed open,
    deadline 22 October 2026).
 
+## Open items from the 2026-08-31 external review (see REVISION_LOG.md)
+
+Ordered by value per unit of effort. Items 1–3 need no GPU.
+
+1. 🧑 **Resolve the licensing contradiction — blocking.** Zenodo publishes the
+   corpus as **CC BY 4.0** (permits commercial reuse), while the Acknowledgments
+   state permission was granted "exclusively for academic research purposes".
+   These conflict. Either obtain written permission from Sardor Berdiyev
+   (Commeta) explicitly covering open redistribution under CC BY, **or** switch
+   the Zenodo record to a non-commercial/research-only license and reword the
+   manuscript. Do not submit with both statements standing.
+
+2. 🤖/🧑 **Judge the remaining 4,731 reviews — <$1, no GPU.** The strongest
+   available answer to "most of the silver corpus was never quality-tiered".
+   `python scripts/llm_judge.py --annotations data/annotated/reviews_annotated.json
+   --provider openai --model gpt-4o-mini --sample-size 5038 --output-dir data/judged_full`
+   Measured cost basis: 307 reviews ≈ $0.045, so the full corpus ≈ $0.75.
+   Then re-run `assemble_dataset.py`, refresh Table 7–10 / Figure 4, and the
+   "unjudged" hedging in §Layer 3 can be dropped entirely.
+
+3. 🧑 **Third-annotator adjudication of the 80-review subset.** Would let
+   "reconciled double-annotated" become genuine adjudicated gold. Ideally also
+   widen beyond 80 reviews and report bootstrap CIs on the human-vs-model F1.
+
+4. 🧑 **HF model card + repo license sync.** Card shows a different JSON schema,
+   Uzbek (not English) polarity labels, term–category–sentiment triples (the
+   paper says the layers are independent), and sampling rather than greedy
+   decoding; its project link 404s. Repo license is GPL-3.0 while source headers
+   say MIT and HF says Apache-2.0 — and the **Llama branch cannot be relicensed
+   as Apache-2.0** under the Llama community licence. Pick one licence per
+   artifact and make the card match §Methodology.
+
+5. 🖥️ **GPU-bound, honestly disclosed rather than fixed:**
+   - Regenerate the 5,038 annotations with the corrected Qwen v2 checkpoint
+     (~6 GPU-h at the measured 4.3 s/review). The released silver corpus still
+     comes from the pre-fix annotator. Currently footnoted in §pipeline and
+     Limitations — a reviewer may still press on it.
+   - True three-way train/dev/test split + ≥3 seeds per system. The 609-example
+     partition is a dev set reused for headline numbers; stated in Limitations.
+
 ## Done — 2026-08-29
 
 - **PDF compiles** (Overleaf, user-verified). Structural checks also pass:

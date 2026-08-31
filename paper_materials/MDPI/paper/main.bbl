@@ -134,6 +134,30 @@ Simmering, P.F.; Huoviala, P.
 \newblock {\em arXiv preprint arXiv:2310.18025} {\bf 2023}.
 \newblock {\url{https://doi.org/10.48550/arXiv.2310.18025}}.
 
+\bibitem[{\v{S}}m{\'i}d et~al.(2024){\v{S}}m{\'i}d, P{\v{r}}ib{\'a}{\v{n}}, and
+  Kr{\'a}l]{smid2024llama}
+{\v{S}}m{\'i}d, J.; P{\v{r}}ib{\'a}{\v{n}}, P.; Kr{\'a}l, P.
+\newblock {LL}a{MA}-Based Models for Aspect-Based Sentiment Analysis.
+\newblock In Proceedings of the Proceedings of the 14th Workshop on
+  Computational Approaches to Subjectivity, Sentiment, and Social Media
+  Analysis ({WASSA}), Bangkok, Thailand,  2024; pp. 63--70.
+\newblock {\url{https://doi.org/10.18653/v1/2024.wassa-1.6}}.
+
+\bibitem[Wu et~al.(2025)Wu, Ma, Zhang, Deng, He, and Xue]{wu2024zeroshot}
+Wu, C.; Ma, B.; Zhang, Z.; Deng, N.; He, Y.; Xue, Y.
+\newblock Evaluating zero-shot multilingual aspect-based sentiment analysis
+  with large language models.
+\newblock {\em International Journal of Machine Learning and Cybernetics} {\bf
+  2025}.
+\newblock {\url{https://doi.org/10.1007/s13042-025-02735-5}}.
+
+\bibitem[Liskowski and Jankowski(2026)]{liskowski2026arctic}
+Liskowski, P.; Jankowski, K.
+\newblock Large-Scale Aspect-Based Sentiment Analysis with Reasoning-Infused
+  {LLM}s.
+\newblock {\em arXiv preprint arXiv:2601.03940} {\bf 2026}.
+\newblock {\url{https://doi.org/10.48550/arXiv.2601.03940}}.
+
 \bibitem[Touvron et~al.(2023)Touvron, Lavril, Izacard, Martinet, Lachaux,
   Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, Rodriguez, Joulin, Grave, and
   Lample]{Touvron2023-lf}
@@ -176,6 +200,22 @@ Abdellaoui, I.; Ibrahimi, A.; El~Bouni, M.A.; Mourhir, A.; Driouech, S.;
 \newblock {\em Big Data and Cognitive Computing} {\bf 2024}, {\em 8},~170.
 \newblock {\url{https://doi.org/10.3390/bdcc8120170}}.
 
+\bibitem[Matlatipov and Vetulani(2009)]{Matlatipov2009}
+Matlatipov, G.; Vetulani, Z.
+\newblock Representation of Uzbek Morphology in Prolog. In {\em Aspects of
+  Natural Language Processing: Essays Dedicated to Leonard Bolc on the Occasion
+  of His 75th Birthday}; Marciniak, M.; Mykowiecka, A., Eds.; Springer Berlin
+  Heidelberg: Berlin, Heidelberg,  2009; pp. 83--110.
+\newblock {\url{https://doi.org/10.1007/978-3-642-04735-0_4}}.
+
+\bibitem[Matlatipov et~al.(2020)Matlatipov, Tukeyev, and
+  Aripov]{uzbekendingssanat}
+Matlatipov, S.; Tukeyev, U.; Aripov, M.
+\newblock Towards the Uzbek Language Endings as a Language Resource.
+\newblock In Proceedings of the Advances in Computational Collective
+  Intelligence; Hernes, M.; Wojtkiewicz, K.; Szczerbicki, E., Eds., Cham,
+  2020; pp. 729--740.
+
 \bibitem[Aripov et~al.(2022)Aripov, Khakimov, Matlatipov, and
   Sirojiddinov]{10.1007/978-3-031-05328-3_6}
 Aripov, M.; Khakimov, M.; Matlatipov, S.; Sirojiddinov, Z.
@@ -207,6 +247,15 @@ Salaev, U.
 \newblock {\em AIP Conference Proceedings} {\bf 2024}, {\em 3244},~030058.
 \newblock {\url{https://doi.org/10.1063/5.0241461}}.
 
+\bibitem[Salaev et~al.(2022)Salaev, Kuriyozov, and
+  G{\'o}mez-Rodr{\'i}guez]{salaev2022translit}
+Salaev, U.; Kuriyozov, E.; G{\'o}mez-Rodr{\'i}guez, C.
+\newblock A machine transliteration tool between {U}zbek alphabets.
+\newblock In Proceedings of the Proceedings of the International Conference and
+  Workshop on Agglutinative Language Technologies as a Challenge of Natural
+  Language Processing ({ALTNLP}), Koper, Slovenia,  2022.
+\newblock {\url{https://doi.org/10.48550/arXiv.2205.09578}}.
+
 \bibitem[Kuriyozov and Matlatipov(2019)]{kuriyozov2019building}
 Kuriyozov, E.; Matlatipov, S.
 \newblock Building a new sentiment analysis dataset for {U}zbek language and
@@ -223,21 +272,13 @@ Kuriyozov, E.; Matlatipov, S.; Alonso, M.A.; G{\'o}mez-Rodr{\'i}guez, C.
   13212},~232--243.
 \newblock {\url{https://doi.org/10.1007/978-3-031-05328-3\_15}}.
 
-\bibitem[Matlatipov and Vetulani(2009)]{Matlatipov2009}
-Matlatipov, G.; Vetulani, Z.
-\newblock Representation of Uzbek Morphology in Prolog. In {\em Aspects of
-  Natural Language Processing: Essays Dedicated to Leonard Bolc on the Occasion
-  of His 75th Birthday}; Marciniak, M.; Mykowiecka, A., Eds.; Springer Berlin
-  Heidelberg: Berlin, Heidelberg,  2009; pp. 83--110.
-\newblock {\url{https://doi.org/10.1007/978-3-642-04735-0_4}}.
-
-\bibitem[Matlatipov et~al.(2020)Matlatipov, Tukeyev, and
-  Aripov]{uzbekendingssanat}
-Matlatipov, S.; Tukeyev, U.; Aripov, M.
-\newblock Towards the Uzbek Language Endings as a Language Resource.
-\newblock In Proceedings of the Advances in Computational Collective
-  Intelligence; Hernes, M.; Wojtkiewicz, K.; Szczerbicki, E., Eds., Cham,
-  2020; pp. 729--740.
+\bibitem[Matlatipov et~al.(2022)Matlatipov, Rahimboeva, Rajabov, and
+  Kuriyozov]{matlatipov2022uzbek}
+Matlatipov, S.; Rahimboeva, H.; Rajabov, J.; Kuriyozov, E.
+\newblock Uzbek Sentiment Analysis based on local Restaurant Reviews.
+\newblock In Proceedings of the Proceedings of The International Conference and
+  Workshop on Agglutinative Language Technologies as a challenge of Natural
+  Language Processing ({ALTNLP}), Koper, Slovenia,  2022.
 
 \bibitem[Matlatipov et~al.(2024)Matlatipov, Rajabov, Kuriyozov, and
   Aripov]{matlatipov2024uzabsa}
@@ -286,6 +327,16 @@ Li, Q.; Dou, S.; Shao, K.; Chen, C.; Hu, H.
 \newblock Evaluating Scoring Bias in LLM-as-a-Judge,  2025,
   \href{http://arxiv.org/abs/arXiv:2506.22316}{{\normalfont
   [arXiv:2506.22316]}}.
+
+\bibitem[Hellwig et~al.(2026)Hellwig, Fehle, Kruschwitz, and
+  Wolff]{hellwig2026llmannotator}
+Hellwig, N.C.; Fehle, J.; Kruschwitz, U.; Wolff, C.
+\newblock {LLM}-as-an-Annotator: Training Lightweight Models with
+  {LLM}-Annotated Examples for Aspect Sentiment Tuple Prediction.
+\newblock In Proceedings of the Proceedings of the 2026 Joint International
+  Conference on Computational Linguistics, Language Resources and Evaluation
+  ({LREC}),  2026.
+\newblock {\url{https://doi.org/10.48550/arXiv.2603.01778}}.
 
 \bibitem[Koehn(2004)]{koehn-2004-statistical}
 Koehn, P.
