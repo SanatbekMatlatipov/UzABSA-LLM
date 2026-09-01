@@ -247,3 +247,4 @@ paper_materials/revision_v2/zenodo_release/*
 # does not start tracking 5 GB of encoder checkpoints per model.
 paper_materials/revision_v2/baselines*/*/hf_trainer/
 paper_materials/revision_v2/baselines*/*/model/
+paper_materials/MDPI/paper/GPTZero AI Scan - UzABSA_LLM-feedbek.md
