@@ -58,17 +58,14 @@
 \citation{matlatipov-etal-2024-uzabsa}
 \citation{3666122.3668142}
 \citation{2506.22316}
-\newlabel{sec:rw_judge}{{2}{4}{Related Work}{section*.1}{}}
-\newlabel{sec:rw_judge@cref}{{[section][2][]2}{[1][4][]4}{}{}{}}
 \citation{hellwig-etal-2026-llm}
 \citation{matlatipov-etal-2024-uzabsa}
 \citation{pontiki-etal-2014-semeval}
+\newlabel{sec:rw_judge}{{2}{5}{Related Work}{section*.1}{}}
+\newlabel{sec:rw_judge@cref}{{[section][2][]2}{[1][5][]5}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Datasets}{5}{section.3}\protected@file@percent }
 \newlabel{sec:datasets}{{3}{5}{Datasets}{section.3}{}}
 \newlabel{sec:datasets@cref}{{[section][3][]3}{[1][5][]5}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Multi-Domain Uzbek Review Corpus for Model-Assisted Annotation}{5}{subsection.3.1}\protected@file@percent }
-\newlabel{sec:data_multidomain}{{3.1}{5}{Multi-Domain Uzbek Review Corpus for Model-Assisted Annotation}{subsection.3.1}{}}
-\newlabel{sec:data_multidomain@cref}{{[subsection][1][3]3.1}{[1][5][]5}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Statistics of the annotated UzABSA dataset used for training and evaluation.}}{6}{table.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{tab:dataset_stats}{{1}{6}{Statistics of the annotated UzABSA dataset used for training and evaluation}{table.caption.2}{}}
@@ -76,6 +73,9 @@
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Top-10 domain distribution in the multi-domain Uzbek review corpus (5{,}038 reviews total).}}{6}{table.caption.3}\protected@file@percent }
 \newlabel{tab:domain_dist}{{2}{6}{Top-10 domain distribution in the multi-domain Uzbek review corpus (5{,}038 reviews total)}{table.caption.3}{}}
 \newlabel{tab:domain_dist@cref}{{[table][2][]2}{[1][6][]6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Multi-Domain Uzbek Review Corpus for Model-Assisted Annotation}{6}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:data_multidomain}{{3.1}{6}{Multi-Domain Uzbek Review Corpus for Model-Assisted Annotation}{subsection.3.1}{}}
+\newlabel{sec:data_multidomain@cref}{{[subsection][1][3]3.1}{[1][5][]6}{}{}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces ChatML instruction template for Uzbek ABSA. The target is a single JSON list carrying \emph  {two} annotation layers, exactly as they appear in the SemEval-style source: term-level records (\textit  {ovqatlari} ``food'', \textit  {narxlari} ``prices'', each with a polarity) and category-level records (\textit  {ovqat}, \textit  {narx}, each with a polarity). The two layers are independently annotated in UzABSA and are therefore not paired into \{term, category, polarity\} triples; this study evaluates the term layer (\Cref  {sec:meth_eval}).}}{7}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:instruction_example_ui}{{1}{7}{ChatML instruction template for Uzbek ABSA. The target is a single JSON list carrying \emph {two} annotation layers, exactly as they appear in the SemEval-style source: term-level records (\textit {ovqatlari} ``food'', \textit {narxlari} ``prices'', each with a polarity) and category-level records (\textit {ovqat}, \textit {narx}, each with a polarity). The two layers are independently annotated in UzABSA and are therefore not paired into \{term, category, polarity\} triples; this study evaluates the term layer (\Cref {sec:meth_eval})}{figure.caption.4}{}}
 \newlabel{fig:instruction_example_ui@cref}{{[figure][1][]1}{[1][7][]7}{}{}{}}
@@ -95,14 +95,14 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{8}{section.4}\protected@file@percent }
 \newlabel{sec:methodology}{{4}{8}{Methodology}{section.4}{}}
 \newlabel{sec:methodology@cref}{{[section][4][]4}{[1][8][]8}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}QLoRA Fine-Tuning}{8}{subsection.4.1}\protected@file@percent }
-\newlabel{sec:meth_qlora}{{4.1}{8}{QLoRA Fine-Tuning}{subsection.4.1}{}}
-\newlabel{sec:meth_qlora@cref}{{[subsection][1][4]4.1}{[1][8][]8}{}{}{}}
-\newlabel{eq:lora}{{2}{8}{QLoRA Fine-Tuning}{equation.2}{}}
-\newlabel{eq:lora@cref}{{[equation][2][]2}{[1][8][]8}{}{}{}}
 \citation{3666122.3666563}
 \citation{kuriyozov-etal-2024-bertbek}
 \citation{tahrirchibert2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}QLoRA Fine-Tuning}{9}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:meth_qlora}{{4.1}{9}{QLoRA Fine-Tuning}{subsection.4.1}{}}
+\newlabel{sec:meth_qlora@cref}{{[subsection][1][4]4.1}{[1][8][]9}{}{}{}}
+\newlabel{eq:lora}{{2}{9}{QLoRA Fine-Tuning}{equation.2}{}}
+\newlabel{eq:lora@cref}{{[equation][2][]2}{[1][8][]9}{}{}{}}
 \newlabel{eq:qlora}{{3}{9}{QLoRA Fine-Tuning}{equation.3}{}}
 \newlabel{eq:qlora@cref}{{[equation][3][]3}{[1][9][]9}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Encoder Baselines}{9}{subsection.4.2}\protected@file@percent }
@@ -136,13 +136,13 @@
 \newlabel{sec:results@cref}{{[section][5][]5}{[1][12][]12}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Training characteristics on a single RTX A6000. All runs use identical QLoRA hyperparameters; the adapter size differs slightly with backbone geometry (40.4\,M trainable parameters for the Qwen-architecture models, 41.9\,M for Llama~3.1-8B). Wall-clock time is reported only for the one run that was uninterrupted end-to-end; the other two runs were resumed from optimizer checkpoints after a power interruption, so their wall-clock and throughput are not clean efficiency measurements and are omitted rather than estimated ($^{*}$).}}{13}{table.caption.6}\protected@file@percent }
 \newlabel{tab:train_efficiency}{{3}{13}{Training characteristics on a single RTX A6000. All runs use identical QLoRA hyperparameters; the adapter size differs slightly with backbone geometry (40.4\,M trainable parameters for the Qwen-architecture models, 41.9\,M for Llama~3.1-8B). Wall-clock time is reported only for the one run that was uninterrupted end-to-end; the other two runs were resumed from optimizer checkpoints after a power interruption, so their wall-clock and throughput are not clean efficiency measurements and are omitted rather than estimated ($^{*}$)}{table.caption.6}{}}
-\newlabel{tab:train_efficiency@cref}{{[table][3][]3}{[1][12][]13}{}{}{}}
+\newlabel{tab:train_efficiency@cref}{{[table][3][]3}{[1][13][]13}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces ABSA evaluation on the 609-example deduplicated evaluation set. Best scores per metric are \textbf  {bold}. LLMs use greedy decoding; encoder baselines (BERTbek, TahrirchiBERT) use BIO-polarity token classification (\Cref  {sec:meth_encoder}) and produce structured output by construction, so the JSON parse rate does not apply. Per-system percentile-bootstrap 95\% confidence intervals for every score in this table are reported in \Cref  {tab:cis} (\Cref  {sec:appendix_cis}); their half-widths range from $\pm 0.023$ to $\pm 0.037$, so most inter-system gaps are not statistically significant (see text and \Cref  {sec:res_zeroshot}).}}{13}{table.caption.7}\protected@file@percent }
 \newlabel{tab:absa_results}{{4}{13}{ABSA evaluation on the 609-example deduplicated evaluation set. Best scores per metric are \textbf {bold}. LLMs use greedy decoding; encoder baselines (BERTbek, TahrirchiBERT) use BIO-polarity token classification (\Cref {sec:meth_encoder}) and produce structured output by construction, so the JSON parse rate does not apply. Per-system percentile-bootstrap 95\% confidence intervals for every score in this table are reported in \Cref {tab:cis} (\Cref {sec:appendix_cis}); their half-widths range from $\pm 0.023$ to $\pm 0.037$, so most inter-system gaps are not statistically significant (see text and \Cref {sec:res_zeroshot})}{table.caption.7}{}}
 \newlabel{tab:absa_results@cref}{{[table][4][]4}{[1][13][]13}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Three-Model ABSA Comparison}{13}{subsection.5.1}\protected@file@percent }
 \newlabel{sec:res_comparison}{{5.1}{13}{Three-Model ABSA Comparison}{subsection.5.1}{}}
-\newlabel{sec:res_comparison@cref}{{[subsection][1][5]5.1}{[1][12][]13}{}{}{}}
+\newlabel{sec:res_comparison@cref}{{[subsection][1][5]5.1}{[1][13][]13}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}What Does Fine-Tuning Buy? Zero-Shot Controls}{14}{subsection.5.2}\protected@file@percent }
 \newlabel{sec:res_zeroshot}{{5.2}{14}{What Does Fine-Tuning Buy? Zero-Shot Controls}{subsection.5.2}{}}
 \newlabel{sec:res_zeroshot@cref}{{[subsection][2][5]5.2}{[1][14][]14}{}{}{}}
@@ -166,7 +166,7 @@
 \newlabel{sec:res_multidomain@cref}{{[subsection][4][5]5.4}{[1][16][]16}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Per-domain LLM-as-Judge quality scores (overall, 1--5 scale). Domains grouped by proximity to the training distribution.}}{17}{table.caption.12}\protected@file@percent }
 \newlabel{tab:domain_quality}{{8}{17}{Per-domain LLM-as-Judge quality scores (overall, 1--5 scale). Domains grouped by proximity to the training distribution}{table.caption.12}{}}
-\newlabel{tab:domain_quality@cref}{{[table][8][]8}{[1][16][]17}{}{}{}}
+\newlabel{tab:domain_quality@cref}{{[table][8][]8}{[1][17][]17}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Human Validation of Annotation Quality}{17}{subsection.5.5}\protected@file@percent }
 \newlabel{sec:res_human}{{5.5}{17}{Human Validation of Annotation Quality}{subsection.5.5}{}}
 \newlabel{sec:res_human@cref}{{[subsection][5][5]5.5}{[1][17][]17}{}{}{}}
@@ -178,7 +178,7 @@
 \newlabel{tab:iaa@cref}{{[table][9][]9}{[1][17][]19}{}{}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Calibration of the GPT-4o-mini judge against the mean rating of two native-speaker annotators on the same 150 reviews (Spearman $\rho $, all $p<10^{-6}$; MAE on the 1--5 scale).}}{19}{table.caption.15}\protected@file@percent }
 \newlabel{tab:judge_calibration}{{10}{19}{Calibration of the GPT-4o-mini judge against the mean rating of two native-speaker annotators on the same 150 reviews (Spearman $\rho $, all $p<10^{-6}$; MAE on the 1--5 scale)}{table.caption.15}{}}
-\newlabel{tab:judge_calibration@cref}{{[table][10][]10}{[1][18][]19}{}{}{}}
+\newlabel{tab:judge_calibration@cref}{{[table][10][]10}{[1][19][]19}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{19}{section.6}\protected@file@percent }
 \newlabel{sec:discussion}{{6}{19}{Discussion}{section.6}{}}
 \newlabel{sec:discussion@cref}{{[section][6][]6}{[1][19][]19}{}{}{}}
@@ -186,24 +186,17 @@
 \@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{21}{section.7}\protected@file@percent }
 \newlabel{sec:conclusion}{{7}{21}{Conclusions}{section.7}{}}
 \newlabel{sec:conclusion@cref}{{[section][7][]7}{[1][21][]21}{}{}{}}
-\newlabel{sec:acknowledgement}{{7}{22}{Conclusions}{section.7}{}}
-\newlabel{sec:acknowledgement@cref}{{[section][7][]7}{[1][22][]22}{}{}{}}
+\newlabel{sec:acknowledgement}{{7}{21}{Conclusions}{section.7}{}}
+\newlabel{sec:acknowledgement@cref}{{[section][7][]7}{[1][21][]21}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {A}Appendix~A}{22}{appendix.A}\protected@file@percent }
 \newlabel{sec:appendix_domains}{{A}{22}{\appendixname ~\thesection }{appendix.A}{}}
 \newlabel{sec:appendix_domains@cref}{{[section][1][]A}{[1][22][]22}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A1}{\ignorespaces LLM-as-Judge (GPT-4o-mini) quality scores for all 23 business domains, sorted by Overall score (descending). Stratified evaluation sample: 307 reviews. Scale: 1--5 (higher is better). $^{*}$~Small sample ($N \leq 5$): interpret with caution.}}{22}{table.caption.16}\protected@file@percent }
+\newlabel{tab:domain_quality_full}{{A1}{22}{LLM-as-Judge (GPT-4o-mini) quality scores for all 23 business domains, sorted by Overall score (descending). Stratified evaluation sample: 307 reviews. Scale: 1--5 (higher is better). $^{*}$~Small sample ($N \leq 5$): interpret with caution}{table.caption.16}{}}
+\newlabel{tab:domain_quality_full@cref}{{[table][1][]A1}{[1][22][]22}{}{}{}}
 \bibdata{mybibliography}
 \bibcite{pontiki-etal-2014-semeval}{{1}{2014}{{Pontiki et~al.}}{{Pontiki, Galanis, Pavlopoulos, Papageorgiou, Androutsopoulos, and Manandhar}}}
 \bibcite{Qwen2024-kr}{{2}{2024}{{{Qwen} et~al.}}{{{Qwen}, Yang, Yang, Zhang, Hui, Zheng, Yu, Li, Liu, Huang, Wei, Lin, Yang, Tu, Zhang, Yang, Yang, Zhou, Lin, Dang, Lu, Bao, Yang, Yu, Li, Xue, Zhang, Zhu, Men, Lin, Li, Tang, Xia, Ren, Ren, Fan, Su, Zhang, Wan, Liu, Cui, Zhang, and Qiu}}}
-\@writefile{lot}{\contentsline {table}{\numberline {A1}{\ignorespaces LLM-as-Judge (GPT-4o-mini) quality scores for all 23 business domains, sorted by Overall score (descending). Stratified evaluation sample: 307 reviews. Scale: 1--5 (higher is better). $^{*}$~Small sample ($N \leq 5$): interpret with caution.}}{23}{table.caption.16}\protected@file@percent }
-\newlabel{tab:domain_quality_full}{{A1}{23}{LLM-as-Judge (GPT-4o-mini) quality scores for all 23 business domains, sorted by Overall score (descending). Stratified evaluation sample: 307 reviews. Scale: 1--5 (higher is better). $^{*}$~Small sample ($N \leq 5$): interpret with caution}{table.caption.16}{}}
-\newlabel{tab:domain_quality_full@cref}{{[table][1][]A1}{[1][22][]23}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Appendix~B}{23}{appendix.B}\protected@file@percent }
-\newlabel{sec:appendix_cis}{{B}{23}{\appendixname ~\thesection }{appendix.B}{}}
-\newlabel{sec:appendix_cis@cref}{{[section][2][]B}{[1][23][]23}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A2}{\ignorespaces Percentile-bootstrap 95\% confidence intervals ($B{=}10{,}000$, resampling reviews) for each system on the 609-example evaluation set. Estimates match \Cref  {tab:absa_results}.}}{23}{table.caption.17}\protected@file@percent }
-\newlabel{tab:cis}{{A2}{23}{Percentile-bootstrap 95\% confidence intervals ($B{=}10{,}000$, resampling reviews) for each system on the 609-example evaluation set. Estimates match \Cref {tab:absa_results}}{table.caption.17}{}}
-\newlabel{tab:cis@cref}{{[table][2][]A2}{[1][23][]23}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}References}{23}{appendix.C}\protected@file@percent }
 \bibcite{Grattafiori2024-ka}{{3}{2024}{{Grattafiori et~al.}}{{Grattafiori, Dubey, Jauhri, et~al.}}}
 \bibcite{Guo2025}{{4}{2025}{{Guo et~al.}}{{Guo, Yang, Zhang, Song, Wang, Zhu, Xu, Zhang, Ma, Bi, Zhang, Yu, Wu, Wu, Gou, Shao, Li, Gao, Liu, Xue, Wang, Wu, Feng, Lu, Zhao, Deng, Ruan, Dai, Chen, Ji, Li, Lin, Dai, Luo, Hao, Chen, Li, Zhang, Xu, Ding, Gao, Qu, Li, Guo, Li, Chen, Yuan, Tu, Qiu, Li, Cai, Ni, Liang, Chen, Dong, Hu, You, Gao, Guan, Huang, Yu, Wang, Zhang, Zhao, Wang, Zhang, Xu, Xia, Zhang, Zhang, Tang, Zhou, Li, Wang, Li, Tian, Huang, Zhang, Wang, Chen, Du, Ge, Zhang, Pan, Wang, Chen, Jin, Chen, Lu, Zhou, Chen, Ye, Wang, Yu, Zhou, Pan, Li, Zhou, Wu, Yun, Pei, Sun, Wang, Zeng, Liu, Liang, Gao, Yu, Zhang, Xiao, An, Liu, Wang, Chen, Nie, Cheng, Liu, Xie, Liu, Yang, Li, Su, Lin, Li, Jin, Shen, Chen, Sun, Wang, Song, Zhou, Wang, Shan, Li, Wang, Wei, Zhang, Xu, Li, Zhao, Sun, Wang, Yu, Zhang, Shi, Xiong, He, Piao, Wang, Tan, Ma, Liu, Guo, Ou, Wang, Gong, Zou, He, Xiong, Luo, You, Liu, Zhou, Zhu, Huang, Li, Zheng, Zhu, Ma, Tang, Zha, Yan, Ren, Ren, Sha, Fu, Xu, Xie, Zhang, Hao, Ma, Yan, Wu, Gu, Zhu, Liu, Li, Xie, Song, Pan, Huang, Xu, Zhang, and Zhang}}}
 \bibcite{3666122.3666563}{{5}{2023}{{Dettmers et~al.}}{{Dettmers, Pagnoni, Holtzman, and Zettlemoyer}}}
@@ -216,6 +209,13 @@
 \bibcite{bdcc10050161}{{12}{2026}{{Zou et~al.}}{{Zou, Zou, Guo, Wang, Weng, Fang, Jiang, and Wu}}}
 \bibcite{electronics14040690}{{13}{2025}{{Liao et~al.}}{{Liao, Wang, Yeh, and Lin}}}
 \bibcite{smartcities8020062}{{14}{2025}{{Alotaibi and Nadeem}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Appendix~B}{23}{appendix.B}\protected@file@percent }
+\newlabel{sec:appendix_cis}{{B}{23}{\appendixname ~\thesection }{appendix.B}{}}
+\newlabel{sec:appendix_cis@cref}{{[section][2][]B}{[1][22][]23}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A2}{\ignorespaces Percentile-bootstrap 95\% confidence intervals ($B{=}10{,}000$, resampling reviews) for each system on the 609-example evaluation set. Estimates match \Cref  {tab:absa_results}.}}{23}{table.caption.17}\protected@file@percent }
+\newlabel{tab:cis}{{A2}{23}{Percentile-bootstrap 95\% confidence intervals ($B{=}10{,}000$, resampling reviews) for each system on the 609-example evaluation set. Estimates match \Cref {tab:absa_results}}{table.caption.17}{}}
+\newlabel{tab:cis@cref}{{[table][2][]A2}{[1][23][]23}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}References}{23}{appendix.C}\protected@file@percent }
 \bibcite{scaria-etal-2024-instructabsa}{{15}{2024}{{Scaria et~al.}}{{Scaria, Gupta, Goyal, Sawant, Mishra, and Baral}}}
 \bibcite{simmering2023llmabsa}{{16}{2023}{{Simmering and Huoviala}}{{}}}
 \bibcite{smid-etal-2024-llama}{{17}{2024}{{{\v {S}}m{\'i}d et~al.}}{{{\v {S}}m{\'i}d, Priban, and Kral}}}
@@ -246,7 +246,7 @@
 \bibcite{2506.22316}{{42}{2025}{{Li et~al.}}{{Li, Dou, Shao, Chen, and Hu}}}
 \bibcite{hellwig-etal-2026-llm}{{43}{2026}{{Hellwig et~al.}}{{Hellwig, Fehle, Kruschwitz, and Wolff}}}
 \bibcite{koehn-2004-statistical}{{44}{2004}{{Koehn}}{{}}}
-\newlabel{LastPage}{{B}{26}{Appendix~C}{page.26}{}}
-\gdef\lastpage@lastpage{26}
-\gdef\lastpage@lastpageHy{26}
-\gdef \@abspage@last{26}
+\newlabel{LastPage}{{B}{25}{Appendix~C}{page.25}{}}
+\gdef\lastpage@lastpage{25}
+\gdef\lastpage@lastpageHy{25}
+\gdef \@abspage@last{25}

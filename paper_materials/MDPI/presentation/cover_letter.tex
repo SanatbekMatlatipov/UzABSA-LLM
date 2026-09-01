@@ -1,5 +1,6 @@
 %=================================================================
-% Cover Letter for submission to MDPI Computers
+% Cover Letter for submission to MDPI Big Data and Cognitive Computing (BDCC)
+% Special Issue: "Natural Language Processing Applications in Big Data"
 % Manuscript: UzABSA-LLM: Parameter-Efficient Fine-Tuning and
 %             Multi-Domain Annotation for Uzbek Aspect-Based Sentiment Analysis
 %=================================================================
@@ -13,12 +14,11 @@
 \hypersetup{hidelinks}
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.7em}
+\setlength{\parskip}{0.6em}
 
 \signature{%
   Sanatbek Matlatipov\\
   on behalf of all co-authors\\
-  Faculty of Applied Mathematics and Intelligent Technologies\\
   National University of Uzbekistan named after Mirzo Ulugbek\\
   Tashkent 100174, Uzbekistan\\
   Email: s.matlatipov@nuu.uz}
@@ -32,40 +32,34 @@
 \begin{document}
 
 \begin{letter}{%
-  Dr.\ Ming Liu\\
-  Guest Editor, Special Issue\\
-  ``Natural Language Processing and Language Models''\\
-  \textit{Computers} (MDPI)\\
-  School of Information Technology, Deakin University\\
-  Geelong, VIC 3216, Australia}
+  The Editorial Office\\
+  \textit{Big Data and Cognitive Computing} (MDPI)\\
+  Special Issue: ``Natural Language Processing Applications in Big Data''}
 
-\opening{Dear Dr.\ Liu,}
+\opening{Dear Editors,}
 
-We are pleased to submit our manuscript entitled \textbf{``UzABSA-LLM: Parameter-Efficient Fine-Tuning and Multi-Domain Annotation for Uzbek Aspect-Based Sentiment Analysis''} for consideration as an original research article in \textit{Computers}.
+We submit our manuscript \textbf{``UzABSA-LLM: Parameter-Efficient Fine-Tuning and Multi-Domain Annotation for Uzbek Aspect-Based Sentiment Analysis''} for consideration as an original research article in \textit{Big Data and Cognitive Computing}, for the Special Issue ``Natural Language Processing Applications in Big Data''.
 
-\textbf{Significance of the work.}
-Aspect-Based Sentiment Analysis (ABSA) is a well-established task for high-resource languages. However, Uzbek, a Turkic language spoken by over 38 million people worldwide, remains significantly under-explored as a result of its sparse representation in multilingual pre-training corpora, agglutinative morphology, and script duality (Latin/Cyrillic). The \emph{first systematic investigation} of parameter-efficient fine-tuning (QLoRA) of open-source large language models for Uzbek ABSA is presented in our study. The ABSA task is reformulated as a single-pass generative task with Uzbek-language instruction tuning. This allows models to extract aspect terms and classify sentiment polarity in tandem, while simultaneously generating structured JSON output that is directly applicable to downstream annotation pipelines.
+\textbf{Significance.}
+Aspect-Based Sentiment Analysis (ABSA) is well established for high-resource languages, but Uzbek---a Turkic language spoken by over 38 million people---remains under-served owing to its sparse representation in multilingual pre-training corpora, its agglutinative morphology, and its Latin/Cyrillic script duality. To the best of our knowledge, this is the first controlled comparison of QLoRA-adapted open-weight 7--8B language models on the UzABSA benchmark, benchmarked against monolingual Uzbek encoders. We reformulate ABSA as a single-pass generative task with Uzbek instruction tuning, so that a model extracts aspect terms and assigns their polarity in one structured JSON generation that feeds a downstream annotation pipeline.
 
-\textbf{Findings in the context of existing work.}
-Prior Uzbek NLP work, including the original UzABSA dataset, has relied almost exclusively on rule-based methods, traditional machine learning, or encoder-based neural models; to the best of our knowledge, no published work has fine-tuned large language models---full or parameter-efficient---for Uzbek ABSA. Building on the generative ABSA paradigm that has so far focused on English, we extend it to a low-resource, morphologically rich language and contribute the following:
+\textbf{Findings in context.}
+Generative ABSA has concentrated on English, and prior Uzbek work has relied on rule-based methods, classical machine learning, or encoder models. Extending the generative paradigm to a low-resource, morphologically rich language, we report: (i)~a controlled comparison in which Qwen~2.5-7B attains the best extraction F1 (0.708) at a 100\% parse rate and Llama~3.1-8B the best end-to-end pair F1 (0.651) and sentiment accuracy (0.925), yet a paired bootstrap detects no significant difference between them---reported as a non-result rather than a declared winner, under a multiple-comparison correction applied to the full family of tests; (ii)~a cost--capability trade-off in which fine-tuned 110M-parameter Uzbek encoders show no statistically detectable disadvantage at extraction while the larger models are clearly stronger at sentiment and joint prediction; (iii)~zero-shot controls showing that QLoRA fine-tuning at least doubles exact extraction F1 and triples pair F1, buying task competence and prediction calibration rather than format compliance; and (iv)~a validated model-assisted annotation pipeline applied to 5{,}038 reviews across 23 domains, yielding 9{,}884 aspect-level annotations with per-item quality metadata. All code, data, and models are publicly released.
 
-\begin{itemize}
-  \item A controlled comparison of three architectures (Qwen~2.5-7B, Llama~3.1-8B, and DeepSeek-R1-Distill-Qwen-7B) at the same parameter scale under identical QLoRA configurations, isolating architectural and pre-training effects.
-  \item Empirical evidence that training cross-entropy loss does \emph{not} reliably predict downstream ABSA performance: the model with the lowest validation loss is outperformed on aspect extraction by a model with 31\% higher loss---a result with practical implications for model selection in structured-output tasks.
-  \item A scalable, reproducible three-layer model-assisted annotation pipeline combining local inference, LLM-as-Judge quality scoring, and quality-tiered assembly.
-  \item A novel multi-domain silver-standard Uzbek ABSA dataset covering 5{,}038 reviews across 23 business categories with 9{,}884 annotated aspect--sentiment pairs and per-annotation quality metadata.
-\end{itemize}
+\textbf{Fit to BDCC.} The work speaks to both halves of the journal's remit.
 
-To support reproducible research in low-resource NLP, all code, datasets, and fine-tuned models are made publicly available on GitHub, HuggingFace, and Zenodo.
+\emph{Big data.} For user-generated text in a low-resource language, the binding constraint on large-scale analysis is not storage or compute but \emph{annotation}: a heterogeneous review stream cannot become an analytical resource without labels that do not exist and cannot be hand-produced at scale. We contribute a pipeline that performs that conversion, and we report its economics from measured runs rather than asserting scalability---annotation proceeds at roughly 840 reviews per hour on a single GPU, and automated quality scoring of the entire corpus costs under one US dollar. The dominant remaining cost is human, which is why the automatic layers are built to be applied exhaustively while scarce native-speaker effort is spent calibrating them. The pipeline is model-agnostic and transfers across languages and domains; our 23-domain corpus exhibits the heterogeneity typical of real review streams, and we measure how annotation quality degrades with distance from the training domain.
 
-\textbf{Fit to the scope of the journal.}
-\textit{Computers} publishes research across computer science and its applications, including artificial intelligence, machine learning, and natural language processing. Our manuscript sits squarely within this scope: it advances practical, resource-efficient methods for adapting large language models to under-served languages on consumer-grade hardware, and it delivers an openly released dataset and methodology that the broader computing community can reuse and extend. We therefore believe the work will be of direct interest to the journal's readership.
+\emph{Cognitive computing.} The pipeline's second layer substitutes machine judgement for human judgement, and we treat that substitution as a claim to be tested rather than assumed. Calibrating an LLM judge against native-speaker ratings, we report both where it succeeds (Spearman $\rho=0.81$ on sentiment, $\rho=0.66$ on the tier-defining overall score) and where it does not (weaker agreement on completeness, where it is systematically harsher than humans). The accompanying validation study yields a result about the task itself: polarity judgement proved essentially unambiguous---annotators agreed on the sentiment of every jointly identified aspect---whereas \emph{what counts as the aspect span} is the dominant source of disagreement even between trained native speakers. Human and machine annotators diverge in the same place and for the same reason, and it is this calibration that licenses the quality tiers on which the released dataset depends.
 
-We confirm that neither the manuscript nor any parts of its content are currently under consideration for publication with or published in another journal. All authors have approved the manuscript and agree with its submission to \textit{Computers}.
+\textbf{Prior MDPI submission.}
+As required, we disclose that an earlier version of this manuscript was submitted to \textit{Computers} (MDPI) and was not accepted; the previous manuscript ID is supplied in the submission system. The present version differs substantially: all models were retrained and re-evaluated after we identified and corrected two defects in the earlier pipeline (a system-prompt serialization bug and text-level overlap between the training and evaluation splits), and we added zero-shot controls, encoder baselines, paired-bootstrap significance testing across all system pairs, and a native-speaker validation study. The reported results are new, and the claims have been narrowed to what the corrected experiments support.
 
-We have no prior submissions of this manuscript to any MDPI journal to acknowledge.
+The author list has also changed relative to that submission: Gusein Djalilov joined the work and contributed to validation, formal analysis, and revision of the manuscript, while Abdullah M.\ Almarashi is no longer an author and has agreed to this change. The remaining authors are unchanged. All four current authors have seen and approved this version, and individual contributions are itemised in the manuscript's Author Contributions statement.
 
-Thank you for considering our manuscript. We look forward to your response and would be happy to provide any further information required.
+We confirm that neither the manuscript nor any parts of its content are currently under consideration for publication with or published in another journal. All authors have approved the manuscript and agree with its submission to BDCC.
+
+Thank you for considering our manuscript. We would be happy to provide any further information required.
 
 \closing{Sincerely,}
 
