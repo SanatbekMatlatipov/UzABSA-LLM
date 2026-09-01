@@ -33,7 +33,16 @@ model-assisted annotation pipeline are the big-data contribution.
    should happen before the Data Availability statement is relied on.
 
 2. **Select SI `9N6QB6G1RO`** in the SuSy submission form (confirmed open,
-   deadline 22 October 2026).
+   deadline 22 October 2026). Note: the SI lives under the **Big Data** section
+   — selecting a different section (e.g. "Large Language Models and Embodied
+   Intelligence") filters this SI out of the dropdown. Choose the SI first.
+
+3. **Prior MDPI submission: `computers-4419237`** (*Computers*, not accepted).
+   BDCC requires this to be acknowledged in the cover letter — it is, by ID —
+   and the ID should also go in SuSy's prior-submission field, which MDPI says
+   eases processing. The author list is **unchanged** from that submission
+   (Aripov, Matlatipov, Rajabov, Almarashi), so there is no authorship change
+   to explain.
 
 ## Open items from the 2026-08-31 external review (see REVISION_LOG.md)
 

@@ -92,29 +92,24 @@
 \Title{UzABSA-LLM: Parameter-Efficient Fine-Tuning and Multi-Domain Annotation for Uzbek Aspect-Based Sentiment Analysis}
 
 % Author Orchid ID: enter ID or remove command
-\newcommand{\orcidauthorA}{0000-0002-6895-3436} % Add \orcidA{} behind the author's name
-\newcommand{\orcidauthorB}{0009-0007-3089-0867} % Add \orcidB{} behind the author's name
-\newcommand{\orcidauthorC}{0000-0001-5207-8852} % Add \orcidC{} behind the author's name
-\newcommand{\orcidauthorD}{0000-0002-0369-6707} % Add \orcidD{} behind the author's name
+\newcommand{\orcidauthorA}{0000-0001-5207-8852} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-6895-3436} % Add \orcidB{} behind the author's name
+\newcommand{\orcidauthorC}{0000-0002-0369-6707} % Add \orcidC{} behind the author's name
+\newcommand{\orcidauthorD}{0000-0002-9336-6807} % Add \orcidD{} behind the author's name
 
 % Authors, for the paper (add full first names)
-\Author{Sanatbek Matlatipov $^{1,}$*\orcidA{}, Gusein Djalilov $^{2}$\orcidB{}, Mersaid Aripov $^{1}$\orcidC{} and Jaloliddin Rajabov $^{1}$\orcidD{}}
+\Author{Mersaid Aripov $^{1}$\orcidA{}, Sanatbek Matlatipov $^{1,}$*\orcidB{}, Jaloliddin Rajabov $^{1}$\orcidC{} and Abdullah M. Almarashi $^{2,}$*\orcidD{}}
 
-%\longauthorlist{yes}
 
-% MDPI internal command: Authors, for metadata in PDF
-\AuthorNames{Sanatbek Matlatipov, Gusein Djalilov, Mersaid Aripov and Jaloliddin Rajabov}
+\AuthorNames{Mersaid Aripov, Sanatbek Matlatipov, Jaloliddin Rajabov and Abdullah M. Almarashi}
 
-%\longauthorlist{yes}
 
-% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
 \address{%
-$^{1}$ \quad Faculty of Applied Mathematics and Intelligent Technologies, National University of Uzbekistan named after Mirzo Ulugbek, Tashkent 100174, Uzbekistan; s.matlatipov@nuu.uz (S.M.); mirsaid.aripov@nuu.uz (M.A.); TODO-RAJABOV-EMAIL (J.R.)\\
-$^{2}$ \quad Independent Researcher, Tashkent, Uzbekistan; g.djalilov@gmail.com\\
+$^{1}$ \quad Faculty of Applied Mathematics and Intelligent Technologies, National University of Uzbekistan named after Mirzo Ulugbek, Tashkent 100174, Uzbekistan; mirsaid.aripov@nuu.uz (M.A.); s.matlatipov@nuu.uz (S.M.); j.rajabov@nuu.uz (J.R.)\\
+$^{2}$ \quad Department of Statistics, Faculty of Science, King Abdulaziz University, Jeddah 21589, Saudi Arabia; aalmarashi@kau.edu.sa (A.M.A.)\\
 }
 
-% Contact information of the corresponding author
-\corres{Correspondence: s.matlatipov@nuu.uz}
+\corres{Correspondence: s.matlatipov@nuu.uz; aalmarashi@kau.edu.sa}
 
 % Current address and/or shared authorship
 %\firstnote{Current address: Affiliation.}  
@@ -859,7 +854,7 @@ In-domain    & Restoran       & 50 & 3.68 & 4.76 & 4.56 & 4.66 & 4.24 \\
 \subsection{Human Validation of Annotation Quality}
 \label{sec:res_human}
 
-Because both the silver annotations and their quality scores originate from models, we validate a subsample against native-speaker judgement. Two native Uzbek speakers---the first and last authors---annotated a stratified subsample of 150 reviews drawn from the 307 judged reviews (all 23 domains represented, deliberately oversampling distant and low-scoring domains), performing two tasks: (i) rating the model's predicted annotations on the same five-dimension 1--5 rubric used by the LLM judge, and (ii) re-annotating a subset of 80 reviews from scratch to obtain human gold references.
+Because both the silver annotations and their quality scores originate from models, we validate a subsample against native-speaker judgement. Two native Uzbek speakers---the second and third authors---annotated a stratified subsample of 150 reviews drawn from the 307 judged reviews (all 23 domains represented, deliberately oversampling distant and low-scoring domains), performing two tasks: (i) rating the model's predicted annotations on the same five-dimension 1--5 rubric used by the LLM judge, and (ii) re-annotating a subset of 80 reviews from scratch to obtain human gold references.
 
 \textbf{Inter-annotator agreement.} Rubric ratings were produced after a joint calibration pass on the 1--5 scale. \Cref{tab:iaa} reports agreement between the two raters on all 150 reviews, measured with quadratic-weighted Cohen's $\kappa$ (which penalises large rating gaps more than adjacent ones) and Krippendorff's $\alpha$ on the interval scale. Agreement is high and consistent across dimensions ($\kappa = 0.911$--$0.970$, $\alpha = 0.911$--$0.970$), highest on sentiment correctness ($\kappa = 0.970$) and lowest on relevance ($\kappa = 0.911$); Spearman correlations between raters fall in the same band ($\rho = 0.920$--$0.941$). The two raters therefore apply the rubric consistently enough for their mean rating to serve as the reference against which the LLM judge is calibrated below.
 
@@ -964,7 +959,7 @@ This paper presented is the first systematic study of parameter-efficient fine-t
 %}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\authorcontributions{Conceptualization, S.M. and M.A.; methodology, S.M. and M.A.; software, S.M.; validation, S.M., G.D. and J.R.; formal analysis, S.M. and G.D.; investigation, S.M., G.D. and J.R.; resources, S.M.; data curation, S.M. and J.R.; writing---original draft preparation, S.M.; writing---review and editing, S.M., G.D., M.A. and J.R.; visualization, S.M.; supervision, M.A.; project administration, S.M.; funding acquisition, not applicable. All authors have read and agreed to the published version of the manuscript.}
+\authorcontributions{Conceptualization, S.M. and M.A.; methodology, S.M. and M.A.; software, S.M.; validation, S.M. and J.R.; formal analysis, S.M. and A.M.A.; investigation, S.M. and J.R.; resources, M.A.; data curation, S.M. and J.R.; writing---original draft preparation, S.M.; writing---review and editing, S.M., M.A., J.R. and A.M.A.; visualization, S.M.; supervision, M.A.; project administration, S.M.; funding acquisition, not applicable. All authors have read and agreed to the published version of the manuscript.}
 
 \funding{This research received no external funding.}
 
