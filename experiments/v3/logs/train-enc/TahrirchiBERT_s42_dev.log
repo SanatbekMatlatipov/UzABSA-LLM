@@ -1,0 +1,35 @@
+# 2026-10-31T15:09:58 host=DT-BIZON-W11 git=fbe4858-dirty
+# 'C:\Users\User\code\UzABSA-LLM\.venv\Scripts\python.exe' scripts/eval_bert_baseline.py --model-dir 'experiments\v3\runs\TahrirchiBERT_s42\model' --data 'experiments\v3\data' --split validation --out 'experiments\v3\runs\TahrirchiBERT_s42\eval_dev' --device auto
+C:\Users\User\code\UzABSA-LLM\.venv\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0dev0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+2026-10-31 15:10:05,753 - torchao - WARNING - Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.16.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Loaded experiments\v3\runs\TahrirchiBERT_s42\model on cuda
+Evaluating on 548 validation examples
+{
+  "model_dir": "experiments\\v3\\runs\\TahrirchiBERT_s42\\model",
+  "num_examples": 548,
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.6678,
+      "recall": 0.6484,
+      "f1": 0.6579
+    },
+    "partial_match": {
+      "precision": 0.7658,
+      "recall": 0.7435,
+      "f1": 0.7545
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.597,
+    "pair_recall": 0.5806,
+    "pair_f1": 0.5887,
+    "sentiment_accuracy": 0.893,
+    "sentiment_macro_f1": 0.8416,
+    "total_predictions": 603,
+    "total_references": 620
+  }
+}
+
+Saved -> experiments\v3\runs\TahrirchiBERT_s42\eval_dev\eval_results.json and per-example preds -> experiments\v3\runs\TahrirchiBERT_s42\eval_dev\preds_per_example.jsonl
+# exit 0 after 15s

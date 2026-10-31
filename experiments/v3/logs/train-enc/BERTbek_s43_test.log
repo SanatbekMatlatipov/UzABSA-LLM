@@ -1,0 +1,35 @@
+# 2026-10-31T15:05:02 host=DT-BIZON-W11 git=fbe4858-dirty
+# 'C:\Users\User\code\UzABSA-LLM\.venv\Scripts\python.exe' scripts/eval_bert_baseline.py --model-dir 'experiments\v3\runs\BERTbek_s43\model' --data 'experiments\v3\data' --split test --out 'experiments\v3\runs\BERTbek_s43\eval_test' --device auto
+C:\Users\User\code\UzABSA-LLM\.venv\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0dev0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+2026-10-31 15:05:09,428 - torchao - WARNING - Skipping import of cpp extensions due to incompatible torch version 2.6.0+cu124 for torchao version 0.16.0             Please see https://github.com/pytorch/ao/issues/2919 for more info
+Loaded experiments\v3\runs\BERTbek_s43\model on cuda
+Evaluating on 609 test examples
+{
+  "model_dir": "experiments\\v3\\runs\\BERTbek_s43\\model",
+  "num_examples": 609,
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.6805,
+      "recall": 0.6906,
+      "f1": 0.6855
+    },
+    "partial_match": {
+      "precision": 0.7861,
+      "recall": 0.7978,
+      "f1": 0.7919
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6088,
+    "pair_recall": 0.6187,
+    "pair_f1": 0.6137,
+    "sentiment_accuracy": 0.8939,
+    "sentiment_macro_f1": 0.8249,
+    "total_predictions": 749,
+    "total_references": 737
+  }
+}
+
+Saved -> experiments\v3\runs\BERTbek_s43\eval_test\eval_results.json and per-example preds -> experiments\v3\runs\BERTbek_s43\eval_test\preds_per_example.jsonl
+# exit 0 after 15s

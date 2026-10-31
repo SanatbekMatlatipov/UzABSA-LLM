@@ -1,0 +1,24 @@
+seeds: [42, 43, 44]; models: ['qwen2.5-7b', 'llama3.1-8b', 'deepseek-7b']; gpus: [0, 1, 3]
+
+======================================================================
+=== SEED 42 ===
+======================================================================
+
+=== train-llm ===
+[run] train-llm/qwen2.5-7b_s42 -> experiments\v3\logs\train-llm\qwen2.5-7b_s42.log
+[run] train-llm/llama3.1-8b_s42 -> experiments\v3\logs\train-llm\llama3.1-8b_s42.log[run] train-llm/deepseek-7b_s42 -> experiments\v3\logs\train-llm\deepseek-7b_s42.log
+
+[ok] train-llm/deepseek-7b_s42 (8235s)
+[ok] train-llm/qwen2.5-7b_s42 (8710s)
+[ok] train-llm/llama3.1-8b_s42 (9087s)
+
+=== eval-llm ===
+[run] eval-llm/qwen2.5-7b_s42_dev -> experiments\v3\logs\eval-llm\qwen2.5-7b_s42_dev.log[run] eval-llm/qwen2.5-7b_s42_test -> experiments\v3\logs\eval-llm\qwen2.5-7b_s42_test.log
+
+[run] eval-llm/llama3.1-8b_s42_test -> experiments\v3\logs\eval-llm\llama3.1-8b_s42_test.log
+[ok] eval-llm/qwen2.5-7b_s42_dev (1751s)
+[run] eval-llm/deepseek-7b_s42_test -> experiments\v3\logs\eval-llm\deepseek-7b_s42_test.log
+[ok] eval-llm/qwen2.5-7b_s42_test (1934s)
+[run] eval-llm/llama3.1-8b_s42_dev -> experiments\v3\logs\eval-llm\llama3.1-8b_s42_dev.log
+[ok] eval-llm/llama3.1-8b_s42_test (2132s)
+[run] eval-llm/deepseek-7b_s42_dev -> experiments\v3\logs\eval-llm\deepseek-7b_s42_dev.log

@@ -1,0 +1,25 @@
+{
+  "model_dir": "experiments\\v3\\runs\\TahrirchiBERT_s44\\model",
+  "num_examples": 548,
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.7211,
+      "recall": 0.6129,
+      "f1": 0.6626
+    },
+    "partial_match": {
+      "precision": 0.8254,
+      "recall": 0.7016,
+      "f1": 0.7585
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6364,
+    "pair_recall": 0.5419,
+    "pair_f1": 0.5854,
+    "sentiment_accuracy": 0.8816,
+    "sentiment_macro_f1": 0.7656,
+    "total_predictions": 528,
+    "total_references": 620
+  }
+}

@@ -1,0 +1,26 @@
+{
+ "_note": "Full v3 run plan, for experiments/v3/progress.py. The batched LLM driver narrows config.json's llm.seeds to one seed at a time, so config.json understates the plan while it runs.",
+ "llm": {
+  "models": [
+   "qwen2.5-7b",
+   "llama3.1-8b",
+   "deepseek-7b"
+  ],
+  "seeds": [
+   42,
+   43,
+   44
+  ]
+ },
+ "encoders": {
+  "models": [
+   "BERTbek",
+   "TahrirchiBERT"
+  ],
+  "seeds": [
+   42,
+   43,
+   44
+  ]
+ }
+}

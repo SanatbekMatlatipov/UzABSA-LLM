@@ -1,25 +1,65 @@
 {
  "_note": "Settings for experiments/v3/run_v3.py. Paths are relative to the repository root. Everything a stage produces lands under experiments/v3/.",
- "split": {"source": "data/processed", "dev_size": 0.1, "seed": 42},
+ "split": {
+  "source": "data/processed",
+  "dev_size": 0.1,
+  "seed": 42
+ },
  "llm": {
-  "models": ["qwen2.5-7b", "llama3.1-8b", "deepseek-7b"],
+  "models": [
+   "qwen2.5-7b",
+   "llama3.1-8b",
+   "deepseek-7b"
+  ],
   "extra_models": [],
   "_extra_models_hint": "e.g. [\"qwen2.5-14b\"]: a larger checkpoint of the best family, about 2x the training time and 30 GB on disk",
-  "seeds": [42, 43, 44],
-  "gpus": [0, 1],
-  "_gpus_hint": "one job per listed GPU at a time; the A6000 PC tripped its PSU with four",
-  "train_args": {"--max-steps": 1000, "--learning-rate": 2e-4, "--batch-size": 4,
-                 "--grad-accum": 4, "--lora-r": 16, "--lora-alpha": 32}
+  "seeds": [
+   42
+  ],
+  "gpus": [
+   0,
+   1,
+   3
+  ],
+  "_gpus_hint": "one job per listed GPU at a time. Never list four: the A6000 PC trips its PSU and hard-restarts. GPU 2 drives the monitor, so the three usable indices are 0, 1 and 3",
+  "train_args": {
+   "--max-steps": 1000,
+   "--learning-rate": 0.0002,
+   "--batch-size": 4,
+   "--grad-accum": 4,
+   "--lora-r": 16,
+   "--lora-alpha": 32
+  }
  },
  "encoders": {
-  "models": {"BERTbek": "elmurod1202/bertbek-news-big-cased",
-             "TahrirchiBERT": "tahrirchi/tahrirchi-bert-base"},
-  "seeds": [42, 43, 44],
+  "models": {
+   "BERTbek": "elmurod1202/bertbek-news-big-cased",
+   "TahrirchiBERT": "tahrirchi/tahrirchi-bert-base"
+  },
+  "seeds": [
+   42,
+   43,
+   44
+  ],
   "device": "auto",
-  "train_args": {"--epochs": 4, "--lr": 3e-5, "--batch-size": 16}
+  "train_args": {
+   "--epochs": 4,
+   "--lr": 3e-05,
+   "--batch-size": 16
+  }
  },
- "names": {"qwen2.5-7b": "Qwen 2.5-7B", "llama3.1-8b": "Llama 3.1-8B",
-           "deepseek-7b": "DeepSeek-R1-7B", "qwen2.5-14b": "Qwen 2.5-14B"},
- "judge": {"rubrics": ["v1", "checklist"], "workers": 8,
-           "_rubrics_hint": "the first rubric scores the corpus. Calibration on 2026-10-30: the v1 panel agreed best with the human ratings (tier kappa 0.60 vs 0.14 for the checklist panel), so v1 moved to first place; this choice used the calibration ratings, so its kappa is slightly optimistic"}
+ "names": {
+  "qwen2.5-7b": "Qwen 2.5-7B",
+  "llama3.1-8b": "Llama 3.1-8B",
+  "deepseek-7b": "DeepSeek-R1-7B",
+  "qwen2.5-14b": "Qwen 2.5-14B"
+ },
+ "judge": {
+  "rubrics": [
+   "v1",
+   "checklist"
+  ],
+  "workers": 8,
+  "_rubrics_hint": "the first rubric scores the corpus. Calibration on 2026-10-30: the v1 panel agreed best with the human ratings (tier kappa 0.60 vs 0.14 for the checklist panel), so v1 moved to first place; this choice used the calibration ratings, so its kappa is slightly optimistic"
+ }
 }

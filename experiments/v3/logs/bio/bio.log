@@ -1,0 +1,8 @@
+# 2026-10-31T14:59:16 host=DT-BIZON-W11 git=fbe4858-dirty
+# 'C:\Users\User\code\UzABSA-LLM\.venv\Scripts\python.exe' scripts/prepare_bio_dataset.py --data 'experiments\v3\data' --out 'experiments\v3\data_bio'
+C:\Users\User\code\UzABSA-LLM\.venv\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0dev0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+train: 4932 examples, term alignment 5839/5952 = 98.1%
+validation: 548 examples, term alignment 610/620 = 98.4%
+Wrote BIO dataset + label_map + stats to experiments\v3\data_bio
+# exit 0 after 13s

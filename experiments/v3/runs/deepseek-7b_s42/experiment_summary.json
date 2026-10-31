@@ -1,0 +1,94 @@
+{
+  "experiment": {
+    "name": "deepseek-7b_s42",
+    "timestamp": "2026-10-31T17:24:21.691657",
+    "framework": "Unsloth + HuggingFace TRL"
+  },
+  "model": {
+    "name": "unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit",
+    "max_seq_length": 2048,
+    "quantization": "4-bit NF4"
+  },
+  "lora_config": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training_config": {
+    "learning_rate": 0.0002,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 16,
+    "max_steps": 1000,
+    "num_epochs": 3,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01,
+    "lr_scheduler": "cosine",
+    "optimizer": "adamw_8bit",
+    "fp16": false,
+    "bf16": true,
+    "seed": 42
+  },
+  "system": {
+    "python_version": "3.13.9",
+    "os": "Windows 11",
+    "pytorch_version": "2.6.0+cu124",
+    "cuda_available": true,
+    "cuda_version": "12.4",
+    "gpu_count": 1,
+    "gpus": [
+      {
+        "id": 0,
+        "name": "NVIDIA RTX A6000",
+        "memory_gb": 45.0,
+        "compute_capability": "8.6"
+      }
+    ],
+    "transformers_version": "4.57.2",
+    "trl_version": "0.23.0",
+    "peft_version": "0.18.1"
+  },
+  "training_results": {
+    "final_train_loss": 0.247546,
+    "total_steps": 1000,
+    "total_flos": null,
+    "metrics": {
+      "train_runtime": 4782.6663,
+      "train_samples_per_second": 3.345,
+      "train_steps_per_second": 0.209,
+      "total_flos": 2.3639164168127693e+17,
+      "train_loss": 0.247546,
+      "epoch": 3.236821
+    }
+  },
+  "training_curves_summary": {
+    "total_recorded_steps": 111,
+    "total_eval_records": 10,
+    "initial_loss": 2.5939,
+    "final_loss": 0.247546,
+    "min_loss": 0.1149,
+    "max_loss": 2.5939,
+    "loss_reduction": 2.346354,
+    "loss_reduction_pct": 90.46,
+    "peak_lr": 0.00019995065603657316,
+    "final_lr": 6.092342209607083e-10,
+    "best_eval_loss": 0.18231435120105743,
+    "best_eval_step": 900,
+    "total_training_time_s": 8187.7,
+    "total_training_time_min": 136.5
+  },
+  "dataset": {
+    "path": "experiments\\v3\\data",
+    "train_examples": 4932,
+    "eval_examples": 548
+  }
+}

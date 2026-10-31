@@ -97,6 +97,62 @@ In total, 281 gold annotations changed in 169 reviews.
 - **Significance:** Qwen vs. Llama remains a tie (p = 0.21 and 0.95; `test_recheck/significance/`).
 - **Do not score the majority vote on the re-checked gold.** The reviews were selected with the same five-system votes.
 
+**v3 runs started (31 October 2026, 3 × RTX A6000).** The `encoders` stage is
+complete; the nine LLM runs are still going. `progress.py` prints the live state, and
+`collect` rebuilds `SUMMARY.md`, `registry.json` and `MANIFEST.json` from the prediction
+files when they finish, so the numbers below are provisional only in that more seeds are
+still to land -- they are read from the files, not typed in.
+
+Encoders, all three seeds, on the 609 test reviews. These are the first seed-variance
+numbers for the encoder baselines, and they settle limitation (ii) for that family:
+
+| System | Exact ATE F1 | Partial F1 (1:1) | Pair F1 | Sent. acc. | Published (v2) exact / pair |
+|---|---|---|---|---|---|
+| BERTbek (3 seeds) | 0.689 ± 0.008 | 0.794 ± 0.003 | 0.613 ± 0.005 | 0.890 ± 0.004 | 0.692 / 0.608 |
+| TahrirchiBERT (3 seeds) | 0.690 ± 0.006 | 0.789 ± 0.013 | 0.607 ± 0.009 | 0.880 ± 0.006 | 0.701 / 0.623 |
+
+Per seed:
+
+| Run | Exact ATE F1 | Partial F1 | Pair F1 | Sent. acc. |
+|---|---|---|---|---|
+| BERTbek s42 | 0.6981 | 0.7937 | 0.6180 | 0.8865 |
+| BERTbek s43 | 0.6855 | 0.7919 | 0.6137 | 0.8939 |
+| BERTbek s44 | 0.6833 | 0.7978 | 0.6078 | 0.8895 |
+| TahrirchiBERT s42 | 0.6971 | 0.7992 | 0.6177 | 0.8867 |
+| TahrirchiBERT s43 | 0.6877 | 0.7936 | 0.6011 | 0.8752 |
+| TahrirchiBERT s44 | 0.6847 | 0.7737 | 0.6025 | 0.8785 |
+
+- **The two encoders are now a tie.** Exact F1 0.689 vs 0.690, well inside one standard
+  deviation, where the paper's single runs put TahrirchiBERT ahead on both metrics.
+- **The published encoder numbers were mildly optimistic.** TahrirchiBERT's published
+  exact F1 (0.701) and pair F1 (0.623) sit about 1.7 and 1.8 standard deviations above its
+  v3 mean. That is the expected direction: the v2 checkpoints were selected on the same
+  609 reviews they were scored on, and `split` is what removes that leak. BERTbek, whose
+  published numbers (0.692 / 0.608) fall inside its v3 spread, barely moves.
+- **Files:** `runs/BERTbek_s4*/` and `runs/TahrirchiBERT_s4*/`, each with `eval_test/`
+  and `eval_dev/`.
+
+**Three things this machine needed.** They are worth recording because any rerun on the
+same hardware hits them.
+
+- **At most three GPUs.** The box has four A6000s, but four concurrent training jobs trip
+  its PSU and hard-restart it, and GPU 2 drives the monitor. `config.json`'s `gpus` is
+  therefore `[0, 1, 3]`.
+- **One compile cache per GPU.** `torch.compile` keys its generated kernels by source hash
+  alone, so parallel jobs sharing one cache directory can import a kernel another job is
+  still writing. The first attempt died with `SyntaxError: source code string cannot
+  contain null bytes`; `on_gpus` now gives every worker its own `TORCHINDUCTOR_CACHE_DIR`
+  and `TRITON_CACHE_DIR`.
+- **Merged weights pruned between seeds.** `train_unsloth.py` always writes a 15 GB merged
+  model, so nine runs need about 144 GB and this drive had 119 GB free. The seeds therefore
+  run one at a time, and after each batch's evals every merged model except the best one on
+  dev is deleted -- `annotate` needs only that one. Predictions, LoRA adapters,
+  `checkpoint-*/trainer_state.json` (which records the dev loss that chose the checkpoint)
+  and every log are kept, so no number loses its provenance; `registry.json` simply records
+  `merged_model: null` for a pruned run, and re-running `train-llm` would retrain it rather
+  than skip it. Publish the weights from the Hub, as the layout note below says. The
+  encoders' `hf_trainer/` directories (4.9 GB each, written but never read) go the same way.
+
 ## What each stage fixes in the paper
 
 | The paper today | Stage | What the paper can say afterwards | Cost |
@@ -115,7 +171,8 @@ Run from the repository root. Every stage skips jobs whose output already exists
 
 | Where | Command | What it does |
 |---|---|---|
-| GPU machine | `python experiments/v3/run_v3.py gpu` | Builds the split; trains 3 models × 3 seeds, at most one job per GPU listed in `config.json`; scores dev and test; re-annotates the corpus with the best dev run. Disk: about 15 GB per merged 7–8B model, about 140 GB in total. |
+| GPU machine | `python experiments/v3/run_v3.py gpu` | Builds the split; trains 3 models × 3 seeds, at most one job per GPU listed in `config.json`; scores dev and test; re-annotates the corpus with the best dev run. Disk: about 15 GB per merged 7–8B model, about 140 GB for all nine at once — run the seeds in batches and prune if the drive is smaller. |
+| Any machine | `python experiments/v3/progress.py -w` | Live progress of whatever is running: every run's step count and ETA, each eval's scores as it lands, the downstream stages, GPU load and free disk. Read-only. |
 | Mac (MPS) or GPU machine | `python experiments/v3/run_v3.py encoders` | Builds the BIO split; trains 2 encoders × 3 seeds; scores dev and test. |
 | Any machine with API keys | `python scripts/judge_panel.py calibrate --smoke --out /tmp/smoke`, then `python experiments/v3/run_v3.py judge` | The smoke test makes one call per judge to check keys and model names. Then: calibration against the human ratings, judging of all 5,038 released annotations, and their tiers. Done on 30–31 October 2026; reruns skip finished work. |
 | After the GPU stages | `python experiments/v3/run_v3.py judge-v3 assemble report` | Judges the re-annotated corpus, builds its tiers, runs ensembles and significance tests, and rebuilds `SUMMARY.md`. |
@@ -139,6 +196,7 @@ experiments/v3/
   config.json       models, seeds, GPUs, training arguments
   judges.json       judge panel: endpoints, key variables, prices
   run_v3.py         the runner
+  progress.py       live progress of a run (reads logs and outputs, writes nothing)
   data/             train / dev / test (test = the paper's 609 reviews)
   data_bio/         BIO version of the split for the encoders
   runs/<system>_s<seed>/   checkpoints, training logs, dev and test predictions
@@ -152,11 +210,12 @@ experiments/v3/
                     scores and report.json (scripts/cyrillic_experiment.py)
   test_recheck/     re-check of the test-set gold: INSTRUCTIONS.md, GUIDELINES_uz.md, the annotator
                     workbooks and, once filled, the cleaned test set (scripts/test_recheck.py)
-  logs/             one log per job, plus runner.log
+  logs/             one log per job, plus runner.log; plan.json names the models and
+                    seeds the run covers, which progress.py reads
   registry.json, SUMMARY.md, MANIFEST.json
 ```
 
 Weights stay out of git (see `.gitignore`); publish them on the Hub instead. The new code follows the rest of the pipeline in `scripts/`:
 
-- **New scripts:** `make_dev_split.py`, `ensemble_preds.py`, `judge_panel.py`, `collect_v3.py`, `cyrillic_experiment.py` and `test_recheck.py`; new module `src/transliterate.py`.
+- **New scripts:** `make_dev_split.py`, `ensemble_preds.py`, `judge_panel.py`, `collect_v3.py`, `cyrillic_experiment.py` and `test_recheck.py`; new module `src/transliterate.py`; `experiments/v3/progress.py` for the live run display.
 - **Changed scripts:** `evaluate.py` gained `--split`; `annotate_reviews.py` gained `--source-name` and `--transliterate-cyrillic`, which the `annotate` stage passes; `src/inference.py`'s `extract_aspects` gained `transliterate=`.

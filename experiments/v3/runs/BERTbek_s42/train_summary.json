@@ -1,0 +1,25 @@
+{
+  "model": "elmurod1202/bertbek-news-big-cased",
+  "seqeval_span_metrics": {
+    "eval_loss": 0.39605453610420227,
+    "eval_precision": 0.5816326530612245,
+    "eval_recall": 0.5606557377049181,
+    "eval_f1": 0.5709515859766278,
+    "eval_accuracy": 0.8749182828502942,
+    "eval_runtime": 0.5497,
+    "eval_samples_per_second": 996.94,
+    "eval_steps_per_second": 63.673,
+    "epoch": 4.0
+  },
+  "args": {
+    "model": "elmurod1202/bertbek-news-big-cased",
+    "bio_dir": "experiments\\v3\\data_bio",
+    "out": "experiments\\v3\\runs\\BERTbek_s42",
+    "epochs": 4.0,
+    "lr": 3e-05,
+    "batch_size": 16,
+    "max_length": 192,
+    "seed": 42,
+    "device": "auto"
+  }
+}

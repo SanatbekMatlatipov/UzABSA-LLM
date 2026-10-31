@@ -1,0 +1,1885 @@
+# 2026-10-31T15:02:36 host=DT-BIZON-W11 git=fbe4858-dirty
+# CUDA_VISIBLE_DEVICES=0 'C:\Users\User\code\UzABSA-LLM\.venv\Scripts\python.exe' scripts/train_unsloth.py --model qwen2.5-7b --dataset 'experiments\v3\data' --output-dir 'experiments\v3\runs' --run-name qwen2.5-7b_s42 --seed 42 --no-wandb --max-steps 1000 --learning-rate 0.0002 --batch-size 4 --grad-accum 4 --lora-r 16 --lora-alpha 32
+C:\Users\User\code\UzABSA-LLM\.venv\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0dev0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+2026-10-31 15:02:41,467 - __main__ - INFO - ================================================================================
+2026-10-31 15:02:41,467 - __main__ - INFO - GPU Configuration and Setup
+2026-10-31 15:02:41,467 - __main__ - INFO - ================================================================================
+2026-10-31 15:02:41,515 - __main__ - INFO - Found 1 GPU(s) available:
+2026-10-31 15:02:41,518 - __main__ - INFO -   GPU 0: NVIDIA RTX A6000 (45.0 GB)
+2026-10-31 15:02:41,518 - src.gpu_config - INFO - ======================================================================
+2026-10-31 15:02:41,518 - src.gpu_config - INFO - GPU Status
+2026-10-31 15:02:41,518 - src.gpu_config - INFO - ======================================================================
+2026-10-31 15:02:41,518 - src.gpu_config - INFO - 
+GPU 0: NVIDIA RTX A6000
+2026-10-31 15:02:41,518 - src.gpu_config - INFO -   Memory: 45.0 GB
+2026-10-31 15:02:41,518 - src.gpu_config - INFO -   SMs: 84
+2026-10-31 15:02:41,518 - src.gpu_config - INFO -   Compute Capability: 8.6
+2026-10-31 15:02:41,518 - src.gpu_config - INFO - 
+Total GPU Memory: 45.0 GB
+2026-10-31 15:02:41,518 - src.gpu_config - INFO - ======================================================================
+2026-10-31 15:02:41,518 - __main__ - INFO - 
+Recommended Training Configuration:
+2026-10-31 15:02:41,518 - __main__ - INFO -   num_gpus: 1
+2026-10-31 15:02:41,518 - __main__ - INFO -   total_memory_gb: 44.98779296875
+2026-10-31 15:02:41,518 - __main__ - INFO -   batch_size: 8
+2026-10-31 15:02:41,518 - __main__ - INFO -   grad_accum: 2
+2026-10-31 15:02:41,518 - __main__ - INFO -   max_batch_size: 16
+2026-10-31 15:02:41,518 - __main__ - INFO -   learning_rate: 0.0002
+2026-10-31 15:02:41,518 - __main__ - INFO -   warmup_ratio: 0.1
+2026-10-31 15:02:41,518 - __main__ - INFO -   device_map: cuda:0
+2026-10-31 15:02:41,518 - __main__ - INFO -   fp16: False
+2026-10-31 15:02:41,518 - __main__ - INFO -   bf16: True
+2026-10-31 15:02:41,519 - __main__ - INFO -   Note: Single GPU training (GPU 0: NVIDIA RTX A6000)
+2026-10-31 15:02:41,519 - __main__ - INFO - Using GPU: CUDA_VISIBLE_DEVICES=0
+2026-10-31 15:02:41,519 - __main__ - INFO - Visible GPUs: 1
+2026-10-31 15:02:41,519 - __main__ - INFO - ================================================================================
+2026-10-31 15:02:41,519 - __main__ - INFO - ======================================================================
+2026-10-31 15:02:41,519 - __main__ - INFO - UzABSA-LLM: Starting Fine-tuning with Unsloth
+2026-10-31 15:02:41,519 - __main__ - INFO - ======================================================================
+2026-10-31 15:02:41,519 - __main__ - INFO - Config: TrainingConfig({'model_name': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit', 'max_seq_length': 2048, 'load_in_4bit': True, 'lora_r': 16, 'lora_alpha': 32, 'lora_dropout': 0.05, 'lora_target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'], 'use_gradient_checkpointing': 'unsloth', 'learning_rate': 0.0002, 'per_device_train_batch_size': 4, 'gradient_accumulation_steps': 4, 'max_steps': 1000, 'num_train_epochs': 3, 'warmup_ratio': 0.1, 'weight_decay': 0.01, 'lr_scheduler_type': 'cosine', 'optim': 'adamw_8bit', 'fp16': False, 'bf16': True, 'logging_steps': 10, 'save_steps': 100, 'save_total_limit': 3, 'output_dir': 'experiments\\v3\\runs\\qwen2.5-7b_s42', 'seed': 42, 'report_to': 'none'})
+2026-10-31 15:02:41,519 - __main__ - INFO - 
+[Step 1/5] Loading model and tokenizer...
+C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py:239: UserWarning: WARNING: Unsloth should be imported before [transformers] to ensure all optimizations are applied. Your code may run slower or encounter memory issues without these optimizations.
+
+Please restructure your imports with 'import unsloth' at the top of your file.
+  from unsloth import FastLanguageModel
+Unsloth: Will patch your computer to enable 2x faster free finetuning.
+Unsloth Zoo will now patch everything to make training faster!
+2026-10-31 15:02:58,312 - __main__ - INFO - Loading model: unsloth/Qwen2.5-7B-Instruct-bnb-4bit
+2026-10-31 15:02:58,312 - __main__ - INFO - Max sequence length: 2048
+2026-10-31 15:02:58,312 - __main__ - INFO - 4-bit quantization: True
+==((====))==  Unsloth 2026.2.1: Fast Qwen2 patching. Transformers: 4.57.2.
+   \\   /|    NVIDIA RTX A6000. Num GPUs = 1. Max memory: 44.988 GB. Platform: Windows.
+O^O/ \_/ \    Torch: 2.6.0+cu124. CUDA: 8.6. CUDA Toolkit: 12.4. Triton: 3.2.0
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+2026-10-31 15:03:24,709 - __main__ - INFO - Restored builtins.__import__ (removed deepseek_v3_moe hook)
+2026-10-31 15:03:24,709 - __main__ - INFO - Model loaded successfully!
+2026-10-31 15:03:24,709 - __main__ - INFO - Model dtype: torch.bfloat16
+2026-10-31 15:03:24,759 - __main__ - INFO - Tokenizer vocab size: 151665
+2026-10-31 15:03:24,759 - __main__ - INFO - 
+[Step 2/5] Applying LoRA adapters...
+2026-10-31 15:03:24,759 - __main__ - INFO - Applying LoRA adapters...
+2026-10-31 15:03:24,759 - __main__ - INFO -   LoRA rank (r): 16
+2026-10-31 15:03:24,759 - __main__ - INFO -   LoRA alpha: 32
+2026-10-31 15:03:24,760 - __main__ - INFO -   LoRA dropout: 0.05
+2026-10-31 15:03:24,760 - __main__ - INFO -   Target modules: ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2026.2.1 patched 28 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+2026-10-31 15:03:28,636 - __main__ - INFO - Trainable parameters: 40,370,176 (0.92%)
+2026-10-31 15:03:28,636 - __main__ - INFO - Total parameters: 4,393,342,464
+2026-10-31 15:03:28,636 - __main__ - INFO - 
+[Step 3/5] Loading training dataset...
+2026-10-31 15:03:28,637 - __main__ - INFO - Loading dataset from: experiments\v3\data
+2026-10-31 15:03:28,650 - __main__ - INFO - Dataset loaded: DatasetDict({
+    train: Dataset({
+        features: ['text'],
+        num_rows: 4932
+    })
+    validation: Dataset({
+        features: ['text'],
+        num_rows: 548
+    })
+    test: Dataset({
+        features: ['text'],
+        num_rows: 609
+    })
+})
+2026-10-31 15:03:28,650 - __main__ - INFO - Train examples: 4932
+2026-10-31 15:03:28,650 - __main__ - INFO - Eval examples: 548
+2026-10-31 15:03:28,650 - __main__ - INFO - 
+[Step 4/5] Creating trainer...
+2026-10-31 15:03:28,650 - __main__ - INFO - Creating SFTTrainer...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\code\UzABSA-LLM\.venv\Lib\site-packages\wandb\sdk\lib\console_capture.py", line 183, in write_with_callbacks
+    n = orig_write(s)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 92: character maps to <undefined>
+Call stack:
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 930, in <module>
+    main()
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 921, in main
+    train(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 567, in train
+    trainer, metrics_callback = create_trainer(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 435, in create_trainer
+    metrics_callback = TrainingMetricsCallback(output_dir=str(output_dir))
+  File "C:\Users\User\code\UzABSA-LLM\src\training_metrics.py", line 87, in __init__
+    logger.info(f"TrainingMetricsCallback initialized \u2192 {self.output_dir}")
+Message: 'TrainingMetricsCallback initialized \u2192 experiments\\v3\\runs\\qwen2.5-7b_s42'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 92: character maps to <undefined>
+Call stack:
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 930, in <module>
+    main()
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 921, in main
+    train(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 567, in train
+    trainer, metrics_callback = create_trainer(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 435, in create_trainer
+    metrics_callback = TrainingMetricsCallback(output_dir=str(output_dir))
+  File "C:\Users\User\code\UzABSA-LLM\src\training_metrics.py", line 87, in __init__
+    logger.info(f"TrainingMetricsCallback initialized \u2192 {self.output_dir}")
+Message: 'TrainingMetricsCallback initialized \u2192 experiments\\v3\\runs\\qwen2.5-7b_s42'
+Arguments: ()
+2026-10-31 15:03:28,942 - unsloth.trainer - INFO - Unsloth: Padding-free batching auto-enabled for SFTTrainer instance.
+Unsloth: Tokenizing ["text"]:   0%|          | 0/4932 [00:00<?, ? examples/s]Unsloth: Tokenizing ["text"]:  20%|##        | 1000/4932 [00:00<00:01, 2650.55 examples/s]Unsloth: Tokenizing ["text"]:  41%|####      | 2000/4932 [00:00<00:01, 2352.25 examples/s]Unsloth: Tokenizing ["text"]:  61%|######    | 3000/4932 [00:01<00:00, 2524.63 examples/s]Unsloth: Tokenizing ["text"]:  81%|########1 | 4000/4932 [00:01<00:00, 2584.94 examples/s]Unsloth: Tokenizing ["text"]: 100%|##########| 4932/4932 [00:01<00:00, 2628.13 examples/s]Unsloth: Tokenizing ["text"]: 100%|##########| 4932/4932 [00:01<00:00, 2557.40 examples/s]
+Unsloth: Tokenizing ["text"]:   0%|          | 0/548 [00:00<?, ? examples/s]Unsloth: Tokenizing ["text"]: 100%|##########| 548/548 [00:00<00:00, 2464.44 examples/s]Unsloth: Tokenizing ["text"]: 100%|##########| 548/548 [00:00<00:00, 2316.39 examples/s]
+2026-10-31 15:03:31,883 - __main__ - INFO - SFTTrainer created successfully!
+2026-10-31 15:03:31,883 - __main__ - INFO - GPU: NVIDIA RTX A6000
+2026-10-31 15:03:31,883 - __main__ - INFO - VRAM: 45.0 GB
+2026-10-31 15:03:31,883 - __main__ - INFO - Allocated: 5.3 GB
+2026-10-31 15:03:31,883 - __main__ - INFO - Reserved: 6.7 GB
+2026-10-31 15:03:31,884 - __main__ - INFO - 
+[Step 5/5] Starting training...
+2026-10-31 15:03:31,884 - __main__ - INFO - ----------------------------------------------------------------------
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 4,932 | Num Epochs = 4 | Total steps = 1,000
+O^O/ \_/ \    Batch size per device = 4 | Gradient accumulation steps = 4
+\        /    Data Parallel GPUs = 1 | Total batch size (4 x 4 x 1) = 16
+ "-____-"     Trainable parameters = 40,370,176 of 7,655,986,688 (0.53% trained)
+2026-10-31 15:03:33,027 - src.training_metrics - INFO - Training metrics collection started.
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:33<9:16:23, 33.42s/it]  0%|          | 2/1000 [00:45<5:51:16, 21.12s/it]  0%|          | 3/1000 [00:58<4:42:32, 17.00s/it]# 2026-10-31T15:07:08 host=DT-BIZON-W11 git=fbe4858-dirty
+# CUDA_VISIBLE_DEVICES=0 TORCHINDUCTOR_CACHE_DIR=C:\Users\User\AppData\Local\Temp\uzabsa_compile_gpu0\inductor TRITON_CACHE_DIR=C:\Users\User\AppData\Local\Temp\uzabsa_compile_gpu0\triton 'C:\Users\User\code\UzABSA-LLM\.venv\Scripts\python.exe' scripts/train_unsloth.py --model qwen2.5-7b --dataset 'experiments\v3\data' --output-dir 'experiments\v3\runs' --run-name qwen2.5-7b_s42 --seed 42 --no-wandb --max-steps 1000 --learning-rate 0.0002 --batch-size 4 --grad-accum 4 --lora-r 16 --lora-alpha 32
+C:\Users\User\code\UzABSA-LLM\.venv\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0dev0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+2026-10-31 15:07:12,574 - __main__ - INFO - ================================================================================
+2026-10-31 15:07:12,575 - __main__ - INFO - GPU Configuration and Setup
+2026-10-31 15:07:12,575 - __main__ - INFO - ================================================================================
+2026-10-31 15:07:12,633 - __main__ - INFO - Found 1 GPU(s) available:
+2026-10-31 15:07:12,635 - __main__ - INFO -   GPU 0: NVIDIA RTX A6000 (45.0 GB)
+2026-10-31 15:07:12,635 - src.gpu_config - INFO - ======================================================================
+2026-10-31 15:07:12,636 - src.gpu_config - INFO - GPU Status
+2026-10-31 15:07:12,636 - src.gpu_config - INFO - ======================================================================
+2026-10-31 15:07:12,636 - src.gpu_config - INFO - 
+GPU 0: NVIDIA RTX A6000
+2026-10-31 15:07:12,636 - src.gpu_config - INFO -   Memory: 45.0 GB
+2026-10-31 15:07:12,636 - src.gpu_config - INFO -   SMs: 84
+2026-10-31 15:07:12,636 - src.gpu_config - INFO -   Compute Capability: 8.6
+2026-10-31 15:07:12,636 - src.gpu_config - INFO - 
+Total GPU Memory: 45.0 GB
+2026-10-31 15:07:12,636 - src.gpu_config - INFO - ======================================================================
+2026-10-31 15:07:12,636 - __main__ - INFO - 
+Recommended Training Configuration:
+2026-10-31 15:07:12,636 - __main__ - INFO -   num_gpus: 1
+2026-10-31 15:07:12,636 - __main__ - INFO -   total_memory_gb: 44.98779296875
+2026-10-31 15:07:12,636 - __main__ - INFO -   batch_size: 8
+2026-10-31 15:07:12,636 - __main__ - INFO -   grad_accum: 2
+2026-10-31 15:07:12,636 - __main__ - INFO -   max_batch_size: 16
+2026-10-31 15:07:12,636 - __main__ - INFO -   learning_rate: 0.0002
+2026-10-31 15:07:12,636 - __main__ - INFO -   warmup_ratio: 0.1
+2026-10-31 15:07:12,636 - __main__ - INFO -   device_map: cuda:0
+2026-10-31 15:07:12,636 - __main__ - INFO -   fp16: False
+2026-10-31 15:07:12,636 - __main__ - INFO -   bf16: True
+2026-10-31 15:07:12,637 - __main__ - INFO -   Note: Single GPU training (GPU 0: NVIDIA RTX A6000)
+2026-10-31 15:07:12,637 - __main__ - INFO - Using GPU: CUDA_VISIBLE_DEVICES=0
+2026-10-31 15:07:12,637 - __main__ - INFO - Visible GPUs: 1
+2026-10-31 15:07:12,637 - __main__ - INFO - ================================================================================
+2026-10-31 15:07:12,637 - __main__ - INFO - ======================================================================
+2026-10-31 15:07:12,637 - __main__ - INFO - UzABSA-LLM: Starting Fine-tuning with Unsloth
+2026-10-31 15:07:12,637 - __main__ - INFO - ======================================================================
+2026-10-31 15:07:12,637 - __main__ - INFO - Config: TrainingConfig({'model_name': 'unsloth/Qwen2.5-7B-Instruct-bnb-4bit', 'max_seq_length': 2048, 'load_in_4bit': True, 'lora_r': 16, 'lora_alpha': 32, 'lora_dropout': 0.05, 'lora_target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'], 'use_gradient_checkpointing': 'unsloth', 'learning_rate': 0.0002, 'per_device_train_batch_size': 4, 'gradient_accumulation_steps': 4, 'max_steps': 1000, 'num_train_epochs': 3, 'warmup_ratio': 0.1, 'weight_decay': 0.01, 'lr_scheduler_type': 'cosine', 'optim': 'adamw_8bit', 'fp16': False, 'bf16': True, 'logging_steps': 10, 'save_steps': 100, 'save_total_limit': 3, 'output_dir': 'experiments\\v3\\runs\\qwen2.5-7b_s42', 'seed': 42, 'report_to': 'none'})
+2026-10-31 15:07:12,637 - __main__ - INFO - 
+[Step 1/5] Loading model and tokenizer...
+C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py:239: UserWarning: WARNING: Unsloth should be imported before [transformers] to ensure all optimizations are applied. Your code may run slower or encounter memory issues without these optimizations.
+
+Please restructure your imports with 'import unsloth' at the top of your file.
+  from unsloth import FastLanguageModel
+Unsloth: Will patch your computer to enable 2x faster free finetuning.
+Unsloth Zoo will now patch everything to make training faster!
+2026-10-31 15:07:25,001 - __main__ - INFO - Loading model: unsloth/Qwen2.5-7B-Instruct-bnb-4bit
+2026-10-31 15:07:25,001 - __main__ - INFO - Max sequence length: 2048
+2026-10-31 15:07:25,001 - __main__ - INFO - 4-bit quantization: True
+==((====))==  Unsloth 2026.2.1: Fast Qwen2 patching. Transformers: 4.57.2.
+   \\   /|    NVIDIA RTX A6000. Num GPUs = 1. Max memory: 44.988 GB. Platform: Windows.
+O^O/ \_/ \    Torch: 2.6.0+cu124. CUDA: 8.6. CUDA Toolkit: 12.4. Triton: 3.2.0
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+2026-10-31 15:07:47,959 - __main__ - INFO - Restored builtins.__import__ (removed deepseek_v3_moe hook)
+2026-10-31 15:07:47,959 - __main__ - INFO - Model loaded successfully!
+2026-10-31 15:07:47,959 - __main__ - INFO - Model dtype: torch.bfloat16
+2026-10-31 15:07:47,994 - __main__ - INFO - Tokenizer vocab size: 151665
+2026-10-31 15:07:47,994 - __main__ - INFO - 
+[Step 2/5] Applying LoRA adapters...
+2026-10-31 15:07:47,994 - __main__ - INFO - Applying LoRA adapters...
+2026-10-31 15:07:47,994 - __main__ - INFO -   LoRA rank (r): 16
+2026-10-31 15:07:47,994 - __main__ - INFO -   LoRA alpha: 32
+2026-10-31 15:07:47,994 - __main__ - INFO -   LoRA dropout: 0.05
+2026-10-31 15:07:47,994 - __main__ - INFO -   Target modules: ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2026.2.1 patched 28 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+2026-10-31 15:07:51,690 - __main__ - INFO - Trainable parameters: 40,370,176 (0.92%)
+2026-10-31 15:07:51,690 - __main__ - INFO - Total parameters: 4,393,342,464
+2026-10-31 15:07:51,690 - __main__ - INFO - 
+[Step 3/5] Loading training dataset...
+2026-10-31 15:07:51,690 - __main__ - INFO - Loading dataset from: experiments\v3\data
+2026-10-31 15:07:51,701 - __main__ - INFO - Dataset loaded: DatasetDict({
+    train: Dataset({
+        features: ['text'],
+        num_rows: 4932
+    })
+    validation: Dataset({
+        features: ['text'],
+        num_rows: 548
+    })
+    test: Dataset({
+        features: ['text'],
+        num_rows: 609
+    })
+})
+2026-10-31 15:07:51,701 - __main__ - INFO - Train examples: 4932
+2026-10-31 15:07:51,701 - __main__ - INFO - Eval examples: 548
+2026-10-31 15:07:51,702 - __main__ - INFO - 
+[Step 4/5] Creating trainer...
+2026-10-31 15:07:51,702 - __main__ - INFO - Creating SFTTrainer...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\code\UzABSA-LLM\.venv\Lib\site-packages\wandb\sdk\lib\console_capture.py", line 183, in write_with_callbacks
+    n = orig_write(s)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 92: character maps to <undefined>
+Call stack:
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 930, in <module>
+    main()
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 921, in main
+    train(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 567, in train
+    trainer, metrics_callback = create_trainer(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 435, in create_trainer
+    metrics_callback = TrainingMetricsCallback(output_dir=str(output_dir))
+  File "C:\Users\User\code\UzABSA-LLM\src\training_metrics.py", line 87, in __init__
+    logger.info(f"TrainingMetricsCallback initialized \u2192 {self.output_dir}")
+Message: 'TrainingMetricsCallback initialized \u2192 experiments\\v3\\runs\\qwen2.5-7b_s42'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 92: character maps to <undefined>
+Call stack:
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 930, in <module>
+    main()
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 921, in main
+    train(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 567, in train
+    trainer, metrics_callback = create_trainer(
+  File "C:\Users\User\code\UzABSA-LLM\scripts\train_unsloth.py", line 435, in create_trainer
+    metrics_callback = TrainingMetricsCallback(output_dir=str(output_dir))
+  File "C:\Users\User\code\UzABSA-LLM\src\training_metrics.py", line 87, in __init__
+    logger.info(f"TrainingMetricsCallback initialized \u2192 {self.output_dir}")
+Message: 'TrainingMetricsCallback initialized \u2192 experiments\\v3\\runs\\qwen2.5-7b_s42'
+Arguments: ()
+2026-10-31 15:07:51,947 - unsloth.trainer - INFO - Unsloth: Padding-free batching auto-enabled for SFTTrainer instance.
+Unsloth: Tokenizing ["text"]:   0%|          | 0/548 [00:00<?, ? examples/s]Unsloth: Tokenizing ["text"]: 100%|##########| 548/548 [00:00<00:00, 2666.11 examples/s]Unsloth: Tokenizing ["text"]: 100%|##########| 548/548 [00:00<00:00, 2516.48 examples/s]
+2026-10-31 15:07:52,808 - __main__ - INFO - SFTTrainer created successfully!
+2026-10-31 15:07:52,808 - __main__ - INFO - GPU: NVIDIA RTX A6000
+2026-10-31 15:07:52,808 - __main__ - INFO - VRAM: 45.0 GB
+2026-10-31 15:07:52,808 - __main__ - INFO - Allocated: 5.3 GB
+2026-10-31 15:07:52,808 - __main__ - INFO - Reserved: 6.7 GB
+2026-10-31 15:07:52,808 - __main__ - INFO - 
+[Step 5/5] Starting training...
+2026-10-31 15:07:52,809 - __main__ - INFO - ----------------------------------------------------------------------
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 4,932 | Num Epochs = 4 | Total steps = 1,000
+O^O/ \_/ \    Batch size per device = 4 | Gradient accumulation steps = 4
+\        /    Data Parallel GPUs = 1 | Total batch size (4 x 4 x 1) = 16
+ "-____-"     Trainable parameters = 40,370,176 of 7,655,986,688 (0.53% trained)
+2026-10-31 15:07:53,987 - src.training_metrics - INFO - Training metrics collection started.
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:15<4:12:04, 15.14s/it]  0%|          | 2/1000 [00:27<3:43:15, 13.42s/it]  0%|          | 3/1000 [00:39<3:34:52, 12.93s/it]  0%|          | 4/1000 [00:52<3:36:02, 13.01s/it]  0%|          | 5/1000 [01:02<3:17:29, 11.91s/it]  1%|          | 6/1000 [01:15<3:21:57, 12.19s/it]  1%|          | 7/1000 [01:26<3:16:04, 11.85s/it]  1%|          | 8/1000 [01:38<3:13:28, 11.70s/it]  1%|          | 9/1000 [01:46<2:56:16, 10.67s/it]  1%|1         | 10/1000 [01:52<2:29:56,  9.09s/it]                                                     1%|1         | 10/1000 [01:52<2:29:56,  9.09s/it]  1%|1         | 11/1000 [01:56<2:04:40,  7.56s/it]  1%|1         | 12/1000 [02:03<2:04:34,  7.57s/it]  1%|1         | 13/1000 [02:08<1:49:17,  6.64s/it]  1%|1         | 14/1000 [02:12<1:36:04,  5.85s/it]  2%|1         | 15/1000 [02:20<1:47:05,  6.52s/it]  2%|1         | 16/1000 [02:24<1:34:33,  5.77s/it]  2%|1         | 17/1000 [02:28<1:27:06,  5.32s/it]  2%|1         | 18/1000 [02:38<1:49:53,  6.71s/it]  2%|1         | 19/1000 [02:51<2:18:42,  8.48s/it]  2%|2         | 20/1000 [03:04<2:40:07,  9.80s/it]                                                     2%|2         | 20/1000 [03:04<2:40:07,  9.80s/it]  2%|2         | 21/1000 [03:14<2:44:08, 10.06s/it]  2%|2         | 22/1000 [03:25<2:45:24, 10.15s/it]  2%|2         | 23/1000 [03:37<2:56:29, 10.84s/it]  2%|2         | 24/1000 [03:48<2:55:26, 10.79s/it]  2%|2         | 25/1000 [03:59<2:58:29, 10.98s/it]  3%|2         | 26/1000 [04:09<2:54:03, 10.72s/it]  3%|2         | 27/1000 [04:22<3:04:41, 11.39s/it]  3%|2         | 28/1000 [04:35<3:12:38, 11.89s/it]  3%|2         | 29/1000 [04:46<3:06:58, 11.55s/it]  3%|3         | 30/1000 [04:57<3:04:29, 11.41s/it]                                                     3%|3         | 30/1000 [04:57<3:04:29, 11.41s/it]  3%|3         | 31/1000 [05:10<3:09:33, 11.74s/it]  3%|3         | 32/1000 [05:21<3:07:35, 11.63s/it]  3%|3         | 33/1000 [05:32<3:02:15, 11.31s/it]  3%|3         | 34/1000 [05:36<2:30:56,  9.38s/it]  4%|3         | 35/1000 [05:41<2:07:16,  7.91s/it]  4%|3         | 36/1000 [05:48<2:01:43,  7.58s/it]  4%|3         | 37/1000 [05:52<1:47:14,  6.68s/it]  4%|3         | 38/1000 [05:56<1:34:44,  5.91s/it]  4%|3         | 39/1000 [06:03<1:40:20,  6.27s/it]  4%|4         | 40/1000 [06:07<1:29:16,  5.58s/it]                                                     4%|4         | 40/1000 [06:07<1:29:16,  5.58s/it]  4%|4         | 41/1000 [06:12<1:22:38,  5.17s/it]  4%|4         | 42/1000 [06:18<1:26:51,  5.44s/it]  4%|4         | 43/1000 [06:29<1:55:13,  7.22s/it]  4%|4         | 44/1000 [06:41<2:18:02,  8.66s/it]  4%|4         | 45/1000 [06:53<2:35:21,  9.76s/it]  5%|4         | 46/1000 [07:03<2:35:32,  9.78s/it]  5%|4         | 47/1000 [07:16<2:51:02, 10.77s/it]  5%|4         | 48/1000 [07:28<2:57:17, 11.17s/it]  5%|4         | 49/1000 [07:39<2:56:09, 11.11s/it]  5%|5         | 50/1000 [07:49<2:49:31, 10.71s/it]                                                     5%|5         | 50/1000 [07:49<2:49:31, 10.71s/it]  5%|5         | 51/1000 [08:01<2:55:48, 11.11s/it]  5%|5         | 52/1000 [08:13<2:58:10, 11.28s/it]  5%|5         | 53/1000 [08:24<2:56:05, 11.16s/it]  5%|5         | 54/1000 [08:35<2:54:20, 11.06s/it]  6%|5         | 55/1000 [08:46<2:56:28, 11.21s/it]  6%|5         | 56/1000 [08:58<3:00:36, 11.48s/it]  6%|5         | 57/1000 [09:11<3:05:04, 11.78s/it]  6%|5         | 58/1000 [09:19<2:48:39, 10.74s/it]  6%|5         | 59/1000 [09:23<2:17:52,  8.79s/it]  6%|6         | 60/1000 [09:28<1:57:02,  7.47s/it]                                                     6%|6         | 60/1000 [09:28<1:57:02,  7.47s/it]  6%|6         | 61/1000 [09:35<1:56:26,  7.44s/it]  6%|6         | 62/1000 [09:39<1:39:32,  6.37s/it]  6%|6         | 63/1000 [09:43<1:29:41,  5.74s/it]  6%|6         | 64/1000 [09:50<1:36:16,  6.17s/it]  6%|6         | 65/1000 [09:54<1:24:57,  5.45s/it]  7%|6         | 66/1000 [09:58<1:18:05,  5.02s/it]  7%|6         | 67/1000 [10:02<1:14:21,  4.78s/it]  7%|6         | 68/1000 [10:06<1:10:48,  4.56s/it]  7%|6         | 69/1000 [10:11<1:11:03,  4.58s/it]  7%|7         | 70/1000 [10:16<1:10:37,  4.56s/it]                                                     7%|7         | 70/1000 [10:16<1:10:37,  4.56s/it]  7%|7         | 71/1000 [10:20<1:08:22,  4.42s/it]  7%|7         | 72/1000 [10:24<1:06:36,  4.31s/it]  7%|7         | 73/1000 [10:28<1:05:01,  4.21s/it]  7%|7         | 74/1000 [10:32<1:06:30,  4.31s/it]  8%|7         | 75/1000 [10:36<1:06:05,  4.29s/it]  8%|7         | 76/1000 [10:40<1:04:29,  4.19s/it]  8%|7         | 77/1000 [10:45<1:05:49,  4.28s/it]  8%|7         | 78/1000 [10:49<1:04:40,  4.21s/it]  8%|7         | 79/1000 [10:53<1:04:55,  4.23s/it]  8%|8         | 80/1000 [10:57<1:03:29,  4.14s/it]                                                     8%|8         | 80/1000 [10:57<1:03:29,  4.14s/it]  8%|8         | 81/1000 [11:01<1:04:04,  4.18s/it]  8%|8         | 82/1000 [11:07<1:08:07,  4.45s/it]  8%|8         | 83/1000 [11:11<1:06:35,  4.36s/it]  8%|8         | 84/1000 [11:15<1:06:16,  4.34s/it]  8%|8         | 85/1000 [11:19<1:06:11,  4.34s/it]  9%|8         | 86/1000 [11:24<1:07:54,  4.46s/it]  9%|8         | 87/1000 [11:28<1:06:22,  4.36s/it]  9%|8         | 88/1000 [11:33<1:06:15,  4.36s/it]  9%|8         | 89/1000 [11:37<1:07:12,  4.43s/it]  9%|9         | 90/1000 [11:41<1:06:40,  4.40s/it]                                                     9%|9         | 90/1000 [11:41<1:06:40,  4.40s/it]  9%|9         | 91/1000 [11:46<1:05:31,  4.33s/it]  9%|9         | 92/1000 [11:50<1:04:09,  4.24s/it]  9%|9         | 93/1000 [11:54<1:04:07,  4.24s/it]  9%|9         | 94/1000 [11:58<1:04:55,  4.30s/it] 10%|9         | 95/1000 [12:03<1:05:08,  4.32s/it] 10%|9         | 96/1000 [12:07<1:05:22,  4.34s/it] 10%|9         | 97/1000 [12:11<1:03:36,  4.23s/it] 10%|9         | 98/1000 [12:15<1:02:47,  4.18s/it] 10%|9         | 99/1000 [12:19<1:02:55,  4.19s/it] 10%|#         | 100/1000 [12:23<1:01:34,  4.11s/it]                                                     10%|#         | 100/1000 [12:23<1:01:34,  4.11s/it]Unsloth: Not an error, but Qwen2ForCausalLM does not accept `num_items_in_batch`.
+Using gradient accumulation will be very slightly less accurate.
+Read more on gradient accumulation issues here: https://unsloth.ai/blog/gradient
+Unsloth: Will smartly offload gradients to save VRAM!
+{'loss': 2.2499, 'grad_norm': 2.2147397994995117, 'learning_rate': 1.8e-05, 'epoch': 0.03}
+{'loss': 1.6764, 'grad_norm': 1.4315822124481201, 'learning_rate': 3.8e-05, 'epoch': 0.06}
+{'loss': 0.8389, 'grad_norm': 0.9299848079681396, 'learning_rate': 5.8e-05, 'epoch': 0.1}
+{'loss': 0.3444, 'grad_norm': 0.37268155813217163, 'learning_rate': 7.800000000000001e-05, 'epoch': 0.13}
+{'loss': 0.2789, 'grad_norm': 0.27090322971343994, 'learning_rate': 9.8e-05, 'epoch': 0.16}
+{'loss': 0.2495, 'grad_norm': 0.30805742740631104, 'learning_rate': 0.000118, 'epoch': 0.19}
+{'loss': 0.2216, 'grad_norm': 0.3284135162830353, 'learning_rate': 0.000138, 'epoch': 0.23}
+{'loss': 0.2211, 'grad_norm': 0.22340580821037292, 'learning_rate': 0.00015800000000000002, 'epoch': 0.26}
+{'loss': 0.2528, 'grad_norm': 0.25218406319618225, 'learning_rate': 0.00017800000000000002, 'epoch': 0.29}
+{'loss': 0.2329, 'grad_norm': 0.28290778398513794, 'learning_rate': 0.00019800000000000002, 'epoch': 0.32}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:17,  7.64it/s][A
+  2%|2         | 3/137 [00:00<00:32,  4.16it/s][A
+  3%|2         | 4/137 [00:00<00:35,  3.73it/s][A
+  4%|3         | 5/137 [00:01<00:36,  3.65it/s][A
+  4%|4         | 6/137 [00:01<00:39,  3.31it/s][A
+  5%|5         | 7/137 [00:01<00:40,  3.24it/s][A
+  6%|5         | 8/137 [00:02<00:37,  3.40it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.37it/s][A
+  7%|7         | 10/137 [00:02<00:37,  3.34it/s][A
+  8%|8         | 11/137 [00:03<00:37,  3.33it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.81it/s][A
+  9%|9         | 13/137 [00:04<00:48,  2.54it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.60it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.72it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.86it/s][A
+ 12%|#2        | 17/137 [00:05<00:41,  2.91it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.99it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  3.02it/s][A
+ 15%|#4        | 20/137 [00:06<00:38,  3.08it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.08it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.90it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.97it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.07it/s][A
+ 18%|#8        | 25/137 [00:07<00:35,  3.14it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.23it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.27it/s][A
+ 20%|##        | 28/137 [00:08<00:34,  3.18it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.21it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.23it/s][A
+ 23%|##2       | 31/137 [00:09<00:32,  3.22it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.03it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.98it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.03it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.15it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.24it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.27it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.17it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.21it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.32it/s][A
+ 30%|##9       | 41/137 [00:12<00:28,  3.33it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.32it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.32it/s][A
+ 32%|###2      | 44/137 [00:13<00:28,  3.28it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.34it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.33it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.39it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.54it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.58it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.74it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.83it/s][A
+ 38%|###7      | 52/137 [00:15<00:21,  3.92it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.94it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.93it/s][A
+ 40%|####      | 55/137 [00:16<00:21,  3.74it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.66it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.45it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.34it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.32it/s][A
+ 44%|####3     | 60/137 [00:18<00:23,  3.35it/s][A
+ 45%|####4     | 61/137 [00:18<00:23,  3.18it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.10it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.15it/s][A
+ 47%|####6     | 64/137 [00:19<00:22,  3.20it/s][A
+ 47%|####7     | 65/137 [00:19<00:23,  3.10it/s][A
+ 48%|####8     | 66/137 [00:20<00:24,  2.86it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.83it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.92it/s][A
+ 50%|#####     | 69/137 [00:21<00:23,  2.94it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.95it/s][A
+ 52%|#####1    | 71/137 [00:22<00:21,  3.02it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.02it/s][A
+ 53%|#####3    | 73/137 [00:22<00:20,  3.05it/s][A
+ 54%|#####4    | 74/137 [00:23<00:21,  2.87it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.84it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.96it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.06it/s][A
+ 57%|#####6    | 78/137 [00:24<00:19,  3.09it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.15it/s][A
+ 58%|#####8    | 80/137 [00:25<00:17,  3.18it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.23it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.37it/s][A
+ 61%|######    | 83/137 [00:25<00:16,  3.35it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.34it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.43it/s][A
+ 63%|######2   | 86/137 [00:26<00:14,  3.41it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.37it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.36it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.31it/s][A
+ 66%|######5   | 90/137 [00:27<00:14,  3.32it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.31it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.23it/s][A
+ 68%|######7   | 93/137 [00:28<00:13,  3.23it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.27it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.28it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.24it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.27it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.29it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.25it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.22it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.21it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.24it/s][A
+ 75%|#######5  | 103/137 [00:31<00:10,  3.17it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.98it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.96it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  3.02it/s][A
+ 80%|#######9  | 109/137 [00:33<00:09,  3.02it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.89it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.98it/s][A
+ 82%|########1 | 112/137 [00:34<00:07,  3.14it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.23it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.36it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.35it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.40it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.48it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.51it/s][A
+ 87%|########6 | 119/137 [00:36<00:05,  3.45it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.48it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.45it/s][A
+ 89%|########9 | 122/137 [00:37<00:04,  3.19it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.24it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.26it/s][A
+ 91%|#########1| 125/137 [00:38<00:03,  3.14it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.14it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.11it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.12it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.19it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.23it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.26it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.24it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.95it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.96it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.03it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.19it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.34it/s][A                                                    
+                                                 [A 10%|#         | 100/1000 [13:07<1:01:34,  4.11s/it]
+100%|##########| 137/137 [00:42<00:00,  3.34it/s][A
+                                                 [A 10%|#         | 101/1000 [13:12<4:24:01, 17.62s/it] 10%|#         | 102/1000 [13:16<3:22:21, 13.52s/it] 10%|#         | 103/1000 [13:21<2:41:33, 10.81s/it] 10%|#         | 104/1000 [13:25<2:13:11,  8.92s/it] 10%|#         | 105/1000 [13:30<1:51:40,  7.49s/it] 11%|#         | 106/1000 [13:34<1:36:28,  6.47s/it] 11%|#         | 107/1000 [13:38<1:25:59,  5.78s/it] 11%|#         | 108/1000 [13:42<1:17:00,  5.18s/it] 11%|#         | 109/1000 [13:46<1:12:40,  4.89s/it] 11%|#1        | 110/1000 [13:50<1:09:33,  4.69s/it]                                                     11%|#1        | 110/1000 [13:50<1:09:33,  4.69s/it] 11%|#1        | 111/1000 [13:54<1:07:39,  4.57s/it] 11%|#1        | 112/1000 [13:58<1:06:02,  4.46s/it] 11%|#1        | 113/1000 [14:03<1:07:54,  4.59s/it] 11%|#1        | 114/1000 [14:08<1:05:43,  4.45s/it] 12%|#1        | 115/1000 [14:12<1:05:45,  4.46s/it] 12%|#1        | 116/1000 [14:16<1:03:00,  4.28s/it] 12%|#1        | 117/1000 [14:20<1:03:00,  4.28s/it] 12%|#1        | 118/1000 [14:24<1:01:31,  4.19s/it] 12%|#1        | 119/1000 [14:28<59:42,  4.07s/it]   12%|#2        | 120/1000 [14:32<1:00:37,  4.13s/it]                                                     12%|#2        | 120/1000 [14:32<1:00:37,  4.13s/it] 12%|#2        | 121/1000 [14:36<1:01:04,  4.17s/it] 12%|#2        | 122/1000 [14:41<1:02:20,  4.26s/it] 12%|#2        | 123/1000 [14:45<1:02:57,  4.31s/it] 12%|#2        | 124/1000 [14:50<1:02:59,  4.31s/it] 12%|#2        | 125/1000 [14:54<1:01:45,  4.24s/it] 13%|#2        | 126/1000 [14:58<1:01:49,  4.24s/it] 13%|#2        | 127/1000 [15:03<1:03:38,  4.37s/it] 13%|#2        | 128/1000 [15:07<1:03:33,  4.37s/it] 13%|#2        | 129/1000 [15:11<1:03:03,  4.34s/it] 13%|#3        | 130/1000 [15:15<1:02:23,  4.30s/it]                                                     13%|#3        | 130/1000 [15:15<1:02:23,  4.30s/it] 13%|#3        | 131/1000 [15:20<1:02:22,  4.31s/it] 13%|#3        | 132/1000 [15:24<1:01:49,  4.27s/it] 13%|#3        | 133/1000 [15:28<1:00:19,  4.17s/it] 13%|#3        | 134/1000 [15:32<59:11,  4.10s/it]   14%|#3        | 135/1000 [15:36<1:00:48,  4.22s/it] 14%|#3        | 136/1000 [15:40<1:00:17,  4.19s/it] 14%|#3        | 137/1000 [15:45<59:55,  4.17s/it]   14%|#3        | 138/1000 [15:50<1:03:17,  4.41s/it] 14%|#3        | 139/1000 [15:54<1:02:29,  4.35s/it] 14%|#4        | 140/1000 [15:58<1:02:03,  4.33s/it]                                                     14%|#4        | 140/1000 [15:58<1:02:03,  4.33s/it] 14%|#4        | 141/1000 [16:02<1:02:20,  4.35s/it] 14%|#4        | 142/1000 [16:07<1:01:53,  4.33s/it] 14%|#4        | 143/1000 [16:11<1:01:49,  4.33s/it] 14%|#4        | 144/1000 [16:15<1:01:29,  4.31s/it] 14%|#4        | 145/1000 [16:20<1:00:53,  4.27s/it] 15%|#4        | 146/1000 [16:24<59:56,  4.21s/it]   15%|#4        | 147/1000 [16:28<1:00:29,  4.25s/it] 15%|#4        | 148/1000 [16:32<59:05,  4.16s/it]   15%|#4        | 149/1000 [16:36<57:57,  4.09s/it] 15%|#5        | 150/1000 [16:40<57:59,  4.09s/it]                                                   15%|#5        | 150/1000 [16:40<57:59,  4.09s/it] 15%|#5        | 151/1000 [16:44<57:05,  4.03s/it] 15%|#5        | 152/1000 [16:48<58:26,  4.13s/it] 15%|#5        | 153/1000 [16:52<58:30,  4.14s/it] 15%|#5        | 154/1000 [16:56<57:38,  4.09s/it] 16%|#5        | 155/1000 [17:00<56:51,  4.04s/it] 16%|#5        | 156/1000 [17:04<57:03,  4.06s/it] 16%|#5        | 157/1000 [17:09<58:53,  4.19s/it] 16%|#5        | 158/1000 [17:13<59:45,  4.26s/it] 16%|#5        | 159/1000 [17:17<58:46,  4.19s/it] 16%|#6        | 160/1000 [17:22<1:00:00,  4.29s/it]                                                     16%|#6        | 160/1000 [17:22<1:00:00,  4.29s/it] 16%|#6        | 161/1000 [17:26<58:07,  4.16s/it]   16%|#6        | 162/1000 [17:30<59:52,  4.29s/it] 16%|#6        | 163/1000 [17:34<58:46,  4.21s/it] 16%|#6        | 164/1000 [17:39<59:17,  4.26s/it] 16%|#6        | 165/1000 [17:43<58:47,  4.22s/it] 17%|#6        | 166/1000 [17:47<57:48,  4.16s/it] 17%|#6        | 167/1000 [17:51<57:18,  4.13s/it] 17%|#6        | 168/1000 [17:55<55:53,  4.03s/it] 17%|#6        | 169/1000 [17:59<56:44,  4.10s/it] 17%|#7        | 170/1000 [18:03<56:28,  4.08s/it]                                                   17%|#7        | 170/1000 [18:03<56:28,  4.08s/it] 17%|#7        | 171/1000 [18:07<55:38,  4.03s/it] 17%|#7        | 172/1000 [18:11<57:58,  4.20s/it] 17%|#7        | 173/1000 [18:16<58:24,  4.24s/it] 17%|#7        | 174/1000 [18:20<57:30,  4.18s/it] 18%|#7        | 175/1000 [18:24<57:58,  4.22s/it] 18%|#7        | 176/1000 [18:28<57:31,  4.19s/it] 18%|#7        | 177/1000 [18:32<56:42,  4.13s/it] 18%|#7        | 178/1000 [18:36<55:45,  4.07s/it] 18%|#7        | 179/1000 [18:41<57:22,  4.19s/it] 18%|#8        | 180/1000 [18:45<56:57,  4.17s/it]                                                   18%|#8        | 180/1000 [18:45<56:57,  4.17s/it] 18%|#8        | 181/1000 [18:50<59:28,  4.36s/it] 18%|#8        | 182/1000 [18:54<59:24,  4.36s/it] 18%|#8        | 183/1000 [18:58<57:00,  4.19s/it] 18%|#8        | 184/1000 [19:02<58:36,  4.31s/it] 18%|#8        | 185/1000 [19:07<58:38,  4.32s/it] 19%|#8        | 186/1000 [19:12<1:01:54,  4.56s/it] 19%|#8        | 187/1000 [19:16<59:58,  4.43s/it]   19%|#8        | 188/1000 [19:20<58:22,  4.31s/it] 19%|#8        | 189/1000 [19:24<59:05,  4.37s/it] 19%|#9        | 190/1000 [19:29<58:10,  4.31s/it]                                                   19%|#9        | 190/1000 [19:29<58:10,  4.31s/it] 19%|#9        | 191/1000 [19:33<58:08,  4.31s/it] 19%|#9        | 192/1000 [19:37<57:04,  4.24s/it] 19%|#9        | 193/1000 [19:41<57:00,  4.24s/it] 19%|#9        | 194/1000 [19:46<57:15,  4.26s/it] 20%|#9        | 195/1000 [19:49<55:31,  4.14s/it] 20%|#9        | 196/1000 [19:54<56:16,  4.20s/it] 20%|#9        | 197/1000 [19:58<56:03,  4.19s/it] 20%|#9        | 198/1000 [20:02<55:28,  4.15s/it] 20%|#9        | 199/1000 [20:06<54:29,  4.08s/it] 20%|##        | 200/1000 [20:10<54:30,  4.09s/it]                                                   20%|##        | 200/1000 [20:10<54:30,  4.09s/it]{'eval_loss': 0.21900884807109833, 'eval_runtime': 43.4096, 'eval_samples_per_second': 12.624, 'eval_steps_per_second': 3.156, 'epoch': 0.32}
+{'loss': 0.1994, 'grad_norm': 0.31259506940841675, 'learning_rate': 0.00019995065603657316, 'epoch': 0.36}
+{'loss': 0.2196, 'grad_norm': 0.25436732172966003, 'learning_rate': 0.000199780146829205, 'epoch': 0.39}
+{'loss': 0.2333, 'grad_norm': 0.19231554865837097, 'learning_rate': 0.00019948807088287883, 'epoch': 0.42}
+{'loss': 0.2136, 'grad_norm': 0.2145739495754242, 'learning_rate': 0.00019907478404714436, 'epoch': 0.45}
+{'loss': 0.2133, 'grad_norm': 0.23177272081375122, 'learning_rate': 0.00019854078984834903, 'epoch': 0.49}
+{'loss': 0.2207, 'grad_norm': 0.18897855281829834, 'learning_rate': 0.0001978867388761685, 'epoch': 0.52}
+{'loss': 0.2104, 'grad_norm': 0.26692572236061096, 'learning_rate': 0.00019711342799096361, 'epoch': 0.55}
+{'loss': 0.1723, 'grad_norm': 0.20316949486732483, 'learning_rate': 0.00019622179935292855, 'epoch': 0.58}
+{'loss': 0.2192, 'grad_norm': 0.23117505013942719, 'learning_rate': 0.00019521293927421388, 'epoch': 0.62}
+{'loss': 0.2138, 'grad_norm': 0.23300927877426147, 'learning_rate': 0.00019408807689542257, 'epoch': 0.65}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.58it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.66it/s][A
+  3%|2         | 4/137 [00:01<00:37,  3.51it/s][A
+  4%|3         | 5/137 [00:01<00:37,  3.48it/s][A
+  4%|4         | 6/137 [00:01<00:40,  3.23it/s][A
+  5%|5         | 7/137 [00:02<00:40,  3.20it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.32it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.37it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.34it/s][A
+  8%|8         | 11/137 [00:03<00:38,  3.29it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.79it/s][A
+  9%|9         | 13/137 [00:04<00:48,  2.54it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.60it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.71it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.87it/s][A
+ 12%|#2        | 17/137 [00:05<00:41,  2.91it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.98it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  2.99it/s][A
+ 15%|#4        | 20/137 [00:06<00:37,  3.08it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.07it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.91it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.97it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.08it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.12it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.24it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.25it/s][A
+ 20%|##        | 28/137 [00:09<00:33,  3.21it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.19it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.20it/s][A
+ 23%|##2       | 31/137 [00:09<00:32,  3.21it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.02it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.98it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.06it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.12it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.23it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.25it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.16it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.22it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.30it/s][A
+ 30%|##9       | 41/137 [00:13<00:28,  3.31it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.31it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.32it/s][A
+ 32%|###2      | 44/137 [00:13<00:28,  3.31it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.36it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.30it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.36it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.52it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.58it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.74it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.80it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.92it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.99it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.94it/s][A
+ 40%|####      | 55/137 [00:16<00:22,  3.70it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.65it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.44it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.31it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.32it/s][A
+ 44%|####3     | 60/137 [00:18<00:22,  3.35it/s][A
+ 45%|####4     | 61/137 [00:18<00:23,  3.18it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.11it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.13it/s][A
+ 47%|####6     | 64/137 [00:19<00:22,  3.18it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.10it/s][A
+ 48%|####8     | 66/137 [00:20<00:25,  2.84it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.84it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.93it/s][A
+ 50%|#####     | 69/137 [00:21<00:22,  2.96it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.94it/s][A
+ 52%|#####1    | 71/137 [00:22<00:21,  3.00it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.02it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.02it/s][A
+ 54%|#####4    | 74/137 [00:23<00:21,  2.87it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.84it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.97it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.06it/s][A
+ 57%|#####6    | 78/137 [00:24<00:19,  3.10it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.12it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.15it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.25it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.36it/s][A
+ 61%|######    | 83/137 [00:26<00:16,  3.37it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.36it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.41it/s][A
+ 63%|######2   | 86/137 [00:26<00:14,  3.41it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.36it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.36it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.33it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.30it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.31it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.22it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.23it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.25it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.27it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.24it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.26it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.29it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.26it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.23it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.23it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.21it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.14it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.18it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.16it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.95it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.97it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  2.99it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  2.99it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.91it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.98it/s][A
+ 82%|########1 | 112/137 [00:35<00:07,  3.15it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.23it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.32it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.37it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.40it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.45it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.51it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.48it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.43it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.45it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.20it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.24it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.26it/s][A
+ 91%|#########1| 125/137 [00:39<00:03,  3.13it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.14it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.14it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.10it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.17it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.24it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.23it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.24it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.95it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.94it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.04it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.19it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.33it/s][A                                                  
+                                                 [A 20%|##        | 200/1000 [20:53<54:30,  4.09s/it]
+100%|##########| 137/137 [00:42<00:00,  3.33it/s][A
+                                                 [A 20%|##        | 201/1000 [20:59<3:54:50, 17.63s/it] 20%|##        | 202/1000 [21:04<3:01:37, 13.66s/it] 20%|##        | 203/1000 [21:08<2:25:31, 10.96s/it] 20%|##        | 204/1000 [21:12<1:57:22,  8.85s/it] 20%|##        | 205/1000 [21:16<1:37:44,  7.38s/it] 21%|##        | 206/1000 [21:20<1:24:09,  6.36s/it] 21%|##        | 207/1000 [21:24<1:15:29,  5.71s/it] 21%|##        | 208/1000 [21:28<1:09:01,  5.23s/it] 21%|##        | 209/1000 [21:33<1:05:54,  5.00s/it] 21%|##1       | 210/1000 [21:37<1:02:30,  4.75s/it]                                                     21%|##1       | 210/1000 [21:37<1:02:30,  4.75s/it] 21%|##1       | 211/1000 [21:41<59:40,  4.54s/it]   21%|##1       | 212/1000 [21:46<59:15,  4.51s/it] 21%|##1       | 213/1000 [21:50<58:29,  4.46s/it] 21%|##1       | 214/1000 [21:54<56:23,  4.30s/it] 22%|##1       | 215/1000 [21:58<56:13,  4.30s/it] 22%|##1       | 216/1000 [22:02<54:45,  4.19s/it] 22%|##1       | 217/1000 [22:07<56:52,  4.36s/it] 22%|##1       | 218/1000 [22:11<55:37,  4.27s/it] 22%|##1       | 219/1000 [22:15<54:45,  4.21s/it] 22%|##2       | 220/1000 [22:19<54:44,  4.21s/it]                                                   22%|##2       | 220/1000 [22:19<54:44,  4.21s/it] 22%|##2       | 221/1000 [22:23<55:11,  4.25s/it] 22%|##2       | 222/1000 [22:28<54:13,  4.18s/it] 22%|##2       | 223/1000 [22:32<54:45,  4.23s/it] 22%|##2       | 224/1000 [22:36<55:03,  4.26s/it] 22%|##2       | 225/1000 [22:41<56:03,  4.34s/it] 23%|##2       | 226/1000 [22:45<54:29,  4.22s/it] 23%|##2       | 227/1000 [22:49<54:21,  4.22s/it] 23%|##2       | 228/1000 [22:54<55:56,  4.35s/it] 23%|##2       | 229/1000 [22:58<54:49,  4.27s/it] 23%|##3       | 230/1000 [23:02<53:39,  4.18s/it]                                                   23%|##3       | 230/1000 [23:02<53:39,  4.18s/it] 23%|##3       | 231/1000 [23:06<53:18,  4.16s/it] 23%|##3       | 232/1000 [23:10<54:00,  4.22s/it] 23%|##3       | 233/1000 [23:15<55:38,  4.35s/it] 23%|##3       | 234/1000 [23:19<54:53,  4.30s/it] 24%|##3       | 235/1000 [23:23<54:18,  4.26s/it] 24%|##3       | 236/1000 [23:27<53:37,  4.21s/it] 24%|##3       | 237/1000 [23:31<53:14,  4.19s/it] 24%|##3       | 238/1000 [23:36<53:58,  4.25s/it] 24%|##3       | 239/1000 [23:40<52:19,  4.13s/it] 24%|##4       | 240/1000 [23:44<51:55,  4.10s/it]                                                   24%|##4       | 240/1000 [23:44<51:55,  4.10s/it] 24%|##4       | 241/1000 [23:48<52:40,  4.16s/it] 24%|##4       | 242/1000 [23:52<53:15,  4.22s/it] 24%|##4       | 243/1000 [23:56<52:54,  4.19s/it] 24%|##4       | 244/1000 [24:01<53:43,  4.26s/it] 24%|##4       | 245/1000 [24:05<54:15,  4.31s/it] 25%|##4       | 246/1000 [24:09<53:22,  4.25s/it] 25%|##4       | 247/1000 [24:13<51:54,  4.14s/it] 25%|##4       | 248/1000 [24:17<52:06,  4.16s/it] 25%|##4       | 249/1000 [24:21<50:49,  4.06s/it] 25%|##5       | 250/1000 [24:25<50:08,  4.01s/it]                                                   25%|##5       | 250/1000 [24:25<50:08,  4.01s/it] 25%|##5       | 251/1000 [24:29<49:52,  4.00s/it] 25%|##5       | 252/1000 [24:33<50:56,  4.09s/it] 25%|##5       | 253/1000 [24:38<52:01,  4.18s/it] 25%|##5       | 254/1000 [24:42<51:44,  4.16s/it] 26%|##5       | 255/1000 [24:46<50:53,  4.10s/it] 26%|##5       | 256/1000 [24:50<50:51,  4.10s/it] 26%|##5       | 257/1000 [24:54<51:39,  4.17s/it] 26%|##5       | 258/1000 [24:59<52:15,  4.23s/it] 26%|##5       | 259/1000 [25:03<51:19,  4.16s/it] 26%|##6       | 260/1000 [25:07<50:55,  4.13s/it]                                                   26%|##6       | 260/1000 [25:07<50:55,  4.13s/it] 26%|##6       | 261/1000 [25:11<50:12,  4.08s/it] 26%|##6       | 262/1000 [25:15<51:01,  4.15s/it] 26%|##6       | 263/1000 [25:19<50:26,  4.11s/it] 26%|##6       | 264/1000 [25:23<50:57,  4.15s/it] 26%|##6       | 265/1000 [25:27<50:40,  4.14s/it] 27%|##6       | 266/1000 [25:32<51:03,  4.17s/it] 27%|##6       | 267/1000 [25:36<50:47,  4.16s/it] 27%|##6       | 268/1000 [25:40<51:59,  4.26s/it] 27%|##6       | 269/1000 [25:44<51:39,  4.24s/it] 27%|##7       | 270/1000 [25:49<51:31,  4.23s/it]                                                   27%|##7       | 270/1000 [25:49<51:31,  4.23s/it] 27%|##7       | 271/1000 [25:53<51:20,  4.23s/it] 27%|##7       | 272/1000 [25:57<49:51,  4.11s/it] 27%|##7       | 273/1000 [26:01<50:23,  4.16s/it] 27%|##7       | 274/1000 [26:05<50:53,  4.21s/it] 28%|##7       | 275/1000 [26:09<50:15,  4.16s/it] 28%|##7       | 276/1000 [26:14<50:48,  4.21s/it] 28%|##7       | 277/1000 [26:18<50:58,  4.23s/it] 28%|##7       | 278/1000 [26:22<50:46,  4.22s/it] 28%|##7       | 279/1000 [26:26<49:59,  4.16s/it] 28%|##8       | 280/1000 [26:30<49:30,  4.13s/it]                                                   28%|##8       | 280/1000 [26:30<49:30,  4.13s/it] 28%|##8       | 281/1000 [26:35<51:20,  4.28s/it] 28%|##8       | 282/1000 [26:39<52:32,  4.39s/it] 28%|##8       | 283/1000 [26:43<51:12,  4.29s/it] 28%|##8       | 284/1000 [26:48<51:00,  4.27s/it] 28%|##8       | 285/1000 [26:52<50:24,  4.23s/it] 29%|##8       | 286/1000 [26:56<49:50,  4.19s/it] 29%|##8       | 287/1000 [27:00<49:31,  4.17s/it] 29%|##8       | 288/1000 [27:05<51:06,  4.31s/it] 29%|##8       | 289/1000 [27:09<51:21,  4.33s/it] 29%|##9       | 290/1000 [27:14<51:42,  4.37s/it]                                                   29%|##9       | 290/1000 [27:14<51:42,  4.37s/it] 29%|##9       | 291/1000 [27:18<50:59,  4.32s/it] 29%|##9       | 292/1000 [27:22<50:22,  4.27s/it] 29%|##9       | 293/1000 [27:27<52:55,  4.49s/it] 29%|##9       | 294/1000 [27:31<51:07,  4.34s/it] 30%|##9       | 295/1000 [27:35<49:41,  4.23s/it] 30%|##9       | 296/1000 [27:39<48:28,  4.13s/it] 30%|##9       | 297/1000 [27:44<50:59,  4.35s/it] 30%|##9       | 298/1000 [27:48<51:22,  4.39s/it] 30%|##9       | 299/1000 [27:52<50:57,  4.36s/it] 30%|###       | 300/1000 [27:56<49:39,  4.26s/it]                                                   30%|###       | 300/1000 [27:56<49:39,  4.26s/it]{'eval_loss': 0.19883723556995392, 'eval_runtime': 43.1615, 'eval_samples_per_second': 12.696, 'eval_steps_per_second': 3.174, 'epoch': 0.65}
+{'loss': 0.2227, 'grad_norm': 0.21678657829761505, 'learning_rate': 0.00019284858268809137, 'epoch': 0.68}
+{'loss': 0.2054, 'grad_norm': 0.21225492656230927, 'learning_rate': 0.0001914959667849825, 'epoch': 0.71}
+{'loss': 0.2009, 'grad_norm': 0.19332094490528107, 'learning_rate': 0.00019003187714021938, 'epoch': 0.75}
+{'loss': 0.196, 'grad_norm': 0.2144465297460556, 'learning_rate': 0.0001884580975215084, 'epoch': 0.78}
+{'loss': 0.1845, 'grad_norm': 0.21483135223388672, 'learning_rate': 0.00018677654533689287, 'epoch': 0.81}
+{'loss': 0.2005, 'grad_norm': 0.2124655842781067, 'learning_rate': 0.00018498926929868642, 'epoch': 0.84}
+{'loss': 0.2004, 'grad_norm': 0.20840635895729065, 'learning_rate': 0.00018309844692743283, 'epoch': 0.88}
+{'loss': 0.2012, 'grad_norm': 0.20216892659664154, 'learning_rate': 0.00018110638189893267, 'epoch': 0.91}
+{'loss': 0.2028, 'grad_norm': 0.26801395416259766, 'learning_rate': 0.00017901550123756906, 'epoch': 0.94}
+{'loss': 0.2066, 'grad_norm': 0.23539218306541443, 'learning_rate': 0.00017682835235935236, 'epoch': 0.97}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.54it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.64it/s][A
+  3%|2         | 4/137 [00:01<00:37,  3.51it/s][A
+  4%|3         | 5/137 [00:01<00:37,  3.47it/s][A
+  4%|4         | 6/137 [00:01<00:40,  3.21it/s][A
+  5%|5         | 7/137 [00:02<00:41,  3.16it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.35it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.36it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.32it/s][A
+  8%|8         | 11/137 [00:03<00:37,  3.32it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.80it/s][A
+  9%|9         | 13/137 [00:04<00:48,  2.54it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.61it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.72it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.86it/s][A
+ 12%|#2        | 17/137 [00:05<00:41,  2.92it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.99it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  2.99it/s][A
+ 15%|#4        | 20/137 [00:06<00:37,  3.08it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.07it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.92it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.95it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.11it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.15it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.22it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.26it/s][A
+ 20%|##        | 28/137 [00:09<00:34,  3.20it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.19it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.22it/s][A
+ 23%|##2       | 31/137 [00:09<00:32,  3.24it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.03it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.99it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.07it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.11it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.22it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.26it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.16it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.22it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.31it/s][A
+ 30%|##9       | 41/137 [00:13<00:28,  3.32it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.32it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.32it/s][A
+ 32%|###2      | 44/137 [00:13<00:28,  3.32it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.36it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.31it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.37it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.52it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.59it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.76it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.85it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.92it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.91it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.91it/s][A
+ 40%|####      | 55/137 [00:16<00:22,  3.72it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.65it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.44it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.34it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.30it/s][A
+ 44%|####3     | 60/137 [00:18<00:22,  3.35it/s][A
+ 45%|####4     | 61/137 [00:18<00:23,  3.18it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.09it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.16it/s][A
+ 47%|####6     | 64/137 [00:19<00:23,  3.16it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.10it/s][A
+ 48%|####8     | 66/137 [00:20<00:25,  2.84it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.85it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.90it/s][A
+ 50%|#####     | 69/137 [00:21<00:22,  2.96it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.95it/s][A
+ 52%|#####1    | 71/137 [00:22<00:21,  3.00it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.04it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.04it/s][A
+ 54%|#####4    | 74/137 [00:23<00:22,  2.86it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.84it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.96it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.05it/s][A
+ 57%|#####6    | 78/137 [00:24<00:18,  3.11it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.14it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.15it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.27it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.33it/s][A
+ 61%|######    | 83/137 [00:25<00:16,  3.37it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.33it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.42it/s][A
+ 63%|######2   | 86/137 [00:26<00:14,  3.41it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.34it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.37it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.34it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.32it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.29it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.24it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.22it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.25it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.28it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.25it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.28it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.30it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.25it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.23it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.22it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.24it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.16it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.16it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.95it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.97it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  2.99it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  3.00it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.91it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.95it/s][A
+ 82%|########1 | 112/137 [00:35<00:07,  3.14it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.25it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.33it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.36it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.41it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.48it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.50it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.45it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.46it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.43it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.19it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.21it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.29it/s][A
+ 91%|#########1| 125/137 [00:38<00:03,  3.16it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.14it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.13it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.13it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.19it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.21it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.24it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.22it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.95it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.96it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.04it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.19it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.31it/s][A                                                  
+                                                 [A 30%|###       | 300/1000 [28:40<49:39,  4.26s/it]
+100%|##########| 137/137 [00:42<00:00,  3.31it/s][A
+                                                 [A 30%|###       | 301/1000 [28:45<3:26:03, 17.69s/it] 30%|###       | 302/1000 [28:50<2:38:51, 13.66s/it] 30%|###       | 303/1000 [28:54<2:06:47, 10.92s/it] 30%|###       | 304/1000 [28:59<1:43:59,  8.96s/it] 30%|###       | 305/1000 [29:03<1:27:41,  7.57s/it] 31%|###       | 306/1000 [29:07<1:14:35,  6.45s/it] 31%|###       | 307/1000 [29:12<1:08:52,  5.96s/it] 31%|###       | 308/1000 [29:16<1:02:06,  5.39s/it] 31%|###       | 309/1000 [29:17<46:46,  4.06s/it]   31%|###1      | 310/1000 [29:21<48:20,  4.20s/it]                                                   31%|###1      | 310/1000 [29:21<48:20,  4.20s/it] 31%|###1      | 311/1000 [29:25<47:56,  4.18s/it] 31%|###1      | 312/1000 [29:29<47:20,  4.13s/it] 31%|###1      | 313/1000 [29:34<48:51,  4.27s/it] 31%|###1      | 314/1000 [29:38<48:30,  4.24s/it] 32%|###1      | 315/1000 [29:42<47:55,  4.20s/it] 32%|###1      | 316/1000 [29:46<47:33,  4.17s/it] 32%|###1      | 317/1000 [29:50<47:30,  4.17s/it] 32%|###1      | 318/1000 [29:55<48:04,  4.23s/it] 32%|###1      | 319/1000 [29:59<47:26,  4.18s/it] 32%|###2      | 320/1000 [30:03<47:38,  4.20s/it]                                                   32%|###2      | 320/1000 [30:03<47:38,  4.20s/it] 32%|###2      | 321/1000 [30:07<47:22,  4.19s/it] 32%|###2      | 322/1000 [30:12<47:24,  4.19s/it] 32%|###2      | 323/1000 [30:16<47:02,  4.17s/it] 32%|###2      | 324/1000 [30:19<45:59,  4.08s/it] 32%|###2      | 325/1000 [30:24<45:58,  4.09s/it] 33%|###2      | 326/1000 [30:28<45:50,  4.08s/it] 33%|###2      | 327/1000 [30:32<45:55,  4.09s/it] 33%|###2      | 328/1000 [30:36<46:28,  4.15s/it] 33%|###2      | 329/1000 [30:40<46:59,  4.20s/it] 33%|###3      | 330/1000 [30:45<46:47,  4.19s/it]                                                   33%|###3      | 330/1000 [30:45<46:47,  4.19s/it] 33%|###3      | 331/1000 [30:49<46:21,  4.16s/it] 33%|###3      | 332/1000 [30:53<46:48,  4.21s/it] 33%|###3      | 333/1000 [30:57<45:36,  4.10s/it] 33%|###3      | 334/1000 [31:01<46:20,  4.18s/it] 34%|###3      | 335/1000 [31:05<46:31,  4.20s/it] 34%|###3      | 336/1000 [31:10<47:08,  4.26s/it] 34%|###3      | 337/1000 [31:14<47:37,  4.31s/it] 34%|###3      | 338/1000 [31:18<46:17,  4.20s/it] 34%|###3      | 339/1000 [31:22<45:51,  4.16s/it] 34%|###4      | 340/1000 [31:27<46:08,  4.19s/it]                                                   34%|###4      | 340/1000 [31:27<46:08,  4.19s/it] 34%|###4      | 341/1000 [31:31<45:24,  4.13s/it] 34%|###4      | 342/1000 [31:35<46:17,  4.22s/it] 34%|###4      | 343/1000 [31:39<46:09,  4.21s/it] 34%|###4      | 344/1000 [31:44<46:34,  4.26s/it] 34%|###4      | 345/1000 [31:48<46:26,  4.25s/it] 35%|###4      | 346/1000 [31:52<46:30,  4.27s/it] 35%|###4      | 347/1000 [31:56<46:43,  4.29s/it] 35%|###4      | 348/1000 [32:01<46:15,  4.26s/it] 35%|###4      | 349/1000 [32:05<45:11,  4.17s/it] 35%|###5      | 350/1000 [32:09<45:23,  4.19s/it]                                                   35%|###5      | 350/1000 [32:09<45:23,  4.19s/it] 35%|###5      | 351/1000 [32:13<46:11,  4.27s/it] 35%|###5      | 352/1000 [32:17<45:30,  4.21s/it] 35%|###5      | 353/1000 [32:22<45:50,  4.25s/it] 35%|###5      | 354/1000 [32:26<46:29,  4.32s/it] 36%|###5      | 355/1000 [32:30<44:26,  4.13s/it] 36%|###5      | 356/1000 [32:34<44:31,  4.15s/it] 36%|###5      | 357/1000 [32:38<43:21,  4.05s/it] 36%|###5      | 358/1000 [32:42<43:24,  4.06s/it] 36%|###5      | 359/1000 [32:46<43:16,  4.05s/it] 36%|###6      | 360/1000 [32:50<43:42,  4.10s/it]                                                   36%|###6      | 360/1000 [32:50<43:42,  4.10s/it] 36%|###6      | 361/1000 [32:54<43:12,  4.06s/it] 36%|###6      | 362/1000 [32:59<44:14,  4.16s/it] 36%|###6      | 363/1000 [33:03<44:53,  4.23s/it] 36%|###6      | 364/1000 [33:07<43:48,  4.13s/it] 36%|###6      | 365/1000 [33:11<43:52,  4.15s/it] 37%|###6      | 366/1000 [33:15<42:51,  4.06s/it] 37%|###6      | 367/1000 [33:19<42:23,  4.02s/it] 37%|###6      | 368/1000 [33:23<42:18,  4.02s/it] 37%|###6      | 369/1000 [33:27<42:09,  4.01s/it] 37%|###7      | 370/1000 [33:31<42:19,  4.03s/it]                                                   37%|###7      | 370/1000 [33:31<42:19,  4.03s/it] 37%|###7      | 371/1000 [33:36<45:41,  4.36s/it] 37%|###7      | 372/1000 [33:41<46:42,  4.46s/it] 37%|###7      | 373/1000 [33:45<46:21,  4.44s/it] 37%|###7      | 374/1000 [33:49<45:15,  4.34s/it] 38%|###7      | 375/1000 [33:53<44:07,  4.24s/it] 38%|###7      | 376/1000 [33:58<44:32,  4.28s/it] 38%|###7      | 377/1000 [34:01<43:08,  4.16s/it] 38%|###7      | 378/1000 [34:06<43:44,  4.22s/it] 38%|###7      | 379/1000 [34:10<42:54,  4.15s/it] 38%|###8      | 380/1000 [34:14<42:32,  4.12s/it]                                                   38%|###8      | 380/1000 [34:14<42:32,  4.12s/it] 38%|###8      | 381/1000 [34:18<42:52,  4.16s/it] 38%|###8      | 382/1000 [34:22<42:45,  4.15s/it] 38%|###8      | 383/1000 [34:27<43:44,  4.25s/it] 38%|###8      | 384/1000 [34:31<45:09,  4.40s/it] 38%|###8      | 385/1000 [34:36<44:16,  4.32s/it] 39%|###8      | 386/1000 [34:40<44:24,  4.34s/it] 39%|###8      | 387/1000 [34:44<43:14,  4.23s/it] 39%|###8      | 388/1000 [34:48<43:39,  4.28s/it] 39%|###8      | 389/1000 [34:52<43:15,  4.25s/it] 39%|###9      | 390/1000 [34:57<44:41,  4.40s/it]                                                   39%|###9      | 390/1000 [34:57<44:41,  4.40s/it] 39%|###9      | 391/1000 [35:01<43:38,  4.30s/it] 39%|###9      | 392/1000 [35:05<42:37,  4.21s/it] 39%|###9      | 393/1000 [35:09<42:10,  4.17s/it] 39%|###9      | 394/1000 [35:14<42:56,  4.25s/it] 40%|###9      | 395/1000 [35:18<42:20,  4.20s/it] 40%|###9      | 396/1000 [35:22<43:02,  4.28s/it] 40%|###9      | 397/1000 [35:27<43:09,  4.29s/it] 40%|###9      | 398/1000 [35:31<42:20,  4.22s/it] 40%|###9      | 399/1000 [35:35<42:45,  4.27s/it] 40%|####      | 400/1000 [35:40<43:06,  4.31s/it]                                                   40%|####      | 400/1000 [35:40<43:06,  4.31s/it]{'eval_loss': 0.19123196601867676, 'eval_runtime': 43.1219, 'eval_samples_per_second': 12.708, 'eval_steps_per_second': 3.177, 'epoch': 0.97}
+{'loss': 0.2026, 'grad_norm': 0.2023618221282959, 'learning_rate': 0.00017454759996828623, 'epoch': 1.0}
+{'loss': 0.1901, 'grad_norm': 0.22280433773994446, 'learning_rate': 0.00017217602280983623, 'epoch': 1.04}
+{'loss': 0.174, 'grad_norm': 0.21696484088897705, 'learning_rate': 0.00016971651028545648, 'epoch': 1.07}
+{'loss': 0.1604, 'grad_norm': 0.2270578145980835, 'learning_rate': 0.00016717205893229903, 'epoch': 1.1}
+{'loss': 0.1759, 'grad_norm': 0.2616179585456848, 'learning_rate': 0.00016454576877239507, 'epoch': 1.13}
+{'loss': 0.1763, 'grad_norm': 0.19706016778945923, 'learning_rate': 0.0001618408395357554, 'epoch': 1.17}
+{'loss': 0.1606, 'grad_norm': 0.20312939584255219, 'learning_rate': 0.00015906056676199255, 'epoch': 1.2}
+{'loss': 0.1836, 'grad_norm': 0.24382564425468445, 'learning_rate': 0.00015620833778521307, 'epoch': 1.23}
+{'loss': 0.1968, 'grad_norm': 0.2390221506357193, 'learning_rate': 0.000153287627607073, 'epoch': 1.26}
+{'loss': 0.1779, 'grad_norm': 0.1958373785018921, 'learning_rate': 0.00015030199466302353, 'epoch': 1.3}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.49it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.68it/s][A
+  3%|2         | 4/137 [00:01<00:38,  3.48it/s][A
+  4%|3         | 5/137 [00:01<00:38,  3.43it/s][A
+  4%|4         | 6/137 [00:01<00:40,  3.21it/s][A
+  5%|5         | 7/137 [00:02<00:40,  3.19it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.36it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.36it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.34it/s][A
+  8%|8         | 11/137 [00:03<00:38,  3.29it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.80it/s][A
+  9%|9         | 13/137 [00:04<00:49,  2.52it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.59it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.72it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.86it/s][A
+ 12%|#2        | 17/137 [00:05<00:40,  2.94it/s][A
+ 13%|#3        | 18/137 [00:05<00:40,  2.97it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  3.01it/s][A
+ 15%|#4        | 20/137 [00:06<00:38,  3.07it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.09it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.90it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.98it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.07it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.13it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.24it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.26it/s][A
+ 20%|##        | 28/137 [00:09<00:33,  3.23it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.20it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.23it/s][A
+ 23%|##2       | 31/137 [00:09<00:33,  3.19it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.04it/s][A
+ 24%|##4       | 33/137 [00:10<00:35,  2.96it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.06it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.14it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.20it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.24it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.17it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.21it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.34it/s][A
+ 30%|##9       | 41/137 [00:13<00:28,  3.34it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.30it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.31it/s][A
+ 32%|###2      | 44/137 [00:13<00:27,  3.32it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.33it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.33it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.42it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.53it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.59it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.71it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.84it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.93it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.95it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.91it/s][A
+ 40%|####      | 55/137 [00:16<00:22,  3.71it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.65it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.44it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.30it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.32it/s][A
+ 44%|####3     | 60/137 [00:18<00:22,  3.37it/s][A
+ 45%|####4     | 61/137 [00:18<00:23,  3.17it/s][A
+ 45%|####5     | 62/137 [00:19<00:23,  3.13it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.15it/s][A
+ 47%|####6     | 64/137 [00:19<00:23,  3.16it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.10it/s][A
+ 48%|####8     | 66/137 [00:20<00:25,  2.84it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.85it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.94it/s][A
+ 50%|#####     | 69/137 [00:21<00:22,  2.96it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.94it/s][A
+ 52%|#####1    | 71/137 [00:22<00:21,  3.01it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.02it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.02it/s][A
+ 54%|#####4    | 74/137 [00:23<00:21,  2.88it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.85it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.98it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.04it/s][A
+ 57%|#####6    | 78/137 [00:24<00:19,  3.08it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.11it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.16it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.28it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.35it/s][A
+ 61%|######    | 83/137 [00:25<00:16,  3.35it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.37it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.42it/s][A
+ 63%|######2   | 86/137 [00:26<00:15,  3.37it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.38it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.34it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.30it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.31it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.31it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.23it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.24it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.24it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.29it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.26it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.28it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.29it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.25it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.22it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.23it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.23it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.15it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.16it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.15it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.96it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.99it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  3.00it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  3.00it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.91it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.94it/s][A
+ 82%|########1 | 112/137 [00:35<00:07,  3.15it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.23it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.37it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.36it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.39it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.44it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.51it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.47it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.46it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.42it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.22it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.24it/s][A
+ 91%|######### | 124/137 [00:38<00:04,  3.25it/s][A
+ 91%|#########1| 125/137 [00:38<00:03,  3.13it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.14it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.11it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.13it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.19it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.23it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.21it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.24it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.94it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.96it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.03it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.16it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.35it/s][A                                                  
+                                                 [A 40%|####      | 400/1000 [36:23<43:06,  4.31s/it]
+100%|##########| 137/137 [00:42<00:00,  3.35it/s][A
+                                                 [A 40%|####      | 401/1000 [36:29<2:57:21, 17.77s/it] 40%|####      | 402/1000 [36:33<2:16:21, 13.68s/it] 40%|####      | 403/1000 [36:37<1:47:28, 10.80s/it] 40%|####      | 404/1000 [36:41<1:27:46,  8.84s/it] 40%|####      | 405/1000 [36:45<1:13:03,  7.37s/it] 41%|####      | 406/1000 [36:49<1:03:59,  6.46s/it] 41%|####      | 407/1000 [36:54<56:47,  5.75s/it]   41%|####      | 408/1000 [36:58<51:41,  5.24s/it] 41%|####      | 409/1000 [37:02<48:22,  4.91s/it] 41%|####1     | 410/1000 [37:06<46:05,  4.69s/it]                                                   41%|####1     | 410/1000 [37:06<46:05,  4.69s/it] 41%|####1     | 411/1000 [37:10<44:33,  4.54s/it] 41%|####1     | 412/1000 [37:14<43:58,  4.49s/it] 41%|####1     | 413/1000 [37:19<42:48,  4.37s/it] 41%|####1     | 414/1000 [37:24<44:23,  4.55s/it] 42%|####1     | 415/1000 [37:28<43:20,  4.45s/it] 42%|####1     | 416/1000 [37:32<43:24,  4.46s/it] 42%|####1     | 417/1000 [37:36<42:04,  4.33s/it] 42%|####1     | 418/1000 [37:40<41:26,  4.27s/it] 42%|####1     | 419/1000 [37:44<40:34,  4.19s/it] 42%|####2     | 420/1000 [37:48<40:17,  4.17s/it]                                                   42%|####2     | 420/1000 [37:48<40:17,  4.17s/it] 42%|####2     | 421/1000 [37:53<40:22,  4.18s/it] 42%|####2     | 422/1000 [37:57<39:54,  4.14s/it] 42%|####2     | 423/1000 [38:02<42:39,  4.44s/it] 42%|####2     | 424/1000 [38:06<42:27,  4.42s/it] 42%|####2     | 425/1000 [38:10<40:50,  4.26s/it] 43%|####2     | 426/1000 [38:14<40:28,  4.23s/it] 43%|####2     | 427/1000 [38:18<39:41,  4.16s/it] 43%|####2     | 428/1000 [38:23<40:08,  4.21s/it] 43%|####2     | 429/1000 [38:27<39:29,  4.15s/it] 43%|####3     | 430/1000 [38:31<40:34,  4.27s/it]                                                   43%|####3     | 430/1000 [38:31<40:34,  4.27s/it] 43%|####3     | 431/1000 [38:35<39:28,  4.16s/it] 43%|####3     | 432/1000 [38:39<38:56,  4.11s/it] 43%|####3     | 433/1000 [38:43<39:19,  4.16s/it] 43%|####3     | 434/1000 [38:48<39:10,  4.15s/it] 44%|####3     | 435/1000 [38:52<40:54,  4.34s/it] 44%|####3     | 436/1000 [38:57<41:13,  4.38s/it] 44%|####3     | 437/1000 [39:01<40:59,  4.37s/it] 44%|####3     | 438/1000 [39:05<39:18,  4.20s/it] 44%|####3     | 439/1000 [39:09<39:11,  4.19s/it] 44%|####4     | 440/1000 [39:13<39:22,  4.22s/it]                                                   44%|####4     | 440/1000 [39:13<39:22,  4.22s/it] 44%|####4     | 441/1000 [39:18<39:26,  4.23s/it] 44%|####4     | 442/1000 [39:22<39:12,  4.22s/it] 44%|####4     | 443/1000 [39:26<38:32,  4.15s/it] 44%|####4     | 444/1000 [39:30<38:34,  4.16s/it] 44%|####4     | 445/1000 [39:34<38:27,  4.16s/it] 45%|####4     | 446/1000 [39:38<37:38,  4.08s/it] 45%|####4     | 447/1000 [39:42<37:46,  4.10s/it] 45%|####4     | 448/1000 [39:46<37:10,  4.04s/it] 45%|####4     | 449/1000 [39:50<37:30,  4.09s/it] 45%|####5     | 450/1000 [39:54<36:47,  4.01s/it]                                                   45%|####5     | 450/1000 [39:54<36:47,  4.01s/it] 45%|####5     | 451/1000 [39:58<36:54,  4.03s/it] 45%|####5     | 452/1000 [40:02<37:13,  4.08s/it] 45%|####5     | 453/1000 [40:07<38:29,  4.22s/it] 45%|####5     | 454/1000 [40:11<38:32,  4.24s/it] 46%|####5     | 455/1000 [40:15<38:18,  4.22s/it] 46%|####5     | 456/1000 [40:19<37:29,  4.14s/it] 46%|####5     | 457/1000 [40:23<36:53,  4.08s/it] 46%|####5     | 458/1000 [40:28<38:22,  4.25s/it] 46%|####5     | 459/1000 [40:32<36:59,  4.10s/it] 46%|####6     | 460/1000 [40:36<36:19,  4.04s/it]                                                   46%|####6     | 460/1000 [40:36<36:19,  4.04s/it] 46%|####6     | 461/1000 [40:39<35:49,  3.99s/it] 46%|####6     | 462/1000 [40:44<37:34,  4.19s/it] 46%|####6     | 463/1000 [40:48<37:33,  4.20s/it] 46%|####6     | 464/1000 [40:53<37:32,  4.20s/it] 46%|####6     | 465/1000 [40:57<37:36,  4.22s/it] 47%|####6     | 466/1000 [41:01<38:30,  4.33s/it] 47%|####6     | 467/1000 [41:06<38:11,  4.30s/it] 47%|####6     | 468/1000 [41:10<37:54,  4.27s/it] 47%|####6     | 469/1000 [41:14<38:39,  4.37s/it] 47%|####6     | 470/1000 [41:18<37:49,  4.28s/it]                                                   47%|####6     | 470/1000 [41:18<37:49,  4.28s/it] 47%|####7     | 471/1000 [41:23<37:10,  4.22s/it] 47%|####7     | 472/1000 [41:27<37:46,  4.29s/it] 47%|####7     | 473/1000 [41:31<36:58,  4.21s/it] 47%|####7     | 474/1000 [41:35<36:30,  4.17s/it] 48%|####7     | 475/1000 [41:39<36:52,  4.22s/it] 48%|####7     | 476/1000 [41:44<36:55,  4.23s/it] 48%|####7     | 477/1000 [41:48<36:41,  4.21s/it] 48%|####7     | 478/1000 [41:52<36:39,  4.21s/it] 48%|####7     | 479/1000 [41:57<37:17,  4.30s/it] 48%|####8     | 480/1000 [42:00<36:04,  4.16s/it]                                                   48%|####8     | 480/1000 [42:00<36:04,  4.16s/it] 48%|####8     | 481/1000 [42:05<37:00,  4.28s/it] 48%|####8     | 482/1000 [42:09<36:49,  4.26s/it] 48%|####8     | 483/1000 [42:13<36:30,  4.24s/it] 48%|####8     | 484/1000 [42:18<37:02,  4.31s/it] 48%|####8     | 485/1000 [42:22<36:24,  4.24s/it] 49%|####8     | 486/1000 [42:26<35:59,  4.20s/it] 49%|####8     | 487/1000 [42:30<35:28,  4.15s/it] 49%|####8     | 488/1000 [42:34<34:23,  4.03s/it] 49%|####8     | 489/1000 [42:39<36:24,  4.28s/it] 49%|####9     | 490/1000 [42:43<35:16,  4.15s/it]                                                   49%|####9     | 490/1000 [42:43<35:16,  4.15s/it] 49%|####9     | 491/1000 [42:47<35:18,  4.16s/it] 49%|####9     | 492/1000 [42:51<34:46,  4.11s/it] 49%|####9     | 493/1000 [42:55<35:33,  4.21s/it] 49%|####9     | 494/1000 [43:00<37:14,  4.42s/it] 50%|####9     | 495/1000 [43:04<37:12,  4.42s/it] 50%|####9     | 496/1000 [43:09<37:13,  4.43s/it] 50%|####9     | 497/1000 [43:14<37:38,  4.49s/it] 50%|####9     | 498/1000 [43:18<36:51,  4.41s/it] 50%|####9     | 499/1000 [43:22<36:07,  4.33s/it] 50%|#####     | 500/1000 [43:26<36:27,  4.38s/it]                                                   50%|#####     | 500/1000 [43:26<36:27,  4.38s/it]{'eval_loss': 0.1883697360754013, 'eval_runtime': 43.139, 'eval_samples_per_second': 12.703, 'eval_steps_per_second': 3.176, 'epoch': 1.3}
+{'loss': 0.1763, 'grad_norm': 0.22874432802200317, 'learning_rate': 0.00014725507648690543, 'epoch': 1.33}
+{'loss': 0.1865, 'grad_norm': 0.19550876319408417, 'learning_rate': 0.00014415058527917452, 'epoch': 1.36}
+{'loss': 0.1719, 'grad_norm': 0.2829839587211609, 'learning_rate': 0.00014099230338415728, 'epoch': 1.39}
+{'loss': 0.168, 'grad_norm': 0.18494850397109985, 'learning_rate': 0.00013778407868184672, 'epoch': 1.42}
+{'loss': 0.1635, 'grad_norm': 0.22101065516471863, 'learning_rate': 0.00013452981989985348, 'epoch': 1.46}
+{'loss': 0.1618, 'grad_norm': 0.17271217703819275, 'learning_rate': 0.00013123349185122327, 'epoch': 1.49}
+{'loss': 0.1825, 'grad_norm': 0.22762897610664368, 'learning_rate': 0.00012789911060392294, 'epoch': 1.52}
+{'loss': 0.1844, 'grad_norm': 0.19558431208133698, 'learning_rate': 0.00012453073858788026, 'epoch': 1.55}
+{'loss': 0.1789, 'grad_norm': 0.17963197827339172, 'learning_rate': 0.00012113247964553888, 'epoch': 1.59}
+{'loss': 0.1796, 'grad_norm': 0.26785653829574585, 'learning_rate': 0.00011770847403195834, 'epoch': 1.62}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.53it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.64it/s][A
+  3%|2         | 4/137 [00:01<00:37,  3.50it/s][A
+  4%|3         | 5/137 [00:01<00:38,  3.44it/s][A
+  4%|4         | 6/137 [00:01<00:40,  3.22it/s][A
+  5%|5         | 7/137 [00:02<00:40,  3.20it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.35it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.35it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.29it/s][A
+  8%|8         | 11/137 [00:03<00:38,  3.30it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.79it/s][A
+  9%|9         | 13/137 [00:04<00:48,  2.53it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.60it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.72it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.85it/s][A
+ 12%|#2        | 17/137 [00:05<00:40,  2.94it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  3.00it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  3.01it/s][A
+ 15%|#4        | 20/137 [00:06<00:37,  3.08it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.07it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.90it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.93it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.08it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.15it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.24it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.28it/s][A
+ 20%|##        | 28/137 [00:09<00:34,  3.20it/s][A
+ 21%|##1       | 29/137 [00:09<00:34,  3.17it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.21it/s][A
+ 23%|##2       | 31/137 [00:09<00:32,  3.24it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.04it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.99it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.05it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.14it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.22it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.26it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.18it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.19it/s][A
+ 29%|##9       | 40/137 [00:12<00:28,  3.35it/s][A
+ 30%|##9       | 41/137 [00:13<00:28,  3.32it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.31it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.32it/s][A
+ 32%|###2      | 44/137 [00:13<00:28,  3.32it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.32it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.32it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.39it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.54it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.59it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.74it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.86it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.93it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.92it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.92it/s][A
+ 40%|####      | 55/137 [00:16<00:21,  3.74it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.66it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.45it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.34it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.30it/s][A
+ 44%|####3     | 60/137 [00:18<00:22,  3.36it/s][A
+ 45%|####4     | 61/137 [00:18<00:23,  3.18it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.10it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.15it/s][A
+ 47%|####6     | 64/137 [00:19<00:22,  3.18it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.10it/s][A
+ 48%|####8     | 66/137 [00:20<00:24,  2.85it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.83it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.94it/s][A
+ 50%|#####     | 69/137 [00:21<00:22,  2.97it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.95it/s][A
+ 52%|#####1    | 71/137 [00:22<00:21,  3.01it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.04it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.03it/s][A
+ 54%|#####4    | 74/137 [00:23<00:22,  2.86it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.84it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.97it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.06it/s][A
+ 57%|#####6    | 78/137 [00:24<00:19,  3.10it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.13it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.14it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.26it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.35it/s][A
+ 61%|######    | 83/137 [00:25<00:16,  3.37it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.35it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.42it/s][A
+ 63%|######2   | 86/137 [00:26<00:15,  3.38it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.36it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.35it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.31it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.34it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.31it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.26it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.24it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.25it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.25it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.22it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.27it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.29it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.26it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.22it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.25it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.24it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.16it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.16it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.95it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.98it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  2.99it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  2.99it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.89it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.97it/s][A
+ 82%|########1 | 112/137 [00:35<00:07,  3.14it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.22it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.34it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.36it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.40it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.44it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.52it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.46it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.47it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.44it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.20it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.24it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.30it/s][A
+ 91%|#########1| 125/137 [00:38<00:03,  3.13it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.13it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.11it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.13it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.19it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.23it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.26it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.24it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.95it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.96it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.04it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.17it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.30it/s][A                                                  
+                                                 [A 50%|#####     | 500/1000 [44:10<36:27,  4.38s/it]
+100%|##########| 137/137 [00:42<00:00,  3.30it/s][A
+                                                 [A 50%|#####     | 501/1000 [44:16<2:28:14, 17.82s/it] 50%|#####     | 502/1000 [44:19<1:53:09, 13.63s/it] 50%|#####     | 503/1000 [44:23<1:29:08, 10.76s/it] 50%|#####     | 504/1000 [44:27<1:12:10,  8.73s/it] 50%|#####     | 505/1000 [44:31<1:00:10,  7.29s/it] 51%|#####     | 506/1000 [44:35<51:42,  6.28s/it]   51%|#####     | 507/1000 [44:40<46:26,  5.65s/it] 51%|#####     | 508/1000 [44:44<43:41,  5.33s/it] 51%|#####     | 509/1000 [44:49<41:44,  5.10s/it] 51%|#####1    | 510/1000 [44:53<40:21,  4.94s/it]                                                   51%|#####1    | 510/1000 [44:53<40:21,  4.94s/it] 51%|#####1    | 511/1000 [44:57<38:25,  4.72s/it] 51%|#####1    | 512/1000 [45:01<36:45,  4.52s/it] 51%|#####1    | 513/1000 [45:06<35:47,  4.41s/it] 51%|#####1    | 514/1000 [45:10<35:01,  4.32s/it] 52%|#####1    | 515/1000 [45:14<34:10,  4.23s/it] 52%|#####1    | 516/1000 [45:18<33:27,  4.15s/it] 52%|#####1    | 517/1000 [45:22<32:36,  4.05s/it] 52%|#####1    | 518/1000 [45:25<32:09,  4.00s/it] 52%|#####1    | 519/1000 [45:30<32:26,  4.05s/it] 52%|#####2    | 520/1000 [45:34<32:17,  4.04s/it]                                                   52%|#####2    | 520/1000 [45:34<32:17,  4.04s/it] 52%|#####2    | 521/1000 [45:38<33:02,  4.14s/it] 52%|#####2    | 522/1000 [45:42<33:07,  4.16s/it] 52%|#####2    | 523/1000 [45:47<33:41,  4.24s/it] 52%|#####2    | 524/1000 [45:51<33:00,  4.16s/it] 52%|#####2    | 525/1000 [45:55<33:56,  4.29s/it] 53%|#####2    | 526/1000 [45:59<32:54,  4.17s/it] 53%|#####2    | 527/1000 [46:03<32:47,  4.16s/it] 53%|#####2    | 528/1000 [46:07<32:08,  4.09s/it] 53%|#####2    | 529/1000 [46:11<32:17,  4.11s/it] 53%|#####3    | 530/1000 [46:15<32:06,  4.10s/it]                                                   53%|#####3    | 530/1000 [46:15<32:06,  4.10s/it] 53%|#####3    | 531/1000 [46:19<32:01,  4.10s/it] 53%|#####3    | 532/1000 [46:24<33:21,  4.28s/it] 53%|#####3    | 533/1000 [46:28<32:30,  4.18s/it] 53%|#####3    | 534/1000 [46:32<32:18,  4.16s/it] 54%|#####3    | 535/1000 [46:37<33:05,  4.27s/it] 54%|#####3    | 536/1000 [46:41<32:16,  4.17s/it] 54%|#####3    | 537/1000 [46:45<32:04,  4.16s/it] 54%|#####3    | 538/1000 [46:49<31:40,  4.11s/it] 54%|#####3    | 539/1000 [46:53<31:29,  4.10s/it] 54%|#####4    | 540/1000 [46:57<31:31,  4.11s/it]                                                   54%|#####4    | 540/1000 [46:57<31:31,  4.11s/it] 54%|#####4    | 541/1000 [47:01<31:58,  4.18s/it] 54%|#####4    | 542/1000 [47:05<31:16,  4.10s/it] 54%|#####4    | 543/1000 [47:10<31:34,  4.15s/it] 54%|#####4    | 544/1000 [47:14<31:37,  4.16s/it] 55%|#####4    | 545/1000 [47:18<31:37,  4.17s/it] 55%|#####4    | 546/1000 [47:22<31:35,  4.17s/it] 55%|#####4    | 547/1000 [47:27<32:22,  4.29s/it] 55%|#####4    | 548/1000 [47:31<32:08,  4.27s/it] 55%|#####4    | 549/1000 [47:35<31:10,  4.15s/it] 55%|#####5    | 550/1000 [47:39<30:32,  4.07s/it]                                                   55%|#####5    | 550/1000 [47:39<30:32,  4.07s/it] 55%|#####5    | 551/1000 [47:43<30:45,  4.11s/it] 55%|#####5    | 552/1000 [47:48<32:21,  4.33s/it] 55%|#####5    | 553/1000 [47:53<33:21,  4.48s/it] 55%|#####5    | 554/1000 [47:57<32:25,  4.36s/it] 56%|#####5    | 555/1000 [48:01<31:58,  4.31s/it] 56%|#####5    | 556/1000 [48:05<31:25,  4.25s/it] 56%|#####5    | 557/1000 [48:09<32:06,  4.35s/it] 56%|#####5    | 558/1000 [48:14<31:50,  4.32s/it] 56%|#####5    | 559/1000 [48:18<30:53,  4.20s/it] 56%|#####6    | 560/1000 [48:22<30:45,  4.19s/it]                                                   56%|#####6    | 560/1000 [48:22<30:45,  4.19s/it] 56%|#####6    | 561/1000 [48:26<30:37,  4.19s/it] 56%|#####6    | 562/1000 [48:30<30:28,  4.17s/it] 56%|#####6    | 563/1000 [48:35<30:48,  4.23s/it] 56%|#####6    | 564/1000 [48:39<30:18,  4.17s/it] 56%|#####6    | 565/1000 [48:43<30:55,  4.27s/it] 57%|#####6    | 566/1000 [48:47<30:33,  4.22s/it] 57%|#####6    | 567/1000 [48:52<31:38,  4.39s/it] 57%|#####6    | 568/1000 [48:56<31:57,  4.44s/it] 57%|#####6    | 569/1000 [49:01<31:19,  4.36s/it] 57%|#####6    | 570/1000 [49:05<31:07,  4.34s/it]                                                   57%|#####6    | 570/1000 [49:05<31:07,  4.34s/it] 57%|#####7    | 571/1000 [49:09<30:22,  4.25s/it] 57%|#####7    | 572/1000 [49:13<29:53,  4.19s/it] 57%|#####7    | 573/1000 [49:17<29:35,  4.16s/it] 57%|#####7    | 574/1000 [49:21<28:54,  4.07s/it] 57%|#####7    | 575/1000 [49:25<28:49,  4.07s/it] 58%|#####7    | 576/1000 [49:29<28:47,  4.07s/it] 58%|#####7    | 577/1000 [49:33<28:37,  4.06s/it] 58%|#####7    | 578/1000 [49:37<28:43,  4.08s/it] 58%|#####7    | 579/1000 [49:42<29:22,  4.19s/it] 58%|#####8    | 580/1000 [49:46<29:36,  4.23s/it]                                                   58%|#####8    | 580/1000 [49:46<29:36,  4.23s/it] 58%|#####8    | 581/1000 [49:50<28:46,  4.12s/it] 58%|#####8    | 582/1000 [49:54<29:11,  4.19s/it] 58%|#####8    | 583/1000 [49:58<29:04,  4.18s/it] 58%|#####8    | 584/1000 [50:03<30:31,  4.40s/it] 58%|#####8    | 585/1000 [50:08<30:15,  4.37s/it] 59%|#####8    | 586/1000 [50:12<30:56,  4.48s/it] 59%|#####8    | 587/1000 [50:17<30:36,  4.45s/it] 59%|#####8    | 588/1000 [50:21<29:32,  4.30s/it] 59%|#####8    | 589/1000 [50:25<28:57,  4.23s/it] 59%|#####8    | 590/1000 [50:29<29:05,  4.26s/it]                                                   59%|#####8    | 590/1000 [50:29<29:05,  4.26s/it] 59%|#####9    | 591/1000 [50:33<28:46,  4.22s/it] 59%|#####9    | 592/1000 [50:38<28:59,  4.26s/it] 59%|#####9    | 593/1000 [50:42<28:38,  4.22s/it] 59%|#####9    | 594/1000 [50:46<28:06,  4.15s/it] 60%|#####9    | 595/1000 [50:50<28:08,  4.17s/it] 60%|#####9    | 596/1000 [50:54<27:37,  4.10s/it] 60%|#####9    | 597/1000 [50:58<28:04,  4.18s/it] 60%|#####9    | 598/1000 [51:02<27:31,  4.11s/it] 60%|#####9    | 599/1000 [51:06<27:10,  4.07s/it] 60%|######    | 600/1000 [51:11<27:59,  4.20s/it]                                                   60%|######    | 600/1000 [51:11<27:59,  4.20s/it]{'eval_loss': 0.18379800021648407, 'eval_runtime': 43.13, 'eval_samples_per_second': 12.706, 'eval_steps_per_second': 3.176, 'epoch': 1.62}
+{'loss': 0.167, 'grad_norm': 0.23742057383060455, 'learning_rate': 0.00011426289337055119, 'epoch': 1.65}
+{'loss': 0.163, 'grad_norm': 0.27855488657951355, 'learning_rate': 0.0001107999355706023, 'epoch': 1.68}
+{'loss': 0.1781, 'grad_norm': 0.21484839916229248, 'learning_rate': 0.00010732381971276318, 'epoch': 1.72}
+{'loss': 0.1805, 'grad_norm': 0.20918510854244232, 'learning_rate': 0.00010383878090875201, 'epoch': 1.75}
+{'loss': 0.1655, 'grad_norm': 0.23227663338184357, 'learning_rate': 0.00010034906514152238, 'epoch': 1.78}
+{'loss': 0.1898, 'grad_norm': 0.26038074493408203, 'learning_rate': 9.685892409218717e-05, 'epoch': 1.81}
+{'loss': 0.1714, 'grad_norm': 0.1992722451686859, 'learning_rate': 9.337260996000002e-05, 'epoch': 1.85}
+{'loss': 0.1546, 'grad_norm': 0.23046742379665375, 'learning_rate': 8.989437028170537e-05, 'epoch': 1.88}
+{'loss': 0.1722, 'grad_norm': 0.23563387989997864, 'learning_rate': 8.642844275656957e-05, 'epoch': 1.91}
+{'loss': 0.1724, 'grad_norm': 0.23781274259090424, 'learning_rate': 8.297905008339677e-05, 'epoch': 1.94}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.54it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.69it/s][A
+  3%|2         | 4/137 [00:01<00:37,  3.51it/s][A
+  4%|3         | 5/137 [00:01<00:38,  3.47it/s][A
+  4%|4         | 6/137 [00:01<00:40,  3.21it/s][A
+  5%|5         | 7/137 [00:02<00:40,  3.18it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.32it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.32it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.32it/s][A
+  8%|8         | 11/137 [00:03<00:38,  3.27it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.79it/s][A
+  9%|9         | 13/137 [00:04<00:49,  2.52it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.59it/s][A
+ 11%|#         | 15/137 [00:04<00:45,  2.70it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.82it/s][A
+ 12%|#2        | 17/137 [00:05<00:41,  2.90it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.98it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  2.98it/s][A
+ 15%|#4        | 20/137 [00:06<00:38,  3.05it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.07it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.92it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.96it/s][A
+ 18%|#7        | 24/137 [00:07<00:37,  3.05it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.14it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.19it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.26it/s][A
+ 20%|##        | 28/137 [00:09<00:33,  3.21it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.18it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.18it/s][A
+ 23%|##2       | 31/137 [00:09<00:32,  3.21it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.03it/s][A
+ 24%|##4       | 33/137 [00:10<00:35,  2.97it/s][A
+ 25%|##4       | 34/137 [00:11<00:34,  3.03it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.13it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.22it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.26it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.17it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.21it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.30it/s][A
+ 30%|##9       | 41/137 [00:13<00:29,  3.31it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.28it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.32it/s][A
+ 32%|###2      | 44/137 [00:14<00:28,  3.29it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.35it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.31it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.40it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.52it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.56it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.73it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.79it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.92it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.94it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.92it/s][A
+ 40%|####      | 55/137 [00:16<00:22,  3.73it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.62it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.46it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.32it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.28it/s][A
+ 44%|####3     | 60/137 [00:18<00:23,  3.33it/s][A
+ 45%|####4     | 61/137 [00:18<00:24,  3.13it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.11it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.12it/s][A
+ 47%|####6     | 64/137 [00:19<00:22,  3.18it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.07it/s][A
+ 48%|####8     | 66/137 [00:20<00:25,  2.83it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.84it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.90it/s][A
+ 50%|#####     | 69/137 [00:21<00:22,  2.96it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.94it/s][A
+ 52%|#####1    | 71/137 [00:22<00:22,  3.00it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.02it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.04it/s][A
+ 54%|#####4    | 74/137 [00:23<00:21,  2.87it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.82it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.95it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.05it/s][A
+ 57%|#####6    | 78/137 [00:24<00:19,  3.08it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.12it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.13it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.26it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.35it/s][A
+ 61%|######    | 83/137 [00:26<00:16,  3.36it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.35it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.40it/s][A
+ 63%|######2   | 86/137 [00:26<00:14,  3.40it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.35it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.33it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.32it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.30it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.30it/s][A
+ 67%|######7   | 92/137 [00:28<00:14,  3.21it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.21it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.21it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.26it/s][A
+ 70%|#######   | 96/137 [00:30<00:12,  3.23it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.26it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.26it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.24it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.18it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.22it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.23it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.15it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.14it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.15it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.94it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.97it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  3.01it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  2.97it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.91it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.96it/s][A
+ 82%|########1 | 112/137 [00:35<00:08,  3.12it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.18it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.32it/s][A
+ 84%|########3 | 115/137 [00:36<00:06,  3.33it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.39it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.42it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.50it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.44it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.44it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.42it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.20it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.24it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.26it/s][A
+ 91%|#########1| 125/137 [00:39<00:03,  3.12it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.11it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.13it/s][A
+ 93%|#########3| 128/137 [00:40<00:02,  3.13it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.18it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.22it/s][A
+ 96%|#########5| 131/137 [00:41<00:01,  3.21it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.23it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.95it/s][A
+ 98%|#########7| 134/137 [00:42<00:01,  2.93it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.04it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.18it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.32it/s][A                                                  
+                                                 [A 60%|######    | 600/1000 [51:54<27:59,  4.20s/it]
+100%|##########| 137/137 [00:43<00:00,  3.32it/s][A
+                                                 [A 60%|######    | 601/1000 [52:01<1:59:01, 17.90s/it] 60%|######    | 602/1000 [52:05<1:31:31, 13.80s/it] 60%|######    | 603/1000 [52:09<1:12:28, 10.95s/it] 60%|######    | 604/1000 [52:13<58:31,  8.87s/it]   60%|######    | 605/1000 [52:17<48:50,  7.42s/it] 61%|######    | 606/1000 [52:21<42:28,  6.47s/it] 61%|######    | 607/1000 [52:25<37:43,  5.76s/it] 61%|######    | 608/1000 [52:30<34:19,  5.25s/it] 61%|######    | 609/1000 [52:34<32:08,  4.93s/it] 61%|######1   | 610/1000 [52:38<30:45,  4.73s/it]                                                   61%|######1   | 610/1000 [52:38<30:45,  4.73s/it] 61%|######1   | 611/1000 [52:43<30:31,  4.71s/it] 61%|######1   | 612/1000 [52:47<30:15,  4.68s/it] 61%|######1   | 613/1000 [52:51<28:51,  4.47s/it] 61%|######1   | 614/1000 [52:56<28:20,  4.41s/it] 62%|######1   | 615/1000 [53:00<28:22,  4.42s/it] 62%|######1   | 616/1000 [53:04<27:44,  4.34s/it] 62%|######1   | 617/1000 [53:09<27:52,  4.37s/it] 62%|######1   | 618/1000 [53:10<22:08,  3.48s/it] 62%|######1   | 619/1000 [53:14<23:27,  3.69s/it] 62%|######2   | 620/1000 [53:19<25:09,  3.97s/it]                                                   62%|######2   | 620/1000 [53:19<25:09,  3.97s/it] 62%|######2   | 621/1000 [53:23<25:01,  3.96s/it] 62%|######2   | 622/1000 [53:27<26:12,  4.16s/it] 62%|######2   | 623/1000 [53:32<26:36,  4.23s/it] 62%|######2   | 624/1000 [53:36<25:40,  4.10s/it] 62%|######2   | 625/1000 [53:40<25:32,  4.09s/it] 63%|######2   | 626/1000 [53:44<25:42,  4.12s/it] 63%|######2   | 627/1000 [53:48<25:54,  4.17s/it] 63%|######2   | 628/1000 [53:52<26:15,  4.24s/it] 63%|######2   | 629/1000 [53:57<26:08,  4.23s/it] 63%|######3   | 630/1000 [54:01<26:13,  4.25s/it]                                                   63%|######3   | 630/1000 [54:01<26:13,  4.25s/it] 63%|######3   | 631/1000 [54:05<26:22,  4.29s/it] 63%|######3   | 632/1000 [54:10<26:06,  4.26s/it] 63%|######3   | 633/1000 [54:14<25:58,  4.25s/it] 63%|######3   | 634/1000 [54:19<26:51,  4.40s/it] 64%|######3   | 635/1000 [54:23<27:33,  4.53s/it] 64%|######3   | 636/1000 [54:28<27:18,  4.50s/it] 64%|######3   | 637/1000 [54:32<26:09,  4.32s/it] 64%|######3   | 638/1000 [54:36<25:25,  4.21s/it] 64%|######3   | 639/1000 [54:40<25:05,  4.17s/it] 64%|######4   | 640/1000 [54:44<25:17,  4.22s/it]                                                   64%|######4   | 640/1000 [54:44<25:17,  4.22s/it] 64%|######4   | 641/1000 [54:48<25:21,  4.24s/it] 64%|######4   | 642/1000 [54:52<25:10,  4.22s/it] 64%|######4   | 643/1000 [54:57<24:53,  4.18s/it] 64%|######4   | 644/1000 [55:01<25:10,  4.24s/it] 64%|######4   | 645/1000 [55:05<24:53,  4.21s/it] 65%|######4   | 646/1000 [55:09<24:18,  4.12s/it] 65%|######4   | 647/1000 [55:13<24:42,  4.20s/it] 65%|######4   | 648/1000 [55:17<24:27,  4.17s/it] 65%|######4   | 649/1000 [55:22<24:12,  4.14s/it] 65%|######5   | 650/1000 [55:26<23:52,  4.09s/it]                                                   65%|######5   | 650/1000 [55:26<23:52,  4.09s/it] 65%|######5   | 651/1000 [55:30<23:52,  4.10s/it] 65%|######5   | 652/1000 [55:34<24:15,  4.18s/it] 65%|######5   | 653/1000 [55:38<24:27,  4.23s/it] 65%|######5   | 654/1000 [55:42<23:48,  4.13s/it] 66%|######5   | 655/1000 [55:46<23:17,  4.05s/it] 66%|######5   | 656/1000 [55:50<22:56,  4.00s/it] 66%|######5   | 657/1000 [55:54<22:57,  4.02s/it] 66%|######5   | 658/1000 [55:58<23:20,  4.10s/it] 66%|######5   | 659/1000 [56:02<22:38,  3.98s/it] 66%|######6   | 660/1000 [56:06<22:29,  3.97s/it]                                                   66%|######6   | 660/1000 [56:06<22:29,  3.97s/it] 66%|######6   | 661/1000 [56:10<22:51,  4.05s/it] 66%|######6   | 662/1000 [56:15<24:45,  4.39s/it] 66%|######6   | 663/1000 [56:20<24:17,  4.32s/it] 66%|######6   | 664/1000 [56:24<24:01,  4.29s/it] 66%|######6   | 665/1000 [56:28<23:40,  4.24s/it] 67%|######6   | 666/1000 [56:33<24:12,  4.35s/it] 67%|######6   | 667/1000 [56:36<23:17,  4.20s/it] 67%|######6   | 668/1000 [56:40<22:46,  4.12s/it] 67%|######6   | 669/1000 [56:44<22:26,  4.07s/it] 67%|######7   | 670/1000 [56:48<22:19,  4.06s/it]                                                   67%|######7   | 670/1000 [56:48<22:19,  4.06s/it] 67%|######7   | 671/1000 [56:52<22:07,  4.03s/it] 67%|######7   | 672/1000 [56:57<22:22,  4.09s/it] 67%|######7   | 673/1000 [57:01<23:14,  4.26s/it] 67%|######7   | 674/1000 [57:05<23:09,  4.26s/it] 68%|######7   | 675/1000 [57:10<23:05,  4.26s/it] 68%|######7   | 676/1000 [57:14<23:18,  4.32s/it] 68%|######7   | 677/1000 [57:19<23:34,  4.38s/it] 68%|######7   | 678/1000 [57:23<23:43,  4.42s/it] 68%|######7   | 679/1000 [57:28<23:55,  4.47s/it] 68%|######8   | 680/1000 [57:32<23:18,  4.37s/it]                                                   68%|######8   | 680/1000 [57:32<23:18,  4.37s/it] 68%|######8   | 681/1000 [57:36<23:01,  4.33s/it] 68%|######8   | 682/1000 [57:41<23:43,  4.48s/it] 68%|######8   | 683/1000 [57:46<23:45,  4.50s/it] 68%|######8   | 684/1000 [57:50<23:07,  4.39s/it] 68%|######8   | 685/1000 [57:54<23:11,  4.42s/it] 69%|######8   | 686/1000 [57:58<22:47,  4.36s/it] 69%|######8   | 687/1000 [58:03<22:54,  4.39s/it] 69%|######8   | 688/1000 [58:07<22:21,  4.30s/it] 69%|######8   | 689/1000 [58:11<22:15,  4.29s/it] 69%|######9   | 690/1000 [58:16<22:17,  4.32s/it]                                                   69%|######9   | 690/1000 [58:16<22:17,  4.32s/it] 69%|######9   | 691/1000 [58:20<22:05,  4.29s/it] 69%|######9   | 692/1000 [58:25<23:02,  4.49s/it] 69%|######9   | 693/1000 [58:29<22:29,  4.40s/it] 69%|######9   | 694/1000 [58:33<22:07,  4.34s/it] 70%|######9   | 695/1000 [58:38<22:10,  4.36s/it] 70%|######9   | 696/1000 [58:41<21:24,  4.23s/it] 70%|######9   | 697/1000 [58:45<20:59,  4.16s/it] 70%|######9   | 698/1000 [58:50<21:18,  4.23s/it] 70%|######9   | 699/1000 [58:54<21:36,  4.31s/it] 70%|#######   | 700/1000 [58:58<20:58,  4.20s/it]                                                   70%|#######   | 700/1000 [58:58<20:58,  4.20s/it]{'eval_loss': 0.18009060621261597, 'eval_runtime': 43.3097, 'eval_samples_per_second': 12.653, 'eval_steps_per_second': 3.163, 'epoch': 1.94}
+{'loss': 0.1734, 'grad_norm': 0.23519596457481384, 'learning_rate': 7.955039481582097e-05, 'epoch': 1.98}
+{'loss': 0.2049, 'grad_norm': 0.21706010401248932, 'learning_rate': 7.614665424214193e-05, 'epoch': 2.01}
+{'loss': 0.1513, 'grad_norm': 0.24577632546424866, 'learning_rate': 7.277197529594257e-05, 'epoch': 2.04}
+{'loss': 0.1502, 'grad_norm': 0.2719651460647583, 'learning_rate': 6.943046950368944e-05, 'epoch': 2.07}
+{'loss': 0.1333, 'grad_norm': 0.21810217201709747, 'learning_rate': 6.612620797547087e-05, 'epoch': 2.1}
+{'loss': 0.1386, 'grad_norm': 0.23926563560962677, 'learning_rate': 6.286321644497655e-05, 'epoch': 2.14}
+{'loss': 0.1487, 'grad_norm': 0.2500370740890503, 'learning_rate': 5.964547036476099e-05, 'epoch': 2.17}
+{'loss': 0.1604, 'grad_norm': 0.2487669587135315, 'learning_rate': 5.647689006276726e-05, 'epoch': 2.2}
+{'loss': 0.147, 'grad_norm': 0.23304584622383118, 'learning_rate': 5.33613359660109e-05, 'epoch': 2.23}
+{'loss': 0.1515, 'grad_norm': 0.21538572013378143, 'learning_rate': 5.0302603897244474e-05, 'epoch': 2.27}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.54it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.69it/s][A
+  3%|2         | 4/137 [00:01<00:37,  3.52it/s][A
+  4%|3         | 5/137 [00:01<00:38,  3.43it/s][A
+  4%|4         | 6/137 [00:01<00:40,  3.21it/s][A
+  5%|5         | 7/137 [00:02<00:40,  3.20it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.36it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.34it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.33it/s][A
+  8%|8         | 11/137 [00:03<00:38,  3.31it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.78it/s][A
+  9%|9         | 13/137 [00:04<00:48,  2.53it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.60it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.71it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.86it/s][A
+ 12%|#2        | 17/137 [00:05<00:41,  2.91it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.99it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  2.99it/s][A
+ 15%|#4        | 20/137 [00:06<00:38,  3.07it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.07it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.91it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.95it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.06it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.16it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.23it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.28it/s][A
+ 20%|##        | 28/137 [00:09<00:33,  3.21it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.20it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.23it/s][A
+ 23%|##2       | 31/137 [00:09<00:33,  3.21it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.02it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.99it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.05it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.12it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.19it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.24it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.17it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.21it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.33it/s][A
+ 30%|##9       | 41/137 [00:13<00:29,  3.30it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.30it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.30it/s][A
+ 32%|###2      | 44/137 [00:13<00:28,  3.30it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.36it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.30it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.39it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.51it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.60it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.73it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.83it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.91it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.94it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.91it/s][A
+ 40%|####      | 55/137 [00:16<00:21,  3.76it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.66it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.45it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.30it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.31it/s][A
+ 44%|####3     | 60/137 [00:18<00:22,  3.35it/s][A
+ 45%|####4     | 61/137 [00:18<00:24,  3.16it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.12it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.16it/s][A
+ 47%|####6     | 64/137 [00:19<00:23,  3.17it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.11it/s][A
+ 48%|####8     | 66/137 [00:20<00:25,  2.84it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.85it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.91it/s][A
+ 50%|#####     | 69/137 [00:21<00:22,  2.97it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.95it/s][A
+ 52%|#####1    | 71/137 [00:22<00:21,  3.01it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.03it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.01it/s][A
+ 54%|#####4    | 74/137 [00:23<00:21,  2.88it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.84it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.97it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.05it/s][A
+ 57%|#####6    | 78/137 [00:24<00:18,  3.11it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.13it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.15it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.24it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.36it/s][A
+ 61%|######    | 83/137 [00:26<00:16,  3.37it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.36it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.42it/s][A
+ 63%|######2   | 86/137 [00:26<00:15,  3.38it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.36it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.34it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.31it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.32it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.31it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.22it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.24it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.24it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.27it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.24it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.27it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.29it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.25it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.23it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.25it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.24it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.16it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.95it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.99it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  2.99it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  3.00it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.89it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.97it/s][A
+ 82%|########1 | 112/137 [00:35<00:08,  3.11it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.23it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.37it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.36it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.40it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.45it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.52it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.46it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.42it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.46it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.21it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.21it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.29it/s][A
+ 91%|#########1| 125/137 [00:39<00:03,  3.15it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.12it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.13it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.13it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.20it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.23it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.23it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.20it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.93it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.97it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.05it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.17it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.33it/s][A                                                  
+                                                 [A 70%|#######   | 700/1000 [59:41<20:58,  4.20s/it]
+100%|##########| 137/137 [00:42<00:00,  3.33it/s][A
+                                                 [A 70%|#######   | 701/1000 [59:48<1:28:16, 17.71s/it] 70%|#######   | 702/1000 [59:52<1:07:37, 13.62s/it] 70%|#######   | 703/1000 [59:56<53:20, 10.78s/it]   70%|#######   | 704/1000 [1:00:00<43:18,  8.78s/it] 70%|#######   | 705/1000 [1:00:04<35:49,  7.29s/it] 71%|#######   | 706/1000 [1:00:08<31:25,  6.41s/it] 71%|#######   | 707/1000 [1:00:12<27:57,  5.73s/it] 71%|#######   | 708/1000 [1:00:16<25:30,  5.24s/it] 71%|#######   | 709/1000 [1:00:20<23:33,  4.86s/it] 71%|#######1  | 710/1000 [1:00:24<22:35,  4.67s/it]                                                     71%|#######1  | 710/1000 [1:00:24<22:35,  4.67s/it] 71%|#######1  | 711/1000 [1:00:29<22:16,  4.63s/it] 71%|#######1  | 712/1000 [1:00:33<21:02,  4.38s/it] 71%|#######1  | 713/1000 [1:00:37<20:34,  4.30s/it] 71%|#######1  | 714/1000 [1:00:41<20:53,  4.38s/it] 72%|#######1  | 715/1000 [1:00:46<20:22,  4.29s/it] 72%|#######1  | 716/1000 [1:00:50<19:57,  4.22s/it] 72%|#######1  | 717/1000 [1:00:54<20:10,  4.28s/it] 72%|#######1  | 718/1000 [1:00:59<20:24,  4.34s/it] 72%|#######1  | 719/1000 [1:01:03<20:06,  4.29s/it] 72%|#######2  | 720/1000 [1:01:07<19:42,  4.22s/it]                                                     72%|#######2  | 720/1000 [1:01:07<19:42,  4.22s/it] 72%|#######2  | 721/1000 [1:01:11<19:39,  4.23s/it] 72%|#######2  | 722/1000 [1:01:15<19:29,  4.21s/it] 72%|#######2  | 723/1000 [1:01:20<19:43,  4.27s/it] 72%|#######2  | 724/1000 [1:01:23<19:05,  4.15s/it] 72%|#######2  | 725/1000 [1:01:28<19:32,  4.26s/it] 73%|#######2  | 726/1000 [1:01:32<19:00,  4.16s/it] 73%|#######2  | 727/1000 [1:01:36<18:36,  4.09s/it] 73%|#######2  | 728/1000 [1:01:40<19:19,  4.26s/it] 73%|#######2  | 729/1000 [1:01:44<18:54,  4.18s/it] 73%|#######3  | 730/1000 [1:01:49<18:52,  4.19s/it]                                                     73%|#######3  | 730/1000 [1:01:49<18:52,  4.19s/it] 73%|#######3  | 731/1000 [1:01:53<19:06,  4.26s/it] 73%|#######3  | 732/1000 [1:01:57<18:34,  4.16s/it] 73%|#######3  | 733/1000 [1:02:01<18:26,  4.14s/it] 73%|#######3  | 734/1000 [1:02:06<19:38,  4.43s/it] 74%|#######3  | 735/1000 [1:02:10<19:14,  4.36s/it] 74%|#######3  | 736/1000 [1:02:15<19:37,  4.46s/it] 74%|#######3  | 737/1000 [1:02:19<19:05,  4.36s/it] 74%|#######3  | 738/1000 [1:02:23<18:06,  4.15s/it] 74%|#######3  | 739/1000 [1:02:27<18:08,  4.17s/it] 74%|#######4  | 740/1000 [1:02:31<18:16,  4.22s/it]                                                     74%|#######4  | 740/1000 [1:02:31<18:16,  4.22s/it] 74%|#######4  | 741/1000 [1:02:36<17:59,  4.17s/it] 74%|#######4  | 742/1000 [1:02:39<17:34,  4.09s/it] 74%|#######4  | 743/1000 [1:02:44<17:34,  4.10s/it] 74%|#######4  | 744/1000 [1:02:47<17:03,  4.00s/it] 74%|#######4  | 745/1000 [1:02:51<16:56,  3.98s/it] 75%|#######4  | 746/1000 [1:02:55<16:47,  3.97s/it] 75%|#######4  | 747/1000 [1:02:59<16:59,  4.03s/it] 75%|#######4  | 748/1000 [1:03:04<17:38,  4.20s/it] 75%|#######4  | 749/1000 [1:03:08<17:35,  4.20s/it] 75%|#######5  | 750/1000 [1:03:12<17:19,  4.16s/it]                                                     75%|#######5  | 750/1000 [1:03:12<17:19,  4.16s/it] 75%|#######5  | 751/1000 [1:03:16<17:10,  4.14s/it] 75%|#######5  | 752/1000 [1:03:20<17:06,  4.14s/it] 75%|#######5  | 753/1000 [1:03:25<17:16,  4.20s/it] 75%|#######5  | 754/1000 [1:03:29<17:18,  4.22s/it] 76%|#######5  | 755/1000 [1:03:33<17:18,  4.24s/it] 76%|#######5  | 756/1000 [1:03:37<17:08,  4.22s/it] 76%|#######5  | 757/1000 [1:03:42<17:03,  4.21s/it] 76%|#######5  | 758/1000 [1:03:46<16:40,  4.13s/it] 76%|#######5  | 759/1000 [1:03:50<16:18,  4.06s/it] 76%|#######6  | 760/1000 [1:03:54<16:31,  4.13s/it]                                                     76%|#######6  | 760/1000 [1:03:54<16:31,  4.13s/it] 76%|#######6  | 761/1000 [1:03:59<17:24,  4.37s/it] 76%|#######6  | 762/1000 [1:04:03<17:40,  4.46s/it] 76%|#######6  | 763/1000 [1:04:08<17:47,  4.50s/it] 76%|#######6  | 764/1000 [1:04:13<17:55,  4.56s/it] 76%|#######6  | 765/1000 [1:04:17<17:53,  4.57s/it] 77%|#######6  | 766/1000 [1:04:21<17:12,  4.41s/it] 77%|#######6  | 767/1000 [1:04:25<16:43,  4.31s/it] 77%|#######6  | 768/1000 [1:04:30<16:26,  4.25s/it] 77%|#######6  | 769/1000 [1:04:34<16:29,  4.28s/it] 77%|#######7  | 770/1000 [1:04:38<16:05,  4.20s/it]                                                     77%|#######7  | 770/1000 [1:04:38<16:05,  4.20s/it] 77%|#######7  | 771/1000 [1:04:42<16:14,  4.25s/it] 77%|#######7  | 772/1000 [1:04:47<16:12,  4.26s/it] 77%|#######7  | 773/1000 [1:04:51<15:57,  4.22s/it] 77%|#######7  | 774/1000 [1:04:55<15:35,  4.14s/it] 78%|#######7  | 775/1000 [1:04:59<16:13,  4.33s/it] 78%|#######7  | 776/1000 [1:05:04<16:09,  4.33s/it] 78%|#######7  | 777/1000 [1:05:08<15:36,  4.20s/it] 78%|#######7  | 778/1000 [1:05:12<15:29,  4.19s/it] 78%|#######7  | 779/1000 [1:05:16<15:24,  4.18s/it] 78%|#######8  | 780/1000 [1:05:20<15:22,  4.19s/it]                                                     78%|#######8  | 780/1000 [1:05:20<15:22,  4.19s/it] 78%|#######8  | 781/1000 [1:05:24<15:25,  4.22s/it] 78%|#######8  | 782/1000 [1:05:28<15:06,  4.16s/it] 78%|#######8  | 783/1000 [1:05:33<15:19,  4.24s/it] 78%|#######8  | 784/1000 [1:05:37<15:15,  4.24s/it] 78%|#######8  | 785/1000 [1:05:41<15:01,  4.19s/it] 79%|#######8  | 786/1000 [1:05:46<15:15,  4.28s/it] 79%|#######8  | 787/1000 [1:05:50<15:17,  4.31s/it] 79%|#######8  | 788/1000 [1:05:54<15:15,  4.32s/it] 79%|#######8  | 789/1000 [1:05:58<14:53,  4.23s/it] 79%|#######9  | 790/1000 [1:06:03<15:03,  4.30s/it]                                                     79%|#######9  | 790/1000 [1:06:03<15:03,  4.30s/it] 79%|#######9  | 791/1000 [1:06:07<14:42,  4.22s/it] 79%|#######9  | 792/1000 [1:06:12<15:11,  4.38s/it] 79%|#######9  | 793/1000 [1:06:16<15:00,  4.35s/it] 79%|#######9  | 794/1000 [1:06:20<14:35,  4.25s/it] 80%|#######9  | 795/1000 [1:06:24<14:43,  4.31s/it] 80%|#######9  | 796/1000 [1:06:29<14:59,  4.41s/it] 80%|#######9  | 797/1000 [1:06:33<14:45,  4.36s/it] 80%|#######9  | 798/1000 [1:06:37<14:27,  4.29s/it] 80%|#######9  | 799/1000 [1:06:41<14:03,  4.20s/it] 80%|########  | 800/1000 [1:06:46<14:23,  4.32s/it]                                                     80%|########  | 800/1000 [1:06:46<14:23,  4.32s/it]{'eval_loss': 0.18244026601314545, 'eval_runtime': 43.1544, 'eval_samples_per_second': 12.699, 'eval_steps_per_second': 3.175, 'epoch': 2.27}
+{'loss': 0.1356, 'grad_norm': 0.2794986367225647, 'learning_rate': 4.7304420450332244e-05, 'epoch': 2.3}
+{'loss': 0.1484, 'grad_norm': 0.2656984031200409, 'learning_rate': 4.437043844996952e-05, 'epoch': 2.33}
+{'loss': 0.1295, 'grad_norm': 0.23538517951965332, 'learning_rate': 4.150423250127845e-05, 'epoch': 2.36}
+{'loss': 0.1552, 'grad_norm': 0.2860218286514282, 'learning_rate': 3.8709294634702376e-05, 'epoch': 2.4}
+{'loss': 0.1347, 'grad_norm': 0.234762042760849, 'learning_rate': 3.5989030051504434e-05, 'epoch': 2.43}
+{'loss': 0.1388, 'grad_norm': 0.28022387623786926, 'learning_rate': 3.334675297505476e-05, 'epoch': 2.46}
+{'loss': 0.1498, 'grad_norm': 0.23504765331745148, 'learning_rate': 3.078568261295933e-05, 'epoch': 2.49}
+{'loss': 0.1387, 'grad_norm': 0.2451496720314026, 'learning_rate': 2.8308939234951726e-05, 'epoch': 2.53}
+{'loss': 0.1532, 'grad_norm': 0.2393997460603714, 'learning_rate': 2.591954037132499e-05, 'epoch': 2.56}
+{'loss': 0.1528, 'grad_norm': 0.24564532935619354, 'learning_rate': 2.362039713653581e-05, 'epoch': 2.59}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.50it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.64it/s][A
+  3%|2         | 4/137 [00:01<00:38,  3.48it/s][A
+  4%|3         | 5/137 [00:01<00:38,  3.47it/s][A
+  4%|4         | 6/137 [00:01<00:41,  3.18it/s][A
+  5%|5         | 7/137 [00:02<00:40,  3.20it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.36it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.37it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.30it/s][A
+  8%|8         | 11/137 [00:03<00:38,  3.31it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.79it/s][A
+  9%|9         | 13/137 [00:04<00:48,  2.54it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.59it/s][A
+ 11%|#         | 15/137 [00:04<00:45,  2.71it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.85it/s][A
+ 12%|#2        | 17/137 [00:05<00:41,  2.91it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.99it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  3.00it/s][A
+ 15%|#4        | 20/137 [00:06<00:37,  3.09it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.07it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.92it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.95it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.07it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.14it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.24it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.24it/s][A
+ 20%|##        | 28/137 [00:09<00:33,  3.21it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.21it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.24it/s][A
+ 23%|##2       | 31/137 [00:09<00:32,  3.23it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.03it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.99it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.05it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.13it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.22it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.26it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.17it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.22it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.30it/s][A
+ 30%|##9       | 41/137 [00:13<00:28,  3.33it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.31it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.30it/s][A
+ 32%|###2      | 44/137 [00:13<00:28,  3.31it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.33it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.33it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.40it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.51it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.59it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.74it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.83it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.92it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.92it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.92it/s][A
+ 40%|####      | 55/137 [00:16<00:21,  3.73it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.67it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.44it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.31it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.31it/s][A
+ 44%|####3     | 60/137 [00:18<00:22,  3.35it/s][A
+ 45%|####4     | 61/137 [00:18<00:23,  3.17it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.10it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.14it/s][A
+ 47%|####6     | 64/137 [00:19<00:23,  3.16it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.08it/s][A
+ 48%|####8     | 66/137 [00:20<00:24,  2.85it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.83it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.92it/s][A
+ 50%|#####     | 69/137 [00:21<00:23,  2.95it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.93it/s][A
+ 52%|#####1    | 71/137 [00:22<00:22,  3.00it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.04it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.03it/s][A
+ 54%|#####4    | 74/137 [00:23<00:21,  2.89it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.82it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.96it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.06it/s][A
+ 57%|#####6    | 78/137 [00:24<00:18,  3.12it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.11it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.16it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.26it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.33it/s][A
+ 61%|######    | 83/137 [00:25<00:15,  3.38it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.36it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.43it/s][A
+ 63%|######2   | 86/137 [00:26<00:15,  3.39it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.35it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.37it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.33it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.32it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.32it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.23it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.22it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.24it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.26it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.23it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.26it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.28it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.25it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.23it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.24it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.23it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.16it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.16it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.95it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.97it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  2.99it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  3.00it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.89it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.96it/s][A
+ 82%|########1 | 112/137 [00:35<00:07,  3.14it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.25it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.33it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.35it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.42it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.46it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.53it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.47it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.45it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.45it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.21it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.23it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.28it/s][A
+ 91%|#########1| 125/137 [00:39<00:03,  3.14it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.14it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.12it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.13it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.16it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.21it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.24it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.22it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.94it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.96it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.05it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.15it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.33it/s][A                                                    
+                                                 [A 80%|########  | 800/1000 [1:07:29<14:23,  4.32s/it]
+100%|##########| 137/137 [00:42<00:00,  3.33it/s][A
+                                                 [A 80%|########  | 801/1000 [1:07:36<59:23, 17.91s/it] 80%|########  | 802/1000 [1:07:40<45:28, 13.78s/it] 80%|########  | 803/1000 [1:07:44<35:34, 10.84s/it] 80%|########  | 804/1000 [1:07:48<28:55,  8.86s/it] 80%|########  | 805/1000 [1:07:52<24:11,  7.45s/it] 81%|########  | 806/1000 [1:07:57<21:15,  6.57s/it] 81%|########  | 807/1000 [1:08:01<18:38,  5.79s/it] 81%|########  | 808/1000 [1:08:05<17:20,  5.42s/it] 81%|########  | 809/1000 [1:08:10<16:13,  5.10s/it] 81%|########1 | 810/1000 [1:08:14<15:19,  4.84s/it]                                                     81%|########1 | 810/1000 [1:08:14<15:19,  4.84s/it] 81%|########1 | 811/1000 [1:08:18<14:35,  4.63s/it] 81%|########1 | 812/1000 [1:08:22<14:01,  4.48s/it] 81%|########1 | 813/1000 [1:08:26<13:44,  4.41s/it] 81%|########1 | 814/1000 [1:08:30<13:25,  4.33s/it] 82%|########1 | 815/1000 [1:08:35<13:15,  4.30s/it] 82%|########1 | 816/1000 [1:08:39<12:55,  4.22s/it] 82%|########1 | 817/1000 [1:08:43<12:46,  4.19s/it] 82%|########1 | 818/1000 [1:08:47<12:29,  4.12s/it] 82%|########1 | 819/1000 [1:08:51<12:27,  4.13s/it] 82%|########2 | 820/1000 [1:08:55<12:13,  4.07s/it]                                                     82%|########2 | 820/1000 [1:08:55<12:13,  4.07s/it] 82%|########2 | 821/1000 [1:08:59<12:31,  4.20s/it] 82%|########2 | 822/1000 [1:09:04<12:25,  4.19s/it] 82%|########2 | 823/1000 [1:09:08<12:14,  4.15s/it] 82%|########2 | 824/1000 [1:09:12<12:17,  4.19s/it] 82%|########2 | 825/1000 [1:09:17<12:43,  4.36s/it] 83%|########2 | 826/1000 [1:09:21<12:36,  4.35s/it] 83%|########2 | 827/1000 [1:09:25<12:29,  4.33s/it] 83%|########2 | 828/1000 [1:09:30<12:22,  4.32s/it] 83%|########2 | 829/1000 [1:09:34<12:14,  4.30s/it] 83%|########2 | 830/1000 [1:09:38<12:26,  4.39s/it]                                                     83%|########2 | 830/1000 [1:09:38<12:26,  4.39s/it] 83%|########3 | 831/1000 [1:09:43<12:32,  4.45s/it] 83%|########3 | 832/1000 [1:09:47<12:11,  4.35s/it] 83%|########3 | 833/1000 [1:09:51<12:05,  4.34s/it] 83%|########3 | 834/1000 [1:09:56<11:48,  4.27s/it] 84%|########3 | 835/1000 [1:10:00<11:29,  4.18s/it] 84%|########3 | 836/1000 [1:10:04<11:27,  4.19s/it] 84%|########3 | 837/1000 [1:10:08<11:16,  4.15s/it] 84%|########3 | 838/1000 [1:10:12<11:31,  4.27s/it] 84%|########3 | 839/1000 [1:10:16<11:18,  4.21s/it] 84%|########4 | 840/1000 [1:10:21<11:23,  4.27s/it]                                                     84%|########4 | 840/1000 [1:10:21<11:23,  4.27s/it] 84%|########4 | 841/1000 [1:10:25<11:11,  4.23s/it] 84%|########4 | 842/1000 [1:10:29<11:17,  4.29s/it] 84%|########4 | 843/1000 [1:10:34<11:10,  4.27s/it] 84%|########4 | 844/1000 [1:10:38<10:58,  4.22s/it] 84%|########4 | 845/1000 [1:10:43<11:20,  4.39s/it] 85%|########4 | 846/1000 [1:10:46<10:57,  4.27s/it] 85%|########4 | 847/1000 [1:10:51<10:52,  4.26s/it] 85%|########4 | 848/1000 [1:10:55<10:47,  4.26s/it] 85%|########4 | 849/1000 [1:10:59<10:49,  4.30s/it] 85%|########5 | 850/1000 [1:11:04<10:47,  4.32s/it]                                                     85%|########5 | 850/1000 [1:11:04<10:47,  4.32s/it] 85%|########5 | 851/1000 [1:11:08<10:36,  4.27s/it] 85%|########5 | 852/1000 [1:11:12<10:20,  4.19s/it] 85%|########5 | 853/1000 [1:11:16<10:05,  4.12s/it] 85%|########5 | 854/1000 [1:11:20<10:07,  4.16s/it] 86%|########5 | 855/1000 [1:11:24<10:11,  4.22s/it] 86%|########5 | 856/1000 [1:11:29<10:19,  4.30s/it] 86%|########5 | 857/1000 [1:11:33<10:11,  4.27s/it] 86%|########5 | 858/1000 [1:11:37<09:50,  4.16s/it] 86%|########5 | 859/1000 [1:11:41<09:36,  4.09s/it] 86%|########6 | 860/1000 [1:11:45<09:41,  4.15s/it]                                                     86%|########6 | 860/1000 [1:11:45<09:41,  4.15s/it] 86%|########6 | 861/1000 [1:11:49<09:30,  4.11s/it] 86%|########6 | 862/1000 [1:11:54<09:40,  4.20s/it] 86%|########6 | 863/1000 [1:11:58<09:31,  4.17s/it] 86%|########6 | 864/1000 [1:12:02<09:35,  4.23s/it] 86%|########6 | 865/1000 [1:12:06<09:26,  4.20s/it] 87%|########6 | 866/1000 [1:12:10<09:13,  4.13s/it] 87%|########6 | 867/1000 [1:12:14<09:05,  4.10s/it] 87%|########6 | 868/1000 [1:12:19<09:15,  4.20s/it] 87%|########6 | 869/1000 [1:12:23<09:20,  4.28s/it] 87%|########7 | 870/1000 [1:12:27<09:15,  4.28s/it]                                                     87%|########7 | 870/1000 [1:12:27<09:15,  4.28s/it] 87%|########7 | 871/1000 [1:12:32<09:10,  4.26s/it] 87%|########7 | 872/1000 [1:12:36<08:57,  4.20s/it] 87%|########7 | 873/1000 [1:12:40<09:03,  4.28s/it] 87%|########7 | 874/1000 [1:12:44<08:52,  4.23s/it] 88%|########7 | 875/1000 [1:12:49<08:46,  4.22s/it] 88%|########7 | 876/1000 [1:12:53<08:36,  4.17s/it] 88%|########7 | 877/1000 [1:12:57<08:25,  4.11s/it] 88%|########7 | 878/1000 [1:13:01<08:16,  4.07s/it] 88%|########7 | 879/1000 [1:13:05<08:10,  4.05s/it] 88%|########8 | 880/1000 [1:13:09<08:22,  4.19s/it]                                                     88%|########8 | 880/1000 [1:13:09<08:22,  4.19s/it] 88%|########8 | 881/1000 [1:13:14<08:43,  4.40s/it] 88%|########8 | 882/1000 [1:13:18<08:31,  4.33s/it] 88%|########8 | 883/1000 [1:13:22<08:14,  4.23s/it] 88%|########8 | 884/1000 [1:13:26<08:08,  4.21s/it] 88%|########8 | 885/1000 [1:13:30<07:54,  4.12s/it] 89%|########8 | 886/1000 [1:13:34<07:47,  4.10s/it] 89%|########8 | 887/1000 [1:13:38<07:38,  4.06s/it] 89%|########8 | 888/1000 [1:13:42<07:40,  4.11s/it] 89%|########8 | 889/1000 [1:13:47<07:35,  4.10s/it] 89%|########9 | 890/1000 [1:13:51<07:44,  4.22s/it]                                                     89%|########9 | 890/1000 [1:13:51<07:44,  4.22s/it] 89%|########9 | 891/1000 [1:13:56<07:48,  4.30s/it] 89%|########9 | 892/1000 [1:13:59<07:32,  4.19s/it] 89%|########9 | 893/1000 [1:14:03<07:24,  4.15s/it] 89%|########9 | 894/1000 [1:14:07<07:12,  4.08s/it] 90%|########9 | 895/1000 [1:14:11<07:08,  4.08s/it] 90%|########9 | 896/1000 [1:14:16<07:14,  4.18s/it] 90%|########9 | 897/1000 [1:14:20<07:03,  4.11s/it] 90%|########9 | 898/1000 [1:14:24<06:55,  4.07s/it] 90%|########9 | 899/1000 [1:14:28<06:56,  4.13s/it] 90%|######### | 900/1000 [1:14:32<06:53,  4.13s/it]                                                     90%|######### | 900/1000 [1:14:32<06:53,  4.13s/it]{'eval_loss': 0.1819990873336792, 'eval_runtime': 43.152, 'eval_samples_per_second': 12.699, 'eval_steps_per_second': 3.175, 'epoch': 2.59}
+{'loss': 0.1459, 'grad_norm': 0.2774293124675751, 'learning_rate': 2.1414310682459802e-05, 'epoch': 2.62}
+{'loss': 0.1462, 'grad_norm': 0.2609921097755432, 'learning_rate': 1.930396878561983e-05, 'epoch': 2.66}
+{'loss': 0.1498, 'grad_norm': 0.33488157391548157, 'learning_rate': 1.7291942572543807e-05, 'epoch': 2.69}
+{'loss': 0.1391, 'grad_norm': 0.2563781440258026, 'learning_rate': 1.538068338724361e-05, 'epoch': 2.72}
+{'loss': 0.1369, 'grad_norm': 0.26606568694114685, 'learning_rate': 1.3572519804629536e-05, 'epoch': 2.75}
+{'loss': 0.143, 'grad_norm': 0.32556086778640747, 'learning_rate': 1.1869654793500784e-05, 'epoch': 2.79}
+{'loss': 0.1469, 'grad_norm': 0.254019558429718, 'learning_rate': 1.0274163032567163e-05, 'epoch': 2.82}
+{'loss': 0.1358, 'grad_norm': 0.26099705696105957, 'learning_rate': 8.787988382772705e-06, 'epoch': 2.85}
+{'loss': 0.1411, 'grad_norm': 0.22675038874149323, 'learning_rate': 7.412941519000527e-06, 'epoch': 2.88}
+{'loss': 0.1317, 'grad_norm': 0.24595396220684052, 'learning_rate': 6.1506977240444074e-06, 'epoch': 2.91}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:25,  5.31it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.67it/s][A
+  3%|2         | 4/137 [00:01<00:38,  3.49it/s][A
+  4%|3         | 5/137 [00:01<00:38,  3.45it/s][A
+  4%|4         | 6/137 [00:01<00:41,  3.19it/s][A
+  5%|5         | 7/137 [00:02<00:41,  3.17it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.35it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.35it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.32it/s][A
+  8%|8         | 11/137 [00:03<00:37,  3.32it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.81it/s][A
+  9%|9         | 13/137 [00:04<00:49,  2.53it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.57it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.72it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.86it/s][A
+ 12%|#2        | 17/137 [00:05<00:40,  2.93it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.98it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  2.99it/s][A
+ 15%|#4        | 20/137 [00:06<00:38,  3.06it/s][A
+ 15%|#5        | 21/137 [00:06<00:38,  3.05it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.90it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.96it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.07it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.14it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.21it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.26it/s][A
+ 20%|##        | 28/137 [00:09<00:33,  3.21it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.18it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.18it/s][A
+ 23%|##2       | 31/137 [00:09<00:33,  3.21it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.02it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.97it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.06it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.10it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.21it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.25it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.17it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.20it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.33it/s][A
+ 30%|##9       | 41/137 [00:13<00:29,  3.31it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.30it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.31it/s][A
+ 32%|###2      | 44/137 [00:14<00:28,  3.28it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.34it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.30it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.36it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.53it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.60it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.72it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.82it/s][A
+ 38%|###7      | 52/137 [00:16<00:22,  3.81it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.96it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.94it/s][A
+ 40%|####      | 55/137 [00:16<00:21,  3.73it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.67it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.47it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.31it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.29it/s][A
+ 44%|####3     | 60/137 [00:18<00:22,  3.36it/s][A
+ 45%|####4     | 61/137 [00:18<00:24,  3.16it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.12it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.13it/s][A
+ 47%|####6     | 64/137 [00:19<00:23,  3.17it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.09it/s][A
+ 48%|####8     | 66/137 [00:20<00:25,  2.83it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.84it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.93it/s][A
+ 50%|#####     | 69/137 [00:21<00:22,  2.97it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.94it/s][A
+ 52%|#####1    | 71/137 [00:22<00:21,  3.01it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.03it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.02it/s][A
+ 54%|#####4    | 74/137 [00:23<00:22,  2.86it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.83it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.94it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.05it/s][A
+ 57%|#####6    | 78/137 [00:24<00:19,  3.09it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.13it/s][A
+ 58%|#####8    | 80/137 [00:25<00:17,  3.18it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.26it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.33it/s][A
+ 61%|######    | 83/137 [00:26<00:16,  3.32it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.38it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.43it/s][A
+ 63%|######2   | 86/137 [00:26<00:15,  3.38it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.36it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.34it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.33it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.33it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.29it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.22it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.22it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.22it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.26it/s][A
+ 70%|#######   | 96/137 [00:30<00:12,  3.23it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.25it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.26it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.26it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.18it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.23it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.24it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.14it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.16it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.95it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.98it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  3.00it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  2.99it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.89it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.97it/s][A
+ 82%|########1 | 112/137 [00:35<00:07,  3.13it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.24it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.31it/s][A
+ 84%|########3 | 115/137 [00:36<00:06,  3.37it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.40it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.45it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.46it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.47it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.44it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.41it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.22it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.24it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.27it/s][A
+ 91%|#########1| 125/137 [00:39<00:03,  3.14it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.11it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.09it/s][A
+ 93%|#########3| 128/137 [00:40<00:02,  3.11it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.19it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.21it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.23it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.22it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.94it/s][A
+ 98%|#########7| 134/137 [00:42<00:01,  2.95it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.03it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.14it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.30it/s][A                                                    
+                                                 [A 90%|######### | 900/1000 [1:15:15<06:53,  4.13s/it]
+100%|##########| 137/137 [00:42<00:00,  3.30it/s][A
+                                                 [A 90%|######### | 901/1000 [1:15:22<29:17, 17.76s/it] 90%|######### | 902/1000 [1:15:26<22:34, 13.82s/it] 90%|######### | 903/1000 [1:15:31<17:41, 10.95s/it] 90%|######### | 904/1000 [1:15:35<14:16,  8.93s/it] 90%|######### | 905/1000 [1:15:39<11:59,  7.57s/it] 91%|######### | 906/1000 [1:15:44<10:19,  6.59s/it] 91%|######### | 907/1000 [1:15:48<09:06,  5.87s/it] 91%|######### | 908/1000 [1:15:52<08:07,  5.30s/it] 91%|######### | 909/1000 [1:15:56<07:37,  5.03s/it] 91%|#########1| 910/1000 [1:16:00<07:13,  4.82s/it]                                                     91%|#########1| 910/1000 [1:16:00<07:13,  4.82s/it] 91%|#########1| 911/1000 [1:16:05<06:52,  4.64s/it] 91%|#########1| 912/1000 [1:16:09<06:28,  4.42s/it] 91%|#########1| 913/1000 [1:16:13<06:32,  4.51s/it] 91%|#########1| 914/1000 [1:16:18<06:20,  4.42s/it] 92%|#########1| 915/1000 [1:16:22<06:16,  4.44s/it] 92%|#########1| 916/1000 [1:16:26<06:04,  4.34s/it] 92%|#########1| 917/1000 [1:16:30<05:52,  4.25s/it] 92%|#########1| 918/1000 [1:16:34<05:39,  4.14s/it] 92%|#########1| 919/1000 [1:16:38<05:31,  4.10s/it] 92%|#########2| 920/1000 [1:16:42<05:24,  4.06s/it]                                                     92%|#########2| 920/1000 [1:16:42<05:24,  4.06s/it] 92%|#########2| 921/1000 [1:16:46<05:29,  4.17s/it] 92%|#########2| 922/1000 [1:16:51<05:30,  4.24s/it] 92%|#########2| 923/1000 [1:16:55<05:17,  4.12s/it] 92%|#########2| 924/1000 [1:16:59<05:22,  4.25s/it] 92%|#########2| 925/1000 [1:17:03<05:17,  4.23s/it] 93%|#########2| 926/1000 [1:17:08<05:10,  4.20s/it] 93%|#########2| 927/1000 [1:17:09<04:00,  3.29s/it] 93%|#########2| 928/1000 [1:17:13<04:15,  3.55s/it] 93%|#########2| 929/1000 [1:17:17<04:23,  3.71s/it] 93%|#########3| 930/1000 [1:17:21<04:31,  3.88s/it]                                                     93%|#########3| 930/1000 [1:17:21<04:31,  3.88s/it] 93%|#########3| 931/1000 [1:17:26<04:41,  4.08s/it] 93%|#########3| 932/1000 [1:17:30<04:39,  4.11s/it] 93%|#########3| 933/1000 [1:17:34<04:35,  4.11s/it] 93%|#########3| 934/1000 [1:17:38<04:36,  4.19s/it] 94%|#########3| 935/1000 [1:17:43<04:30,  4.16s/it] 94%|#########3| 936/1000 [1:17:46<04:21,  4.09s/it] 94%|#########3| 937/1000 [1:17:51<04:18,  4.10s/it] 94%|#########3| 938/1000 [1:17:55<04:16,  4.14s/it] 94%|#########3| 939/1000 [1:18:00<04:26,  4.37s/it] 94%|#########3| 940/1000 [1:18:04<04:12,  4.20s/it]                                                     94%|#########3| 940/1000 [1:18:04<04:12,  4.20s/it] 94%|#########4| 941/1000 [1:18:08<04:04,  4.15s/it] 94%|#########4| 942/1000 [1:18:11<03:55,  4.07s/it] 94%|#########4| 943/1000 [1:18:16<03:52,  4.07s/it] 94%|#########4| 944/1000 [1:18:20<03:47,  4.07s/it] 94%|#########4| 945/1000 [1:18:24<03:55,  4.27s/it] 95%|#########4| 946/1000 [1:18:28<03:46,  4.20s/it] 95%|#########4| 947/1000 [1:18:32<03:40,  4.17s/it] 95%|#########4| 948/1000 [1:18:37<03:40,  4.24s/it] 95%|#########4| 949/1000 [1:18:41<03:39,  4.30s/it] 95%|#########5| 950/1000 [1:18:46<03:40,  4.42s/it]                                                     95%|#########5| 950/1000 [1:18:46<03:40,  4.42s/it] 95%|#########5| 951/1000 [1:18:50<03:33,  4.36s/it] 95%|#########5| 952/1000 [1:18:54<03:25,  4.28s/it] 95%|#########5| 953/1000 [1:18:58<03:17,  4.20s/it] 95%|#########5| 954/1000 [1:19:02<03:10,  4.14s/it] 96%|#########5| 955/1000 [1:19:07<03:07,  4.18s/it] 96%|#########5| 956/1000 [1:19:10<02:58,  4.07s/it] 96%|#########5| 957/1000 [1:19:15<02:56,  4.11s/it] 96%|#########5| 958/1000 [1:19:19<02:51,  4.07s/it] 96%|#########5| 959/1000 [1:19:23<02:49,  4.14s/it] 96%|#########6| 960/1000 [1:19:28<02:53,  4.33s/it]                                                     96%|#########6| 960/1000 [1:19:28<02:53,  4.33s/it] 96%|#########6| 961/1000 [1:19:32<02:47,  4.30s/it] 96%|#########6| 962/1000 [1:19:36<02:42,  4.28s/it] 96%|#########6| 963/1000 [1:19:40<02:33,  4.14s/it] 96%|#########6| 964/1000 [1:19:45<02:37,  4.37s/it] 96%|#########6| 965/1000 [1:19:49<02:31,  4.33s/it] 97%|#########6| 966/1000 [1:19:53<02:24,  4.24s/it] 97%|#########6| 967/1000 [1:19:57<02:18,  4.20s/it] 97%|#########6| 968/1000 [1:20:01<02:14,  4.19s/it] 97%|#########6| 969/1000 [1:20:06<02:12,  4.27s/it] 97%|#########7| 970/1000 [1:20:11<02:14,  4.49s/it]                                                     97%|#########7| 970/1000 [1:20:11<02:14,  4.49s/it] 97%|#########7| 971/1000 [1:20:15<02:10,  4.50s/it] 97%|#########7| 972/1000 [1:20:19<02:02,  4.37s/it] 97%|#########7| 973/1000 [1:20:24<01:58,  4.40s/it] 97%|#########7| 974/1000 [1:20:28<01:51,  4.31s/it] 98%|#########7| 975/1000 [1:20:32<01:47,  4.29s/it] 98%|#########7| 976/1000 [1:20:37<01:44,  4.33s/it] 98%|#########7| 977/1000 [1:20:41<01:37,  4.25s/it] 98%|#########7| 978/1000 [1:20:45<01:31,  4.16s/it] 98%|#########7| 979/1000 [1:20:49<01:28,  4.23s/it] 98%|#########8| 980/1000 [1:20:53<01:23,  4.19s/it]                                                     98%|#########8| 980/1000 [1:20:53<01:23,  4.19s/it] 98%|#########8| 981/1000 [1:20:58<01:22,  4.35s/it] 98%|#########8| 982/1000 [1:21:02<01:16,  4.23s/it] 98%|#########8| 983/1000 [1:21:06<01:10,  4.16s/it] 98%|#########8| 984/1000 [1:21:10<01:05,  4.08s/it] 98%|#########8| 985/1000 [1:21:14<01:00,  4.07s/it] 99%|#########8| 986/1000 [1:21:18<00:57,  4.11s/it] 99%|#########8| 987/1000 [1:21:22<00:53,  4.10s/it] 99%|#########8| 988/1000 [1:21:27<00:51,  4.28s/it] 99%|#########8| 989/1000 [1:21:31<00:45,  4.17s/it] 99%|#########9| 990/1000 [1:21:35<00:41,  4.19s/it]                                                     99%|#########9| 990/1000 [1:21:35<00:41,  4.19s/it] 99%|#########9| 991/1000 [1:21:39<00:38,  4.24s/it] 99%|#########9| 992/1000 [1:21:43<00:33,  4.19s/it] 99%|#########9| 993/1000 [1:21:48<00:31,  4.47s/it] 99%|#########9| 994/1000 [1:21:53<00:26,  4.40s/it]100%|#########9| 995/1000 [1:21:57<00:21,  4.40s/it]100%|#########9| 996/1000 [1:22:02<00:17,  4.45s/it]100%|#########9| 997/1000 [1:22:06<00:13,  4.52s/it]100%|#########9| 998/1000 [1:22:10<00:08,  4.33s/it]100%|#########9| 999/1000 [1:22:14<00:04,  4.28s/it]100%|##########| 1000/1000 [1:22:19<00:00,  4.41s/it]                                                     100%|##########| 1000/1000 [1:22:19<00:00,  4.41s/it]{'eval_loss': 0.1808931678533554, 'eval_runtime': 43.2386, 'eval_samples_per_second': 12.674, 'eval_steps_per_second': 3.168, 'epoch': 2.91}
+{'loss': 0.1224, 'grad_norm': 0.3033669888973236, 'learning_rate': 5.002794847534764e-06, 'epoch': 2.95}
+{'loss': 0.121, 'grad_norm': 0.26523175835609436, 'learning_rate': 3.970631432305694e-06, 'epoch': 2.98}
+{'loss': 0.1348, 'grad_norm': 0.23704510927200317, 'learning_rate': 3.0554650104861136e-06, 'epoch': 3.01}
+{'loss': 0.1226, 'grad_norm': 0.19826534390449524, 'learning_rate': 2.2584105713904125e-06, 'epoch': 3.04}
+{'loss': 0.1206, 'grad_norm': 0.22056637704372406, 'learning_rate': 1.580439203075812e-06, 'epoch': 3.07}
+{'loss': 0.1221, 'grad_norm': 0.25955823063850403, 'learning_rate': 1.0223769092211012e-06, 'epoch': 3.11}
+{'loss': 0.1254, 'grad_norm': 0.25297269225120544, 'learning_rate': 5.849036027684606e-07, 'epoch': 3.14}
+{'loss': 0.1338, 'grad_norm': 0.24348652362823486, 'learning_rate': 2.685522775541904e-07, 'epoch': 3.17}
+{'loss': 0.1081, 'grad_norm': 0.24847328662872314, 'learning_rate': 7.370835893788508e-08, 'epoch': 3.2}
+{'loss': 0.1434, 'grad_norm': 0.2947806715965271, 'learning_rate': 6.092342209607083e-10, 'epoch': 3.24}
+
+  0%|          | 0/137 [00:00<?, ?it/s][A
+  1%|1         | 2/137 [00:00<00:24,  5.49it/s][A
+  2%|2         | 3/137 [00:00<00:36,  3.67it/s][A
+  3%|2         | 4/137 [00:01<00:37,  3.52it/s][A
+  4%|3         | 5/137 [00:01<00:38,  3.45it/s][A
+  4%|4         | 6/137 [00:01<00:41,  3.18it/s][A
+  5%|5         | 7/137 [00:02<00:40,  3.21it/s][A
+  6%|5         | 8/137 [00:02<00:38,  3.33it/s][A
+  7%|6         | 9/137 [00:02<00:38,  3.33it/s][A
+  7%|7         | 10/137 [00:02<00:38,  3.33it/s][A
+  8%|8         | 11/137 [00:03<00:38,  3.28it/s][A
+  9%|8         | 12/137 [00:03<00:44,  2.81it/s][A
+  9%|9         | 13/137 [00:04<00:49,  2.53it/s][A
+ 10%|#         | 14/137 [00:04<00:47,  2.61it/s][A
+ 11%|#         | 15/137 [00:04<00:44,  2.71it/s][A
+ 12%|#1        | 16/137 [00:05<00:42,  2.84it/s][A
+ 12%|#2        | 17/137 [00:05<00:40,  2.93it/s][A
+ 13%|#3        | 18/137 [00:05<00:39,  2.99it/s][A
+ 14%|#3        | 19/137 [00:06<00:39,  2.99it/s][A
+ 15%|#4        | 20/137 [00:06<00:38,  3.06it/s][A
+ 15%|#5        | 21/137 [00:06<00:37,  3.09it/s][A
+ 16%|#6        | 22/137 [00:07<00:39,  2.91it/s][A
+ 17%|#6        | 23/137 [00:07<00:38,  2.98it/s][A
+ 18%|#7        | 24/137 [00:07<00:36,  3.09it/s][A
+ 18%|#8        | 25/137 [00:08<00:35,  3.14it/s][A
+ 19%|#8        | 26/137 [00:08<00:34,  3.23it/s][A
+ 20%|#9        | 27/137 [00:08<00:33,  3.24it/s][A
+ 20%|##        | 28/137 [00:09<00:34,  3.20it/s][A
+ 21%|##1       | 29/137 [00:09<00:33,  3.19it/s][A
+ 22%|##1       | 30/137 [00:09<00:33,  3.23it/s][A
+ 23%|##2       | 31/137 [00:09<00:33,  3.18it/s][A
+ 23%|##3       | 32/137 [00:10<00:34,  3.04it/s][A
+ 24%|##4       | 33/137 [00:10<00:34,  2.99it/s][A
+ 25%|##4       | 34/137 [00:10<00:33,  3.06it/s][A
+ 26%|##5       | 35/137 [00:11<00:32,  3.14it/s][A
+ 26%|##6       | 36/137 [00:11<00:31,  3.23it/s][A
+ 27%|##7       | 37/137 [00:11<00:30,  3.25it/s][A
+ 28%|##7       | 38/137 [00:12<00:31,  3.15it/s][A
+ 28%|##8       | 39/137 [00:12<00:30,  3.22it/s][A
+ 29%|##9       | 40/137 [00:12<00:29,  3.30it/s][A
+ 30%|##9       | 41/137 [00:13<00:28,  3.34it/s][A
+ 31%|###       | 42/137 [00:13<00:28,  3.31it/s][A
+ 31%|###1      | 43/137 [00:13<00:28,  3.32it/s][A
+ 32%|###2      | 44/137 [00:13<00:28,  3.28it/s][A
+ 33%|###2      | 45/137 [00:14<00:27,  3.34it/s][A
+ 34%|###3      | 46/137 [00:14<00:27,  3.32it/s][A
+ 34%|###4      | 47/137 [00:14<00:26,  3.40it/s][A
+ 35%|###5      | 48/137 [00:15<00:25,  3.55it/s][A
+ 36%|###5      | 49/137 [00:15<00:24,  3.62it/s][A
+ 36%|###6      | 50/137 [00:15<00:23,  3.75it/s][A
+ 37%|###7      | 51/137 [00:15<00:22,  3.83it/s][A
+ 38%|###7      | 52/137 [00:16<00:21,  3.91it/s][A
+ 39%|###8      | 53/137 [00:16<00:21,  3.88it/s][A
+ 39%|###9      | 54/137 [00:16<00:21,  3.94it/s][A
+ 40%|####      | 55/137 [00:16<00:21,  3.73it/s][A
+ 41%|####      | 56/137 [00:17<00:22,  3.65it/s][A
+ 42%|####1     | 57/137 [00:17<00:23,  3.44it/s][A
+ 42%|####2     | 58/137 [00:17<00:23,  3.34it/s][A
+ 43%|####3     | 59/137 [00:18<00:23,  3.30it/s][A
+ 44%|####3     | 60/137 [00:18<00:23,  3.34it/s][A
+ 45%|####4     | 61/137 [00:18<00:24,  3.16it/s][A
+ 45%|####5     | 62/137 [00:19<00:24,  3.11it/s][A
+ 46%|####5     | 63/137 [00:19<00:23,  3.14it/s][A
+ 47%|####6     | 64/137 [00:19<00:23,  3.15it/s][A
+ 47%|####7     | 65/137 [00:20<00:23,  3.10it/s][A
+ 48%|####8     | 66/137 [00:20<00:25,  2.84it/s][A
+ 49%|####8     | 67/137 [00:20<00:24,  2.84it/s][A
+ 50%|####9     | 68/137 [00:21<00:23,  2.90it/s][A
+ 50%|#####     | 69/137 [00:21<00:23,  2.94it/s][A
+ 51%|#####1    | 70/137 [00:21<00:22,  2.93it/s][A
+ 52%|#####1    | 71/137 [00:22<00:22,  3.00it/s][A
+ 53%|#####2    | 72/137 [00:22<00:21,  3.04it/s][A
+ 53%|#####3    | 73/137 [00:22<00:21,  3.03it/s][A
+ 54%|#####4    | 74/137 [00:23<00:22,  2.86it/s][A
+ 55%|#####4    | 75/137 [00:23<00:21,  2.84it/s][A
+ 55%|#####5    | 76/137 [00:23<00:20,  2.98it/s][A
+ 56%|#####6    | 77/137 [00:24<00:19,  3.06it/s][A
+ 57%|#####6    | 78/137 [00:24<00:18,  3.12it/s][A
+ 58%|#####7    | 79/137 [00:24<00:18,  3.12it/s][A
+ 58%|#####8    | 80/137 [00:25<00:18,  3.16it/s][A
+ 59%|#####9    | 81/137 [00:25<00:17,  3.25it/s][A
+ 60%|#####9    | 82/137 [00:25<00:16,  3.36it/s][A
+ 61%|######    | 83/137 [00:26<00:16,  3.36it/s][A
+ 61%|######1   | 84/137 [00:26<00:15,  3.35it/s][A
+ 62%|######2   | 85/137 [00:26<00:15,  3.40it/s][A
+ 63%|######2   | 86/137 [00:26<00:14,  3.42it/s][A
+ 64%|######3   | 87/137 [00:27<00:14,  3.35it/s][A
+ 64%|######4   | 88/137 [00:27<00:14,  3.35it/s][A
+ 65%|######4   | 89/137 [00:27<00:14,  3.32it/s][A
+ 66%|######5   | 90/137 [00:28<00:14,  3.33it/s][A
+ 66%|######6   | 91/137 [00:28<00:13,  3.33it/s][A
+ 67%|######7   | 92/137 [00:28<00:13,  3.24it/s][A
+ 68%|######7   | 93/137 [00:29<00:13,  3.24it/s][A
+ 69%|######8   | 94/137 [00:29<00:13,  3.23it/s][A
+ 69%|######9   | 95/137 [00:29<00:12,  3.28it/s][A
+ 70%|#######   | 96/137 [00:29<00:12,  3.24it/s][A
+ 71%|#######   | 97/137 [00:30<00:12,  3.29it/s][A
+ 72%|#######1  | 98/137 [00:30<00:11,  3.27it/s][A
+ 72%|#######2  | 99/137 [00:30<00:11,  3.26it/s][A
+ 73%|#######2  | 100/137 [00:31<00:11,  3.22it/s][A
+ 74%|#######3  | 101/137 [00:31<00:11,  3.21it/s][A
+ 74%|#######4  | 102/137 [00:31<00:10,  3.21it/s][A
+ 75%|#######5  | 103/137 [00:32<00:10,  3.15it/s][A
+ 76%|#######5  | 104/137 [00:32<00:10,  3.16it/s][A
+ 77%|#######6  | 105/137 [00:32<00:10,  3.17it/s][A
+ 77%|#######7  | 106/137 [00:33<00:10,  2.96it/s][A
+ 78%|#######8  | 107/137 [00:33<00:10,  2.97it/s][A
+ 79%|#######8  | 108/137 [00:33<00:09,  3.02it/s][A
+ 80%|#######9  | 109/137 [00:34<00:09,  2.99it/s][A
+ 80%|########  | 110/137 [00:34<00:09,  2.88it/s][A
+ 81%|########1 | 111/137 [00:34<00:08,  2.97it/s][A
+ 82%|########1 | 112/137 [00:35<00:08,  3.12it/s][A
+ 82%|########2 | 113/137 [00:35<00:07,  3.22it/s][A
+ 83%|########3 | 114/137 [00:35<00:06,  3.35it/s][A
+ 84%|########3 | 115/137 [00:35<00:06,  3.36it/s][A
+ 85%|########4 | 116/137 [00:36<00:06,  3.41it/s][A
+ 85%|########5 | 117/137 [00:36<00:05,  3.48it/s][A
+ 86%|########6 | 118/137 [00:36<00:05,  3.48it/s][A
+ 87%|########6 | 119/137 [00:37<00:05,  3.46it/s][A
+ 88%|########7 | 120/137 [00:37<00:04,  3.46it/s][A
+ 88%|########8 | 121/137 [00:37<00:04,  3.46it/s][A
+ 89%|########9 | 122/137 [00:38<00:04,  3.19it/s][A
+ 90%|########9 | 123/137 [00:38<00:04,  3.19it/s][A
+ 91%|######### | 124/137 [00:38<00:03,  3.27it/s][A
+ 91%|#########1| 125/137 [00:39<00:03,  3.11it/s][A
+ 92%|#########1| 126/137 [00:39<00:03,  3.13it/s][A
+ 93%|#########2| 127/137 [00:39<00:03,  3.14it/s][A
+ 93%|#########3| 128/137 [00:39<00:02,  3.10it/s][A
+ 94%|#########4| 129/137 [00:40<00:02,  3.18it/s][A
+ 95%|#########4| 130/137 [00:40<00:02,  3.22it/s][A
+ 96%|#########5| 131/137 [00:40<00:01,  3.24it/s][A
+ 96%|#########6| 132/137 [00:41<00:01,  3.21it/s][A
+ 97%|#########7| 133/137 [00:41<00:01,  2.95it/s][A
+ 98%|#########7| 134/137 [00:41<00:01,  2.96it/s][A
+ 99%|#########8| 135/137 [00:42<00:00,  3.04it/s][A
+ 99%|#########9| 136/137 [00:42<00:00,  3.16it/s][A
+100%|##########| 137/137 [00:42<00:00,  3.28it/s][A                                                     
+                                                 [A100%|##########| 1000/1000 [1:23:02<00:00,  4.41s/it]
+100%|##########| 137/137 [00:42<00:00,  3.28it/s][A
+                                                 [A                                                     100%|##########| 1000/1000 [1:23:05<00:00,  4.41s/it]{'eval_loss': 0.1826988011598587, 'eval_runtime': 43.1733, 'eval_samples_per_second': 12.693, 'eval_steps_per_second': 3.173, 'epoch': 3.24}
+{'train_runtime': 4985.2554, 'train_samples_per_second': 3.209, 'train_steps_per_second': 0.201, 'train_loss': 0.21636471569538115, 'epoch': 3.24}
+2026-10-31 16:30:59,238 - src.training_metrics - INFO - Training finished in 4985.3s (83.1min)
+2026-10-31 16:30:59,238 - src.training_metrics - INFO - Total logged steps: 111
+2026-10-31 16:30:59,238 - src.training_metrics - INFO - Total eval records: 10
+2026-10-31 16:30:59,241 - src.training_metrics - INFO - Training history JSON saved to: experiments\v3\runs\qwen2.5-7b_s42\training_history.json
+2026-10-31 16:30:59,242 - src.training_metrics - INFO - Training history CSV saved to: experiments\v3\runs\qwen2.5-7b_s42\training_history.csv
+2026-10-31 16:30:59,481 - src.training_metrics - INFO - Training curves plot saved to: experiments\v3\runs\qwen2.5-7b_s42\training_curves.png
+2026-10-31 16:30:59,664 - src.training_metrics - INFO - LR schedule plot saved to: experiments\v3\runs\qwen2.5-7b_s42\lr_schedule.png
+100%|##########| 1000/1000 [1:23:05<00:00,  4.99s/it]
+2026-10-31 16:30:59,996 - __main__ - INFO - ----------------------------------------------------------------------
+2026-10-31 16:30:59,996 - __main__ - INFO - Training complete!
+2026-10-31 16:30:59,996 - __main__ - INFO - Train loss: 0.2164
+2026-10-31 16:30:59,996 - __main__ - INFO - Total steps: 1000
+2026-10-31 16:30:59,996 - __main__ - INFO - 
+Training Curves Summary:
+2026-10-31 16:30:59,996 - __main__ - INFO -   Initial loss: 2.2499
+2026-10-31 16:30:59,996 - __main__ - INFO -   Final loss:   0.216365
+2026-10-31 16:30:59,996 - __main__ - INFO -   Min loss:     0.1081
+2026-10-31 16:30:59,996 - __main__ - INFO -   Loss reduction: 90.38%
+2026-10-31 16:30:59,996 - __main__ - INFO -   Best eval loss: 0.18009060621261597 (step 600)
+2026-10-31 16:30:59,996 - __main__ - INFO -   Total time: 83.1 min
+2026-10-31 16:30:59,996 - __main__ - INFO - 
+Saving model...
+2026-10-31 16:30:59,997 - __main__ - INFO - Saving model to: experiments\v3\runs\qwen2.5-7b_s42
+2026-10-31 16:30:59,997 - __main__ - INFO - Save method: lora
+2026-10-31 16:31:01,347 - __main__ - INFO - LoRA adapters saved!
+2026-10-31 16:31:01,348 - __main__ - INFO - Saving model to: experiments\v3\runs\qwen2.5-7b_s42
+2026-10-31 16:31:01,348 - __main__ - INFO - Save method: merged
+Found HuggingFace hub cache directory: C:\Users\User\code\UzABSA-LLM\models_cache\hub
+Fetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]Fetching 1 files: 100%|##########| 1/1 [00:01<00:00,  1.05s/it]Fetching 1 files: 100%|##########| 1/1 [00:01<00:00,  1.05s/it]
+Checking cache directory for required files...
+Cache check failed: model-00001-of-00004.safetensors not found in local cache.
+Not all required files found in cache. Will proceed with downloading.
+Checking cache directory for required files...
+Cache check failed: tokenizer.model not found in local cache.
+Not all required files found in cache. Will proceed with downloading.
+Unsloth: Preparing safetensor model files:   0%|          | 0/4 [00:00<?, ?it/s]Unsloth: Preparing safetensor model files:  25%|##5       | 1/4 [19:02<57:08, 1142.81s/it]Unsloth: Preparing safetensor model files:  50%|#####     | 2/4 [41:28<42:04, 1262.24s/it]Unsloth: Preparing safetensor model files:  75%|#######5  | 3/4 [57:35<18:47, 1127.36s/it]Unsloth: Preparing safetensor model files: 100%|##########| 4/4 [1:00:49<00:00, 758.70s/it]Unsloth: Preparing safetensor model files: 100%|##########| 4/4 [1:00:49<00:00, 912.26s/it]
+Note: tokenizer.model not found (this is OK for non-SentencePiece models)
+Unsloth: Merging weights into 16bit:   0%|          | 0/4 [00:00<?, ?it/s]Unsloth: Merging weights into 16bit:  25%|##5       | 1/4 [00:07<00:21,  7.01s/it]Unsloth: Merging weights into 16bit:  50%|#####     | 2/4 [00:14<00:14,  7.21s/it]Unsloth: Merging weights into 16bit:  75%|#######5  | 3/4 [00:21<00:07,  7.04s/it]Unsloth: Merging weights into 16bit: 100%|##########| 4/4 [00:22<00:00,  4.69s/it]Unsloth: Merging weights into 16bit: 100%|##########| 4/4 [00:22<00:00,  5.57s/it]
+Unsloth: Merge process complete. Saved to `C:\Users\User\code\UzABSA-LLM\experiments\v3\runs\qwen2.5-7b_s42\merged_model`
+2026-10-31 17:32:16,649 - __main__ - INFO - Merged model saved!
+2026-10-31 17:32:16,651 - src.training_metrics - INFO - Experiment summary saved to: experiments\v3\runs\qwen2.5-7b_s42\experiment_summary.json
+2026-10-31 17:32:16,798 - src.training_metrics - INFO - GPU memory plot saved to: experiments\v3\runs\qwen2.5-7b_s42\gpu_memory.png
+2026-10-31 17:32:16,798 - __main__ - INFO - ======================================================================
+2026-10-31 17:32:16,798 - __main__ - INFO - Fine-tuning complete!
+2026-10-31 17:32:16,798 - __main__ - INFO - Model saved to: experiments\v3\runs\qwen2.5-7b_s42
+2026-10-31 17:32:16,798 - __main__ - INFO - Outputs in experiments\v3\runs\qwen2.5-7b_s42:
+2026-10-31 17:32:16,798 - __main__ - INFO -   lora_adapters/     — LoRA adapter weights
+2026-10-31 17:32:16,798 - __main__ - INFO -   merged_model/      — Full merged model (for inference)
+2026-10-31 17:32:16,798 - __main__ - INFO -   training_history.json  — Per-step metrics
+2026-10-31 17:32:16,798 - __main__ - INFO -   training_history.csv   — Metrics as CSV
+2026-10-31 17:32:16,798 - __main__ - INFO -   training_curves.png    — Loss curves plot
+2026-10-31 17:32:16,799 - __main__ - INFO -   lr_schedule.png        — Learning rate schedule
+2026-10-31 17:32:16,799 - __main__ - INFO -   experiment_summary.json — Full experiment config + results
+2026-10-31 17:32:16,799 - __main__ - INFO - ======================================================================
+# exit 0 after 8710s

@@ -1,0 +1,46 @@
+
+=== split ===
+[skip] split/split: experiments\v3\data\split_stats.json exists
+
+=== bio ===
+[skip] bio/bio: experiments\v3\data_bio\stats.json exists
+
+=== train-enc ===
+[run] train-enc/BERTbek_s42 -> experiments\v3\logs\train-enc\BERTbek_s42.log
+[ok] train-enc/BERTbek_s42 (85s)
+[run] train-enc/BERTbek_s42_test -> experiments\v3\logs\train-enc\BERTbek_s42_test.log
+[ok] train-enc/BERTbek_s42_test (15s)
+[run] train-enc/BERTbek_s42_dev -> experiments\v3\logs\train-enc\BERTbek_s42_dev.log
+[ok] train-enc/BERTbek_s42_dev (14s)
+[run] train-enc/BERTbek_s43 -> experiments\v3\logs\train-enc\BERTbek_s43.log
+[ok] train-enc/BERTbek_s43 (111s)
+[run] train-enc/BERTbek_s43_test -> experiments\v3\logs\train-enc\BERTbek_s43_test.log
+[ok] train-enc/BERTbek_s43_test (15s)
+[run] train-enc/BERTbek_s43_dev -> experiments\v3\logs\train-enc\BERTbek_s43_dev.log
+[ok] train-enc/BERTbek_s43_dev (14s)
+[run] train-enc/BERTbek_s44 -> experiments\v3\logs\train-enc\BERTbek_s44.log
+[ok] train-enc/BERTbek_s44 (79s)
+[run] train-enc/BERTbek_s44_test -> experiments\v3\logs\train-enc\BERTbek_s44_test.log
+[ok] train-enc/BERTbek_s44_test (14s)
+[run] train-enc/BERTbek_s44_dev -> experiments\v3\logs\train-enc\BERTbek_s44_dev.log
+[ok] train-enc/BERTbek_s44_dev (13s)
+[run] train-enc/TahrirchiBERT_s42 -> experiments\v3\logs\train-enc\TahrirchiBERT_s42.log
+[ok] train-enc/TahrirchiBERT_s42 (145s)
+[run] train-enc/TahrirchiBERT_s42_test -> experiments\v3\logs\train-enc\TahrirchiBERT_s42_test.log
+[ok] train-enc/TahrirchiBERT_s42_test (15s)
+[run] train-enc/TahrirchiBERT_s42_dev -> experiments\v3\logs\train-enc\TahrirchiBERT_s42_dev.log
+[ok] train-enc/TahrirchiBERT_s42_dev (15s)
+[run] train-enc/TahrirchiBERT_s43 -> experiments\v3\logs\train-enc\TahrirchiBERT_s43.log
+[ok] train-enc/TahrirchiBERT_s43 (196s)
+[run] train-enc/TahrirchiBERT_s43_test -> experiments\v3\logs\train-enc\TahrirchiBERT_s43_test.log
+[ok] train-enc/TahrirchiBERT_s43_test (15s)
+[run] train-enc/TahrirchiBERT_s43_dev -> experiments\v3\logs\train-enc\TahrirchiBERT_s43_dev.log
+[ok] train-enc/TahrirchiBERT_s43_dev (14s)
+[run] train-enc/TahrirchiBERT_s44 -> experiments\v3\logs\train-enc\TahrirchiBERT_s44.log
+[ok] train-enc/TahrirchiBERT_s44 (196s)
+[run] train-enc/TahrirchiBERT_s44_test -> experiments\v3\logs\train-enc\TahrirchiBERT_s44_test.log
+[ok] train-enc/TahrirchiBERT_s44_test (16s)
+[run] train-enc/TahrirchiBERT_s44_dev -> experiments\v3\logs\train-enc\TahrirchiBERT_s44_dev.log
+[ok] train-enc/TahrirchiBERT_s44_dev (15s)
+
+Done.

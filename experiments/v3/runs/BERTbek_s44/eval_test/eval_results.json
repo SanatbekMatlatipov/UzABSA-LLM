@@ -1,0 +1,25 @@
+{
+  "model_dir": "experiments\\v3\\runs\\BERTbek_s44\\model",
+  "num_examples": 609,
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.6787,
+      "recall": 0.6879,
+      "f1": 0.6833
+    },
+    "partial_match": {
+      "precision": 0.7925,
+      "recall": 0.8033,
+      "f1": 0.7978
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6037,
+    "pair_recall": 0.6119,
+    "pair_f1": 0.6078,
+    "sentiment_accuracy": 0.8895,
+    "sentiment_macro_f1": 0.8284,
+    "total_predictions": 747,
+    "total_references": 737
+  }
+}

@@ -51,6 +51,7 @@ import shlex
 import socket
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 from datetime import datetime
@@ -183,8 +184,16 @@ class Runner:
         queues = {g: jobs[i::len(gpus)] for i, g in enumerate(gpus)}
 
         def worker(g):
+            # torch.compile keys its generated kernels by source hash alone, so
+            # parallel jobs sharing one cache dir can import a kernel another job
+            # is still writing ("source code string cannot contain null bytes").
+            # Give every GPU worker its own compile cache.
+            cache = Path(tempfile.gettempdir()) / f"uzabsa_compile_gpu{g}"
             for name, cmd, done in queues[g]:
-                self.job(stage, name, cmd, done, env={"CUDA_VISIBLE_DEVICES": str(g)})
+                self.job(stage, name, cmd, done,
+                         env={"CUDA_VISIBLE_DEVICES": str(g),
+                              "TORCHINDUCTOR_CACHE_DIR": str(cache / "inductor"),
+                              "TRITON_CACHE_DIR": str(cache / "triton")})
         threads = [threading.Thread(target=worker, args=(g,)) for g in gpus]
         for t in threads:
             t.start()

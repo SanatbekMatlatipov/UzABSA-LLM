@@ -1,0 +1,25 @@
+{
+  "model": "tahrirchi/tahrirchi-bert-base",
+  "seqeval_span_metrics": {
+    "eval_loss": 0.44326213002204895,
+    "eval_precision": 0.6072607260726073,
+    "eval_recall": 0.6032786885245902,
+    "eval_f1": 0.6052631578947368,
+    "eval_accuracy": 0.8801481804314666,
+    "eval_runtime": 1.1037,
+    "eval_samples_per_second": 496.493,
+    "eval_steps_per_second": 31.71,
+    "epoch": 4.0
+  },
+  "args": {
+    "model": "tahrirchi/tahrirchi-bert-base",
+    "bio_dir": "experiments\\v3\\data_bio",
+    "out": "experiments\\v3\\runs\\TahrirchiBERT_s42",
+    "epochs": 4.0,
+    "lr": 3e-05,
+    "batch_size": 16,
+    "max_length": 192,
+    "seed": 42,
+    "device": "auto"
+  }
+}
