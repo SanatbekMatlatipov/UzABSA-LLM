@@ -54,7 +54,7 @@ model-index:
 
 # UzABSA Qwen 2.5-7B
 
-A **7.6B** parameter LLM fine-tuned with QLoRA for **aspect-based sentiment analysis (ABSA)** of Uzbek reviews. Given a review, it returns JSON listing the aspect terms and aspect categories it mentions, each with its sentiment polarity.
+A **7.6B**-parameter LLM fine-tuned with QLoRA for **aspect-based sentiment analysis (ABSA)** of Uzbek reviews. Given a review, it returns JSON listing the aspect terms and aspect categories it mentions, each with its sentiment polarity.
 
 > This is the **`qwen2.5-7b`** branch of [Sanatbek/UzABSA-LLM](https://huggingface.co/Sanatbek/UzABSA-LLM). The [main page](https://huggingface.co/Sanatbek/UzABSA-LLM) compares the three models.
 

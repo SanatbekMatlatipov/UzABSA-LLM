@@ -56,7 +56,7 @@ model-index:
 
 **Built with Llama.** This model is a fine-tune of Llama 3.1 8B Instruct. Its use is governed by the [Llama 3.1 Community License](https://www.llama.com/llama3_1/license/) and the [Llama 3.1 Acceptable Use Policy](https://www.llama.com/llama3_1/use-policy/).
 
-A **8.0B** parameter LLM fine-tuned with QLoRA for **aspect-based sentiment analysis (ABSA)** of Uzbek reviews. Given a review, it returns JSON listing the aspect terms and aspect categories it mentions, each with its sentiment polarity.
+An **8.0B**-parameter LLM fine-tuned with QLoRA for **aspect-based sentiment analysis (ABSA)** of Uzbek reviews. Given a review, it returns JSON listing the aspect terms and aspect categories it mentions, each with its sentiment polarity.
 
 > This is the **`llama3.1-8b`** branch of [Sanatbek/UzABSA-LLM](https://huggingface.co/Sanatbek/UzABSA-LLM). The [main page](https://huggingface.co/Sanatbek/UzABSA-LLM) compares the three models.
 

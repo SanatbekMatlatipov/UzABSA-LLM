@@ -17,3 +17,7 @@ annotated/annotation_checkpoint.json
 !*.log
 # superseded re-check workbooks, kept on this machine only
 test_recheck/archive-not-to-consider/
+
+# Hub upload chatter: thousands of tqdm progress lines, and the Hub commit
+# is itself the record of what was uploaded.
+logs/hub_push.out
