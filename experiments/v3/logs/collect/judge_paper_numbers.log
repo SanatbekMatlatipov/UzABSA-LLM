@@ -1,0 +1,35 @@
+# 2026-10-31T01:26:47 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# PYTHONHASHSEED=0 /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/judge_paper_numbers.py --corpus experiments/v3/judge/release_v1/judge_results.json --repeat experiments/v3/judge/calibration_v1/raw --out experiments/v3/results/judge_paper_numbers.json
+Traceback (most recent call last):
+  File "/Users/sanatbek/code/UzABSA-LLM/scripts/judge_paper_numbers.py", line 153, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sanatbek/code/UzABSA-LLM/scripts/judge_paper_numbers.py", line 123, in main
+    "source": {"corpus": str(args.corpus.relative_to(ROOT)), "repeat": str(args.repeat.relative_to(ROOT))},
+                             ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/anaconda3/lib/python3.13/pathlib/_local.py", line 385, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'experiments/v3/judge/release_v1/judge_results.json' is not in the subpath of '/Users/sanatbek/code/UzABSA-LLM'
+# exit 1 after 5s
+# 2026-10-31T01:27:10 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# PYTHONHASHSEED=0 /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/judge_paper_numbers.py --corpus experiments/v3/judge/release_v1/judge_results.json --repeat experiments/v3/judge/calibration_v1/raw --out experiments/v3/results/judge_paper_numbers.json
+calibration n=150: agreement 0.793  kappa 0.562 (CI [0.425, 0.686], vs published {'ci95': [-0.01, 0.201], 'p_value': 0.0796})  linear 0.631  incl. precision 0.867 recall 0.901  incl-vs-excl 2
+  rho overall 0.781 (CI [0.709, 0.84], vs published {'ci95': [0.064, 0.192], 'p_value': 0.0})
+  per dim: {'completeness': (0.636, 0.837, 3.34, 4.04), 'accuracy': (0.56, 0.483, 4.51, 4.19), 'sentiment': (0.857, 0.253, 4.29, 4.25), 'relevance': (0.774, 0.43, 3.84, 3.85), 'overall': (0.781, 0.483, 3.69, 3.84)}
+  confusion (rows judge I/F/E, cols human I/F/E): [[91, 12, 2], [10, 19, 6], [0, 1, 9]]
+  repeat run: {'spearman_overall': 0.76, 'kappa': np.float64(0.601), 'kappa_linear': np.float64(0.663), 'agreement': 0.813, 'include_precision': 0.877, 'same_tier_as_corpus_run': 0.953}
+corpus: {'n': 5038, 'tiers': {'include': 3608, 'flag': 972, 'exclude': 458}, 'tier_pct': {'include': 71.6, 'flag': 19.3, 'exclude': 9.1}, 'means': {'completeness': 3.36, 'accuracy': 4.5, 'sentiment': 4.24, 'relevance': 3.94, 'overall': 3.73}}
+  Restaurants            n= 1626 mean=4.1 ci=[4.05, 4.14] tiers={'include': 80.9, 'flag': 12.5, 'exclude': 6.6} acc=4.63
+  Banking                n=  577 mean=3.39 ci=[3.32, 3.47] tiers={'include': 62.4, 'flag': 25.5, 'exclude': 12.1} acc=4.47
+  Other businesses       n=  507 mean=3.91 ci=[3.83, 3.99] tiers={'include': 77.1, 'flag': 16.2, 'exclude': 6.7} acc=4.57
+  Payment systems        n=  328 mean=3.35 ci=[3.26, 3.44] tiers={'include': 59.8, 'flag': 26.5, 'exclude': 13.7} acc=4.34
+  E-commerce             n=  296 mean=3.63 ci=[3.53, 3.73] tiers={'include': 72.0, 'flag': 20.9, 'exclude': 7.1} acc=4.38
+  Education              n=  287 mean=3.31 ci=[3.22, 3.41] tiers={'include': 58.9, 'flag': 28.6, 'exclude': 12.5} acc=4.32
+  Healthcare             n=  285 mean=3.74 ci=[3.63, 3.86] tiers={'include': 72.6, 'flag': 15.4, 'exclude': 11.9} acc=4.55
+  Telecommunications     n=  234 mean=3.41 ci=[3.3, 3.52] tiers={'include': 60.7, 'flag': 24.8, 'exclude': 14.5} acc=4.47
+  Grocery stores         n=  215 mean=3.67 ci=[3.56, 3.77] tiers={'include': 72.6, 'flag': 21.9, 'exclude': 5.6} acc=4.36
+  14 smaller domains     n=  683 mean=3.55 ci=[3.49, 3.62] tiers={'include': 67.1, 'flag': 23.4, 'exclude': 9.5} acc=4.42
+  All reviews            n= 5038 mean=3.73 ci=[3.71, 3.76] tiers={'include': 71.6, 'flag': 19.3, 'exclude': 9.1} acc=4.5
+pooled: {"Gul/Sovg'a": {'n': 173, 'include_pct': np.float64(69.9), 'accuracy_mean': 4.41}, 'Texnologiya/Media': {'n': 110, 'include_pct': np.float64(62.7), 'accuracy_mean': 4.52}, 'Sayohat/Turizm': {'n': 78, 'include_pct': np.float64(79.5), 'accuracy_mean': 4.55}, 'Sport/Fitnes': {'n': 60, 'include_pct': np.float64(61.7), 'accuracy_mean': 4.38}, 'Kitob/Nashriyot': {'n': 56, 'include_pct': np.float64(58.9), 'accuracy_mean': 4.36}, 'Din/Madaniyat': {'n': 49, 'include_pct': np.float64(75.5), 'accuracy_mean': 4.47}, "Transport/Yo'l": {'n': 32, 'include_pct': np.float64(56.2), 'accuracy_mean': 4.3}, 'Yetkazib berish': {'n': 30, 'include_pct': np.float64(76.7), 'accuracy_mean': 4.55}, "Ko'ngilochar": {'n': 26, 'include_pct': np.float64(46.2), 'accuracy_mean': 4.08}, 'Investitsiya/Trading': {'n': 22, 'include_pct': np.float64(50.0), 'accuracy_mean': 4.23}, 'Davlat xizmatlari': {'n': 16, 'include_pct': np.float64(75.0), 'accuracy_mean': 4.16}, 'Bozor/BSC': {'n': 13, 'include_pct': np.float64(76.9), 'accuracy_mean': 4.5}, "Go'zallik": {'n': 11, 'include_pct': np.float64(72.7), 'accuracy_mean': 4.55}, "Sug'urta": {'n': 7, 'include_pct': np.float64(71.4), 'accuracy_mean': 4.36}}
+Saved -> experiments/v3/results/judge_paper_numbers.json
+# exit 0 after 5s

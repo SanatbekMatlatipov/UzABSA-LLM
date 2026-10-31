@@ -1,0 +1,139 @@
+{
+ "annotations": "experiments/v3/translit/annotations_latin.json",
+ "rubric": "v1",
+ "n_items": 152,
+ "n_scored": 152,
+ "unscored": [],
+ "panel_tiers": {
+  "flag": 20,
+  "exclude": 28,
+  "include": 104
+ },
+ "panel_include_rate": 0.6842,
+ "panel_means": {
+  "completeness": 3.286,
+  "accuracy": 4.181,
+  "sentiment": 3.826,
+  "relevance": 3.872,
+  "overall": 3.53
+ },
+ "inter_judge": {
+  "judges": [
+   "gpt-4o-mini",
+   "gpt-4.1"
+  ],
+  "n": 152,
+  "spearman_overall": {
+   "gpt-4o-mini | gpt-4.1": 0.741
+  },
+  "krippendorff_alpha": {
+   "completeness": 0.4942,
+   "accuracy": 0.4391,
+   "sentiment": 0.8845,
+   "relevance": 0.6664,
+   "overall": 0.7476
+  }
+ },
+ "domains": {
+  "Restoran/Ovqatlanish": {
+   "n": 51,
+   "mean": 3.66,
+   "ci95": [
+    3.35,
+    3.94
+   ],
+   "include_rate": 0.686,
+   "tiers": {
+    "include": 35,
+    "flag": 6,
+    "exclude": 10
+   }
+  },
+  "Boshqa": {
+   "n": 21,
+   "mean": 3.71,
+   "ci95": [
+    3.29,
+    4.1
+   ],
+   "include_rate": 0.762,
+   "tiers": {
+    "include": 16,
+    "flag": 2,
+    "exclude": 3
+   }
+  },
+  "Bank/Moliya": {
+   "n": 17,
+   "mean": 3.44,
+   "ci95": [
+    3.0,
+    3.82
+   ],
+   "include_rate": 0.706,
+   "tiers": {
+    "include": 12,
+    "flag": 3,
+    "exclude": 2
+   }
+  },
+  "pooled_small_domains (N<15, 15 domains)": {
+   "n": 63,
+   "mean": 3.39,
+   "ci95": [
+    3.17,
+    3.61
+   ],
+   "include_rate": 0.651,
+   "tiers": {
+    "include": 41,
+    "flag": 9,
+    "exclude": 13
+   }
+  },
+  "all": {
+   "n": 152,
+   "mean": 3.53,
+   "ci95": [
+    3.38,
+    3.68
+   ],
+   "include_rate": 0.684,
+   "tiers": {
+    "include": 104,
+    "flag": 20,
+    "exclude": 28
+   }
+  }
+ },
+ "judges": {
+  "gpt-4o-mini": {
+   "model": "gpt-4o-mini",
+   "api_base": "https://api.openai.com/v1",
+   "rubric": "v1",
+   "served_models": {
+    "gpt-4o-mini-2024-07-18": 152
+   },
+   "scored": 152,
+   "unparsed": [],
+   "tokens_in": 84542,
+   "tokens_out": 12269,
+   "usd": 0.02,
+   "raw_log": "experiments/v3/translit/judge_latin/raw/gpt-4o-mini__v1.jsonl"
+  },
+  "gpt-4.1": {
+   "model": "gpt-4.1",
+   "api_base": "https://api.openai.com/v1",
+   "rubric": "v1",
+   "served_models": {
+    "gpt-4.1-2025-04-14": 152
+   },
+   "scored": 152,
+   "unparsed": [],
+   "tokens_in": 84542,
+   "tokens_out": 14853,
+   "usd": 0.2879,
+   "raw_log": "experiments/v3/translit/judge_latin/raw/gpt-4.1__v1.jsonl"
+  }
+ }
+}

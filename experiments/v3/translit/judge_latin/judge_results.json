@@ -1,0 +1,7402 @@
+[
+ {
+  "review_id": "rev_00052",
+  "text": "Жуда зур авиакомпания. Факат ш компанияда учаман. Сотрудниклар хушмуомула. Обед хр доим бор. Бошка мамлакатдагилардан хам мактовлар бугун.",
+  "business_name": "Uzbekistan Airways",
+  "business_category": "Sayohat/Turizm",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "авиакомпания",
+    "polarity": "negative",
+    "term_latin": "aviakompaniya"
+   },
+   {
+    "term": "Сотрудниклар",
+    "polarity": "positive",
+    "term_latin": "Sotrudniklar"
+   },
+   {
+    "term": "Обед",
+    "polarity": "neutral",
+    "term_latin": "Obed"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 2.5,
+   "relevance": 3.5,
+   "overall": 3.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00060",
+  "text": "Мени кизим учшохли нерви бн даволаниб чикти. Бошка жойларда килган муолажалари тасир килмаганди. Яхши хозир кайталамадик",
+  "business_name": "Shox International Hospital",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "кизим",
+    "polarity": "negative",
+    "term_latin": "kizim"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 2.5,
+   "sentiment": 1.5,
+   "relevance": 2.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 2,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00133",
+  "text": "Uzum market хозирги кунда узбекистонда энг тез ривожланаетган онлайн магазин ундан фойдаланиш онсон ва хамма учун кулай . Нархлари арзон , етказиб бериш хизмати зур ишлайди",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Нархлари",
+    "polarity": "positive",
+    "term_latin": "Narxlari"
+   },
+   {
+    "term": "онлайн магазин",
+    "polarity": "positive",
+    "term_latin": "onlayn magazin"
+   },
+   {
+    "term": "етказиб бериш",
+    "polarity": "positive",
+    "term_latin": "yetkazib berish"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00135",
+  "text": "Чорток санаторийси бел оек ошказонга дово мен даволандим жуда хам сезилди тозалик лечиния ва курстлари хаммаси урнида рахбариятга рахмат",
+  "business_name": "Sanatorium Chartak",
+  "business_category": "Sayohat/Turizm",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "курстлари",
+    "polarity": "neutral",
+    "term_latin": "kurstlari"
+   },
+   {
+    "term": "ошказонга",
+    "polarity": "neutral",
+    "term_latin": "oshkazonga"
+   },
+   {
+    "term": "тозалик",
+    "polarity": "neutral",
+    "term_latin": "tozalik"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   },
+   {
+    "category": "muhit",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 1.5,
+   "relevance": 3.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00152",
+  "text": "Payme иловаси жудаям кулай ,хамма учун тушунарли илова . Тез ишлайди менга жуда екади ва иен ундан 2 йил мобайнида фойдаланиб келяпман",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Payme иловаси",
+    "polarity": "positive",
+    "term_latin": "Payme ilovasi"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00186",
+  "text": "Барака маркетга оилам фарзандларим билан бирга савдо килгани бораман кулайи ва орзон махсулотлар ферминни.",
+  "business_name": "Baraka Market",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Барака маркетга",
+    "polarity": "neutral",
+    "term_latin": "Baraka marketga"
+   },
+   {
+    "term": "махсулотлар ферминни",
+    "polarity": "neutral",
+    "term_latin": "maxsulotlar ferminni"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 3.5,
+   "sentiment": 2.5,
+   "relevance": 3.0,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00187",
+  "text": "Havas.га кирганда манга якан томони тозаликги махсултларни нархи кулай барака топсин рахмат",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархи",
+    "polarity": "neutral",
+    "term_latin": "narxi"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 2.0,
+   "relevance": 3.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00188",
+  "text": "Ассалому алайкум .ХОЗИР КУНДА Korzinka СУПЕРМАРКЕТЛАРИСИЗ ХАЕТНИ ТАСАВВУР КИЛА ОЛМАЙМИЗ ЮРТИМИЗДА БУНДАЙ СУПЕРМАРКЕТЛАР СОНИ ЙИЛДАН - ЙИЛГА КУПАЙИБ , РИВОЖЛАНИБ БОРЯПТИ БУ БИЗ УЧУН ЯХШИ АЛБАТТА",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Korzinka",
+    "polarity": "positive",
+    "term_latin": "KORZINKA"
+   },
+   {
+    "term": "СУПЕРМАРКЕТЛАР",
+    "polarity": "positive",
+    "term_latin": "SUPERMARKETLAR"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00189",
+  "text": "Агробанкда омонат тарифлари яхши кулай .хизмат сервиси яхши сизларга тафсия киламан",
+  "business_name": "Agrobank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "хизмат сервиси",
+    "polarity": "positive",
+    "term_latin": "xizmat servisi"
+   },
+   {
+    "term": "омонат тарифлари",
+    "polarity": "positive",
+    "term_latin": "omonat tariflari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00190",
+  "text": "Макро хамма вилоятларда бор ман кайси вилоятда булсам албатта кираман сутли махсулотлари яхши сакланиб сотилади рахмат",
+  "business_name": "Makro",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "сутли махсулотлари",
+    "polarity": "positive",
+    "term_latin": "sutli maxsulotlari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00191",
+  "text": "Самарканд дарвозаси орка махалласида дустим яшайди куп бораман ман доим шу жойдан савдо киламан гушт махсулотларии уп оламан ишончли",
+  "business_name": "Samarqand Darvoza",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "жойдан",
+    "polarity": "positive",
+    "term_latin": "joydan"
+   },
+   {
+    "term": "гушт",
+    "polarity": "positive",
+    "term_latin": "gusht"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 4.5,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00192",
+  "text": "Октепа лаваш жуда маззали фарзандлар доим шу лавашидан олиб бераман сифати яхши нархи хам сизларга хам тафсия этаман .оилавий жой хам",
+  "business_name": "Oqtepa lavash",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "лаваш",
+    "polarity": "positive",
+    "term_latin": "lavash"
+   },
+   {
+    "term": "нархи",
+    "polarity": "positive",
+    "term_latin": "narxi"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00203",
+  "text": "Paymi иловаси дуда зур менга екади . Мен 2 йилдан буен payme дан фойдаланаман Биз учун яратилган энг яхши илова",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Paymi иловаси",
+    "polarity": "positive",
+    "term_latin": "paymi ilovasi"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00204",
+  "text": "SHOX HOSPITAL жуда яхши , беморларга юкори ларажада хизмат курсатилади бир суз билан айтганла жахон стандартларига жавоб берадиган клиника деб хисоблайман",
+  "business_name": "Shox International Hospital",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "SHOX HOSPITAL",
+    "polarity": "positive",
+    "term_latin": "SHOX HOSPITAL"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00205",
+  "text": "Корзинка.уз. хамма мижозларга малум нархлари кулай махсулотларни сифати ва махсулот муддтлари доим назоратда ишонч билан харид килинади.",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "нархлари",
+    "polarity": "positive",
+    "term_latin": "narxlari"
+   },
+   {
+    "term": "сифати",
+    "polarity": "positive",
+    "term_latin": "sifati"
+   },
+   {
+    "term": "муддтлари",
+    "polarity": "positive",
+    "term_latin": "muddtlari"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00207",
+  "text": "Ассалому алайкум. AKFA MEDLINE хозирда юртимиздаги энг зур клиникалардан бирихисибланади клиника энг сунги русумдаги тиббий ускуналар билан жихозланган ва энг яхши малакали шифокорларга эга булган клиника",
+  "business_name": "Akfa Medline",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "клиникалардан",
+    "polarity": "positive",
+    "term_latin": "klinikalardan"
+   },
+   {
+    "term": "русумдаги тиббий ускуналар",
+    "polarity": "positive",
+    "term_latin": "rusumdagi tibbiy uskunalar"
+   },
+   {
+    "term": "шифокорларга",
+    "polarity": "positive",
+    "term_latin": "shifokorlarga"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00318",
+  "text": "Самарканд дарвозани атмосфераси жуда хам гузал ва брендлага бой савдо мажмуаси",
+  "business_name": "Samarqand Darvoza",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "атмосфераси",
+    "polarity": "positive",
+    "term_latin": "atmosferasi"
+   },
+   {
+    "term": "брендлага",
+    "polarity": "neutral",
+    "term_latin": "brendlaga"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 4.0,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 3,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00326",
+  "text": "Жуда яхши олийгох узим шу олийгохнинг менежмент факцлтетида 2 курс талабасиман менга кечки талимнинг кулайлиги ва олийгохнинг жойлашуви ёкади",
+  "business_name": "Tashkent Institute of Architecture and Civil Engineering",
+  "business_category": "Ta'lim",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "менежмент",
+    "polarity": "negative",
+    "term_latin": "menejment"
+   },
+   {
+    "term": "жойлашуви",
+    "polarity": "negative",
+    "term_latin": "joylashuvi"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.0,
+   "sentiment": 1.0,
+   "relevance": 2.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00390",
+  "text": "Яшил энергияни кэнг таркатиш ва ахоли куп жойларда тадбик килш шунинг дек уларни сотиш ва сотиб олиш ишларини йулга куйищ керак.",
+  "business_name": "Yashil Energiya",
+  "business_category": "Davlat xizmatlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "energiani",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.0,
+   "sentiment": 1.5,
+   "relevance": 2.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00420",
+  "text": "Ассалому алейкум. AKFA MEDLINE клиникаси жуда хам зур клиника экан. Ходимлари ва Врачларига бунака зур сервис учун катта рахмат.",
+  "business_name": "Akfa Medline",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "клиникаси",
+    "polarity": "negative",
+    "term_latin": "klinikasi"
+   },
+   {
+    "term": "Ходимлари ва Врачларига",
+    "polarity": "positive",
+    "term_latin": "Xodimlari va Vrachlariga"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 2.0,
+   "relevance": 4.0,
+   "overall": 3.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00431",
+  "text": "Аъло сифат, аъло хизмат ва нозик дид сохиблари учун тафсия қиламан бу green apple market. Хизмат ходимларга гап йўқ зўр. Рахбарлар ҳам ишчиларни хурмат қилишади",
+  "business_name": "Green Apple market",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ходимларга",
+    "polarity": "positive",
+    "term_latin": "xodimlarga"
+   },
+   {
+    "term": "хизмат",
+    "polarity": "positive",
+    "term_latin": "xizmat"
+   },
+   {
+    "term": "green apple market",
+    "polarity": "positive",
+    "term_latin": "green apple market"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00433",
+  "text": "Яхши банк. Хизматларига гап йуқ. Ишончли ва сифатли. ЭНГ муҳими хуш момулали ходимлар ишлашади.",
+  "business_name": "Hamkorbank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "банк",
+    "polarity": "positive",
+    "term_latin": "bank"
+   },
+   {
+    "term": "ходимлар",
+    "polarity": "positive",
+    "term_latin": "xodimlar"
+   },
+   {
+    "term": "Хизматларига",
+    "polarity": "positive",
+    "term_latin": "xizmatlariga"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xodim",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00524",
+  "text": "Жудайам маззали менга жуда йоқади тоза ва шинам кирсез мазза қиб овқатланиб чиқиб кетас",
+  "business_name": "KFC",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "кирсез",
+    "polarity": "positive",
+    "term_latin": "kirsez"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 3.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 3,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00525",
+  "text": "Ассалому алайкум кеча кириб кўрдим овқатлари маззали екан ишчилари ҳам хумуомила сизларга ҳам тавсийа бераман",
+  "business_name": "Rayhon Milliy Taomlari",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "ишчилари",
+    "polarity": "positive",
+    "term_latin": "ishchilari"
+   },
+   {
+    "term": "овқатлари",
+    "polarity": "positive",
+    "term_latin": "ovqatlari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00577",
+  "text": "Янги очилган пайтлари яхши эди лекин охирги пайтлада куп махсулотлари сифатсиз булиб кеткан",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "махсулотлари",
+    "polarity": "negative",
+    "term_latin": "maxsulotlari"
+   },
+   {
+    "term": "очилган пайтлари",
+    "polarity": "positive",
+    "term_latin": "ochilgan paytlari"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 4.0,
+   "relevance": 3.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00578",
+  "text": "Корзинка менга жуда ёкади чунки унда тез тез акция булиб туради узим хар доим акцияларини кузатиб тураман ва совдо килгани бораман",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Корзинка",
+    "polarity": "negative",
+    "term_latin": "Korzinka"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 1.0,
+   "relevance": 2.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00579",
+  "text": "Яхши банк кам фоизли кредит турлари хам бор факат кам микдорда кредит ажратади",
+  "business_name": "MKBANK",
+  "business_category": "Bank/Moliya",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "кредит турлари",
+    "polarity": "positive",
+    "term_latin": "kredit turlari"
+   },
+   {
+    "term": "кредит",
+    "polarity": "negative",
+    "term_latin": "kredit"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 3.5,
+   "relevance": 4.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00580",
+  "text": "Яхши банк автокредитга яхши аммо ишлаш тизимлари менга унчалик ёкмайди нимадур аниклаштириш учунг албатта бош офисга бориш шарт булади шу тарафлари ёкмайди",
+  "business_name": "Kapitalbank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "банк",
+    "polarity": "positive",
+    "term_latin": "bank"
+   },
+   {
+    "term": "тизимлари",
+    "polarity": "negative",
+    "term_latin": "tizimlari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 4.0,
+   "relevance": 4.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00581",
+  "text": "Бошка иловаларга караганда купрок кешбек беради ва услугани хам купрок олади лекин тулов турлари хам купрок шунунг учун менга ёкади",
+  "business_name": "Click",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Бошка иловаларга",
+    "polarity": "negative",
+    "term_latin": "Boshka ilovalarga"
+   },
+   {
+    "term": "услугани",
+    "polarity": "negative",
+    "term_latin": "uslugani"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.0,
+   "sentiment": 1.5,
+   "relevance": 2.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00582",
+  "text": "Жуда яхши банк ва иловасиям яхши ишлайди айникса фоизсиз кредит берилиши яхши жуда зарл пайтларда оламан менга фойдали булади ва ёкади",
+  "business_name": "Uzum Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "банк",
+    "polarity": "positive",
+    "term_latin": "bank"
+   },
+   {
+    "term": "кредит",
+    "polarity": "positive",
+    "term_latin": "kredit"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00589",
+  "text": "Андижонди навроз мал карзинкаси супер дойм оша Ердан совдо киламан сифатли нарсалари хам арзон",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "мал карзинкаси",
+    "polarity": "positive",
+    "term_latin": "mal karzinkasi"
+   },
+   {
+    "term": "нарсалари",
+    "polarity": "positive",
+    "term_latin": "narsalari"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00610",
+  "text": "Шашлик лар номер 1 Дин жуда зор халол",
+  "business_name": "Shashleek",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Шашлик лар",
+    "polarity": "positive",
+    "term_latin": "Shashlik lar"
+   },
+   {
+    "term": "Дин",
+    "polarity": "negative",
+    "term_latin": "Din"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 3.5,
+   "sentiment": 2.5,
+   "relevance": 3.0,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00629",
+  "text": "Ucell яхши эмас нега десангиз алока хам яхши эмас интернет хам 4 G чикани Билан унчалик яхши ишламебди",
+  "business_name": "Ucell",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "aloqa",
+    "polarity": "negative"
+   },
+   {
+    "term": "4 G",
+    "polarity": "negative",
+    "term_latin": "4 G"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.5,
+   "sentiment": 4.5,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00676",
+  "text": "Анча йиллардан бери беморлага максимум сифатли хизмат корсатадиган стоматология!",
+  "business_name": "Prof Dent Plus",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хизмат",
+    "polarity": "positive",
+    "term_latin": "xizmat"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00712",
+  "text": "Уз ломбард. Керак булганда яхши ёрдамчи ва кулай",
+  "business_name": "UzLombard",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "ёрдамчи",
+    "polarity": "positive",
+    "term_latin": "yordamchi"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00715",
+  "text": "Махсулотлари яхши халол ва маззали хардойим янги рахмат",
+  "business_name": "Go'sht mahsulotlari",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Махсулотлари",
+    "polarity": "positive",
+    "term_latin": "Maxsulotlari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00750",
+  "text": "Халк банк тезлии бн ишледи мен карта очодим ярим соата комастан очишип берди",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Халк банк",
+    "polarity": "negative",
+    "term_latin": "Xalk bank"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 1.0,
+   "relevance": 4.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00852",
+  "text": "Менхам бу банктан киридит олганман момиласи жуда яхши фойизи оз",
+  "business_name": "NBU",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "момиласи",
+    "polarity": "positive",
+    "term_latin": "momilasi"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00861",
+  "text": "Халк банки уз мижозларига кенг имтиёзлар яратиш максадида, кредит фоизлари кам хамда кулай шартларда омонатлар таклиф килади",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "кредит фоизлари",
+    "polarity": "positive",
+    "term_latin": "kredit foizlari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00904",
+  "text": "Узум маркетан ззаказ килиб курмаганман лекин ишончлий булгани учун сайтини скачат килганман",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Узум маркетан",
+    "polarity": "neutral",
+    "term_latin": "Uzum marketan"
+   },
+   {
+    "term": "сайтини",
+    "polarity": "positive",
+    "term_latin": "saytini"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 3.5,
+   "relevance": 4.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00916",
+  "text": "Ассалому алийкум ман доим IHLOS DOKTOR га бораман ишлари яхши тезда ишиз битади силага хам тавсия этаман.",
+  "business_name": "IHLOS DOKTOR",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "IHLOS DOKTOR",
+    "polarity": "positive",
+    "term_latin": "IHLOS DOKTOR"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00920",
+  "text": "лор плюс яхши бироз нархи киммат.ичи тоза озода.хамширалари хам яхши хушмуомалали.ман доим шу ерга фарзандларимми тез тез обораман.якинда турмуш уртогим пастки тишларини килдирди иши тоза аъло даражада узига ёкди.маладес ишига омад",
+  "business_name": "ENT PLUS 24/7 YUNUSABAD",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "нархи",
+    "polarity": "negative",
+    "term_latin": "narxi"
+   },
+   {
+    "term": "ичи",
+    "polarity": "positive",
+    "term_latin": "ichi"
+   },
+   {
+    "term": "хамширалари",
+    "polarity": "positive",
+    "term_latin": "xamshiralari"
+   },
+   {
+    "term": "хушмуомалали",
+    "polarity": "positive",
+    "term_latin": "xushmuomalali"
+   },
+   {
+    "term": "ишига",
+    "polarity": "positive",
+    "term_latin": "ishiga"
+   },
+   {
+    "term": "иш",
+    "polarity": "positive",
+    "term_latin": "ish"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 10,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 4.5,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 4,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00928",
+  "text": "Туркистон банки жуда яхши банк .ходимларини чакконлиги хушмуомалалиги.банкни ичи тоза ,озода ишинг тез ва осон битади.",
+  "business_name": "Turkiston Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ходимларини",
+    "polarity": "positive",
+    "term_latin": "xodimlarini"
+   },
+   {
+    "term": "банк",
+    "polarity": "positive",
+    "term_latin": "bank"
+   },
+   {
+    "term": "ичи",
+    "polarity": "positive",
+    "term_latin": "ichi"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00931",
+  "text": "Салом хаммага бу TBC банк жуда хам зур фоизи хам арзон хамёнбоп бизни ойила доимо шу банкдан фойдаланамиз.",
+  "business_name": "TBC Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "TBC банк",
+    "polarity": "positive",
+    "term_latin": "TBC bank"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_00999",
+  "text": "Таомлари яхши маззали лекин нархлари кимат. Илтимос нархларини хамма боб килила",
+  "business_name": "Alimovs_restaurant",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 2,
+  "aspects": [
+   {
+    "term": "нархлари",
+    "polarity": "negative",
+    "term_latin": "narxlari"
+   },
+   {
+    "term": "Таомлари",
+    "polarity": "positive",
+    "term_latin": "Taomlari"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 4.5,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 4,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01001",
+  "text": "Ха гапизга кушиламан киммат нархлари жудда хам Сал булса хам халкни тушунса буладику",
+  "business_name": "Terra pro (Next)",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархлари",
+    "polarity": "negative",
+    "term_latin": "narxlari"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 4.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01017",
+  "text": "сомсага гап йук мазали тойимли ичидаги гушти свежий нархиям яхши хуллас бизага ёкади силагаям боришилани таклиф киламан",
+  "business_name": "Minor somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархиям",
+    "polarity": "positive",
+    "term_latin": "narxiyam"
+   },
+   {
+    "term": "гушти",
+    "polarity": "positive",
+    "term_latin": "gushti"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01120",
+  "text": "Вип бренд бизни ойламизга жуда хам ёкади биз хар доим шу ердан ойилавий кийнамиз.товарлари яхши сифатига гап йук нархи бироз киммат атак зур моллари сифати куп.",
+  "business_name": "VIP BRAND",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархи",
+    "polarity": "negative",
+    "term_latin": "narxi"
+   },
+   {
+    "term": "товарлари",
+    "polarity": "positive",
+    "term_latin": "tovarlari"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 4.0,
+   "relevance": 4.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01122",
+  "text": "Адамари кийим дукони зур арзон сифатли моллари жудахам хамёнбоп .менга ёкади товарлари яхши гап йук.",
+  "business_name": "Adamari",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "моллари",
+    "polarity": "negative",
+    "term_latin": "mollari"
+   },
+   {
+    "term": "товарлари",
+    "polarity": "negative",
+    "term_latin": "tovarlari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 1.0,
+   "relevance": 2.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01194",
+  "text": "Юмшок ва мазали жужа Dayako Chcken да айникса салатларига гап болиши мумкинмас",
+  "business_name": "Dayako Chicken",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "салатларига",
+    "polarity": "positive",
+    "term_latin": "salatlariga"
+   },
+   {
+    "term": "жужа Dayako Chcken",
+    "polarity": "positive",
+    "term_latin": "juja Dayako Chcken"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01198",
+  "text": "Ажойиб маскан хушмуомала персонал ёкимли атмосфера мазали таомлар рахмат",
+  "business_name": "Qanotchi",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "маскан",
+    "polarity": "positive",
+    "term_latin": "maskan"
+   },
+   {
+    "term": "персонал",
+    "polarity": "positive",
+    "term_latin": "personal"
+   },
+   {
+    "term": "атмосфера",
+    "polarity": "positive",
+    "term_latin": "atmosfera"
+   },
+   {
+    "term": "таомлар",
+    "polarity": "positive",
+    "term_latin": "taomlar"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 7,
+  "judge_scores": {
+   "completeness": 5.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01199",
+  "text": "Ошиям сомсасиям мазали салатлари свежий айни муддао ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️",
+  "business_name": "Plov-samsa. uz",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Ошиям",
+    "polarity": "positive",
+    "term_latin": "Oshiyam"
+   },
+   {
+    "term": "салатлари",
+    "polarity": "positive",
+    "term_latin": "salatlari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01200",
+  "text": "Рахмат чойхонангизга гап йок атмосфераси жуда ёкимли менга ёкди ишларизга ривож",
+  "business_name": "Chustiy choyxona",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "атмосфераси",
+    "polarity": "positive",
+    "term_latin": "atmosferasi"
+   },
+   {
+    "term": "ишларизга",
+    "polarity": "neutral",
+    "term_latin": "ishlarizga"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 4.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01206",
+  "text": "Кабоблар мазали юмшок ва энг асосийси свежий махсулотлардан тайёрланган",
+  "business_name": "Zohid kebab",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Кабоблар",
+    "polarity": "positive",
+    "term_latin": "Kaboblar"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01244",
+  "text": "Сушини шу масканда еб севиб колдим аввал еганимда ёктирмаган эдим жуда мазали нарса экан рахмат",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Сушини",
+    "polarity": "positive",
+    "term_latin": "Sushini"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01265",
+  "text": "Корзинкадан ҳамма нарса топса булади сифати ало дараҷада сроки ҷой ҷойида лекин сал қиммат",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сифати",
+    "polarity": "negative",
+    "term_latin": "sifati"
+   },
+   {
+    "term": "сал",
+    "polarity": "negative",
+    "term_latin": "sal"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 3.0,
+   "sentiment": 2.5,
+   "relevance": 3.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 2,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01266",
+  "text": "ҷудаям зур илова осон ишлайди хохлаган пайтингда связ яхши бумагандаям ишлайди",
+  "business_name": "Az Capital",
+  "business_category": "Investitsiya/Trading",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ишлайди",
+    "polarity": "positive",
+    "term_latin": "ishlaydi"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01267",
+  "text": "Клиника зур лабаратория анализлари нархи яхши зодимлари хшмуомила рахмат",
+  "business_name": "\"VIVOMED\" mas`uliyati cheklangan jamiyati",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархи",
+    "polarity": "positive",
+    "term_latin": "narxi"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01268",
+  "text": "Асосан мен Алифмоби ишлатаман фоизсиз ва ишлатиши ҷудаям осон ва қулай",
+  "business_name": "Alifmobi",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Алифмоби",
+    "polarity": "positive",
+    "term_latin": "Alifmobi"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 3.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01270",
+  "text": "килик иловаси яхши ишлайди анча йилдан бири ишлатаман фоизи кам ва функсияси куп тушуниши осон",
+  "business_name": "Click",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "иловаси",
+    "polarity": "positive",
+    "term_latin": "ilovasi"
+   },
+   {
+    "term": "фоизи",
+    "polarity": "negative",
+    "term_latin": "foizi"
+   },
+   {
+    "term": "функсияси",
+    "polarity": "positive",
+    "term_latin": "funksiyasi"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.0,
+   "sentiment": 4.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01271",
+  "text": "пайме иловаси ҷудаям зур анча йилдан бири ишлатаман ҷуда қулай ва тез ишлайди фоизсиз ишлайди ва шанба куни шақ-шақдан 500 минг сумгача пул ишлатсанг булади",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "пайме иловаси",
+    "polarity": "positive",
+    "term_latin": "payme ilovasi"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 4.5,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 3,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01372",
+  "text": "Мен анчадан буйон уз пост билан ишлайман хитойдан таварлар олиб келаман тезлиги яхши суммасига гап йог нархлари хамйон боб мухими шу уз пост биринчи ва зори",
+  "business_name": "Uzpost",
+  "business_category": "Transport/Yo'l",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархлари",
+    "polarity": "negative",
+    "term_latin": "narxlari"
+   },
+   {
+    "term": "уз пост",
+    "polarity": "neutral",
+    "term_latin": "uz post"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 2.0,
+   "relevance": 3.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01415",
+  "text": "Клиникада ишаётган барча шифокорлар малакали ва ширин сухандир",
+  "business_name": "Chinor Medical Center",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "шифокорлар",
+    "polarity": "positive",
+    "term_latin": "shifokorlar"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01453",
+  "text": "тоамлари шунака маззали отмосферасиям жудаям чиройли музыкалари жудаям ёкимли🥹🥹🥹",
+  "business_name": "У бабушки",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "тоамлари",
+    "polarity": "positive",
+    "term_latin": "toamlari"
+   },
+   {
+    "term": "отмосферасиям",
+    "polarity": "positive",
+    "term_latin": "otmosferasiyam"
+   },
+   {
+    "term": "музыкалари",
+    "polarity": "positive",
+    "term_latin": "muzikalari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 5.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01454",
+  "text": "вафли в марожноеларини таьми шунака маззали",
+  "business_name": "Giotto",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "марожноеларини",
+    "polarity": "positive",
+    "term_latin": "marojnoyelarini"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01455",
+  "text": "ошпазлар профессионал даражада таомлари хам жудаям маззали айникса пахлавалари😋😋😋🤍",
+  "business_name": "Basri Baba",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "пахлавалари😋😋😋",
+    "polarity": "positive",
+    "term_latin": "paxlavalari😋😋😋"
+   },
+   {
+    "term": "ошпазлар",
+    "polarity": "positive",
+    "term_latin": "oshpazlar"
+   },
+   {
+    "term": "таомлари",
+    "polarity": "positive",
+    "term_latin": "taomlari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01456",
+  "text": "шашликлар хилма хилма жудаям маззали уз маромида пишган😋😋😋",
+  "business_name": "Shashleek",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "шашликлар",
+    "polarity": "positive",
+    "term_latin": "shashliklar"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01457",
+  "text": "Пиццалар шунака туйимли свежие нарсалардан килингани шундо билинади гап юк😋😋",
+  "business_name": "Dodo pizza",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Пиццалар",
+    "polarity": "positive",
+    "term_latin": "Pitssalar"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01458",
+  "text": "баликлар шунака тугри танланган жудаям маззали",
+  "business_name": "Akmal Oltin Baliq",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "баликлар",
+    "polarity": "positive",
+    "term_latin": "baliklar"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01461",
+  "text": "фаст фудларига гап юк жудаям туйимли ва маззали",
+  "business_name": "Max Way",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "фаст фудларига",
+    "polarity": "positive",
+    "term_latin": "fast fudlariga"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01462",
+  "text": "хамёнбоп ва жудаям маззали якинлар билан келиб йеб кетса арзийди",
+  "business_name": "Kamolon Osh",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "йеб кетса",
+    "polarity": "positive",
+    "term_latin": "yeb ketsa"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 3.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 3,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01463",
+  "text": "сомсалари шунака маззали ичидаги гуштлариям свежие 😋😋😋😁",
+  "business_name": "Minor somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "гуштлариям",
+    "polarity": "positive",
+    "term_latin": "gushtlariyam"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01471",
+  "text": "удонлари жудаям яхши маромида пишган таьмига гап булиши мумкинмас😋😋😋😋",
+  "business_name": "WOK",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "удонлари",
+    "polarity": "positive",
+    "term_latin": "udonlari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01475",
+  "text": "бургер просто супер жудаям свежие сувлари шундо окиб иштаха очар булиб туради😋😋😋😋",
+  "business_name": "BBQ Burger",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сувлари",
+    "polarity": "positive",
+    "term_latin": "suvlari"
+   },
+   {
+    "term": "бургер",
+    "polarity": "positive",
+    "term_latin": "burger"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01476",
+  "text": "пиццалари жудаям зо'о'р айникса сетлари жудаям хамёнбоп нархда🤍🤍",
+  "business_name": "Bellissimo Pizza",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "пиццалари",
+    "polarity": "negative",
+    "term_latin": "pitssalari"
+   },
+   {
+    "term": "сетлари",
+    "polarity": "negative",
+    "term_latin": "setlari"
+   },
+   {
+    "term": "нархда",
+    "polarity": "negative",
+    "term_latin": "narxda"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 1.0,
+   "relevance": 4.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01482",
+  "text": "лаваш хамири прям юмшок гушлариям зо'о'р манга жудаям ёкди😋😋😋",
+  "business_name": "Evos",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "лаваш",
+    "polarity": "positive",
+    "term_latin": "lavash"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01488",
+  "text": "Мускаймоги йокади менга мазали",
+  "business_name": "Evos",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 1,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01504",
+  "text": "Тенге банк янги замон талабларига жавоб берадиган банк , фукароларни огирини енгил килиб якиндан ёрдам берадиган банклардан бири 100%",
+  "business_name": "Tenge Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Тенге банк",
+    "polarity": "positive",
+    "term_latin": "Tenge bank"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01635",
+  "text": "ҷуда зур лаваш тамига гап юқ даставкасиҳам бирзумда келади",
+  "business_name": "Oqtepa lavash",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "лаваш",
+    "polarity": "negative",
+    "term_latin": "lavash"
+   },
+   {
+    "term": "даставкаси",
+    "polarity": "negative",
+    "term_latin": "dastavkasi"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 1.0,
+   "relevance": 4.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 5,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01695",
+  "text": "Тамидан ёг маззаси келади. Ва хизмат даражаси пас",
+  "business_name": "Axmad olmos joja",
+  "business_category": "Boshqa",
+  "user_rating": 2,
+  "aspects": [
+   {
+    "term": "хизмат",
+    "polarity": "negative",
+    "term_latin": "xizmat"
+   },
+   {
+    "term": "ёг маззаси",
+    "polarity": "positive",
+    "term_latin": "yog mazzasi"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.5,
+   "sentiment": 4.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01702",
+  "text": "Рузметов махсулотлари маззали ва нархлари хам арзон тавсия этаман",
+  "business_name": "Rozmetov",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархлари",
+    "polarity": "positive",
+    "term_latin": "narxlari"
+   },
+   {
+    "term": "махсулотлари",
+    "polarity": "positive",
+    "term_latin": "maxsulotlari"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 5.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01780",
+  "text": "Савдо моллари ва хизматлардан манунман хавасдан",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "хизматлардан",
+    "polarity": "negative",
+    "term_latin": "xizmatlardan"
+   },
+   {
+    "term": "моллари",
+    "polarity": "negative",
+    "term_latin": "mollari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 1.5,
+   "relevance": 4.0,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_01983",
+  "text": "Ассаломалекум яахшилар мен бугун хавасдан ифторлик учун бозорлик килдим жудаяам харидиидан мамнун булиб кайтдим сифатли харидиидан жуда мамнунман кунглимдеги нарсаларни олдим сизлардан мннадорман",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "бозорлик",
+    "polarity": "positive",
+    "term_latin": "bozorlik"
+   },
+   {
+    "term": "нарсаларни",
+    "polarity": "positive",
+    "term_latin": "narsalarni"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 3.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02115",
+  "text": "Ассалому алайкум клиникага гап йук енг замонавий аппаратар билан жихозланган омар.",
+  "business_name": "Medion",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "аппаратар",
+    "polarity": "positive",
+    "term_latin": "apparatar"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02297",
+  "text": "Узум маркет яхши, лекин заказларни ичида браклари хам бор",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "маркет",
+    "polarity": "positive",
+    "term_latin": "market"
+   },
+   {
+    "term": "браклари",
+    "polarity": "negative",
+    "term_latin": "braklari"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 4.0,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02344",
+  "text": "ЭКО марказига миннадорчилик билдираман оналик бахтини бериб аелар кувончига кувонч бахтли хает сари ундамокликдан чарчамайди Шифокорлар хушмомила ширин суз.",
+  "business_name": "Siz Ona bo'lasiz Eko Markazi",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ЭКО марказига",
+    "polarity": "positive",
+    "term_latin": "EKO markaziga"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02389",
+  "text": "Ахмад. Олтин ЖУЖА сергили филияали жуда Зур кулайликлари мужозларга муомила маданяат гигеник сифатлари Билан жуда кулай ва екимлий",
+  "business_name": "Axmad Oltin Jo'ja Sergeli",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сергили",
+    "polarity": "negative",
+    "term_latin": "sergili"
+   },
+   {
+    "term": "мужозларга",
+    "polarity": "negative",
+    "term_latin": "mujozlarga"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 1.5,
+   "accuracy": 2.5,
+   "sentiment": 1.0,
+   "relevance": 2.5,
+   "overall": 1.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 1,
+    "accuracy": 2,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 1
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02400",
+  "text": "Нархлари арзон хамён боб кийимлари сфатли",
+  "business_name": "Big boss",
+  "business_category": "Boshqa",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Нархлари",
+    "polarity": "positive",
+    "term_latin": "Narxlari"
+   },
+   {
+    "term": "боб кийимлари",
+    "polarity": "neutral",
+    "term_latin": "bob kiyimlari"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 3.5,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 3,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02403",
+  "text": "1FIT Ягона фитнес илова ишлатиб курдим манга ёкти рахмат",
+  "business_name": "1 FIT",
+  "business_category": "Sport/Fitnes",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "1FIT",
+    "polarity": "positive",
+    "term_latin": "1FIT"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02408",
+  "text": "Ошга гап йук факат сал киматрок",
+  "business_name": "Besh qozon",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Ошга",
+    "polarity": "negative",
+    "term_latin": "Oshga"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 2.5,
+   "relevance": 4.0,
+   "overall": 3.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02448",
+  "text": "Балик маззали зур. факат озгина киматрок",
+  "business_name": "Akmal Oltin Baliq",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Балик",
+    "polarity": "positive",
+    "term_latin": "Balik"
+   },
+   {
+    "term": "озгина киматрок",
+    "polarity": "negative",
+    "term_latin": "ozgina kimatrok"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.5,
+   "sentiment": 4.5,
+   "relevance": 4.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02464",
+  "text": "Жудаям яхши клиника врачлари опитный,кулай,ходимлари хушмуомала",
+  "business_name": "\"SABA-DARMON\" mas‘uliyati cheklangan jamiyati",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "клиника",
+    "polarity": "positive",
+    "term_latin": "klinika"
+   },
+   {
+    "term": "ходимлари",
+    "polarity": "positive",
+    "term_latin": "xodimlari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02643",
+  "text": "Cakelab ширинликлари жида яхши екан ва нархларихам хамйонбоб",
+  "business_name": "Cakelab",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархларихам",
+    "polarity": "positive",
+    "term_latin": "narxlarixam"
+   },
+   {
+    "term": "Cakelab",
+    "polarity": "positive",
+    "term_latin": "Cakelab"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02655",
+  "text": "корзинка йахши докон озгина кимат",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "корзинка",
+    "polarity": "positive",
+    "term_latin": "korzinka"
+   },
+   {
+    "term": "докон",
+    "polarity": "positive",
+    "term_latin": "dokon"
+   },
+   {
+    "term": "кимат",
+    "polarity": "positive",
+    "term_latin": "kimat"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 2.5,
+   "relevance": 4.0,
+   "overall": 3.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02663",
+  "text": "Интернет Зур ишлайди тарифлари арзон",
+  "business_name": "Uzmobile",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Интернет",
+    "polarity": "positive",
+    "term_latin": "Internet"
+   },
+   {
+    "term": "тарифлари",
+    "polarity": "positive",
+    "term_latin": "tariflari"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02696",
+  "text": "Бургерларни сочеыйрок тайёрласелар жуда хам Зур боларди",
+  "business_name": "Шеф Бургер",
+  "business_category": "Boshqa",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Бургерларни",
+    "polarity": "negative",
+    "term_latin": "Burgerlarni"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 2.5,
+   "relevance": 4.5,
+   "overall": 3.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 4,
+    "relevance": 5,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02742",
+  "text": "Ҳалқ банк фойдали томонларидан бири таълим кридит деб ўйлайман, менга фарзандим ўқишига анча ёрдам бўлди ҳурсандман",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Ҳалқ банк",
+    "polarity": "positive",
+    "term_latin": "Halq bank"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 3.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02769",
+  "text": "Хавас килса арзигулик дукон сифати аьло.",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "арзигулик дукон",
+    "polarity": "negative",
+    "term_latin": "arzigulik dukon"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.0,
+   "sentiment": 1.0,
+   "relevance": 2.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02772",
+  "text": "Ассалому алейкум яхшимисизлар камар китоблар дуконига гап йук кизикарли ва манОли китоблар мажмуаси.",
+  "business_name": "Qamar kitoblar do‘koni",
+  "business_category": "Kitob/Nashriyot",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "китоблар дуконига",
+    "polarity": "positive",
+    "term_latin": "kitoblar dukoniga"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 3.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02774",
+  "text": "Ассалому алейкум яхшимисизлар узум маркет зур ва хамёнбоп сизга хам тавсия киламан.",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "узум маркет",
+    "polarity": "positive",
+    "term_latin": "uzum market"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02775",
+  "text": "Ассалому алейкум яхшимисизлар барака маркетина гап йук сифатли ва халол.",
+  "business_name": "Baraka Market",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "барака маркетина",
+    "polarity": "positive",
+    "term_latin": "baraka marketina"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 3.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02863",
+  "text": "Манзилга тез етказиб беради айникса совук хавода жуда кол келади тавсия бераман",
+  "business_name": "Royal Taxi",
+  "business_category": "Yetkazib berish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Манзилга",
+    "polarity": "positive",
+    "term_latin": "Manzilga"
+   },
+   {
+    "term": "совук хавода",
+    "polarity": "negative",
+    "term_latin": "sovuk xavoda"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 3.5,
+   "sentiment": 2.5,
+   "relevance": 3.0,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02864",
+  "text": "Камар китоблари жуда хилма хил. Доим ижтимоий тармоклада кузатиб бораман. Яхш китоб докони болса китоб окигинг келаверади тавсия киламан.",
+  "business_name": "Qamar kitoblar do‘koni",
+  "business_category": "Kitob/Nashriyot",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "китоблари",
+    "polarity": "neutral",
+    "term_latin": "kitoblari"
+   },
+   {
+    "term": "тармоклада",
+    "polarity": "neutral",
+    "term_latin": "tarmoklada"
+   },
+   {
+    "term": "докони",
+    "polarity": "neutral",
+    "term_latin": "dokoni"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "muhit",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 6,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 4.0,
+   "sentiment": 1.5,
+   "relevance": 2.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02933",
+  "text": "Балик нархи бошка жойлардан кимматрок",
+  "business_name": "Akmal Oltin Baliq",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 1,
+  "aspects": [
+   {
+    "term": "Балик",
+    "polarity": "negative",
+    "term_latin": "Balik"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_02966",
+  "text": "Ишлаш даражаси ало ва жуда кулай",
+  "business_name": "Click",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Ишлаш",
+    "polarity": "negative",
+    "term_latin": "Ishlash"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 1.0,
+   "relevance": 4.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03079",
+  "text": "Жаренний сушиларда ёг хиди бор",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 1,
+  "aspects": [
+   {
+    "term": "ёг хиди",
+    "polarity": "neutral",
+    "term_latin": "yog xidi"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.5,
+   "sentiment": 1.5,
+   "relevance": 4.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03084",
+  "text": "Humansda чексиз интернет бор, Яна кунинга йигирма минут",
+  "business_name": "Humans",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "интернет",
+    "polarity": "negative",
+    "term_latin": "internet"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 2.0,
+   "relevance": 3.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03165",
+  "text": "Шашликлари зурекан и асартимент хам куп",
+  "business_name": "Shashlik & Somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Шашликлари",
+    "polarity": "negative",
+    "term_latin": "Shashliklari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 1.0,
+   "relevance": 4.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03166",
+  "text": "Нархлари арзон ва качестваси яхши товарлар тавси этаман",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Нархлари",
+    "polarity": "positive",
+    "term_latin": "Narxlari"
+   },
+   {
+    "term": "качестваси",
+    "polarity": "positive",
+    "term_latin": "kachestvasi"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03167",
+  "text": "Олекс сотишга яхши сайт тезда харидор топасиз",
+  "business_name": "OLX.uz",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "харидор",
+    "polarity": "positive",
+    "term_latin": "xaridor"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03168",
+  "text": "Узмабайл энг зури менимча чунки любой жойда олади тогдаям подволдаям хамажойда",
+  "business_name": "Uzmobile",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "жойда",
+    "polarity": "positive",
+    "term_latin": "joyda"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 4.5,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03169",
+  "text": "Болаларимдан факат шуердан бургер обераман чунки бургери зур и етказиб бериш хам тезрог",
+  "business_name": "BBQ Burger",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "бургер",
+    "polarity": "positive",
+    "term_latin": "burger"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03170",
+  "text": "Айникса сушилари зур и етказиб бериш хам тезрог",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сушилари",
+    "polarity": "positive",
+    "term_latin": "sushilari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03171",
+  "text": "Углимни операция килдим хамма томонлама зур рахмат духтурларига",
+  "business_name": "Shox International Hospital",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "томонлама",
+    "polarity": "positive",
+    "term_latin": "tomonlama"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 3.5,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 3,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03172",
+  "text": "Гуллари зурекан хам арзон нархда",
+  "business_name": "Kamila's flowers",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нархда",
+    "polarity": "positive",
+    "term_latin": "narxda"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03173",
+  "text": "Чумилишни ургатадиганлар хам зур экан",
+  "business_name": "Mubina wellness",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Чумилишни ургатадиганлар",
+    "polarity": "negative",
+    "term_latin": "Chumilishni urgatadiganlar"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 1.0,
+   "relevance": 2.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03322",
+  "text": "Яхши илова. 25 млн сум микдорда лимит олдим ва уни картага тушириб олдим. Гап йук",
+  "business_name": "Uzum Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "25 млн сум",
+    "polarity": "neutral",
+    "term_latin": "25 mln sum"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 2.5,
+   "relevance": 3.0,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03338",
+  "text": "Саволим бор эди. Томоркони сугориш учун окин сув булмаса, водопровотдан сугориш мумкинми? Жарима солмайсизларми.?",
+  "business_name": "Uz Suv Taminot",
+  "business_category": "Davlat xizmatlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "окин сув",
+    "polarity": "neutral",
+    "term_latin": "okin suv"
+   },
+   {
+    "term": "водопровотдан",
+    "polarity": "neutral",
+    "term_latin": "vodoprovotdan"
+   },
+   {
+    "term": "Жарима",
+    "polarity": "neutral",
+    "term_latin": "Jarima"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 4.0,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03366",
+  "text": "Ҳаммаси жойида фақат фойизлари баландроқ билиб олмасайз қийналиб қоласиз",
+  "business_name": "depozit.uz",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "жойида",
+    "polarity": "negative",
+    "term_latin": "joyida"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 2.5,
+   "sentiment": 2.0,
+   "relevance": 2.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 2,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03369",
+  "text": "Менингхам фикрим ижобий четтилини ёшлар ўрганиш замон талаби тавсия қилардим",
+  "business_name": "Master IELTS",
+  "business_category": "Ta'lim",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "четтилини",
+    "polarity": "positive",
+    "term_latin": "chettilini"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03371",
+  "text": "Бараккалло шу жамгарма оркали кам таминланган оилалар хожатини котарйаптилар",
+  "business_name": "VAQF",
+  "business_category": "Din/Madaniyat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "жамгарма",
+    "polarity": "negative",
+    "term_latin": "jamgarma"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 1.5,
+   "relevance": 3.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03372",
+  "text": "Окитиш медотлари йокди шунака мактаб лар копалсин",
+  "business_name": "Yakubovʼs School",
+  "business_category": "Ta'lim",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "мактаб лар",
+    "polarity": "neutral",
+    "term_latin": "maktab lar"
+   },
+   {
+    "term": "Окитиш медотлари",
+    "polarity": "negative",
+    "term_latin": "Okitish medotlari"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 2.0,
+   "relevance": 2.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03380",
+  "text": "Овкатлари мазали хизмати корсатиш йахши ходимлари хушмомилали",
+  "business_name": "Oqtepa lavash",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хизмати",
+    "polarity": "positive",
+    "term_latin": "xizmati"
+   },
+   {
+    "term": "ходимлари",
+    "polarity": "positive",
+    "term_latin": "xodimlari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03526",
+  "text": "Мен югуришга жуда кизикаман марафонларга катнашишни хохлайман",
+  "business_name": "Zaamin Ultra",
+  "business_category": "Sayohat/Turizm",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "югуришга",
+    "polarity": "positive",
+    "term_latin": "yugurishga"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 3.5,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03528",
+  "text": "Шархларни укиб менхам бориб таомларидан истемол килишни истардим",
+  "business_name": "Beanberry",
+  "business_category": "Boshqa",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "таомларидан",
+    "polarity": "negative",
+    "term_latin": "taomlaridan"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.5,
+   "sentiment": 1.5,
+   "relevance": 5.0,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 5,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 5,
+    "sentiment": 1,
+    "relevance": 5,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03529",
+  "text": "Ассалаумагалейкум бу нима учун жойлашувини курсатмаган",
+  "business_name": "Healthy food",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 2,
+  "aspects": [
+   {
+    "term": "жойлашувини",
+    "polarity": "neutral",
+    "term_latin": "joylashuvini"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 2.5,
+   "relevance": 2.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 3,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03533",
+  "text": "Питцалари зур доими мижозлари эдим ишим вилоятга утмагунча.",
+  "business_name": "Bellissimo Pizza",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Питцалари",
+    "polarity": "neutral",
+    "term_latin": "Pitsalari"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 1.5,
+   "relevance": 3.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03560",
+  "text": "Тошкентага энг зор ширинликлар докини вп мазали торталар бор",
+  "business_name": "Chaykof tashkent",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ширинликлар",
+    "polarity": "positive",
+    "term_latin": "shirinliklar"
+   },
+   {
+    "term": "торталар",
+    "polarity": "positive",
+    "term_latin": "tortalar"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03783",
+  "text": "Умуман тами йук нарса экан олиб ёб кургандим факат увол болмасин деп едик долларим заказ килдирп олдиришган Эдик",
+  "business_name": "KFC",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ёб кургандим",
+    "polarity": "neutral",
+    "term_latin": "yob kurgandim"
+   },
+   {
+    "term": "Эдик",
+    "polarity": "negative",
+    "term_latin": "Edik"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 3.0,
+   "sentiment": 2.5,
+   "relevance": 3.0,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 2,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03859",
+  "text": "палов жуда маззали гап болиши мумкун емас гошлари тобида пишган хаммма нарсаси зор",
+  "business_name": "Oshpalov",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "палов",
+    "polarity": "positive",
+    "term_latin": "palov"
+   },
+   {
+    "term": "гошлари",
+    "polarity": "negative",
+    "term_latin": "goshlari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 3.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03871",
+  "text": "Сомсалари шунака мазали шунака сочный",
+  "business_name": "Minor somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Сомсалари",
+    "polarity": "positive",
+    "term_latin": "Somsalari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03872",
+  "text": "Раливной уоласига гап йук атмосферасихам зур",
+  "business_name": "Evos",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "атмосферасихам",
+    "polarity": "negative",
+    "term_latin": "atmosferasixam"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 1.5,
+   "relevance": 4.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03873",
+  "text": "Ширинлииклари бир биридан ажойиб вв жудаям маззали",
+  "business_name": "Cakelab",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Ширинлииклари",
+    "polarity": "positive",
+    "term_latin": "Shirinliiklari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 5.0,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 5.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03968",
+  "text": "Шароитлари эудаям зур сузиш учун зур жой",
+  "business_name": "Baxt ko'li",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "жой",
+    "polarity": "negative",
+    "term_latin": "joy"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.5,
+   "sentiment": 1.0,
+   "relevance": 3.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_03973",
+  "text": "Хар томонлама кулай ва тезкор хизмат",
+  "business_name": "Asakabank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хизмат",
+    "polarity": "positive",
+    "term_latin": "xizmat"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04209",
+  "text": "Ассалому алайкум райхон миллий. таомларига гап булиши мумкинмас ифторликаку айтмасада булади узи арзон жуда жуда мазали хаммаси учун катта рахмат",
+  "business_name": "Rayhon Milliy Taomlari",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "таомларига",
+    "polarity": "positive",
+    "term_latin": "taomlariga"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 5.0,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04285",
+  "text": "Халк банк зур гап йук вактида пенсияларимизни оламиз хаммага рахмат",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Халк банк",
+    "polarity": "neutral",
+    "term_latin": "Xalk bank"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 4.0,
+   "sentiment": 2.0,
+   "relevance": 3.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04290",
+  "text": "Хозирки кенда пластик карталар билан пул тулаш анчагина кулай б қолди. Айниқса камунал тулойларни амалга ошириш. Payme билан анча кулай, бир зумда сиз. 👍",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "пластик карталар",
+    "polarity": "negative",
+    "term_latin": "plastik kartalar"
+   },
+   {
+    "term": "камунал тулойларни",
+    "polarity": "negative",
+    "term_latin": "kamunal tuloylarni"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 4.0,
+   "sentiment": 1.0,
+   "relevance": 2.5,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 3,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04408",
+  "text": "Хаммага тавсия киламан узим шу банкдан кридит олб фойдаланиб келмокдаман",
+  "business_name": "TBC Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "банкдан",
+    "polarity": "negative",
+    "term_latin": "bankdan"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 1.5,
+   "accuracy": 3.0,
+   "sentiment": 1.0,
+   "relevance": 2.0,
+   "overall": 1.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 1,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 2,
+    "overall": 1
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04431",
+  "text": "Албатта мен хам ичобий фикр килдираман нимага десангиз декаратиф гуллар хам бор экан аёлларни калбимга шу шулларни харид килиб кунглига йул топишни Яна Бир имконияти деб уйлайман Нима дейсизлар хамма уз фикрини колдиришини сураб коламан этибор учун рахмат барчага",
+  "business_name": "Kamila's flowers",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "гуллар",
+    "polarity": "neutral",
+    "term_latin": "gullar"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 4.0,
+   "sentiment": 2.5,
+   "relevance": 2.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 4,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04432",
+  "text": "Албатта фикрилана кушиламан якинларимга онажонларимизга хам харид килиб куриб узингиз бахо берасизлар шунчаки класс",
+  "business_name": "flowers uz",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хам харид",
+    "polarity": "neutral",
+    "term_latin": "xam xarid"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 3.0,
+   "sentiment": 2.0,
+   "relevance": 2.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04645",
+  "text": "Розметов гуш махсулотлари калоса, сасиска хамма махсулотларини биз оиламиз билан севиб исмемол киламиз сабаби унинг тами зур нархи хам хамёнбоп",
+  "business_name": "Rozmetov",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "махсулотлари",
+    "polarity": "positive",
+    "term_latin": "maxsulotlari"
+   },
+   {
+    "term": "нархи",
+    "polarity": "positive",
+    "term_latin": "narxi"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04675",
+  "text": "Ишламабдику .Доимо ишламаган ..Метанни нега ёпишади.. Ахир Мустакил Узбекистонда яшаяпмизми ?",
+  "business_name": "\"BNQ GAS LUX\" MAS'ULIYATI CHEKLANGAN JAMIYAT",
+  "business_category": "Boshqa",
+  "user_rating": 1,
+  "aspects": [
+   {
+    "term": "Мустакил Узбекистонда",
+    "polarity": "negative",
+    "term_latin": "Mustakil Uzbekistonda"
+   },
+   {
+    "term": "Ишламабдику",
+    "polarity": "negative",
+    "term_latin": "Ishlamabdiku"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.0,
+   "sentiment": 4.5,
+   "relevance": 3.0,
+   "overall": 3.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04699",
+  "text": "Гулларини ассортименти жудаям куп нархлари хам хамён боп👍🏻👍🏻",
+  "business_name": "Kamila's flowers",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ассортименти",
+    "polarity": "positive",
+    "term_latin": "assortimenti"
+   },
+   {
+    "term": "нархлари",
+    "polarity": "positive",
+    "term_latin": "narxlari"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 4.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 3.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 5,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04700",
+  "text": "Сушилариларга гап йо , муздекина ичимликларилар барчаси ало даражада 😊",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Сушилариларга",
+    "polarity": "neutral",
+    "term_latin": "Sushilarilarga"
+   },
+   {
+    "term": "муздекина ичимликларилар",
+    "polarity": "positive",
+    "term_latin": "muzdekina ichimliklarilar"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "judge_scores": {
+   "completeness": 4.0,
+   "accuracy": 4.5,
+   "sentiment": 3.5,
+   "relevance": 4.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 4,
+    "accuracy": 4,
+    "sentiment": 4,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 3,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04701",
+  "text": "Узум карта бн % ларсиз пул у́тказиш жудаям кулай сизларга омад тилаймиз",
+  "business_name": "Uzum Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "омад тилаймиз",
+    "polarity": "neutral",
+    "term_latin": "omad tilaymiz"
+   },
+   {
+    "term": "Узум карта",
+    "polarity": "neutral",
+    "term_latin": "Uzum karta"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 3.5,
+   "sentiment": 2.5,
+   "relevance": 2.5,
+   "overall": 2.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 3,
+    "relevance": 3,
+    "overall": 3
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 2,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04702",
+  "text": "Пайме иловасига гап булиши мумкин эмас сизлардаги ажойиб Шак Шак у́йнина алохида тасано😊",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Шак Шак",
+    "polarity": "positive",
+    "term_latin": "Shak Shak"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04703",
+  "text": "Тохтаниёз Ота калбаса ва тушонкаларини оилавий севиб истемол киламиз таьмига ва халолига гап булиши мумкин эмас😊",
+  "business_name": "To'xtaniyoz-ota",
+  "business_category": "Din/Madaniyat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Тохтаниёз Ота калбаса ва тушонкаларини",
+    "polarity": "positive",
+    "term_latin": "Toxtaniyoz Ota kalbasa va tushonkalarini"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 4.5,
+   "overall": 4.5
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 5,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 5
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04704",
+  "text": "Муддатли туловга Уй харид килдим жудаям хурсандман сизларда мижозларга куп имкониятлар бор ишларингизга ривож😊😊😊",
+  "business_name": "Xon Saroy",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "мижозларга",
+    "polarity": "positive",
+    "term_latin": "mijozlarga"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.0,
+   "accuracy": 4.0,
+   "sentiment": 5.0,
+   "relevance": 4.0,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04853",
+  "text": "Менга чуда ёкди айниқса ходимлармни мумомиласи.",
+  "business_name": "Loook",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ходимлармни",
+    "polarity": "negative",
+    "term_latin": "xodimlarmni"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.5,
+   "accuracy": 3.5,
+   "sentiment": 1.0,
+   "relevance": 4.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 1,
+    "relevance": 4,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04881",
+  "text": "Бу парфюм яхш ва сфатли унт побатальнее олиб кораман чунки бундан олдн ишлаткандм",
+  "business_name": "Tashkent Perfume",
+  "business_category": "Boshqa",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "унт побатальнее",
+    "polarity": "positive",
+    "term_latin": "unt pobatalneye"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 2.0,
+   "accuracy": 2.5,
+   "sentiment": 3.5,
+   "relevance": 2.0,
+   "overall": 2.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 2,
+    "accuracy": 3,
+    "sentiment": 3,
+    "relevance": 2,
+    "overall": 2
+   },
+   "gpt-4.1": {
+    "completeness": 2,
+    "accuracy": 2,
+    "sentiment": 4,
+    "relevance": 2,
+    "overall": 2
+   }
+  },
+  "judge_rubric": "v1"
+ },
+ {
+  "review_id": "rev_04947",
+  "text": "Visa card енг зўр карта бутун дунёда ишлайди бир жойда уялтимайди",
+  "business_name": "Ipak yo‘li bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Visa card",
+    "polarity": "positive",
+    "term_latin": "Visa card"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "judge_scores": {
+   "completeness": 3.5,
+   "accuracy": 4.5,
+   "sentiment": 5.0,
+   "relevance": 3.5,
+   "overall": 4.0
+  },
+  "n_judges": 2,
+  "judge_panel": {
+   "gpt-4o-mini": {
+    "completeness": 3,
+    "accuracy": 4,
+    "sentiment": 5,
+    "relevance": 3,
+    "overall": 4
+   },
+   "gpt-4.1": {
+    "completeness": 4,
+    "accuracy": 5,
+    "sentiment": 5,
+    "relevance": 4,
+    "overall": 4
+   }
+  },
+  "judge_rubric": "v1"
+ }
+]

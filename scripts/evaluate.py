@@ -85,6 +85,12 @@ def main():
         help="Maximum number of samples to evaluate (for quick testing)"
     )
     parser.add_argument(
+        "--split",
+        type=str,
+        default=None,
+        help="Split to evaluate (default: 'test' if present, else 'validation')"
+    )
+    parser.add_argument(
         "--save-preds",
         type=str,
         default=None,
@@ -117,16 +123,19 @@ def main():
     test_dataset = load_from_disk(args.test_data)
     
     # Handle DatasetDict
+    split_name = None
     if hasattr(test_dataset, "keys"):
-        if "test" in test_dataset:
-            test_dataset = test_dataset["test"]
+        if args.split:
+            split_name = args.split
+        elif "test" in test_dataset:
+            split_name = "test"
         elif "validation" in test_dataset:
-            test_dataset = test_dataset["validation"]
+            split_name = "validation"
         else:
             # Use first available split
-            first_split = list(test_dataset.keys())[0]
-            test_dataset = test_dataset[first_split]
-            logger.warning(f"No test/validation split found, using '{first_split}'")
+            split_name = list(test_dataset.keys())[0]
+            logger.warning(f"No test/validation split found, using '{split_name}'")
+        test_dataset = test_dataset[split_name]
     
     # Limit samples if requested
     if args.max_samples and args.max_samples < len(test_dataset):
@@ -150,6 +159,7 @@ def main():
     results["metadata"] = {
         "model_path": args.model_path,
         "test_data": args.test_data,
+        "split": split_name,
         "timestamp": datetime.now().isoformat(),
         "num_samples": len(test_dataset),
     }

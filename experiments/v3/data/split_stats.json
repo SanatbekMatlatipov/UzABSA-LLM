@@ -1,0 +1,21 @@
+{
+ "source": "./data/processed",
+ "dev_size": 0.1,
+ "seed": 42,
+ "rows": {
+  "train": 4932,
+  "validation": 548,
+  "test": 609
+ },
+ "unique_texts": {
+  "train": 4487,
+  "validation": 488,
+  "test": 540
+ },
+ "shared_texts": {
+  "train&validation": 0,
+  "train&test": 0,
+  "validation&test": 0
+ },
+ "test_is_v2_heldout": true
+}

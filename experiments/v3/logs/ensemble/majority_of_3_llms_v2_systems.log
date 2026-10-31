@@ -1,0 +1,12 @@
+# 2026-10-30T23:32:54 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# PYTHONHASHSEED=0 /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/ensemble_preds.py --name 'Majority of 3 LLMs (v2 systems)' --min-votes 2 --out-dir experiments/v3/results/ensembles --systems 'Qwen 2.5-7B=paper_materials/revision_v2/results_v2/qwen2.5-7b_preds.jsonl' 'Llama 3.1-8B=paper_materials/revision_v2/results_v2/llama3.1-8b_preds.jsonl' DeepSeek-R1-7B=paper_materials/revision_v2/results_v2/deepseek-7b_preds.jsonl
+system                   exact  part1:1  pair   acc
+Majority of 3 LLMs (v2 systems) 0.7236 0.8003 0.6671 0.9220
+Qwen 2.5-7B              0.7077 0.8036 0.6448 0.9110
+Llama 3.1-8B             0.7036 0.8019 0.6510 0.9252
+DeepSeek-R1-7B           0.6776 0.7892 0.6034 0.8905
+vs Qwen 2.5-7B           ate+0.016 (p=0.1492, holm=1.0)  part-0.003 (p=0.7634, holm=1.0)  pair+0.022 (p=0.0544, holm=0.4896)  sentiment+0.011 (p=0.1962, holm=1.0)
+vs Llama 3.1-8B          ate+0.020 (p=0.0364, holm=0.4004)  part-0.002 (p=0.8408, holm=1.0)  pair+0.016 (p=0.151, holm=1.0)  sentiment-0.003 (p=0.7494, holm=1.0)
+vs DeepSeek-R1-7B        ate+0.046 (p=0.0, holm=0.0)  part+0.011 (p=0.2472, holm=1.0)  pair+0.064 (p=0.0, holm=0.0)  sentiment+0.032 (p=0.0068, holm=0.0816)
+Saved -> experiments/v3/results/ensembles/majority_of_3_llms_v2_systems_metrics.json
+# exit 0 after 2s

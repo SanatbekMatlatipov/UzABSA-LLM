@@ -1,0 +1,19 @@
+# Weights and trainer state: about 15 GB per 7B run. Publish checkpoints on the
+# Hugging Face Hub; registry.json and MANIFEST.json record where they are.
+runs/*/merged_model/
+runs/*/lora_adapters/
+runs/*/checkpoint-*/
+runs/*/model/
+runs/*/hf_trainer/
+runs/*/logs/
+**/.cache/
+# HF datasets caches
+data/**/cache-*.arrow
+data_bio/**/cache-*.arrow
+# resumable annotation state
+annotated/annotation_checkpoint.json
+# The root .gitignore drops *.log; these logs are the record of how every
+# number was produced, so keep them.
+!*.log
+# superseded re-check workbooks, kept on this machine only
+test_recheck/archive-not-to-consider/

@@ -1,0 +1,7646 @@
+{
+ "meta": {
+  "seed": 2026,
+  "systems": {
+   "Qwen 2.5-7B": "paper_materials/revision_v2/results_v2/qwen2.5-7b_preds.jsonl",
+   "Llama 3.1-8B": "paper_materials/revision_v2/results_v2/llama3.1-8b_preds.jsonl",
+   "DeepSeek-R1-7B": "paper_materials/revision_v2/results_v2/deepseek-7b_preds.jsonl",
+   "TahrirchiBERT": "paper_materials/revision_v2/baselines_v2/tahrirchi-bert/preds_per_example.jsonl",
+   "BERTbek": "paper_materials/revision_v2/baselines_v2/bertbek/preds_per_example.jsonl"
+  },
+  "rule": "flag a review if a gold span is malformed, a gold term is predicted by <= 1 system, >= 3 systems agree on another polarity, or a non-gold term is predicted by >= 3 systems; candidates = gold terms + terms predicted by >= 2 systems",
+  "n_flagged": 203,
+  "n_control": 60,
+  "n_candidate_rows": 575
+ },
+ "reviews": {
+  "R001": {
+   "idx": 211,
+   "text": "2) qo'ziqorinlarning ta'midan eski ekanligi bilinadi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "qo'ziqorinlarning ta'midan"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "qo'ziqorinlarning"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "qo'ziqorinlarning ta'midan",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R001-1"
+    },
+    {
+     "term": "qo'ziqorinlarning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R001-2"
+    }
+   ]
+  },
+  "R002": {
+   "idx": 445,
+   "text": "Keling va jonli musiqadan bahramand bo'ling",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "jonli musiqadan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "jonli musiqadan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R002-1"
+    },
+    {
+     "term": "musiqadan",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R002-2"
+    }
+   ]
+  },
+  "R003": {
+   "idx": 152,
+   "text": "Lekin xizmat menga yoqmadi, menyu so'rasam, ofitsiant ularda menyu yo'qligini aytdi.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "menyu"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "menyu",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R003-1"
+    },
+    {
+     "term": "ofitsiant",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R003-2"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R003-3"
+    }
+   ]
+  },
+  "R004": {
+   "idx": 500,
+   "text": "Men buni tavsiya qilmayman.",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R005": {
+   "idx": 267,
+   "text": "Ajoyib joy))",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R005-1"
+    }
+   ]
+  },
+  "R006": {
+   "idx": 521,
+   "text": "Mavsumning issiqligini yengishga yordam beradi.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "Mavsumning"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Mavsumning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R006-1"
+    }
+   ]
+  },
+  "R007": {
+   "idx": 404,
+   "text": "Hammasi juda zo'r edi, yaxshi oqshom uchun rahmat!",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "oqshom"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Hammasi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R007-1"
+    },
+    {
+     "term": "oqshom",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R007-2"
+    }
+   ]
+  },
+  "R008": {
+   "idx": 557,
+   "text": "Tavsiya qilmayman!",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R009": {
+   "idx": 599,
+   "text": "Narxlar o'rtacha.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Narxlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R009-1"
+    }
+   ]
+  },
+  "R010": {
+   "idx": 293,
+   "text": "Bu joy tashqaridan tanush qiyin, chunki u sport maydonlari bilan o'ralgan, ammo har qanday taksi haydovchisi sizni hech qanday muammosiz olib bora oladi, chunki u hatto O'zbekiston chegaralaridan tashqarida ham ma'lum joy.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taksi haydovchisi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R010-1"
+    },
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 4,
+     "row_id": "R010-2"
+    }
+   ]
+  },
+  "R011": {
+   "idx": 283,
+   "text": "Arab oshxonasini sevuvchilar uchun bu restoran O'zbekistonda barakadir.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Arab oshxonasini"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "restoran"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "restoran",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R011-1"
+    },
+    {
+     "term": "Arab oshxonasini",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R011-2"
+    }
+   ]
+  },
+  "R012": {
+   "idx": 237,
+   "text": "Mazali 😋 tayyorlangan.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Mazali"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Mazali",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R012-1"
+    }
+   ]
+  },
+  "R013": {
+   "idx": 552,
+   "text": "Ammo oxirgi marta ular u erga borganlarida, biz ko'proq biftek va soyaga buyurtma berishni xohlagan bo'lsak-da, 10 kishilik belbog'ni topshirishdan bosh tortdik.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "10 kishilik"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "biftek va soyaga",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 4,
+     "row_id": "R013-1"
+    },
+    {
+     "term": "10 kishilik",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R013-2"
+    },
+    {
+     "term": "belbog'ni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R013-3"
+    }
+   ]
+  },
+  "R014": {
+   "idx": 122,
+   "text": "Haqiqatan ham milliy mazali mazali oilaviy ovqatlanish markazi",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "oilaviy ovqatlanish markazi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "oilaviy ovqatlanish markazi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R014-1"
+    },
+    {
+     "term": "ovqatlanish markazi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R014-2"
+    }
+   ]
+  },
+  "R015": {
+   "idx": 231,
+   "text": "Ofitsiantlar esa juda muloyim.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Ofitsiantlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R015-1"
+    }
+   ]
+  },
+  "R016": {
+   "idx": 386,
+   "text": "Ammo oden udonida oden yo'q.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "oden",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 3,
+     "row_id": "R016-1"
+    }
+   ]
+  },
+  "R017": {
+   "idx": 284,
+   "text": "5+ uchun xizmat Har doim toza.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R017-1"
+    }
+   ]
+  },
+  "R018": {
+   "idx": 162,
+   "text": "Birgina kamchilik-bu idishlar sekin xizmat qilingan.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "xizmat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "idishlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "idishlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R018-1"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R018-2"
+    }
+   ]
+  },
+  "R019": {
+   "idx": 134,
+   "text": "Bu tashrif buyuradigan joy va qaytib kelishingizga ishonch hosil qiling !!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R019-1"
+    }
+   ]
+  },
+  "R020": {
+   "idx": 179,
+   "text": "Ularning barcha xilma-xilligi va yangiligi bor.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Ularning barcha"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Ularning barcha",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R020-1"
+    },
+    {
+     "term": "xilma-xilligi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R020-2"
+    }
+   ]
+  },
+  "R021": {
+   "idx": 158,
+   "text": "Siz ko'chada o'tirishingiz mumkin, zalda birinchi qavatda, ikkinchisida yoki olib ketishingiz mumkin.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ikkinchisida"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "zalda",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 4,
+     "row_id": "R021-1"
+    },
+    {
+     "term": "ikkinchisida",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R021-2"
+    },
+    {
+     "term": "ko'chada",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R021-3"
+    }
+   ]
+  },
+  "R022": {
+   "idx": 268,
+   "text": "Menyu chiroyli, lekin nima uchun, agar biror narsa so'ramasangiz, yo'q.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "biror narsa"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Menyu",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R022-1"
+    },
+    {
+     "term": "biror narsa",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R022-2"
+    }
+   ]
+  },
+  "R023": {
+   "idx": 519,
+   "text": "ALDASHYABDILAR!",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "ALDASHYABDILar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R023-1"
+    }
+   ]
+  },
+  "R024": {
+   "idx": 277,
+   "text": "Xodimlar aqlli, yasmiq sho'rva unchalik emas.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Xodimlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R024-1"
+    },
+    {
+     "term": "yasmiq sho'rva",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 3,
+     "row_id": "R024-2"
+    }
+   ]
+  },
+  "R025": {
+   "idx": 86,
+   "text": "Buyurtma qilingan salat va uchta taom, hammasi uchun 16 dollar to'langan 🔥, ketganingizda siz qovurilgan chuchvara va mahalliy Norinni sotib olishingiz mumkin.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "salat"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "uchta taom"
+    ],
+    [
+     "malformed_gold_span",
+     "16 dolla"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "salat va uchta taom"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "16 dollar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R025-1"
+    },
+    {
+     "term": "16 dolla",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R025-2"
+    },
+    {
+     "term": "uchta taom",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R025-3"
+    },
+    {
+     "term": "salat va uchta taom",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R025-4"
+    },
+    {
+     "term": "qovurilgan chuchvara va mahalliy Norinni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R025-5"
+    },
+    {
+     "term": "salat",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R025-6"
+    }
+   ]
+  },
+  "R026": {
+   "idx": 280,
+   "text": "Men hammaga tashrif buyurishni maslahat beraman.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "hammaga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hammaga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R026-1"
+    }
+   ]
+  },
+  "R027": {
+   "idx": 414,
+   "text": "Qoshiq bilan yeb, toshkent choyi bilan yuviladi.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "choyi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Qoshiq",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R027-1"
+    },
+    {
+     "term": "choyi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R027-2"
+    },
+    {
+     "term": "toshkent choyi",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R027-3"
+    }
+   ]
+  },
+  "R028": {
+   "idx": 307,
+   "text": "Qolish va uchrashish uchun juda ajoyib joy",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R028-1"
+    }
+   ]
+  },
+  "R029": {
+   "idx": 101,
+   "text": "Siz albatta tashrif buyurishingiz va oshdan tatib ko'rishingiz kerak bo'lgan eng o'ziga xos joy bu Toshkentdagi “Osh markazi”dir.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "oshdan"
+    ],
+    [
+     "malformed_gold_span",
+     "Osh markazi”"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tashrif"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Osh markazi”",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R029-1"
+    },
+    {
+     "term": "tashrif",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R029-2"
+    },
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R029-3"
+    },
+    {
+     "term": "oshdan",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R029-4"
+    }
+   ]
+  },
+  "R030": {
+   "idx": 24,
+   "text": "Toshkent va butun O'zbekistondagi eng zo'r taomlar, tonnalab navbatlar, ajoyib ta'm va ajoyib xizmat.... Tavsiya etiladi",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Tavsiya"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "ta'm"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "ta'm",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R030-1"
+    },
+    {
+     "term": "Tavsiya",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R030-2"
+    },
+    {
+     "term": "navbatlar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 2,
+     "row_id": "R030-3"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R030-4"
+    },
+    {
+     "term": "taomlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R030-5"
+    }
+   ]
+  },
+  "R031": {
+   "idx": 526,
+   "text": "ofitsiantlar go'yo uylar aylanib yurgandek xizmat ko'rsatishadi, xizmat 0.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiantlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 3,
+     "row_id": "R031-1"
+    },
+    {
+     "term": "ofitsiantlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R031-2"
+    }
+   ]
+  },
+  "R032": {
+   "idx": 504,
+   "text": "Ehtimol, bu kafe bir piyola choy ichish uchun ajoyib joy sifatida ko'proq mos keladi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "piyola choy"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "kafe"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "kafe",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R032-1"
+    },
+    {
+     "term": "piyola choy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R032-2"
+    },
+    {
+     "term": "choy ichish",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R032-3"
+    }
+   ]
+  },
+  "R033": {
+   "idx": 310,
+   "text": "Turistlar uchun juda arzon!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "arzon"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Turistlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "arzon",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R033-1"
+    },
+    {
+     "term": "Turistlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R033-2"
+    }
+   ]
+  },
+  "R034": {
+   "idx": 458,
+   "text": "Ko'p odamlar borligi aniq va ular shunchaki ulgura olmaydilar, lekin bu joy juda mashhur bo'lgani uchun ofitsiantlar yoki boshqa narsalarni ko'paytirish kerak.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ofitsiantlar yoki boshqa narsalarni"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiantlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "ofitsiantlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R034-1"
+    },
+    {
+     "term": "odamlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R034-2"
+    },
+    {
+     "term": "ofitsiantlar yoki boshqa narsalarni",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R034-3"
+    }
+   ]
+  },
+  "R035": {
+   "idx": 30,
+   "text": "100% u yerda dam olishni maslahat berishadi 🥳",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "dam olishni"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "yerda"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "dam olishni",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R035-1"
+    },
+    {
+     "term": "yerda",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R035-2"
+    }
+   ]
+  },
+  "R036": {
+   "idx": 548,
+   "text": "Juda yaxshi va munosib muhit, mahalliy bo'lmagan taomlarni iste'mol qilish uchun Toshkentdagi kafe-restoran",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "mahalliy bo'lmagan taomlarni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomlarni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R036-1"
+    },
+    {
+     "term": "mahalliy bo'lmagan taomlarni",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R036-2"
+    },
+    {
+     "term": "muhit",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R036-3"
+    }
+   ]
+  },
+  "R037": {
+   "idx": 241,
+   "text": "Buyurtmani olish uchun juda ko'p vaqt ketadi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Buyurtmani olish"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Buyurtmani"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Buyurtmani olish",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R037-1"
+    },
+    {
+     "term": "Buyurtmani",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R037-2"
+    }
+   ]
+  },
+  "R038": {
+   "idx": 236,
+   "text": "Achchiq qalampir so'rasang ber, shu bilan yesang koreyslar ham yaxshi yeyishi mumkin",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "i yeyishi mumkin"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "koreyslar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "i yeyishi mumkin",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R038-1"
+    },
+    {
+     "term": "Achchiq qalampir",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R038-2"
+    },
+    {
+     "term": "koreyslar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R038-3"
+    }
+   ]
+  },
+  "R039": {
+   "idx": 109,
+   "text": "Salatlar ham juda mazali.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Salatlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R039-1"
+    }
+   ]
+  },
+  "R040": {
+   "idx": 256,
+   "text": "Va bularning barchasi boshqa ajoyib restoranlarga qaraganda ikki baravar qimmatga tushadi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "restoranlarga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "restoranlarga",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R040-1"
+    },
+    {
+     "term": "bularning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R040-2"
+    },
+    {
+     "term": "barchasi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R040-3"
+    }
+   ]
+  },
+  "R041": {
+   "idx": 18,
+   "text": "Eng zo'r o'zbek oshi va kabobi, eng yaxshi haqiqiy muhit.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "o'zbek oshi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "oshi va kabobi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R041-1"
+    },
+    {
+     "term": "o'zbek oshi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R041-2"
+    },
+    {
+     "term": "muhit",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R041-3"
+    },
+    {
+     "term": "kabobi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R041-4"
+    }
+   ]
+  },
+  "R042": {
+   "idx": 76,
+   "text": "Men bo'lmaganman ... Lekin men u yerga borish niyatim bor",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "u yerga"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "yerga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R042-1"
+    },
+    {
+     "term": "u yerga",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R042-2"
+    }
+   ]
+  },
+  "R043": {
+   "idx": 450,
+   "text": "endi u yerda tinchgina kechki ovqat qilish mumkin emas.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "kechki ovqat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "yerda"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "kechki ovqat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R043-1"
+    },
+    {
+     "term": "yerda",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R043-2"
+    }
+   ]
+  },
+  "R044": {
+   "idx": 403,
+   "text": "Olib ketishga buyurtma berish mumkin.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "buyurtma berish"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "buyurtma berish",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R044-1"
+    },
+    {
+     "term": "Olib ketishga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R044-2"
+    }
+   ]
+  },
+  "R045": {
+   "idx": 423,
+   "text": "Taom juda hamyonbop va mazali!!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "hamyonbop"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Taom",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R045-1"
+    },
+    {
+     "term": "hamyonbop",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R045-2"
+    }
+   ]
+  },
+  "R046": {
+   "idx": 156,
+   "text": "Oilaviy uslubdagi taomlar juda arzon.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "taomlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R046-1"
+    }
+   ]
+  },
+  "R047": {
+   "idx": 522,
+   "text": "Men allaqachon tushlik qilish fikridan qaytdim va bunga vaqt ham yo'q, ishga yugurishim kerak.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tushlik"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "tushlik qilish"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "tushlik qilish",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R047-1"
+    },
+    {
+     "term": "tushlik",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R047-2"
+    }
+   ]
+  },
+  "R048": {
+   "idx": 48,
+   "text": "Albatta u yerga yana boraman",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "yerga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R048-1"
+    }
+   ]
+  },
+  "R049": {
+   "idx": 341,
+   "text": "Juda yaxshi menyu narxi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "menyu narxi"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "narxi"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "menyu"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "menyu narxi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R049-1"
+    },
+    {
+     "term": "menyu",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R049-2"
+    },
+    {
+     "term": "narxi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R049-3"
+    }
+   ]
+  },
+  "R050": {
+   "idx": 166,
+   "text": "Rangli restoran.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "restoran",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R050-1"
+    }
+   ]
+  },
+  "R051": {
+   "idx": 250,
+   "text": "Juda mazali taom",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "taom",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R051-1"
+    }
+   ]
+  },
+  "R052": {
+   "idx": 239,
+   "text": "Agar siz hech qachon haqiqiy turk oshxonasini iste'mol qilmagan bo'lsangiz, unda siz ovqatlanishingiz mumkin",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "turk oshxonasini"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "turk oshxonasini",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R052-1"
+    }
+   ]
+  },
+  "R053": {
+   "idx": 208,
+   "text": "Bir to'plam 0,7 kg osh +2 ta tovuq tuxumi + 1 ta bedana tuxumi va dulma.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tovuq tuxumi + 1 ta bedana tuxumi va dulma"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "0,7 kg osh"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "osh +2 ta tovuq tuxumi + 1 ta bedana tuxumi va dulma",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R053-1"
+    },
+    {
+     "term": "tovuq tuxumi + 1 ta bedana tuxumi va dulma",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R053-2"
+    },
+    {
+     "term": "0,7 kg osh",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R053-3"
+    }
+   ]
+  },
+  "R054": {
+   "idx": 605,
+   "text": "hubhasiz, agar siz bu yerda, Toshkentda mazali taom iste'mol qilmoqchi bo'lsangiz, mahalliy aholi eng yaxshi qiladigan narsaga rioya qiling, ya'ni mahalliy o'zbek oshxonasi.",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "mahalliy o'zbek oshxonasi."
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taom"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "mahalliy aholi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R054-1"
+    },
+    {
+     "term": "taom",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R054-2"
+    },
+    {
+     "term": "mahalliy o'zbek oshxonasi.",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R054-3"
+    },
+    {
+     "term": "mahalliy o'zbek oshxonasi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R054-4"
+    },
+    {
+     "term": "oshxonasi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R054-5"
+    }
+   ]
+  },
+  "R055": {
+   "idx": 257,
+   "text": "Men ularga tabassum qilishni maslahat beraman",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ularga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "tabassum qilishni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R055-1"
+    },
+    {
+     "term": "ularga",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R055-2"
+    },
+    {
+     "term": "tabassum",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R055-3"
+    }
+   ]
+  },
+  "R056": {
+   "idx": 441,
+   "text": "Men Moskvadagi restoranlardan birida o'tirgandek bo'ldim.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "restoranlardan",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R056-1"
+    }
+   ]
+  },
+  "R057": {
+   "idx": 486,
+   "text": "Atmosfera ... bo'lishi mumkin ... Lekin kechki ovqat uchun hali ham yomon emas.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "kechki ovqat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "kechki ovqat",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R057-1"
+    },
+    {
+     "term": "Atmosfera",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R057-2"
+    }
+   ]
+  },
+  "R058": {
+   "idx": 542,
+   "text": "Ajoyib!",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R059": {
+   "idx": 399,
+   "text": "Buyurtmangiz biroz vaqt olishi mumkin, chunki u odatda tushlik vaqtida band",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "vaqt"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Buyurtmangiz"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Buyurtmangiz",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R059-1"
+    },
+    {
+     "term": "vaqt",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R059-2"
+    }
+   ]
+  },
+  "R060": {
+   "idx": 258,
+   "text": "Yaxshi musiqa, romantik kechki ovqat uchun qulay joy.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "kechki ovqat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R060-1"
+    },
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R060-2"
+    },
+    {
+     "term": "musiqa",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R060-3"
+    }
+   ]
+  },
+  "R061": {
+   "idx": 499,
+   "text": "Joy yaxshi va shinam, menga juda yoqadi",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R061-1"
+    }
+   ]
+  },
+  "R062": {
+   "idx": 490,
+   "text": "Cheklangan vegetarian variantlari.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "vegetarian variantlari"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "vegetarian variantlari",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R062-1"
+    },
+    {
+     "term": "vegetarian",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R062-2"
+    }
+   ]
+  },
+  "R063": {
+   "idx": 223,
+   "text": "Bu erda ovqatlanish yoqimli) va shuningdek, men bu erda nega shunchalik kam odamlar kelishadi hayronman.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ovqatlanish"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "erda"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "ovqatlanish",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R063-1"
+    },
+    {
+     "term": "erda",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R063-2"
+    }
+   ]
+  },
+  "R064": {
+   "idx": 547,
+   "text": "ham xamir bo'laklari, salatlar birga xususda bo'lagi edi, noldan ixtirolar, chunki siz salat yoki yunon salatini buyurtma qilasiz va bir guruh karam va bir bo'lak bodring olasiz.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "xamir bo'laklari"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "salatlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "bodring",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R064-1"
+    },
+    {
+     "term": "xamir bo'laklari",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R064-2"
+    },
+    {
+     "term": "salat yoki yunon salatini",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 2,
+     "row_id": "R064-3"
+    },
+    {
+     "term": "salatlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R064-4"
+    }
+   ]
+  },
+  "R065": {
+   "idx": 354,
+   "text": "Mutlaqo kulgili.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "kulgili"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "kulgili",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R065-1"
+    }
+   ]
+  },
+  "R066": {
+   "idx": 461,
+   "text": "Irqchilik tufayli u yerga borishni istamayman.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "yerga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R066-1"
+    },
+    {
+     "term": "Irqchilik",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 2,
+     "row_id": "R066-2"
+    }
+   ]
+  },
+  "R067": {
+   "idx": 53,
+   "text": "Hisob kitob qilish uchun men yana ofitsiantning e'tiborini jalb qilishim kerak edi (albatta, u stolga kelmadi).",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Hisob kitob"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiantning"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Hisob kitob",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R067-1"
+    },
+    {
+     "term": "ofitsiantning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R067-2"
+    }
+   ]
+  },
+  "R068": {
+   "idx": 45,
+   "text": "Xizmat muloyim va ofitsiant menyudan biror narsani maslahat berish yoki taklif qilishdan mamnun.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiant"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R068-1"
+    },
+    {
+     "term": "ofitsiant",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R068-2"
+    }
+   ]
+  },
+  "R069": {
+   "idx": 556,
+   "text": "Uning har bir qismidan zavq oldim.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "qismidan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "qismidan",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R069-1"
+    },
+    {
+     "term": "Uning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R069-2"
+    }
+   ]
+  },
+  "R070": {
+   "idx": 75,
+   "text": "Bu narx uchun juda yuqori sifat!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "narx"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "sifat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "narx",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R070-1"
+    },
+    {
+     "term": "sifat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R070-2"
+    }
+   ]
+  },
+  "R071": {
+   "idx": 193,
+   "text": "Biz doimo restoraningizga tashrif buyuramiz, chunki biz yaqin joyda ishlaymiz.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "joyda"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "restoraningizga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "restoraningizga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R071-1"
+    },
+    {
+     "term": "joyda",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R071-2"
+    }
+   ]
+  },
+  "R072": {
+   "idx": 591,
+   "text": "Biz olgan qismlar kichik bo'lib tuyuldi, lekin bu salat va gazaklar edi, bu umuman yaxshi.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "qismlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "salat va gazaklar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R072-1"
+    },
+    {
+     "term": "qismlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R072-2"
+    }
+   ]
+  },
+  "R073": {
+   "idx": 600,
+   "text": "An'anaviy taomlar uchun yaxshi zamonaviy restoran.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R073-1"
+    },
+    {
+     "term": "restoran",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R073-2"
+    }
+   ]
+  },
+  "R074": {
+   "idx": 178,
+   "text": "Agar siz o'zbek oshxonasining ajoyib namunasini istasangiz, bu yerga kiring.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "oshxonasining"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R074-1"
+    },
+    {
+     "term": "oshxonasining",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R074-2"
+    }
+   ]
+  },
+  "R075": {
+   "idx": 484,
+   "text": "Atmosfera joy, yuqori darajadagi oshxona, a'lo darajadagi xizmat, yuqori narxlar.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "joy"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Atmosfera"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "oshxona",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R075-1"
+    },
+    {
+     "term": "Atmosfera",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R075-2"
+    },
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R075-3"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R075-4"
+    },
+    {
+     "term": "narxlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R075-5"
+    }
+   ]
+  },
+  "R076": {
+   "idx": 1,
+   "text": "Mazali taom, osoyishta atmosfera, ajoyib xizmat",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R076-1"
+    },
+    {
+     "term": "taom",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R076-2"
+    },
+    {
+     "term": "atmosfera",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R076-3"
+    }
+   ]
+  },
+  "R077": {
+   "idx": 454,
+   "text": "Agar siz o'z xodimlaringiz mehmonlarga hurmatliroq munosabatda bo'lishni va suhbatlashishni o'rgatsangiz, restoraningizga 5 yulduz bergan bo'lardim, omad tilaymiz!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "5 yulduz"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xodimlaringiz",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 2,
+     "row_id": "R077-1"
+    },
+    {
+     "term": "5 yulduz",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R077-2"
+    }
+   ]
+  },
+  "R078": {
+   "idx": 199,
+   "text": "Faqat bitta Osh menyusiga ega restoran.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "restoran"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Osh menyusiga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R078-1"
+    },
+    {
+     "term": "restoran",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 4,
+     "row_id": "R078-2"
+    }
+   ]
+  },
+  "R079": {
+   "idx": 14,
+   "text": "ajoyib joy, milliy rang, sizga ushbu muassasaga tashrif buyurib, mahalliy taomlarni tatib ko'rishingizni maslahat beramiz.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "mahalliy taomlarni"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlarni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomlarni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R079-1"
+    },
+    {
+     "term": "muassasaga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R079-2"
+    },
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R079-3"
+    },
+    {
+     "term": "mahalliy taomlarni",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R079-4"
+    }
+   ]
+  },
+  "R080": {
+   "idx": 63,
+   "text": "Atmosfera va musiqa shou darajasi yuqori.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "musiqa shou"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "musiqa shou",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R080-1"
+    },
+    {
+     "term": "musiqa",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R080-2"
+    },
+    {
+     "term": "Atmosfera",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R080-3"
+    },
+    {
+     "term": "Atmosfera va musiqa",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R080-4"
+    }
+   ]
+  },
+  "R081": {
+   "idx": 498,
+   "text": "O'rtacha narxlarda mazali taom.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "narxlarda"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taom",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R081-1"
+    },
+    {
+     "term": "narxlarda",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R081-2"
+    }
+   ]
+  },
+  "R082": {
+   "idx": 12,
+   "text": "Shakarop bilan oshni tatib ko‘rdik va afsuslanmadik.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Shakarop bilan oshni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "oshni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R082-1"
+    },
+    {
+     "term": "Shakarop bilan oshni",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R082-2"
+    },
+    {
+     "term": "Shakarop",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R082-3"
+    }
+   ]
+  },
+  "R083": {
+   "idx": 555,
+   "text": "Gavjun oshxona, dahshatli xizmat.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "oshxona"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R083-1"
+    },
+    {
+     "term": "oshxona",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 4,
+     "row_id": "R083-2"
+    }
+   ]
+  },
+  "R084": {
+   "idx": 205,
+   "text": "Yagona kamchilik, taomning narxiga yuqoriligi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "taomning narxiga"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taomning"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R084-1"
+    },
+    {
+     "term": "taomning narxiga",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R084-2"
+    }
+   ]
+  },
+  "R085": {
+   "idx": 245,
+   "text": "Juda yaxshi joy.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R085-1"
+    }
+   ]
+  },
+  "R086": {
+   "idx": 79,
+   "text": "Rasmlarsiz batafsil bo'yalgan menyu.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "menyu"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "menyu",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R086-1"
+    }
+   ]
+  },
+  "R087": {
+   "idx": 220,
+   "text": ":(",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     ":("
+    ]
+   ],
+   "candidates": [
+    {
+     "term": ":(",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R087-1"
+    }
+   ]
+  },
+  "R088": {
+   "idx": 272,
+   "text": "Narxlar baland, xizmat past, taomlar mazali",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Narxlar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R088-1"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R088-2"
+    },
+    {
+     "term": "taomlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R088-3"
+    }
+   ]
+  },
+  "R089": {
+   "idx": 123,
+   "text": "Shirinlik uchun esa ular bizga vitrinadagi barcha tortlardan birini tanlashimiz mumkinligini aytishdi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Shirinlik"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "tortlardan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Shirinlik",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R089-1"
+    },
+    {
+     "term": "tortlardan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R089-2"
+    }
+   ]
+  },
+  "R090": {
+   "idx": 282,
+   "text": "Bilaman faqat turk oshxonasi, lekin boshqa hech narsa yo'q, mayli, lekin ofitsiantni juda uzoq kutishingiz mumkin, kechasi hovlida bitta ofitsiant xizmat qilar edi, uning umuman vaqti yo'q edi, bir soatdan keyin boshqa ofitsiant unga yordamga keldi",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiant"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "oshxonasi",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 4,
+     "row_id": "R090-1"
+    },
+    {
+     "term": "ofitsiantni",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R090-2"
+    },
+    {
+     "term": "ofitsiant",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R090-3"
+    }
+   ]
+  },
+  "R091": {
+   "idx": 159,
+   "text": "Mazali osh😊, qimmat emas👍 yoqdi.",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "osh😊,"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "osh"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "osh",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R091-1"
+    },
+    {
+     "term": "osh😊,",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R091-2"
+    }
+   ]
+  },
+  "R092": {
+   "idx": 338,
+   "text": "Hech qanday xizmat yo'q 0 !!",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R092-1"
+    }
+   ]
+  },
+  "R093": {
+   "idx": 551,
+   "text": "Bolalar, sizga farovonlik.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Bolalar"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "farovonlik"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "farovonlik",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R093-1"
+    },
+    {
+     "term": "Bolalar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R093-2"
+    }
+   ]
+  },
+  "R094": {
+   "idx": 603,
+   "text": "Bu arzon, shuning uchun siz to'lagan narsangizni olasiz.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "to'lagan narsangizni"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "narsangizni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "narsangizni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R094-1"
+    },
+    {
+     "term": "to'lagan narsangizni",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R094-2"
+    }
+   ]
+  },
+  "R095": {
+   "idx": 491,
+   "text": "Ofitsiant bir nechta real va qimmatli takliflarni berib, juda yaxshi ish qildi.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Ofitsiant",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R095-1"
+    }
+   ]
+  },
+  "R096": {
+   "idx": 588,
+   "text": "Albatta tashrif buyurishga arziydi - tushlik paytida band.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tashrif"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "tushlik paytida"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "tashrif",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R096-1"
+    },
+    {
+     "term": "tushlik paytida",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R096-2"
+    }
+   ]
+  },
+  "R097": {
+   "idx": 225,
+   "text": "Belgilangan vaqtda yetib keldik, mehmonlar endigina dasturxonni bo‘shatishdi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "dasturxonni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "dasturxonni",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R097-1"
+    }
+   ]
+  },
+  "R098": {
+   "idx": 212,
+   "text": "Ajoyib muhit va manzara, mazali taomlar, hamyonbop narxlar va ajoyib xizmat... Umuman olganda, ajoyib.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Umuman olganda"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "muhit va manzara"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "muhit"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "manzara"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "manzara",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R098-1"
+    },
+    {
+     "term": "Umuman olganda",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R098-2"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R098-3"
+    },
+    {
+     "term": "muhit",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R098-4"
+    },
+    {
+     "term": "muhit va manzara",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R098-5"
+    },
+    {
+     "term": "narxlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R098-6"
+    },
+    {
+     "term": "taomlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R098-7"
+    }
+   ]
+  },
+  "R099": {
+   "idx": 573,
+   "text": "Restoran super tavsiya qilaman, xodimlar diqqatli xushmuomala, taomlar hammasi juda mazali, atmosfera ajoyib 😍😍👍👍👍",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xodimlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R099-1"
+    },
+    {
+     "term": "Restoran",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R099-2"
+    },
+    {
+     "term": "taomlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R099-3"
+    },
+    {
+     "term": "atmosfera",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R099-4"
+    }
+   ]
+  },
+  "R100": {
+   "idx": 444,
+   "text": "Xizmat dahshatli, garchi bu uchun 20% to'lansa ham.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "Xizmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R100-1"
+    }
+   ]
+  },
+  "R101": {
+   "idx": 38,
+   "text": "Mazali kabob, go'sht.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "kabob, go'sht"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "kabob"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "go'sht"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "go'sht",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R101-1"
+    },
+    {
+     "term": "kabob, go'sht",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R101-2"
+    },
+    {
+     "term": "kabob",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R101-3"
+    }
+   ]
+  },
+  "R102": {
+   "idx": 455,
+   "text": "Arabcha mavzuga ega go'zal joy.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R102-1"
+    }
+   ]
+  },
+  "R103": {
+   "idx": 405,
+   "text": "turli-xil choylarni ichib ko'rishni tavsiya qilaman!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "turli-xil choylarni"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "choylarni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "turli-xil choylarni",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R103-1"
+    },
+    {
+     "term": "choylarni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R103-2"
+    }
+   ]
+  },
+  "R104": {
+   "idx": 432,
+   "text": "4) juda qimmat.",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R105": {
+   "idx": 251,
+   "text": "Va u bu joyda sharhlarni yaxshi biladi.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "sharhlarni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joyda",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R105-1"
+    },
+    {
+     "term": "sharhlarni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R105-2"
+    }
+   ]
+  },
+  "R106": {
+   "idx": 121,
+   "text": "Biz anʼanaviy oʻzbek muhitida tushlik qildik, oʻzbek taomlari va jonli musiqadan bahramand boʻldik.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tushlik qildik"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "muhitida"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "musiqadan",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R106-1"
+    },
+    {
+     "term": "tushlik qildik",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R106-2"
+    },
+    {
+     "term": "taomlari",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R106-3"
+    },
+    {
+     "term": "muhitida",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R106-4"
+    }
+   ]
+  },
+  "R107": {
+   "idx": 176,
+   "text": "Chiroyli mahalliy taomlardan qimmatroq",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlardan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "mahalliy taomlardan",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R107-1"
+    },
+    {
+     "term": "taomlardan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R107-2"
+    }
+   ]
+  },
+  "R108": {
+   "idx": 185,
+   "text": "Mastavada - guruch qattiq, kam pishgan, faqat go'shtni iste'mol qilishga to'g'ri keldi,kutilmagan tajriba.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tajriba"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "guruch"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "tajriba",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R108-1"
+    },
+    {
+     "term": "guruch",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R108-2"
+    },
+    {
+     "term": "Mastavada",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 4,
+     "row_id": "R108-3"
+    },
+    {
+     "term": "go'shtni",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R108-4"
+    }
+   ]
+  },
+  "R109": {
+   "idx": 292,
+   "text": "Umuman olganda, juda katta assortiment mavjud, xizmat yaxshi darajada, narxlar o'rtacha.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "assortiment",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R109-1"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R109-2"
+    },
+    {
+     "term": "narxlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R109-3"
+    }
+   ]
+  },
+  "R110": {
+   "idx": 472,
+   "text": "Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "muassasaning"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "molekulyar oshxona"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "narxlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "narx",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R110-1"
+    },
+    {
+     "term": "narxlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R110-2"
+    },
+    {
+     "term": "muassasaning",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R110-3"
+    },
+    {
+     "term": "molekulyar oshxona",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R110-4"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R110-5"
+    }
+   ]
+  },
+  "R111": {
+   "idx": 287,
+   "text": "Qo‘zi ham yomon hidlnmaydi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "Qo‘zi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Qo‘zi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R111-1"
+    }
+   ]
+  },
+  "R112": {
+   "idx": 130,
+   "text": "Bu yerda eng mazali oshni tayyorlashadi 🤤",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "yerda"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "oshni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerda",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R112-1"
+    },
+    {
+     "term": "oshni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R112-2"
+    }
+   ]
+  },
+  "R113": {
+   "idx": 234,
+   "text": "Biz hammaga maslahat beramiz!)",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "hammaga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hammaga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R113-1"
+    }
+   ]
+  },
+  "R114": {
+   "idx": 128,
+   "text": "Keyin ofitsiant uzr so'radi va uzr sifatida jele go'sht taklif qildi, hahahhaha jele go'shti 🤦‍♂️ Qisqasi, agar siz normal ovqatlanib, yaxshi kayfiyatda bo'lishni istasangiz, siz aniq bu yerga kelmang)))",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiant"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "bu yerga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R114-1"
+    },
+    {
+     "term": "ofitsiant",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R114-2"
+    },
+    {
+     "term": "jele go'sht",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R114-3"
+    }
+   ]
+  },
+  "R115": {
+   "idx": 464,
+   "text": "Tavsiya qilaman.",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R116": {
+   "idx": 447,
+   "text": "Yaxshi joy va Pishirilgan guruch juda yaxshi.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R116-1"
+    },
+    {
+     "term": "Pishirilgan guruch",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R116-2"
+    }
+   ]
+  },
+  "R117": {
+   "idx": 21,
+   "text": "Lekin qalampirli biftek haddan tashqari pishgan edi(balki bu bir martalik qaholatdir), chunki maxsus biftek har qanday maqtovga sazovor edi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "maxsus biftek"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "qalampirli biftek"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "biftek"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "maxsus biftek",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R117-1"
+    },
+    {
+     "term": "biftek",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R117-2"
+    },
+    {
+     "term": "qalampirli biftek",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R117-3"
+    }
+   ]
+  },
+  "R118": {
+   "idx": 340,
+   "text": "Sharob ro'yxati biroz muammoli - bu Toshkentga xos: u juda qisqa, noma'lum nomlar ko'p agar siz bilgan/yoqtirgan narsani topsangiz ham, u tugab qolgan bo'lishi mumkin.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "noma'lum nomlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Sharob",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 4,
+     "row_id": "R118-1"
+    },
+    {
+     "term": "noma'lum nomlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R118-2"
+    }
+   ]
+  },
+  "R119": {
+   "idx": 483,
+   "text": "Men buni hammaga tavsiya qilaman.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "hammaga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hammaga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R119-1"
+    }
+   ]
+  },
+  "R120": {
+   "idx": 29,
+   "text": "Salatlar uzoq vaqt davomida olib kelishdi, ular issiq ovqatni kuta olmadik.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "issiq ovqatni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Salatlar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R120-1"
+    },
+    {
+     "term": "ovqatni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R120-2"
+    },
+    {
+     "term": "issiq ovqatni",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R120-3"
+    }
+   ]
+  },
+  "R121": {
+   "idx": 534,
+   "text": "Shahar markazida joylashgan bo'lib, o'rta sinf uchun narxlar juda yuqori.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Shahar markazida"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "narxlar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R121-1"
+    },
+    {
+     "term": "Shahar markazida",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R121-2"
+    }
+   ]
+  },
+  "R122": {
+   "idx": 138,
+   "text": "Agar siz sharqona taomlarning muxlisi bo'lsangiz, tavsiya qilaman.",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "sharqona taomlar"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "sharqona taomlarning"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "sharqona taomlarning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R122-1"
+    },
+    {
+     "term": "sharqona taomlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R122-2"
+    },
+    {
+     "term": "taomlarning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R122-3"
+    }
+   ]
+  },
+  "R123": {
+   "idx": 525,
+   "text": "Menyuda mamlakatning turli burchaklaridan turli xil o'zbek taomlari mavjud.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Menyuda"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlari"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Menyuda",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R123-1"
+    },
+    {
+     "term": "taomlari",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R123-2"
+    }
+   ]
+  },
+  "R124": {
+   "idx": 378,
+   "text": "Ovqat mazali, xizmat qilish dahshatli.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "xizmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R124-1"
+    },
+    {
+     "term": "Ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R124-2"
+    }
+   ]
+  },
+  "R125": {
+   "idx": 227,
+   "text": "Qolish uchun juda yaxshi joy!!!",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R125-1"
+    }
+   ]
+  },
+  "R126": {
+   "idx": 52,
+   "text": "Bu sizning hamyoningiz va oshqozoningizga mehribon restoran.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "hamyoningiz"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "oshqozoningizga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hamyoningiz",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R126-1"
+    },
+    {
+     "term": "restoran",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R126-2"
+    },
+    {
+     "term": "oshqozoningizga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R126-3"
+    }
+   ]
+  },
+  "R127": {
+   "idx": 304,
+   "text": "Men buni albatta tavsiya qilaman.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tavsiya"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "tavsiya",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R127-1"
+    }
+   ]
+  },
+  "R128": {
+   "idx": 290,
+   "text": "Tez-tez xizmat ko'rsatish, hamma narsa o'z vaqtida taqdim etildi va oshpazlarga alohida rahmat, juda mazali va ishtaha!",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "hamma narsa"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R128-1"
+    },
+    {
+     "term": "oshpazlarga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R128-2"
+    },
+    {
+     "term": "hamma narsa",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R128-3"
+    }
+   ]
+  },
+  "R129": {
+   "idx": 247,
+   "text": "Juda qulay joy.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R129-1"
+    }
+   ]
+  },
+  "R130": {
+   "idx": 84,
+   "text": "Biz juda xursand bo'ldik!",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R131": {
+   "idx": 427,
+   "text": "Mazali osh iste'mol qilmoqchi bo'lsangiz, bu yerga borishingiz shart, 4 xil mazali oshlar ,Tushlik tanaffusi muhitiga sho'ng'sh uchun turli tabaqadagi odamlar bu yerga to'yib ovqat yeyish uchun kelishadi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "yerga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerga",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R131-1"
+    },
+    {
+     "term": "oshlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R131-2"
+    },
+    {
+     "term": "muhitiga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R131-3"
+    },
+    {
+     "term": "osh",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R131-4"
+    }
+   ]
+  },
+  "R132": {
+   "idx": 120,
+   "text": "Chiroyli milliy interyer.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "milliy interyer"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "interyer"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "milliy interyer",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R132-1"
+    },
+    {
+     "term": "interyer",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R132-2"
+    }
+   ]
+  },
+  "R133": {
+   "idx": 315,
+   "text": "rahmat",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "rahmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "rahmat",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R133-1"
+    }
+   ]
+  },
+  "R134": {
+   "idx": 446,
+   "text": "Muassasadagi muhit ham juda samimiy.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Muassasadagi muhit"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "muhit"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Muassasadagi muhit",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R134-1"
+    },
+    {
+     "term": "muhit",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R134-2"
+    }
+   ]
+  },
+  "R135": {
+   "idx": 22,
+   "text": "Bu joy ko'plab sayyohlar tomonidan juda mashhur.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R135-1"
+    }
+   ]
+  },
+  "R136": {
+   "idx": 387,
+   "text": "Ichi biroz qorong'i, atigi 2-3 xil pivo, kichik stollar.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "stollar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "pivo",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 4,
+     "row_id": "R136-1"
+    },
+    {
+     "term": "stollar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 4,
+     "row_id": "R136-2"
+    },
+    {
+     "term": "Ichi",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R136-3"
+    }
+   ]
+  },
+  "R137": {
+   "idx": 426,
+   "text": "Juda mazali osh.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "osh",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R137-1"
+    }
+   ]
+  },
+  "R138": {
+   "idx": 360,
+   "text": "Juda mazali, rahmat",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "rahmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "rahmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R138-1"
+    }
+   ]
+  },
+  "R139": {
+   "idx": 433,
+   "text": "Ovqat juda yaxshi va atmosfera yoqimli.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "atmosfera",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R139-1"
+    },
+    {
+     "term": "Ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R139-2"
+    }
+   ]
+  },
+  "R140": {
+   "idx": 96,
+   "text": "5 ball",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "5"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "5 ball"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "5 ball",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R140-1"
+    },
+    {
+     "term": "5",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R140-2"
+    }
+   ]
+  },
+  "R141": {
+   "idx": 559,
+   "text": "Bu restoranda bir necha bor aravachada sayr qilganman va har safar piyodalar yo‘lagidan yurganimda ularning to‘xtab qolgan mashinalari yo‘lakni to‘sib qo‘yadi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "restoranda"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "aravachada",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R141-1"
+    },
+    {
+     "term": "restoranda",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 3,
+     "row_id": "R141-2"
+    },
+    {
+     "term": "piyodalar yo‘lagidan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R141-3"
+    }
+   ]
+  },
+  "R142": {
+   "idx": 229,
+   "text": "Aralash tuyg'ular bu muassasani tark etdi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Aralash tuyg'ular"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "muassasani"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "muassasani",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R142-1"
+    },
+    {
+     "term": "Aralash tuyg'ular",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R142-2"
+    }
+   ]
+  },
+  "R143": {
+   "idx": 6,
+   "text": "Qahva uchun sut yo'q, ular kofe uchun shirinliklar so'rashdi, 3 dona yangiligi noma'lum tortni taklif qilishdi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "shirinliklar"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "sut"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Qahva"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "shirinliklar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R143-1"
+    },
+    {
+     "term": "Qahva",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R143-2"
+    },
+    {
+     "term": "sut",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R143-3"
+    },
+    {
+     "term": "tortni",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R143-4"
+    }
+   ]
+  },
+  "R144": {
+   "idx": 119,
+   "text": "3-VAT OFİSİTANLARNI 20 MINUTDAN CHAQQIRISHDI RO NOMLI BEHZOD OFİSİTANI YO'LGA KELIB KETDI.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "OFİSİTANLARNI"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "OFİSİTANLARNI",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R144-1"
+    }
+   ]
+  },
+  "R145": {
+   "idx": 260,
+   "text": "👌👌👌",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "👌👌👌"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "👌👌👌",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R145-1"
+    },
+    {
+     "term": "👌 👌 👌",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R145-2"
+    }
+   ]
+  },
+  "R146": {
+   "idx": 64,
+   "text": "Ajoyib joy, mazali va sifatli!",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R146-1"
+    }
+   ]
+  },
+  "R147": {
+   "idx": 590,
+   "text": "Qadimgi va yaxshi narsadan faqat restoran va taomlar nomi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "nomi"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R147-1"
+    },
+    {
+     "term": "nomi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R147-2"
+    },
+    {
+     "term": "restoran",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R147-3"
+    }
+   ]
+  },
+  "R148": {
+   "idx": 27,
+   "text": "Rayhon” yonida men xaritada avtovokzalni ko‘rdim.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Rayhon"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "avtovokzalni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "avtovokzalni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R148-1"
+    },
+    {
+     "term": "Rayhon",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R148-2"
+    }
+   ]
+  },
+  "R149": {
+   "idx": 81,
+   "text": "Ajoyib osh, juda noodatiy joy",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R149-1"
+    },
+    {
+     "term": "osh",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R149-2"
+    }
+   ]
+  },
+  "R150": {
+   "idx": 183,
+   "text": "Nechi yildan buyon xizmat ko'rsatayotgan bu restaran naxotki xaliyam kancha mikdorda taomlar qilish meyorini bilmaydi?Dasturxonda qo'l artish uchun oddiy qo'l artish kogozlari yo'k.Bir pulga qimmat va arzimaydigan restaran.Meni fikrimcha baxosi 1 va inson dam olib ovqatlanish meyori past.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ovqatlanish"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "qo'l artish kogozlari"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "qimmat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlar"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "restaran"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "qo'l artish kogozlari",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R150-1"
+    },
+    {
+     "term": "ovqatlanish",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R150-2"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 2,
+     "row_id": "R150-3"
+    },
+    {
+     "term": "restaran",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R150-4"
+    },
+    {
+     "term": "qimmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R150-5"
+    },
+    {
+     "term": "taomlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R150-6"
+    },
+    {
+     "term": "baxosi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R150-7"
+    }
+   ]
+  },
+  "R151": {
+   "idx": 142,
+   "text": "Toshkentdagi eng yaxshi Humus va falafel",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Humus"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "falafel"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Humus va falafel"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "falafel",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R151-1"
+    },
+    {
+     "term": "Humus",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R151-2"
+    },
+    {
+     "term": "Humus va falafel",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R151-3"
+    }
+   ]
+  },
+  "R152": {
+   "idx": 60,
+   "text": "Yaxshi tarakan bo'lsin))",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "tarakan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "tarakan",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R152-1"
+    }
+   ]
+  },
+  "R153": {
+   "idx": 173,
+   "text": "Yomon xizmat, xodimlarning malakasizligi tufayli bank kartam blokladi",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xodimlarning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R153-1"
+    },
+    {
+     "term": "bank kartam",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R153-2"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R153-3"
+    }
+   ]
+  },
+  "R154": {
+   "idx": 442,
+   "text": "Menyu elementlarini biroz yaxshilash mumkin.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Menyu elementlarini"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Menyu"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Menyu",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R154-1"
+    },
+    {
+     "term": "Menyu elementlarini",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R154-2"
+    }
+   ]
+  },
+  "R155": {
+   "idx": 474,
+   "text": "Ofitsiantlar 10 daqiqa desa, yarim soatdan so'ng olib keladi, agar 20 daqiqa desa, unda kutishdan foyda yo'q.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "Ofitsiantlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Ofitsiantlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R155-1"
+    }
+   ]
+  },
+  "R156": {
+   "idx": 4,
+   "text": "Chiroyli dekor, menyudagi barcha taomlar mavjud emas, chiroyli, mazali.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "menyudagi"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "menyudagi",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R156-1"
+    },
+    {
+     "term": "taomlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R156-2"
+    },
+    {
+     "term": "dekor",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R156-3"
+    }
+   ]
+  },
+  "R157": {
+   "idx": 65,
+   "text": "shashlik va salat oldim.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "shashlik  va salat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "shashlik va salat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "shashlik va salat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R157-1"
+    },
+    {
+     "term": "shashlik  va salat",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R157-2"
+    }
+   ]
+  },
+  "R158": {
+   "idx": 10,
+   "text": "Bolalar bilan borish uchun yaxshi joy, 2-qavatdagi bolalar maydoni ham arzon",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "2-qavatdagi bolalar maydoni"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "maydoni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R158-1"
+    },
+    {
+     "term": "2-qavatdagi bolalar maydoni",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R158-2"
+    },
+    {
+     "term": "maydoni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R158-3"
+    }
+   ]
+  },
+  "R159": {
+   "idx": 89,
+   "text": "Qattiq tavsiya qilaman!",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R160": {
+   "idx": 112,
+   "text": "Har safar bu erga kelganimda, men ovqat haqida nimadir topaman!",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "ovqat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "erga",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 4,
+     "row_id": "R160-1"
+    },
+    {
+     "term": "ovqat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R160-2"
+    }
+   ]
+  },
+  "R161": {
+   "idx": 312,
+   "text": "rahmat",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "rahmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "rahmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R161-1"
+    }
+   ]
+  },
+  "R162": {
+   "idx": 141,
+   "text": "Shubhasiz, Toshkentga tashrif buyurganingizda (bir necha marta) boradigan joy, hatto biroz chetda bo'lsa ham.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R162-1"
+    }
+   ]
+  },
+  "R163": {
+   "idx": 68,
+   "text": "Bu mening Toshkentdagi oxirgi ovqatim edi, men juda mamnunman.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "oxirgi ovqatim"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "ovqatim",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R163-1"
+    },
+    {
+     "term": "oxirgi ovqatim",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R163-2"
+    }
+   ]
+  },
+  "R164": {
+   "idx": 275,
+   "text": "Turistlar albatta tashrif buyurishlari kerak.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "Turistlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Turistlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R164-1"
+    }
+   ]
+  },
+  "R165": {
+   "idx": 324,
+   "text": "ovqatlar zo'r",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "ovqatlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R165-1"
+    }
+   ]
+  },
+  "R166": {
+   "idx": 601,
+   "text": "Maslahat: tashqarida o'z tarelkangizni oling va palovni olish uchun navbatga turing va agar xohlasangiz, tuxum va/yoki ot go'shti kolbasasini so'rang (qo'shimcha xarajat).",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "navbatga turing"
+    ],
+    [
+     "malformed_gold_span",
+     ", tuxum va/yoki ot go'shti kolbasasin"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "xarajat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "palovni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "palovni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R166-1"
+    },
+    {
+     "term": "navbatga turing",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R166-2"
+    },
+    {
+     "term": "tashqarida",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R166-3"
+    },
+    {
+     "term": "tuxum va/yoki ot go'shti kolbasasini",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R166-4"
+    },
+    {
+     "term": ", tuxum va/yoki ot go'shti kolbasasin",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R166-5"
+    },
+    {
+     "term": "ot go'shti kolbasasini",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R166-6"
+    },
+    {
+     "term": "xarajat",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R166-7"
+    }
+   ]
+  },
+  "R167": {
+   "idx": 494,
+   "text": "Men hammaga maslahat beraman!",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "hammaga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hammaga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R167-1"
+    }
+   ]
+  },
+  "R168": {
+   "idx": 39,
+   "text": "Shaxsiy narsalar yetarli emas.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "Shaxsiy narsalar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Shaxsiy narsalar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R168-1"
+    },
+    {
+     "term": "narsalar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 2,
+     "row_id": "R168-2"
+    }
+   ]
+  },
+  "R169": {
+   "idx": 72,
+   "text": "Xizmat nol.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R169-1"
+    }
+   ]
+  },
+  "R170": {
+   "idx": 321,
+   "text": "Menga juda yoqdi, ko'p rahmat",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "\"Host\" restaraniga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "\"Host\" restaraniga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R170-1"
+    }
+   ]
+  },
+  "R171": {
+   "idx": 587,
+   "text": "Vegetarian taomlarining xilma-xilligi va vegetarian oshi ayniqsa mamnun va hayratlanarli.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Vegetarian taomlarining",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R171-1"
+    },
+    {
+     "term": "vegetarian oshi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R171-2"
+    }
+   ]
+  },
+  "R172": {
+   "idx": 342,
+   "text": "Mehmonlar orasida odatda bolalar yoki ota-onalar oldida xijolat bo'lishingiz kerak bo'lgan odamlar bo'lmaydi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "Mehmonlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Mehmonlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 4,
+     "row_id": "R172-1"
+    }
+   ]
+  },
+  "R173": {
+   "idx": 553,
+   "text": "Juda mazali O'zbekiston oshi",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "O'zbekiston oshi"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "oshi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "O'zbekiston oshi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R173-1"
+    },
+    {
+     "term": "oshi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R173-2"
+    }
+   ]
+  },
+  "R174": {
+   "idx": 471,
+   "text": "Tavsiya qilaman.",
+   "control": true,
+   "reasons": [],
+   "candidates": []
+  },
+  "R175": {
+   "idx": 334,
+   "text": "Qozon yonida sotib olib, likopchangiz bilan stolga borasiz.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "stolga borasiz"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Qozon yonida",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R175-1"
+    },
+    {
+     "term": "stolga borasiz",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R175-2"
+    }
+   ]
+  },
+  "R176": {
+   "idx": 69,
+   "text": "Sulton restorani, Toshkent",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Sulton"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Sulton restorani"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Sulton restorani",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R176-1"
+    },
+    {
+     "term": "Sulton",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R176-2"
+    }
+   ]
+  },
+  "R177": {
+   "idx": 589,
+   "text": "Yaxshi kechki ovqat joyi bor.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "kechki ovqat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "kechki ovqat joyi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "kechki ovqat joyi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R177-1"
+    },
+    {
+     "term": "kechki ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R177-2"
+    }
+   ]
+  },
+  "R178": {
+   "idx": 230,
+   "text": "Umuman olganda, bepul joylar haqida oldindan tashvishlanish yaxshiroqdir.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "joylar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "bepul joylar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R178-1"
+    },
+    {
+     "term": "joylar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R178-2"
+    }
+   ]
+  },
+  "R179": {
+   "idx": 217,
+   "text": "Yoki korporativ partiya tashkish mumkin",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "korporativ partiya"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "partiya"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "korporativ partiya",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R179-1"
+    },
+    {
+     "term": "partiya",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R179-2"
+    }
+   ]
+  },
+  "R180": {
+   "idx": 593,
+   "text": "Men Sharqiy Yevropa/Markaziy Osiyo sirli go‘shtining eng katta muxlisi emasman.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "muxlisi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "go‘shtining",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R180-1"
+    },
+    {
+     "term": "muxlisi",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R180-2"
+    },
+    {
+     "term": "shtining",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R180-3"
+    },
+    {
+     "term": "Yevropa",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R180-4"
+    }
+   ]
+  },
+  "R181": {
+   "idx": 503,
+   "text": "Restoraningizga oilangiz bilan kelganingiz juda yoqimli, yetkazib berish ham bor, hammasi sifatli va qadoqlangan.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "yetkazib berish"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hammasi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R181-1"
+    },
+    {
+     "term": "yetkazib berish",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R181-2"
+    },
+    {
+     "term": "Restoraningizga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R181-3"
+    }
+   ]
+  },
+  "R182": {
+   "idx": 416,
+   "text": "Siz 100 % 5 yulduzga loyiqsiz!",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "5 yulduzga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yulduzga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R182-1"
+    },
+    {
+     "term": "5 yulduzga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R182-2"
+    }
+   ]
+  },
+  "R183": {
+   "idx": 332,
+   "text": "Oshning katta porsiyalari, albatta telbalarcha mazali, ayron ham yaxshi!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "porsiyalari"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Oshning"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "porsiyalari",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R183-1"
+    },
+    {
+     "term": "Oshning",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R183-2"
+    },
+    {
+     "term": "ayron",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R183-3"
+    }
+   ]
+  },
+  "R184": {
+   "idx": 380,
+   "text": "Hammasi joyida.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "Hammasi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Hammasi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R184-1"
+    }
+   ]
+  },
+  "R185": {
+   "idx": 389,
+   "text": "Natijada, biz xohlagan narsani emas, balki bo'lgan narsani yedik.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "bo'lgan narsani"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "xohlagan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "bo'lgan narsani",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R185-1"
+    },
+    {
+     "term": "narsani",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R185-2"
+    },
+    {
+     "term": "xohlagan",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R185-3"
+    }
+   ]
+  },
+  "R186": {
+   "idx": 358,
+   "text": "Ovqat unchalik mazali emas, bu diskoteka va restorani orasidagi joy.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R186-1"
+    },
+    {
+     "term": "Ovqat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R186-2"
+    }
+   ]
+  },
+  "R187": {
+   "idx": 370,
+   "text": "Bu yerda milliy taomlarni tatib ko'rish tavsiya etiladi!",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "milliy taomlarni t"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "taomlarni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomlarni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R187-1"
+    },
+    {
+     "term": "milliy taomlarni t",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R187-2"
+    }
+   ]
+  },
+  "R188": {
+   "idx": 529,
+   "text": "5 soat o'tirdim.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "5 soat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "5 soat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R188-1"
+    }
+   ]
+  },
+  "R189": {
+   "idx": 576,
+   "text": "Ajoyib biftek, ajoyib xizmat.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "biftek",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R189-1"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R189-2"
+    }
+   ]
+  },
+  "R190": {
+   "idx": 604,
+   "text": "Haqiqatan ham chinakam osh qanday tayyorlanishini ko'rish va uni tatib ko'rish uchun ajoyib joy.Qozongayuz kilogrammdan ortiq guruch solingan, aql bovar qilmaydigan ulkan qozonlar qo'yilgan va oshpazlar ularni isitish uchun ochiq olovdan foydalanadilar.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Qozongayuz"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "oshpazlar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "oshpazlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R190-1"
+    },
+    {
+     "term": "Qozongayuz",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R190-2"
+    },
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R190-3"
+    }
+   ]
+  },
+  "R191": {
+   "idx": 266,
+   "text": "Bunday restoran uchun juda qimmat, ular o'zlarini dabdabali joy sifatida ko'rsatishadi, lekin aslida bu haqiqatdan uzoqdir.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "restoran",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R191-1"
+    },
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R191-2"
+    }
+   ]
+  },
+  "R192": {
+   "idx": 371,
+   "text": "Ichimlik uchun munosib joy.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Ichimlik"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Ichimlik",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R192-1"
+    },
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R192-2"
+    }
+   ]
+  },
+  "R193": {
+   "idx": 549,
+   "text": "Do'stona xodimlar",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xodimlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R193-1"
+    }
+   ]
+  },
+  "R194": {
+   "idx": 349,
+   "text": "Bu yerga tashrif buyurish shart!!!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Bu yerga"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "yerga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R194-1"
+    },
+    {
+     "term": "Bu yerga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R194-2"
+    }
+   ]
+  },
+  "R195": {
+   "idx": 449,
+   "text": "Ajoyib choyxona (restoran) taomlari super!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "choyxona (restoran"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "choyxona (restoran)"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "choyxona (restoran",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R195-1"
+    },
+    {
+     "term": "choyxona (restoran)",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R195-2"
+    },
+    {
+     "term": "choyxona",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R195-3"
+    },
+    {
+     "term": "taomlari",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R195-4"
+    }
+   ]
+  },
+  "R196": {
+   "idx": 496,
+   "text": "Odamlarga beparvo va juda kech xizmat (o'ttiz daqiqadan so'ng) va oddiy sifatli taomlardan pastroq bo'lgan xizmat qanday yoqadi?",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "taomlardan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taomlardan",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R196-1"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R196-2"
+    }
+   ]
+  },
+  "R197": {
+   "idx": 118,
+   "text": "Kechki ovqatni juda uzoq kutishim kerak edi, lekin taom kutganlarimga javob bermadi.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "Kechki ovqatni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taom",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 4,
+     "row_id": "R197-1"
+    },
+    {
+     "term": "Kechki ovqatni",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R197-2"
+    }
+   ]
+  },
+  "R198": {
+   "idx": 20,
+   "text": "Barcha uslublar joyida.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "Barcha uslublar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "uslublar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R198-1"
+    },
+    {
+     "term": "Barcha uslublar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R198-2"
+    }
+   ]
+  },
+  "R199": {
+   "idx": 8,
+   "text": "Men sizning doimiy mijozlaringizdan biriman.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Men"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "mijozlaringizdan",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R199-1"
+    },
+    {
+     "term": "Men",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R199-2"
+    }
+   ]
+  },
+  "R200": {
+   "idx": 198,
+   "text": "100% emas 200% o'tkazmalar, terminal bankdan kredit olib ham pul o'tkazishi mumkin",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "o'tkazmalar"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "o'tkazmalar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R200-1"
+    },
+    {
+     "term": "terminal bankdan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R200-2"
+    }
+   ]
+  },
+  "R201": {
+   "idx": 219,
+   "text": "Men bu yerda ekskursiya gid taklifiga ko‘ra tushlik qildim.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ekskursiya gid"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "yerda"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yerda",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R201-1"
+    },
+    {
+     "term": "ekskursiya gid",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R201-2"
+    }
+   ]
+  },
+  "R202": {
+   "idx": 150,
+   "text": "Kechqurun pab juda gavjum.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "pab"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "pab",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R202-1"
+    }
+   ]
+  },
+  "R203": {
+   "idx": 326,
+   "text": "Oziq-ovqat sifati yaxshi edi - menda yaxshi ko'rlgan gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari (ular ham yaxshi).",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "gulkaram sho'rvasi"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "panjara qo'ziqorinlari"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R203-1"
+    },
+    {
+     "term": "panjara qo'ziqorinlari",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R203-2"
+    },
+    {
+     "term": "gulkaram sho'rvasi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R203-3"
+    },
+    {
+     "term": "Oziq - ovqat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R203-4"
+    },
+    {
+     "term": "panjara qilingan sabzavotlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R203-5"
+    },
+    {
+     "term": "Oziq-ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R203-6"
+    }
+   ]
+  },
+  "R204": {
+   "idx": 94,
+   "text": "Yaxshi xizmatlar va rahmat",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xizmatlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R204-1"
+    }
+   ]
+  },
+  "R205": {
+   "idx": 478,
+   "text": "Bolali oilalar uchun ajoyib joy.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R205-1"
+    }
+   ]
+  },
+  "R206": {
+   "idx": 531,
+   "text": "Toshkentdagi go'zal hind restorani haqiqiy ta'mi va ajoyib The Host.",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "l hind restorani"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ta'mi"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "hind restorani"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "The Host"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "l hind restorani",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R206-1"
+    },
+    {
+     "term": "The Host",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R206-2"
+    },
+    {
+     "term": "ta'mi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R206-3"
+    },
+    {
+     "term": "hind restorani",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R206-4"
+    }
+   ]
+  },
+  "R207": {
+   "idx": 385,
+   "text": "ular an'anaviy restoran bo'lishni biladilar",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "an'anaviy restoran"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "restoran"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "restoran",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R207-1"
+    },
+    {
+     "term": "an'anaviy restoran",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R207-2"
+    }
+   ]
+  },
+  "R208": {
+   "idx": 492,
+   "text": "Men hammaga maslahat beraman!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "maslahat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "hammaga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hammaga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R208-1"
+    },
+    {
+     "term": "maslahat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R208-2"
+    }
+   ]
+  },
+  "R209": {
+   "idx": 585,
+   "text": "Mazali taom, ajoyib xizmat, katta rahmat.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "taom",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R209-1"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R209-2"
+    }
+   ]
+  },
+  "R210": {
+   "idx": 412,
+   "text": "Mahalliy pivo arzon, ammo mazasiz.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "Mahalliy pivo"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Mahalliy pivo",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R210-1"
+    }
+   ]
+  },
+  "R211": {
+   "idx": 224,
+   "text": "Bolalar bilan kelishni tavsiya etmayman, bolalar uchun bayram qilish uchun hech narsa yo'q.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Bolalar bilan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Bolalar bilan",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R211-1"
+    },
+    {
+     "term": "hech narsa",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 3,
+     "row_id": "R211-2"
+    },
+    {
+     "term": "narsa",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R211-3"
+    }
+   ]
+  },
+  "R212": {
+   "idx": 347,
+   "text": "Yaxshi mazali oshxona, yoqimli xodimlar, chiroyli interyer.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "oshxona",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R212-1"
+    },
+    {
+     "term": "interyer",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R212-2"
+    },
+    {
+     "term": "xodimlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R212-3"
+    }
+   ]
+  },
+  "R213": {
+   "idx": 300,
+   "text": "Hammasi super, xizmat juda zo'r, xodimlar, muloqot tashqi va ko'rinish, mazali taom.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "tashqi va ko'rinish"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xodimlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R213-1"
+    },
+    {
+     "term": "tashqi va ko'rinish",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R213-2"
+    },
+    {
+     "term": "taom",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R213-3"
+    },
+    {
+     "term": "Hammasi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R213-4"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R213-5"
+    }
+   ]
+  },
+  "R214": {
+   "idx": 418,
+   "text": "LEKIN OSH MARKAZIDAN YAXSHI, OSHNI hayotda yemaganman.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "OSH MARKAZIDAN"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "OSHNI",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R214-1"
+    },
+    {
+     "term": "OSH MARKAZIDAN",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R214-2"
+    }
+   ]
+  },
+  "R215": {
+   "idx": 184,
+   "text": "Xizmat, tozalik va yaxshi ovqat ajoyib!",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "tozalik"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "tozalik",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R215-1"
+    },
+    {
+     "term": "ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R215-2"
+    },
+    {
+     "term": "Xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R215-3"
+    }
+   ]
+  },
+  "R216": {
+   "idx": 407,
+   "text": "U mijozni o'chirish va ofitsiantni biriktirish kabi narsalar bilan shug'ullanishi kerak.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "ofitsiantni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "ofitsiantni",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R216-1"
+    }
+   ]
+  },
+  "R217": {
+   "idx": 544,
+   "text": "Ovqatlarning katta tanlovi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "Ovqatlarning"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Ovqatlarning",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R217-1"
+    }
+   ]
+  },
+  "R218": {
+   "idx": 352,
+   "text": "80-yillardan beri yaxshi joy",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R218-1"
+    }
+   ]
+  },
+  "R219": {
+   "idx": 520,
+   "text": "Bu hind taomlari uchun Toshkentdagi eng yaxshi restoran.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "hind taomlari"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "restoran"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "hind taomlari",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R219-1"
+    },
+    {
+     "term": "restoran",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R219-2"
+    }
+   ]
+  },
+  "R220": {
+   "idx": 344,
+   "text": "Xodimlarga, ayniqsa Ruben va Vildanaga a'lo va e'tiborli xizmat uchun rahmat!.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Ruben va Vildanaga"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Xodimlarga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R220-1"
+    },
+    {
+     "term": "Xodimlarga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R220-2"
+    },
+    {
+     "term": "Ruben va Vildanaga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R220-3"
+    }
+   ]
+  },
+  "R221": {
+   "idx": 532,
+   "text": "Uyga yetkazib berish uchun buyurtma qilingan.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "yetkazib berish"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Uyga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Uyga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R221-1"
+    },
+    {
+     "term": "yetkazib berish",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R221-2"
+    }
+   ]
+  },
+  "R222": {
+   "idx": 480,
+   "text": "13 yoshga to'lgan kuningiz bilan!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "to'lgan kuningiz"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "to'lgan kuningiz",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R222-1"
+    }
+   ]
+  },
+  "R223": {
+   "idx": 83,
+   "text": "Har doim bayram muhiti, doimo jonli musiqa, taniqli odamlar va mehmonlar mavjud.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "taniqli odamlar va mehmonlar"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "musiqa"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "taniqli odamlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R223-1"
+    },
+    {
+     "term": "musiqa",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R223-2"
+    },
+    {
+     "term": "taniqli odamlar va mehmonlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R223-3"
+    },
+    {
+     "term": "muhiti",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R223-4"
+    },
+    {
+     "term": "jonli musiqa",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R223-5"
+    },
+    {
+     "term": "odamlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R223-6"
+    }
+   ]
+  },
+  "R224": {
+   "idx": 566,
+   "text": "Ovqat yaxshi.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R224-1"
+    }
+   ]
+  },
+  "R225": {
+   "idx": 165,
+   "text": "Oxirida biz 2 marta otga buyurtma berdik: ot kolbasa solingan bulyonda BESHBARMAK noodle xamiri - juda sho'r, ot bilan aralashtirilgan NORIN sovuq kesilgan mini noodle - juda mazali, qo'y sho'rva - juda qizg'in, go'sht bilan aralashtirilgan HALEEM bug'doy - jigarrang jo'xori uniga o'xshaydi - shilimshiq, lekin juda mazali.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "otga"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "BESHBARMAK"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "BESHBARMAK noodle xamiri"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "NORIN sovuq kesilgan mini noodle",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R225-1"
+    },
+    {
+     "term": "qo'y sho'rva",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R225-2"
+    },
+    {
+     "term": "HALEEM",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R225-3"
+    },
+    {
+     "term": "otga",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R225-4"
+    },
+    {
+     "term": "BESHBARMAK noodle xamiri",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R225-5"
+    },
+    {
+     "term": "NORIN",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 2,
+     "row_id": "R225-6"
+    },
+    {
+     "term": "BESHBARMAK",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R225-7"
+    },
+    {
+     "term": "HALEEM bug'doy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R225-8"
+    }
+   ]
+  },
+  "R226": {
+   "idx": 368,
+   "text": "15 daqiqadan so'ng ular kelib joyni bo'shatishimiz kerak ekanligini, go'yo bu joy band boshliqlar uchun band qilindan deb .",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "joy band"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "ular"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R226-1"
+    },
+    {
+     "term": "ular",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R226-2"
+    },
+    {
+     "term": "joy band",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R226-3"
+    },
+    {
+     "term": "15 daqiqadan so'ng",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R226-4"
+    }
+   ]
+  },
+  "R227": {
+   "idx": 105,
+   "text": "Xizmat Toshkentda men ko'rgan eng yaxshi xizmatlardan biridir.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "xizmatlardan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xizmatlardan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R227-1"
+    },
+    {
+     "term": "Xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R227-2"
+    }
+   ]
+  },
+  "R228": {
+   "idx": 359,
+   "text": "Ammo oxir-oqibat, barcha 6 kishi zaharlangan, biz hojatxonaga navbatga turamiz.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "zaharlangan"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "hojatxonaga"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "6 kishi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "zaharlangan",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R228-1"
+    },
+    {
+     "term": "6 kishi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R228-2"
+    },
+    {
+     "term": "hojatxonaga",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R228-3"
+    }
+   ]
+  },
+  "R229": {
+   "idx": 325,
+   "text": "Men ofitsiantga oqshomimizni buzishganini va biz och qolganimizni tushuntirdim.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "oqshomimizni"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiantga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "oqshomimizni",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R229-1"
+    },
+    {
+     "term": "ofitsiantga",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R229-2"
+    }
+   ]
+  },
+  "R230": {
+   "idx": 477,
+   "text": "Xorijiy sarmoyadorlar uchun oilaviy kechki ovqat yoki mehmon xizmatini tashkil qilish uchun yaxshi va qulay joy.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "kechki ovqat"
+    ],
+    [
+     "malformed_gold_span",
+     "mehmon xizmatin"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R230-1"
+    },
+    {
+     "term": "mehmon xizmatin",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R230-2"
+    },
+    {
+     "term": "kechki ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R230-3"
+    }
+   ]
+  },
+  "R231": {
+   "idx": 546,
+   "text": "Dj odatda ishdan bo'shatilishi kerak, dabdala musiqalar qo'dii.",
+   "control": false,
+   "reasons": [
+    [
+     "non_gold_term_3_systems_predict",
+     "Dj"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Dj",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R231-1"
+    },
+    {
+     "term": "musiqalar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 2,
+     "row_id": "R231-2"
+    }
+   ]
+  },
+  "R232": {
+   "idx": 70,
+   "text": "Yagona kamchilik - yo'l chetidagi terasta ovqatlanayotganda shovqin.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "yo'l chetidagi terasta"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "shovqin",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R232-1"
+    },
+    {
+     "term": "yo'l chetidagi terasta",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R232-2"
+    }
+   ]
+  },
+  "R233": {
+   "idx": 516,
+   "text": "Dam olish kunlari uchun ajoyib joy.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Dam olish kunlari"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "joy"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Dam olish kunlari",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R233-1"
+    },
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R233-2"
+    }
+   ]
+  },
+  "R234": {
+   "idx": 286,
+   "text": "Kafe-restoranning shakli g'ayrioddiy.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Kafe-restoranning",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R234-1"
+    },
+    {
+     "term": "Kafe",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R234-2"
+    }
+   ]
+  },
+  "R235": {
+   "idx": 394,
+   "text": "👍👍 oila bilan sayr qilish uchun chiroyli park",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "r qilish u"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "park"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "park",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R235-1"
+    },
+    {
+     "term": "r qilish u",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R235-2"
+    }
+   ]
+  },
+  "R236": {
+   "idx": 533,
+   "text": "Arzon narxlar va mazali osh bu joyni mashhur qiladi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "joyni"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "osh",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R236-1"
+    },
+    {
+     "term": "narxlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R236-2"
+    },
+    {
+     "term": "joyni",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R236-3"
+    }
+   ]
+  },
+  "R237": {
+   "idx": 28,
+   "text": "Salatlar yangi emas edi, ular 15 daqiqa davomida stakan kutishdi, bizning buyurtmamiz o'rniga Mojito buyurtma qilishdi va men bilmagan narsalarni olib kelishdi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "15 daqiqa"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Mojito buyurtma"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Mojito"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Mojito buyurtma",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R237-1"
+    },
+    {
+     "term": "Salatlar",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 5,
+     "row_id": "R237-2"
+    },
+    {
+     "term": "15 daqiqa",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R237-3"
+    },
+    {
+     "term": "Mojito",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R237-4"
+    },
+    {
+     "term": "stakan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R237-5"
+    }
+   ]
+  },
+  "R238": {
+   "idx": 80,
+   "text": "Chet ellik do'stlaringizni olib kelish uchun ajoyib joy!",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R238-1"
+    }
+   ]
+  },
+  "R239": {
+   "idx": 92,
+   "text": "Va har doim iliq kutib olish.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "har doim"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "kutib olish"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "kutib olish",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R239-1"
+    },
+    {
+     "term": "har doim",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R239-2"
+    }
+   ]
+  },
+  "R240": {
+   "idx": 592,
+   "text": "Biz go'sht (shavla) buyurdik, ular buyurtma keltirishdi, go'sht g'alati rangdagi uchlamchi ,+ sho'rvada go'shtdan ko'ra ko'proq yog ' ham bor.Q",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "go'sht"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "yog '"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "yog '",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R240-1"
+    },
+    {
+     "term": "go'sht",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 3,
+     "row_id": "R240-2"
+    }
+   ]
+  },
+  "R241": {
+   "idx": 163,
+   "text": "Menga juda yoqdi, rahmat!",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "rahmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "rahmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R241-1"
+    }
+   ]
+  },
+  "R242": {
+   "idx": 430,
+   "text": "Ular siz uchun maxsus uchta narxdan foydalanmoqda.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "uchta narxdan"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "narxdan"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "narxdan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R242-1"
+    },
+    {
+     "term": "uchta narxdan",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 1,
+     "row_id": "R242-2"
+    }
+   ]
+  },
+  "R243": {
+   "idx": 16,
+   "text": "Oldindan joy band kilganimiz uchun xursand bo'lib keldik.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "joy band"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "joy band",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R243-1"
+    },
+    {
+     "term": "joy",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R243-2"
+    }
+   ]
+  },
+  "R244": {
+   "idx": 61,
+   "text": "Samimiy va professional xodimlar.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "xodimlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R244-1"
+    }
+   ]
+  },
+  "R245": {
+   "idx": 392,
+   "text": "Go'sht, albatta, yaxshi va sifatli.",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "Go'sht,"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Go'sht"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Go'sht,",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R245-1"
+    },
+    {
+     "term": "Go'sht",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R245-2"
+    }
+   ]
+  },
+  "R246": {
+   "idx": 391,
+   "text": "Yerto‘lada Samira ismli xodim mijozlarga juda qo‘pol munosabatda bo‘ladi.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Samira ismli xodim"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Samira ismli xodim",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R246-1"
+    }
+   ]
+  },
+  "R247": {
+   "idx": 362,
+   "text": "Ingliz tilida xizmat ko'rsatish mavjud.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_polarity_against_3_systems",
+     "xizmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "xizmat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R247-1"
+    }
+   ]
+  },
+  "R248": {
+   "idx": 419,
+   "text": "Hamma taomlar juda mazali",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "taomlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R248-1"
+    }
+   ]
+  },
+  "R249": {
+   "idx": 421,
+   "text": "BUYURT BERILGAN SOLON STEK, BOL MEDALYONI, SEZAR SALATI HAMmasi JUDA MAZMALI.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "STEK"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "SEZAR SALATI"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "SEZAR SALATI",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R249-1"
+    },
+    {
+     "term": "STEK",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R249-2"
+    }
+   ]
+  },
+  "R250": {
+   "idx": 316,
+   "text": "Rahmat",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Rahmat"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Rahmat",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R250-1"
+    }
+   ]
+  },
+  "R251": {
+   "idx": 595,
+   "text": "Narxlar o'rtacha.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Narxlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R251-1"
+    }
+   ]
+  },
+  "R252": {
+   "idx": 191,
+   "text": "Men har bir sayyohga buni sinab ko'rishni maslahat beraman",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "sayyohga"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "sayyohga",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R252-1"
+    }
+   ]
+  },
+  "R253": {
+   "idx": 397,
+   "text": "Ta'mirlashdan keyin bu yerda yaxshilashdi, har qanday taom mazali, assortimenti katta, chiroyli taomlar va yuqori darajadagi xizmat ko'rsatish; Visa kartalari to'lov uchun qabul qilinadi; qulay muhitda, kechayu kunduz ishlaydi, spirtli ichimliklar sotilmaydi; narxlar juda maqbul; kafening joylashuvi juda yaxshi; ofitsiantlar har xil bo'ladi; )))",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "xizmat ko'rsatish"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "Visa kartalari"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "spirtli ichimliklar"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "kafening joylashuvi"
+    ],
+    [
+     "gold_polarity_against_3_systems",
+     "ofitsiantlar"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "bu yerda"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "xizmat"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "joylashuvi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "spirtli ichimliklar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 0,
+     "row_id": "R253-1"
+    },
+    {
+     "term": "taomlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 3,
+     "row_id": "R253-2"
+    },
+    {
+     "term": "Visa",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R253-3"
+    },
+    {
+     "term": "taom",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R253-4"
+    },
+    {
+     "term": "xizmat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 5,
+     "row_id": "R253-5"
+    },
+    {
+     "term": "bu yerda",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R253-6"
+    },
+    {
+     "term": "ofitsiantlar",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 5,
+     "row_id": "R253-7"
+    },
+    {
+     "term": "assortimenti",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R253-8"
+    },
+    {
+     "term": "muhitda",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R253-9"
+    },
+    {
+     "term": "Visa kartalari",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 1,
+     "row_id": "R253-10"
+    },
+    {
+     "term": "kafening joylashuvi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R253-11"
+    },
+    {
+     "term": "narxlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R253-12"
+    },
+    {
+     "term": "xizmat ko'rsatish",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R253-13"
+    },
+    {
+     "term": "joylashuvi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R253-14"
+    }
+   ]
+  },
+  "R254": {
+   "idx": 377,
+   "text": "Mazali o'zbek oshi",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "oshi",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R254-1"
+    }
+   ]
+  },
+  "R255": {
+   "idx": 299,
+   "text": "Yangi menyu, yangi odamlar, yangi Shou pragrammasi, barchani",
+   "control": false,
+   "reasons": [
+    [
+     "malformed_gold_span",
+     "Shou pragrammasi,"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "Shou pragrammasi"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "Shou",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R255-1"
+    },
+    {
+     "term": "Shou pragrammasi,",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 0,
+     "row_id": "R255-2"
+    },
+    {
+     "term": "Shou pragrammasi",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 3,
+     "row_id": "R255-3"
+    },
+    {
+     "term": "menyu",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R255-4"
+    },
+    {
+     "term": "odamlar",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R255-5"
+    }
+   ]
+  },
+  "R256": {
+   "idx": 527,
+   "text": "Umuman olganda, ikki kishilik chek (bir juft salat, issiq snaklar, ikkinchi taom, kalyan, taxminan 7 kokteyl) 800 mingga yaqin chiqdi.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "salat",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R256-1"
+    },
+    {
+     "term": "kalyan",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R256-2"
+    },
+    {
+     "term": "ikki kishilik chek",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R256-3"
+    }
+   ]
+  },
+  "R257": {
+   "idx": 196,
+   "text": "U yerda, Oshh markazida osh mazaliroq.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "osh",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R257-1"
+    }
+   ]
+  },
+  "R258": {
+   "idx": 175,
+   "text": "Olomon odamlar va biroz qimmat",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "biroz"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "odamlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R258-1"
+    },
+    {
+     "term": "biroz",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R258-2"
+    },
+    {
+     "term": "Olomon",
+     "in_gold": true,
+     "gold_polarity": "neutral",
+     "votes": 2,
+     "row_id": "R258-3"
+    },
+    {
+     "term": "Olomon odamlar",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 2,
+     "row_id": "R258-4"
+    }
+   ]
+  },
+  "R259": {
+   "idx": 562,
+   "text": "Ovqat yaxshi.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "Ovqat",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R259-1"
+    }
+   ]
+  },
+  "R260": {
+   "idx": 7,
+   "text": "Yaxshi atmosfera mazali pivo",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "atmosfera",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R260-1"
+    },
+    {
+     "term": "pivo",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R260-2"
+    }
+   ]
+  },
+  "R261": {
+   "idx": 132,
+   "text": "1 ofitsiant taxminan 25 kishini qamrab olishga harakat qildi va bu vaqtda uning hamkasblari bekorchilik bilan band edilar.",
+   "control": false,
+   "reasons": [
+    [
+     "gold_term_at_most_1_system_predicts",
+     "1 ofitsiant"
+    ],
+    [
+     "gold_term_at_most_1_system_predicts",
+     "uning hamkasblari"
+    ],
+    [
+     "non_gold_term_3_systems_predict",
+     "ofitsiant"
+    ]
+   ],
+   "candidates": [
+    {
+     "term": "uning hamkasblari",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 0,
+     "row_id": "R261-1"
+    },
+    {
+     "term": "ofitsiant",
+     "in_gold": false,
+     "gold_polarity": null,
+     "votes": 4,
+     "row_id": "R261-2"
+    },
+    {
+     "term": "1 ofitsiant",
+     "in_gold": true,
+     "gold_polarity": "negative",
+     "votes": 1,
+     "row_id": "R261-3"
+    }
+   ]
+  },
+  "R262": {
+   "idx": 188,
+   "text": "Yaxshi va go'zal joy",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "joy",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 5,
+     "row_id": "R262-1"
+    }
+   ]
+  },
+  "R263": {
+   "idx": 396,
+   "text": "Biz bilan farzandimiz bor edi, ular bolaga mazali muzqaymoq topib berishdi.",
+   "control": true,
+   "reasons": [],
+   "candidates": [
+    {
+     "term": "muzqaymoq",
+     "in_gold": true,
+     "gold_polarity": "positive",
+     "votes": 4,
+     "row_id": "R263-1"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "model": "Sanatbek/UzABSA-LLM",
+ "revision": "8636bd10074b6aa693a56885fc15cc830bd38a69",
+ "device": "mps",
+ "dtype": "bfloat16",
+ "decoding": "greedy, max_new_tokens 512 (src.inference.extract_aspects)",
+ "torch": "2.12.1",
+ "transformers": "5.13.0",
+ "host": "Sanatbeks-MacBook-Pro-2.local",
+ "corpus": "/Users/sanatbek/code/UzABSA-LLM/data/annotated/reviews_annotated.json",
+ "n_reviews": 152,
+ "started": "2026-10-31T03:26:45",
+ "finished": "2026-10-31T03:54:40"
+}

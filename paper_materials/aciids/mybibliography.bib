@@ -1,0 +1,801 @@
+@misc{2506.22316,
+Author = {Qingquan Li and Shaoyu Dou and Kailai Shao and Chao Chen and Haixiang Hu},
+Title = {{Evaluating Scoring Bias in LLM-as-a-Judge}},
+Year = {2025},
+howpublished = {arXiv preprint arXiv:2506.22316},
+}
+
+@misc{verga2024juries,
+Author = {Verga, Pat and Hofst{\"a}tter, Sebastian and Althammer, Sophia and others},
+Title = {{Replacing Judges with Juries: Evaluating LLM Generations with a Panel of Diverse Models}},
+Year = {2024},
+howpublished = {arXiv preprint arXiv:2404.18796},
+}
+
+@InProceedings{10.1007/978-3-030-63119-2_59,
+author="Matlatipov, Sanatbek
+and Tukeyev, Ualsher
+and Aripov, Mersaid",
+editor="Hernes, Marcin
+and Wojtkiewicz, Krystian
+and Szczerbicki, Edward",
+title="{Towards the Uzbek Language Endings as a Language Resource}",
+booktitle="Advances in Computational Collective Intelligence",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="729--740",
+abstract="The Uzbek language belongs to low-resource languages. It is very important to increase the number of language resources such as dictionaries, corpora (monolingual and bilingual) for the Uzbek language. Dictionaries may be different kinds: monolingual, orthographical, bilingual, grammar special dictionaries: stems dictionaries, affixes dictionaries, etc. For different NLP tasks of agglutinative languages, such as morphological analysis, information retrieval, machine translation (segmentation preprocessing) in some cases needs a dictionary of words' endings. In this paper, we proposed the first electronic dictionary of Uzbek words' endings in variants for morphological segmentation preprocessing useful for neural machine translation. The resource analysed by the initial version of the Lexicon free stemming tool [3] created by authors. For creation of Uzbek words' endings' electronic dictionary, it was used a combinatorial approach inferring apply for part of speech of the Uzbek language: nouns, adjectives, numerals, verbs, participles, moods, voices.",
+isbn="978-3-030-63119-2"
+}
+
+@inproceedings{3666122.3668142,
+author = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric P. and Zhang, Hao and Gonzalez, Joseph E. and Stoica, Ion},
+title = {{Judging LLM-as-a-judge with MT-bench and Chatbot Arena}},
+year = {2023},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Evaluating large language model (LLM) based chat assistants is challenging due to their broad capabilities and the inadequacy of existing benchmarks in measuring human preferences. To address this, we explore using strong LLMs as judges to evaluate these models on more open-ended questions. We examine the usage and limitations of LLM-as-a-judge, including position, verbosity, and self-enhancement biases, as well as limited reasoning ability, and propose solutions to mitigate some of them. We then verify the agreement between LLM judges and human preferences by introducing two benchmarks: MT-bench, a multi-turn question set; and Chatbot Arena, a crowdsourced battle platform. Our results reveal that strong LLM judges like GPT-4 can match both controlled and crowdsourced human preferences well, achieving over 80\% agreement, the same level of agreement between humans. Hence, LLM-as-a-judge is a scalable and explainable way to approximate human preferences, which are otherwise very expensive to obtain. Additionally, we show our benchmark and traditional benchmarks complement each other by evaluating several variants of LLaMA and Vicuna. The MT-bench questions, 3K expert votes, and 30K conversations with human preferences are publicly available at https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge.},
+booktitle = {Proceedings of the 37th International Conference on Neural Information Processing Systems},
+articleno = {2020},
+numpages = {29},
+location = {New Orleans, LA, USA},
+series = {NIPS '23}
+}
+
+@ARTICLE{Touvron2023-lf,
+  title         = "{{LLaMA}: Open and efficient foundation language models}",
+  author        = "Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and
+                   Martinet, Xavier and Lachaux, Marie-Anne and Lacroix,
+                   Timoth{\'e}e and Rozi{\`e}re, Baptiste and Goyal, Naman and
+                   Hambro, Eric and Azhar, Faisal and Rodriguez, Aurelien and
+                   Joulin, Armand and Grave, Edouard and Lample, Guillaume",
+  abstract      = "We introduce LLaMA, a collection of foundation language
+                   models ranging from 7B to 65B parameters. We train our
+                   models on trillions of tokens, and show that it is possible
+                   to train state-of-the-art models using publicly available
+                   datasets exclusively, without resorting to proprietary and
+                   inaccessible datasets. In particular, LLaMA-13B outperforms
+                   GPT-3 (175B) on most benchmarks, and LLaMA-65B is
+                   competitive with the best models, Chinchilla-70B and
+                   PaLM-540B. We release all our models to the research
+                   community.",
+  month         =  {February},
+  year          =  2023,
+  copyright     = "http://creativecommons.org/licenses/by/4.0/",
+  journal       = {arXiv preprint arXiv:2302.13971},
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  eprint        = "2302.13971"
+}
+
+@inproceedings{scaria-etal-2024-instructabsa,
+    title = "{{I}nstruct{ABSA}: Instruction Learning for Aspect Based Sentiment Analysis}",
+    author = "Scaria, Kevin  and
+      Gupta, Himanshu  and
+      Goyal, Siddharth  and
+      Sawant, Saurabh  and
+      Mishra, Swaroop  and
+      Baral, Chitta",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers)",
+    month = {June},
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.naacl-short.63/",
+    doi = "10.18653/v1/2024.naacl-short.63",
+    pages = "720--736",
+    abstract = "We introduce InstructABSA, an instruction learning paradigm for Aspect-Based Sentiment Analysis (ABSA) subtasks.Our method introduces positive, negative, and neutral examples to each training sample, and instruction tune the model (T$k$-Instruct) for ABSA subtasks, yielding significant performance improvements. Experimental results on the Sem Eval 2014, 15, and 16 datasets demonstrate that InstructABSA outperforms the previous state-of-the-art (SOTA) approaches on Term Extraction (ATE), Sentiment Classification(ATSC) and Sentiment Pair Extraction (ASPE) subtasks.In particular, InstructABSA outperforms the previous state-of-the-art (SOTA) on the Rest14 ATE subtask by 5.69{\%} points, the Rest15 ATSC subtask by 9.59{\%} points, and the Lapt14 AOPE subtask by 3.37{\%} points, surpassing 7x larger models.We get competitive results on AOOE, AOPE, AOSTE, and ACOSQE subtasks indicating strong generalization ability to all subtasks. Exploring sample efficiency reveals that just 50{\%} train data is required to get competitive results with other instruction tuning approaches. Lastly, we assess the quality of instructions and observe that InstructABSA{'}s performance experiences a decline of {\textasciitilde}10{\%} when adding misleading examples"
+}
+
+@inproceedings{matlatipov-etal-2024-uzabsa,
+    title = "{{U}z{ABSA}: Aspect-Based Sentiment Analysis for the {U}zbek Language}",
+    author = "Matlatipov, Sanatbek Gayratovich  and
+      Rajabov, Jaloliddin  and
+      Kuriyozov, Elmurod  and
+      Aripov, Mersaid",
+    editor = "Melero, Maite  and
+      Sakti, Sakriani  and
+      Soria, Claudia",
+    booktitle = "Proceedings of the 3rd Annual Meeting of the Special Interest Group on Under-resourced Languages @ LREC-COLING 2024",
+    month = {May},
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.sigul-1.47/",
+    pages = "394--403",
+    abstract = "The objective of enhancing the availability of natural language processing technologies for low-resource languages has significant importance in facilitating technological accessibility within the populations of speakers of these languages. Our current grasping shows that there are no established linguistic resources available open source to develop aspect-based sentiment analysis (ABSA) tools tailored to the Uzbek language. This work aims to address the aforementioned gap by presenting the first high-quality annotated ABSA dataset - UzABSA. The data used in this study was obtained from a compilation of online reviews of Uzbek restaurants. Consequently, the constructed dataset has a length of 3500 reviews at the document level and 6100+ sentences at the sentence level. The popular approach to language resources of this kind explores four distinctive characteristics, namely Aspect Terms, Aspect Term Polarities, Aspect Category Terms, as well as Aspect Category Polarities. To the best of our knowledge, it is the first and the largest ABSA dataset for the Uzbek language. To evaluate the annotation process of our dataset, we used established statistical techniques such as Cohen{'}s kappa coefficient and Krippendorff{'}s $\alpha$ to assess agreement between annotators. Subsequently, a classification model, namely K-Nearest Neighbour (KNN), was used to evaluate the performance of the created dataset. Both sets of evaluation techniques demonstrate comparable levels of accuracy. The first findings across the various tasks showed promising outcomes, with accuracy rates ranging from 72{\%} to 88{\%}. This study not only highlights the significance of our acquired dataset but also plays a valuable tool for scholars interested in furthering sentiment analysis in the Uzbek language."
+}
+
+@ARTICLE{Sharipov2023-ud,
+  title         = "{{UzbekTagger}: The rule-based {POS} tagger for Uzbek
+                   language}",
+  author        = "Sharipov, Maksud and Kuriyozov, Elmurod and Yuldashev,
+                   Ollabergan and Sobirov, Ogabek",
+  abstract      = "This research paper presents a part-of-speech (POS)
+                   annotated dataset and tagger tool for the low-resource Uzbek
+                   language. The dataset includes 12 tags, which were used to
+                   develop a rule-based POS-tagger tool. The corpus text used
+                   in the annotation process was made sure to be balanced over
+                   20 different fields in order to ensure its
+                   representativeness. Uzbek being an agglutinative language so
+                   the most of the words in an Uzbek sentence are formed by
+                   adding suffixes. This nature of it makes the POS-tagging
+                   task difficult to find the stems of words and the right
+                   part-of-speech they belong to. The methodology proposed in
+                   this research is the stemming of the words with an
+                   affix/suffix stripping approach including database of the
+                   stem forms of the words in the Uzbek language. The tagger
+                   tool was tested on the annotated dataset and showed high
+                   accuracy in identifying and tagging parts of speech in Uzbek
+                   text. This newly presented dataset and tagger tool can be
+                   used for a variety of natural language processing tasks such
+                   as language modeling, machine translation, and
+                   text-to-speech synthesis. The presented dataset is the first
+                   of its kind to be made publicly available for Uzbek, and the
+                   POS-tagger tool created can also be used as a pivot to use
+                   as a base for other closely-related Turkic languages.",
+  journal       = "arXiv preprint arXiv:2301.12711",
+  month         =  {January},
+  year          =  2023,
+  copyright     = "http://creativecommons.org/licenses/by/4.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  eprint        = "2301.12711"
+}
+
+@article{kuriyozov2022construction,
+    author={Kuriyozov, Elmurod and Matlatipov, Sanatbek and Alonso, Miguel A. and G{\'o}mez-Rodr{\'i}guez, Carlos},
+    editor={Vetulani, Zygmunt and Paroubek, Patrick and Kubis, Marek},
+    title={{Construction and Evaluation of Sentiment Datasets for Low-Resource Languages: The Case of {U}zbek}},
+    journal={Lecture Notes in Artificial Intelligence},
+    booktitle={Human Language Technology. Challenges for Computer Science and Linguistics},
+    year={2022},
+    publisher={Springer International Publishing},
+    address={Cham},
+    volume={13212},
+    pages={232--243},
+    isbn={978-3-031-05328-3},
+    issn={0302-9743},
+    doi={10.1007/978-3-031-05328-3\_15}
+}
+
+@ARTICLE{Matlatipov2022-yd,
+  title         = "{Uzbek Sentiment Analysis based on local Restaurant Reviews}",
+  author        = "Matlatipov, Sanatbek and Rahimboeva, Hulkar and Rajabov,
+                   Jaloliddin and Kuriyozov, Elmurod",
+  abstract      = "Extracting useful information for sentiment analysis and
+                   classification problems from a big amount of user-generated
+                   feedback, such as restaurant reviews, is a crucial task of
+                   natural language processing, which is not only for customer
+                   satisfaction where it can give personalized services, but
+                   can also influence the further development of a company. In
+                   this paper, we present a work done on collecting restaurant
+                   reviews data as a sentiment analysis dataset for the Uzbek
+                   language, a member of the Turkic family which is heavily
+                   affected by the low-resource constraint, and provide some
+                   further analysis of the novel dataset by evaluation using
+                   different techniques, from logistic regression based models,
+                   to support vector machines, and even deep learning models,
+                   such as recurrent neural networks, as well as convolutional
+                   neural networks. The paper includes detailed information on
+                   how the data was collected, how it was pre-processed for
+                   better quality optimization, as well as experimental setups
+                   for the evaluation process. The overall evaluation results
+                   indicate that by performing pre-processing steps, such as
+                   stemming for agglutinative languages, the system yields
+                   better results, eventually achieving 91\% accuracy result in
+                   the best performing model",
+  journal       = "arXiv preprint arXiv:2205.15930",
+  month         =  {May},
+  year          =  2022,
+  copyright     = "http://creativecommons.org/licenses/by/4.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  eprint        = "2205.15930"
+}
+
+@Article{proceedings2019021037,
+AUTHOR = {Kuriyozov, Elmurod and Matlatipov, Sanatbek},
+TITLE = {{Building a New Sentiment Analysis Dataset for Uzbek Language and Creating Baseline Models}},
+JOURNAL = {Proceedings},
+VOLUME = {21},
+YEAR = {2019},
+NUMBER = {1},
+ARTICLE-NUMBER = {37},
+ISSN = {2504-3900},
+ABSTRACT = {Making natural language processing technologies available for low-resource languages is an important goal to improve the access to technology in their communities of speakers. In this paper, we provide the first annotated corpora for polarity classification for Uzbek language. Our methodology considers collecting a medium-size manually annotated dataset and a larger-size dataset automatically translated from existing resources. Then, we use these datasets to train sentiment analysis models on the Uzbek language, using both traditional machine learning techniques and recent deep learning models.},
+DOI = {10.3390/proceedings2019021037}
+}
+
+@InProceedings{10.1007/978-3-031-05328-3_6,
+author="Aripov, Mersaid
+and Khakimov, Muftakh
+and Matlatipov, Sanatbek
+and Sirojiddinov, Ziyoviddin",
+editor="Vetulani, Zygmunt
+and Paroubek, Patrick
+and Kubis, Marek",
+title="{Analysis and Processing of the Uzbek Language on the Multi-language Modelled Computer Translator Technology}",
+booktitle="Human Language Technology. Challenges for Computer Science and Linguistics",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="81--95",
+abstract="It is known, that a process of any machine translation system is, decoding of sense of the entrance text in a natural language and re-encoding this meaning in the target language to inform the user in semantic conformity with the entrance/source text.",
+isbn="978-3-031-05328-3"
+}
+
+@Article{electronics12030515,
+AUTHOR = {Chouikhi, Hasna and Alsuhaibani, Mohammed and Jarray, Fethi},
+TITLE = {{BERT-Based Joint Model for Aspect Term Extraction and Aspect Polarity Detection in Arabic Text}},
+JOURNAL = {Electronics},
+VOLUME = {12},
+YEAR = {2023},
+NUMBER = {3},
+ARTICLE-NUMBER = {515},
+URL = {https://www.mdpi.com/2079-9292/12/3/515},
+ISSN = {2079-9292},
+ABSTRACT = {Aspect-based sentiment analysis (ABSA) is a method used to identify the aspects discussed in a given text and determine the sentiment expressed towards each aspect. This can help provide a more fine-grained understanding of the opinions expressed in the text. The majority of Arabic ABSA techniques in use today significantly rely on repeated pre-processing and feature-engineering operations, as well as the use of outside resources (e.g., lexicons). In essence, there is a significant research gap in NLP with regard to the use of transfer learning (TL) techniques and language models for aspect term extraction (ATE) and aspect polarity detection (APD) in Arabic text. While TL has proven to be an effective approach for a variety of NLP tasks in other languages, its use in the context of Arabic has been relatively under-explored. This paper aims to address this gap by presenting a TL-based approach for ATE and APD in Arabic, leveraging the knowledge and capabilities of previously trained language models. The Arabic base (Arabic version) of the BERT model serves as the foundation for the suggested models. Different BERT implementations are also contrasted. A reference ABSA dataset was used for the experiments (HAAD dataset). The experimental results demonstrate that our models surpass the baseline model and previously proposed approaches.},
+DOI = {10.3390/electronics12030515}
+}
+
+@article{ZohrehMadhoushi2019,
+  title = {{Aspect-Based Sentiment Analysis Methods in Recent Years}},
+  volume = {08},
+  ISSN = {2289-2192},
+  url = {http://dx.doi.org/10.17576/apjitm-2019-0801-07},
+  DOI = {10.17576/apjitm-2019-0801-07},
+  number = {01},
+  journal = {Asia-Pacific Journal of Information Technology; Multimedia},
+  publisher = {Penerbit Universiti Kebangsaan Malaysia (UKM Press)},
+  author = {Zohreh Madhoushi,  Zohreh Madhoushi and Hamdan,  Abdul Razak and Zainudin,  Suhaila},
+  year = {2019},
+  month = {June},
+  pages = {79–96}
+}
+
+@Article{Hua2024,
+author={Hua, Yan Cathy
+and Denny, Paul
+and Wicker, J{\"o}rg
+and Taskova, Katerina},
+title={{A systematic review of aspect-based sentiment analysis: domains, methods, and trends}},
+journal={Artificial Intelligence Review},
+year={2024},
+month={Sep},
+day={17},
+volume={57},
+number={11},
+pages={296},
+abstract={Aspect-based sentiment analysis (ABSA) is a fine-grained type of sentiment analysis that identifies aspects and their associated opinions from a given text. With the surge of digital opinionated text data, ABSA gained increasing popularity for its ability to mine more detailed and targeted insights. Many review papers on ABSA subtasks and solution methodologies exist, however, few focus on trends over time or systemic issues relating to research application domains, datasets, and solution approaches. To fill the gap, this paper presents a systematic literature review (SLR) of ABSA studies with a focus on trends and high-level relationships among these fundamental components. This review is one of the largest SLRs on ABSA. To our knowledge, it is also the first to systematically examine the interrelations among ABSA research and data distribution across domains, as well as trends in solution paradigms and approaches. Our sample includes 727 primary studies screened from 8550 search results without time constraints via an innovative automatic filtering process. Our quantitative analysis not only identifies trends in nearly two decades of ABSA research development but also unveils a systemic lack of dataset and domain diversity as well as domain mismatch that may hinder the development of future ABSA research. We discuss these findings and their implications and propose suggestions for future research.},
+issn={1573-7462},
+doi={10.1007/s10462-024-10906-z}
+}
+
+@article{10.1145/3721844,
+author = {Sun, Xin and Mi, Yongqing and Li, Hongao},
+title = {{Enhancing Aspect Sentiment Classification with Dual-Channel Graph Convolutional Network}},
+year = {2025},
+issue_date = {June 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {16},
+number = {3},
+issn = {2157-6904},
+url = {https://doi.org/10.1145/3721844},
+doi = {10.1145/3721844},
+abstract = {Aspect sentiment classification (ASC) constitutes a crucial research area within sentiment analysis tasks, aiming to predict sentiment polarity toward different aspects in given contexts. Identifying the relations between aspects and sentiments can be a challenging task, as aspects and sentiments are not always predefined. Most existing studies have demonstrated the effectiveness of using dependency parsing tree and graph convolutional network (GCN), achieving good experimental results. However, existing methods have mainly focused on either semantic or syntactic information individually and may introduce errors when the input sentence lacks clear syntactic information. To address these issues, we propose a novel approach based on Dual-Channel Graph Convolutional Network (DC-GCN), which integrates feature fusion within a dual-channel architecture. Our model can effectively capture the semantic information and enhance the feature representation of syntactic structures by introducing the multi-head self-attention graph convolution, guided by the TopK strategy, and the directional densely connected graph convolutional network. We further employ a bi-affine strategy and multi-layer perceptron to integrate semantic and syntactic information. Experimental results on publicly available datasets demonstrate the superior performance of our model over state-of-the-art methods. Specifically, our model improves upon baseline models on the Twitter, Lap14, Rest14, Rest15, and Rest16 datasets, with increases in Accuracy/Macro-F1 scores of 0.06/0.58, 0.58/0.47, 0.25/1.19, 0.23/1.05, and 0.36/1.32, respectively.},
+journal = {ACM Trans. Intell. Syst. Technol.},
+month = {May},
+articleno = {66},
+numpages = {17},
+keywords = {Aspect sentiment classification, Graph convolutional neural network, Sentiment analysis, Attention mechanism}
+}
+
+@inproceedings{hu-etal-2021-multi-label,
+    title = "{Multi-Label Few-Shot Learning for Aspect Category Detection}",
+    author = "Hu, Mengting  and
+      Zhao, Shiwan  and
+      Guo, Honglei  and
+      Xue, Chao  and
+      Gao, Hang  and
+      Gao, Tiegang  and
+      Cheng, Renhong  and
+      Su, Zhong",
+    editor = "Zong, Chengqing  and
+      Xia, Fei  and
+      Li, Wenjie  and
+      Navigli, Roberto",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = {August},
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.495/",
+    doi = "10.18653/v1/2021.acl-long.495",
+    pages = "6330--6340",
+    abstract = "Aspect category detection (ACD) in sentiment analysis aims to identify the aspect categories mentioned in a sentence. In this paper, we formulate ACD in the few-shot learning scenario. However, existing few-shot learning approaches mainly focus on single-label predictions. These methods can not work well for the ACD task since a sentence may contain multiple aspect categories. Therefore, we propose a multi-label few-shot learning method based on the prototypical network. To alleviate the noise, we design two effective attention mechanisms. The support-set attention aims to extract better prototypes by removing irrelevant aspects. The query-set attention computes multiple prototype-specific representations for each query instance, which are then used to compute accurate distances with the corresponding prototypes. To achieve multi-label inference, we further learn a dynamic threshold per instance by a policy network. Extensive experimental results on three datasets demonstrate that the proposed method significantly outperforms strong baselines."
+}
+
+@inproceedings{ma-etal-2019-exploring,
+    title = "{Exploring Sequence-to-Sequence Learning in Aspect Term Extraction}",
+    author = "Ma, Dehong  and
+      Li, Sujian  and
+      Wu, Fangzhao  and
+      Xie, Xing  and
+      Wang, Houfeng",
+    editor = "Korhonen, Anna  and
+      Traum, David  and
+      M{\`a}rquez, Llu{\'i}s",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = {July},
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P19-1344/",
+    doi = "10.18653/v1/P19-1344",
+    pages = "3538--3547",
+    abstract = "Aspect term extraction (ATE) aims at identifying all aspect terms in a sentence and is usually modeled as a sequence labeling problem. However, sequence labeling based methods cannot make full use of the overall meaning of the whole sentence and have the limitation in processing dependencies between labels. To tackle these problems, we first explore to formalize ATE as a sequence-to-sequence (Seq2Seq) learning task where the source sequence and target sequence are composed of words and labels respectively. At the same time, to make Seq2Seq learning suit to ATE where labels correspond to words one by one, we design the gated unit networks to incorporate corresponding word representation into the decoder, and position-aware attention to pay more attention to the adjacent words of a target word. The experimental results on two datasets show that Seq2Seq learning is effective in ATE accompanied with our proposed gated unit networks and position-aware attention mechanism."
+}
+
+@inproceedings{3666122.3666563,
+author = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
+title = {{QLORA: efficient finetuning of quantized LLMs}},
+year = {2023},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {We present QLORA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLORA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters (LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3\% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLORA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) Double Quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) Paged Optimizers to manage memory spikes. We use QLORA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. A lemon-picked analysis demonstrates where Guanaco fails compared to ChatGPT. We release all of our models and code, including CUDA kernels for 4-bit training.. Equal contribution. https://github.com/artidoro/qlora and https://github.com/TimDettmers/bitsandbytes},
+booktitle = {Proceedings of the 37th International Conference on Neural Information Processing Systems},
+articleno = {441},
+numpages = {28},
+location = {New Orleans, LA, USA},
+series = {NIPS '23}
+}
+
+@Article{Guo2025,
+author={Guo, Daya and Yang, Dejian and Zhang, Haowei and others},
+title={{DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning}},
+journal={Nature},
+year={2025},
+month={Sep},
+day={01},
+volume={645},
+number={8081},
+pages={633-638},
+abstract={General reasoning represents a long-standing and formidable challenge in artificial intelligence (AI). Recent breakthroughs, exemplified by large language models (LLMs)1,2 and chain-of-thought (CoT) prompting3, have achieved considerable success on foundational reasoning tasks. However, this success is heavily contingent on extensive human-annotated demonstrations and the capabilities of models are still insufficient for more complex problems. Here we show that the reasoning abilities of LLMs can be incentivized through pure reinforcement learning (RL), obviating the need for human-labelled reasoning trajectories. The proposed RL framework facilitates the emergent development of advanced reasoning patterns, such as self-reflection, verification and dynamic strategy adaptation. Consequently, the trained model achieves superior performance on verifiable tasks such as mathematics, coding competitions and STEM fields, surpassing its counterparts trained through conventional supervised learning on human demonstrations. Moreover, the emergent reasoning patterns exhibited by these large-scale models can be systematically used to guide and enhance the reasoning capabilities of smaller models.},
+issn={1476-4687},
+doi={10.1038/s41586-025-09422-z}
+}
+
+@ARTICLE{Qwen2024-kr,
+  title         = "{Qwen2.5 Technical Report}",
+  author        = {Yang, An and Yang, Baosong and Zhang, Beichen and others},
+  abstract      = "In this report, we introduce Qwen2.5, a comprehensive series
+                   of large language models (LLMs) designed to meet diverse
+                   needs. Compared to previous iterations, Qwen 2.5 has been
+                   significantly improved during both the pre-training and
+                   post-training stages. In terms of pre-training, we have
+                   scaled the high-quality pre-training datasets from the
+                   previous 7 trillion tokens to 18 trillion tokens. This
+                   provides a strong foundation for common sense, expert
+                   knowledge, and reasoning capabilities. In terms of
+                   post-training, we implement intricate supervised finetuning
+                   with over 1 million samples, as well as multistage
+                   reinforcement learning. Post-training techniques enhance
+                   human preference, and notably improve long text generation,
+                   structural data analysis, and instruction following. To
+                   handle diverse and varied use cases effectively, we present
+                   Qwen2.5 LLM series in rich sizes. Open-weight offerings
+                   include base and instruction-tuned models, with quantized
+                   versions available. In addition, for hosted solutions, the
+                   proprietary models currently include two mixture-of-experts
+                   (MoE) variants: Qwen2.5-Turbo and Qwen2.5-Plus, both
+                   available from Alibaba Cloud Model Studio. Qwen2.5 has
+                   demonstrated top-tier performance on a wide range of
+                   benchmarks evaluating language understanding, reasoning,
+                   mathematics, coding, human preference alignment, etc.
+                   Specifically, the open-weight flagship Qwen2.5-72B-Instruct
+                   outperforms a number of open and proprietary models and
+                   demonstrates competitive performance to the state-of-the-art
+                   open-weight model, Llama-3-405B-Instruct, which is around 5
+                   times larger. Qwen2.5-Turbo and Qwen2.5-Plus offer superior
+                   cost-effectiveness while performing competitively against
+                   GPT-4o-mini and GPT-4o respectively. Additionally, as the
+                   foundation, Qwen2.5 models have been instrumental in
+                   training specialized models such as Qwen2.5-Math,
+                   Qwen2.5-Coder, QwQ, and multimodal models.",
+  month         =  {December},
+  year          =  2024,
+  copyright     = "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+  journal       = {arXiv preprint arXiv:2412.15115},
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  eprint        = "2412.15115"
+}
+
+@ARTICLE{Grattafiori2024-ka,
+  title         = "{The Llama 3 herd of models}",
+  author        = "Grattafiori, Aaron and Dubey, Abhimanyu and Jauhri, Abhinav and others",
+  abstract      = "Modern artificial intelligence (AI) systems are powered by
+                   foundation models. This paper presents a new set of
+                   foundation models, called Llama 3. It is a herd of language
+                   models that natively support multilinguality, coding,
+                   reasoning, and tool usage. Our largest model is a dense
+                   Transformer with 405B parameters and a context window of up
+                   to 128K tokens. This paper presents an extensive empirical
+                   evaluation of Llama 3. We find that Llama 3 delivers
+                   comparable quality to leading language models such as GPT-4
+                   on a plethora of tasks. We publicly release Llama 3,
+                   including pre-trained and post-trained versions of the 405B
+                   parameter language model and our Llama Guard 3 model for
+                   input and output safety. The paper also presents the results
+                   of experiments in which we integrate image, video, and
+                   speech capabilities into Llama 3 via a compositional
+                   approach. We observe this approach performs competitively
+                   with the state-of-the-art on image, video, and speech
+                   recognition tasks. The resulting models are not yet being
+                   broadly released as they are still under development.",
+  month         =  {July},
+  year          =  2024,
+  copyright     = "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+  journal       = {arXiv preprint arXiv:2407.21783},
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.AI",
+  eprint        = "2407.21783"
+}
+
+@InProceedings{pontiki-etal-2014-semeval,
+  title     = "{{S}em{E}val-2014 Task 4: Aspect Based Sentiment Analysis}",
+  author    = "Pontiki, Maria and Galanis, Dimitris and Pavlopoulos, John and Papageorgiou, Harris and Androutsopoulos, Ion and Manandhar, Suresh",
+  editor    = "Nakov, Preslav and Zesch, Torsten",
+  booktitle = "Proceedings of the 8th International Workshop on Semantic Evaluation ({S}em{E}val 2014)",
+  month     = {August},
+  year      = "2014",
+  address   = "Dublin, Ireland",
+  publisher = "Association for Computational Linguistics",
+  url       = "https://aclanthology.org/S14-2004/",
+  doi       = "10.3115/v1/S14-2004",
+  pages     = "27--35"
+}
+
+@inproceedings{kuriyozov-etal-2024-bertbek,
+    title = "{{BERT}bek: A Pretrained Language Model for {U}zbek}",
+    author = "Kuriyozov, Elmurod  and
+      Vilares, David  and
+      G{\'o}mez-Rodr{\'i}guez, Carlos",
+    editor = "Melero, Maite  and
+      Sakti, Sakriani  and
+      Soria, Claudia",
+    booktitle = "Proceedings of the 3rd Annual Meeting of the Special Interest Group on Under-resourced Languages @ LREC-COLING 2024",
+    month = {May},
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.sigul-1.5/",
+    pages = "33--44",
+    abstract = "Recent advances in neural networks based language representation made it possible for pretrained language models to outperform previous models in many downstream natural language processing (NLP) tasks. These pretrained language models have also shown that if large enough, they exhibit good few-shot abilities, which is especially beneficial for low-resource scenarios. In this respect, although there are some large-scale multilingual pretrained language models available, language-specific pretrained models have demonstrated to be more accurate for monolingual evaluation setups. In this work, we present BERTbek - pretrained language models based on the BERT (Bidirectional Encoder Representations from Transformers) architecture for the low-resource Uzbek language. We also provide a comprehensive evaluation of the models on a number of NLP tasks: sentiment analysis, multi-label topic classification, and named entity recognition, comparing the models with various machine learning methods as well as multilingual BERT (mBERT). Experimental results indicate that our models outperform mBERT and other task-specific baseline models in all three tasks. Additionally, we also show the impact of training data size and quality on the downstream performance of BERT models, by training three different models with different text sources and corpus sizes."
+}
+
+@Inbook{Matlatipov2009,
+author="Matlatipov, Gayrat
+and Vetulani, Zygmunt",
+title="{Representation of Uzbek Morphology in Prolog}",
+bookTitle="Aspects of Natural Language Processing: Essays Dedicated to Leonard Bolc on the Occasion of His 75th Birthday",
+year="2009",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="83--110",
+abstract="In the paper we address issues related to the morphology of the Uzbek language. In Uzbek, as in many other agglutinative languages, some single text-words correspond to sentences in non-agglutinative languages. Morphological processing is therefore a crucial operation in the automatic processing of Uzbek. We approach the theory of Uzbek morphology in terms of morphotactic and morphophonemic rules. We present the UZMORPP system of automatic morphological parsing for the Uzbek language. The Prolog implementation of this system is provided.",
+isbn="978-3-642-04735-0",
+doi="10.1007/978-3-642-04735-0_4"
+}
+
+
+@Article{Salaev2024,
+author={Salaev, Ulugbek},
+title={{UzMorphAnalyser: A morphological analysis model for the Uzbek language using inflectional endings}},
+journal={AIP Conference Proceedings},
+year={2024},
+month={Nov},
+day={27},
+volume={3244},
+number={1},
+pages={030058},
+abstract={As Uzbek language is agglutinative, has many morphological features which words formed by combining root and affixes. Affixes play an important role in the morphological analysis of words, by adding additional meanings and grammatical functions to words. Inflectional endings are utilized to express various morphological features within the language. This feature introduces numerous possibilities for word endings, thereby significantly expanding the word vocabulary and exacerbating issues related to data sparsity in statistical models. This paper present modeling of the morphological analysis of Uzbek words, including stemming, lemmatizing, and the extraction of morphological information while considering morpho-phonetic exceptions. Main steps of the model involve developing a complete set of word-ending with assigned morphological information, and additional datasets for morphological analysis. The proposed model was evaluated using a curated test set comprising 5.3K words. Through manual verification of stemming, lemmatizing, and morphological feature corrections carried out by linguistic specialists, it obtained a word-level accuracy of over 91{\%}. The developed tool based on the proposed model is available as a web-based application and an open-source Python library.},
+issn={0094-243X},
+doi={10.1063/5.0241461}
+}
+
+@ARTICLE{Hu2021-fz,
+  title         = "{{LoRA}: {Low-Rank} Adaptation of large language models}",
+  author        = "Hu, Edward J and Shen, Yelong and Wallis, Phillip and
+                   Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang,
+                   Lu and Chen, Weizhu",
+  abstract      = "An important paradigm of natural language processing
+                   consists of large-scale pre-training on general domain data
+                   and adaptation to particular tasks or domains. As we
+                   pre-train larger models, full fine-tuning, which retrains
+                   all model parameters, becomes less feasible. Using GPT-3
+                   175B as an example -- deploying independent instances of
+                   fine-tuned models, each with 175B parameters, is
+                   prohibitively expensive. We propose Low-Rank Adaptation, or
+                   LoRA, which freezes the pre-trained model weights and
+                   injects trainable rank decomposition matrices into each
+                   layer of the Transformer architecture, greatly reducing the
+                   number of trainable parameters for downstream tasks.
+                   Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce
+                   the number of trainable parameters by 10,000 times and the
+                   GPU memory requirement by 3 times. LoRA performs on-par or
+                   better than fine-tuning in model quality on RoBERTa,
+                   DeBERTa, GPT-2, and GPT-3, despite having fewer trainable
+                   parameters, a higher training throughput, and, unlike
+                   adapters, no additional inference latency. We also provide
+                   an empirical investigation into rank-deficiency in language
+                   model adaptation, which sheds light on the efficacy of LoRA.
+                   We release a package that facilitates the integration of
+                   LoRA with PyTorch models and provide our implementations and
+                   model checkpoints for RoBERTa, DeBERTa, and GPT-2 at
+                   https://github.com/microsoft/LoRA.",
+  journal       = "arXiv preprint arXiv:2106.09685",
+  month         =  {June},
+  year          =  2021,
+  copyright     = "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+  archivePrefix = "arXiv",
+  primaryClass  = "cs.CL",
+  eprint        = "2106.09685"
+}
+
+@misc{tahrirchibert2023,
+  title        = {{{TahrirchiBERT} base: A {RoBERTa}-based Language Model Pre-trained on 5{B} Tokens of {U}zbek Latin-script Text}},
+  author       = {Mamasaidov, Mukhammadsaid and Shopulatov, Abror},
+  year         = {2023},
+  howpublished = {Hugging Face model card},
+  url          = {https://huggingface.co/tahrirchi/tahrirchi-bert-base},
+  note         = {last accessed 2026/07/08}
+}
+
+@Article{bdcc8120170,
+AUTHOR = {Abdellaoui, Israe and Ibrahimi, Anass and El Bouni, Mohamed Amine and Mourhir, Asmaa and Driouech, Saad and Aghzal, Mohamed},
+TITLE = {{Investigating Offensive Language Detection in a Low-Resource Setting with a Robustness Perspective}},
+JOURNAL = {Big Data and Cognitive Computing},
+VOLUME = {8},
+YEAR = {2024},
+NUMBER = {12},
+ARTICLE-NUMBER = {170},
+URL = {https://www.mdpi.com/2504-2289/8/12/170},
+ISSN = {2504-2289},
+ABSTRACT = {Moroccan Darija, a dialect of Arabic, presents unique challenges for natural language processing due to its lack of standardized orthographies, frequent code switching, and status as a low-resource language. In this work, we focus on detecting offensive language in Darija, addressing these complexities. We present three key contributions that advance the field. First, we introduce a human-labeled dataset of Darija text collected from social media platforms. Second, we explore and fine-tune various language models on the created dataset. This investigation identifies a Darija RoBERTa-based model as the most effective approach, with an accuracy of 90% and F1 score of 85%. Third, we evaluate the best model beyond accuracy by assessing properties such as correctness, robustness and fairness using metamorphic testing and adversarial attacks. The results highlight potential vulnerabilities in the model’s robustness, with the model being susceptible to attacks such as inserting dots (29.4% success rate), inserting spaces (24.5%), and modifying characters in words (18.3%). Fairness assessments show that while the model is generally fair, it still exhibits bias in specific cases, with a 7% success rate for attacks targeting entities typically subject to discrimination. The key finding is that relying solely on offline metrics such as the F1 score and accuracy in evaluating machine learning systems is insufficient. For low-resource languages, the recommendation is to focus on identifying and addressing domain-specific biases and enhancing pre-trained monolingual language models with diverse and noisier data to improve their robustness and generalization capabilities in diverse linguistic scenarios.},
+DOI = {10.3390/bdcc8120170}
+}
+
+@inproceedings{koehn-2004-statistical,
+    title = "{Statistical Significance Tests for Machine Translation Evaluation}",
+    author = "Koehn, Philipp",
+    editor = "Lin, Dekang  and
+      Wu, Dekai",
+    booktitle = "Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing",
+    month = {July},
+    year = "2004",
+    address = "Barcelona, Spain",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/W04-3250/",
+    pages = "388--395"
+}
+
+@Article{bdcc10060185,
+AUTHOR = {Zhang, Kehong and Lin, Xinyu and Wang, Min and Yu, Haisheng and Chen, Lanjian},
+TITLE = {{Named Entity Recognition Method for Natural Disaster Emergencies Based on Instruction Tuning and Graph Retrieval-Augmented Generation}},
+JOURNAL = {Big Data and Cognitive Computing},
+VOLUME = {10},
+YEAR = {2026},
+NUMBER = {6},
+ARTICLE-NUMBER = {185},
+URL = {https://www.mdpi.com/2504-2289/10/6/185},
+ISSN = {2504-2289},
+ABSTRACT = {Named entity recognition in natural disaster emergencies is a critical foundational task for emergency management. However, existing methods face challenges including complex entity types, frequent emergence of new terminology, model knowledge obsolescence, and poor adaptability to dynamic knowledge updates, resulting in limited accuracy and generalization in real-world disaster scenarios. To address these issues, this paper proposes a named entity recognition method for natural disaster emergencies based on instruction tuning and knowledge graph retrieval-augmented generation. We first construct a dedicated instruction-tuning dataset, EM-InstructNER, and a domain-specific knowledge graph, EmergencyKG, tailored to natural disasters. Then, LoRA is employed for parameter-efficient fine-tuning of the Qwen2-7B-Instruct base model, while KG-based RAG dynamically retrieves subgraphs from the knowledge graph to generate semantically enriched augmented prompts, providing external structured knowledge support for generative NER. Experimental results demonstrate that the proposed method achieves a macro F1 score of 0.9205 on the EM-InstructNER test set, representing a 36.6% relative improvement over the best-performing zero-shot baseline (DeepSeek-R1:14B), while remaining competitive with strong supervised sequence labeling approaches (e.g., BERT + CRF). The framework provides knowledge graph update flexibility and significantly reduces training computational cost and GPU memory consumption through LoRA-based parameter-efficient fine-tuning. Cross-domain evaluation on the public CLUENER2020 benchmark further demonstrates its generalization capability.},
+DOI = {10.3390/bdcc10060185}
+}
+
+@Article{bioengineering12070687,
+AUTHOR = {Pingua, Bhagyajit and Sahoo, Adyakanta and Kandpal, Meenakshi and Murmu, Deepak and Rautaray, Jyotirmayee and Barik, Rabindra Kumar and Saikia, Manob Jyoti},
+TITLE = {{Medical LLMs: Fine-Tuning vs. Retrieval-Augmented Generation}},
+JOURNAL = {Bioengineering},
+VOLUME = {12},
+YEAR = {2025},
+NUMBER = {7},
+ARTICLE-NUMBER = {687},
+URL = {https://www.mdpi.com/2306-5354/12/7/687},
+PubMedID = {40722379},
+ISSN = {2306-5354},
+ABSTRACT = {Large language models (LLMs) are trained on huge datasets, which allow them to answer questions from various domains. However, their expertise is confined to the data that they were trained on. In order to specialize LLMs in niche domains like healthcare, various training methods can be employed. Two of these commonly known approaches are retrieval-augmented Generation and model fine-tuning. Five models—Llama-3.1-8B, Gemma-2-9B, Mistral-7B-Instruct, Qwen2.5-7B, and Phi-3.5-Mini-Instruct—were fine-tuned on healthcare data. These models were trained using three distinct approaches: retrieval-augmented generation (RAG) alone, fine-tuning (FT) alone, and a combination of both (FT+RAG) on the MedQuAD dataset, which covers a wide range of medical topics including disease symptoms, treatments, medications, and more. Our findings revealed that RAG and FT+RAG consistently outperformed FT alone across most models, particularly LLAMA and PHI. LLAMA and PHI excelled across multiple metrics, with LLAMA showing superior overall performance and PHI demonstrating strong RAG/FT+RAG capabilities. QWEN lagged behind in most metrics, while GEMMA and MISTRAL showed mixed results.},
+DOI = {10.3390/bioengineering12070687}
+}
+
+@Article{electronics14040690,
+AUTHOR = {Liao, Shih-wei and Wang, Ching-Shun and Yeh, Chun-Chao and Lin, Jeng-Wei},
+TITLE = {{Aspect-Based Sentiment Analysis with Enhanced Opinion Tree Parsing and Parameter-Efficient Fine-Tuning for Edge AI}},
+JOURNAL = {Electronics},
+VOLUME = {14},
+YEAR = {2025},
+NUMBER = {4},
+ARTICLE-NUMBER = {690},
+URL = {https://www.mdpi.com/2079-9292/14/4/690},
+ISSN = {2079-9292},
+ABSTRACT = {Understanding user opinions from user comments or reviews in social media text mining is essential for marketing campaigns and many other applications. However, analyzing social media user comments presents significant challenges due to the complexity of discerning relationships between opinions and aspects, particularly when comments vary greatly in length. To effectively explore aspects and opinions in the sentences, techniques based on mining opinion sentiment of the referred aspects (implicitly or explicitly) in the user comments with ACOS (aspect-category-opinion-sentiment) quadruple extraction have been proposed. Among many others, the opinion tree parsing (OTP) scheme has been shown to be effective and efficient for the ACOS quadruple extraction task in aspect-based sentiment analysis (ABAS). In this study, we continue the efforts to design an efficient ABSA scheme. We extend the original OTP scheme further with richer context parsing rules, utilizing conjunctions and semantic modifiers to provide more context information in the sentence and thus effectively improving the accuracy of the analysis. Meanwhile, regarding the limitations of computation resources for edge devices in edge computing scenario, we also investigate the trade-off between computation saving (in terms of the percentage of model parameters to be updated) and the model’s performance (in terms of inference accuracy) on the proposed scheme under PEFT (parameter-efficient fine-tuning). We evaluate the proposed scheme on publicly available ACOS datasets. Experiment results show that the proposed enhanced OTP (eOTP) model improves the OTP scheme both in precision and recall measurements on the public ACOS datasets. Meanwhile, in the design trade-off evaluation for resource-constrained devices, the experiment results show that, in model training, eOTP requires very limited parameters (less than 1%) to be retrained by keeping most of the parameters frozen (not modified) in the fine-tuning process, at the cost of a slight performance drop (around 4%) in F1-score compared with the case of full fine-tuning. These demonstrate that the proposed scheme is efficient and feasible for resource-constrained scenarios such as for mobile edge/fog computing services.},
+DOI = {10.3390/electronics14040690}
+}
+
+@Article{smartcities8020062,
+AUTHOR = {Alotaibi, Alanoud and Nadeem, Farrukh},
+TITLE = {{An Unsupervised Integrated Framework for Arabic Aspect-Based Sentiment Analysis and Abstractive Text Summarization of Traffic Services Using Transformer Models}},
+JOURNAL = {Smart Cities},
+VOLUME = {8},
+YEAR = {2025},
+NUMBER = {2},
+ARTICLE-NUMBER = {62},
+URL = {https://www.mdpi.com/2624-6511/8/2/62},
+ISSN = {2624-6511},
+ABSTRACT = {Social media is crucial for gathering public feedback on government services, particularly in the traffic sector. While Aspect-Based Sentiment Analysis (ABSA) offers a means to extract actionable insights from user posts, analyzing Arabic content poses unique challenges. Existing Arabic ABSA approaches heavily rely on supervised learning and manual annotation, limiting scalability. To tackle these challenges, we suggest an integrated framework combining unsupervised BERTopic-based Aspect Category Detection with distance supervision using a fine-tuned CAMeLBERT model for sentiment classification. This is further complemented by transformer-based summarization through a fine-tuned AraBART model. Key contributions of this paper include: (1) the first comprehensive Arabic traffic services dataset containing 461,844 tweets, enabling future research in this previously unexplored domain; (2) a novel unsupervised approach for Arabic ABSA that eliminates the need for large-scale manual annotation, using FastText custom embeddings and BERTopic to achieve superior topic clustering; (3) a pioneering integration of aspect detection, sentiment analysis, and abstractive summarization that provides a complete pipeline for analyzing Arabic traffic service feedback; (4) state-of-the-art performance metrics across all tasks, achieving 92% accuracy in ABSA and a ROUGE-L score of 0.79 for summarization, establishing new benchmarks for Arabic NLP in the traffic domain. The framework significantly enhances smart city traffic management by enabling automated processing of citizen feedback, supporting data-driven decision-making, and allowing authorities to monitor public sentiment, identify emerging issues, and allocate resources based on citizen needs, ultimately improving urban mobility and service responsiveness.},
+DOI = {10.3390/smartcities8020062}
+}
+
+@Article{bdcc10050161,
+AUTHOR = {Zou, Fumin and Zou, Lei and Guo, Feng and Wang, Xunhuang and Weng, Jianqing and Fang, Tao and Jiang, Haocai and Wu, Xueming},
+TITLE = {{Enhanced Quantum-Inspired Deep Learning with Multi-Head Attention and Contrastive Learning for Text-Based Dialogue Sentiment Classification}},
+JOURNAL = {Big Data and Cognitive Computing},
+VOLUME = {10},
+YEAR = {2026},
+NUMBER = {5},
+ARTICLE-NUMBER = {161},
+URL = {https://www.mdpi.com/2504-2289/10/5/161},
+ISSN = {2504-2289},
+ABSTRACT = {This study introduces the Quantum-inspired Pretrained Feature Embedding (ImprovedQPFE) model, a framework for dialogue sentiment classification. ImprovedQPFE integrates phase-pretrained complex embeddings, a bidirectional complex-valued GRU, a quantum-inspired attention mechanism, and supervised contrastive learning within a Transformer-based architecture, aiming to enhance feature discriminability under class imbalance. We evaluate ImprovedQPFE on the RECCON-DD and RECCON-IEM benchmarks under a unified and reproducible protocol, including standardized preprocessing and fixed data splits. To ensure reproducibility, all experiments were conducted using a fixed random seed of 42. The reported results are based on this single fixed-seed setting rather than averages over multiple repeated runs. The empirical results show that ImprovedQPFE achieves competitive performance and outperforms the compared baselines under the adopted experimental protocol. On the RECCON-DD dataset, ImprovedQPFE improves Macro-F1 from 80.08% to 83.75% compared with a strong non-quantum Transformer-based baseline equipped with contrastive learning. It also improves Pos-F1 while maintaining high performance for negative classes. On RECCON-IEM, ImprovedQPFE attains a leading Macro-F1 of 95.39% among the compared methods. These findings, together with an ablation analysis, support the effectiveness of the proposed quantum-inspired representation paradigm and its architectural components. However, further statistical validation with multiple repeated runs, standard deviations, confidence intervals, and significance testing remains an important direction for future work.},
+DOI = {10.3390/bdcc10050161}
+}
+
+@Article{Yusufu2026,
+author={Yusufu, Aizihaierjiang
+and Liu, Jiang
+and Aziz, Kamran
+and Ainiwaer, Abidan
+and Li, Bobo
+and Li, Fei
+and Ji, Donghong
+and Yusufu, Aizierguli},
+title={{LASQ: A low-resource aspect-based sentiment quadruple extraction dataset}},
+journal={Journal of King Saud University Computer and Information Sciences},
+year={2026},
+month={Apr},
+day={18},
+volume={38},
+number={6},
+pages={337},
+abstract={In recent years, aspect-based sentiment analysis (ABSA) has made rapid progress and shown strong practical value. However, existing research and benchmarks are largely concentrated on high-resource languages, leaving fine-grained sentiment extraction in low-resource languages under-explored. To address this gap, we constructed the first Low-resource languages Aspect-based Sentiment Quadruple dataset, named LASQ, which includes two low-resource languages: Uzbek and Uyghur. Secondly, it includes a fine-grained target-aspect-opinion-sentiment quadruple extraction task. To facilitate future research, we designed a grid-tagging model that integrates syntactic knowledge. This model incorporates part-of-speech (POS) and dependency knowledge into the model through our designed Syntax Knowledge Embedding Module (SKEM), thereby alleviating the lexical sparsity problem caused by agglutinative languages. Experiments on LASQ demonstrate consistent gains over competitive baselines, validating both the dataset's utility and the effectiveness of the proposed modeling approach.},
+issn={2213-1248},
+doi={10.1007/s44443-026-00701-x}
+}
+
+@article{simmering2023llmabsa,
+  title   = {{Large Language Models for Aspect-Based Sentiment Analysis}},
+  author  = {Simmering, Paul F. and Huoviala, Paavo},
+  journal = {arXiv preprint arXiv:2310.18025},
+  year    = {2023},
+  doi     = {10.48550/arXiv.2310.18025}
+}
+
+@inproceedings{salaev2022translit,
+  title     = {{A machine transliteration tool between {U}zbek alphabets}},
+  author    = {Salaev, Ulugbek and Kuriyozov, Elmurod and G{\'o}mez-Rodr{\'i}guez, Carlos},
+  booktitle = {Proceedings of the International Conference and Workshop on Agglutinative Language Technologies as a Challenge of Natural Language Processing ({ALTNLP})},
+  year      = {2022},
+  address   = {Koper, Slovenia},
+  publisher = {CEUR Workshop Proceedings},
+  doi       = {10.48550/arXiv.2205.09578}
+}
+
+@inproceedings{smid-etal-2024-llama,
+    title = "{{LL}a{MA}-Based Models for Aspect-Based Sentiment Analysis}",
+    author = "{\v{S}}m{\'i}d, Jakub  and
+      Priban, Pavel  and
+      Kral, Pavel",
+    editor = "De Clercq, Orph{\'e}e  and
+      Barriere, Valentin  and
+      Barnes, Jeremy  and
+      Klinger, Roman  and
+      Sedoc, Jo{\~a}o  and
+      Tafreshi, Shabnam",
+    booktitle = "Proceedings of the 14th Workshop on Computational Approaches to Subjectivity, Sentiment, {\&} Social Media Analysis",
+    month = {August},
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.wassa-1.6/",
+    doi = "10.18653/v1/2024.wassa-1.6",
+    pages = "63--70",
+    abstract = "While large language models (LLMs) show promise for various tasks, their performance in compound aspect-based sentiment analysis (ABSA) tasks lags behind fine-tuned models. However, the potential of LLMs fine-tuned for ABSA remains unexplored. This paper examines the capabilities of open-source LLMs fine-tuned for ABSA, focusing on LLaMA-based models. We evaluate the performance across four tasks and eight English datasets, finding that the fine-tuned Orca 2 model surpasses state-of-the-art results in all tasks. However, all models struggle in zero-shot and few-shot scenarios compared to fully fine-tuned ones. Additionally, we conduct error analysis to identify challenges faced by fine-tuned models."
+}
+
+@Article{Wu2025,
+author={Wu, Chengyan
+and Ma, Bolei
+and Zhang, Zheyu
+and Deng, Ningyuan
+and He, Yanqing
+and Xue, Yun},
+title={{Evaluating zero-shot multilingual aspect-based sentiment analysis with large language models}},
+journal={International Journal of Machine Learning and Cybernetics},
+year={2025},
+month={Oct},
+day={01},
+volume={16},
+number={10},
+pages={8079-8101},
+abstract={Aspect-based sentiment analysis (ABSA), a sequence labeling task, has attracted increasing attention in multilingual contexts. While previous research has focused largely on fine-tuning or training models specifically for ABSA, we evaluate large language models (LLMs) under zero-shot conditions to explore their potential to tackle this challenge with minimal task-specific adaptation. We conduct a comprehensive empirical evaluation of a series of LLMs on multilingual ABSA tasks, investigating various prompting strategies, including vanilla zero-shot, chain-of-thought (CoT), self-improvement, self-debate, and self-consistency, across nine different models. Results indicate that while LLMs show promise in handling multilingual ABSA, they generally fall short of fine-tuned, task-specific models. Notably, simpler zero-shot prompts often outperform more complex strategies, especially in high-resource languages like English. These findings underscore the need for further refinement of LLM-based approaches to effectively address ABSA task across diverse languages.},
+issn={1868-808X},
+doi={10.1007/s13042-025-02711-z}
+}
+
+@article{liskowski2026arctic,
+  title   = {{Large-Scale Aspect-Based Sentiment Analysis with Reasoning-Infused {LLM}s}},
+  author  = {Liskowski, Pawe{\l} and Jankowski, Krzysztof},
+  journal = {arXiv preprint arXiv:2601.03940},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2601.03940}
+}
+
+@inproceedings{hellwig-etal-2026-llm,
+  title = {{LLM-as-an-Annotator: Training Lightweight Models with LLM-Annotated Examples for Aspect Sentiment Tuple Prediction}},
+  author = {Hellwig, Nils Constantin and Fehle, Jakob and Kruschwitz, Udo and Wolff, Christian},
+  booktitle = {Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026)},
+  month = {May},
+  year = {2026},
+  pages = {7955--7972},
+  address = {Palma, Mallorca, Spain},
+  publisher = {European Language Resources Association (ELRA)},
+  editor = {Piperidis, Stelios and Bel, Núria and van den Heuvel, Henk and Ide, Nancy and Krek, Simon and Toral, Antonio},
+  doi = {10.63317/43srcdyc52cd},
+  abstract = {Training models for Aspect-Based Sentiment Analysis (ABSA) tasks requires manually annotated data, which is expensive and time-consuming to obtain. This paper introduces LA-ABSA, a novel approach that leverages Large Language Model (LLM)-generated annotations to fine-tune lightweight models for complex ABSA tasks. We evaluate our approach on five datasets for Target Aspect Sentiment Detection (TASD) and Aspect Sentiment Quad Prediction (ASQP). Our approach outperformed previously reported augmentation strategies and achieved competitive performance with LLM-prompting in low-resource scenarios, while providing substantial energy efficiency benefits. For example, using 50 annotated examples for in-context learning (ICL) to guide the annotation of unlabeled data, LA-ABSA achieved an F1 score of 49.85 for ASQP on the SemEval Rest16 dataset, closely matching the performance of ICL prompting with Gemma-3-27B (51.10), while requiring significantly lower computational resources.}
+}
+
+@INPROCEEDINGS{11632281,
+  author={Matlatipov, Sanatbek and Ismoilova, Maftuna and Aripov, Mersaid},
+  booktitle={2026 IEEE 27th International Conference of Young Professionals in Electron Devices and Materials (EDM)}, 
+  title={{Graph-Based vs Transition-Based Dependency Parsing for Uzbek}}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Architecture;Computer architecture;Modeling;Bit error rate;Training;Labeling;Natural language processing;Tagging;Head;Merging;dependency parsing;Uzbek language;natural language processing;graph-based parsing;transition-based parsing;BERT;Universal Dependencies;morphosyntactic tagging},
+  doi={10.1109/EDM69524.2026.11632281}}
+
+@InProceedings{10.1007/978-3-032-29532-3_15,
+author="Matlatipov, Sanatbek",
+editor="Cabrio, Elena
+and Monteiro, Eric",
+title="{Towards Robust Uzbek Neural Dependency Parsing: Cross-Treebank Training}",
+booktitle="Natural Language Processing and Information Systems",
+year="2027",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="204--218",
+abstract="Efficient low-resource dependency parsing requires extracting maximal syntactic signal from limited supervision with minimal additional machinery. We introduce UzUDT, a newly created gold-standard Universal Dependencies treebank for Uzbek, manually annotated in INCEpTION by six annotators with full adjudication (684 sentences, {\$}{\$}{\backslash}sim {\$}{\$}∼7.8k tokens); UzUDT is currently the largest publicly available Uzbek UD treebank. We then study two complementary robustness strategies that remain lightweight in practice: (i) linguistically-motivated last-subword fusion, a positional heuristic for aggregating BERT WordPieces into UD token representations, and (ii) cross-treebank training by merging genre-complementary Uzbek UD resources. Using a Stanza-based BiLSTM tagger and biaffine parser augmented with monolingual contextual embeddings (TahrirchiBERT), we conduct a controlled factorial comparison across three embedding/fusion configurations and two data settings. Cross-treebank training yields the largest gains, improving LAS by 9.62--11.16 points while nearly doubling the training set (451 {\$}{\$}{\backslash}rightarrow {\$}{\$}{\textrightarrow} 781 sentences). The best configuration (TahrirchiBERT with last-subword fusion on merged data) achieves 85.08 UPOS, 72.39 UAS, and 63.81 LAS.",
+isbn="978-3-032-29532-3"
+}
+
+@article{MATLATIPOV2026112857,
+title = {{Annotated universal dependencies dataset for literary and educational Uzbek texts}},
+journal = {Data in Brief},
+volume = {66},
+pages = {112857},
+year = {2026},
+issn = {2352-3409},
+doi = {10.1016/j.dib.2026.112857},
+url = {https://www.sciencedirect.com/science/article/pii/S2352340926004099},
+author = {Sanatbek Matlatipov and Mersaid Aripov and Makhmud Bobokandov and Gayrat Matlatipov},
+keywords = {Dependency treebank, Natural language processing, Turkic languages, Uzbek language, Syntax, Morphological features, Low-resource languages, Part-of-Speech Tagging},
+abstract = {This data article describes an Uzbek Universal Dependencies (UD) treebank released as a manually curated gold-standard dataset. The resource contains 681 sentences (7542 tokens) drawn from literary and educational Uzbek texts, providing a domain-specific complement to previously available web-based or news-oriented materials. Annotation was carried out in the INCEpTION environment by a five-member team comprising three linguists and two NLP engineers. The workflow followed the UD v2 framework and included calibration-stage agreement assessment, full-corpus double annotation, and adjudication to improve annotation consistency. Agreement measured on the shared calibration material was high across lemmatization, universal part-of-speech annotation, and complete morphological feature–value bundles. The released dataset contains final adjudicated gold-standard annotations, including lemmas, UPOS tags, morphological features, and basic dependency relations in standard CoNLL-U format, and has been validated for compatibility with the Universal Dependencies ecosystem. As an openly reusable Uzbek syntactic resource, it can support the development and evaluation of POS taggers, morphological analyzers, and dependency parsers, while also enabling comparative and cross-lingual studies for low-resource languages.}
+}

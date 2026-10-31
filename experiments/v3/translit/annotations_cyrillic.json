@@ -1,0 +1,3706 @@
+[
+ {
+  "review_id": "rev_00052",
+  "text": "Жуда зур авиакомпания. Факат ш компанияда учаман. Сотрудниклар хушмуомула. Обед хр доим бор. Бошка мамлакатдагилардан хам мактовлар бугун.",
+  "business_name": "Uzbekistan Airways",
+  "business_category": "Sayohat/Turizm",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "авиакомпания",
+    "polarity": "negative"
+   },
+   {
+    "term": "Сотрудниклар",
+    "polarity": "positive"
+   },
+   {
+    "term": "Обед",
+    "polarity": "neutral"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00060",
+  "text": "Мени кизим учшохли нерви бн даволаниб чикти. Бошка жойларда килган муолажалари тасир килмаганди. Яхши хозир кайталамадик",
+  "business_name": "Shox International Hospital",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "нерви",
+    "polarity": "negative"
+   },
+   {
+    "term": "муолажалари",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00133",
+  "text": "Uzum market хозирги кунда узбекистонда энг тез ривожланаетган онлайн магазин ундан фойдаланиш онсон ва хамма учун кулай . Нархлари арзон , етказиб бериш хизмати зур ишлайди",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Uzum market",
+    "polarity": "positive"
+   },
+   {
+    "term": "онлайн магазин",
+    "polarity": "positive"
+   },
+   {
+    "term": "Нархлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "хизмати",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00135",
+  "text": "Чорток санаторийси бел оек ошказонга дово мен даволандим жуда хам сезилди тозалик лечиния ва курстлари хаммаси урнида рахбариятга рахмат",
+  "business_name": "Sanatorium Chartak",
+  "business_category": "Sayohat/Turizm",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "санаторийси",
+    "polarity": "positive"
+   },
+   {
+    "term": "курстлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00152",
+  "text": "Payme иловаси жудаям кулай ,хамма учун тушунарли илова . Тез ишлайди менга жуда екади ва иен ундан 2 йил мобайнида фойдаланиб келяпман",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Payme иловаси",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00186",
+  "text": "Барака маркетга оилам фарзандларим билан бирга савдо килгани бораман кулайи ва орзон махсулотлар ферминни.",
+  "business_name": "Baraka Market",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Барака маркетга",
+    "polarity": "positive"
+   },
+   {
+    "term": "махсулотлар",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00187",
+  "text": "Havas.га кирганда манга якан томони тозаликги махсултларни нархи кулай барака топсин рахмат",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "манга якан томони",
+    "polarity": "neutral"
+   },
+   {
+    "term": "narhi",
+    "polarity": "neutral"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   },
+   {
+    "category": "muhit",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00188",
+  "text": "Ассалому алайкум .ХОЗИР КУНДА Korzinka СУПЕРМАРКЕТЛАРИСИЗ ХАЕТНИ ТАСАВВУР КИЛА ОЛМАЙМИЗ ЮРТИМИЗДА БУНДАЙ СУПЕРМАРКЕТЛАР СОНИ ЙИЛДАН - ЙИЛГА КУПАЙИБ , РИВОЖЛАНИБ БОРЯПТИ БУ БИЗ УЧУН ЯХШИ АЛБАТТА",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "СУПЕРМАРКЕТЛАРИСИЗ",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00189",
+  "text": "Агробанкда омонат тарифлари яхши кулай .хизмат сервиси яхши сизларга тафсия киламан",
+  "business_name": "Agrobank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "хизмат",
+    "polarity": "positive"
+   },
+   {
+    "term": "omonat",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00190",
+  "text": "Макро хамма вилоятларда бор ман кайси вилоятда булсам албатта кираман сутли махсулотлари яхши сакланиб сотилади рахмат",
+  "business_name": "Makro",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "макро хамма вилоятларда",
+    "polarity": "neutral"
+   },
+   {
+    "term": "sutli махсулотлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00191",
+  "text": "Самарканд дарвозаси орка махалласида дустим яшайди куп бораман ман доим шу жойдан савдо киламан гушт махсулотларии уп оламан ишончли",
+  "business_name": "Samarqand Darvoza",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Самарканд дарвозаси орка махалласида",
+    "polarity": "neutral"
+   },
+   {
+    "term": "гушт махсулотларии",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00192",
+  "text": "Октепа лаваш жуда маззали фарзандлар доим шу лавашидан олиб бераман сифати яхши нархи хам сизларга хам тафсия этаман .оилавий жой хам",
+  "business_name": "Oqtepa lavash",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "лаваш",
+    "polarity": "positive"
+   },
+   {
+    "term": "нархи",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00203",
+  "text": "Paymi иловаси дуда зур менга екади . Мен 2 йилдан буен payme дан фойдаланаман Биз учун яратилган энг яхши илова",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "илловаси",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00204",
+  "text": "SHOX HOSPITAL жуда яхши , беморларга юкори ларажада хизмат курсатилади бир суз билан айтганла жахон стандартларига жавоб берадиган клиника деб хисоблайман",
+  "business_name": "Shox International Hospital",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "SHOX HOSPITAL",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00205",
+  "text": "Корзинка.уз. хамма мижозларга малум нархлари кулай махсулотларни сифати ва махсулот муддтлари доим назоратда ишонч билан харид килинади.",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "малум нархлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "махсулот муддтлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "махсулотларни",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00207",
+  "text": "Ассалому алайкум. AKFA MEDLINE хозирда юртимиздаги энг зур клиникалардан бирихисибланади клиника энг сунги русумдаги тиббий ускуналар билан жихозланган ва энг яхши малакали шифокорларга эга булган клиника",
+  "business_name": "Akfa Medline",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "AKFA MEDLINE",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00318",
+  "text": "Самарканд дарвозани атмосфераси жуда хам гузал ва брендлага бой савдо мажмуаси",
+  "business_name": "Samarqand Darvoza",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "атмосфераси",
+    "polarity": "positive"
+   },
+   {
+    "term": "брендлага",
+    "polarity": "neutral"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00326",
+  "text": "Жуда яхши олийгох узим шу олийгохнинг менежмент факцлтетида 2 курс талабасиман менга кечки талимнинг кулайлиги ва олийгохнинг жойлашуви ёкади",
+  "business_name": "Tashkent Institute of Architecture and Civil Engineering",
+  "business_category": "Ta'lim",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "менежмент",
+    "polarity": "neutral"
+   },
+   {
+    "term": "талабасиман",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00390",
+  "text": "Яшил энергияни кэнг таркатиш ва ахоли куп жойларда тадбик килш шунинг дек уларни сотиш ва сотиб олиш ишларини йулга куйищ керак.",
+  "business_name": "Yashil Energiya",
+  "business_category": "Davlat xizmatlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "энергияни",
+    "polarity": "positive"
+   },
+   {
+    "term": "сотиш ва сотиб олиш",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00420",
+  "text": "Ассалому алейкум. AKFA MEDLINE клиникаси жуда хам зур клиника экан. Ходимлари ва Врачларига бунака зур сервис учун катта рахмат.",
+  "business_name": "Akfa Medline",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сервис",
+    "polarity": "negative"
+   },
+   {
+    "term": "клиника",
+    "polarity": "positive"
+   },
+   {
+    "term": "Ходимлари ва Врачларига",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00431",
+  "text": "Аъло сифат, аъло хизмат ва нозик дид сохиблари учун тафсия қиламан бу green apple market. Хизмат ходимларга гап йўқ зўр. Рахбарлар ҳам ишчиларни хурмат қилишади",
+  "business_name": "Green Apple market",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "green apple market",
+    "polarity": "positive"
+   },
+   {
+    "term": "ходимларга",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00433",
+  "text": "Яхши банк. Хизматларига гап йуқ. Ишончли ва сифатли. ЭНГ муҳими хуш момулали ходимлар ишлашади.",
+  "business_name": "Hamkorbank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ходимлар",
+    "polarity": "positive"
+   },
+   {
+    "term": "хизматларига",
+    "polarity": "positive"
+   },
+   {
+    "term": "банк",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00524",
+  "text": "Жудайам маззали менга жуда йоқади тоза ва шинам кирсез мазза қиб овқатланиб чиқиб кетас",
+  "business_name": "KFC",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "қиб овқатланиб",
+    "polarity": "neutral"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00525",
+  "text": "Ассалому алайкум кеча кириб кўрдим овқатлари маззали екан ишчилари ҳам хумуомила сизларга ҳам тавсийа бераман",
+  "business_name": "Rayhon Milliy Taomlari",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "қириб кўрдим",
+    "polarity": "neutral"
+   },
+   {
+    "term": "овқатлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "ишчилари",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00577",
+  "text": "Янги очилган пайтлари яхши эди лекин охирги пайтлада куп махсулотлари сифатсиз булиб кеткан",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "пайтлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "махсулотлари",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "mixed"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00578",
+  "text": "Корзинка менга жуда ёкади чунки унда тез тез акция булиб туради узим хар доим акцияларини кузатиб тураман ва совдо килгани бораман",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Корзинка",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00579",
+  "text": "Яхши банк кам фоизли кредит турлари хам бор факат кам микдорда кредит ажратади",
+  "business_name": "MKBANK",
+  "business_category": "Bank/Moliya",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "кредит",
+    "polarity": "neutral"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00580",
+  "text": "Яхши банк автокредитга яхши аммо ишлаш тизимлари менга унчалик ёкмайди нимадур аниклаштириш учунг албатта бош офисга бориш шарт булади шу тарафлари ёкмайди",
+  "business_name": "Kapitalbank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "автокредитга",
+    "polarity": "positive"
+   },
+   {
+    "term": "офисга",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00581",
+  "text": "Бошка иловаларга караганда купрок кешбек беради ва услугани хам купрок олади лекин тулов турлари хам купрок шунунг учун менга ёкади",
+  "business_name": "Click",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "иловаларга",
+    "polarity": "negative"
+   },
+   {
+    "term": "услугани",
+    "polarity": "negative"
+   },
+   {
+    "term": "тулов",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00582",
+  "text": "Жуда яхши банк ва иловасиям яхши ишлайди айникса фоизсиз кредит берилиши яхши жуда зарл пайтларда оламан менга фойдали булади ва ёкади",
+  "business_name": "Uzum Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "банк",
+    "polarity": "positive"
+   },
+   {
+    "term": "иловасиям",
+    "polarity": "positive"
+   },
+   {
+    "term": "кредит",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00589",
+  "text": "Андижонди навроз мал карзинкаси супер дойм оша Ердан совдо киламан сифатли нарсалари хам арзон",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "навроз",
+    "polarity": "positive"
+   },
+   {
+    "term": "нарсалари",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00610",
+  "text": "Шашлик лар номер 1 Дин жуда зор халол",
+  "business_name": "Shashleek",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Шашлик лар",
+    "polarity": "positive"
+   },
+   {
+    "term": "Дин",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00629",
+  "text": "Ucell яхши эмас нега десангиз алока хам яхши эмас интернет хам 4 G чикани Билан унчалик яхши ишламебди",
+  "business_name": "Ucell",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Ucell",
+    "polarity": "negative"
+   },
+   {
+    "term": "4 G",
+    "polarity": "neutral"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00676",
+  "text": "Анча йиллардан бери беморлага максимум сифатли хизмат корсатадиган стоматология!",
+  "business_name": "Prof Dent Plus",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хизмат",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00712",
+  "text": "Уз ломбард. Керак булганда яхши ёрдамчи ва кулай",
+  "business_name": "UzLombard",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Уз ломбард",
+    "polarity": "neutral"
+   },
+   {
+    "term": "яхши ёрдамчи",
+    "polarity": "positive"
+   },
+   {
+    "term": "кулай",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00715",
+  "text": "Махсулотлари яхши халол ва маззали хардойим янги рахмат",
+  "business_name": "Go'sht mahsulotlari",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Махсулотлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00750",
+  "text": "Халк банк тезлии бн ишледи мен карта очодим ярим соата комастан очишип берди",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Халк банк",
+    "polarity": "neutral"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00852",
+  "text": "Менхам бу банктан киридит олганман момиласи жуда яхши фойизи оз",
+  "business_name": "NBU",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "банктан",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00861",
+  "text": "Халк банки уз мижозларига кенг имтиёзлар яратиш максадида, кредит фоизлари кам хамда кулай шартларда омонатлар таклиф килади",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "кредит фоизлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "шартларда",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00904",
+  "text": "Узум маркетан ззаказ килиб курмаганман лекин ишончлий булгани учун сайтини скачат килганман",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Узум маркетан",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00916",
+  "text": "Ассалому алийкум ман доим IHLOS DOKTOR га бораман ишлари яхши тезда ишиз битади силага хам тавсия этаман.",
+  "business_name": "IHLOS DOKTOR",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "IHLOS DOKTOR",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00920",
+  "text": "лор плюс яхши бироз нархи киммат.ичи тоза озода.хамширалари хам яхши хушмуомалали.ман доим шу ерга фарзандларимми тез тез обораман.якинда турмуш уртогим пастки тишларини килдирди иши тоза аъло даражада узига ёкди.маладес ишига омад",
+  "business_name": "ENT PLUS 24/7 YUNUSABAD",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "narhi",
+    "polarity": "negative"
+   },
+   {
+    "term": "tishlari",
+    "polarity": "negative"
+   },
+   {
+    "term": "ish",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00928",
+  "text": "Туркистон банки жуда яхши банк .ходимларини чакконлиги хушмуомалалиги.банкни ичи тоза ,озода ишинг тез ва осон битади.",
+  "business_name": "Turkiston Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Туркистон банки",
+    "polarity": "positive"
+   },
+   {
+    "term": "ходимларини чакконлиги",
+    "polarity": "positive"
+   },
+   {
+    "term": "банкни ичи",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00931",
+  "text": "Салом хаммага бу TBC банк жуда хам зур фоизи хам арзон хамёнбоп бизни ойила доимо шу банкдан фойдаланамиз.",
+  "business_name": "TBC Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "TBC банк",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_00999",
+  "text": "Таомлари яхши маззали лекин нархлари кимат. Илтимос нархларини хамма боб килила",
+  "business_name": "Alimovs_restaurant",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 2,
+  "aspects": [
+   {
+    "term": "narhlarin",
+    "polarity": "negative"
+   },
+   {
+    "term": "Таомлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01001",
+  "text": "Ха гапизга кушиламан киммат нархлари жудда хам Сал булса хам халкни тушунса буладику",
+  "business_name": "Terra pro (Next)",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хам халкни",
+    "polarity": "neutral"
+   },
+   {
+    "term": "нархлари",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01017",
+  "text": "сомсага гап йук мазали тойимли ичидаги гушти свежий нархиям яхши хуллас бизага ёкади силагаям боришилани таклиф киламан",
+  "business_name": "Minor somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сомсага",
+    "polarity": "positive"
+   },
+   {
+    "term": "гуши",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01120",
+  "text": "Вип бренд бизни ойламизга жуда хам ёкади биз хар доим шу ердан ойилавий кийнамиз.товарлари яхши сифатига гап йук нархи бироз киммат атак зур моллари сифати куп.",
+  "business_name": "VIP BRAND",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "narhi",
+    "polarity": "negative"
+   },
+   {
+    "term": "mollari",
+    "polarity": "negative"
+   },
+   {
+    "term": "бренд",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01122",
+  "text": "Адамари кийим дукони зур арзон сифатли моллари жудахам хамёнбоп .менга ёкади товарлари яхши гап йук.",
+  "business_name": "Adamari",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "адамари кийим",
+    "polarity": "positive"
+   },
+   {
+    "term": "моллари",
+    "polarity": "positive"
+   },
+   {
+    "term": "товарлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01194",
+  "text": "Юмшок ва мазали жужа Dayako Chcken да айникса салатларига гап болиши мумкинмас",
+  "business_name": "Dayako Chicken",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Dayako Chcken",
+    "polarity": "positive"
+   },
+   {
+    "term": "салатларига",
+    "polarity": "neutral"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01198",
+  "text": "Ажойиб маскан хушмуомала персонал ёкимли атмосфера мазали таомлар рахмат",
+  "business_name": "Qanotchi",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "маскан",
+    "polarity": "positive"
+   },
+   {
+    "term": "персонал",
+    "polarity": "positive"
+   },
+   {
+    "term": "атмосфера",
+    "polarity": "positive"
+   },
+   {
+    "term": "таомлар",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 7,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01199",
+  "text": "Ошиям сомсасиям мазали салатлари свежий айни муддао ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️",
+  "business_name": "Plov-samsa. uz",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Ошиям",
+    "polarity": "positive"
+   },
+   {
+    "term": "сомсасиям",
+    "polarity": "positive"
+   },
+   {
+    "term": "салатлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01200",
+  "text": "Рахмат чойхонангизга гап йок атмосфераси жуда ёкимли менга ёкди ишларизга ривож",
+  "business_name": "Chustiy choyxona",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "атмосфераси",
+    "polarity": "positive"
+   },
+   {
+    "term": "ишларизга",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01206",
+  "text": "Кабоблар мазали юмшок ва энг асосийси свежий махсулотлардан тайёрланган",
+  "business_name": "Zohid kebab",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Кабоблар",
+    "polarity": "positive"
+   },
+   {
+    "term": "махсулотлардан",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01244",
+  "text": "Сушини шу масканда еб севиб колдим аввал еганимда ёктирмаган эдим жуда мазали нарса экан рахмат",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Сушини",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01265",
+  "text": "Корзинкадан ҳамма нарса топса булади сифати ало дараҷада сроки ҷой ҷойида лекин сал қиммат",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Корзинкадан",
+    "polarity": "neutral"
+   },
+   {
+    "term": "сроки",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01266",
+  "text": "ҷудаям зур илова осон ишлайди хохлаган пайтингда связ яхши бумагандаям ишлайди",
+  "business_name": "Az Capital",
+  "business_category": "Investitsiya/Trading",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "илова",
+    "polarity": "negative"
+   },
+   {
+    "term": "бумагандаям",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01267",
+  "text": "Клиника зур лабаратория анализлари нархи яхши зодимлари хшмуомила рахмат",
+  "business_name": "\"VIVOMED\" mas`uliyati cheklangan jamiyati",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "лабаратория анализлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01268",
+  "text": "Асосан мен Алифмоби ишлатаман фоизсиз ва ишлатиши ҷудаям осон ва қулай",
+  "business_name": "Alifmobi",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Алифмоби",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01270",
+  "text": "килик иловаси яхши ишлайди анча йилдан бири ишлатаман фоизи кам ва функсияси куп тушуниши осон",
+  "business_name": "Click",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "килик иловаси",
+    "polarity": "positive"
+   },
+   {
+    "term": "фоизи",
+    "polarity": "negative"
+   },
+   {
+    "term": "функсияси",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 6,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01271",
+  "text": "пайме иловаси ҷудаям зур анча йилдан бири ишлатаман ҷуда қулай ва тез ишлайди фоизсиз ишлайди ва шанба куни шақ-шақдан 500 минг сумгача пул ишлатсанг булади",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "пайме иловаси",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01372",
+  "text": "Мен анчадан буйон уз пост билан ишлайман хитойдан таварлар олиб келаман тезлиги яхши суммасига гап йог нархлари хамйон боб мухими шу уз пост биринчи ва зори",
+  "business_name": "Uzpost",
+  "business_category": "Transport/Yo'l",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "итог",
+    "polarity": "positive"
+   },
+   {
+    "term": "нархлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "узы пост",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01415",
+  "text": "Клиникада ишаётган барча шифокорлар малакали ва ширин сухандир",
+  "business_name": "Chinor Medical Center",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "барча шифокорлар",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01453",
+  "text": "тоамлари шунака маззали отмосферасиям жудаям чиройли музыкалари жудаям ёкимли🥹🥹🥹",
+  "business_name": "У бабушки",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "тоамлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "музыкалари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01454",
+  "text": "вафли в марожноеларини таьми шунака маззали",
+  "business_name": "Giotto",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "вафли",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01455",
+  "text": "ошпазлар профессионал даражада таомлари хам жудаям маззали айникса пахлавалари😋😋😋🤍",
+  "business_name": "Basri Baba",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "таомлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "ошпазлар",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01456",
+  "text": "шашликлар хилма хилма жудаям маззали уз маромида пишган😋😋😋",
+  "business_name": "Shashleek",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "шашликлар",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01457",
+  "text": "Пиццалар шунака туйимли свежие нарсалардан килингани шундо билинади гап юк😋😋",
+  "business_name": "Dodo pizza",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Пиццалар",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01458",
+  "text": "баликлар шунака тугри танланган жудаям маззали",
+  "business_name": "Akmal Oltin Baliq",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "баликлар",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01461",
+  "text": "фаст фудларига гап юк жудаям туйимли ва маззали",
+  "business_name": "Max Way",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "фаст фудларига",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01462",
+  "text": "хамёнбоп ва жудаям маззали якинлар билан келиб йеб кетса арзийди",
+  "business_name": "Kamolon Osh",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хамёнбоп ва жудаям маззали",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01463",
+  "text": "сомсалари шунака маззали ичидаги гуштлариям свежие 😋😋😋😁",
+  "business_name": "Minor somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сомсалари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01471",
+  "text": "удонлари жудаям яхши маромида пишган таьмига гап булиши мумкинмас😋😋😋😋",
+  "business_name": "WOK",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "удонлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01475",
+  "text": "бургер просто супер жудаям свежие сувлари шундо окиб иштаха очар булиб туради😋😋😋😋",
+  "business_name": "BBQ Burger",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "бургер",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01476",
+  "text": "пиццалари жудаям зо'о'р айникса сетлари жудаям хамёнбоп нархда🤍🤍",
+  "business_name": "Bellissimo Pizza",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "пиццалари",
+    "polarity": "negative"
+   },
+   {
+    "term": "сетлари",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01482",
+  "text": "лаваш хамири прям юмшок гушлариям зо'о'р манга жудаям ёкди😋😋😋",
+  "business_name": "Evos",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "лаваш",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01488",
+  "text": "Мускаймоги йокади менга мазали",
+  "business_name": "Evos",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Мускаймоги",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01504",
+  "text": "Тенге банк янги замон талабларига жавоб берадиган банк , фукароларни огирини енгил килиб якиндан ёрдам берадиган банклардан бири 100%",
+  "business_name": "Tenge Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Тенге банк",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01635",
+  "text": "ҷуда зур лаваш тамига гап юқ даставкасиҳам бирзумда келади",
+  "business_name": "Oqtepa lavash",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "лаваш",
+    "polarity": "negative"
+   },
+   {
+    "term": "даставкасиҳам",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01695",
+  "text": "Тамидан ёг маззаси келади. Ва хизмат даражаси пас",
+  "business_name": "Axmad olmos joja",
+  "business_category": "Boshqa",
+  "user_rating": 2,
+  "aspects": [
+   {
+    "term": "хизмат",
+    "polarity": "positive"
+   },
+   {
+    "term": "ёг маззаси",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01702",
+  "text": "Рузметов махсулотлари маззали ва нархлари хам арзон тавсия этаман",
+  "business_name": "Rozmetov",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Рузметов махсулотлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "narhлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01780",
+  "text": "Савдо моллари ва хизматлардан манунман хавасдан",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Савдо моллари",
+    "polarity": "negative"
+   },
+   {
+    "term": "хизматлардан",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_01983",
+  "text": "Ассаломалекум яахшилар мен бугун хавасдан ифторлик учун бозорлик килдим жудаяам харидиидан мамнун булиб кайтдим сифатли харидиидан жуда мамнунман кунглимдеги нарсаларни олдим сизлардан мннадорман",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "харидиидан",
+    "polarity": "positive"
+   },
+   {
+    "term": "narсаларни",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02115",
+  "text": "Ассалому алайкум клиникага гап йук енг замонавий аппаратар билан жихозланган омар.",
+  "business_name": "Medion",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "аппаратар",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02297",
+  "text": "Узум маркет яхши, лекин заказларни ичида браклари хам бор",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "Узум маркет",
+    "polarity": "positive"
+   },
+   {
+    "term": "браклари",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02344",
+  "text": "ЭКО марказига миннадорчилик билдираман оналик бахтини бериб аелар кувончига кувонч бахтли хает сари ундамокликдан чарчамайди Шифокорлар хушмомила ширин суз.",
+  "business_name": "Siz Ona bo'lasiz Eko Markazi",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ЭКО марказига",
+    "polarity": "positive"
+   },
+   {
+    "term": "Шифокорлар",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02389",
+  "text": "Ахмад. Олтин ЖУЖА сергили филияали жуда Зур кулайликлари мужозларга муомила маданяат гигеник сифатлари Билан жуда кулай ва екимлий",
+  "business_name": "Axmad Oltin Jo'ja Sergeli",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "жуда Зур",
+    "polarity": "negative"
+   },
+   {
+    "term": "жуда кулайликлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02400",
+  "text": "Нархлари арзон хамён боб кийимлари сфатли",
+  "business_name": "Big boss",
+  "business_category": "Boshqa",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Нархлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "сфатли",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02403",
+  "text": "1FIT Ягона фитнес илова ишлатиб курдим манга ёкти рахмат",
+  "business_name": "1 FIT",
+  "business_category": "Sport/Fitnes",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "1FIT Ягона фитнес илова",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02408",
+  "text": "Ошга гап йук факат сал киматрок",
+  "business_name": "Besh qozon",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Ошга",
+    "polarity": "negative"
+   },
+   {
+    "term": "сал",
+    "polarity": "neutral"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02448",
+  "text": "Балик маззали зур. факат озгина киматрок",
+  "business_name": "Akmal Oltin Baliq",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Балик",
+    "polarity": "positive"
+   },
+   {
+    "term": "киматрок",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02464",
+  "text": "Жудаям яхши клиника врачлари опитный,кулай,ходимлари хушмуомала",
+  "business_name": "\"SABA-DARMON\" mas‘uliyati cheklangan jamiyati",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "клиника",
+    "polarity": "positive"
+   },
+   {
+    "term": "врачлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "ходимлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02643",
+  "text": "Cakelab ширинликлари жида яхши екан ва нархларихам хамйонбоб",
+  "business_name": "Cakelab",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "narhlariham",
+    "polarity": "positive"
+   },
+   {
+    "term": "Cakelab",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02655",
+  "text": "корзинка йахши докон озгина кимат",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "корзинка",
+    "polarity": "positive"
+   },
+   {
+    "term": "докон",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02663",
+  "text": "Интернет Зур ишлайди тарифлари арзон",
+  "business_name": "Uzmobile",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "тарифлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "Интернет",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02696",
+  "text": "Бургерларни сочеыйрок тайёрласелар жуда хам Зур боларди",
+  "business_name": "Шеф Бургер",
+  "business_category": "Boshqa",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "Бургерларни",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02742",
+  "text": "Ҳалқ банк фойдали томонларидан бири таълим кридит деб ўйлайман, менга фарзандим ўқишига анча ёрдам бўлди ҳурсандман",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ҳалқ банк",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02769",
+  "text": "Хавас килса арзигулик дукон сифати аьло.",
+  "business_name": "Havas",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Хавас",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02772",
+  "text": "Ассалому алейкум яхшимисизлар камар китоблар дуконига гап йук кизикарли ва манОли китоблар мажмуаси.",
+  "business_name": "Qamar kitoblar do‘koni",
+  "business_category": "Kitob/Nashriyot",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "дуконига",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02774",
+  "text": "Ассалому алейкум яхшимисизлар узум маркет зур ва хамёнбоп сизга хам тавсия киламан.",
+  "business_name": "Uzum Market",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "маркет",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02775",
+  "text": "Ассалому алейкум яхшимисизлар барака маркетина гап йук сифатли ва халол.",
+  "business_name": "Baraka Market",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "барака маркетина",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02863",
+  "text": "Манзилга тез етказиб беради айникса совук хавода жуда кол келади тавсия бераман",
+  "business_name": "Royal Taxi",
+  "business_category": "Yetkazib berish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "совук хавода",
+    "polarity": "negative"
+   },
+   {
+    "term": "Манзилга",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02864",
+  "text": "Камар китоблари жуда хилма хил. Доим ижтимоий тармоклада кузатиб бораман. Яхш китоб докони болса китоб окигинг келаверади тавсия киламан.",
+  "business_name": "Qamar kitoblar do‘koni",
+  "business_category": "Kitob/Nashriyot",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "китоблари",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02933",
+  "text": "Балик нархи бошка жойлардан кимматрок",
+  "business_name": "Akmal Oltin Baliq",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 1,
+  "aspects": [
+   {
+    "term": "Балик",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_02966",
+  "text": "Ишлаш даражаси ало ва жуда кулай",
+  "business_name": "Click",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "даражаси",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03079",
+  "text": "Жаренний сушиларда ёг хиди бор",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 1,
+  "aspects": [
+   {
+    "term": "сушиларда",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03084",
+  "text": "Humansda чексиз интернет бор, Яна кунинга йигирма минут",
+  "business_name": "Humans",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "чексиз интернет",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03165",
+  "text": "Шашликлари зурекан и асартимент хам куп",
+  "business_name": "Shashlik & Somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Шашликлари",
+    "polarity": "negative"
+   },
+   {
+    "term": "асартимент",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03166",
+  "text": "Нархлари арзон ва качестваси яхши товарлар тавси этаман",
+  "business_name": "Korzinka.uz",
+  "business_category": "Oziq-ovqat do'konlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Нархлари",
+    "polarity": "positive"
+   },
+   {
+    "term": "качестваси",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03167",
+  "text": "Олекс сотишга яхши сайт тезда харидор топасиз",
+  "business_name": "OLX.uz",
+  "business_category": "Elektron tijorat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Олекс сотишга",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03168",
+  "text": "Узмабайл энг зури менимча чунки любой жойда олади тогдаям подволдаям хамажойда",
+  "business_name": "Uzmobile",
+  "business_category": "Telekommunikatsiya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Узмабайл",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03169",
+  "text": "Болаларимдан факат шуердан бургер обераман чунки бургери зур и етказиб бериш хам тезрог",
+  "business_name": "BBQ Burger",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "бургер",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03170",
+  "text": "Айникса сушилари зур и етказиб бериш хам тезрог",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "сушилари",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03171",
+  "text": "Углимни операция килдим хамма томонлама зур рахмат духтурларига",
+  "business_name": "Shox International Hospital",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Углимни",
+    "polarity": "neutral"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03172",
+  "text": "Гуллари зурекан хам арзон нархда",
+  "business_name": "Kamila's flowers",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "narhda",
+    "polarity": "positive"
+   },
+   {
+    "term": "Гуллари",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03173",
+  "text": "Чумилишни ургатадиганлар хам зур экан",
+  "business_name": "Mubina wellness",
+  "business_category": "Tibbiyot/Sog'liqni saqlash",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Чумилишни ургатадиганлар",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03322",
+  "text": "Яхши илова. 25 млн сум микдорда лимит олдим ва уни картага тушириб олдим. Гап йук",
+  "business_name": "Uzum Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "25 млн сум микдорда",
+    "polarity": "neutral"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03338",
+  "text": "Саволим бор эди. Томоркони сугориш учун окин сув булмаса, водопровотдан сугориш мумкинми? Жарима солмайсизларми.?",
+  "business_name": "Uz Suv Taminot",
+  "business_category": "Davlat xizmatlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Саволим",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03366",
+  "text": "Ҳаммаси жойида фақат фойизлари баландроқ билиб олмасайз қийналиб қоласиз",
+  "business_name": "depozit.uz",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "фойизлари",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03369",
+  "text": "Менингхам фикрим ижобий четтилини ёшлар ўрганиш замон талаби тавсия қилардим",
+  "business_name": "Master IELTS",
+  "business_category": "Ta'lim",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "четтилини",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03371",
+  "text": "Бараккалло шу жамгарма оркали кам таминланган оилалар хожатини котарйаптилар",
+  "business_name": "VAQF",
+  "business_category": "Din/Madaniyat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "жамгарма",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03372",
+  "text": "Окитиш медотлари йокди шунака мактаб лар копалсин",
+  "business_name": "Yakubovʼs School",
+  "business_category": "Ta'lim",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Окитиш медотлари",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03380",
+  "text": "Овкатлари мазали хизмати корсатиш йахши ходимлари хушмомилали",
+  "business_name": "Oqtepa lavash",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хизмати",
+    "polarity": "positive"
+   },
+   {
+    "term": "ходимлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03526",
+  "text": "Мен югуришга жуда кизикаман марафонларга катнашишни хохлайман",
+  "business_name": "Zaamin Ultra",
+  "business_category": "Sayohat/Turizm",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "марафонларга",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03528",
+  "text": "Шархларни укиб менхам бориб таомларидан истемол килишни истардим",
+  "business_name": "Beanberry",
+  "business_category": "Boshqa",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "истемол",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03529",
+  "text": "Ассалаумагалейкум бу нима учун жойлашувини курсатмаган",
+  "business_name": "Healthy food",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 2,
+  "aspects": [
+   {
+    "term": "жойлашувини",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03533",
+  "text": "Питцалари зур доими мижозлари эдим ишим вилоятга утмагунча.",
+  "business_name": "Bellissimo Pizza",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Питцалари",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03560",
+  "text": "Тошкентага энг зор ширинликлар докини вп мазали торталар бор",
+  "business_name": "Chaykof tashkent",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ширинликлар",
+    "polarity": "positive"
+   },
+   {
+    "term": "торталар",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03783",
+  "text": "Умуман тами йук нарса экан олиб ёб кургандим факат увол болмасин деп едик долларим заказ килдирп олдиришган Эдик",
+  "business_name": "KFC",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "увол",
+    "polarity": "negative"
+   },
+   {
+    "term": "долларим",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03859",
+  "text": "палов жуда маззали гап болиши мумкун емас гошлари тобида пишган хаммма нарсаси зор",
+  "business_name": "Oshpalov",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 4,
+  "aspects": [
+   {
+    "term": "палов",
+    "polarity": "positive"
+   },
+   {
+    "term": "гошлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03871",
+  "text": "Сомсалари шунака мазали шунака сочный",
+  "business_name": "Minor somsa",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Сомсалари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03872",
+  "text": "Раливной уоласига гап йук атмосферасихам зур",
+  "business_name": "Evos",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "атмосферасихам",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03873",
+  "text": "Ширинлииклари бир биридан ажойиб вв жудаям маззали",
+  "business_name": "Cakelab",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Ширинлииклари",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03968",
+  "text": "Шароитлари эудаям зур сузиш учун зур жой",
+  "business_name": "Baxt ko'li",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "жой",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_03973",
+  "text": "Хар томонлама кулай ва тезкор хизмат",
+  "business_name": "Asakabank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "хар томонлама",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04209",
+  "text": "Ассалому алайкум райхон миллий. таомларига гап булиши мумкинмас ифторликаку айтмасада булади узи арзон жуда жуда мазали хаммаси учун катта рахмат",
+  "business_name": "Rayhon Milliy Taomlari",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "райхон",
+    "polarity": "positive"
+   },
+   {
+    "term": "таомларига",
+    "polarity": "positive"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04285",
+  "text": "Халк банк зур гап йук вактида пенсияларимизни оламиз хаммага рахмат",
+  "business_name": "Xalq Banki",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Халк банк",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04290",
+  "text": "Хозирки кенда пластик карталар билан пул тулаш анчагина кулай б қолди. Айниқса камунал тулойларни амалга ошириш. Payme билан анча кулай, бир зумда сиз. 👍",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "пластик карталар",
+    "polarity": "negative"
+   },
+   {
+    "term": "камунал тулойларни",
+    "polarity": "negative"
+   },
+   {
+    "term": "Payme",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04408",
+  "text": "Хаммага тавсия киламан узим шу банкдан кридит олб фойдаланиб келмокдаман",
+  "business_name": "TBC Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "узим",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04431",
+  "text": "Албатта мен хам ичобий фикр килдираман нимага десангиз декаратиф гуллар хам бор экан аёлларни калбимга шу шулларни харид килиб кунглига йул топишни Яна Бир имконияти деб уйлайман Нима дейсизлар хамма уз фикрини колдиришини сураб коламан этибор учун рахмат барчага",
+  "business_name": "Kamila's flowers",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "декаратиф гуллар",
+    "polarity": "neutral"
+   },
+   {
+    "term": "Бир имконияти",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04432",
+  "text": "Албатта фикрилана кушиламан якинларимга онажонларимизга хам харид килиб куриб узингиз бахо берасизлар шунчаки класс",
+  "business_name": "flowers uz",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "харид",
+    "polarity": "neutral"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04645",
+  "text": "Розметов гуш махсулотлари калоса, сасиска хамма махсулотларини биз оиламиз билан севиб исмемол киламиз сабаби унинг тами зур нархи хам хамёнбоп",
+  "business_name": "Rozmetov",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Розметов гуш",
+    "polarity": "negative"
+   },
+   {
+    "term": "сасиска",
+    "polarity": "negative"
+   },
+   {
+    "term": "narhi",
+    "polarity": "negative"
+   },
+   {
+    "category": "narx",
+    "polarity": "negative"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 5,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04675",
+  "text": "Ишламабдику .Доимо ишламаган ..Метанни нега ёпишади.. Ахир Мустакил Узбекистонда яшаяпмизми ?",
+  "business_name": "\"BNQ GAS LUX\" MAS'ULIYATI CHEKLANGAN JAMIYAT",
+  "business_category": "Boshqa",
+  "user_rating": 1,
+  "aspects": [
+   {
+    "term": "Метанни",
+    "polarity": "negative"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04699",
+  "text": "Гулларини ассортименти жудаям куп нархлари хам хамён боп👍🏻👍🏻",
+  "business_name": "Kamila's flowers",
+  "business_category": "Gul/Sovg'a",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Гулларини",
+    "polarity": "neutral"
+   },
+   {
+    "term": "нархлари",
+    "polarity": "positive"
+   },
+   {
+    "category": "narx",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04700",
+  "text": "Сушилариларга гап йо , муздекина ичимликларилар барчаси ало даражада 😊",
+  "business_name": "Yapona mama",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Сушилариларга",
+    "polarity": "neutral"
+   },
+   {
+    "term": "муздекина ичимликларилар",
+    "polarity": "positive"
+   },
+   {
+    "category": "ovqat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 3,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04701",
+  "text": "Узум карта бн % ларсиз пул у́тказиш жудаям кулай сизларга омад тилаймиз",
+  "business_name": "Uzum Bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Узум карта бн % ларсиз пул",
+    "polarity": "neutral"
+   },
+   {
+    "category": "narx",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04702",
+  "text": "Пайме иловасига гап булиши мумкин эмас сизлардаги ажойиб Шак Шак у́йнина алохида тасано😊",
+  "business_name": "payme",
+  "business_category": "To'lov tizimlari",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Пайме иловасига",
+    "polarity": "negative"
+   },
+   {
+    "term": "Шак Шак у́йнина",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "negative"
+   },
+   {
+    "category": "muhit",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 4,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04703",
+  "text": "Тохтаниёз Ота калбаса ва тушонкаларини оилавий севиб истемол киламиз таьмига ва халолига гап булиши мумкин эмас😊",
+  "business_name": "To'xtaniyoz-ota",
+  "business_category": "Din/Madaniyat",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Тохтаниёз Ота",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04704",
+  "text": "Муддатли туловга Уй харид килдим жудаям хурсандман сизларда мижозларга куп имкониятлар бор ишларингизга ривож😊😊😊",
+  "business_name": "Xon Saroy",
+  "business_category": "Boshqa",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "мижозларга",
+    "polarity": "positive"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04853",
+  "text": "Менга чуда ёкди айниқса ходимлармни мумомиласи.",
+  "business_name": "Loook",
+  "business_category": "Restoran/Ovqatlanish",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "ходимлармни",
+    "polarity": "negative"
+   },
+   {
+    "category": "xizmat",
+    "polarity": "negative"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04881",
+  "text": "Бу парфюм яхш ва сфатли унт побатальнее олиб кораман чунки бундан олдн ишлаткандм",
+  "business_name": "Tashkent Perfume",
+  "business_category": "Boshqa",
+  "user_rating": 3,
+  "aspects": [
+   {
+    "term": "парфюм",
+    "polarity": "positive"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "positive"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ },
+ {
+  "review_id": "rev_04947",
+  "text": "Visa card енг зўр карта бутун дунёда ишлайди бир жойда уялтимайди",
+  "business_name": "Ipak yo‘li bank",
+  "business_category": "Bank/Moliya",
+  "user_rating": 5,
+  "aspects": [
+   {
+    "term": "Visa card",
+    "polarity": "neutral"
+   },
+   {
+    "category": "boshqalar",
+    "polarity": "neutral"
+   }
+  ],
+  "num_aspects": 2,
+  "annotation_source": "qwen2.5-7b v2 (HF 8636bd1) [cyrillic input]",
+  "parse_success": true
+ }
+]

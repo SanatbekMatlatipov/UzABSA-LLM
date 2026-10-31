@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.7516,
+    "ate_partial_f1": 0.8291,
+    "pair_f1": 0.7003,
+    "sentiment_accuracy": 0.9319
+  },
+  "B": {
+    "ate_exact_f1": 0.7563,
+    "ate_partial_f1": 0.831,
+    "pair_f1": 0.6868,
+    "sentiment_accuracy": 0.9088
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": -0.0047,
+      "ci95": [
+        -0.0351,
+        0.0261
+      ],
+      "p_value": 0.767,
+      "significant_at_0.05": false
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": -0.0019,
+      "ci95": [
+        -0.0293,
+        0.0257
+      ],
+      "p_value": 0.888,
+      "significant_at_0.05": false
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.0135,
+      "ci95": [
+        -0.0203,
+        0.0483
+      ],
+      "p_value": 0.439,
+      "significant_at_0.05": false
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": 0.0231,
+      "ci95": [
+        -0.004,
+        0.0489
+      ],
+      "p_value": 0.0914,
+      "significant_at_0.05": false
+    }
+  },
+  "A_name": "Llama",
+  "B_name": "TahrirchiBERT"
+}
