@@ -153,9 +153,10 @@ def llm_section(cfg, out):
     models = cfg["llm"]["models"] + cfg["llm"].get("extra_models", [])
     seeds = cfg["llm"]["seeds"]
     runs = [(m, s, f"{m}_s{s}") for m in models for s in seeds]
-    trained = sum(1 for _, _, r in runs
-                  if (RUNS / r / "merged_model" / "config.json").exists()
-                  or (RUNS / r / "model" / "config.json").exists())
+    # experiment_summary.json is written once training and saving finish, and it
+    # survives the merged-weight pruning that frees disk between seed batches --
+    # so it, not the presence of weights, is what says a run trained.
+    trained = sum(1 for _, _, r in runs if (RUNS / r / "experiment_summary.json").exists())
     scored = sum(1 for _, _, r in runs if (RUNS / r / "test_preds.jsonl").exists())
     out.append(paint(f"LLM runs ({len(models)} models x {len(seeds)} seeds)", "bold")
                + paint(f"   trained {trained}/{len(runs)}   test-scored {scored}/{len(runs)}", "dim"))
