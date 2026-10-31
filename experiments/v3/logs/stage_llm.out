@@ -22,3 +22,44 @@ seeds: [42, 43, 44]; models: ['qwen2.5-7b', 'llama3.1-8b', 'deepseek-7b']; gpus:
 [run] eval-llm/llama3.1-8b_s42_dev -> experiments\v3\logs\eval-llm\llama3.1-8b_s42_dev.log
 [ok] eval-llm/llama3.1-8b_s42_test (2132s)
 [run] eval-llm/deepseek-7b_s42_dev -> experiments\v3\logs\eval-llm\deepseek-7b_s42_dev.log
+[ok] eval-llm/deepseek-7b_s42_test (1893s)
+[ok] eval-llm/deepseek-7b_s42_dev (1609s)
+[ok] eval-llm/llama3.1-8b_s42_dev (1847s)
+
+Done.
+=== seed 42 runner exit 0 ===
+  dev pair F1 so far: {
+  "deepseek-7b_s42": 0.5648,
+  "llama3.1-8b_s42": 0.5604,
+  "qwen2.5-7b_s42": 0.5832
+}
+  champion on dev: qwen2.5-7b_s42 (0.5832)
+  pruned deepseek-7b_s42/merged_model (15.2 GB)
+  pruned llama3.1-8b_s42/merged_model (16.1 GB)
+  freed 31.3 GB
+  disk free: 93.7 GB
+
+======================================================================
+=== SEED 43 ===
+======================================================================
+
+=== train-llm ===
+[run] train-llm/llama3.1-8b_s43 -> experiments\v3\logs\train-llm\llama3.1-8b_s43.log[run] train-llm/qwen2.5-7b_s43 -> experiments\v3\logs\train-llm\qwen2.5-7b_s43.log
+[run] train-llm/deepseek-7b_s43 -> experiments\v3\logs\train-llm\deepseek-7b_s43.log
+
+[ok] train-llm/qwen2.5-7b_s43 (8123s)
+[ok] train-llm/deepseek-7b_s43 (8296s)
+[ok] train-llm/llama3.1-8b_s43 (8849s)
+
+=== eval-llm ===
+[run] eval-llm/qwen2.5-7b_s43_dev -> experiments\v3\logs\eval-llm\qwen2.5-7b_s43_dev.log[run] eval-llm/qwen2.5-7b_s43_test -> experiments\v3\logs\eval-llm\qwen2.5-7b_s43_test.log
+
+[run] eval-llm/llama3.1-8b_s43_test -> experiments\v3\logs\eval-llm\llama3.1-8b_s43_test.log
+[ok] eval-llm/qwen2.5-7b_s43_dev (2201s)
+[run] eval-llm/deepseek-7b_s43_test -> experiments\v3\logs\eval-llm\deepseek-7b_s43_test.log
+[ok] eval-llm/qwen2.5-7b_s43_test (2598s)
+[run] eval-llm/llama3.1-8b_s43_dev -> experiments\v3\logs\eval-llm\llama3.1-8b_s43_dev.log
+[ok] eval-llm/llama3.1-8b_s43_test (2610s)
+[run] eval-llm/deepseek-7b_s43_dev -> experiments\v3\logs\eval-llm\deepseek-7b_s43_dev.log
+[ok] eval-llm/deepseek-7b_s43_test (1984s)
+[ok] eval-llm/deepseek-7b_s43_dev (1678s)

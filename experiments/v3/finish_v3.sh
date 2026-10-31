@@ -33,6 +33,17 @@ count_preds() {   # $1 = test_preds.jsonl | dev_preds.jsonl
 
 commit_push() {   # $1 = commit subject
   git add -A experiments/v3 >/dev/null 2>&1
+  # The batched LLM driver narrows config.json's llm.seeds to one seed while it
+  # runs and restores the full list when it exits. Committing that transient
+  # state would tell anyone reproducing the work to train a single seed, so
+  # keep whatever is already committed until the file has all three seeds back.
+  if ! git diff --cached --quiet -- experiments/v3/config.json; then
+    seeds=$($PY -c "import json;print(len(json.load(open('experiments/v3/config.json'))['llm']['seeds']))" 2>/dev/null || echo 0)
+    if [ "${seeds:-0}" -lt 3 ]; then
+      git restore --staged experiments/v3/config.json 2>/dev/null
+      echo "  kept committed config.json (working copy is the driver's ${seeds}-seed version)"
+    fi
+  fi
   if git diff --cached --quiet; then
     echo "  nothing new to commit"
     return

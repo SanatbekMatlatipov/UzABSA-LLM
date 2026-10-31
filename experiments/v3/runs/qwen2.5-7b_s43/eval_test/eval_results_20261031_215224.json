@@ -1,0 +1,36 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.7196,
+      "recall": 0.7069,
+      "f1": 0.7132
+    },
+    "partial_match": {
+      "precision": 0.8232,
+      "recall": 0.8087,
+      "f1": 0.8159
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.645,
+    "pair_recall": 0.6336,
+    "pair_f1": 0.6393,
+    "sentiment_accuracy": 0.8964,
+    "sentiment_macro_f1": 0.8406,
+    "total_predictions": 724,
+    "total_references": 737
+  },
+  "json_parse_rate": 100.0,
+  "json_parse_successes": 609,
+  "json_parse_failures": 0,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "experiments\\v3\\runs\\qwen2.5-7b_s43\\test_preds.jsonl",
+  "metadata": {
+    "model_path": "experiments\\v3\\runs\\qwen2.5-7b_s43\\merged_model",
+    "test_data": "experiments\\v3\\data",
+    "split": "test",
+    "timestamp": "2026-10-31T21:52:24.330474",
+    "num_samples": 609
+  }
+}

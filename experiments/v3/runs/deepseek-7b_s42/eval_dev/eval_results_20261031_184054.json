@@ -1,0 +1,36 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.6789,
+      "recall": 0.5968,
+      "f1": 0.6352
+    },
+    "partial_match": {
+      "precision": 0.8147,
+      "recall": 0.7161,
+      "f1": 0.7622
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6037,
+    "pair_recall": 0.5306,
+    "pair_f1": 0.5648,
+    "sentiment_accuracy": 0.8892,
+    "sentiment_macro_f1": 0.8511,
+    "total_predictions": 545,
+    "total_references": 620
+  },
+  "json_parse_rate": 97.08,
+  "json_parse_successes": 532,
+  "json_parse_failures": 16,
+  "num_examples": 548,
+  "skipped_empty_gold": 0,
+  "preds_file": "experiments\\v3\\runs\\deepseek-7b_s42\\dev_preds.jsonl",
+  "metadata": {
+    "model_path": "experiments\\v3\\runs\\deepseek-7b_s42\\merged_model",
+    "test_data": "experiments\\v3\\data",
+    "split": "validation",
+    "timestamp": "2026-10-31T18:40:54.519581",
+    "num_samples": 548
+  }
+}

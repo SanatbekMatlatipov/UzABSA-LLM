@@ -1,0 +1,36 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.701,
+      "recall": 0.6649,
+      "f1": 0.6825
+    },
+    "partial_match": {
+      "precision": 0.8183,
+      "recall": 0.7761,
+      "f1": 0.7967
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6481,
+    "pair_recall": 0.6147,
+    "pair_f1": 0.6309,
+    "sentiment_accuracy": 0.9245,
+    "sentiment_macro_f1": 0.8942,
+    "total_predictions": 699,
+    "total_references": 737
+  },
+  "json_parse_rate": 97.21,
+  "json_parse_successes": 592,
+  "json_parse_failures": 17,
+  "num_examples": 609,
+  "skipped_empty_gold": 0,
+  "preds_file": "experiments\\v3\\runs\\llama3.1-8b_s43\\test_preds.jsonl",
+  "metadata": {
+    "model_path": "experiments\\v3\\runs\\llama3.1-8b_s43\\merged_model",
+    "test_data": "experiments\\v3\\data",
+    "split": "test",
+    "timestamp": "2026-10-31T21:52:36.141186",
+    "num_samples": 609
+  }
+}

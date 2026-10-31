@@ -1,0 +1,36 @@
+{
+  "aspect_term_extraction": {
+    "exact_match": {
+      "precision": 0.688,
+      "recall": 0.6758,
+      "f1": 0.6819
+    },
+    "partial_match": {
+      "precision": 0.8046,
+      "recall": 0.7903,
+      "f1": 0.7974
+    }
+  },
+  "aspect_polarity_pairs": {
+    "pair_precision": 0.6026,
+    "pair_recall": 0.5919,
+    "pair_f1": 0.5972,
+    "sentiment_accuracy": 0.8759,
+    "sentiment_macro_f1": 0.8233,
+    "total_predictions": 609,
+    "total_references": 620
+  },
+  "json_parse_rate": 100.0,
+  "json_parse_successes": 548,
+  "json_parse_failures": 0,
+  "num_examples": 548,
+  "skipped_empty_gold": 0,
+  "preds_file": "experiments\\v3\\runs\\qwen2.5-7b_s43\\dev_preds.jsonl",
+  "metadata": {
+    "model_path": "experiments\\v3\\runs\\qwen2.5-7b_s43\\merged_model",
+    "test_data": "experiments\\v3\\data",
+    "split": "validation",
+    "timestamp": "2026-10-31T21:45:47.546221",
+    "num_samples": 548
+  }
+}

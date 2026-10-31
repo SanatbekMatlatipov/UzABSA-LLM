@@ -1,0 +1,12 @@
+
+### 2026-10-31 18:18:29  finish_v3 starting
+
+### 2026-10-31 18:18:29  waiting for 9 test + 9 dev LLM predictions
+  30m: test 3/9, dev 3/9
+  60m: test 3/9, dev 3/9
+  90m: test 3/9, dev 3/9
+  120m: test 3/9, dev 3/9
+  150m: test 3/9, dev 3/9
+  180m: test 3/9, dev 3/9
+  210m: test 3/9, dev 4/9
+  240m: test 5/9, dev 4/9
