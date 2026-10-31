@@ -38,7 +38,7 @@ import json
 import platform
 import subprocess
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 from pathlib import Path
 
 import httpx
@@ -117,24 +117,29 @@ def best_checkpoint(run_dir):
 
 
 def hub_status(checkpoint, logs_dir, offline):
-    """Compare a Hub branch's last update with the end of the run it should hold."""
+    """Check that a Hub branch serves the weights of the run it should hold.
+
+    The experiment_summary.json uploaded with the weights names their run. The
+    branch's last-modified date would not do: a commit that only updates the
+    model card moves it without changing the weights.
+    """
     if not checkpoint or offline:
         return None
     branch = checkpoint.split("@", 1)[1]
-    try:
-        resp = httpx.get(f"https://huggingface.co/api/models/{HF_REPO}/revision/{branch}", timeout=15)
-        updated = datetime.fromisoformat(resp.json()["lastModified"].replace("Z", "+00:00"))
-    except (httpx.HTTPError, KeyError, ValueError):
-        return {"branch": branch, "status": "unknown (Hub not reachable)"}
     summary = Path(logs_dir) / "experiment_summary.json"
     if not summary.exists():
-        return {"branch": branch, "last_updated": updated.isoformat(), "status": "unknown (no run log)"}
-    # run timestamps are local time without a zone; a day of slack covers any zone
-    trained = datetime.fromisoformat(load(summary)["experiment"]["timestamp"]).replace(tzinfo=timezone.utc)
-    stale = updated < trained - timedelta(days=1)
-    return {"branch": branch, "last_updated": updated.isoformat(), "run_started": trained.isoformat()[:19],
-            "status": "older than the run: the Hub still serves earlier weights" if stale
-            else "updated after the run"}
+        return {"branch": branch, "status": "unknown (no run log)"}
+    try:
+        resp = httpx.get(f"https://huggingface.co/{HF_REPO}/resolve/{branch}/experiment_summary.json",
+                         timeout=15, follow_redirects=True)
+        resp.raise_for_status()
+        served = resp.json()["experiment"]
+    except (httpx.HTTPError, KeyError, ValueError):
+        return {"branch": branch, "status": "unknown (Hub not reachable)"}
+    run = load(summary)["experiment"]
+    return {"branch": branch, "serves_run": served.get("name"), "run": run["name"],
+            "status": "serves the weights of this run" if served == run
+            else "older than the run: the Hub still serves earlier weights"}
 
 
 # ----------------------------------------------------------------------------
@@ -294,7 +299,7 @@ def summary_md(reg):
         t = s["test"]
         ckpt = s["checkpoint"] or "not kept"
         if s.get("hub") and s["hub"]["status"].startswith("older"):
-            ckpt += f" (**stale**: last updated {s['hub']['last_updated'][:10]})"
+            ckpt += f" (**stale**: serves `{s['hub']['serves_run']}`)"
         lines.append(f"| {n} | {fmt(t['ate_exact_f1'])} | {fmt(t['ate_partial_1to1_f1'])} | {fmt(t['pair_f1'])} "
                      f"| {fmt(t['sentiment_accuracy'])} | {fmt(t['sentiment_macro_f1'])} | {ckpt} |")
     if reg["ensembles"]:
@@ -339,8 +344,8 @@ def summary_md(reg):
 
 
 def missing(reg):
-    out = [f"{n}: the Hub branch `{s['hub']['branch']}` was last updated {s['hub']['last_updated'][:10]}, "
-           f"before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)"
+    out = [f"{n}: the Hub branch `{s['hub']['branch']}` serves the weights of `{s['hub']['serves_run']}`, "
+           f"not of `{s['hub']['run']}`, the run behind the paper's numbers; push that run (scripts/push_to_hub.py)"
            for n, s in reg["v2_reference"].items() if s.get("hub") and s["hub"]["status"].startswith("older")]
     llm =[(m, s) for m in CFG["llm"]["models"] + CFG["llm"].get("extra_models", []) for s in CFG["llm"]["seeds"]]
     enc = [(m, s) for m in CFG["encoders"]["models"] for s in CFG["encoders"]["seeds"]]

@@ -256,6 +256,9 @@ __marimo__/
 !/paper_materials/revision_v2/human_validation/
 !/paper_materials/revision_v2/robustness/
 
+# Personal to-do lists, in any folder, stay on this machine
+TODO.md
+
 # BERT baselines - ignore large model weights & checkpoints, keep metrics/logs
 # Tracked:  eval_results.json, train_summary.json, training_log.txt, preds_per_example.jsonl
 # Ignored:  hf_trainer/checkpoint-*/, model/

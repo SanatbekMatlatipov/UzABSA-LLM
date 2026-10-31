@@ -1,7 +1,7 @@
 ---
 language:
   - uz
-license: apache-2.0
+license: llama3.1
 base_model: meta-llama/Llama-3.1-8B-Instruct
 tags:
   - aspect-based-sentiment-analysis
@@ -17,13 +17,13 @@ datasets:
   - Sanatbek/aspect-based-sentiment-analysis-uzbek
 pipeline_tag: text-generation
 model-index:
-  - name: UzABSA Llama 3.1-8B
+  - name: Llama 3.1-8B UzABSA
     results:
       - task:
           type: token-classification
           name: Aspect Term Extraction
         dataset:
-          name: Uzbek ABSA (SemEVAL format)
+          name: UzABSA (SemEval-2014 format)
           type: Sanatbek/aspect-based-sentiment-analysis-uzbek
           split: validation
         metrics:
@@ -31,13 +31,16 @@ model-index:
             value: 0.7036
             name: ATE Exact F1
           - type: f1
-            value: 0.8006
-            name: ATE Partial F1
+            value: 0.8019
+            name: ATE Partial F1 (one-to-one)
+          - type: f1
+            value: 0.651
+            name: Pair F1
       - task:
           type: text-classification
           name: Aspect Sentiment Classification
         dataset:
-          name: Uzbek ABSA (SemEVAL format)
+          name: UzABSA (SemEval-2014 format)
           type: Sanatbek/aspect-based-sentiment-analysis-uzbek
           split: validation
         metrics:
@@ -49,29 +52,26 @@ model-index:
             name: Sentiment Macro-F1
 ---
 
-# UzABSA Llama 3.1-8B
+# Llama 3.1-8B UzABSA
 
-A **8.0B** parameter LLM fine-tuned for **Aspect-Based Sentiment Analysis (ABSA)** in Uzbek using QLoRA. Extracts aspect terms, categories, and sentiment polarities from Uzbek text reviews as structured JSON.
+**Built with Llama.** This model is a fine-tune of Llama 3.1 8B Instruct. Its use is governed by the [Llama 3.1 Community License](https://www.llama.com/llama3_1/license/) and the [Llama 3.1 Acceptable Use Policy](https://www.llama.com/llama3_1/use-policy/).
 
-> This is the **`llama3.1-8b`** branch of [Sanatbek/UzABSA-LLM](https://huggingface.co/Sanatbek/UzABSA-LLM). See the [main branch](https://huggingface.co/Sanatbek/UzABSA-LLM) for a comparison of all models.
+A **8.0B** parameter LLM fine-tuned with QLoRA for **aspect-based sentiment analysis (ABSA)** of Uzbek reviews. Given a review, it returns JSON listing the aspect terms and aspect categories it mentions, each with its sentiment polarity.
+
+> This is the **`llama3.1-8b`** branch of [Sanatbek/UzABSA-LLM](https://huggingface.co/Sanatbek/UzABSA-LLM). The [main page](https://huggingface.co/Sanatbek/UzABSA-LLM) compares the three models.
 
 > [!IMPORTANT]
-> **Corrected release (2026-08-29).** These weights supersede an earlier upload on
-> this branch. Two defects in the data pipeline were found and fixed, and every
-> model was retrained from scratch:
+> **Corrected release (2026-08-29).** These weights supersede an earlier upload. Two defects in the data
+> pipeline were found and fixed, and every model was retrained from scratch:
 >
-> 1. **Malformed system prompt.** The preprocessing script passed
->    `system_prompt=None`, which overrode the default instead of selecting it, so
->    all 5,480 training examples carried the literal string `"None"` as their
->    system prompt while inference served the real Uzbek instruction. Training and
->    inference were therefore mismatched.
-> 2. **Train/evaluation overlap.** The split was drawn over annotation records
->    without deduplication, so 61 of 609 evaluation items (10.0%) had an
->    exact-text twin in training. The split is now grouped by normalised review
->    text; sizes are unchanged (5,480/609).
+> 1. **Malformed system prompt.** The preprocessing script passed `system_prompt=None`, which overrode the
+>    default instead of selecting it, so all 5,480 training examples carried the literal string `"None"` as
+>    their system prompt while inference served the real Uzbek instruction.
+> 2. **Train/evaluation overlap.** The split was drawn over annotation records without deduplication, so 61
+>    of the 609 held-out items (10.0%) had an exact-text twin in training. The split is now grouped by
+>    normalised review text; sizes are unchanged (5,480/609).
 >
-> If you downloaded this branch before 2026-08-29, please re-pull. Metrics below
-> come from the corrected pipeline and are not comparable to the earlier card.
+> Scores from the earlier weights are not comparable with the ones below.
 
 ## Model Details
 
@@ -80,76 +80,88 @@ A **8.0B** parameter LLM fine-tuned for **Aspect-Based Sentiment Analysis (ABSA)
 | Base model | [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) |
 | Architecture | LlamaForCausalLM |
 | Parameters | 8.0B |
-| Fine-tuning method | QLoRA (4-bit NF4) |
-| Framework | Unsloth + HuggingFace TRL |
-| Task | Aspect-Based Sentiment Analysis |
+| Fine-tuning method | QLoRA (4-bit NF4), Unsloth + TRL |
+| Task | Aspect-based sentiment analysis |
 | Language | Uzbek (uz) |
-| Merged model size | 15.0 GB |
-| LoRA adapter size | 177 MB |
+| Merged model size | 16.1 GB (bf16 safetensors) |
+| LoRA adapter size | 168 MB (`lora_adapters/`) |
 
 ## Evaluation Results
 
-Evaluated on 609 held-out validation examples:
+Scores on the 609 held-out UzABSA reviews (737 gold aspect terms), next to the base model prompted zero-shot with the same prompt:
 
-| Metric | Score |
-|--------|:-----:|
-| **ATE Exact F1** | 0.7036 |
-| **ATE Partial F1** | 0.8006 |
-| **Pair F1** (aspect + sentiment) | 0.6510 |
-| **Sentiment Accuracy** | 0.9252 |
-| **Sentiment Macro-F1** | 0.8867 |
-| **JSON Parse Rate** | 97.37% |
+| Metric | This model (fine-tuned) | Base model (zero-shot) |
+|--------|:---:|:---:|
+| ATE P | **0.7185** | 0.2271 |
+| ATE R | **0.6893** | 0.3799 |
+| ATE exact F1 | **0.7036** | 0.2843 |
+| ATE partial F1 | **0.8019** | 0.4718 |
+| Pair F1 | **0.6510** | 0.1999 |
+| Sentiment acc. | **0.9252** | 0.7036 |
+| Sentiment macro-F1 | **0.8867** | 0.6280 |
+| JSON parse | **97.4%** | 95.4% |
+
+ATE is aspect term extraction, scored on exact matches (P: precision, R: recall) unless marked partial; partial F1 also credits a predicted term that contains the gold term or lies inside it, with one-to-one matching. Pair F1 counts a term as correct only with the right polarity. Sentiment accuracy and macro-F1 are computed on the exactly matched terms. `eval_results.json` holds the scores written at training time; its partial F1 uses greedy instead of one-to-one matching.
 
 ## Usage
 
-### Load Merged Model (Recommended)
+### Merged model
 
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-model = AutoModelForCausalLM.from_pretrained(
-    "Sanatbek/UzABSA-LLM",
-    revision="llama3.1-8b",
-    torch_dtype="auto",
-    device_map="auto",
-)
-tokenizer = AutoTokenizer.from_pretrained("Sanatbek/UzABSA-LLM", revision="llama3.1-8b")
-
-messages = [
-    {"role": "system", "content": "Siz aspect-based sentiment analysis mutaxassisisiz. Berilgan sharh matnidan aspect termlarni, ularning kategoriyalarini va sentiment polarligini JSON formatida chiqaring."},
-    {"role": "user", "content": "Sharh: Ovqat mazali, lekin xizmat juda sekin edi."}
-]
-
-text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-inputs = tokenizer(text, return_tensors="pt").to(model.device)
-
-outputs = model.generate(**inputs, max_new_tokens=512, temperature=0.1, do_sample=True)
-response = tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-print(response)
+```bash
+pip install transformers accelerate
 ```
 
-### Load LoRA Adapter Only (~177 MB)
-
 ```python
-from peft import PeftModel
+import json
+
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-base = AutoModelForCausalLM.from_pretrained(
-    "meta-llama/Llama-3.1-8B-Instruct",
-    torch_dtype="auto",
-    device_map="auto",
-)
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
+repo, branch = "Sanatbek/UzABSA-LLM", "llama3.1-8b"
+tokenizer = AutoTokenizer.from_pretrained(repo, revision=branch)
+model = AutoModelForCausalLM.from_pretrained(repo, revision=branch, dtype="auto", device_map="auto")
 
-model = PeftModel.from_pretrained(
-    base,
-    "Sanatbek/UzABSA-LLM",
-    revision="llama3.1-8b",
-    subfolder="lora_adapters",
+SYSTEM_PROMPT = """Siz o'zbek tilida matnlardan aspektlarni va ularning hissiyotlarini aniqlash bo'yicha mutaxassissiz.
+
+Berilgan matndan barcha aspekt terminlarini, ularning kategoriyalarini va hissiyot polaritesini (positive, negative, neutral) ajratib oling.
+
+Javobni quyidagi Python dictionary formatida qaytaring:
+{
+    "aspects": [
+        {
+            "term": "aspekt termin",
+            "category": "kategoriya",
+            "polarity": "positive/negative/neutral"
+        }
+    ]
+}"""
+
+
+def build_prompt(review):
+    # The ChatML text all three models were trained on. Do not use
+    # tokenizer.apply_chat_template: Llama and DeepSeek have other templates.
+    user = ("Quyidagi o'zbek tilidagi matndan aspektlarni, kategoriyalarni va hissiyot polaritesini aniqlang:"
+            f'\n\nMatn: "{review}"')
+    return (f"<|im_start|>system\n{SYSTEM_PROMPT}<|im_end|>\n"
+            f"<|im_start|>user\n{user}<|im_end|>\n"
+            "<|im_start|>assistant\n")
+
+
+inputs = tokenizer(build_prompt("Ovqat mazali, lekin xizmat juda sekin edi."), return_tensors="pt").to(model.device)
+output = model.generate(
+    **inputs,
+    max_new_tokens=512,
+    do_sample=False,  # greedy decoding, as in the evaluation
+    eos_token_id=tokenizer.encode("<|im_end|>", add_special_tokens=False),
+    pad_token_id=tokenizer.eos_token_id,
 )
+answer = tokenizer.decode(output[0, inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+print(answer)
+aspects = json.loads(answer[: answer.rfind("}") + 1])["aspects"]
 ```
 
-### With Unsloth (2x Faster Inference)
+The scores above come from `scripts/evaluate.py` in the [GitHub repository](https://github.com/SanatbekMatlatipov/UzABSA-LLM), which loads the merged model in 4-bit with Unsloth and decodes greedily; bf16 outputs can differ slightly.
+
+### 4-bit with Unsloth, as in the evaluation
 
 ```python
 from unsloth import FastLanguageModel
@@ -161,77 +173,91 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     load_in_4bit=True,
 )
 FastLanguageModel.for_inference(model)
+# then build the prompt and generate as above
 ```
+
+### LoRA adapter only (168 MB)
+
+```python
+from peft import PeftModel
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+base = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.1-8B-Instruct", dtype="auto", device_map="auto")
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-8B-Instruct")
+model = PeftModel.from_pretrained(base, "Sanatbek/UzABSA-LLM", revision="llama3.1-8b", subfolder="lora_adapters")
+# then build the prompt and generate as above
+```
+
+## Output Format
+
+The answer holds two kinds of records, as UzABSA does:
+
+- **term records**, `{"term": ..., "polarity": ...}`: a phrase of the review and its polarity;
+- **category records**, `{"category": ..., "polarity": ...}`: one of five categories, `ovqat` (food), `muhit` (ambience), `xizmat` (service), `narx` (price) or `boshqalar` (other), and its polarity.
+
+Polarity is `positive`, `negative` or `neutral`. UzABSA annotates terms and categories as independent layers, so a category record is not linked to a term. The scores count the term records.
 
 ## Training Configuration
 
 | Parameter | Value |
 |-----------|-------|
-| LoRA rank (r) | 16 |
-| LoRA alpha | 32 |
-| LoRA dropout | 0.05 |
-| Target modules | q, k, v, o, gate, up, down projections |
-| Learning rate | 2e-4 |
-| Effective batch size | 16 (4 × 4) |
-| Max steps | 1000 |
-| Warmup | 0.1 |
-| Scheduler | cosine |
-| Optimizer | adamw_8bit |
+| Framework | Unsloth + TRL (SFTTrainer) + PEFT |
+| Quantization | 4-bit NF4 (QLoRA) |
+| LoRA rank / alpha / dropout | 16 / 32 / 0.05 |
+| Target modules | q, k, v, o, gate, up and down projections |
+| Learning rate | 2e-4, cosine schedule, 10% warm-up |
+| Effective batch size | 16 (4 × 4 gradient accumulation) |
+| Steps | 1,000 |
+| Optimizer | `adamw_8bit`, weight decay 0.01 |
 | Precision | bf16 |
-| Max seq length | 2048 |
+| Max sequence length | 2,048 tokens |
 | Seed | 42 |
-| Final train loss | 0.0590 |
-| Best eval loss | 0.1476 |
-| Training time | 71.8 min |
+| Checkpoint kept | lowest loss on the 609 held-out reviews, evaluated every 100 steps |
 
-## Training Data
+**Data.** [UzABSA](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek) holds 6,175 Uzbek restaurant-review sentences in the SemEval-2014 format. Conversion to instruction examples, with the *conflict* polarity removed, yields 6,089 examples, split 90/10 (seed 42) into 5,480 training and 609 held-out reviews. Identical normalised texts are kept on the same side of the split.
 
-[Sanatbek/aspect-based-sentiment-analysis-uzbek](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek) — 6,175 Uzbek restaurant reviews with aspect-level annotations (SemEVAL 2014 format).
-
-- **Train split:** 5,480 examples
-- **Validation split:** 609 examples
-- **Format:** ChatML instruction-response pairs
-
-## Hardware
-
-- **GPU:** NVIDIA RTX A6000 (48 GB VRAM)
-- **OS:** Windows 11
-- **CUDA:** 12.4
-- **PyTorch:** 2.6.0
+**Hardware.** One NVIDIA RTX A6000 (48 GB), CUDA 12.4, PyTorch 2.6.0. The run's log is in `experiment_summary.json`.
 
 ## Repository Contents
 
-This branch contains:
+```
+├── config.json                           # model config
+├── model-0000X-of-00004.safetensors      # merged weights (4 shards)
+├── model.safetensors.index.json          # weight index
+├── tokenizer files
+├── lora_adapters/                        # LoRA adapter (lightweight alternative)
+├── eval_results.json                     # scores written at training time
+└── experiment_summary.json               # training configuration and log
+```
 
-```
-├── config.json                  # Model config
-├── model-00001-of-00004.safetensors   # Merged weights (shard 1/4)
-├── model-00002-of-00004.safetensors   # Merged weights (shard 2/4)
-├── model-00003-of-00004.safetensors   # Merged weights (shard 3/4)
-├── model-00004-of-00004.safetensors   # Merged weights (shard 4/4)
-├── model.safetensors.index.json       # Weight index
-├── tokenizer.json               # Tokenizer
-├── tokenizer_config.json        # Tokenizer config
-├── special_tokens_map.json      # Special tokens
-├── lora_adapters/               # LoRA adapter (lightweight alternative)
-│   ├── adapter_config.json
-│   ├── adapter_model.safetensors
-│   └── tokenizer files...
-└── eval_results.json            # Full evaluation metrics
-```
+## Code
+
+Training, evaluation and significance tests: [github.com/SanatbekMatlatipov/UzABSA-LLM](https://github.com/SanatbekMatlatipov/UzABSA-LLM)
 
 ## Citation
 
 ```bibtex
-@misc{uzabsa-llm-2026,
-  title={UzABSA-LLM: Fine-tuned Large Language Models for Uzbek Aspect-Based Sentiment Analysis},
-  author={Sanatbek},
-  year={2026},
-  url={https://huggingface.co/Sanatbek/UzABSA-LLM},
-  note={UzABSA Llama 3.1-8B — QLoRA fine-tuned on Uzbek ABSA}
+@misc{matlatipov2026uzabsallm,
+  title        = {UzABSA-LLM: Fine-tuned Large Language Models for Uzbek Aspect-Based Sentiment Analysis},
+  author       = {Matlatipov, Sanatbek},
+  year         = {2026},
+  howpublished = {\url{https://huggingface.co/Sanatbek/UzABSA-LLM}}
+}
+```
+
+The training data:
+
+```bibtex
+@inproceedings{matlatipov-etal-2024-uzabsa,
+  title     = {{UzABSA}: Aspect-Based Sentiment Analysis for the {Uzbek} Language},
+  author    = {Matlatipov, Sanatbek Gayratovich and Rajabov, Jaloliddin and Kuriyozov, Elmurod and Aripov, Mersaid},
+  booktitle = {Proceedings of the 3rd Annual Meeting of the Special Interest Group on Under-resourced Languages @ LREC-COLING 2024},
+  year      = {2024},
+  pages     = {394--403},
+  url       = {https://aclanthology.org/2024.sigul-1.47/}
 }
 ```
 
 ## License
 
-Apache 2.0
+**Built with Llama.** This model is a fine-tune of Llama 3.1 8B Instruct. Its use is governed by the [Llama 3.1 Community License](https://www.llama.com/llama3_1/license/) and the [Llama 3.1 Acceptable Use Policy](https://www.llama.com/llama3_1/use-policy/).

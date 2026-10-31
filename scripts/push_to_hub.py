@@ -8,6 +8,9 @@ Repository structure (single repo, multiple branches):
   - llama3.1-8b branch: Merged model + LoRA adapters + model card
   - deepseek-r1-7b branch: Merged model + LoRA adapters + model card
 
+The cards read their scores from paper_materials/revision_v2/robustness/robustness.json
+and the majority-vote metrics in experiments/v3/results/ensembles/.
+
 Usage:
   # Push everything (all branches)
   python scripts/push_to_hub.py --all
@@ -18,17 +21,19 @@ Usage:
   # Push a specific model branch
   python scripts/push_to_hub.py --branch qwen2.5-7b
 
+  # Update only the cards, not the weights (works without the merged models)
+  python scripts/push_to_hub.py --all --card-only
+
   # Dry-run (shows what would be uploaded without actually uploading)
   python scripts/push_to_hub.py --all --dry-run
 
 Prerequisites:
   pip install huggingface_hub
-  huggingface-cli login   # or set HF_TOKEN env variable
+  hf auth login   # or huggingface-cli login, or set HF_TOKEN env variable
 """
 
 import argparse
 import json
-import os
 import sys
 from pathlib import Path
 from datetime import datetime
@@ -45,42 +50,69 @@ for _stream in (sys.stdout, sys.stderr):
 # ---------------------------------------------------------------------------
 
 REPO_ID = "Sanatbek/UzABSA-LLM"
+GITHUB_URL = "https://github.com/SanatbekMatlatipov/UzABSA-LLM"
+DATASET_ID = "Sanatbek/aspect-based-sentiment-analysis-uzbek"
+CORPUS_DOI = "10.5281/zenodo.22146677"
 
+ROBUSTNESS_JSON = "paper_materials/revision_v2/robustness/robustness.json"
+VOTE_JSON = "experiments/v3/results/ensembles/majority_of_5_v2_systems_metrics.json"
+VOTE_NAME = "Majority of 5 (v2 systems)"
+
+# Sizes follow from the parameter counts: bf16 merged weights, fp32 adapters
+# (40.4M trainable parameters for the Qwen architecture, 41.9M for Llama).
 MODELS = {
     "qwen2.5-7b": {
         "branch": "qwen2.5-7b",
         "local_dir": "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2",
+        "paper_name": "Qwen 2.5-7B",  # system name in robustness.json
         "display_name": "UzABSA Qwen 2.5-7B",
         "base_model": "unsloth/Qwen2.5-7B-Instruct-bnb-4bit",
         "base_model_full": "Qwen/Qwen2.5-7B-Instruct",
         "architecture": "Qwen2ForCausalLM",
         "params": "7.6B",
-        "merged_size": "15.0 GB",
-        "lora_size": "170 MB",
+        "merged_size": "15.2 GB",
+        "lora_size": "162 MB",
+        "license": "apache-2.0",
     },
     "llama3.1-8b": {
         "branch": "llama3.1-8b",
         "local_dir": "outputs/rerun_v2/uzabsa_llama3.1-8b_v2",
-        "display_name": "UzABSA Llama 3.1-8B",
+        "paper_name": "Llama 3.1-8B",
+        # the Llama 3.1 license asks for "Llama" at the start of a derived model's name
+        "display_name": "Llama 3.1-8B UzABSA",
         "base_model": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
         "base_model_full": "meta-llama/Llama-3.1-8B-Instruct",
         "architecture": "LlamaForCausalLM",
         "params": "8.0B",
-        "merged_size": "15.0 GB",
-        "lora_size": "177 MB",
+        "merged_size": "16.1 GB",
+        "lora_size": "168 MB",
+        "license": "llama3.1",
     },
     "deepseek-r1-7b": {
         "branch": "deepseek-r1-7b",
         "local_dir": "outputs/rerun_v2/uzabsa_deepseek-7b_v2",
+        "paper_name": "DeepSeek-R1-7B",
         "display_name": "UzABSA DeepSeek-R1-Distill-Qwen-7B",
         "base_model": "unsloth/DeepSeek-R1-Distill-Qwen-7B-bnb-4bit",
         "base_model_full": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
         "architecture": "Qwen2ForCausalLM",
         "params": "7.6B",
-        "merged_size": "15.0 GB",
-        "lora_size": "165 MB",
+        "merged_size": "15.2 GB",
+        "lora_size": "162 MB",
+        "license": "apache-2.0",
     },
 }
+
+LICENSE_NAMES = {
+    "apache-2.0": "Apache 2.0",
+    "llama3.1": "Llama 3.1 Community License",
+}
+
+LLAMA_NOTICE = (
+    "**Built with Llama.** This model is a fine-tune of Llama 3.1 8B Instruct. Its use is governed by the "
+    "[Llama 3.1 Community License](https://www.llama.com/llama3_1/license/) and the "
+    "[Llama 3.1 Acceptable Use Policy](https://www.llama.com/llama3_1/use-policy/)."
+)
 
 # Shared training hyperparameters
 TRAINING_CONFIG = {
@@ -112,91 +144,273 @@ def get_project_root():
     return Path(__file__).resolve().parent.parent
 
 
-def load_eval_results(model_dir: Path) -> dict | None:
-    """Load the latest eval_results JSON from the model directory."""
-    eval_files = sorted(model_dir.glob("eval_results_*.json"))
-    if not eval_files:
-        return None
-    with open(eval_files[-1]) as f:
-        return json.load(f)
+def load_results() -> dict:
+    """Held-out scores of every system in the main results table, by system name.
+
+    scripts/robustness_analysis.py and scripts/ensemble_preds.py recompute them
+    from the per-example predictions with the evaluation's metric code. The
+    eval_results files written at training time use an older partial-match score.
+    """
+    root = get_project_root()
+    with open(root / ROBUSTNESS_JSON, encoding="utf-8") as f:
+        robustness = json.load(f)
+    with open(root / VOTE_JSON, encoding="utf-8") as f:
+        vote = json.load(f)
+    n_reviews = robustness["gold"]["reviews"]
+    results = {}
+    for name, s in dict(robustness["systems"], **{VOTE_NAME: vote["scores"][VOTE_NAME]}).items():
+        c = s["canonical"]
+        failures = robustness["format_vs_extraction"].get(name, {}).get("parse_failures")
+        results[name] = {"p": c["ate_exact_p"], "r": c["ate_exact_r"], "f1": c["ate_exact_f1"],
+                         "partial": s["partial_1to1"]["f1"], "pair": c["pair_f1"],
+                         "acc": c["sentiment_accuracy"], "macro": c["sentiment_macro_f1"],
+                         "parse": None if failures is None else 1 - failures / n_reviews}
+    return results
 
 
-def load_experiment_summary(model_dir: Path) -> dict | None:
-    """Load experiment_summary.json from the model directory."""
-    summary_path = model_dir / "experiment_summary.json"
-    if not summary_path.exists():
-        return None
-    with open(summary_path) as f:
-        return json.load(f)
+# ---------------------------------------------------------------------------
+# Card sections shared by all cards
+# ---------------------------------------------------------------------------
+
+EXAMPLE_REVIEW = "Ovqat mazali, lekin xizmat juda sekin edi."
+
+# The qwen2.5-7b branch's answer to EXAMPLE_REVIEW from the quick-start code, pasted
+# from a real run; until one is recorded, None leaves it off the cards.
+EXAMPLE_OUTPUT = None
+
+# The prompt part of the quick start. render_quickstart() checks that it builds
+# exactly the training prompt, src.inference.create_inference_prompt.
+PROMPT_CODE = r'''SYSTEM_PROMPT = """@SYSTEM_PROMPT@"""
+
+
+def build_prompt(review):
+    # The ChatML text all three models were trained on. Do not use
+    # tokenizer.apply_chat_template: Llama and DeepSeek have other templates.
+    user = ("Quyidagi o'zbek tilidagi matndan aspektlarni, kategoriyalarni va hissiyot polaritesini aniqlang:"
+            f'\n\nMatn: "{review}"')
+    return (f"<|im_start|>system\n{SYSTEM_PROMPT}<|im_end|>\n"
+            f"<|im_start|>user\n{user}<|im_end|>\n"
+            "<|im_start|>assistant\n")'''
+
+QUICKSTART = r'''```python
+import json
+
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+repo, branch = "@REPO@", "@BRANCH@"@OTHER_BRANCHES@
+tokenizer = AutoTokenizer.from_pretrained(repo, revision=branch)
+model = AutoModelForCausalLM.from_pretrained(repo, revision=branch, dtype="auto", device_map="auto")
+
+@PROMPT_CODE@
+
+
+inputs = tokenizer(build_prompt("@EXAMPLE@"), return_tensors="pt").to(model.device)
+output = model.generate(
+    **inputs,
+    max_new_tokens=512,
+    do_sample=False,  # greedy decoding, as in the evaluation
+    eos_token_id=tokenizer.encode("<|im_end|>", add_special_tokens=False),
+    pad_token_id=tokenizer.eos_token_id,
+)
+answer = tokenizer.decode(output[0, inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+print(answer)
+aspects = json.loads(answer[: answer.rfind("}") + 1])["aspects"]
+```'''
+
+OUTPUT_FORMAT = """The answer holds two kinds of records, as UzABSA does:
+
+- **term records**, `{"term": ..., "polarity": ...}`: a phrase of the review and its polarity;
+- **category records**, `{"category": ..., "polarity": ...}`: one of five categories, `ovqat` (food), `muhit` (ambience), `xizmat` (service), `narx` (price) or `boshqalar` (other), and its polarity.
+
+Polarity is `positive`, `negative` or `neutral`. UzABSA annotates terms and categories as independent layers, so a category record is not linked to a term. The scores count the term records."""
+
+EVAL_NOTE = (
+    f"The scores above come from `scripts/evaluate.py` in the [GitHub repository]({GITHUB_URL}), "
+    "which loads the merged model in 4-bit with Unsloth and decodes greedily; bf16 outputs can differ slightly."
+)
+
+METRICS_NOTE = (
+    "ATE is aspect term extraction, scored on exact matches (P: precision, R: recall) unless marked partial; "
+    "partial F1 also credits a predicted term that contains the gold term or lies inside it, with one-to-one "
+    "matching. Pair F1 counts a term as correct only with the right polarity. Sentiment accuracy and macro-F1 "
+    "are computed on the exactly matched terms."
+)
+
+DATA_TEXT = (
+    f"**Data.** [UzABSA](https://huggingface.co/datasets/{DATASET_ID}) holds 6,175 Uzbek restaurant-review "
+    "sentences in the SemEval-2014 format. Conversion to instruction examples, with the *conflict* polarity "
+    "removed, yields 6,089 examples, split 90/10 (seed 42) into 5,480 training and 609 held-out reviews. "
+    "Identical normalised texts are kept on the same side of the split."
+)
+
+CORRECTED_RELEASE = """> [!IMPORTANT]
+> **Corrected release (2026-08-29).** These weights supersede an earlier upload. Two defects in the data
+> pipeline were found and fixed, and every model was retrained from scratch:
+>
+> 1. **Malformed system prompt.** The preprocessing script passed `system_prompt=None`, which overrode the
+>    default instead of selecting it, so all 5,480 training examples carried the literal string `"None"` as
+>    their system prompt while inference served the real Uzbek instruction.
+> 2. **Train/evaluation overlap.** The split was drawn over annotation records without deduplication, so 61
+>    of the 609 held-out items (10.0%) had an exact-text twin in training. The split is now grouped by
+>    normalised review text; sizes are unchanged (5,480/609).
+>
+> Scores from the earlier weights are not comparable with the ones below."""
+
+CITATION = """```bibtex
+@misc{matlatipov2026uzabsallm,
+  title        = {UzABSA-LLM: Fine-tuned Large Language Models for Uzbek Aspect-Based Sentiment Analysis},
+  author       = {Matlatipov, Sanatbek},
+  year         = {2026},
+  howpublished = {\\url{https://huggingface.co/@REPO@}}
+}
+```
+
+The training data:
+
+```bibtex
+@inproceedings{matlatipov-etal-2024-uzabsa,
+  title     = {{UzABSA}: Aspect-Based Sentiment Analysis for the {Uzbek} Language},
+  author    = {Matlatipov, Sanatbek Gayratovich and Rajabov, Jaloliddin and Kuriyozov, Elmurod and Aripov, Mersaid},
+  booktitle = {Proceedings of the 3rd Annual Meeting of the Special Interest Group on Under-resourced Languages @ LREC-COLING 2024},
+  year      = {2024},
+  pages     = {394--403},
+  url       = {https://aclanthology.org/2024.sigul-1.47/}
+}
+```""".replace("@REPO@", REPO_ID)
+
+
+def render_quickstart(branch: str, other_branches: str = "") -> str:
+    """The quick-start code for a branch, after checking that it builds the training prompt."""
+    sys.path.insert(0, str(get_project_root()))
+    from src.inference import SYSTEM_PROMPT_UZ, create_inference_prompt
+    import logging
+    logging.getLogger().setLevel(logging.WARNING)  # src.inference turns on INFO logging, which floods the output
+
+    prompt_code = PROMPT_CODE.replace("@SYSTEM_PROMPT@", SYSTEM_PROMPT_UZ)
+    namespace = {}
+    exec(prompt_code, namespace)
+    if namespace["build_prompt"](EXAMPLE_REVIEW) != create_inference_prompt(EXAMPLE_REVIEW):
+        sys.exit("The card's prompt differs from the training prompt in src/inference.py; update PROMPT_CODE")
+    return (QUICKSTART.replace("@PROMPT_CODE@", prompt_code)
+            .replace("@REPO@", REPO_ID)
+            .replace("@BRANCH@", branch)
+            .replace("@OTHER_BRANCHES@", other_branches)
+            .replace("@EXAMPLE@", EXAMPLE_REVIEW))
+
+
+def example_answer() -> str:
+    if not EXAMPLE_OUTPUT:
+        return ""
+    return f"\nThe `qwen2.5-7b` model answers:\n\n```json\n{EXAMPLE_OUTPUT}\n```\n"
+
+
+def training_table() -> str:
+    c = TRAINING_CONFIG
+    return f"""| Parameter | Value |
+|-----------|-------|
+| Framework | Unsloth + TRL (SFTTrainer) + PEFT |
+| Quantization | {c['quantization']} |
+| LoRA rank / alpha / dropout | {c['lora_r']} / {c['lora_alpha']} / {c['lora_dropout']} |
+| Target modules | q, k, v, o, gate, up and down projections |
+| Learning rate | {c['learning_rate']}, {c['scheduler']} schedule, {c['warmup_ratio']:.0%} warm-up |
+| Effective batch size | {c['effective_batch_size']} ({c['batch_size']} × {c['grad_accum']} gradient accumulation) |
+| Steps | {c['max_steps']:,} |
+| Optimizer | `{c['optimizer']}`, weight decay {c['weight_decay']} |
+| Precision | {c['precision']} |
+| Max sequence length | {c['max_seq_length']:,} tokens |
+| Seed | {c['seed']} |
+| Checkpoint kept | lowest loss on the 609 held-out reviews, evaluated every 100 steps |"""
 
 
 # ---------------------------------------------------------------------------
 # Model card generators
 # ---------------------------------------------------------------------------
 
-# Metrics shown in the main-branch comparison table: (label, path, is_percent)
-_COMPARISON_ROWS = [
-    ("ATE Exact F1", ("aspect_term_extraction", "exact_match", "f1"), False),
-    ("ATE Partial F1", ("aspect_term_extraction", "partial_match", "f1"), False),
-    ("Pair F1", ("aspect_polarity_pairs", "pair_f1"), False),
-    ("Sentiment Accuracy", ("aspect_polarity_pairs", "sentiment_accuracy"), False),
-    ("Sentiment Macro-F1", ("aspect_polarity_pairs", "sentiment_macro_f1"), False),
-    ("JSON Parse Rate", ("json_parse_rate",), True),
+# Columns of the results tables: (header, key in load_results())
+_RESULT_COLUMNS = [
+    ("ATE P", "p"), ("ATE R", "r"), ("ATE exact F1", "f1"), ("ATE partial F1", "partial"),
+    ("Pair F1", "pair"), ("Sentiment acc.", "acc"), ("Sentiment macro-F1", "macro"), ("JSON parse", "parse"),
 ]
 
+# Rows of the main-branch results table: (label, system name in the results files)
+_RESULT_ROWS = [
+    ("**Qwen 2.5-7B**, fine-tuned (`qwen2.5-7b`)", "Qwen 2.5-7B"),
+    ("**Llama 3.1-8B**, fine-tuned (`llama3.1-8b`)", "Llama 3.1-8B"),
+    ("**DeepSeek-R1-7B**, fine-tuned (`deepseek-r1-7b`)", "DeepSeek-R1-7B"),
+    ("BERTbek, fine-tuned encoder", "BERTbek"),
+    ("TahrirchiBERT, fine-tuned encoder", "TahrirchiBERT"),
+    ("Majority vote of the five fine-tuned systems", VOTE_NAME),
+    ("Qwen 2.5-7B, zero-shot", "Qwen 2.5-7B (ZS)"),
+    ("Llama 3.1-8B, zero-shot", "Llama 3.1-8B (ZS)"),
+    ("DeepSeek-R1-7B, zero-shot", "DeepSeek-R1-7B (ZS)"),
+]
+LLMS = [cfg["paper_name"] for cfg in MODELS.values()]
+ENCODERS = ["BERTbek", "TahrirchiBERT"]
 
-def _dig(d, path):
-    for k in path:
-        if not isinstance(d, dict) or k not in d:
-            return None
-        d = d[k]
-    return d
+
+def _cell(key: str, value) -> str:
+    if value is None:
+        return "–"
+    return f"{100 * value:.1f}%" if key == "parse" else f"{value:.4f}"
 
 
-def build_comparison_table(results: dict) -> str:
-    """Render the main-branch comparison table from the runs' eval_results files.
+def build_results_table(results: dict) -> str:
+    """Render the main-branch results table, bold marking the best single fine-tuned
+    system in each column.
 
     Hardcoding these numbers previously let the published card drift away from the
     artifacts; generating them means the card is wrong only if the runs are.
     """
-    keys = list(MODELS.keys())
-    short = {"qwen2.5-7b": "Qwen", "llama3.1-8b": "Llama", "deepseek-r1-7b": "DeepSeek"}
-    header = "| Metric | " + " | ".join(MODELS[k]["display_name"].replace("UzABSA ", "")
-                                        for k in keys) + " | Best |"
-    sep = "|--------|" + "|".join([":-----------:"] * len(keys)) + "|:----:|"
-    lines = [header, sep]
-    for label, path, pct in _COMPARISON_ROWS:
-        vals = [_dig(results.get(k) or {}, path) for k in keys]
-        present = [v for v in vals if isinstance(v, (int, float))]
-        best = max(present) if present else None
+    fine_tuned = LLMS + ENCODERS
+    best = {k: max(results[n][k] for n in fine_tuned if results[n][k] is not None) for _, k in _RESULT_COLUMNS}
+    lines = ["| System | " + " | ".join(h for h, _ in _RESULT_COLUMNS) + " |",
+             "|--------|" + "|".join([":---:"] * len(_RESULT_COLUMNS)) + "|"]
+    for label, name in _RESULT_ROWS:
         cells = []
-        for v in vals:
-            if not isinstance(v, (int, float)):
-                cells.append("N/A")
-                continue
-            txt = f"{v:.2f}%" if pct else f"{v:.4f}"
-            cells.append(f"**{txt}**" if best is not None and abs(v - best) < 1e-12 else txt)
-        winner = "--"
-        if best is not None:
-            for k, v in zip(keys, vals):
-                if isinstance(v, (int, float)) and abs(v - best) < 1e-12:
-                    winner = short.get(k, k)
-                    break
-        lines.append(f"| **{label}** | " + " | ".join(cells) + f" | {winner} |")
+        for _, k in _RESULT_COLUMNS:
+            v = results[name][k]
+            bold = name in fine_tuned and v is not None and v == best[k]
+            cells.append(f"**{_cell(k, v)}**" if bold else _cell(k, v))
+        lines.append(f"| {label} | " + " | ".join(cells) + " |")
+    return "\n".join(lines)
+
+
+def build_model_table(results: dict, model_key: str) -> str:
+    """One model's scores next to those of its zero-shot base model."""
+    name = MODELS[model_key]["paper_name"]
+    ft, zs = results[name], results[f"{name} (ZS)"]
+    lines = ["| Metric | This model (fine-tuned) | Base model (zero-shot) |", "|--------|:---:|:---:|"]
+    for header, k in _RESULT_COLUMNS:
+        lines.append(f"| {header} | **{_cell(k, ft[k])}** | {_cell(k, zs[k])} |")
     return "\n".join(lines)
 
 
 def generate_main_readme() -> str:
     """Generate the main branch README with project overview + comparison."""
-    root = get_project_root()
+    r = load_results()
+    vote = r[VOTE_NAME]
+    exact_gain = [r[n]["f1"] / r[f"{n} (ZS)"]["f1"] for n in LLMS]
+    pair_gain = [r[n]["pair"] / r[f"{n} (ZS)"]["pair"] for n in LLMS]
+    top = ["Qwen 2.5-7B", "Llama 3.1-8B"]
+    pair_lead = max(r[a]["pair"] - r[b]["pair"] for a in top for b in ENCODERS)
+    macro_lead = max(r[a]["macro"] - r[b]["macro"] for a in top for b in ENCODERS)
 
-    # Load all eval results
-    results = {}
-    for key, cfg in MODELS.items():
-        model_dir = root / cfg["local_dir"]
-        results[key] = load_eval_results(model_dir)
-
-    comparison_table = build_comparison_table(results)
+    model_rows = "\n".join(
+        f"| **{cfg['paper_name']}** | `{cfg['branch']}` | "
+        f"[{cfg['base_model_full']}](https://huggingface.co/{cfg['base_model_full']}) | "
+        f"{LICENSE_NAMES[cfg['license']]} |"
+        for cfg in MODELS.values())
+    licenses = {}
+    for cfg in MODELS.values():
+        licenses.setdefault(cfg["license"], []).append(f"`{cfg['branch']}`")
+    license_text = " ".join(
+        f"**Built with Llama.** The {' and '.join(b)} branch is governed by the "
+        "[Llama 3.1 Community License](https://www.llama.com/llama3_1/license/) and the "
+        "[Llama 3.1 Acceptable Use Policy](https://www.llama.com/llama3_1/use-policy/)."
+        if lic == "llama3.1" else
+        f"The {' and '.join(b)} {'branches are' if len(b) > 1 else 'branch is'} released under "
+        f"{LICENSE_NAMES[lic]}."
+        for lic, b in licenses.items())
 
     card = f"""---
 language:
@@ -211,176 +425,77 @@ tags:
   - unsloth
   - fine-tuned
 datasets:
-  - Sanatbek/aspect-based-sentiment-analysis-uzbek
+  - {DATASET_ID}
 pipeline_tag: text-generation
 ---
 
-# UzABSA-LLM — Uzbek Aspect-Based Sentiment Analysis
+# UzABSA-LLM: Uzbek Aspect-Based Sentiment Analysis
 
-Three open-source LLMs fine-tuned for **Aspect-Based Sentiment Analysis (ABSA)** in Uzbek, using QLoRA on [Sanatbek/aspect-based-sentiment-analysis-uzbek](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek) (6,175 examples, SemEVAL 2014 format).
+Three open 7–8B LLMs fine-tuned with QLoRA for **aspect-based sentiment analysis (ABSA)** of Uzbek reviews. Given a review, a model returns JSON listing the **aspect terms** and **aspect categories** it mentions, each with its **sentiment polarity**.
 
-Given an Uzbek text review, each model extracts **aspect terms**, **aspect categories**, and **sentiment polarities** as structured JSON.
+## Models
 
-## Available Models
+Each model is stored on its own branch; load it with `revision="<branch>"`.
 
-Each model is stored on a separate branch. Load with `revision=`:
+| Model | Branch | Base model | License |
+|-------|--------|------------|---------|
+{model_rows}
 
-| Model | Branch | Load Command |
-|-------|--------|--------------|
-| **Qwen 2.5-7B** | `qwen2.5-7b` | `AutoModelForCausalLM.from_pretrained("{REPO_ID}", revision="qwen2.5-7b")` |
-| **Llama 3.1-8B** | `llama3.1-8b` | `AutoModelForCausalLM.from_pretrained("{REPO_ID}", revision="llama3.1-8b")` |
-| **DeepSeek-R1-Distill-Qwen-7B** | `deepseek-r1-7b` | `AutoModelForCausalLM.from_pretrained("{REPO_ID}", revision="deepseek-r1-7b")` |
+Each branch holds the merged model (bf16 safetensors, 15–16 GB), the LoRA adapter (`lora_adapters/`, about 165 MB), and the run's `eval_results.json` and `experiment_summary.json`. The branch cards also show how to load only the adapter, or the model in 4-bit with Unsloth.
 
-> Each branch contains both the **full merged model** (safetensors) and the **LoRA adapter** (in `lora_adapters/`).
+## Results
 
-## Evaluation Results
+Scores on the 609 held-out UzABSA reviews (737 gold aspect terms). Bold marks the best single fine-tuned system in each column.
 
-All models evaluated on the same held-out validation set (609 examples).
+{build_results_table(r)}
 
-{comparison_table}
+{METRICS_NOTE}
 
-**Key findings:**
-- **Qwen 2.5-7B** leads in aspect term extraction (ATE) and achieves a perfect 100% JSON parse rate — the most reliable for structured output.
-- **Llama 3.1-8B** leads in sentiment classification accuracy and end-to-end pair-level F1, making it the best choice when sentiment precision matters most.
-- **DeepSeek-R1-Distill-Qwen-7B** trails on every headline F1 metric, a pattern consistent with R1-style reasoning distillation conferring no advantage on direct structured extraction.
+- **Fine-tuning is essential:** compared with zero-shot prompting of the same base models, it multiplies exact ATE F1 by {min(exact_gain):.1f}–{max(exact_gain):.1f} and pair F1 by {min(pair_gain):.1f}–{max(pair_gain):.1f}.
+- **Qwen and Llama form the top tier and are statistically tied** (paired bootstrap), so either is a sound choice. Qwen is the only LLM that returns valid JSON for every review.
+- **DeepSeek trails both.** Its pair-F1 gap to Llama is the only difference between fine-tuned systems that stays significant after Holm correction; it misses more aspects (lower recall) rather than producing broken output.
+- **Encoders versus LLMs:** on extraction alone, the 110M-parameter Uzbek BERT encoders are competitive (TahrirchiBERT has the highest precision and BERTbek the highest recall of the single systems). On joint prediction and sentiment, Qwen and Llama score higher than both encoders, by up to {100 * pair_lead:.1f} pair-F1 and {100 * macro_lead:.1f} macro-F1 points.
+- **A majority vote** that keeps a term when at least three of the five fine-tuned systems predict it reaches {vote['f1']:.3f} exact ATE F1 and {vote['pair']:.3f} pair F1, significantly above every single system, mainly through higher precision ({vote['p']:.3f}).
 
-## Quick Start
+## Quick start
 
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-# Load the best model (Qwen 2.5-7B) for aspect extraction
-model_name = "{REPO_ID}"
-revision = "qwen2.5-7b"  # or "llama3.1-8b" or "deepseek-r1-7b"
-
-tokenizer = AutoTokenizer.from_pretrained(model_name, revision=revision)
-model = AutoModelForCausalLM.from_pretrained(
-    model_name,
-    revision=revision,
-    torch_dtype="auto",
-    device_map="auto",
-)
-
-# Prepare input (ChatML format)
-messages = [
-    {{"role": "system", "content": "Siz aspect-based sentiment analysis mutaxassisisiz. Berilgan sharh matnidan aspect termlarni, ularning kategoriyalarini va sentiment polarligini JSON formatida chiqaring."}},
-    {{"role": "user", "content": "Sharh: Ovqat mazali, lekin xizmat juda sekin edi."}}
-]
-
-text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-inputs = tokenizer(text, return_tensors="pt").to(model.device)
-
-outputs = model.generate(**inputs, max_new_tokens=512, temperature=0.1, do_sample=True)
-response = tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-print(response)
+```bash
+pip install transformers accelerate
 ```
 
-**Expected output:**
-```json
-{{
-  "aspects": [
-    {{"aspect": "ovqat", "category": "Taom sifati", "sentiment": "ijobiy"}},
-    {{"aspect": "xizmat", "category": "Xizmat ko'rsatish", "sentiment": "salbiy"}}
-  ]
-}}
-```
+{render_quickstart("qwen2.5-7b", '  # or "llama3.1-8b", "deepseek-r1-7b"')}
+{example_answer()}
+{EVAL_NOTE}
 
-## Using LoRA Adapters Only
+## Output format
 
-For smaller downloads (~154 MB vs ~14 GB), use the LoRA adapter with the original base model:
+{OUTPUT_FORMAT}
 
-```python
-from peft import PeftModel
-from transformers import AutoModelForCausalLM, AutoTokenizer
+## Training
 
-# Load base model
-base_model = AutoModelForCausalLM.from_pretrained(
-    "Qwen/Qwen2.5-7B-Instruct",
-    torch_dtype="auto",
-    device_map="auto",
-)
-tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-7B-Instruct")
+The three models share one configuration, fixed in advance:
 
-# Apply LoRA adapter from the repo
-model = PeftModel.from_pretrained(
-    base_model,
-    "{REPO_ID}",
-    revision="qwen2.5-7b",
-    subfolder="lora_adapters",
-)
-```
+{training_table()}
 
-## Training Details
+{DATA_TEXT}
 
-All three models were trained with **identical hyperparameters** for fair comparison:
+**Hardware.** One NVIDIA RTX A6000 (48 GB), CUDA 12.4, PyTorch 2.6.0.
 
-| Parameter | Value |
-|-----------|-------|
-| Framework | Unsloth + HuggingFace TRL (SFTTrainer) |
-| Quantization | 4-bit NF4 (QLoRA) |
-| LoRA rank (r) | 16 |
-| LoRA alpha | 32 |
-| LoRA dropout | 0.05 |
-| Target modules | q, k, v, o, gate, up, down projections |
-| Learning rate | 2e-4 |
-| Effective batch size | 16 (4 × 4 gradient accumulation) |
-| Max steps | 1,000 |
-| Warmup | 10% |
-| Scheduler | Cosine |
-| Optimizer | AdamW 8-bit |
-| Precision | bf16 |
-| Max sequence length | 2,048 tokens |
-| Seed | 42 |
+**Corrected release (2026-08-29).** All three models were retrained after two data-pipeline fixes: the training examples had carried the literal string `"None"` as their system prompt, and 61 of the 609 held-out reviews had an exact-text twin in training. Scores of weights uploaded before that date are not comparable with the ones above; each branch card has the details.
 
-**Training data:** [Sanatbek/aspect-based-sentiment-analysis-uzbek](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek) — 6,175 Uzbek restaurant reviews with aspect-level annotations (SemEVAL 2014 format), split 90/10 into 5,480 train / 609 validation.
+## Code and data
 
-**Hardware:** NVIDIA RTX A6000 (48 GB VRAM), Windows 11, CUDA 12.4, PyTorch 2.6.0
-
-| Model | Training Time | Final Train Loss | Best Eval Loss |
-|-------|:------------:|:----------------:|:--------------:|
-| Qwen 2.5-7B | 49 min | 0.401 | 0.366 |
-| Llama 3.1-8B | 60 min | 0.287 | 0.279 |
-| DeepSeek-R1-7B | 62 min | 0.415 | 0.336 |
-
-## Task Format
-
-**Input:** Uzbek text review + structured system prompt (ChatML)
-
-**Output:** JSON with extracted aspects:
-```json
-{{
-  "aspects": [
-    {{
-      "aspect": "<aspect term in original language>",
-      "category": "<aspect category>",
-      "sentiment": "ijobiy | salbiy | neytral"
-    }}
-  ]
-}}
-```
+- **Code** (training, evaluation, significance tests and the annotation pipeline): [{GITHUB_URL.removeprefix("https://")}]({GITHUB_URL})
+- **Training data:** [{DATASET_ID}](https://huggingface.co/datasets/{DATASET_ID})
+- **Multi-domain silver corpus** (5,038 reviews from 23 business domains, annotated by an earlier Qwen checkpoint and scored by a panel of LLM judges): [doi:{CORPUS_DOI}](https://doi.org/{CORPUS_DOI})
 
 ## Citation
 
-If you use these models in your research, please cite:
-
-```bibtex
-@misc{{uzabsa-llm-2026,
-  title={{UzABSA-LLM: Fine-tuned Large Language Models for Uzbek Aspect-Based Sentiment Analysis}},
-  author={{Sanatbek}},
-  year={{2026}},
-  url={{https://huggingface.co/{REPO_ID}}},
-  note={{QLoRA fine-tuned Qwen 2.5-7B, Llama 3.1-8B, and DeepSeek-R1-Distill-Qwen-7B}}
-}}
-```
-
-## Project Repository
-
-Full source code, training scripts, evaluation pipeline, and research log:
-**[GitHub: UzABSA-LLM](https://github.com/Sanatbek/UzABSA-LLM)**
+{CITATION}
 
 ## License
 
-Apache 2.0
+{license_text}
 """
     return card.strip() + "\n"
 
@@ -388,42 +503,15 @@ Apache 2.0
 def generate_model_readme(model_key: str) -> str:
     """Generate a model card for a specific model branch."""
     cfg = MODELS[model_key]
-    root = get_project_root()
-    model_dir = root / cfg["local_dir"]
-
-    eval_data = load_eval_results(model_dir) or {}
-    exp_data = load_experiment_summary(model_dir) or {}
-
-    # Extract metrics safely
-    ate = eval_data.get("aspect_term_extraction", {})
-    pairs = eval_data.get("aspect_polarity_pairs", {})
-    exact = ate.get("exact_match", {})
-    partial = ate.get("partial_match", {})
-
-    ate_exact_f1 = exact.get("f1", "N/A")
-    ate_partial_f1 = partial.get("f1", "N/A")
-    pair_f1 = pairs.get("pair_f1", "N/A")
-    sent_acc = pairs.get("sentiment_accuracy", "N/A")
-    sent_f1 = pairs.get("sentiment_macro_f1", "N/A")
-    parse_rate = eval_data.get("json_parse_rate", "N/A")
-
-    # Training info
-    tr = exp_data.get("training_results", {})
-    curves = exp_data.get("training_curves_summary", {})
-    final_loss = tr.get("final_train_loss", "N/A")
-    best_eval = curves.get("best_eval_loss", "N/A")
-    train_time_min = curves.get("total_training_time_min", "N/A")
-
-    # Format numbers
-    def fmt(v, decimals=4):
-        if isinstance(v, (int, float)):
-            return f"{v:.{decimals}f}"
-        return str(v)
+    results = load_results()
+    s = results[cfg["paper_name"]]
+    notice = LLAMA_NOTICE + "\n\n" if cfg["license"] == "llama3.1" else ""
+    example = example_answer() if model_key == "qwen2.5-7b" else ""
 
     card = f"""---
 language:
   - uz
-license: apache-2.0
+license: {cfg['license']}
 base_model: {cfg['base_model_full']}
 tags:
   - aspect-based-sentiment-analysis
@@ -436,7 +524,7 @@ tags:
   - lora
   - peft
 datasets:
-  - Sanatbek/aspect-based-sentiment-analysis-uzbek
+  - {DATASET_ID}
 pipeline_tag: text-generation
 model-index:
   - name: {cfg['display_name']}
@@ -445,55 +533,42 @@ model-index:
           type: token-classification
           name: Aspect Term Extraction
         dataset:
-          name: Uzbek ABSA (SemEVAL format)
-          type: Sanatbek/aspect-based-sentiment-analysis-uzbek
+          name: UzABSA (SemEval-2014 format)
+          type: {DATASET_ID}
           split: validation
         metrics:
           - type: f1
-            value: {fmt(ate_exact_f1)}
+            value: {s['f1']}
             name: ATE Exact F1
           - type: f1
-            value: {fmt(ate_partial_f1)}
-            name: ATE Partial F1
+            value: {s['partial']}
+            name: ATE Partial F1 (one-to-one)
+          - type: f1
+            value: {s['pair']}
+            name: Pair F1
       - task:
           type: text-classification
           name: Aspect Sentiment Classification
         dataset:
-          name: Uzbek ABSA (SemEVAL format)
-          type: Sanatbek/aspect-based-sentiment-analysis-uzbek
+          name: UzABSA (SemEval-2014 format)
+          type: {DATASET_ID}
           split: validation
         metrics:
           - type: accuracy
-            value: {fmt(sent_acc)}
+            value: {s['acc']}
             name: Sentiment Accuracy
           - type: f1
-            value: {fmt(sent_f1)}
+            value: {s['macro']}
             name: Sentiment Macro-F1
 ---
 
 # {cfg['display_name']}
 
-A **{cfg['params']}** parameter LLM fine-tuned for **Aspect-Based Sentiment Analysis (ABSA)** in Uzbek using QLoRA. Extracts aspect terms, categories, and sentiment polarities from Uzbek text reviews as structured JSON.
+{notice}{'An' if cfg['params'].startswith('8') else 'A'} **{cfg['params']}**-parameter LLM fine-tuned with QLoRA for **aspect-based sentiment analysis (ABSA)** of Uzbek reviews. Given a review, it returns JSON listing the aspect terms and aspect categories it mentions, each with its sentiment polarity.
 
-> This is the **`{cfg['branch']}`** branch of [{REPO_ID}](https://huggingface.co/{REPO_ID}). See the [main branch](https://huggingface.co/{REPO_ID}) for a comparison of all models.
+> This is the **`{cfg['branch']}`** branch of [{REPO_ID}](https://huggingface.co/{REPO_ID}). The [main page](https://huggingface.co/{REPO_ID}) compares the three models.
 
-> [!IMPORTANT]
-> **Corrected release (2026-08-29).** These weights supersede an earlier upload on
-> this branch. Two defects in the data pipeline were found and fixed, and every
-> model was retrained from scratch:
->
-> 1. **Malformed system prompt.** The preprocessing script passed
->    `system_prompt=None`, which overrode the default instead of selecting it, so
->    all 5,480 training examples carried the literal string `"None"` as their
->    system prompt while inference served the real Uzbek instruction. Training and
->    inference were therefore mismatched.
-> 2. **Train/evaluation overlap.** The split was drawn over annotation records
->    without deduplication, so 61 of 609 evaluation items (10.0%) had an
->    exact-text twin in training. The split is now grouped by normalised review
->    text; sizes are unchanged (5,480/609).
->
-> If you downloaded this branch before 2026-08-29, please re-pull. Metrics below
-> come from the corrected pipeline and are not comparable to the earlier card.
+{CORRECTED_RELEASE}
 
 ## Model Details
 
@@ -502,76 +577,33 @@ A **{cfg['params']}** parameter LLM fine-tuned for **Aspect-Based Sentiment Anal
 | Base model | [{cfg['base_model_full']}](https://huggingface.co/{cfg['base_model_full']}) |
 | Architecture | {cfg['architecture']} |
 | Parameters | {cfg['params']} |
-| Fine-tuning method | QLoRA (4-bit NF4) |
-| Framework | Unsloth + HuggingFace TRL |
-| Task | Aspect-Based Sentiment Analysis |
+| Fine-tuning method | QLoRA (4-bit NF4), Unsloth + TRL |
+| Task | Aspect-based sentiment analysis |
 | Language | Uzbek (uz) |
-| Merged model size | {cfg['merged_size']} |
-| LoRA adapter size | {cfg['lora_size']} |
+| Merged model size | {cfg['merged_size']} (bf16 safetensors) |
+| LoRA adapter size | {cfg['lora_size']} (`lora_adapters/`) |
 
 ## Evaluation Results
 
-Evaluated on 609 held-out validation examples:
+Scores on the 609 held-out UzABSA reviews (737 gold aspect terms), next to the base model prompted zero-shot with the same prompt:
 
-| Metric | Score |
-|--------|:-----:|
-| **ATE Exact F1** | {fmt(ate_exact_f1)} |
-| **ATE Partial F1** | {fmt(ate_partial_f1)} |
-| **Pair F1** (aspect + sentiment) | {fmt(pair_f1)} |
-| **Sentiment Accuracy** | {fmt(sent_acc)} |
-| **Sentiment Macro-F1** | {fmt(sent_f1)} |
-| **JSON Parse Rate** | {parse_rate}% |
+{build_model_table(results, model_key)}
+
+{METRICS_NOTE} `eval_results.json` holds the scores written at training time; its partial F1 uses greedy instead of one-to-one matching.
 
 ## Usage
 
-### Load Merged Model (Recommended)
+### Merged model
 
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-model = AutoModelForCausalLM.from_pretrained(
-    "{REPO_ID}",
-    revision="{cfg['branch']}",
-    torch_dtype="auto",
-    device_map="auto",
-)
-tokenizer = AutoTokenizer.from_pretrained("{REPO_ID}", revision="{cfg['branch']}")
-
-messages = [
-    {{"role": "system", "content": "Siz aspect-based sentiment analysis mutaxassisisiz. Berilgan sharh matnidan aspect termlarni, ularning kategoriyalarini va sentiment polarligini JSON formatida chiqaring."}},
-    {{"role": "user", "content": "Sharh: Ovqat mazali, lekin xizmat juda sekin edi."}}
-]
-
-text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-inputs = tokenizer(text, return_tensors="pt").to(model.device)
-
-outputs = model.generate(**inputs, max_new_tokens=512, temperature=0.1, do_sample=True)
-response = tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-print(response)
+```bash
+pip install transformers accelerate
 ```
 
-### Load LoRA Adapter Only (~{cfg['lora_size']})
+{render_quickstart(cfg['branch'])}
+{example}
+{EVAL_NOTE}
 
-```python
-from peft import PeftModel
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-base = AutoModelForCausalLM.from_pretrained(
-    "{cfg['base_model_full']}",
-    torch_dtype="auto",
-    device_map="auto",
-)
-tokenizer = AutoTokenizer.from_pretrained("{cfg['base_model_full']}")
-
-model = PeftModel.from_pretrained(
-    base,
-    "{REPO_ID}",
-    revision="{cfg['branch']}",
-    subfolder="lora_adapters",
-)
-```
-
-### With Unsloth (2x Faster Inference)
+### 4-bit with Unsloth, as in the evaluation
 
 ```python
 from unsloth import FastLanguageModel
@@ -583,80 +615,56 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     load_in_4bit=True,
 )
 FastLanguageModel.for_inference(model)
+# then build the prompt and generate as above
 ```
+
+### LoRA adapter only ({cfg['lora_size']})
+
+```python
+from peft import PeftModel
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+base = AutoModelForCausalLM.from_pretrained("{cfg['base_model_full']}", dtype="auto", device_map="auto")
+tokenizer = AutoTokenizer.from_pretrained("{cfg['base_model_full']}")
+model = PeftModel.from_pretrained(base, "{REPO_ID}", revision="{cfg['branch']}", subfolder="lora_adapters")
+# then build the prompt and generate as above
+```
+
+## Output Format
+
+{OUTPUT_FORMAT}
 
 ## Training Configuration
 
-| Parameter | Value |
-|-----------|-------|
-| LoRA rank (r) | {TRAINING_CONFIG['lora_r']} |
-| LoRA alpha | {TRAINING_CONFIG['lora_alpha']} |
-| LoRA dropout | {TRAINING_CONFIG['lora_dropout']} |
-| Target modules | q, k, v, o, gate, up, down projections |
-| Learning rate | {TRAINING_CONFIG['learning_rate']} |
-| Effective batch size | {TRAINING_CONFIG['effective_batch_size']} (4 × 4) |
-| Max steps | {TRAINING_CONFIG['max_steps']} |
-| Warmup | {TRAINING_CONFIG['warmup_ratio']} |
-| Scheduler | {TRAINING_CONFIG['scheduler']} |
-| Optimizer | {TRAINING_CONFIG['optimizer']} |
-| Precision | {TRAINING_CONFIG['precision']} |
-| Max seq length | {TRAINING_CONFIG['max_seq_length']} |
-| Seed | {TRAINING_CONFIG['seed']} |
-| Final train loss | {fmt(final_loss)} |
-| Best eval loss | {fmt(best_eval) if isinstance(best_eval, float) else best_eval} |
-| Training time | {fmt(train_time_min, 1) if isinstance(train_time_min, (int, float)) else train_time_min} min |
+{training_table()}
 
-## Training Data
+{DATA_TEXT}
 
-[Sanatbek/aspect-based-sentiment-analysis-uzbek](https://huggingface.co/datasets/Sanatbek/aspect-based-sentiment-analysis-uzbek) — 6,175 Uzbek restaurant reviews with aspect-level annotations (SemEVAL 2014 format).
-
-- **Train split:** 5,480 examples
-- **Validation split:** 609 examples
-- **Format:** ChatML instruction-response pairs
-
-## Hardware
-
-- **GPU:** NVIDIA RTX A6000 (48 GB VRAM)
-- **OS:** Windows 11
-- **CUDA:** 12.4
-- **PyTorch:** 2.6.0
+**Hardware.** One NVIDIA RTX A6000 (48 GB), CUDA 12.4, PyTorch 2.6.0. The run's log is in `experiment_summary.json`.
 
 ## Repository Contents
 
-This branch contains:
+```
+├── config.json                           # model config
+├── model-0000X-of-00004.safetensors      # merged weights (4 shards)
+├── model.safetensors.index.json          # weight index
+├── tokenizer files
+├── lora_adapters/                        # LoRA adapter (lightweight alternative)
+├── eval_results.json                     # scores written at training time
+└── experiment_summary.json               # training configuration and log
+```
 
-```
-├── config.json                  # Model config
-├── model-00001-of-00004.safetensors   # Merged weights (shard 1/4)
-├── model-00002-of-00004.safetensors   # Merged weights (shard 2/4)
-├── model-00003-of-00004.safetensors   # Merged weights (shard 3/4)
-├── model-00004-of-00004.safetensors   # Merged weights (shard 4/4)
-├── model.safetensors.index.json       # Weight index
-├── tokenizer.json               # Tokenizer
-├── tokenizer_config.json        # Tokenizer config
-├── special_tokens_map.json      # Special tokens
-├── lora_adapters/               # LoRA adapter (lightweight alternative)
-│   ├── adapter_config.json
-│   ├── adapter_model.safetensors
-│   └── tokenizer files...
-└── eval_results.json            # Full evaluation metrics
-```
+## Code
+
+Training, evaluation and significance tests: [{GITHUB_URL.removeprefix("https://")}]({GITHUB_URL})
 
 ## Citation
 
-```bibtex
-@misc{{uzabsa-llm-2026,
-  title={{UzABSA-LLM: Fine-tuned Large Language Models for Uzbek Aspect-Based Sentiment Analysis}},
-  author={{Sanatbek}},
-  year={{2026}},
-  url={{https://huggingface.co/{REPO_ID}}},
-  note={{{cfg['display_name']} — QLoRA fine-tuned on Uzbek ABSA}}
-}}
-```
+{CITATION}
 
 ## License
 
-Apache 2.0
+{LLAMA_NOTICE if cfg['license'] == 'llama3.1' else LICENSE_NAMES[cfg['license']] + '.'}
 """
     return card.strip() + "\n"
 
@@ -701,8 +709,8 @@ def push_main_branch(repo_id: str, dry_run: bool = False):
     print(f"\n  ✓ Main branch updated: https://huggingface.co/{repo_id}")
 
 
-def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False):
-    """Push a model branch with merged weights + LoRA adapters."""
+def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False, card_only: bool = False):
+    """Push a model branch with merged weights + LoRA adapters, or only its card."""
     from huggingface_hub import HfApi
 
     cfg = MODELS[model_key]
@@ -712,10 +720,32 @@ def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False):
     merged_dir = model_dir / "merged_model"
     lora_dir = model_dir / "lora_adapters"
     branch = cfg["branch"]
+    preview_path = root / "outputs" / "hub_preview" / f"{branch}_README.md"
 
     print(f"\n{'=' * 60}")
-    print(f"  Pushing {cfg['display_name']} to {repo_id} (branch: {branch})")
+    print(f"  Pushing {cfg['display_name']} to {repo_id} (branch: {branch}){' [card only]' if card_only else ''}")
     print(f"{'=' * 60}")
+
+    # Generate model card
+    readme_content = generate_model_readme(model_key)
+
+    if card_only:
+        if dry_run:
+            print(f"\n  [DRY RUN] Would upload README.md to branch '{branch}'")
+            preview_path.parent.mkdir(parents=True, exist_ok=True)
+            preview_path.write_text(readme_content, encoding="utf-8")
+            print(f"  Preview saved to: {preview_path}")
+            return True
+        api.upload_file(
+            path_or_fileobj=readme_content.encode("utf-8"),
+            path_in_repo="README.md",
+            repo_id=repo_id,
+            repo_type="model",
+            revision=branch,
+            commit_message=f"Update model card for {cfg['display_name']}",
+        )
+        print(f"\n  ✓ Card updated: https://huggingface.co/{repo_id}/tree/{branch}")
+        return True
 
     # Validate paths
     if not merged_dir.exists():
@@ -724,9 +754,6 @@ def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False):
     if not lora_dir.exists():
         print(f"  ERROR: LoRA adapters not found at {lora_dir}")
         return False
-
-    # Generate model card
-    readme_content = generate_model_readme(model_key)
 
     # Gather files to upload
     files_to_upload = []
@@ -767,7 +794,6 @@ def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False):
     if dry_run:
         print(f"\n  [DRY RUN] Would upload {total_files} files to branch '{branch}'")
         # Save model card for review
-        preview_path = root / "outputs" / "hub_preview" / f"{branch}_README.md"
         preview_path.parent.mkdir(parents=True, exist_ok=True)
         preview_path.write_text(readme_content, encoding="utf-8")
         print(f"  Preview saved to: {preview_path}")
@@ -786,19 +812,8 @@ def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False):
         else:
             print(f"\n  Branch creation note: {e}")
 
-    # Upload README first
-    print(f"\n  Uploading README.md...")
-    api.upload_file(
-        path_or_fileobj=readme_content.encode("utf-8"),
-        path_in_repo="README.md",
-        repo_id=repo_id,
-        repo_type="model",
-        revision=branch,
-        commit_message=f"Add model card for {cfg['display_name']}",
-    )
-
-    # Upload all model files using upload_folder for efficiency
-    # First, create a temporary commit message
+    # Weights first and the card last, so an interrupted upload never leaves a
+    # card (or an experiment_summary.json) that describes weights not yet there
     print(f"\n  Uploading model files (this may take a while for {cfg['merged_size']})...")
 
     # Upload merged model folder
@@ -808,6 +823,7 @@ def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False):
         repo_type="model",
         revision=branch,
         commit_message=f"Upload merged model weights for {cfg['display_name']}",
+        ignore_patterns=["README.md"],
     )
     print(f"  ✓ Merged model uploaded")
 
@@ -836,6 +852,16 @@ def push_model_branch(model_key: str, repo_id: str, dry_run: bool = False):
             )
             print(f"  ✓ {repo_path} uploaded")
 
+    print(f"\n  Uploading README.md...")
+    api.upload_file(
+        path_or_fileobj=readme_content.encode("utf-8"),
+        path_in_repo="README.md",
+        repo_id=repo_id,
+        repo_type="model",
+        revision=branch,
+        commit_message=f"Add model card for {cfg['display_name']}",
+    )
+
     print(f"\n  ✓ Branch '{branch}' complete: https://huggingface.co/{repo_id}/tree/{branch}")
     return True
 
@@ -852,6 +878,7 @@ def main():
 Examples:
   python scripts/push_to_hub.py --all                    # Push everything
   python scripts/push_to_hub.py --all --dry-run          # Preview without uploading
+  python scripts/push_to_hub.py --all --card-only        # Update the cards, not the weights
   python scripts/push_to_hub.py --branch main            # Update main README only
   python scripts/push_to_hub.py --branch qwen2.5-7b      # Push Qwen model only
   python scripts/push_to_hub.py --branch llama3.1-8b     # Push Llama model only
@@ -873,6 +900,10 @@ Examples:
     parser.add_argument(
         "--dry-run", action="store_true",
         help="Preview what would be uploaded without actually uploading"
+    )
+    parser.add_argument(
+        "--card-only", action="store_true",
+        help="Upload only the model cards (README.md), not the weights"
     )
 
     args = parser.parse_args()
@@ -902,7 +933,7 @@ Examples:
         if branch == "main":
             push_main_branch(args.repo_id, dry_run=args.dry_run)
         else:
-            push_model_branch(branch, args.repo_id, dry_run=args.dry_run)
+            push_model_branch(branch, args.repo_id, dry_run=args.dry_run, card_only=args.card_only)
 
     print(f"\n{'#' * 60}")
     print(f"  Done! Visit: https://huggingface.co/{args.repo_id}")

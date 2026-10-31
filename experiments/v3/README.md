@@ -109,11 +109,6 @@ In total, 281 gold annotations changed in 169 reviews.
 | Judge–human tier κ = 0.47 with a single small judge | `judge-calibrate` | **Done:** on the released tiers the two-judge panel reaches ρ = 0.78 (p < 0.001 against the published judge) and κ = 0.56 (p = 0.08); in the paper since 31 October 2026 | $0.62, actual |
 | Numbers are hard to trace to files | `collect` | Registry, manifest and per-job logs | Seconds |
 
-## Before submitting (no GPU needed)
-
-1. **Stale checkpoints on Hugging Face.** The `llama3.1-8b` and `deepseek-r1-7b` branches were last updated on 25 February 2026, before the runs behind the paper's numbers, yet the paper says the models are public. On the GPU machine, run `python scripts/push_to_hub.py --branch llama3.1-8b --dry-run` and then the same command without `--dry-run`. Repeat for `deepseek-r1-7b`. `python scripts/collect_v3.py` re-checks the branches.
-2. **Uncommitted code.** `scripts/robustness_analysis.py` and `paper_materials/revision_v2/robustness/robustness.json`, which produce Table 3 and Figs. 4–5, are not in git. Commit and push them together with this folder.
-
 ## How to run
 
 Run from the repository root. Every stage skips jobs whose output already exists, so you can run a command again after a crash. `--force` reruns finished jobs and `--dry-run` prints the commands without running them.
