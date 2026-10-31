@@ -483,6 +483,12 @@ The three models share one configuration, fixed in advance:
 
 **Corrected release (2026-08-29).** All three models were retrained after two data-pipeline fixes: the training examples had carried the literal string `"None"` as their system prompt, and 61 of the 609 held-out reviews had an exact-text twin in training. Scores of weights uploaded before that date are not comparable with the ones above; each branch card has the details.
 
+## Reproduction and seed variance
+
+The scores above come from one run per system, and those runs' checkpoints were chosen on the same 609 reviews they are scored on. A stricter rerun is under way in [`experiments/v3/`]({GITHUB_URL}/tree/main/experiments/v3): it carves a separate dev split out of the training data, chooses every checkpoint and the corpus annotator on dev alone, and repeats each system over three seeds so results can be reported as mean ± sd rather than a single number. The test split is these same 609 reviews, byte for byte, so the two sets of numbers stay comparable.
+
+Expect small downward corrections wherever a published score benefited from choosing a checkpoint on the test set. `experiments/v3/SUMMARY.md` and `experiments/v3/registry.json` hold the current state, both rebuilt from the prediction files rather than written by hand.
+
 ## Code and data
 
 - **Code** (training, evaluation, significance tests and the annotation pipeline): [{GITHUB_URL.removeprefix("https://")}]({GITHUB_URL})
