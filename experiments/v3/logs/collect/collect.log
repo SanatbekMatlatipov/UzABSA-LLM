@@ -1,0 +1,49 @@
+# 2026-10-30T23:32:56 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# PYTHONHASHSEED=0 /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/collect_v3.py
+registry: 6 paper systems, 0 v3 runs, 2 ensembles, 0 tests; manifest: 68 files
+missing: LLM runs with test predictions: 0/9 (run_v3.py gpu / encoders)
+missing: encoder runs with test predictions: 0/6 (run_v3.py gpu / encoders)
+missing: judge calibration against the 150 human ratings (run_v3.py judge-calibrate)
+missing: judging of all 5,038 released annotations (run_v3.py judge-release)
+missing: re-annotation and judging of the corpus (run_v3.py annotate judge-v3 assemble)
+Saved -> experiments/v3/registry.json, experiments/v3/SUMMARY.md, experiments/v3/MANIFEST.json
+# exit 0 after 1s
+# 2026-10-31T00:30:20 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# PYTHONHASHSEED=0 /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/collect_v3.py
+2026-10-31 00:30:21,605 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/qwen2.5-7b "HTTP/1.1 200 OK"
+2026-10-31 00:30:22,014 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/llama3.1-8b "HTTP/1.1 200 OK"
+2026-10-31 00:30:22,446 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/deepseek-r1-7b "HTTP/1.1 200 OK"
+registry: 6 paper systems, 0 v3 runs, 2 ensembles, 0 tests; manifest: 91 files
+missing: Llama 3.1-8B: the Hub branch `llama3.1-8b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)
+missing: DeepSeek-R1-7B: the Hub branch `deepseek-r1-7b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)
+missing: LLM runs with test predictions: 0/9 (run_v3.py gpu / encoders)
+missing: encoder runs with test predictions: 0/6 (run_v3.py gpu / encoders)
+missing: re-annotation and judging of the corpus (run_v3.py annotate judge-v3 assemble)
+Saved -> experiments/v3/registry.json, experiments/v3/SUMMARY.md, experiments/v3/MANIFEST.json
+# exit 0 after 3s
+# 2026-10-31T01:26:52 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# PYTHONHASHSEED=0 /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/collect_v3.py
+2026-10-31 01:26:53,975 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/qwen2.5-7b "HTTP/1.1 200 OK"
+2026-10-31 01:26:54,899 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/llama3.1-8b "HTTP/1.1 200 OK"
+2026-10-31 01:26:55,275 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/deepseek-r1-7b "HTTP/1.1 200 OK"
+registry: 6 paper systems, 0 v3 runs, 2 ensembles, 0 tests; manifest: 93 files
+missing: Llama 3.1-8B: the Hub branch `llama3.1-8b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)
+missing: DeepSeek-R1-7B: the Hub branch `deepseek-r1-7b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)
+missing: LLM runs with test predictions: 0/9 (run_v3.py gpu / encoders)
+missing: encoder runs with test predictions: 0/6 (run_v3.py gpu / encoders)
+missing: re-annotation and judging of the corpus (run_v3.py annotate judge-v3 assemble)
+Saved -> experiments/v3/registry.json, experiments/v3/SUMMARY.md, experiments/v3/MANIFEST.json
+# exit 0 after 3s
+# 2026-10-31T01:27:15 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# PYTHONHASHSEED=0 /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/collect_v3.py
+2026-10-31 01:27:16,362 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/qwen2.5-7b "HTTP/1.1 200 OK"
+2026-10-31 01:27:16,762 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/llama3.1-8b "HTTP/1.1 200 OK"
+2026-10-31 01:27:17,120 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/Sanatbek/UzABSA-LLM/revision/deepseek-r1-7b "HTTP/1.1 200 OK"
+registry: 6 paper systems, 0 v3 runs, 2 ensembles, 0 tests; manifest: 93 files
+missing: Llama 3.1-8B: the Hub branch `llama3.1-8b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)
+missing: DeepSeek-R1-7B: the Hub branch `deepseek-r1-7b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)
+missing: LLM runs with test predictions: 0/9 (run_v3.py gpu / encoders)
+missing: encoder runs with test predictions: 0/6 (run_v3.py gpu / encoders)
+missing: re-annotation and judging of the corpus (run_v3.py annotate judge-v3 assemble)
+Saved -> experiments/v3/registry.json, experiments/v3/SUMMARY.md, experiments/v3/MANIFEST.json
+# exit 0 after 2s

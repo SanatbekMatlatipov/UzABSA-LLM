@@ -1,0 +1,56 @@
+# 2026-10-31T00:30:19 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/assemble_dataset.py --annotations data/annotated/reviews_annotated.json --judge-results experiments/v3/judge/release_v1/judge_results.json --output-dir experiments/v3/final_dataset_release
+2026-10-31 00:30:19,809 - __main__ - INFO - ============================================================
+2026-10-31 00:30:19,809 - __main__ - INFO - UzABSA-LLM: Final Dataset Assembly
+2026-10-31 00:30:19,809 - __main__ - INFO - ============================================================
+2026-10-31 00:30:19,809 - __main__ - INFO - Loading annotations: data/annotated/reviews_annotated.json
+2026-10-31 00:30:19,826 - __main__ - INFO - Loaded 5038 annotations
+2026-10-31 00:30:19,827 - __main__ - INFO - Loading judge results: experiments/v3/judge/release_v1/judge_results.json
+2026-10-31 00:30:19,861 - __main__ - INFO - Loaded judge scores for 5038 reviews
+2026-10-31 00:30:19,861 - __main__ - INFO - Merging annotations with judge scores...
+2026-10-31 00:30:19,867 - __main__ - INFO - Applying quality filter...
+2026-10-31 00:30:19,872 - __main__ - INFO - Saving final dataset...
+2026-10-31 00:30:19,934 - __main__ - INFO - Full dataset: experiments/v3/final_dataset_release/uzbek_multi_domain_absa_full.json (5038 reviews)
+2026-10-31 00:30:19,979 - __main__ - INFO - Silver dataset: experiments/v3/final_dataset_release/uzbek_multi_domain_absa_silver.json (3608 reviews)
+2026-10-31 00:30:20,023 - __main__ - INFO - Approved dataset: experiments/v3/final_dataset_release/uzbek_multi_domain_absa_approved.json (3608 reviews)
+2026-10-31 00:30:20,035 - __main__ - INFO - Flagged reviews: experiments/v3/final_dataset_release/reviews_flagged_for_review.json (972 reviews)
+2026-10-31 00:30:20,035 - __main__ - INFO - Dataset stats: experiments/v3/final_dataset_release/dataset_stats.json
+2026-10-31 00:30:20,050 - __main__ - INFO - JSONL dataset: experiments/v3/final_dataset_release/uzbek_multi_domain_absa.jsonl (3608 reviews)
+
+============================================================
+FINAL DATASET ASSEMBLY COMPLETE
+============================================================
+
+Total annotations: 5038
+Total judged: 5038
+  - Included (≥3.5): 3608
+  - Flagged (2.5-3.5): 972
+  - Excluded (<2.5): 458
+  - Unjudged: 0
+
+Total aspects: 9884
+Avg aspects/review: 1.96
+Domains: 23
+
+Judge score averages:
+  judge_completeness: 3.36
+  judge_accuracy: 4.50
+  judge_sentiment: 4.24
+  judge_relevance: 3.94
+  judge_overall: 3.73
+
+Polarity distribution: {'positive': 7422, 'negative': 1635, 'neutral': 827}
+
+Top 10 domains:
+  Restoran/Ovqatlanish: 1626
+  Bank/Moliya: 577
+  Boshqa: 507
+  To'lov tizimlari: 328
+  Elektron tijorat: 296
+  Ta'lim: 287
+  Tibbiyot/Sog'liqni saqlash: 285
+  Telekommunikatsiya: 234
+  Oziq-ovqat do'konlari: 215
+  Gul/Sovg'a: 173
+============================================================
+# exit 0 after 0s

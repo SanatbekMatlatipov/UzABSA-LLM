@@ -1,0 +1,139 @@
+{
+ "reviews_rechecked": 263,
+ "control_reviews": 60,
+ "gold_terms": {
+  "original": 737,
+  "cleaned": 738
+ },
+ "changes": {
+  "span fixed": 42,
+  "added": 101,
+  "removed": 100,
+  "polarity changed": 38
+ },
+ "reviews_changed": 169,
+ "control_reviews_changed": 4,
+ "unchecked_reviews": 346,
+ "unchecked_reviews_with_error_est": 23.1,
+ "outcomes_by_reason": {
+  "gold_term_at_most_1_system_predicts": {
+   "n": 152,
+   "not an aspect": 79,
+   "aspect, kept as is": 48,
+   "aspect, polarity changed": 15,
+   "aspect, span corrected": 10
+  },
+  "non_gold_term_3_systems_predict": {
+   "n": 130,
+   "aspect, kept as is": 65,
+   "not an aspect": 64,
+   "aspect, span corrected": 1
+  },
+  "other_gold": {
+   "n": 111,
+   "aspect, kept as is": 74,
+   "not an aspect": 24,
+   "aspect, polarity changed": 7,
+   "aspect, span corrected": 6
+  },
+  "other_model": {
+   "n": 63,
+   "not an aspect": 39,
+   "aspect, kept as is": 20,
+   "aspect, span corrected": 4
+  },
+  "control_gold": {
+   "n": 68,
+   "aspect, kept as is": 66,
+   "aspect, span corrected": 2
+  },
+  "gold_polarity_against_3_systems": {
+   "n": 29,
+   "aspect, polarity changed": 16,
+   "aspect, kept as is": 7,
+   "not an aspect": 6
+  },
+  "control_model": {
+   "n": 7,
+   "aspect, kept as is": 4,
+   "not an aspect": 3
+  },
+  "malformed_gold_span": {
+   "n": 15,
+   "not an aspect": 12,
+   "aspect, span corrected": 3
+  }
+ },
+ "scores": {
+  "Qwen 2.5-7B": {
+   "original": {
+    "ate_exact_f1": 0.7077,
+    "ate_partial_f1": 0.8008,
+    "pair_f1": 0.6448,
+    "sentiment_accuracy": 0.911
+   },
+   "cleaned": {
+    "ate_exact_f1": 0.7702,
+    "ate_partial_f1": 0.844,
+    "pair_f1": 0.7018,
+    "sentiment_accuracy": 0.9112
+   }
+  },
+  "Llama 3.1-8B": {
+   "original": {
+    "ate_exact_f1": 0.7036,
+    "ate_partial_f1": 0.8006,
+    "pair_f1": 0.651,
+    "sentiment_accuracy": 0.9252
+   },
+   "cleaned": {
+    "ate_exact_f1": 0.7516,
+    "ate_partial_f1": 0.8291,
+    "pair_f1": 0.7003,
+    "sentiment_accuracy": 0.9319
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "original": {
+    "ate_exact_f1": 0.6776,
+    "ate_partial_f1": 0.7874,
+    "pair_f1": 0.6034,
+    "sentiment_accuracy": 0.8905
+   },
+   "cleaned": {
+    "ate_exact_f1": 0.7213,
+    "ate_partial_f1": 0.8125,
+    "pair_f1": 0.6543,
+    "sentiment_accuracy": 0.9071
+   }
+  },
+  "TahrirchiBERT": {
+   "original": {
+    "ate_exact_f1": 0.7005,
+    "ate_partial_f1": 0.7865,
+    "pair_f1": 0.6225,
+    "sentiment_accuracy": 0.8893
+   },
+   "cleaned": {
+    "ate_exact_f1": 0.7563,
+    "ate_partial_f1": 0.831,
+    "pair_f1": 0.6868,
+    "sentiment_accuracy": 0.9088
+   }
+  },
+  "BERTbek": {
+   "original": {
+    "ate_exact_f1": 0.692,
+    "ate_partial_f1": 0.8,
+    "pair_f1": 0.608,
+    "sentiment_accuracy": 0.8786
+   },
+   "cleaned": {
+    "ate_exact_f1": 0.7395,
+    "ate_partial_f1": 0.8394,
+    "pair_f1": 0.6662,
+    "sentiment_accuracy": 0.9009
+   }
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "annotators": [
+  "A",
+  "B"
+ ],
+ "candidate_rows": 575,
+ "reviews": 263,
+ "is_aspect": {
+  "agreement": 0.97,
+  "kappa": 0.939
+ },
+ "polarity_when_both_yes": {
+  "n": 334,
+  "agreement": 0.949,
+  "kappa": 0.911
+ },
+ "same_span_when_both_yes": 1.0,
+ "reviews_fully_identical": 0.863,
+ "rows_to_adjudicate": 37
+}

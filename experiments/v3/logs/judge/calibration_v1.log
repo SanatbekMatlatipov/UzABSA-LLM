@@ -1,0 +1,324 @@
+# 2026-10-30T23:44:40 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# /opt/anaconda3/bin/python scripts/judge_panel.py calibrate --judges experiments/v3/judges.json --rubric v1 --workers 8 --out experiments/v3/judge/calibration_v1
+2026-10-30 23:44:41,008 - numexpr.utils - INFO - NumExpr defaulting to 12 threads.
+SKIP gpt-4o-mini: $OPENAI_API_KEY is not set
+SKIP gpt-4.1: $OPENAI_API_KEY is not set
+SKIP gemini-2.5-flash: $GEMINI_API_KEY is not set
+
+judge                                      rho_ovr  kappa  k_lin  agree  inc_prec
+gpt-4o-mini (published, v1)                 0.657  0.468  0.546  0.733 0.854
+Saved -> experiments/v3/judge/calibration_v1/calibration.json
+# exit 0 after 2s
+# 2026-10-30T23:52:34 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# /Users/sanatbek/code/UzABSA-LLM/.venv/bin/python3 scripts/judge_panel.py calibrate --judges experiments/v3/judges.json --rubric v1 --workers 8 --out experiments/v3/judge/calibration_v1
+SKIP gemini-2.5-flash: $GEMINI_API_KEY is not set
+gpt-4o-mini:   0%|          | 0/150 [00:00<?, ?it/s]2026-10-30 23:52:37,822 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:37,823 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:37,825 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:   1%|          | 1/150 [00:01<04:15,  1.72s/it]2026-10-30 23:52:37,968 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:   3%|▎         | 4/150 [00:01<00:53,  2.75it/s]2026-10-30 23:52:38,074 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:38,158 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:   4%|▍         | 6/150 [00:02<00:35,  4.06it/s]2026-10-30 23:52:38,374 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:38,526 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:   5%|▌         | 8/150 [00:02<00:31,  4.49it/s]2026-10-30 23:52:39,286 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:   6%|▌         | 9/150 [00:03<00:47,  2.95it/s]2026-10-30 23:52:39,448 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:   7%|▋         | 10/150 [00:03<00:41,  3.35it/s]2026-10-30 23:52:39,463 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:39,758 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:   8%|▊         | 12/150 [00:03<00:33,  4.18it/s]2026-10-30 23:52:39,802 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:39,857 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:39,984 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  10%|█         | 15/150 [00:03<00:22,  6.12it/s]2026-10-30 23:52:40,326 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  11%|█         | 16/150 [00:04<00:26,  5.05it/s]2026-10-30 23:52:40,602 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  11%|█▏        | 17/150 [00:04<00:28,  4.72it/s]2026-10-30 23:52:41,042 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  12%|█▏        | 18/150 [00:04<00:34,  3.80it/s]2026-10-30 23:52:41,304 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  13%|█▎        | 19/150 [00:05<00:34,  3.81it/s]2026-10-30 23:52:41,429 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  13%|█▎        | 20/150 [00:05<00:29,  4.40it/s]2026-10-30 23:52:41,442 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:41,485 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:41,554 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  15%|█▌        | 23/150 [00:05<00:16,  7.72it/s]2026-10-30 23:52:42,100 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:42,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  17%|█▋        | 25/150 [00:06<00:32,  3.90it/s]2026-10-30 23:52:42,654 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:43,146 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  18%|█▊        | 27/150 [00:07<00:32,  3.75it/s]2026-10-30 23:52:43,180 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:43,239 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:43,240 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:43,316 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  21%|██        | 31/150 [00:07<00:18,  6.31it/s]2026-10-30 23:52:43,892 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:44,133 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  22%|██▏       | 33/150 [00:08<00:26,  4.49it/s]2026-10-30 23:52:44,359 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  23%|██▎       | 34/150 [00:08<00:26,  4.43it/s]2026-10-30 23:52:44,569 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  23%|██▎       | 35/150 [00:08<00:25,  4.56it/s]2026-10-30 23:52:44,623 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:44,829 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  25%|██▍       | 37/150 [00:08<00:21,  5.25it/s]2026-10-30 23:52:44,947 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  25%|██▌       | 38/150 [00:08<00:19,  5.72it/s]2026-10-30 23:52:44,999 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:45,406 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  27%|██▋       | 40/150 [00:09<00:21,  5.13it/s]2026-10-30 23:52:46,133 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  27%|██▋       | 41/150 [00:10<00:33,  3.28it/s]2026-10-30 23:52:46,360 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  28%|██▊       | 42/150 [00:10<00:30,  3.49it/s]2026-10-30 23:52:46,396 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:46,568 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  29%|██▉       | 44/150 [00:10<00:22,  4.66it/s]2026-10-30 23:52:46,791 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  30%|███       | 45/150 [00:10<00:22,  4.60it/s]2026-10-30 23:52:46,912 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  31%|███       | 46/150 [00:10<00:20,  5.18it/s]2026-10-30 23:52:47,098 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  31%|███▏      | 47/150 [00:10<00:19,  5.25it/s]2026-10-30 23:52:47,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  32%|███▏      | 48/150 [00:11<00:18,  5.37it/s]2026-10-30 23:52:47,667 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  33%|███▎      | 49/150 [00:11<00:24,  4.10it/s]2026-10-30 23:52:48,365 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  33%|███▎      | 50/150 [00:12<00:37,  2.68it/s]2026-10-30 23:52:48,474 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  34%|███▍      | 51/150 [00:12<00:29,  3.36it/s]2026-10-30 23:52:48,603 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  35%|███▍      | 52/150 [00:12<00:24,  4.03it/s]2026-10-30 23:52:48,668 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:48,723 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  36%|███▌      | 54/150 [00:12<00:15,  6.07it/s]2026-10-30 23:52:49,013 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  37%|███▋      | 55/150 [00:12<00:18,  5.22it/s]2026-10-30 23:52:49,179 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  37%|███▋      | 56/150 [00:13<00:17,  5.35it/s]2026-10-30 23:52:49,587 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  38%|███▊      | 57/150 [00:13<00:22,  4.05it/s]2026-10-30 23:52:50,161 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  39%|███▊      | 58/150 [00:14<00:31,  2.96it/s]2026-10-30 23:52:50,175 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:50,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  40%|████      | 60/150 [00:14<00:19,  4.70it/s]2026-10-30 23:52:50,415 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  41%|████      | 61/150 [00:14<00:17,  5.14it/s]2026-10-30 23:52:50,534 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  41%|████▏     | 62/150 [00:14<00:15,  5.70it/s]2026-10-30 23:52:50,732 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  42%|████▏     | 63/150 [00:14<00:15,  5.47it/s]2026-10-30 23:52:50,821 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:51,375 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  43%|████▎     | 65/150 [00:15<00:20,  4.14it/s]2026-10-30 23:52:51,727 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  44%|████▍     | 66/150 [00:15<00:22,  3.73it/s]2026-10-30 23:52:51,763 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:51,822 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:52,073 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  46%|████▌     | 69/150 [00:15<00:15,  5.24it/s]2026-10-30 23:52:52,427 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  47%|████▋     | 70/150 [00:16<00:17,  4.50it/s]2026-10-30 23:52:52,768 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  47%|████▋     | 71/150 [00:16<00:19,  4.03it/s]2026-10-30 23:52:52,771 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:53,141 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  49%|████▊     | 73/150 [00:17<00:17,  4.44it/s]2026-10-30 23:52:53,232 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:53,537 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  50%|█████     | 75/150 [00:17<00:16,  4.64it/s]2026-10-30 23:52:53,590 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:53,944 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  51%|█████▏    | 77/150 [00:17<00:15,  4.74it/s]2026-10-30 23:52:54,194 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  52%|█████▏    | 78/150 [00:18<00:15,  4.58it/s]2026-10-30 23:52:54,424 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  53%|█████▎    | 79/150 [00:18<00:15,  4.47it/s]2026-10-30 23:52:54,458 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:54,603 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  54%|█████▍    | 81/150 [00:18<00:11,  5.86it/s]2026-10-30 23:52:54,690 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:55,228 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  55%|█████▌    | 83/150 [00:19<00:14,  4.54it/s]2026-10-30 23:52:55,283 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:55,838 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:55,840 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  57%|█████▋    | 85/150 [00:19<00:16,  4.02it/s]2026-10-30 23:52:55,931 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:56,100 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  59%|█████▊    | 88/150 [00:19<00:11,  5.52it/s]2026-10-30 23:52:56,189 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:56,206 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  60%|██████    | 90/150 [00:20<00:08,  6.91it/s]2026-10-30 23:52:56,908 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:57,328 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  61%|██████▏   | 92/150 [00:21<00:15,  3.78it/s]2026-10-30 23:52:57,451 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  62%|██████▏   | 93/150 [00:21<00:13,  4.15it/s]2026-10-30 23:52:57,516 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:57,546 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:57,594 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  64%|██████▍   | 96/150 [00:21<00:08,  6.25it/s]2026-10-30 23:52:57,979 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:58,030 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  65%|██████▌   | 98/150 [00:21<00:09,  5.66it/s]2026-10-30 23:52:58,288 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  66%|██████▌   | 99/150 [00:22<00:09,  5.29it/s]2026-10-30 23:52:58,900 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  67%|██████▋   | 100/150 [00:22<00:13,  3.66it/s]2026-10-30 23:52:58,978 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:59,176 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  68%|██████▊   | 102/150 [00:23<00:10,  4.46it/s]2026-10-30 23:52:59,229 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:59,272 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:52:59,361 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  70%|███████   | 105/150 [00:23<00:06,  6.54it/s]2026-10-30 23:52:59,739 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  71%|███████   | 106/150 [00:23<00:08,  5.21it/s]2026-10-30 23:52:59,869 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  71%|███████▏  | 107/150 [00:23<00:07,  5.52it/s]2026-10-30 23:53:00,507 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  72%|███████▏  | 108/150 [00:24<00:11,  3.58it/s]2026-10-30 23:53:00,633 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  73%|███████▎  | 109/150 [00:24<00:09,  4.12it/s]2026-10-30 23:53:00,729 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:00,758 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  74%|███████▍  | 111/150 [00:24<00:06,  5.89it/s]2026-10-30 23:53:00,821 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:01,332 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  75%|███████▌  | 113/150 [00:25<00:07,  4.68it/s]2026-10-30 23:53:01,409 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:01,526 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  77%|███████▋  | 115/150 [00:25<00:06,  5.79it/s]2026-10-30 23:53:02,120 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  77%|███████▋  | 116/150 [00:26<00:08,  3.82it/s]2026-10-30 23:53:02,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  78%|███████▊  | 117/150 [00:26<00:07,  4.38it/s]2026-10-30 23:53:02,285 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:02,357 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  79%|███████▉  | 119/150 [00:26<00:04,  6.27it/s]2026-10-30 23:53:02,385 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:03,205 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  81%|████████  | 121/150 [00:27<00:07,  3.95it/s]2026-10-30 23:53:03,754 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  81%|████████▏ | 122/150 [00:27<00:08,  3.20it/s]2026-10-30 23:53:03,774 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:03,906 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  83%|████████▎ | 124/150 [00:27<00:05,  4.43it/s]2026-10-30 23:53:04,078 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  83%|████████▎ | 125/150 [00:27<00:05,  4.66it/s]2026-10-30 23:53:04,182 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  84%|████████▍ | 126/150 [00:28<00:04,  5.25it/s]2026-10-30 23:53:04,230 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:04,670 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  85%|████████▌ | 128/150 [00:28<00:04,  4.74it/s]2026-10-30 23:53:05,324 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  86%|████████▌ | 129/150 [00:29<00:06,  3.24it/s]2026-10-30 23:53:05,448 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  87%|████████▋ | 130/150 [00:29<00:05,  3.78it/s]2026-10-30 23:53:05,498 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:05,743 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  88%|████████▊ | 132/150 [00:29<00:04,  4.40it/s]2026-10-30 23:53:05,867 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:05,914 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  89%|████████▉ | 134/150 [00:29<00:02,  6.05it/s]2026-10-30 23:53:06,233 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  90%|█████████ | 135/150 [00:30<00:02,  5.03it/s]2026-10-30 23:53:06,339 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  91%|█████████ | 136/150 [00:30<00:02,  5.64it/s]2026-10-30 23:53:06,763 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  91%|█████████▏| 137/150 [00:30<00:03,  4.22it/s]2026-10-30 23:53:07,214 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  92%|█████████▏| 138/150 [00:31<00:03,  3.40it/s]2026-10-30 23:53:07,241 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:07,249 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:07,292 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:07,633 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  95%|█████████▍| 142/150 [00:31<00:01,  5.53it/s]2026-10-30 23:53:07,726 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:07,994 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  96%|█████████▌| 144/150 [00:31<00:01,  5.56it/s]2026-10-30 23:53:08,610 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  97%|█████████▋| 145/150 [00:32<00:01,  3.88it/s]2026-10-30 23:53:08,722 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  97%|█████████▋| 146/150 [00:32<00:00,  4.39it/s]2026-10-30 23:53:08,854 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  98%|█████████▊| 147/150 [00:32<00:00,  4.77it/s]2026-10-30 23:53:09,207 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  99%|█████████▊| 148/150 [00:33<00:00,  4.14it/s]2026-10-30 23:53:09,576 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini:  99%|█████████▉| 149/150 [00:33<00:00,  3.66it/s]2026-10-30 23:53:09,789 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4o-mini: 100%|██████████| 150/150 [00:33<00:00,  3.89it/s]gpt-4o-mini: 100%|██████████| 150/150 [00:33<00:00,  4.45it/s]
+gpt-4.1:   0%|          | 0/150 [00:00<?, ?it/s]2026-10-30 23:53:11,292 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   1%|          | 1/150 [00:01<03:43,  1.50s/it]2026-10-30 23:53:11,309 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:11,410 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   2%|▏         | 3/150 [00:01<01:03,  2.32it/s]2026-10-30 23:53:11,425 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:11,545 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   3%|▎         | 5/150 [00:01<00:35,  4.07it/s]2026-10-30 23:53:11,579 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:11,728 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   5%|▍         | 7/150 [00:01<00:25,  5.51it/s]2026-10-30 23:53:11,767 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:12,645 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   6%|▌         | 9/150 [00:02<00:40,  3.51it/s]2026-10-30 23:53:12,720 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:13,053 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   7%|▋         | 11/150 [00:03<00:35,  3.91it/s]2026-10-30 23:53:13,327 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   8%|▊         | 12/150 [00:03<00:35,  3.86it/s]2026-10-30 23:53:13,421 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:13,502 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:   9%|▉         | 14/150 [00:03<00:26,  5.04it/s]2026-10-30 23:53:13,789 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  10%|█         | 15/150 [00:04<00:29,  4.61it/s]2026-10-30 23:53:13,838 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:14,184 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  11%|█▏        | 17/150 [00:04<00:27,  4.81it/s]2026-10-30 23:53:14,617 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  12%|█▏        | 18/150 [00:04<00:33,  3.92it/s]2026-10-30 23:53:14,665 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:14,714 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:14,829 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  14%|█▍        | 21/150 [00:05<00:21,  5.95it/s]2026-10-30 23:53:14,931 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:15,457 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  15%|█▌        | 23/150 [00:05<00:27,  4.69it/s]2026-10-30 23:53:15,469 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:15,584 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  17%|█▋        | 25/150 [00:05<00:20,  5.95it/s]2026-10-30 23:53:15,869 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  17%|█▋        | 26/150 [00:06<00:23,  5.28it/s]2026-10-30 23:53:15,899 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:16,103 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  19%|█▊        | 28/150 [00:06<00:20,  6.10it/s]2026-10-30 23:53:16,229 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  19%|█▉        | 29/150 [00:06<00:19,  6.35it/s]2026-10-30 23:53:16,516 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  20%|██        | 30/150 [00:06<00:22,  5.39it/s]2026-10-30 23:53:16,791 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  21%|██        | 31/150 [00:06<00:24,  4.86it/s]2026-10-30 23:53:17,303 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  21%|██▏       | 32/150 [00:07<00:33,  3.53it/s]2026-10-30 23:53:17,380 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:17,465 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  23%|██▎       | 34/150 [00:07<00:23,  5.02it/s]2026-10-30 23:53:17,499 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:17,557 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:17,913 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  25%|██▍       | 37/150 [00:08<00:19,  5.69it/s]2026-10-30 23:53:18,075 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  25%|██▌       | 38/150 [00:08<00:19,  5.83it/s]2026-10-30 23:53:18,593 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  26%|██▌       | 39/150 [00:08<00:27,  4.09it/s]2026-10-30 23:53:18,651 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:18,772 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  27%|██▋       | 41/150 [00:08<00:20,  5.35it/s]2026-10-30 23:53:18,876 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  28%|██▊       | 42/150 [00:09<00:18,  5.90it/s]2026-10-30 23:53:19,197 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  29%|██▊       | 43/150 [00:09<00:21,  4.90it/s]2026-10-30 23:53:19,357 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  29%|██▉       | 44/150 [00:09<00:20,  5.18it/s]2026-10-30 23:53:19,537 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  30%|███       | 45/150 [00:09<00:19,  5.27it/s]2026-10-30 23:53:20,036 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  31%|███       | 46/150 [00:10<00:28,  3.62it/s]2026-10-30 23:53:20,214 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  31%|███▏      | 47/150 [00:10<00:25,  4.04it/s]2026-10-30 23:53:20,279 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:20,282 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:20,422 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  33%|███▎      | 50/150 [00:10<00:15,  6.64it/s]2026-10-30 23:53:20,581 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  34%|███▍      | 51/150 [00:10<00:15,  6.58it/s]2026-10-30 23:53:20,997 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  35%|███▍      | 52/150 [00:11<00:20,  4.74it/s]2026-10-30 23:53:21,189 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  35%|███▌      | 53/150 [00:11<00:20,  4.82it/s]2026-10-30 23:53:21,319 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  36%|███▌      | 54/150 [00:11<00:17,  5.37it/s]2026-10-30 23:53:21,592 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  37%|███▋      | 55/150 [00:11<00:20,  4.74it/s]2026-10-30 23:53:21,828 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  37%|███▋      | 56/150 [00:12<00:20,  4.62it/s]2026-10-30 23:53:22,089 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  38%|███▊      | 57/150 [00:12<00:21,  4.30it/s]2026-10-30 23:53:22,224 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  39%|███▊      | 58/150 [00:12<00:19,  4.81it/s]2026-10-30 23:53:22,346 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:22,434 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  40%|████      | 60/150 [00:12<00:14,  6.38it/s]2026-10-30 23:53:22,535 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  41%|████      | 61/150 [00:12<00:12,  6.95it/s]2026-10-30 23:53:22,885 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  41%|████▏     | 62/150 [00:13<00:17,  5.12it/s]2026-10-30 23:53:23,012 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  42%|████▏     | 63/150 [00:13<00:15,  5.61it/s]2026-10-30 23:53:23,758 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  43%|████▎     | 64/150 [00:13<00:28,  2.98it/s]2026-10-30 23:53:23,907 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  43%|████▎     | 65/150 [00:14<00:24,  3.50it/s]2026-10-30 23:53:24,126 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  44%|████▍     | 66/150 [00:14<00:22,  3.79it/s]2026-10-30 23:53:24,173 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:24,179 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:24,374 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  46%|████▌     | 69/150 [00:14<00:13,  6.11it/s]2026-10-30 23:53:24,472 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:24,736 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  47%|████▋     | 71/150 [00:14<00:13,  5.90it/s]2026-10-30 23:53:25,367 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  48%|████▊     | 72/150 [00:15<00:20,  3.84it/s]2026-10-30 23:53:25,388 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:25,596 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  49%|████▉     | 74/150 [00:15<00:15,  4.76it/s]2026-10-30 23:53:25,620 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:25,759 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  51%|█████     | 76/150 [00:15<00:12,  6.11it/s]2026-10-30 23:53:26,165 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  51%|█████▏    | 77/150 [00:16<00:15,  4.74it/s]2026-10-30 23:53:26,220 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:26,263 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:26,925 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  53%|█████▎    | 80/150 [00:17<00:16,  4.34it/s]2026-10-30 23:53:27,043 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  54%|█████▍    | 81/150 [00:17<00:14,  4.73it/s]2026-10-30 23:53:27,183 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  55%|█████▍    | 82/150 [00:17<00:13,  5.11it/s]2026-10-30 23:53:27,282 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  55%|█████▌    | 83/150 [00:17<00:11,  5.72it/s]2026-10-30 23:53:27,664 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  56%|█████▌    | 84/150 [00:17<00:14,  4.46it/s]2026-10-30 23:53:27,754 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:27,798 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  57%|█████▋    | 86/150 [00:18<00:10,  6.26it/s]2026-10-30 23:53:27,833 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:28,380 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  59%|█████▊    | 88/150 [00:18<00:12,  4.80it/s]2026-10-30 23:53:28,496 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  59%|█████▉    | 89/150 [00:18<00:11,  5.29it/s]2026-10-30 23:53:28,517 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:28,774 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  61%|██████    | 91/150 [00:18<00:10,  5.85it/s]2026-10-30 23:53:29,184 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:29,193 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  61%|██████▏   | 92/150 [00:19<00:12,  4.50it/s]2026-10-30 23:53:29,278 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:29,590 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  63%|██████▎   | 95/150 [00:19<00:09,  5.53it/s]2026-10-30 23:53:29,625 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:29,959 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  65%|██████▍   | 97/150 [00:20<00:09,  5.53it/s]2026-10-30 23:53:30,115 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  65%|██████▌   | 98/150 [00:20<00:09,  5.62it/s]2026-10-30 23:53:30,303 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  66%|██████▌   | 99/150 [00:20<00:09,  5.58it/s]2026-10-30 23:53:30,361 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:30,556 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  67%|██████▋   | 101/150 [00:20<00:07,  6.30it/s]2026-10-30 23:53:31,029 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  68%|██████▊   | 102/150 [00:21<00:10,  4.45it/s]2026-10-30 23:53:31,049 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:31,080 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:31,362 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:31,363 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  70%|███████   | 105/150 [00:21<00:07,  5.85it/s]2026-10-30 23:53:31,696 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  71%|███████▏  | 107/150 [00:21<00:07,  5.89it/s]2026-10-30 23:53:31,917 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  72%|███████▏  | 108/150 [00:22<00:07,  5.55it/s]2026-10-30 23:53:32,074 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  73%|███████▎  | 109/150 [00:22<00:07,  5.73it/s]2026-10-30 23:53:32,298 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  73%|███████▎  | 110/150 [00:22<00:07,  5.38it/s]2026-10-30 23:53:32,503 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  74%|███████▍  | 111/150 [00:22<00:07,  5.25it/s]2026-10-30 23:53:32,577 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:33,240 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  75%|███████▌  | 113/150 [00:23<00:09,  3.79it/s]2026-10-30 23:53:33,264 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:33,435 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  77%|███████▋  | 115/150 [00:23<00:07,  4.96it/s]2026-10-30 23:53:33,461 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:33,719 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  78%|███████▊  | 117/150 [00:23<00:05,  5.50it/s]2026-10-30 23:53:33,795 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:33,950 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  79%|███████▉  | 119/150 [00:24<00:04,  6.28it/s]2026-10-30 23:53:34,521 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  80%|████████  | 120/150 [00:24<00:07,  4.17it/s]2026-10-30 23:53:34,619 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:34,625 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  81%|████████▏ | 122/150 [00:24<00:04,  5.78it/s]2026-10-30 23:53:34,687 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:34,957 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  83%|████████▎ | 124/150 [00:25<00:04,  5.88it/s]2026-10-30 23:53:35,309 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  83%|████████▎ | 125/150 [00:25<00:05,  4.86it/s]2026-10-30 23:53:35,446 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  84%|████████▍ | 126/150 [00:25<00:04,  5.26it/s]2026-10-30 23:53:35,484 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:36,119 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  85%|████████▌ | 128/150 [00:26<00:05,  4.06it/s]2026-10-30 23:53:36,135 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:36,152 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:36,656 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  87%|████████▋ | 131/150 [00:26<00:04,  4.64it/s]2026-10-30 23:53:36,708 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:37,023 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  89%|████████▊ | 133/150 [00:27<00:03,  4.85it/s]2026-10-30 23:53:37,177 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  89%|████████▉ | 134/150 [00:27<00:03,  5.08it/s]2026-10-30 23:53:37,280 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  90%|█████████ | 135/150 [00:27<00:02,  5.64it/s]2026-10-30 23:53:37,584 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  91%|█████████ | 136/150 [00:27<00:02,  4.84it/s]2026-10-30 23:53:37,806 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  91%|█████████▏| 137/150 [00:28<00:02,  4.74it/s]2026-10-30 23:53:37,955 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  92%|█████████▏| 138/150 [00:28<00:02,  5.13it/s]2026-10-30 23:53:38,013 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:38,166 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  93%|█████████▎| 140/150 [00:28<00:01,  6.38it/s]2026-10-30 23:53:38,444 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  94%|█████████▍| 141/150 [00:28<00:01,  5.39it/s]2026-10-30 23:53:38,795 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  95%|█████████▍| 142/150 [00:29<00:01,  4.41it/s]2026-10-30 23:53:39,093 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  95%|█████████▌| 143/150 [00:29<00:01,  4.11it/s]2026-10-30 23:53:39,342 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  96%|█████████▌| 144/150 [00:29<00:01,  4.09it/s]2026-10-30 23:53:39,439 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:39,475 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  97%|█████████▋| 146/150 [00:29<00:00,  6.00it/s]2026-10-30 23:53:39,529 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-30 23:53:39,798 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  99%|█████████▊| 148/150 [00:30<00:00,  6.07it/s]2026-10-30 23:53:39,939 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1:  99%|█████████▉| 149/150 [00:30<00:00,  6.27it/s]2026-10-30 23:53:41,163 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+gpt-4.1: 100%|██████████| 150/150 [00:31<00:00,  2.43it/s]gpt-4.1: 100%|██████████| 150/150 [00:31<00:00,  4.78it/s]
+
+judge                                      rho_ovr  kappa  k_lin  agree  inc_prec
+gpt-4o-mini [v1]                            0.659  0.509  0.573  0.753 0.874
+gpt-4.1 [v1]                                0.741  0.412  0.539  0.700 0.876
+gpt-4o-mini (published, v1)                 0.657  0.468  0.546  0.733 0.854
+panel mean [v1]                             0.760  0.601  0.663  0.813 0.877
+Saved -> experiments/v3/judge/calibration_v1/calibration.json
+# exit 0 after 68s

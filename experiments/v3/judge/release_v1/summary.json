@@ -1,0 +1,377 @@
+{
+ "annotations": "data/annotated/reviews_annotated.json",
+ "rubric": "v1",
+ "n_items": 5038,
+ "n_scored": 5038,
+ "unscored": [],
+ "panel_tiers": {
+  "include": 3608,
+  "exclude": 458,
+  "flag": 972
+ },
+ "panel_include_rate": 0.7162,
+ "panel_means": {
+  "completeness": 3.36,
+  "accuracy": 4.5,
+  "sentiment": 4.239,
+  "relevance": 3.942,
+  "overall": 3.734
+ },
+ "inter_judge": {
+  "judges": [
+   "gpt-4o-mini",
+   "gpt-4.1"
+  ],
+  "n": 5038,
+  "spearman_overall": {
+   "gpt-4o-mini | gpt-4.1": 0.738
+  },
+  "krippendorff_alpha": {
+   "completeness": 0.697,
+   "accuracy": 0.4895,
+   "sentiment": 0.9007,
+   "relevance": 0.6893,
+   "overall": 0.7482
+  }
+ },
+ "domains": {
+  "Restoran/Ovqatlanish": {
+   "n": 1626,
+   "mean": 4.1,
+   "ci95": [
+    4.05,
+    4.14
+   ],
+   "include_rate": 0.809,
+   "tiers": {
+    "include": 1316,
+    "flag": 203,
+    "exclude": 107
+   }
+  },
+  "Bank/Moliya": {
+   "n": 577,
+   "mean": 3.39,
+   "ci95": [
+    3.32,
+    3.47
+   ],
+   "include_rate": 0.624,
+   "tiers": {
+    "include": 360,
+    "flag": 147,
+    "exclude": 70
+   }
+  },
+  "Boshqa": {
+   "n": 507,
+   "mean": 3.91,
+   "ci95": [
+    3.83,
+    3.99
+   ],
+   "include_rate": 0.771,
+   "tiers": {
+    "include": 391,
+    "flag": 82,
+    "exclude": 34
+   }
+  },
+  "To'lov tizimlari": {
+   "n": 328,
+   "mean": 3.35,
+   "ci95": [
+    3.26,
+    3.44
+   ],
+   "include_rate": 0.598,
+   "tiers": {
+    "include": 196,
+    "flag": 87,
+    "exclude": 45
+   }
+  },
+  "Elektron tijorat": {
+   "n": 296,
+   "mean": 3.63,
+   "ci95": [
+    3.53,
+    3.73
+   ],
+   "include_rate": 0.72,
+   "tiers": {
+    "include": 213,
+    "flag": 62,
+    "exclude": 21
+   }
+  },
+  "Ta'lim": {
+   "n": 287,
+   "mean": 3.31,
+   "ci95": [
+    3.22,
+    3.41
+   ],
+   "include_rate": 0.589,
+   "tiers": {
+    "include": 169,
+    "flag": 82,
+    "exclude": 36
+   }
+  },
+  "Tibbiyot/Sog'liqni saqlash": {
+   "n": 285,
+   "mean": 3.74,
+   "ci95": [
+    3.63,
+    3.86
+   ],
+   "include_rate": 0.726,
+   "tiers": {
+    "include": 207,
+    "flag": 44,
+    "exclude": 34
+   }
+  },
+  "Telekommunikatsiya": {
+   "n": 234,
+   "mean": 3.41,
+   "ci95": [
+    3.3,
+    3.52
+   ],
+   "include_rate": 0.607,
+   "tiers": {
+    "include": 142,
+    "flag": 58,
+    "exclude": 34
+   }
+  },
+  "Oziq-ovqat do'konlari": {
+   "n": 215,
+   "mean": 3.67,
+   "ci95": [
+    3.56,
+    3.77
+   ],
+   "include_rate": 0.726,
+   "tiers": {
+    "include": 156,
+    "flag": 47,
+    "exclude": 12
+   }
+  },
+  "Gul/Sovg'a": {
+   "n": 173,
+   "mean": 3.57,
+   "ci95": [
+    3.45,
+    3.7
+   ],
+   "include_rate": 0.699,
+   "tiers": {
+    "include": 121,
+    "flag": 38,
+    "exclude": 14
+   }
+  },
+  "Texnologiya/Media": {
+   "n": 110,
+   "mean": 3.4,
+   "ci95": [
+    3.25,
+    3.54
+   ],
+   "include_rate": 0.627,
+   "tiers": {
+    "include": 69,
+    "flag": 32,
+    "exclude": 9
+   }
+  },
+  "Sayohat/Turizm": {
+   "n": 78,
+   "mean": 3.87,
+   "ci95": [
+    3.69,
+    4.05
+   ],
+   "include_rate": 0.795,
+   "tiers": {
+    "include": 62,
+    "flag": 12,
+    "exclude": 4
+   }
+  },
+  "Sport/Fitnes": {
+   "n": 60,
+   "mean": 3.46,
+   "ci95": [
+    3.24,
+    3.67
+   ],
+   "include_rate": 0.617,
+   "tiers": {
+    "include": 37,
+    "flag": 16,
+    "exclude": 7
+   }
+  },
+  "Kitob/Nashriyot": {
+   "n": 56,
+   "mean": 3.26,
+   "ci95": [
+    3.03,
+    3.48
+   ],
+   "include_rate": 0.589,
+   "tiers": {
+    "include": 33,
+    "flag": 12,
+    "exclude": 11
+   }
+  },
+  "Din/Madaniyat": {
+   "n": 49,
+   "mean": 3.89,
+   "ci95": [
+    3.61,
+    4.15
+   ],
+   "include_rate": 0.755,
+   "tiers": {
+    "include": 37,
+    "flag": 8,
+    "exclude": 4
+   }
+  },
+  "Transport/Yo'l": {
+   "n": 32,
+   "mean": 3.41,
+   "ci95": [
+    3.08,
+    3.72
+   ],
+   "include_rate": 0.562,
+   "tiers": {
+    "include": 18,
+    "flag": 10,
+    "exclude": 4
+   }
+  },
+  "Yetkazib berish": {
+   "n": 30,
+   "mean": 3.88,
+   "ci95": [
+    3.6,
+    4.17
+   ],
+   "include_rate": 0.767,
+   "tiers": {
+    "include": 23,
+    "flag": 6,
+    "exclude": 1
+   }
+  },
+  "Ko'ngilochar": {
+   "n": 26,
+   "mean": 3.31,
+   "ci95": [
+    2.96,
+    3.67
+   ],
+   "include_rate": 0.462,
+   "tiers": {
+    "include": 12,
+    "flag": 12,
+    "exclude": 2
+   }
+  },
+  "Investitsiya/Trading": {
+   "n": 22,
+   "mean": 3.23,
+   "ci95": [
+    2.84,
+    3.64
+   ],
+   "include_rate": 0.5,
+   "tiers": {
+    "include": 11,
+    "flag": 6,
+    "exclude": 5
+   }
+  },
+  "Davlat xizmatlari": {
+   "n": 16,
+   "mean": 3.47,
+   "ci95": [
+    3.12,
+    3.75
+   ],
+   "include_rate": 0.75,
+   "tiers": {
+    "include": 12,
+    "flag": 3,
+    "exclude": 1
+   }
+  },
+  "pooled_small_domains (N<15, 3 domains)": {
+   "n": 31,
+   "mean": 3.74,
+   "ci95": [
+    3.37,
+    4.06
+   ],
+   "include_rate": 0.742,
+   "tiers": {
+    "include": 23,
+    "flag": 5,
+    "exclude": 3
+   }
+  },
+  "all": {
+   "n": 5038,
+   "mean": 3.73,
+   "ci95": [
+    3.71,
+    3.76
+   ],
+   "include_rate": 0.716,
+   "tiers": {
+    "include": 3608,
+    "flag": 972,
+    "exclude": 458
+   }
+  }
+ },
+ "judges": {
+  "gpt-4o-mini": {
+   "model": "gpt-4o-mini",
+   "api_base": "https://api.openai.com/v1",
+   "rubric": "v1",
+   "served_models": {
+    "gpt-4o-mini-2024-07-18": 5038
+   },
+   "scored": 5038,
+   "unparsed": [],
+   "tokens_in": 2669591,
+   "tokens_out": 390399,
+   "usd": 0.6347,
+   "raw_log": "experiments/v3/judge/release_v1/raw/gpt-4o-mini__v1.jsonl"
+  },
+  "gpt-4.1": {
+   "model": "gpt-4.1",
+   "api_base": "https://api.openai.com/v1",
+   "rubric": "v1",
+   "served_models": {
+    "gpt-4.1-2025-04-14": 5038
+   },
+   "scored": 5038,
+   "unparsed": [],
+   "tokens_in": 2669591,
+   "tokens_out": 505187,
+   "usd": 9.3807,
+   "raw_log": "experiments/v3/judge/release_v1/raw/gpt-4.1__v1.jsonl"
+  }
+ }
+}

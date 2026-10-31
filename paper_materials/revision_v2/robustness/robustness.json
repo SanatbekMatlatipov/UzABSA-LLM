@@ -1,0 +1,1077 @@
+{
+ "gold": {
+  "reviews": 609,
+  "terms": 737,
+  "terms_lost_to_set_collapsing": 0,
+  "reviews_with_repeated_term": 0
+ },
+ "systems": {
+  "Qwen 2.5-7B": {
+   "canonical": {
+    "ate_exact_p": 0.7141,
+    "ate_exact_r": 0.7015,
+    "ate_exact_f1": 0.7077,
+    "ate_partial_f1": 0.8008,
+    "pair_f1": 0.6448,
+    "sentiment_accuracy": 0.911,
+    "sentiment_macro_f1": 0.8622,
+    "pred_gold_ratio": 0.98
+   },
+   "exact_1to1": {
+    "p": 0.7141,
+    "r": 0.7015,
+    "f1": 0.7077
+   },
+   "partial_1to1": {
+    "p": 0.8108,
+    "r": 0.7965,
+    "f1": 0.8036
+   },
+   "clean_1to1": {
+    "p": 0.721,
+    "r": 0.7083,
+    "f1": 0.7146
+   },
+   "stem_1to1": {
+    "p": 0.7224,
+    "r": 0.7096,
+    "f1": 0.7159
+   },
+   "soft_rougeL": {
+    "p": 0.8137,
+    "r": 0.7993,
+    "f1": 0.8064
+   },
+   "pair_exact_1to1": {
+    "p": 0.6506,
+    "r": 0.6391,
+    "f1": 0.6448
+   },
+   "pair_stem_1to1": {
+    "p": 0.6575,
+    "r": 0.6459,
+    "f1": 0.6516
+   }
+  },
+  "Llama 3.1-8B": {
+   "canonical": {
+    "ate_exact_p": 0.7185,
+    "ate_exact_r": 0.6893,
+    "ate_exact_f1": 0.7036,
+    "ate_partial_f1": 0.8006,
+    "pair_f1": 0.651,
+    "sentiment_accuracy": 0.9252,
+    "sentiment_macro_f1": 0.8867,
+    "pred_gold_ratio": 0.96
+   },
+   "exact_1to1": {
+    "p": 0.7185,
+    "r": 0.6893,
+    "f1": 0.7036
+   },
+   "partial_1to1": {
+    "p": 0.819,
+    "r": 0.7856,
+    "f1": 0.8019
+   },
+   "clean_1to1": {
+    "p": 0.727,
+    "r": 0.6974,
+    "f1": 0.7119
+   },
+   "stem_1to1": {
+    "p": 0.7284,
+    "r": 0.6988,
+    "f1": 0.7133
+   },
+   "soft_rougeL": {
+    "p": 0.808,
+    "r": 0.7751,
+    "f1": 0.7912
+   },
+   "pair_exact_1to1": {
+    "p": 0.6648,
+    "r": 0.6377,
+    "f1": 0.651
+   },
+   "pair_stem_1to1": {
+    "p": 0.6733,
+    "r": 0.6459,
+    "f1": 0.6593
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "canonical": {
+    "ate_exact_p": 0.7143,
+    "ate_exact_r": 0.6445,
+    "ate_exact_f1": 0.6776,
+    "ate_partial_f1": 0.7874,
+    "pair_f1": 0.6034,
+    "sentiment_accuracy": 0.8905,
+    "sentiment_macro_f1": 0.8314,
+    "pred_gold_ratio": 0.9
+   },
+   "exact_1to1": {
+    "p": 0.7121,
+    "r": 0.6445,
+    "f1": 0.6766
+   },
+   "partial_1to1": {
+    "p": 0.8306,
+    "r": 0.7517,
+    "f1": 0.7892
+   },
+   "clean_1to1": {
+    "p": 0.7196,
+    "r": 0.6513,
+    "f1": 0.6838
+   },
+   "stem_1to1": {
+    "p": 0.7211,
+    "r": 0.6526,
+    "f1": 0.6852
+   },
+   "soft_rougeL": {
+    "p": 0.8253,
+    "r": 0.7469,
+    "f1": 0.7842
+   },
+   "pair_exact_1to1": {
+    "p": 0.6342,
+    "r": 0.5739,
+    "f1": 0.6026
+   },
+   "pair_stem_1to1": {
+    "p": 0.6432,
+    "r": 0.5821,
+    "f1": 0.6111
+   }
+  },
+  "BERTbek": {
+   "canonical": {
+    "ate_exact_p": 0.6802,
+    "ate_exact_r": 0.7042,
+    "ate_exact_f1": 0.692,
+    "ate_partial_f1": 0.8,
+    "pair_f1": 0.608,
+    "sentiment_accuracy": 0.8786,
+    "sentiment_macro_f1": 0.8126,
+    "pred_gold_ratio": 1.04
+   },
+   "exact_1to1": {
+    "p": 0.6749,
+    "r": 0.7042,
+    "f1": 0.6892
+   },
+   "partial_1to1": {
+    "p": 0.7828,
+    "r": 0.8168,
+    "f1": 0.7995
+   },
+   "clean_1to1": {
+    "p": 0.6788,
+    "r": 0.7083,
+    "f1": 0.6932
+   },
+   "stem_1to1": {
+    "p": 0.6801,
+    "r": 0.7096,
+    "f1": 0.6946
+   },
+   "soft_rougeL": {
+    "p": 0.7739,
+    "r": 0.8075,
+    "f1": 0.7903
+   },
+   "pair_exact_1to1": {
+    "p": 0.593,
+    "r": 0.6187,
+    "f1": 0.6056
+   },
+   "pair_stem_1to1": {
+    "p": 0.5969,
+    "r": 0.6228,
+    "f1": 0.6096
+   }
+  },
+  "TahrirchiBERT": {
+   "canonical": {
+    "ate_exact_p": 0.7287,
+    "ate_exact_r": 0.6744,
+    "ate_exact_f1": 0.7005,
+    "ate_partial_f1": 0.7865,
+    "pair_f1": 0.6225,
+    "sentiment_accuracy": 0.8893,
+    "sentiment_macro_f1": 0.814,
+    "pred_gold_ratio": 0.93
+   },
+   "exact_1to1": {
+    "p": 0.7234,
+    "r": 0.6744,
+    "f1": 0.698
+   },
+   "partial_1to1": {
+    "p": 0.8151,
+    "r": 0.7598,
+    "f1": 0.7865
+   },
+   "clean_1to1": {
+    "p": 0.7278,
+    "r": 0.6784,
+    "f1": 0.7022
+   },
+   "stem_1to1": {
+    "p": 0.7293,
+    "r": 0.6798,
+    "f1": 0.7037
+   },
+   "soft_rougeL": {
+    "p": 0.8146,
+    "r": 0.7593,
+    "f1": 0.786
+   },
+   "pair_exact_1to1": {
+    "p": 0.6434,
+    "r": 0.5997,
+    "f1": 0.6208
+   },
+   "pair_stem_1to1": {
+    "p": 0.6477,
+    "r": 0.6038,
+    "f1": 0.625
+   }
+  },
+  "Qwen 2.5-7B (seed 43)": {
+   "canonical": {
+    "ate_exact_p": 0.7106,
+    "ate_exact_r": 0.7096,
+    "ate_exact_f1": 0.7101,
+    "ate_partial_f1": 0.8147,
+    "pair_f1": 0.6554,
+    "sentiment_accuracy": 0.9235,
+    "sentiment_macro_f1": 0.8845,
+    "pred_gold_ratio": 1.0
+   },
+   "exact_1to1": {
+    "p": 0.7096,
+    "r": 0.7096,
+    "f1": 0.7096
+   },
+   "partial_1to1": {
+    "p": 0.8168,
+    "r": 0.8168,
+    "f1": 0.8168
+   },
+   "clean_1to1": {
+    "p": 0.7191,
+    "r": 0.7191,
+    "f1": 0.7191
+   },
+   "stem_1to1": {
+    "p": 0.7205,
+    "r": 0.7205,
+    "f1": 0.7205
+   },
+   "soft_rougeL": {
+    "p": 0.8129,
+    "r": 0.8129,
+    "f1": 0.8129
+   },
+   "pair_exact_1to1": {
+    "p": 0.6554,
+    "r": 0.6554,
+    "f1": 0.6554
+   },
+   "pair_stem_1to1": {
+    "p": 0.6662,
+    "r": 0.6662,
+    "f1": 0.6662
+   }
+  },
+  "Qwen 2.5-7B (ZS)": {
+   "canonical": {
+    "ate_exact_p": 0.2504,
+    "ate_exact_r": 0.4518,
+    "ate_exact_f1": 0.3222,
+    "ate_partial_f1": 0.5593,
+    "pair_f1": 0.21,
+    "sentiment_accuracy": 0.6517,
+    "sentiment_macro_f1": 0.4719,
+    "pred_gold_ratio": 1.8
+   },
+   "exact_1to1": {
+    "p": 0.2489,
+    "r": 0.4518,
+    "f1": 0.321
+   },
+   "partial_1to1": {
+    "p": 0.432,
+    "r": 0.7843,
+    "f1": 0.5571
+   },
+   "clean_1to1": {
+    "p": 0.2511,
+    "r": 0.4559,
+    "f1": 0.3239
+   },
+   "stem_1to1": {
+    "p": 0.2713,
+    "r": 0.4925,
+    "f1": 0.3499
+   },
+   "soft_rougeL": {
+    "p": 0.3998,
+    "r": 0.7258,
+    "f1": 0.5155
+   },
+   "pair_exact_1to1": {
+    "p": 0.1622,
+    "r": 0.2944,
+    "f1": 0.2092
+   },
+   "pair_stem_1to1": {
+    "p": 0.1756,
+    "r": 0.3189,
+    "f1": 0.2265
+   }
+  },
+  "Llama 3.1-8B (ZS)": {
+   "canonical": {
+    "ate_exact_p": 0.2271,
+    "ate_exact_r": 0.3799,
+    "ate_exact_f1": 0.2843,
+    "ate_partial_f1": 0.4914,
+    "pair_f1": 0.1999,
+    "sentiment_accuracy": 0.7036,
+    "sentiment_macro_f1": 0.628,
+    "pred_gold_ratio": 1.67
+   },
+   "exact_1to1": {
+    "p": 0.2123,
+    "r": 0.3799,
+    "f1": 0.2724
+   },
+   "partial_1to1": {
+    "p": 0.3677,
+    "r": 0.6581,
+    "f1": 0.4718
+   },
+   "clean_1to1": {
+    "p": 0.2146,
+    "r": 0.384,
+    "f1": 0.2753
+   },
+   "stem_1to1": {
+    "p": 0.2237,
+    "r": 0.4003,
+    "f1": 0.287
+   },
+   "soft_rougeL": {
+    "p": 0.3554,
+    "r": 0.636,
+    "f1": 0.4559
+   },
+   "pair_exact_1to1": {
+    "p": 0.1494,
+    "r": 0.2673,
+    "f1": 0.1916
+   },
+   "pair_stem_1to1": {
+    "p": 0.1539,
+    "r": 0.2754,
+    "f1": 0.1975
+   }
+  },
+  "DeepSeek-R1-7B (ZS)": {
+   "canonical": {
+    "ate_exact_p": 0.208,
+    "ate_exact_r": 0.2266,
+    "ate_exact_f1": 0.2169,
+    "ate_partial_f1": 0.3182,
+    "pair_f1": 0.154,
+    "sentiment_accuracy": 0.7126,
+    "sentiment_macro_f1": 0.5683,
+    "pred_gold_ratio": 1.1
+   },
+   "exact_1to1": {
+    "p": 0.1639,
+    "r": 0.2266,
+    "f1": 0.1902
+   },
+   "partial_1to1": {
+    "p": 0.2404,
+    "r": 0.3324,
+    "f1": 0.279
+   },
+   "clean_1to1": {
+    "p": 0.1649,
+    "r": 0.228,
+    "f1": 0.1913
+   },
+   "stem_1to1": {
+    "p": 0.1786,
+    "r": 0.2469,
+    "f1": 0.2073
+   },
+   "soft_rougeL": {
+    "p": 0.2299,
+    "r": 0.3178,
+    "f1": 0.2668
+   },
+   "pair_exact_1to1": {
+    "p": 0.1168,
+    "r": 0.1615,
+    "f1": 0.1355
+   },
+   "pair_stem_1to1": {
+    "p": 0.1276,
+    "r": 0.1764,
+    "f1": 0.1481
+   }
+  }
+ },
+ "bootstrap": {
+  "Qwen 2.5-7B vs Llama 3.1-8B": {
+   "exact_1to1": {
+    "delta": 0.0041,
+    "ci95": [
+     -0.0232,
+     0.0311
+    ],
+    "p_value": 0.7868
+   },
+   "stem_1to1": {
+    "delta": 0.0027,
+    "ci95": [
+     -0.0252,
+     0.0302
+    ],
+    "p_value": 0.87
+   },
+   "pair_exact_1to1": {
+    "delta": -0.0062,
+    "ci95": [
+     -0.0368,
+     0.0242
+    ],
+    "p_value": 0.689
+   },
+   "pair_stem_1to1": {
+    "delta": -0.0077,
+    "ci95": [
+     -0.0387,
+     0.0232
+    ],
+    "p_value": 0.626
+   }
+  },
+  "Qwen 2.5-7B vs TahrirchiBERT": {
+   "exact_1to1": {
+    "delta": 0.0097,
+    "ci95": [
+     -0.0181,
+     0.0377
+    ],
+    "p_value": 0.4914
+   },
+   "stem_1to1": {
+    "delta": 0.0123,
+    "ci95": [
+     -0.0158,
+     0.0406
+    ],
+    "p_value": 0.3892
+   },
+   "pair_exact_1to1": {
+    "delta": 0.024,
+    "ci95": [
+     -0.0047,
+     0.0526
+    ],
+    "p_value": 0.1006
+   },
+   "pair_stem_1to1": {
+    "delta": 0.0266,
+    "ci95": [
+     -0.0028,
+     0.0556
+    ],
+    "p_value": 0.0738
+   }
+  },
+  "Qwen 2.5-7B vs BERTbek": {
+   "exact_1to1": {
+    "delta": 0.0185,
+    "ci95": [
+     -0.011,
+     0.0471
+    ],
+    "p_value": 0.2166
+   },
+   "stem_1to1": {
+    "delta": 0.0214,
+    "ci95": [
+     -0.0086,
+     0.0505
+    ],
+    "p_value": 0.1628
+   },
+   "pair_exact_1to1": {
+    "delta": 0.0392,
+    "ci95": [
+     0.0081,
+     0.0705
+    ],
+    "p_value": 0.013
+   },
+   "pair_stem_1to1": {
+    "delta": 0.042,
+    "ci95": [
+     0.0103,
+     0.0738
+    ],
+    "p_value": 0.0104
+   }
+  },
+  "Llama 3.1-8B vs DeepSeek-R1-7B": {
+   "exact_1to1": {
+    "delta": 0.027,
+    "ci95": [
+     -0.0002,
+     0.0542
+    ],
+    "p_value": 0.0516
+   },
+   "stem_1to1": {
+    "delta": 0.0281,
+    "ci95": [
+     0.0007,
+     0.0552
+    ],
+    "p_value": 0.0446
+   },
+   "pair_exact_1to1": {
+    "delta": 0.0484,
+    "ci95": [
+     0.02,
+     0.0772
+    ],
+    "p_value": 0.0006
+   },
+   "pair_stem_1to1": {
+    "delta": 0.0482,
+    "ci95": [
+     0.0199,
+     0.0773
+    ],
+    "p_value": 0.0006
+   }
+  },
+  "Llama 3.1-8B vs TahrirchiBERT": {
+   "exact_1to1": {
+    "delta": 0.0056,
+    "ci95": [
+     -0.024,
+     0.0371
+    ],
+    "p_value": 0.7196
+   },
+   "stem_1to1": {
+    "delta": 0.0096,
+    "ci95": [
+     -0.0205,
+     0.0413
+    ],
+    "p_value": 0.536
+   },
+   "pair_exact_1to1": {
+    "delta": 0.0302,
+    "ci95": [
+     -0.0024,
+     0.064
+    ],
+    "p_value": 0.0674
+   },
+   "pair_stem_1to1": {
+    "delta": 0.0343,
+    "ci95": [
+     0.0015,
+     0.0682
+    ],
+    "p_value": 0.0402
+   }
+  }
+ },
+ "examples": {
+  "stem_not_exact": [
+   [
+    "sharqona taomlarning",
+    "sharqona taomlar"
+   ],
+   [
+    "taomlar",
+    "taom"
+   ],
+   [
+    "taom",
+    "taomlar"
+   ],
+   [
+    "osh",
+    "oshlar"
+   ],
+   [
+    "narxlar",
+    "narx"
+   ]
+  ],
+  "substring_not_stem": [
+   [
+    "maydoni",
+    "2-qavatdagi bolalar maydoni"
+   ],
+   [
+    "Ichki xonaga va oynali verandaga",
+    "oynali verandaga"
+   ],
+   [
+    "Ichki xonaga va oynali verandaga",
+    "Ichki xonaga"
+   ],
+   [
+    "oshni",
+    "Shakarop bilan oshni"
+   ],
+   [
+    "taomlarni",
+    "mahalliy taomlarni"
+   ],
+   [
+    "oshi va kabobi",
+    "kabobi"
+   ],
+   [
+    "Barcha uslublar",
+    "uslublar"
+   ],
+   [
+    "biftek",
+    "maxsus biftek"
+   ],
+   [
+    "biftek",
+    "qalampirli biftek"
+   ],
+   [
+    "Mojito",
+    "Mojito buyurtma"
+   ],
+   [
+    "kabob",
+    "kabob, go'sht"
+   ],
+   [
+    "go'sht",
+    "kabob, go'sht"
+   ],
+   [
+    "musiqa",
+    "musiqa shou"
+   ],
+   [
+    "Instagram",
+    "Instagram reklamalari va sharhlaridan"
+   ],
+   [
+    "Sulton restorani",
+    "Sulton"
+   ],
+   [
+    "terasta",
+    "yo'l chetidagi terasta"
+   ],
+   [
+    "yerga",
+    "u yerga"
+   ],
+   [
+    "jonli musiqa, taniqli odamlar va mehmonlar",
+    "jonli musiqa"
+   ],
+   [
+    "jonli musiqa, taniqli odamlar va mehmonlar",
+    "taniqli odamlar va mehmonlar"
+   ],
+   [
+    "salat va uchta taom",
+    "salat"
+   ],
+   [
+    "salat va uchta taom",
+    "uchta taom"
+   ],
+   [
+    "16 dollar",
+    "16 dolla"
+   ],
+   [
+    "5 ball",
+    "5"
+   ],
+   [
+    "oshxonasi",
+    "arab oshxonasi"
+   ],
+   [
+    "Palov oqshomi",
+    "Palov"
+   ]
+  ]
+ },
+ "format_vs_extraction": {
+  "Qwen 2.5-7B": {
+   "parse_failures": 0,
+   "gold_terms_in_failures": 0,
+   "own_parsed": {
+    "ate_exact_p": 0.7141,
+    "ate_exact_r": 0.7015,
+    "ate_exact_f1": 0.7077,
+    "ate_partial_f1": 0.8008,
+    "pair_f1": 0.6448,
+    "sentiment_accuracy": 0.911,
+    "sentiment_macro_f1": 0.8622,
+    "pred_gold_ratio": 0.98
+   },
+   "common_parsed": {
+    "n_reviews": 589,
+    "ate_exact_p": 0.711,
+    "ate_exact_r": 0.6979,
+    "ate_exact_f1": 0.7044,
+    "ate_partial_f1": 0.7989,
+    "pair_f1": 0.6399,
+    "sentiment_accuracy": 0.9085,
+    "sentiment_macro_f1": 0.8614,
+    "pred_gold_ratio": 0.98
+   }
+  },
+  "Llama 3.1-8B": {
+   "parse_failures": 16,
+   "gold_terms_in_failures": 24,
+   "own_parsed": {
+    "ate_exact_p": 0.7185,
+    "ate_exact_r": 0.7125,
+    "ate_exact_f1": 0.7155,
+    "ate_partial_f1": 0.8141,
+    "pair_f1": 0.662,
+    "sentiment_accuracy": 0.9252,
+    "sentiment_macro_f1": 0.8867,
+    "pred_gold_ratio": 0.99
+   },
+   "common_parsed": {
+    "n_reviews": 589,
+    "ate_exact_p": 0.7183,
+    "ate_exact_r": 0.7163,
+    "ate_exact_f1": 0.7173,
+    "ate_partial_f1": 0.8168,
+    "pair_f1": 0.6634,
+    "sentiment_accuracy": 0.9248,
+    "sentiment_macro_f1": 0.8866,
+    "pred_gold_ratio": 1.0
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "parse_failures": 19,
+   "gold_terms_in_failures": 30,
+   "own_parsed": {
+    "ate_exact_p": 0.7143,
+    "ate_exact_r": 0.6719,
+    "ate_exact_f1": 0.6924,
+    "ate_partial_f1": 0.8047,
+    "pair_f1": 0.6166,
+    "sentiment_accuracy": 0.8905,
+    "sentiment_macro_f1": 0.8314,
+    "pred_gold_ratio": 0.94
+   },
+   "common_parsed": {
+    "n_reviews": 589,
+    "ate_exact_p": 0.7139,
+    "ate_exact_r": 0.6723,
+    "ate_exact_f1": 0.6925,
+    "ate_partial_f1": 0.805,
+    "pair_f1": 0.618,
+    "sentiment_accuracy": 0.8924,
+    "sentiment_macro_f1": 0.8335,
+    "pred_gold_ratio": 0.94
+   }
+  },
+  "Qwen 2.5-7B (ZS)": {
+   "parse_failures": 1,
+   "gold_terms_in_failures": 0,
+   "own_parsed": {
+    "ate_exact_p": 0.2504,
+    "ate_exact_r": 0.4518,
+    "ate_exact_f1": 0.3222,
+    "ate_partial_f1": 0.5593,
+    "pair_f1": 0.21,
+    "sentiment_accuracy": 0.6517,
+    "sentiment_macro_f1": 0.4719,
+    "pred_gold_ratio": 1.8
+   },
+   "common_parsed": {
+    "n_reviews": 281,
+    "ate_exact_p": 0.2994,
+    "ate_exact_r": 0.527,
+    "ate_exact_f1": 0.3819,
+    "ate_partial_f1": 0.5924,
+    "pair_f1": 0.2277,
+    "sentiment_accuracy": 0.5962,
+    "sentiment_macro_f1": 0.5628,
+    "pred_gold_ratio": 1.76
+   }
+  },
+  "Llama 3.1-8B (ZS)": {
+   "parse_failures": 28,
+   "gold_terms_in_failures": 32,
+   "own_parsed": {
+    "ate_exact_p": 0.2271,
+    "ate_exact_r": 0.3972,
+    "ate_exact_f1": 0.289,
+    "ate_partial_f1": 0.4995,
+    "pair_f1": 0.2032,
+    "sentiment_accuracy": 0.7036,
+    "sentiment_macro_f1": 0.628,
+    "pred_gold_ratio": 1.75
+   },
+   "common_parsed": {
+    "n_reviews": 281,
+    "ate_exact_p": 0.2679,
+    "ate_exact_r": 0.4797,
+    "ate_exact_f1": 0.3438,
+    "ate_partial_f1": 0.5182,
+    "pair_f1": 0.2324,
+    "sentiment_accuracy": 0.6761,
+    "sentiment_macro_f1": 0.6151,
+    "pred_gold_ratio": 1.79
+   }
+  },
+  "DeepSeek-R1-7B (ZS)": {
+   "parse_failures": 327,
+   "gold_terms_in_failures": 440,
+   "own_parsed": {
+    "ate_exact_p": 0.208,
+    "ate_exact_r": 0.5623,
+    "ate_exact_f1": 0.3036,
+    "ate_partial_f1": 0.4455,
+    "pair_f1": 0.2154,
+    "sentiment_accuracy": 0.7126,
+    "sentiment_macro_f1": 0.5683,
+    "pred_gold_ratio": 2.72
+   },
+   "common_parsed": {
+    "n_reviews": 281,
+    "ate_exact_p": 0.2072,
+    "ate_exact_r": 0.5608,
+    "ate_exact_f1": 0.3026,
+    "ate_partial_f1": 0.4448,
+    "pair_f1": 0.216,
+    "sentiment_accuracy": 0.7169,
+    "sentiment_macro_f1": 0.5721,
+    "pred_gold_ratio": 2.72
+   }
+  }
+ },
+ "judge_vs_human": {
+  "n": 150,
+  "judge_mean": 3.75,
+  "human_mean": 3.84,
+  "tier_agreement": 0.733,
+  "kappa": 0.468,
+  "kappa_linear": 0.546,
+  "judge_tiers": {
+   "include": 96,
+   "flag": 41,
+   "exclude": 13
+  },
+  "human_tiers": {
+   "include": 101,
+   "flag": 32,
+   "exclude": 17
+  },
+  "include_precision": 0.854,
+  "include_judged_human_exclude": 2,
+  "include_recall": 0.812,
+  "tier_confusion": [
+   [
+    82,
+    12,
+    2
+   ],
+   [
+    18,
+    18,
+    5
+   ],
+   [
+    1,
+    2,
+    10
+   ]
+  ]
+ },
+ "domain_cis": {
+  "Restoran/Ovqatlanish": {
+   "n": 50,
+   "mean": 4.24,
+   "ci95": [
+    4.02,
+    4.46
+   ],
+   "include_rate": 0.82,
+   "tiers": {
+    "include": 41,
+    "flag": 8,
+    "exclude": 1
+   }
+  },
+  "Boshqa": {
+   "n": 37,
+   "mean": 3.81,
+   "ci95": [
+    3.49,
+    4.14
+   ],
+   "include_rate": 0.622,
+   "tiers": {
+    "include": 23,
+    "flag": 9,
+    "exclude": 5
+   }
+  },
+  "Bank/Moliya": {
+   "n": 30,
+   "mean": 3.7,
+   "ci95": [
+    3.43,
+    3.97
+   ],
+   "include_rate": 0.6,
+   "tiers": {
+    "include": 18,
+    "flag": 11,
+    "exclude": 1
+   }
+  },
+  "Telekommunikatsiya": {
+   "n": 25,
+   "mean": 3.32,
+   "ci95": [
+    2.96,
+    3.64
+   ],
+   "include_rate": 0.48,
+   "tiers": {
+    "include": 12,
+    "flag": 9,
+    "exclude": 4
+   }
+  },
+  "Tibbiyot/Sog'liqni saqlash": {
+   "n": 25,
+   "mean": 3.8,
+   "ci95": [
+    3.44,
+    4.12
+   ],
+   "include_rate": 0.68,
+   "tiers": {
+    "include": 17,
+    "flag": 6,
+    "exclude": 2
+   }
+  },
+  "To'lov tizimlari": {
+   "n": 24,
+   "mean": 3.54,
+   "ci95": [
+    3.17,
+    3.88
+   ],
+   "include_rate": 0.625,
+   "tiers": {
+    "include": 15,
+    "flag": 6,
+    "exclude": 3
+   }
+  },
+  "Elektron tijorat": {
+   "n": 21,
+   "mean": 3.81,
+   "ci95": [
+    3.43,
+    4.19
+   ],
+   "include_rate": 0.762,
+   "tiers": {
+    "include": 16,
+    "flag": 2,
+    "exclude": 3
+   }
+  },
+  "Ta'lim": {
+   "n": 20,
+   "mean": 3.25,
+   "ci95": [
+    2.95,
+    3.55
+   ],
+   "include_rate": 0.4,
+   "tiers": {
+    "include": 8,
+    "flag": 9,
+    "exclude": 3
+   }
+  },
+  "Oziq-ovqat do'konlari": {
+   "n": 15,
+   "mean": 3.8,
+   "ci95": [
+    3.47,
+    4.13
+   ],
+   "include_rate": 0.667,
+   "tiers": {
+    "include": 10,
+    "flag": 5,
+    "exclude": 0
+   }
+  },
+  "pooled_small_domains (N<15, 14 domains)": {
+   "n": 60,
+   "mean": 3.68,
+   "ci95": [
+    3.47,
+    3.9
+   ],
+   "include_rate": 0.583,
+   "tiers": {
+    "include": 35,
+    "flag": 21,
+    "exclude": 4
+   }
+  },
+  "all": {
+   "n": 307,
+   "mean": 3.75,
+   "ci95": [
+    3.64,
+    3.85
+   ],
+   "include_rate": 0.635,
+   "tiers": {
+    "include": 195,
+    "flag": 86,
+    "exclude": 26
+   }
+  }
+ }
+}

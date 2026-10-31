@@ -200,6 +200,7 @@ def extract_aspects(
     temperature: float = 0.1,
     top_p: float = 0.9,
     do_sample: bool = False,
+    transliterate: bool = False,
 ) -> Dict[str, Any]:
     """
     Extract aspects from a single text using the fine-tuned model.
@@ -213,6 +214,9 @@ def extract_aspects(
         temperature: Sampling temperature (lower = more deterministic).
         top_p: Nucleus sampling parameter.
         do_sample: Whether to use sampling (False = greedy decoding).
+        transliterate: Give the model a Latin transliteration of Uzbek-Cyrillic
+            text and map the extracted terms back to the original
+            (src/transliterate.py). Russian and Latin text is unchanged.
 
     Returns:
         Dictionary with extracted aspects.
@@ -222,6 +226,11 @@ def extract_aspects(
         >>> print(result)
         {"aspects": [{"term": "telefon", "category": "general", "polarity": "positive"}]}
     """
+    original, offsets = text, None
+    if transliterate:
+        from src.transliterate import prepare
+        text, _, offsets = prepare(text)
+
     # Create prompt
     prompt = create_inference_prompt(text, use_uzbek)
     
@@ -257,7 +266,18 @@ def extract_aspects(
     
     # Parse output
     result = parse_model_output(generated_text)
-    
+
+    # Map terms found in the transliteration back to the original script;
+    # a term the model respelled keeps its Latin form
+    if offsets is not None:
+        from src.transliterate import span_in_original
+        result["transliterated"] = True
+        for aspect in result.get("aspects") or []:
+            if isinstance(aspect, dict):
+                span = span_in_original(aspect.get("term"), text, offsets, original)
+                if span:
+                    aspect["term_latin"], aspect["term"] = aspect.get("term"), span
+
     return result
 
 

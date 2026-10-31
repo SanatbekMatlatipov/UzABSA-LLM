@@ -84,6 +84,8 @@ def annotate_batch(
     use_uzbek: bool = True,
     checkpoint_dir: Path = None,
     checkpoint_every: int = 100,
+    source_name: str = "qwen2.5-7b-finetuned",
+    transliterate: bool = False,
 ) -> list:
     """Run inference on all reviews with checkpoint support for crash recovery."""
     annotations = []
@@ -110,7 +112,8 @@ def annotate_batch(
         review_text = str(row["review_text"]).strip()
         
         # Run ABSA inference
-        result = extract_aspects(model, tokenizer, review_text, use_uzbek=use_uzbek)
+        result = extract_aspects(model, tokenizer, review_text, use_uzbek=use_uzbek,
+                                 transliterate=transliterate)
         
         aspects = result.get("aspects", [])
         parse_ok = result.get("parse_success", False)
@@ -128,10 +131,12 @@ def annotate_batch(
             "user_rating": int(row["rating_value"]),
             "aspects": aspects,
             "num_aspects": len(aspects),
-            "annotation_source": "qwen2.5-7b-finetuned",
+            "annotation_source": source_name,
             "parse_success": parse_ok,
             "raw_output": result.get("raw_output", ""),
         }
+        if result.get("transliterated"):
+            annotation["transliterated"] = True
         annotations.append(annotation)
         
         # Save checkpoint
@@ -254,7 +259,12 @@ def main():
     parser.add_argument("--output-dir", type=str, default="./data/annotated", help="Output directory")
     parser.add_argument("--max-samples", type=int, default=None, help="Max reviews to annotate (for testing)")
     parser.add_argument("--use-english", action="store_true", help="Use English prompts")
-    
+    parser.add_argument("--source-name", type=str, default="qwen2.5-7b-finetuned",
+                        help="Value of annotation_source in every record (name the checkpoint)")
+    parser.add_argument("--transliterate-cyrillic", action="store_true",
+                        help="Annotate Uzbek-Cyrillic reviews in Latin transliteration and map "
+                             "the terms back (src/transliterate.py); Russian reviews are unchanged")
+
     args = parser.parse_args()
     output_dir = Path(args.output_dir)
     
@@ -280,6 +290,8 @@ def main():
         use_uzbek=not args.use_english,
         checkpoint_dir=output_dir,
         checkpoint_every=100,
+        source_name=args.source_name,
+        transliterate=args.transliterate_cyrillic,
     )
     
     # 4. Quality filter

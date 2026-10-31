@@ -1,0 +1,1003 @@
+{
+ "meta": {
+  "created": "2026-10-31T01:27:15",
+  "git": {
+   "commit": "c5ea987308d5a364d5c4f711b0b77c8ae4cbbe0d",
+   "dirty": true
+  },
+  "python": "3.13.9",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+ },
+ "split": {
+  "source": "./data/processed",
+  "dev_size": 0.1,
+  "seed": 42,
+  "rows": {
+   "train": 4932,
+   "validation": 548,
+   "test": 609
+  },
+  "unique_texts": {
+   "train": 4487,
+   "validation": 488,
+   "test": 540
+  },
+  "shared_texts": {
+   "train&validation": 0,
+   "train&test": 0,
+   "validation&test": 0
+  },
+  "test_is_v2_heldout": true
+ },
+ "v2_reference": {
+  "Qwen 2.5-7B": {
+   "checkpoint": "hf://Sanatbek/UzABSA-LLM@qwen2.5-7b",
+   "hub": {
+    "branch": "qwen2.5-7b",
+    "last_updated": "2026-08-29T14:12:13+00:00",
+    "run_started": "2026-08-29T15:06:46",
+    "status": "updated after the run"
+   },
+   "logs": [
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/README.md",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/eval_results_20260829_154502.json",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/experiment_summary.json",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/gpu_memory.png",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/lr_schedule.png",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/training_curves.png",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/training_history.csv",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2/training_history.json"
+   ],
+   "test_preds": "paper_materials/revision_v2/results_v2/qwen2.5-7b_preds.jsonl",
+   "test": {
+    "n": 609,
+    "ate_exact_p": 0.7141,
+    "ate_exact_r": 0.7015,
+    "ate_exact_f1": 0.7077,
+    "ate_partial_1to1_f1": 0.8036,
+    "pair_f1": 0.6448,
+    "sentiment_accuracy": 0.911,
+    "sentiment_macro_f1": 0.8622,
+    "parse_rate": 1.0
+   }
+  },
+  "Qwen 2.5-7B (seed 43)": {
+   "checkpoint": null,
+   "hub": null,
+   "logs": [
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/README.md",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/eval_results_20260829_175110.json",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/experiment_summary.json",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/gpu_memory.png",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/lr_schedule.png",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/training_curves.png",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/training_history.csv",
+    "outputs/rerun_v2/uzabsa_qwen2.5-7b_v2_seed43/training_history.json"
+   ],
+   "test_preds": "paper_materials/revision_v2/results_v2/qwen2.5-7b_seed43_preds.jsonl",
+   "test": {
+    "n": 609,
+    "ate_exact_p": 0.7106,
+    "ate_exact_r": 0.7096,
+    "ate_exact_f1": 0.7101,
+    "ate_partial_1to1_f1": 0.8168,
+    "pair_f1": 0.6554,
+    "sentiment_accuracy": 0.9216,
+    "sentiment_macro_f1": 0.8815,
+    "parse_rate": 1.0
+   }
+  },
+  "Llama 3.1-8B": {
+   "checkpoint": "hf://Sanatbek/UzABSA-LLM@llama3.1-8b",
+   "hub": {
+    "branch": "llama3.1-8b",
+    "last_updated": "2026-02-25T20:06:05+00:00",
+    "run_started": "2026-08-29T14:01:20",
+    "status": "older than the run: the Hub still serves earlier weights"
+   },
+   "logs": [
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/README.md",
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/eval_results_20260829_145046.json",
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/experiment_summary.json",
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/gpu_memory.png",
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/lr_schedule.png",
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/training_curves.png",
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/training_history.csv",
+    "outputs/rerun_v2/uzabsa_llama3.1-8b_v2/training_history.json"
+   ],
+   "test_preds": "paper_materials/revision_v2/results_v2/llama3.1-8b_preds.jsonl",
+   "test": {
+    "n": 609,
+    "ate_exact_p": 0.7185,
+    "ate_exact_r": 0.6893,
+    "ate_exact_f1": 0.7036,
+    "ate_partial_1to1_f1": 0.8019,
+    "pair_f1": 0.651,
+    "sentiment_accuracy": 0.9252,
+    "sentiment_macro_f1": 0.8867,
+    "parse_rate": 0.9737
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "checkpoint": "hf://Sanatbek/UzABSA-LLM@deepseek-r1-7b",
+   "hub": {
+    "branch": "deepseek-r1-7b",
+    "last_updated": "2026-02-25T23:54:47+00:00",
+    "run_started": "2026-08-29T14:37:04",
+    "status": "older than the run: the Hub still serves earlier weights"
+   },
+   "logs": [
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/README.md",
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/eval_results_20260829_150806.json",
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/experiment_summary.json",
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/gpu_memory.png",
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/lr_schedule.png",
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/training_curves.png",
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/training_history.csv",
+    "outputs/rerun_v2/uzabsa_deepseek-7b_v2/training_history.json"
+   ],
+   "test_preds": "paper_materials/revision_v2/results_v2/deepseek-7b_preds.jsonl",
+   "test": {
+    "n": 609,
+    "ate_exact_p": 0.7143,
+    "ate_exact_r": 0.6445,
+    "ate_exact_f1": 0.6776,
+    "ate_partial_1to1_f1": 0.7892,
+    "pair_f1": 0.6034,
+    "sentiment_accuracy": 0.8905,
+    "sentiment_macro_f1": 0.8314,
+    "parse_rate": 0.9688
+   }
+  },
+  "BERTbek": {
+   "checkpoint": null,
+   "hub": null,
+   "logs": [
+    "paper_materials/revision_v2/baselines_v2/bertbek/eval_results.json",
+    "paper_materials/revision_v2/baselines_v2/bertbek/train_summary.json",
+    "paper_materials/revision_v2/baselines_v2/bertbek/training_log.txt"
+   ],
+   "test_preds": "paper_materials/revision_v2/baselines_v2/bertbek/preds_per_example.jsonl",
+   "test": {
+    "n": 609,
+    "ate_exact_p": 0.6802,
+    "ate_exact_r": 0.7042,
+    "ate_exact_f1": 0.692,
+    "ate_partial_1to1_f1": 0.7995,
+    "pair_f1": 0.608,
+    "sentiment_accuracy": 0.8786,
+    "sentiment_macro_f1": 0.8126,
+    "parse_rate": 1.0
+   }
+  },
+  "TahrirchiBERT": {
+   "checkpoint": null,
+   "hub": null,
+   "logs": [
+    "paper_materials/revision_v2/baselines_v2/tahrirchi-bert/eval_results.json",
+    "paper_materials/revision_v2/baselines_v2/tahrirchi-bert/train_summary.json",
+    "paper_materials/revision_v2/baselines_v2/tahrirchi-bert/training_log.txt"
+   ],
+   "test_preds": "paper_materials/revision_v2/baselines_v2/tahrirchi-bert/preds_per_example.jsonl",
+   "test": {
+    "n": 609,
+    "ate_exact_p": 0.7287,
+    "ate_exact_r": 0.6744,
+    "ate_exact_f1": 0.7005,
+    "ate_partial_1to1_f1": 0.7865,
+    "pair_f1": 0.6225,
+    "sentiment_accuracy": 0.8893,
+    "sentiment_macro_f1": 0.814,
+    "parse_rate": 1.0
+   }
+  }
+ },
+ "runs": {},
+ "seed_summary": {},
+ "ensembles": {
+  "Majority of 3 LLMs (v2 systems)": {
+   "file": "experiments/v3/results/ensembles/majority_of_3_llms_v2_systems_metrics.json",
+   "rule": "term kept if >= 2 of 3 systems predict it; polarity by plurality, ties to the first listed system",
+   "members": [
+    "Qwen 2.5-7B",
+    "Llama 3.1-8B",
+    "DeepSeek-R1-7B"
+   ],
+   "scores": {
+    "canonical": {
+     "ate_exact_p": 0.7752,
+     "ate_exact_r": 0.6784,
+     "ate_exact_f1": 0.7236,
+     "ate_partial_f1": 0.7988,
+     "pair_f1": 0.6671,
+     "sentiment_accuracy": 0.922,
+     "sentiment_macro_f1": 0.8827,
+     "pred_gold_ratio": 0.88
+    },
+    "exact_1to1": {
+     "p": 0.7752,
+     "r": 0.6784,
+     "f1": 0.7236
+    },
+    "partial_1to1": {
+     "p": 0.8574,
+     "r": 0.7503,
+     "f1": 0.8003
+    },
+    "stem_1to1": {
+     "p": 0.7845,
+     "r": 0.6866,
+     "f1": 0.7323
+    },
+    "pair_exact_1to1": {
+     "p": 0.7147,
+     "r": 0.6255,
+     "f1": 0.6671
+    },
+    "pair_stem_1to1": {
+     "p": 0.724,
+     "r": 0.6336,
+     "f1": 0.6758
+    }
+   },
+   "vs_member": {
+    "Qwen 2.5-7B": {
+     "ate_exact_f1": {
+      "delta": 0.0159,
+      "p": 0.1492,
+      "p_holm": 1.0
+     },
+     "pair_f1": {
+      "delta": 0.0224,
+      "p": 0.0544,
+      "p_holm": 0.4896
+     },
+     "sentiment_accuracy": {
+      "delta": 0.011,
+      "p": 0.1962,
+      "p_holm": 1.0
+     },
+     "ate_partial_1to1_f1": {
+      "delta": -0.0033,
+      "p": 0.7634,
+      "p_holm": 1.0
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0242,
+      "p": 0.0376,
+      "p_holm": 0.4004
+     }
+    },
+    "Llama 3.1-8B": {
+     "ate_exact_f1": {
+      "delta": 0.02,
+      "p": 0.0364,
+      "p_holm": 0.4004
+     },
+     "pair_f1": {
+      "delta": 0.0162,
+      "p": 0.151,
+      "p_holm": 1.0
+     },
+     "sentiment_accuracy": {
+      "delta": -0.0032,
+      "p": 0.7494,
+      "p_holm": 1.0
+     },
+     "ate_partial_1to1_f1": {
+      "delta": -0.0016,
+      "p": 0.8408,
+      "p_holm": 1.0
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0166,
+      "p": 0.1516,
+      "p_holm": 1.0
+     }
+    },
+    "DeepSeek-R1-7B": {
+     "ate_exact_f1": {
+      "delta": 0.046,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "pair_f1": {
+      "delta": 0.0637,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "sentiment_accuracy": {
+      "delta": 0.0315,
+      "p": 0.0068,
+      "p_holm": 0.0816
+     },
+     "ate_partial_1to1_f1": {
+      "delta": 0.0111,
+      "p": 0.2472,
+      "p_holm": 1.0
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0647,
+      "p": 0.0,
+      "p_holm": 0.0
+     }
+    }
+   },
+   "complementarity": {
+    "gold_pairs": 737,
+    "found_by_any_member": 558,
+    "oracle_pair_recall": 0.7571,
+    "found_only_by": {
+     "Qwen 2.5-7B": 53,
+     "Llama 3.1-8B": 39,
+     "DeepSeek-R1-7B": 16
+    }
+   }
+  },
+  "Majority of 5 (v2 systems)": {
+   "file": "experiments/v3/results/ensembles/majority_of_5_v2_systems_metrics.json",
+   "rule": "term kept if >= 3 of 5 systems predict it; polarity by plurality, ties to the first listed system",
+   "members": [
+    "Qwen 2.5-7B",
+    "Llama 3.1-8B",
+    "DeepSeek-R1-7B",
+    "TahrirchiBERT",
+    "BERTbek"
+   ],
+   "scores": {
+    "canonical": {
+     "ate_exact_p": 0.8003,
+     "ate_exact_r": 0.7069,
+     "ate_exact_f1": 0.7507,
+     "ate_partial_f1": 0.8199,
+     "pair_f1": 0.6902,
+     "sentiment_accuracy": 0.9194,
+     "sentiment_macro_f1": 0.8699,
+     "pred_gold_ratio": 0.88
+    },
+    "exact_1to1": {
+     "p": 0.8003,
+     "r": 0.7069,
+     "f1": 0.7507
+    },
+    "partial_1to1": {
+     "p": 0.8756,
+     "r": 0.7734,
+     "f1": 0.8213
+    },
+    "stem_1to1": {
+     "p": 0.8095,
+     "r": 0.7151,
+     "f1": 0.7594
+    },
+    "pair_exact_1to1": {
+     "p": 0.7358,
+     "r": 0.6499,
+     "f1": 0.6902
+    },
+    "pair_stem_1to1": {
+     "p": 0.7435,
+     "r": 0.6567,
+     "f1": 0.6974
+    }
+   },
+   "vs_member": {
+    "Qwen 2.5-7B": {
+     "ate_exact_f1": {
+      "delta": 0.043,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "pair_f1": {
+      "delta": 0.0454,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "sentiment_accuracy": {
+      "delta": 0.0084,
+      "p": 0.4072,
+      "p_holm": 0.8144
+     },
+     "ate_partial_1to1_f1": {
+      "delta": 0.0178,
+      "p": 0.0644,
+      "p_holm": 0.2576
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0458,
+      "p": 0.0,
+      "p_holm": 0.0
+     }
+    },
+    "Llama 3.1-8B": {
+     "ate_exact_f1": {
+      "delta": 0.0471,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "pair_f1": {
+      "delta": 0.0392,
+      "p": 0.0034,
+      "p_holm": 0.034
+     },
+     "sentiment_accuracy": {
+      "delta": -0.0058,
+      "p": 0.5828,
+      "p_holm": 0.8144
+     },
+     "ate_partial_1to1_f1": {
+      "delta": 0.0194,
+      "p": 0.07,
+      "p_holm": 0.2576
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0381,
+      "p": 0.004,
+      "p_holm": 0.036
+     }
+    },
+    "DeepSeek-R1-7B": {
+     "ate_exact_f1": {
+      "delta": 0.0731,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "pair_f1": {
+      "delta": 0.0868,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "sentiment_accuracy": {
+      "delta": 0.0289,
+      "p": 0.0058,
+      "p_holm": 0.0464
+     },
+     "ate_partial_1to1_f1": {
+      "delta": 0.0322,
+      "p": 0.0064,
+      "p_holm": 0.0464
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0863,
+      "p": 0.0,
+      "p_holm": 0.0
+     }
+    },
+    "TahrirchiBERT": {
+     "ate_exact_f1": {
+      "delta": 0.0502,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "pair_f1": {
+      "delta": 0.0677,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "sentiment_accuracy": {
+      "delta": 0.03,
+      "p": 0.0144,
+      "p_holm": 0.0864
+     },
+     "ate_partial_1to1_f1": {
+      "delta": 0.0348,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0724,
+      "p": 0.0,
+      "p_holm": 0.0
+     }
+    },
+    "BERTbek": {
+     "ate_exact_f1": {
+      "delta": 0.0587,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "pair_f1": {
+      "delta": 0.0822,
+      "p": 0.0,
+      "p_holm": 0.0
+     },
+     "sentiment_accuracy": {
+      "delta": 0.0408,
+      "p": 0.0002,
+      "p_holm": 0.0022
+     },
+     "ate_partial_1to1_f1": {
+      "delta": 0.0219,
+      "p": 0.0204,
+      "p_holm": 0.102
+     },
+     "pair_stem_1to1_f1": {
+      "delta": 0.0878,
+      "p": 0.0,
+      "p_holm": 0.0
+     }
+    }
+   },
+   "complementarity": {
+    "gold_pairs": 737,
+    "found_by_any_member": 582,
+    "oracle_pair_recall": 0.7897,
+    "found_only_by": {
+     "Qwen 2.5-7B": 15,
+     "Llama 3.1-8B": 22,
+     "DeepSeek-R1-7B": 9,
+     "TahrirchiBERT": 9,
+     "BERTbek": 6
+    }
+   }
+  }
+ },
+ "significance": [],
+ "judge": {
+  "calibration": {
+   "calibration_checklist": {
+    "file": "experiments/v3/judge/calibration_checklist/calibration.json",
+    "n": 150,
+    "systems": {
+     "gpt-4o-mini [checklist]": {
+      "spearman_overall": 0.412,
+      "agreement": 0.713,
+      "kappa": 0.195,
+      "kappa_linear": 0.244,
+      "include_precision": 0.716,
+      "include_recall": 1.0,
+      "judge_include_human_exclude": 11,
+      "judge_tiers": {
+       "include": 141,
+       "flag": 6,
+       "exclude": 3
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.278,
+         0.529
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.375,
+          -0.123
+         ],
+         "p_value": 0.0
+        }
+       },
+       "kappa": {
+        "ci95": [
+         0.08,
+         0.32
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.44,
+          -0.106
+         ],
+         "p_value": 0.001
+        }
+       }
+      }
+     },
+     "gpt-4.1 [checklist]": {
+      "spearman_overall": 0.621,
+      "agreement": 0.7,
+      "kappa": 0.372,
+      "kappa_linear": 0.433,
+      "include_precision": 0.819,
+      "include_recall": 0.851,
+      "judge_include_human_exclude": 3,
+      "judge_tiers": {
+       "include": 105,
+       "exclude": 20,
+       "flag": 25
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.518,
+         0.719
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.152,
+          0.086
+         ],
+         "p_value": 0.54
+        }
+       },
+       "kappa": {
+        "ci95": [
+         0.24,
+         0.504
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.267,
+          0.07
+         ],
+         "p_value": 0.267
+        }
+       }
+      }
+     },
+     "gpt-4o-mini (published, v1)": {
+      "spearman_overall": 0.657,
+      "agreement": 0.733,
+      "kappa": 0.468,
+      "kappa_linear": 0.546,
+      "include_precision": 0.854,
+      "include_recall": 0.812,
+      "judge_include_human_exclude": 2,
+      "judge_tiers": {
+       "include": 96,
+       "flag": 41,
+       "exclude": 13
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.552,
+         0.749
+        ]
+       },
+       "kappa": {
+        "ci95": [
+         0.333,
+         0.603
+        ]
+       }
+      }
+     },
+     "panel mean [checklist]": {
+      "spearman_overall": 0.661,
+      "agreement": 0.693,
+      "kappa": 0.138,
+      "kappa_linear": 0.222,
+      "include_precision": 0.716,
+      "include_recall": 1.0,
+      "judge_include_human_exclude": 9,
+      "judge_tiers": {
+       "include": 141,
+       "flag": 7,
+       "exclude": 2
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.558,
+         0.757
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.103,
+          0.12
+         ],
+         "p_value": 0.971
+        }
+       },
+       "kappa": {
+        "ci95": [
+         0.047,
+         0.244
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.485,
+          -0.169
+         ],
+         "p_value": 0.0
+        }
+       }
+      }
+     }
+    },
+    "inter_judge": {
+     "judges": [
+      "gpt-4o-mini",
+      "gpt-4.1"
+     ],
+     "n": 150,
+     "spearman_overall": {
+      "gpt-4o-mini | gpt-4.1": 0.296
+     },
+     "krippendorff_alpha": {
+      "completeness": -0.1623,
+      "accuracy": -0.0125,
+      "sentiment": 0.5526,
+      "relevance": -0.2477,
+      "overall": 0.0238
+     }
+    },
+    "cost_usd": {
+     "gpt-4o-mini": 0.018,
+     "gpt-4.1": 0.2998
+    }
+   },
+   "calibration_v1": {
+    "file": "experiments/v3/judge/calibration_v1/calibration.json",
+    "n": 150,
+    "systems": {
+     "gpt-4o-mini [v1]": {
+      "spearman_overall": 0.659,
+      "agreement": 0.753,
+      "kappa": 0.509,
+      "kappa_linear": 0.573,
+      "include_precision": 0.874,
+      "include_recall": 0.822,
+      "judge_include_human_exclude": 2,
+      "judge_tiers": {
+       "include": 95,
+       "flag": 44,
+       "exclude": 11
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.553,
+         0.751
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.035,
+          0.042
+         ],
+         "p_value": 0.924
+        }
+       },
+       "kappa": {
+        "ci95": [
+         0.377,
+         0.641
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.049,
+          0.127
+         ],
+         "p_value": 0.359
+        }
+       }
+      }
+     },
+     "gpt-4.1 [v1]": {
+      "spearman_overall": 0.741,
+      "agreement": 0.7,
+      "kappa": 0.412,
+      "kappa_linear": 0.539,
+      "include_precision": 0.876,
+      "include_recall": 0.842,
+      "judge_include_human_exclude": 2,
+      "judge_tiers": {
+       "flag": 22,
+       "include": 97,
+       "exclude": 31
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.654,
+         0.816
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.003,
+          0.177
+         ],
+         "p_value": 0.063
+        }
+       },
+       "kappa": {
+        "ci95": [
+         0.295,
+         0.533
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          -0.198,
+          0.096
+         ],
+         "p_value": 0.467
+        }
+       }
+      }
+     },
+     "gpt-4o-mini (published, v1)": {
+      "spearman_overall": 0.657,
+      "agreement": 0.733,
+      "kappa": 0.468,
+      "kappa_linear": 0.546,
+      "include_precision": 0.854,
+      "include_recall": 0.812,
+      "judge_include_human_exclude": 2,
+      "judge_tiers": {
+       "include": 96,
+       "flag": 41,
+       "exclude": 13
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.552,
+         0.749
+        ]
+       },
+       "kappa": {
+        "ci95": [
+         0.333,
+         0.603
+        ]
+       }
+      }
+     },
+     "panel mean [v1]": {
+      "spearman_overall": 0.76,
+      "agreement": 0.813,
+      "kappa": 0.601,
+      "kappa_linear": 0.663,
+      "include_precision": 0.877,
+      "include_recall": 0.921,
+      "judge_include_human_exclude": 2,
+      "judge_tiers": {
+       "include": 106,
+       "flag": 34,
+       "exclude": 10
+      },
+      "human_tiers": {
+       "include": 101,
+       "flag": 32,
+       "exclude": 17
+      },
+      "ci95": {
+       "spearman_overall": {
+        "ci95": [
+         0.676,
+         0.836
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          0.048,
+          0.166
+         ],
+         "p_value": 0.0
+        }
+       },
+       "kappa": {
+        "ci95": [
+         0.467,
+         0.725
+        ],
+        "vs_gpt-4o-mini (published, v1)": {
+         "ci95": [
+          0.015,
+          0.259
+         ],
+         "p_value": 0.026
+        }
+       }
+      }
+     }
+    },
+    "inter_judge": {
+     "judges": [
+      "gpt-4o-mini",
+      "gpt-4.1"
+     ],
+     "n": 150,
+     "spearman_overall": {
+      "gpt-4o-mini | gpt-4.1": 0.679
+     },
+     "krippendorff_alpha": {
+      "completeness": 0.6785,
+      "accuracy": 0.3551,
+      "sentiment": 0.8582,
+      "relevance": 0.6428,
+      "overall": 0.6841
+     }
+    },
+    "cost_usd": {
+     "gpt-4o-mini": 0.0188,
+     "gpt-4.1": 0.278
+    }
+   }
+  },
+  "corpus": {
+   "release_v1": {
+    "file": "experiments/v3/judge/release_v1/summary.json",
+    "annotations": "data/annotated/reviews_annotated.json",
+    "n_items": 5038,
+    "n_scored": 5038,
+    "include_rate": 0.7162,
+    "tiers": {
+     "include": 3608,
+     "exclude": 458,
+     "flag": 972
+    },
+    "means": {
+     "completeness": 3.36,
+     "accuracy": 4.5,
+     "sentiment": 4.239,
+     "relevance": 3.942,
+     "overall": 3.734
+    },
+    "inter_judge": {
+     "judges": [
+      "gpt-4o-mini",
+      "gpt-4.1"
+     ],
+     "n": 5038,
+     "spearman_overall": {
+      "gpt-4o-mini | gpt-4.1": 0.738
+     },
+     "krippendorff_alpha": {
+      "completeness": 0.697,
+      "accuracy": 0.4895,
+      "sentiment": 0.9007,
+      "relevance": 0.6893,
+      "overall": 0.7482
+     }
+    },
+    "judges": {
+     "gpt-4o-mini": {
+      "model": "gpt-4o-mini",
+      "scored": 5038,
+      "tokens_in": 2669591,
+      "tokens_out": 390399,
+      "usd": 0.6347
+     },
+     "gpt-4.1": {
+      "model": "gpt-4.1",
+      "scored": 5038,
+      "tokens_in": 2669591,
+      "tokens_out": 505187,
+      "usd": 9.3807
+     }
+    }
+   }
+  }
+ },
+ "missing": [
+  "Llama 3.1-8B: the Hub branch `llama3.1-8b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)",
+  "DeepSeek-R1-7B: the Hub branch `deepseek-r1-7b` was last updated 2026-02-25, before the run behind the paper's numbers; push that run (scripts/push_to_hub.py)",
+  "LLM runs with test predictions: 0/9 (run_v3.py gpu / encoders)",
+  "encoder runs with test predictions: 0/6 (run_v3.py gpu / encoders)",
+  "re-annotation and judging of the corpus (run_v3.py annotate judge-v3 assemble)"
+ ]
+}

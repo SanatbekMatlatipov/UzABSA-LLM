@@ -1,0 +1,13 @@
+# 2026-10-30T23:44:41 host=Sanatbeks-MacBook-Pro-2.local git=c5ea987-dirty
+# /opt/anaconda3/bin/python scripts/judge_panel.py score --judges experiments/v3/judges.json --rubric checklist --annotations data/annotated/reviews_annotated.json --workers 8 --out experiments/v3/judge/release_checklist
+2026-10-30 23:44:42,523 - numexpr.utils - INFO - NumExpr defaulting to 12 threads.
+usage: judge_panel.py [-h] [--judges JUDGES] [--only [ONLY ...]]
+                      [--rubric {v1,checklist}] [--annotations ANNOTATIONS]
+                      [--human-dir HUMAN_DIR] --out OUT [--workers WORKERS]
+                      [--limit LIMIT] [--n-boot N_BOOT] [--dry-run] [--smoke]
+                      {calibrate,score}
+judge_panel.py: error: no judge to run: set the API key variables named in judges.json
+SKIP gpt-4o-mini: $OPENAI_API_KEY is not set
+SKIP gpt-4.1: $OPENAI_API_KEY is not set
+SKIP gemini-2.5-flash: $GEMINI_API_KEY is not set
+# exit 2 after 1s

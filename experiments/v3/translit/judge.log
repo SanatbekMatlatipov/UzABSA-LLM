@@ -1,0 +1,6 @@
+2026-10-31 03:55:49,520 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Scored 152/152; panel tiers {'flag': 35, 'include': 83, 'exclude': 34}
+Saved -> experiments/v3/translit/judge_cyrillic/judge_results.json
+2026-10-31 03:56:44,345 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Scored 152/152; panel tiers {'flag': 20, 'exclude': 28, 'include': 104}
+Saved -> experiments/v3/translit/judge_latin/judge_results.json

@@ -1,0 +1,358 @@
+{
+ "rubric": "v1",
+ "n_reviews": 150,
+ "human": "mean of the rubric_*.csv raters",
+ "agreement": {
+  "gpt-4o-mini [v1]": {
+   "n": 150,
+   "completeness": {
+    "spearman": 0.468,
+    "mae": 0.877,
+    "judge_mean": 3.34,
+    "human_mean": 4.04
+   },
+   "accuracy": {
+    "spearman": 0.439,
+    "mae": 0.523,
+    "judge_mean": 4.45,
+    "human_mean": 4.19
+   },
+   "sentiment": {
+    "spearman": 0.78,
+    "mae": 0.36,
+    "judge_mean": 4.23,
+    "human_mean": 4.25
+   },
+   "relevance": {
+    "spearman": 0.648,
+    "mae": 0.503,
+    "judge_mean": 3.98,
+    "human_mean": 3.85
+   },
+   "overall": {
+    "spearman": 0.659,
+    "mae": 0.547,
+    "judge_mean": 3.75,
+    "human_mean": 3.84
+   },
+   "tiers": {
+    "agreement": 0.753,
+    "kappa": 0.509,
+    "kappa_linear": 0.573,
+    "include_precision": 0.874,
+    "include_recall": 0.822,
+    "judge_include_human_exclude": 2,
+    "judge_tiers": {
+     "include": 95,
+     "flag": 44,
+     "exclude": 11
+    },
+    "human_tiers": {
+     "include": 101,
+     "flag": 32,
+     "exclude": 17
+    }
+   }
+  },
+  "gpt-4.1 [v1]": {
+   "n": 150,
+   "completeness": {
+    "spearman": 0.657,
+    "mae": 0.837,
+    "judge_mean": 3.32,
+    "human_mean": 4.04
+   },
+   "accuracy": {
+    "spearman": 0.457,
+    "mae": 0.543,
+    "judge_mean": 4.55,
+    "human_mean": 4.19
+   },
+   "sentiment": {
+    "spearman": 0.88,
+    "mae": 0.213,
+    "judge_mean": 4.33,
+    "human_mean": 4.25
+   },
+   "relevance": {
+    "spearman": 0.779,
+    "mae": 0.443,
+    "judge_mean": 3.66,
+    "human_mean": 3.85
+   },
+   "overall": {
+    "spearman": 0.741,
+    "mae": 0.54,
+    "judge_mean": 3.63,
+    "human_mean": 3.84
+   },
+   "tiers": {
+    "agreement": 0.7,
+    "kappa": 0.412,
+    "kappa_linear": 0.539,
+    "include_precision": 0.876,
+    "include_recall": 0.842,
+    "judge_include_human_exclude": 2,
+    "judge_tiers": {
+     "flag": 22,
+     "include": 97,
+     "exclude": 31
+    },
+    "human_tiers": {
+     "include": 101,
+     "flag": 32,
+     "exclude": 17
+    }
+   }
+  },
+  "gpt-4o-mini (published, v1)": {
+   "n": 150,
+   "completeness": {
+    "spearman": 0.462,
+    "mae": 0.943,
+    "judge_mean": 3.3,
+    "human_mean": 4.04
+   },
+   "accuracy": {
+    "spearman": 0.433,
+    "mae": 0.543,
+    "judge_mean": 4.44,
+    "human_mean": 4.19
+   },
+   "sentiment": {
+    "spearman": 0.806,
+    "mae": 0.34,
+    "judge_mean": 4.24,
+    "human_mean": 4.25
+   },
+   "relevance": {
+    "spearman": 0.667,
+    "mae": 0.497,
+    "judge_mean": 3.97,
+    "human_mean": 3.85
+   },
+   "overall": {
+    "spearman": 0.657,
+    "mae": 0.553,
+    "judge_mean": 3.75,
+    "human_mean": 3.84
+   },
+   "tiers": {
+    "agreement": 0.733,
+    "kappa": 0.468,
+    "kappa_linear": 0.546,
+    "include_precision": 0.854,
+    "include_recall": 0.812,
+    "judge_include_human_exclude": 2,
+    "judge_tiers": {
+     "include": 96,
+     "flag": 41,
+     "exclude": 13
+    },
+    "human_tiers": {
+     "include": 101,
+     "flag": 32,
+     "exclude": 17
+    }
+   }
+  },
+  "panel mean [v1]": {
+   "n": 150,
+   "completeness": {
+    "spearman": 0.636,
+    "mae": 0.827,
+    "judge_mean": 3.33,
+    "human_mean": 4.04
+   },
+   "accuracy": {
+    "spearman": 0.541,
+    "mae": 0.487,
+    "judge_mean": 4.5,
+    "human_mean": 4.19
+   },
+   "sentiment": {
+    "spearman": 0.841,
+    "mae": 0.27,
+    "judge_mean": 4.28,
+    "human_mean": 4.25
+   },
+   "relevance": {
+    "spearman": 0.783,
+    "mae": 0.437,
+    "judge_mean": 3.82,
+    "human_mean": 3.85
+   },
+   "overall": {
+    "spearman": 0.76,
+    "mae": 0.5,
+    "judge_mean": 3.69,
+    "human_mean": 3.84
+   },
+   "tiers": {
+    "agreement": 0.813,
+    "kappa": 0.601,
+    "kappa_linear": 0.663,
+    "include_precision": 0.877,
+    "include_recall": 0.921,
+    "judge_include_human_exclude": 2,
+    "judge_tiers": {
+     "include": 106,
+     "flag": 34,
+     "exclude": 10
+    },
+    "human_tiers": {
+     "include": 101,
+     "flag": 32,
+     "exclude": 17
+    }
+   }
+  }
+ },
+ "bootstrap": {
+  "gpt-4o-mini [v1]": {
+   "spearman_overall": {
+    "ci95": [
+     0.553,
+     0.751
+    ],
+    "vs_gpt-4o-mini (published, v1)": {
+     "ci95": [
+      -0.035,
+      0.042
+     ],
+     "p_value": 0.924
+    }
+   },
+   "kappa": {
+    "ci95": [
+     0.377,
+     0.641
+    ],
+    "vs_gpt-4o-mini (published, v1)": {
+     "ci95": [
+      -0.049,
+      0.127
+     ],
+     "p_value": 0.359
+    }
+   }
+  },
+  "gpt-4.1 [v1]": {
+   "spearman_overall": {
+    "ci95": [
+     0.654,
+     0.816
+    ],
+    "vs_gpt-4o-mini (published, v1)": {
+     "ci95": [
+      -0.003,
+      0.177
+     ],
+     "p_value": 0.063
+    }
+   },
+   "kappa": {
+    "ci95": [
+     0.295,
+     0.533
+    ],
+    "vs_gpt-4o-mini (published, v1)": {
+     "ci95": [
+      -0.198,
+      0.096
+     ],
+     "p_value": 0.467
+    }
+   }
+  },
+  "gpt-4o-mini (published, v1)": {
+   "spearman_overall": {
+    "ci95": [
+     0.552,
+     0.749
+    ]
+   },
+   "kappa": {
+    "ci95": [
+     0.333,
+     0.603
+    ]
+   }
+  },
+  "panel mean [v1]": {
+   "spearman_overall": {
+    "ci95": [
+     0.676,
+     0.836
+    ],
+    "vs_gpt-4o-mini (published, v1)": {
+     "ci95": [
+      0.048,
+      0.166
+     ],
+     "p_value": 0.0
+    }
+   },
+   "kappa": {
+    "ci95": [
+     0.467,
+     0.725
+    ],
+    "vs_gpt-4o-mini (published, v1)": {
+     "ci95": [
+      0.015,
+      0.259
+     ],
+     "p_value": 0.026
+    }
+   }
+  }
+ },
+ "inter_judge": {
+  "judges": [
+   "gpt-4o-mini",
+   "gpt-4.1"
+  ],
+  "n": 150,
+  "spearman_overall": {
+   "gpt-4o-mini | gpt-4.1": 0.679
+  },
+  "krippendorff_alpha": {
+   "completeness": 0.6785,
+   "accuracy": 0.3551,
+   "sentiment": 0.8582,
+   "relevance": 0.6428,
+   "overall": 0.6841
+  }
+ },
+ "judges": {
+  "gpt-4o-mini": {
+   "model": "gpt-4o-mini",
+   "api_base": "https://api.openai.com/v1",
+   "rubric": "v1",
+   "served_models": {
+    "gpt-4o-mini-2024-07-18": 150
+   },
+   "scored": 150,
+   "unparsed": [],
+   "tokens_in": 78398,
+   "tokens_out": 11746,
+   "usd": 0.0188,
+   "raw_log": "experiments/v3/judge/calibration_v1/raw/gpt-4o-mini__v1.jsonl"
+  },
+  "gpt-4.1": {
+   "model": "gpt-4.1",
+   "api_base": "https://api.openai.com/v1",
+   "rubric": "v1",
+   "served_models": {
+    "gpt-4.1-2025-04-14": 150
+   },
+   "scored": 150,
+   "unparsed": [],
+   "tokens_in": 78398,
+   "tokens_out": 15151,
+   "usd": 0.278,
+   "raw_log": "experiments/v3/judge/calibration_v1/raw/gpt-4.1__v1.jsonl"
+  }
+ }
+}

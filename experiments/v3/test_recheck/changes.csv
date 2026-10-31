@@ -1,0 +1,282 @@
+﻿review,idx,control,change,term,detail,text
+R002,445,False,span fixed,musiqadan,jonli musiqadan,Keling va jonli musiqadan bahramand bo'ling
+R003,152,False,added,menyu,negative,"Lekin xizmat menga yoqmadi, menyu so'rasam, ofitsiant ularda menyu yo'qligini aytdi."
+R003,152,False,added,ofitsiant,neutral,"Lekin xizmat menga yoqmadi, menyu so'rasam, ofitsiant ularda menyu yo'qligini aytdi."
+R007,404,False,removed,hammasi,,"Hammasi juda zo'r edi, yaxshi oqshom uchun rahmat!"
+R010,293,False,removed,taksi haydovchisi,,"Bu joy tashqaridan tanush qiyin, chunki u sport maydonlari bilan o'ralgan, ammo har qanday taksi haydovchisi sizni hech qanday muammosiz olib bora oladi, chunki u hatto O'zbekiston chegaralaridan tashqarida ham ma'lum joy."
+R011,283,False,added,restoran,positive,Arab oshxonasini sevuvchilar uchun bu restoran O'zbekistonda barakadir.
+R012,237,False,removed,mazali,,Mazali 😋 tayyorlangan.
+R013,552,False,span fixed,biftek va soyaga,biftek,"Ammo oxirgi marta ular u erga borganlarida, biz ko'proq biftek va soyaga buyurtma berishni xohlagan bo'lsak-da, 10 kishilik belbog'ni topshirishdan bosh tortdik."
+R013,552,False,removed,10 kishilik,,"Ammo oxirgi marta ular u erga borganlarida, biz ko'proq biftek va soyaga buyurtma berishni xohlagan bo'lsak-da, 10 kishilik belbog'ni topshirishdan bosh tortdik."
+R013,552,False,added,soyaga,neutral,"Ammo oxirgi marta ular u erga borganlarida, biz ko'proq biftek va soyaga buyurtma berishni xohlagan bo'lsak-da, 10 kishilik belbog'ni topshirishdan bosh tortdik."
+R018,162,False,added,idishlar,negative,Birgina kamchilik-bu idishlar sekin xizmat qilingan.
+R019,134,False,polarity changed,joy,neutral -> positive,Bu tashrif buyuradigan joy va qaytib kelishingizga ishonch hosil qiling !!
+R020,179,False,removed,ularning barcha,,Ularning barcha xilma-xilligi va yangiligi bor.
+R020,179,False,added,xilma-xilligi,positive,Ularning barcha xilma-xilligi va yangiligi bor.
+R020,179,False,added,yangiligi,positive,Ularning barcha xilma-xilligi va yangiligi bor.
+R021,158,False,removed,ikkinchisida,,"Siz ko'chada o'tirishingiz mumkin, zalda birinchi qavatda, ikkinchisida yoki olib ketishingiz mumkin."
+R021,158,False,removed,ko'chada,,"Siz ko'chada o'tirishingiz mumkin, zalda birinchi qavatda, ikkinchisida yoki olib ketishingiz mumkin."
+R021,158,False,added,olib ketishingiz,neutral,"Siz ko'chada o'tirishingiz mumkin, zalda birinchi qavatda, ikkinchisida yoki olib ketishingiz mumkin."
+R022,268,False,removed,biror narsa,,"Menyu chiroyli, lekin nima uchun, agar biror narsa so'ramasangiz, yo'q."
+R025,86,False,span fixed,uchta taom,taom,"Buyurtma qilingan salat va uchta taom, hammasi uchun 16 dollar to'langan 🔥, ketganingizda siz qovurilgan chuchvara va mahalliy Norinni sotib olishingiz mumkin."
+R025,86,False,removed,16 dolla,,"Buyurtma qilingan salat va uchta taom, hammasi uchun 16 dollar to'langan 🔥, ketganingizda siz qovurilgan chuchvara va mahalliy Norinni sotib olishingiz mumkin."
+R025,86,False,added,qovurilgan chuchvara,neutral,"Buyurtma qilingan salat va uchta taom, hammasi uchun 16 dollar to'langan 🔥, ketganingizda siz qovurilgan chuchvara va mahalliy Norinni sotib olishingiz mumkin."
+R025,86,False,added,mahalliy norinni,neutral,"Buyurtma qilingan salat va uchta taom, hammasi uchun 16 dollar to'langan 🔥, ketganingizda siz qovurilgan chuchvara va mahalliy Norinni sotib olishingiz mumkin."
+R027,414,False,removed,qoshiq,,"Qoshiq bilan yeb, toshkent choyi bilan yuviladi."
+R029,101,False,polarity changed,oshdan,neutral -> positive,Siz albatta tashrif buyurishingiz va oshdan tatib ko'rishingiz kerak bo'lgan eng o'ziga xos joy bu Toshkentdagi “Osh markazi”dir.
+R029,101,False,removed,osh markazi”,,Siz albatta tashrif buyurishingiz va oshdan tatib ko'rishingiz kerak bo'lgan eng o'ziga xos joy bu Toshkentdagi “Osh markazi”dir.
+R029,101,False,removed,tashrif,,Siz albatta tashrif buyurishingiz va oshdan tatib ko'rishingiz kerak bo'lgan eng o'ziga xos joy bu Toshkentdagi “Osh markazi”dir.
+R029,101,False,added,joy,positive,Siz albatta tashrif buyurishingiz va oshdan tatib ko'rishingiz kerak bo'lgan eng o'ziga xos joy bu Toshkentdagi “Osh markazi”dir.
+R030,24,False,polarity changed,navbatlar,negative -> neutral,"Toshkent va butun O'zbekistondagi eng zo'r taomlar, tonnalab navbatlar, ajoyib ta'm va ajoyib xizmat.... Tavsiya etiladi"
+R030,24,False,removed,tavsiya,,"Toshkent va butun O'zbekistondagi eng zo'r taomlar, tonnalab navbatlar, ajoyib ta'm va ajoyib xizmat.... Tavsiya etiladi"
+R030,24,False,added,ta'm,positive,"Toshkent va butun O'zbekistondagi eng zo'r taomlar, tonnalab navbatlar, ajoyib ta'm va ajoyib xizmat.... Tavsiya etiladi"
+R031,526,False,added,ofitsiantlar,negative,"ofitsiantlar go'yo uylar aylanib yurgandek xizmat ko'rsatishadi, xizmat 0."
+R032,504,False,added,kafe,positive,"Ehtimol, bu kafe bir piyola choy ichish uchun ajoyib joy sifatida ko'proq mos keladi."
+R033,310,False,removed,arzon,,Turistlar uchun juda arzon!
+R034,458,False,span fixed,ofitsiantlar yoki boshqa narsalarni,ofitsiantlar,"Ko'p odamlar borligi aniq va ular shunchaki ulgura olmaydilar, lekin bu joy juda mashhur bo'lgani uchun ofitsiantlar yoki boshqa narsalarni ko'paytirish kerak."
+R034,458,False,removed,odamlar,,"Ko'p odamlar borligi aniq va ular shunchaki ulgura olmaydilar, lekin bu joy juda mashhur bo'lgani uchun ofitsiantlar yoki boshqa narsalarni ko'paytirish kerak."
+R035,30,False,removed,dam olishni,,100% u yerda dam olishni maslahat berishadi 🥳
+R038,236,False,removed,i yeyishi mumkin,,"Achchiq qalampir so'rasang ber, shu bilan yesang koreyslar ham yaxshi yeyishi mumkin"
+R040,256,False,removed,restoranlarga,,Va bularning barchasi boshqa ajoyib restoranlarga qaraganda ikki baravar qimmatga tushadi.
+R042,76,False,removed,u yerga,,Men bo'lmaganman ... Lekin men u yerga borish niyatim bor
+R044,403,False,removed,buyurtma berish,,Olib ketishga buyurtma berish mumkin.
+R044,403,False,added,olib ketishga,neutral,Olib ketishga buyurtma berish mumkin.
+R045,423,False,removed,hamyonbop,,Taom juda hamyonbop va mazali!!
+R046,156,False,polarity changed,taomlar,neutral -> positive,Oilaviy uslubdagi taomlar juda arzon.
+R047,522,False,polarity changed,tushlik,negative -> neutral,"Men allaqachon tushlik qilish fikridan qaytdim va bunga vaqt ham yo'q, ishga yugurishim kerak."
+R048,48,False,removed,yerga,,Albatta u yerga yana boraman
+R053,208,False,span fixed,tovuq tuxumi + 1 ta bedana tuxumi va dulma,tovuq tuxumi,"Bir to'plam 0,7 kg osh +2 ta tovuq tuxumi + 1 ta bedana tuxumi va dulma."
+R053,208,False,span fixed,"0,7 kg osh",osh,"Bir to'plam 0,7 kg osh +2 ta tovuq tuxumi + 1 ta bedana tuxumi va dulma."
+R053,208,False,added,bedana tuxumi,neutral,"Bir to'plam 0,7 kg osh +2 ta tovuq tuxumi + 1 ta bedana tuxumi va dulma."
+R053,208,False,added,dulma,neutral,"Bir to'plam 0,7 kg osh +2 ta tovuq tuxumi + 1 ta bedana tuxumi va dulma."
+R054,605,False,span fixed,mahalliy o'zbek oshxonasi.,mahalliy o'zbek oshxonasi,"hubhasiz, agar siz bu yerda, Toshkentda mazali taom iste'mol qilmoqchi bo'lsangiz, mahalliy aholi eng yaxshi qiladigan narsaga rioya qiling, ya'ni mahalliy o'zbek oshxonasi."
+R054,605,False,added,taom,positive,"hubhasiz, agar siz bu yerda, Toshkentda mazali taom iste'mol qilmoqchi bo'lsangiz, mahalliy aholi eng yaxshi qiladigan narsaga rioya qiling, ya'ni mahalliy o'zbek oshxonasi."
+R055,257,False,removed,ularga,,Men ularga tabassum qilishni maslahat beraman
+R059,399,False,removed,vaqt,,"Buyurtmangiz biroz vaqt olishi mumkin, chunki u odatda tushlik vaqtida band"
+R059,399,False,added,buyurtmangiz,negative,"Buyurtmangiz biroz vaqt olishi mumkin, chunki u odatda tushlik vaqtida band"
+R060,258,False,added,kechki ovqat,positive,"Yaxshi musiqa, romantik kechki ovqat uchun qulay joy."
+R060,258,False,added,joy,positive,"Yaxshi musiqa, romantik kechki ovqat uchun qulay joy."
+R062,490,False,span fixed,vegetarian,vegetarian variantlari,Cheklangan vegetarian variantlari.
+R064,547,False,span fixed,salat yoki yunon salatini,salat,"ham xamir bo'laklari, salatlar birga xususda bo'lagi edi, noldan ixtirolar, chunki siz salat yoki yunon salatini buyurtma qilasiz va bir guruh karam va bir bo'lak bodring olasiz."
+R064,547,False,added,bodring,negative,"ham xamir bo'laklari, salatlar birga xususda bo'lagi edi, noldan ixtirolar, chunki siz salat yoki yunon salatini buyurtma qilasiz va bir guruh karam va bir bo'lak bodring olasiz."
+R064,547,False,added,xamir bo'laklari,negative,"ham xamir bo'laklari, salatlar birga xususda bo'lagi edi, noldan ixtirolar, chunki siz salat yoki yunon salatini buyurtma qilasiz va bir guruh karam va bir bo'lak bodring olasiz."
+R064,547,False,added,yunon salatini,negative,"ham xamir bo'laklari, salatlar birga xususda bo'lagi edi, noldan ixtirolar, chunki siz salat yoki yunon salatini buyurtma qilasiz va bir guruh karam va bir bo'lak bodring olasiz."
+R065,354,False,removed,kulgili,,Mutlaqo kulgili.
+R066,461,False,removed,irqchilik,,Irqchilik tufayli u yerga borishni istamayman.
+R067,53,False,polarity changed,hisob kitob,negative -> neutral,"Hisob kitob qilish uchun men yana ofitsiantning e'tiborini jalb qilishim kerak edi (albatta, u stolga kelmadi)."
+R067,53,False,added,ofitsiantning,negative,"Hisob kitob qilish uchun men yana ofitsiantning e'tiborini jalb qilishim kerak edi (albatta, u stolga kelmadi)."
+R068,45,False,added,ofitsiant,positive,Xizmat muloyim va ofitsiant menyudan biror narsani maslahat berish yoki taklif qilishdan mamnun.
+R069,556,False,removed,qismidan,,Uning har bir qismidan zavq oldim.
+R070,75,False,polarity changed,narx,neutral -> positive,Bu narx uchun juda yuqori sifat!
+R071,193,False,removed,joyda,,"Biz doimo restoraningizga tashrif buyuramiz, chunki biz yaqin joyda ishlaymiz."
+R072,591,False,span fixed,salat va gazaklar,salat,"Biz olgan qismlar kichik bo'lib tuyuldi, lekin bu salat va gazaklar edi, bu umuman yaxshi."
+R072,591,False,added,qismlar,neutral,"Biz olgan qismlar kichik bo'lib tuyuldi, lekin bu salat va gazaklar edi, bu umuman yaxshi."
+R073,600,False,added,taomlar,positive,An'anaviy taomlar uchun yaxshi zamonaviy restoran.
+R074,178,False,span fixed,oshxonasining,o'zbek oshxonasining,"Agar siz o'zbek oshxonasining ajoyib namunasini istasangiz, bu yerga kiring."
+R075,484,False,polarity changed,narxlar,positive -> negative,"Atmosfera joy, yuqori darajadagi oshxona, a'lo darajadagi xizmat, yuqori narxlar."
+R075,484,False,removed,joy,,"Atmosfera joy, yuqori darajadagi oshxona, a'lo darajadagi xizmat, yuqori narxlar."
+R075,484,False,added,atmosfera,positive,"Atmosfera joy, yuqori darajadagi oshxona, a'lo darajadagi xizmat, yuqori narxlar."
+R077,454,False,removed,5 yulduz,,"Agar siz o'z xodimlaringiz mehmonlarga hurmatliroq munosabatda bo'lishni va suhbatlashishni o'rgatsangiz, restoraningizga 5 yulduz bergan bo'lardim, omad tilaymiz!"
+R077,454,False,added,restoraningizga,negative,"Agar siz o'z xodimlaringiz mehmonlarga hurmatliroq munosabatda bo'lishni va suhbatlashishni o'rgatsangiz, restoraningizga 5 yulduz bergan bo'lardim, omad tilaymiz!"
+R078,199,False,removed,restoran,,Faqat bitta Osh menyusiga ega restoran.
+R078,199,False,added,osh menyusiga,negative,Faqat bitta Osh menyusiga ega restoran.
+R079,14,False,removed,muassasaga,,"ajoyib joy, milliy rang, sizga ushbu muassasaga tashrif buyurib, mahalliy taomlarni tatib ko'rishingizni maslahat beramiz."
+R079,14,False,added,milliy rang,neutral,"ajoyib joy, milliy rang, sizga ushbu muassasaga tashrif buyurib, mahalliy taomlarni tatib ko'rishingizni maslahat beramiz."
+R081,498,False,polarity changed,narxlarda,positive -> neutral,O'rtacha narxlarda mazali taom.
+R082,12,False,span fixed,shakarop bilan oshni,oshni,Shakarop bilan oshni tatib ko‘rdik va afsuslanmadik.
+R082,12,False,added,shakarop,positive,Shakarop bilan oshni tatib ko‘rdik va afsuslanmadik.
+R083,555,False,polarity changed,oshxona,neutral -> negative,"Gavjun oshxona, dahshatli xizmat."
+R086,79,False,polarity changed,menyu,positive -> neutral,Rasmlarsiz batafsil bo'yalgan menyu.
+R087,220,False,removed,:(,,:(
+R089,123,False,added,tortlardan,neutral,Shirinlik uchun esa ular bizga vitrinadagi barcha tortlardan birini tanlashimiz mumkinligini aytishdi.
+R090,282,False,polarity changed,oshxonasi,neutral -> negative,"Bilaman faqat turk oshxonasi, lekin boshqa hech narsa yo'q, mayli, lekin ofitsiantni juda uzoq kutishingiz mumkin, kechasi hovlida bitta ofitsiant xizmat qilar edi, uning umuman vaqti yo'q edi, bir soatdan keyin boshqa ofitsiant unga yordamga keldi"
+R091,159,False,span fixed,"osh😊,",osh,"Mazali osh😊, qimmat emas👍 yoqdi."
+R093,551,False,removed,bolalar,,"Bolalar, sizga farovonlik."
+R094,603,False,removed,to'lagan narsangizni,,"Bu arzon, shuning uchun siz to'lagan narsangizni olasiz."
+R096,588,False,removed,tashrif,,Albatta tashrif buyurishga arziydi - tushlik paytida band.
+R097,225,False,removed,dasturxonni,,"Belgilangan vaqtda yetib keldik, mehmonlar endigina dasturxonni bo‘shatishdi."
+R098,212,False,span fixed,muhit va manzara,manzara,"Ajoyib muhit va manzara, mazali taomlar, hamyonbop narxlar va ajoyib xizmat... Umuman olganda, ajoyib."
+R098,212,False,removed,umuman olganda,,"Ajoyib muhit va manzara, mazali taomlar, hamyonbop narxlar va ajoyib xizmat... Umuman olganda, ajoyib."
+R098,212,False,added,muhit,positive,"Ajoyib muhit va manzara, mazali taomlar, hamyonbop narxlar va ajoyib xizmat... Umuman olganda, ajoyib."
+R100,444,False,polarity changed,xizmat,positive -> negative,"Xizmat dahshatli, garchi bu uchun 20% to'lansa ham."
+R101,38,False,span fixed,"kabob, go'sht",go'sht,"Mazali kabob, go'sht."
+R101,38,False,added,kabob,positive,"Mazali kabob, go'sht."
+R105,251,False,removed,joyda,,Va u bu joyda sharhlarni yaxshi biladi.
+R106,121,False,polarity changed,tushlik qildik,positive -> neutral,"Biz anʼanaviy oʻzbek muhitida tushlik qildik, oʻzbek taomlari va jonli musiqadan bahramand boʻldik."
+R106,121,False,added,muhitida,positive,"Biz anʼanaviy oʻzbek muhitida tushlik qildik, oʻzbek taomlari va jonli musiqadan bahramand boʻldik."
+R107,176,False,polarity changed,mahalliy taomlardan,positive -> neutral,Chiroyli mahalliy taomlardan qimmatroq
+R108,185,False,removed,tajriba,,"Mastavada - guruch qattiq, kam pishgan, faqat go'shtni iste'mol qilishga to'g'ri keldi,kutilmagan tajriba."
+R108,185,False,added,guruch,negative,"Mastavada - guruch qattiq, kam pishgan, faqat go'shtni iste'mol qilishga to'g'ri keldi,kutilmagan tajriba."
+R110,472,False,polarity changed,muassasaning,neutral -> negative,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R110,472,False,polarity changed,molekulyar oshxona,neutral -> positive,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R110,472,False,added,sezar salati,negative,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R110,472,False,added,biftek,negative,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R110,472,False,added,baliqlardan,negative,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R110,472,False,added,dasturxon,negative,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R110,472,False,added,oq tarelkalar,negative,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R110,472,False,added,eskirgan kuldonlar,negative,"Yaxshi xizmat, lekin narx juda yuqori, bunday narxlar uchun molekulyar oshxona yoki eng oddiy sezar salati, biftek va baliqlardan ko'ra qiziqarliroq narsa bo'lishi kerak va muassasaning o'zi qimmat ko'rinmaydi, oddiy ovqatlanish joyida uchraydigan buyumlar (oddiy dasturxon, oq tarelkalar, eskirgan kuldonlar va boshqalar. )"
+R112,130,False,removed,yerda,,Bu yerda eng mazali oshni tayyorlashadi 🤤
+R112,130,False,added,oshni,positive,Bu yerda eng mazali oshni tayyorlashadi 🤤
+R114,128,False,polarity changed,jele go'sht,neutral -> negative,"Keyin ofitsiant uzr so'radi va uzr sifatida jele go'sht taklif qildi, hahahhaha jele go'shti 🤦‍♂️ Qisqasi, agar siz normal ovqatlanib, yaxshi kayfiyatda bo'lishni istasangiz, siz aniq bu yerga kelmang)))"
+R114,128,False,added,ofitsiant,negative,"Keyin ofitsiant uzr so'radi va uzr sifatida jele go'sht taklif qildi, hahahhaha jele go'shti 🤦‍♂️ Qisqasi, agar siz normal ovqatlanib, yaxshi kayfiyatda bo'lishni istasangiz, siz aniq bu yerga kelmang)))"
+R118,340,False,span fixed,sharob,sharob ro'yxati,"Sharob ro'yxati biroz muammoli - bu Toshkentga xos: u juda qisqa, noma'lum nomlar ko'p agar siz bilgan/yoqtirgan narsani topsangiz ham, u tugab qolgan bo'lishi mumkin."
+R118,340,False,removed,noma'lum nomlar,,"Sharob ro'yxati biroz muammoli - bu Toshkentga xos: u juda qisqa, noma'lum nomlar ko'p agar siz bilgan/yoqtirgan narsani topsangiz ham, u tugab qolgan bo'lishi mumkin."
+R119,483,False,removed,hammaga,,Men buni hammaga tavsiya qilaman.
+R122,138,False,span fixed,sharqona taomlar,sharqona taomlarning,"Agar siz sharqona taomlarning muxlisi bo'lsangiz, tavsiya qilaman."
+R123,525,False,polarity changed,menyuda,positive -> neutral,Menyuda mamlakatning turli burchaklaridan turli xil o'zbek taomlari mavjud.
+R123,525,False,added,taomlari,neutral,Menyuda mamlakatning turli burchaklaridan turli xil o'zbek taomlari mavjud.
+R124,378,False,polarity changed,xizmat,positive -> negative,"Ovqat mazali, xizmat qilish dahshatli."
+R126,52,False,removed,hamyoningiz,,Bu sizning hamyoningiz va oshqozoningizga mehribon restoran.
+R126,52,False,removed,oshqozoningizga,,Bu sizning hamyoningiz va oshqozoningizga mehribon restoran.
+R127,304,False,removed,tavsiya,,Men buni albatta tavsiya qilaman.
+R131,427,False,removed,osh,,"Mazali osh iste'mol qilmoqchi bo'lsangiz, bu yerga borishingiz shart, 4 xil mazali oshlar ,Tushlik tanaffusi muhitiga sho'ng'sh uchun turli tabaqadagi odamlar bu yerga to'yib ovqat yeyish uchun kelishadi."
+R131,427,False,removed,yerga,,"Mazali osh iste'mol qilmoqchi bo'lsangiz, bu yerga borishingiz shart, 4 xil mazali oshlar ,Tushlik tanaffusi muhitiga sho'ng'sh uchun turli tabaqadagi odamlar bu yerga to'yib ovqat yeyish uchun kelishadi."
+R133,315,False,removed,rahmat,,rahmat
+R138,360,False,removed,rahmat,,"Juda mazali, rahmat"
+R140,96,False,removed,5,,5 ball
+R141,559,False,removed,restoranda,,Bu restoranda bir necha bor aravachada sayr qilganman va har safar piyodalar yo‘lagidan yurganimda ularning to‘xtab qolgan mashinalari yo‘lakni to‘sib qo‘yadi.
+R141,559,False,added,mashinalari,negative,Bu restoranda bir necha bor aravachada sayr qilganman va har safar piyodalar yo‘lagidan yurganimda ularning to‘xtab qolgan mashinalari yo‘lakni to‘sib qo‘yadi.
+R142,229,False,removed,aralash tuyg'ular,,Aralash tuyg'ular bu muassasani tark etdi.
+R142,229,False,added,muassasani,neutral,Aralash tuyg'ular bu muassasani tark etdi.
+R143,6,False,polarity changed,tortni,neutral -> negative,"Qahva uchun sut yo'q, ular kofe uchun shirinliklar so'rashdi, 3 dona yangiligi noma'lum tortni taklif qilishdi."
+R143,6,False,added,qahva,negative,"Qahva uchun sut yo'q, ular kofe uchun shirinliklar so'rashdi, 3 dona yangiligi noma'lum tortni taklif qilishdi."
+R147,590,False,removed,nomi,,Qadimgi va yaxshi narsadan faqat restoran va taomlar nomi.
+R147,590,False,added,taomlar,positive,Qadimgi va yaxshi narsadan faqat restoran va taomlar nomi.
+R148,27,False,removed,rayhon,,Rayhon” yonida men xaritada avtovokzalni ko‘rdim.
+R149,81,False,polarity changed,joy,neutral -> positive,"Ajoyib osh, juda noodatiy joy"
+R150,183,False,removed,xizmat,,Nechi yildan buyon xizmat ko'rsatayotgan bu restaran naxotki xaliyam kancha mikdorda taomlar qilish meyorini bilmaydi?Dasturxonda qo'l artish uchun oddiy qo'l artish kogozlari yo'k.Bir pulga qimmat va arzimaydigan restaran.Meni fikrimcha baxosi 1 va inson dam olib ovqatlanish meyori past.
+R150,183,False,removed,qimmat,,Nechi yildan buyon xizmat ko'rsatayotgan bu restaran naxotki xaliyam kancha mikdorda taomlar qilish meyorini bilmaydi?Dasturxonda qo'l artish uchun oddiy qo'l artish kogozlari yo'k.Bir pulga qimmat va arzimaydigan restaran.Meni fikrimcha baxosi 1 va inson dam olib ovqatlanish meyori past.
+R150,183,False,added,restaran,negative,Nechi yildan buyon xizmat ko'rsatayotgan bu restaran naxotki xaliyam kancha mikdorda taomlar qilish meyorini bilmaydi?Dasturxonda qo'l artish uchun oddiy qo'l artish kogozlari yo'k.Bir pulga qimmat va arzimaydigan restaran.Meni fikrimcha baxosi 1 va inson dam olib ovqatlanish meyori past.
+R150,183,False,added,taomlar,negative,Nechi yildan buyon xizmat ko'rsatayotgan bu restaran naxotki xaliyam kancha mikdorda taomlar qilish meyorini bilmaydi?Dasturxonda qo'l artish uchun oddiy qo'l artish kogozlari yo'k.Bir pulga qimmat va arzimaydigan restaran.Meni fikrimcha baxosi 1 va inson dam olib ovqatlanish meyori past.
+R153,173,True,added,xodimlarning,negative,"Yomon xizmat, xodimlarning malakasizligi tufayli bank kartam blokladi"
+R154,442,False,polarity changed,menyu elementlarini,neutral -> negative,Menyu elementlarini biroz yaxshilash mumkin.
+R155,474,False,polarity changed,ofitsiantlar,neutral -> negative,"Ofitsiantlar 10 daqiqa desa, yarim soatdan so'ng olib keladi, agar 20 daqiqa desa, unda kutishdan foyda yo'q."
+R156,4,False,removed,menyudagi,,"Chiroyli dekor, menyudagi barcha taomlar mavjud emas, chiroyli, mazali."
+R156,4,False,added,taomlar,negative,"Chiroyli dekor, menyudagi barcha taomlar mavjud emas, chiroyli, mazali."
+R157,65,False,span fixed,shashlik  va salat,shashlik,shashlik va salat oldim.
+R158,10,False,span fixed,2-qavatdagi bolalar maydoni,bolalar maydoni,"Bolalar bilan borish uchun yaxshi joy, 2-qavatdagi bolalar maydoni ham arzon"
+R160,112,False,removed,erga,,"Har safar bu erga kelganimda, men ovqat haqida nimadir topaman!"
+R160,112,False,added,ovqat,positive,"Har safar bu erga kelganimda, men ovqat haqida nimadir topaman!"
+R161,312,False,removed,rahmat,,rahmat
+R163,68,False,span fixed,oxirgi ovqatim,ovqatim,"Bu mening Toshkentdagi oxirgi ovqatim edi, men juda mamnunman."
+R164,275,False,removed,turistlar,,Turistlar albatta tashrif buyurishlari kerak.
+R166,601,False,span fixed,", tuxum va/yoki ot go'shti kolbasasin",tuxum,"Maslahat: tashqarida o'z tarelkangizni oling va palovni olish uchun navbatga turing va agar xohlasangiz, tuxum va/yoki ot go'shti kolbasasini so'rang (qo'shimcha xarajat)."
+R166,601,False,removed,navbatga turing,,"Maslahat: tashqarida o'z tarelkangizni oling va palovni olish uchun navbatga turing va agar xohlasangiz, tuxum va/yoki ot go'shti kolbasasini so'rang (qo'shimcha xarajat)."
+R166,601,False,added,palovni,neutral,"Maslahat: tashqarida o'z tarelkangizni oling va palovni olish uchun navbatga turing va agar xohlasangiz, tuxum va/yoki ot go'shti kolbasasini so'rang (qo'shimcha xarajat)."
+R166,601,False,added,ot go'shti kolbasasini,neutral,"Maslahat: tashqarida o'z tarelkangizni oling va palovni olish uchun navbatga turing va agar xohlasangiz, tuxum va/yoki ot go'shti kolbasasini so'rang (qo'shimcha xarajat)."
+R168,39,False,removed,narsalar,,Shaxsiy narsalar yetarli emas.
+R170,321,False,removed,"""host"" restaraniga",,"Menga juda yoqdi, ko'p rahmat"
+R172,342,False,removed,mehmonlar,,Mehmonlar orasida odatda bolalar yoki ota-onalar oldida xijolat bo'lishingiz kerak bo'lgan odamlar bo'lmaydi.
+R173,553,False,added,oshi,positive,Juda mazali O'zbekiston oshi
+R175,334,False,span fixed,qozon yonida,qozon,"Qozon yonida sotib olib, likopchangiz bilan stolga borasiz."
+R175,334,False,removed,stolga borasiz,,"Qozon yonida sotib olib, likopchangiz bilan stolga borasiz."
+R176,69,False,removed,sulton,,"Sulton restorani, Toshkent"
+R177,589,False,span fixed,kechki ovqat,kechki ovqat joyi,Yaxshi kechki ovqat joyi bor.
+R178,230,False,added,joylar,neutral,"Umuman olganda, bepul joylar haqida oldindan tashvishlanish yaxshiroqdir."
+R180,593,False,removed,muxlisi,,Men Sharqiy Yevropa/Markaziy Osiyo sirli go‘shtining eng katta muxlisi emasman.
+R180,593,False,added,sirli go‘shtining,negative,Men Sharqiy Yevropa/Markaziy Osiyo sirli go‘shtining eng katta muxlisi emasman.
+R181,503,False,removed,hammasi,,"Restoraningizga oilangiz bilan kelganingiz juda yoqimli, yetkazib berish ham bor, hammasi sifatli va qadoqlangan."
+R181,503,False,added,yetkazib berish,positive,"Restoraningizga oilangiz bilan kelganingiz juda yoqimli, yetkazib berish ham bor, hammasi sifatli va qadoqlangan."
+R182,416,False,removed,yulduzga,,Siz 100 % 5 yulduzga loyiqsiz!
+R183,332,False,added,oshning,positive,"Oshning katta porsiyalari, albatta telbalarcha mazali, ayron ham yaxshi!"
+R185,389,False,removed,bo'lgan narsani,,"Natijada, biz xohlagan narsani emas, balki bo'lgan narsani yedik."
+R185,389,False,removed,xohlagan,,"Natijada, biz xohlagan narsani emas, balki bo'lgan narsani yedik."
+R186,358,False,polarity changed,joy,negative -> neutral,"Ovqat unchalik mazali emas, bu diskoteka va restorani orasidagi joy."
+R187,370,False,span fixed,milliy taomlarni t,milliy taomlarni,Bu yerda milliy taomlarni tatib ko'rish tavsiya etiladi!
+R190,604,False,span fixed,qozongayuz,qozonga,"Haqiqatan ham chinakam osh qanday tayyorlanishini ko'rish va uni tatib ko'rish uchun ajoyib joy.Qozongayuz kilogrammdan ortiq guruch solingan, aql bovar qilmaydigan ulkan qozonlar qo'yilgan va oshpazlar ularni isitish uchun ochiq olovdan foydalanadilar."
+R190,604,False,added,oshpazlar,neutral,"Haqiqatan ham chinakam osh qanday tayyorlanishini ko'rish va uni tatib ko'rish uchun ajoyib joy.Qozongayuz kilogrammdan ortiq guruch solingan, aql bovar qilmaydigan ulkan qozonlar qo'yilgan va oshpazlar ularni isitish uchun ochiq olovdan foydalanadilar."
+R190,604,False,added,osh,positive,"Haqiqatan ham chinakam osh qanday tayyorlanishini ko'rish va uni tatib ko'rish uchun ajoyib joy.Qozongayuz kilogrammdan ortiq guruch solingan, aql bovar qilmaydigan ulkan qozonlar qo'yilgan va oshpazlar ularni isitish uchun ochiq olovdan foydalanadilar."
+R192,371,False,polarity changed,ichimlik,positive -> neutral,Ichimlik uchun munosib joy.
+R192,371,False,added,joy,positive,Ichimlik uchun munosib joy.
+R194,349,False,removed,bu yerga,,Bu yerga tashrif buyurish shart!!!
+R195,449,False,span fixed,choyxona (restoran,choyxona,Ajoyib choyxona (restoran) taomlari super!
+R196,496,False,polarity changed,taomlardan,neutral -> negative,Odamlarga beparvo va juda kech xizmat (o'ttiz daqiqadan so'ng) va oddiy sifatli taomlardan pastroq bo'lgan xizmat qanday yoqadi?
+R197,118,False,added,kechki ovqatni,negative,"Kechki ovqatni juda uzoq kutishim kerak edi, lekin taom kutganlarimga javob bermadi."
+R198,20,False,removed,uslublar,,Barcha uslublar joyida.
+R199,8,False,removed,mijozlaringizdan,,Men sizning doimiy mijozlaringizdan biriman.
+R199,8,False,removed,men,,Men sizning doimiy mijozlaringizdan biriman.
+R200,198,False,polarity changed,o'tkazmalar,positive -> neutral,"100% emas 200% o'tkazmalar, terminal bankdan kredit olib ham pul o'tkazishi mumkin"
+R200,198,False,added,terminal,neutral,"100% emas 200% o'tkazmalar, terminal bankdan kredit olib ham pul o'tkazishi mumkin"
+R201,219,False,removed,ekskursiya gid,,Men bu yerda ekskursiya gid taklifiga ko‘ra tushlik qildim.
+R201,219,False,added,tushlik,neutral,Men bu yerda ekskursiya gid taklifiga ko‘ra tushlik qildim.
+R202,150,False,polarity changed,pab,neutral -> negative,Kechqurun pab juda gavjum.
+R203,326,False,span fixed,"gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari",panjara qo'ziqorinlari,"Oziq-ovqat sifati yaxshi edi - menda yaxshi ko'rlgan gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari (ular ham yaxshi)."
+R203,326,False,span fixed,oziq-ovqat,oziq-ovqat sifati,"Oziq-ovqat sifati yaxshi edi - menda yaxshi ko'rlgan gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari (ular ham yaxshi)."
+R203,326,False,added,gulkaram sho'rvasi,positive,"Oziq-ovqat sifati yaxshi edi - menda yaxshi ko'rlgan gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari (ular ham yaxshi)."
+R203,326,False,added,panjara qilingan sabzavotlar,positive,"Oziq-ovqat sifati yaxshi edi - menda yaxshi ko'rlgan gulkaram sho'rvasi, panjara qilingan sabzavotlar (99% baqlajon, armancha xorovat uslubida beriladi) va panjara qo'ziqorinlari (ular ham yaxshi)."
+R206,531,False,span fixed,l hind restorani,hind restorani,Toshkentdagi go'zal hind restorani haqiqiy ta'mi va ajoyib The Host.
+R207,385,False,polarity changed,an'anaviy restoran,neutral -> positive,ular an'anaviy restoran bo'lishni biladilar
+R208,492,False,removed,maslahat,,Men hammaga maslahat beraman!
+R210,412,False,added,mahalliy pivo,negative,"Mahalliy pivo arzon, ammo mazasiz."
+R211,224,False,removed,hech narsa,,"Bolalar bilan kelishni tavsiya etmayman, bolalar uchun bayram qilish uchun hech narsa yo'q."
+R211,224,False,removed,bolalar bilan,,"Bolalar bilan kelishni tavsiya etmayman, bolalar uchun bayram qilish uchun hech narsa yo'q."
+R211,224,False,added,bayram,negative,"Bolalar bilan kelishni tavsiya etmayman, bolalar uchun bayram qilish uchun hech narsa yo'q."
+R213,300,False,removed,hammasi,,"Hammasi super, xizmat juda zo'r, xodimlar, muloqot tashqi va ko'rinish, mazali taom."
+R213,300,False,added,muloqot,positive,"Hammasi super, xizmat juda zo'r, xodimlar, muloqot tashqi va ko'rinish, mazali taom."
+R215,184,False,added,tozalik,positive,"Xizmat, tozalik va yaxshi ovqat ajoyib!"
+R216,407,False,removed,ofitsiantni,,U mijozni o'chirish va ofitsiantni biriktirish kabi narsalar bilan shug'ullanishi kerak.
+R217,544,False,polarity changed,ovqatlarning,neutral -> positive,Ovqatlarning katta tanlovi.
+R219,520,False,added,restoran,positive,Bu hind taomlari uchun Toshkentdagi eng yaxshi restoran.
+R220,344,False,removed,ruben va vildanaga,,"Xodimlarga, ayniqsa Ruben va Vildanaga a'lo va e'tiborli xizmat uchun rahmat!."
+R220,344,False,added,xizmat,positive,"Xodimlarga, ayniqsa Ruben va Vildanaga a'lo va e'tiborli xizmat uchun rahmat!."
+R220,344,False,added,xodimlarga,positive,"Xodimlarga, ayniqsa Ruben va Vildanaga a'lo va e'tiborli xizmat uchun rahmat!."
+R222,480,False,removed,to'lgan kuningiz,,13 yoshga to'lgan kuningiz bilan!
+R223,83,False,removed,taniqli odamlar va mehmonlar,,"Har doim bayram muhiti, doimo jonli musiqa, taniqli odamlar va mehmonlar mavjud."
+R225,165,False,span fixed,norin,norin sovuq kesilgan mini noodle,"Oxirida biz 2 marta otga buyurtma berdik: ot kolbasa solingan bulyonda BESHBARMAK noodle xamiri - juda sho'r, ot bilan aralashtirilgan NORIN sovuq kesilgan mini noodle - juda mazali, qo'y sho'rva - juda qizg'in, go'sht bilan aralashtirilgan HALEEM bug'doy - jigarrang jo'xori uniga o'xshaydi - shilimshiq, lekin juda mazali."
+R225,165,False,removed,otga,,"Oxirida biz 2 marta otga buyurtma berdik: ot kolbasa solingan bulyonda BESHBARMAK noodle xamiri - juda sho'r, ot bilan aralashtirilgan NORIN sovuq kesilgan mini noodle - juda mazali, qo'y sho'rva - juda qizg'in, go'sht bilan aralashtirilgan HALEEM bug'doy - jigarrang jo'xori uniga o'xshaydi - shilimshiq, lekin juda mazali."
+R225,165,False,added,ot kolbasa,neutral,"Oxirida biz 2 marta otga buyurtma berdik: ot kolbasa solingan bulyonda BESHBARMAK noodle xamiri - juda sho'r, ot bilan aralashtirilgan NORIN sovuq kesilgan mini noodle - juda mazali, qo'y sho'rva - juda qizg'in, go'sht bilan aralashtirilgan HALEEM bug'doy - jigarrang jo'xori uniga o'xshaydi - shilimshiq, lekin juda mazali."
+R225,165,False,added,haleem bug'doy,positive,"Oxirida biz 2 marta otga buyurtma berdik: ot kolbasa solingan bulyonda BESHBARMAK noodle xamiri - juda sho'r, ot bilan aralashtirilgan NORIN sovuq kesilgan mini noodle - juda mazali, qo'y sho'rva - juda qizg'in, go'sht bilan aralashtirilgan HALEEM bug'doy - jigarrang jo'xori uniga o'xshaydi - shilimshiq, lekin juda mazali."
+R225,165,False,added,bulyonda,neutral,"Oxirida biz 2 marta otga buyurtma berdik: ot kolbasa solingan bulyonda BESHBARMAK noodle xamiri - juda sho'r, ot bilan aralashtirilgan NORIN sovuq kesilgan mini noodle - juda mazali, qo'y sho'rva - juda qizg'in, go'sht bilan aralashtirilgan HALEEM bug'doy - jigarrang jo'xori uniga o'xshaydi - shilimshiq, lekin juda mazali."
+R226,368,False,polarity changed,joy band,neutral -> negative,"15 daqiqadan so'ng ular kelib joyni bo'shatishimiz kerak ekanligini, go'yo bu joy band boshliqlar uchun band qilindan deb ."
+R226,368,False,removed,ular,,"15 daqiqadan so'ng ular kelib joyni bo'shatishimiz kerak ekanligini, go'yo bu joy band boshliqlar uchun band qilindan deb ."
+R227,105,False,span fixed,xizmat,xizmatlardan,Xizmat Toshkentda men ko'rgan eng yaxshi xizmatlardan biridir.
+R228,359,False,polarity changed,hojatxonaga,neutral -> negative,"Ammo oxir-oqibat, barcha 6 kishi zaharlangan, biz hojatxonaga navbatga turamiz."
+R228,359,False,removed,zaharlangan,,"Ammo oxir-oqibat, barcha 6 kishi zaharlangan, biz hojatxonaga navbatga turamiz."
+R229,325,False,removed,oqshomimizni,,Men ofitsiantga oqshomimizni buzishganini va biz och qolganimizni tushuntirdim.
+R229,325,False,added,ofitsiantga,negative,Men ofitsiantga oqshomimizni buzishganini va biz och qolganimizni tushuntirdim.
+R230,477,False,polarity changed,kechki ovqat,positive -> neutral,Xorijiy sarmoyadorlar uchun oilaviy kechki ovqat yoki mehmon xizmatini tashkil qilish uchun yaxshi va qulay joy.
+R230,477,False,span fixed,mehmon xizmatin,mehmon xizmatini,Xorijiy sarmoyadorlar uchun oilaviy kechki ovqat yoki mehmon xizmatini tashkil qilish uchun yaxshi va qulay joy.
+R230,477,False,added,joy,positive,Xorijiy sarmoyadorlar uchun oilaviy kechki ovqat yoki mehmon xizmatini tashkil qilish uchun yaxshi va qulay joy.
+R232,70,False,added,shovqin,negative,Yagona kamchilik - yo'l chetidagi terasta ovqatlanayotganda shovqin.
+R233,516,False,removed,dam olish kunlari,,Dam olish kunlari uchun ajoyib joy.
+R233,516,False,added,joy,positive,Dam olish kunlari uchun ajoyib joy.
+R234,286,True,removed,kafe-restoranning,,Kafe-restoranning shakli g'ayrioddiy.
+R234,286,True,added,shakli,neutral,Kafe-restoranning shakli g'ayrioddiy.
+R235,394,False,removed,r qilish u,,👍👍 oila bilan sayr qilish uchun chiroyli park
+R235,394,False,added,park,positive,👍👍 oila bilan sayr qilish uchun chiroyli park
+R237,28,False,span fixed,mojito buyurtma,mojito,"Salatlar yangi emas edi, ular 15 daqiqa davomida stakan kutishdi, bizning buyurtmamiz o'rniga Mojito buyurtma qilishdi va men bilmagan narsalarni olib kelishdi."
+R237,28,False,removed,15 daqiqa,,"Salatlar yangi emas edi, ular 15 daqiqa davomida stakan kutishdi, bizning buyurtmamiz o'rniga Mojito buyurtma qilishdi va men bilmagan narsalarni olib kelishdi."
+R237,28,False,added,buyurtmamiz,negative,"Salatlar yangi emas edi, ular 15 daqiqa davomida stakan kutishdi, bizning buyurtmamiz o'rniga Mojito buyurtma qilishdi va men bilmagan narsalarni olib kelishdi."
+R237,28,False,added,stakan,negative,"Salatlar yangi emas edi, ular 15 daqiqa davomida stakan kutishdi, bizning buyurtmamiz o'rniga Mojito buyurtma qilishdi va men bilmagan narsalarni olib kelishdi."
+R239,92,False,removed,har doim,,Va har doim iliq kutib olish.
+R239,92,False,added,kutib olish,positive,Va har doim iliq kutib olish.
+R240,592,False,polarity changed,go'sht,neutral -> negative,"Biz go'sht (shavla) buyurdik, ular buyurtma keltirishdi, go'sht g'alati rangdagi uchlamchi ,+ sho'rvada go'shtdan ko'ra ko'proq yog ' ham bor.Q"
+R240,592,False,added,yog ',negative,"Biz go'sht (shavla) buyurdik, ular buyurtma keltirishdi, go'sht g'alati rangdagi uchlamchi ,+ sho'rvada go'shtdan ko'ra ko'proq yog ' ham bor.Q"
+R240,592,False,added,shavla,negative,"Biz go'sht (shavla) buyurdik, ular buyurtma keltirishdi, go'sht g'alati rangdagi uchlamchi ,+ sho'rvada go'shtdan ko'ra ko'proq yog ' ham bor.Q"
+R240,592,False,added,sho'rvada,negative,"Biz go'sht (shavla) buyurdik, ular buyurtma keltirishdi, go'sht g'alati rangdagi uchlamchi ,+ sho'rvada go'shtdan ko'ra ko'proq yog ' ham bor.Q"
+R241,163,False,removed,rahmat,,"Menga juda yoqdi, rahmat!"
+R242,430,False,span fixed,uchta narxdan,narxdan,Ular siz uchun maxsus uchta narxdan foydalanmoqda.
+R243,16,False,polarity changed,joy band,positive -> neutral,Oldindan joy band kilganimiz uchun xursand bo'lib keldik.
+R245,392,False,span fixed,"go'sht,",go'sht,"Go'sht, albatta, yaxshi va sifatli."
+R246,391,False,span fixed,samira ismli xodim,xodim,Yerto‘lada Samira ismli xodim mijozlarga juda qo‘pol munosabatda bo‘ladi.
+R247,362,False,polarity changed,xizmat,positive -> neutral,Ingliz tilida xizmat ko'rsatish mavjud.
+R249,421,False,added,bol medalyoni,positive,"BUYURT BERILGAN SOLON STEK, BOL MEDALYONI, SEZAR SALATI HAMmasi JUDA MAZMALI."
+R250,316,False,removed,rahmat,,Rahmat
+R252,191,False,removed,sayyohga,,Men har bir sayyohga buni sinab ko'rishni maslahat beraman
+R253,397,False,span fixed,kafening joylashuvi,joylashuvi,"Ta'mirlashdan keyin bu yerda yaxshilashdi, har qanday taom mazali, assortimenti katta, chiroyli taomlar va yuqori darajadagi xizmat ko'rsatish; Visa kartalari to'lov uchun qabul qilinadi; qulay muhitda, kechayu kunduz ishlaydi, spirtli ichimliklar sotilmaydi; narxlar juda maqbul; kafening joylashuvi juda yaxshi; ofitsiantlar har xil bo'ladi; )))"
+R253,397,False,removed,bu yerda,,"Ta'mirlashdan keyin bu yerda yaxshilashdi, har qanday taom mazali, assortimenti katta, chiroyli taomlar va yuqori darajadagi xizmat ko'rsatish; Visa kartalari to'lov uchun qabul qilinadi; qulay muhitda, kechayu kunduz ishlaydi, spirtli ichimliklar sotilmaydi; narxlar juda maqbul; kafening joylashuvi juda yaxshi; ofitsiantlar har xil bo'ladi; )))"
+R253,397,False,added,ta'mirlashdan,positive,"Ta'mirlashdan keyin bu yerda yaxshilashdi, har qanday taom mazali, assortimenti katta, chiroyli taomlar va yuqori darajadagi xizmat ko'rsatish; Visa kartalari to'lov uchun qabul qilinadi; qulay muhitda, kechayu kunduz ishlaydi, spirtli ichimliklar sotilmaydi; narxlar juda maqbul; kafening joylashuvi juda yaxshi; ofitsiantlar har xil bo'ladi; )))"
+R254,377,True,span fixed,oshi,o'zbek oshi,Mazali o'zbek oshi
+R255,299,False,polarity changed,menyu,positive -> neutral,"Yangi menyu, yangi odamlar, yangi Shou pragrammasi, barchani"
+R255,299,False,span fixed,"shou pragrammasi,",shou pragrammasi,"Yangi menyu, yangi odamlar, yangi Shou pragrammasi, barchani"
+R255,299,False,removed,odamlar,,"Yangi menyu, yangi odamlar, yangi Shou pragrammasi, barchani"
+R256,527,True,added,salat,neutral,"Umuman olganda, ikki kishilik chek (bir juft salat, issiq snaklar, ikkinchi taom, kalyan, taxminan 7 kokteyl) 800 mingga yaqin chiqdi."
+R256,527,True,added,kalyan,neutral,"Umuman olganda, ikki kishilik chek (bir juft salat, issiq snaklar, ikkinchi taom, kalyan, taxminan 7 kokteyl) 800 mingga yaqin chiqdi."
+R256,527,True,added,ikki kishilik chek,neutral,"Umuman olganda, ikki kishilik chek (bir juft salat, issiq snaklar, ikkinchi taom, kalyan, taxminan 7 kokteyl) 800 mingga yaqin chiqdi."
+R256,527,True,added,issiq snaklar,neutral,"Umuman olganda, ikki kishilik chek (bir juft salat, issiq snaklar, ikkinchi taom, kalyan, taxminan 7 kokteyl) 800 mingga yaqin chiqdi."
+R256,527,True,added,ikkinchi taom,neutral,"Umuman olganda, ikki kishilik chek (bir juft salat, issiq snaklar, ikkinchi taom, kalyan, taxminan 7 kokteyl) 800 mingga yaqin chiqdi."
+R256,527,True,added,kokteyl,neutral,"Umuman olganda, ikki kishilik chek (bir juft salat, issiq snaklar, ikkinchi taom, kalyan, taxminan 7 kokteyl) 800 mingga yaqin chiqdi."
+R258,175,False,span fixed,olomon,olomon odamlar,Olomon odamlar va biroz qimmat
+R258,175,False,removed,biroz,,Olomon odamlar va biroz qimmat
+R261,132,False,span fixed,1 ofitsiant,ofitsiant,1 ofitsiant taxminan 25 kishini qamrab olishga harakat qildi va bu vaqtda uning hamkasblari bekorchilik bilan band edilar.
+R261,132,False,span fixed,uning hamkasblari,hamkasblari,1 ofitsiant taxminan 25 kishini qamrab olishga harakat qildi va bu vaqtda uning hamkasblari bekorchilik bilan band edilar.

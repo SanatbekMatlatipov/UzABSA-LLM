@@ -1,0 +1,510 @@
+{
+ "source": {
+  "corpus": "experiments/v3/judge/release_v1/judge_results.json",
+  "repeat": "experiments/v3/judge/calibration_v1/raw"
+ },
+ "calibration": {
+  "n": 150,
+  "panel_in_corpus_run": {
+   "n": 150,
+   "completeness": {
+    "spearman": 0.636,
+    "mae": 0.837,
+    "judge_mean": 3.34,
+    "human_mean": 4.04
+   },
+   "accuracy": {
+    "spearman": 0.56,
+    "mae": 0.483,
+    "judge_mean": 4.51,
+    "human_mean": 4.19
+   },
+   "sentiment": {
+    "spearman": 0.857,
+    "mae": 0.253,
+    "judge_mean": 4.29,
+    "human_mean": 4.25
+   },
+   "relevance": {
+    "spearman": 0.774,
+    "mae": 0.43,
+    "judge_mean": 3.84,
+    "human_mean": 3.85
+   },
+   "overall": {
+    "spearman": 0.781,
+    "mae": 0.483,
+    "judge_mean": 3.69,
+    "human_mean": 3.84
+   },
+   "tiers": {
+    "agreement": 0.793,
+    "kappa": 0.562,
+    "kappa_linear": 0.631,
+    "include_precision": 0.867,
+    "include_recall": 0.901,
+    "judge_include_human_exclude": 2,
+    "judge_tiers": {
+     "include": 105,
+     "flag": 35,
+     "exclude": 10
+    },
+    "human_tiers": {
+     "include": 101,
+     "flag": 32,
+     "exclude": 17
+    },
+    "confusion_rows_judge_cols_human": [
+     [
+      91,
+      12,
+      2
+     ],
+     [
+      10,
+      19,
+      6
+     ],
+     [
+      0,
+      1,
+      9
+     ]
+    ],
+    "include_vs_exclude": 2
+   },
+   "bootstrap": {
+    "panel": {
+     "spearman_overall": {
+      "ci95": [
+       0.709,
+       0.84
+      ],
+      "vs_published single judge": {
+       "ci95": [
+        0.064,
+        0.192
+       ],
+       "p_value": 0.0
+      }
+     },
+     "kappa": {
+      "ci95": [
+       0.425,
+       0.686
+      ],
+      "vs_published single judge": {
+       "ci95": [
+        -0.01,
+        0.201
+       ],
+       "p_value": 0.0796
+      }
+     }
+    },
+    "published single judge": {
+     "spearman_overall": {
+      "ci95": [
+       0.551,
+       0.747
+      ]
+     },
+     "kappa": {
+      "ci95": [
+       0.329,
+       0.6
+      ]
+     }
+    }
+   }
+  },
+  "published_single_judge": {
+   "n": 150,
+   "completeness": {
+    "spearman": 0.462,
+    "mae": 0.943,
+    "judge_mean": 3.3,
+    "human_mean": 4.04
+   },
+   "accuracy": {
+    "spearman": 0.433,
+    "mae": 0.543,
+    "judge_mean": 4.44,
+    "human_mean": 4.19
+   },
+   "sentiment": {
+    "spearman": 0.806,
+    "mae": 0.34,
+    "judge_mean": 4.24,
+    "human_mean": 4.25
+   },
+   "relevance": {
+    "spearman": 0.667,
+    "mae": 0.497,
+    "judge_mean": 3.97,
+    "human_mean": 3.85
+   },
+   "overall": {
+    "spearman": 0.657,
+    "mae": 0.553,
+    "judge_mean": 3.75,
+    "human_mean": 3.84
+   },
+   "tiers": {
+    "agreement": 0.733,
+    "kappa": 0.468,
+    "kappa_linear": 0.546,
+    "include_precision": 0.854,
+    "include_recall": 0.812,
+    "judge_include_human_exclude": 2,
+    "judge_tiers": {
+     "include": 96,
+     "flag": 41,
+     "exclude": 13
+    },
+    "human_tiers": {
+     "include": 101,
+     "flag": 32,
+     "exclude": 17
+    },
+    "confusion_rows_judge_cols_human": [
+     [
+      82,
+      12,
+      2
+     ],
+     [
+      18,
+      18,
+      5
+     ],
+     [
+      1,
+      2,
+      10
+     ]
+    ],
+    "include_vs_exclude": 3
+   }
+  },
+  "panel_repeat_run": {
+   "spearman_overall": 0.76,
+   "kappa": 0.601,
+   "kappa_linear": 0.663,
+   "agreement": 0.813,
+   "include_precision": 0.877,
+   "same_tier_as_corpus_run": 0.953
+  }
+ },
+ "corpus": {
+  "n": 5038,
+  "tiers": {
+   "include": 3608,
+   "flag": 972,
+   "exclude": 458
+  },
+  "tier_pct": {
+   "include": 71.6,
+   "flag": 19.3,
+   "exclude": 9.1
+  },
+  "means": {
+   "completeness": 3.36,
+   "accuracy": 4.5,
+   "sentiment": 4.24,
+   "relevance": 3.94,
+   "overall": 3.73
+  }
+ },
+ "domains": {
+  "groups": {
+   "Restaurants": {
+    "n": 1626,
+    "mean": 4.1,
+    "ci95": [
+     4.05,
+     4.14
+    ],
+    "tier_pct": {
+     "include": 80.9,
+     "flag": 12.5,
+     "exclude": 6.6
+    },
+    "accuracy_mean": 4.63
+   },
+   "Banking": {
+    "n": 577,
+    "mean": 3.39,
+    "ci95": [
+     3.32,
+     3.47
+    ],
+    "tier_pct": {
+     "include": 62.4,
+     "flag": 25.5,
+     "exclude": 12.1
+    },
+    "accuracy_mean": 4.47
+   },
+   "Other businesses": {
+    "n": 507,
+    "mean": 3.91,
+    "ci95": [
+     3.83,
+     3.99
+    ],
+    "tier_pct": {
+     "include": 77.1,
+     "flag": 16.2,
+     "exclude": 6.7
+    },
+    "accuracy_mean": 4.57
+   },
+   "Payment systems": {
+    "n": 328,
+    "mean": 3.35,
+    "ci95": [
+     3.26,
+     3.44
+    ],
+    "tier_pct": {
+     "include": 59.8,
+     "flag": 26.5,
+     "exclude": 13.7
+    },
+    "accuracy_mean": 4.34
+   },
+   "E-commerce": {
+    "n": 296,
+    "mean": 3.63,
+    "ci95": [
+     3.53,
+     3.73
+    ],
+    "tier_pct": {
+     "include": 72.0,
+     "flag": 20.9,
+     "exclude": 7.1
+    },
+    "accuracy_mean": 4.38
+   },
+   "Education": {
+    "n": 287,
+    "mean": 3.31,
+    "ci95": [
+     3.22,
+     3.41
+    ],
+    "tier_pct": {
+     "include": 58.9,
+     "flag": 28.6,
+     "exclude": 12.5
+    },
+    "accuracy_mean": 4.32
+   },
+   "Healthcare": {
+    "n": 285,
+    "mean": 3.74,
+    "ci95": [
+     3.63,
+     3.86
+    ],
+    "tier_pct": {
+     "include": 72.6,
+     "flag": 15.4,
+     "exclude": 11.9
+    },
+    "accuracy_mean": 4.55
+   },
+   "Telecommunications": {
+    "n": 234,
+    "mean": 3.41,
+    "ci95": [
+     3.3,
+     3.52
+    ],
+    "tier_pct": {
+     "include": 60.7,
+     "flag": 24.8,
+     "exclude": 14.5
+    },
+    "accuracy_mean": 4.47
+   },
+   "Grocery stores": {
+    "n": 215,
+    "mean": 3.67,
+    "ci95": [
+     3.56,
+     3.77
+    ],
+    "tier_pct": {
+     "include": 72.6,
+     "flag": 21.9,
+     "exclude": 5.6
+    },
+    "accuracy_mean": 4.36
+   },
+   "14 smaller domains": {
+    "n": 683,
+    "mean": 3.55,
+    "ci95": [
+     3.49,
+     3.62
+    ],
+    "tier_pct": {
+     "include": 67.1,
+     "flag": 23.4,
+     "exclude": 9.5
+    },
+    "accuracy_mean": 4.42
+   },
+   "All reviews": {
+    "n": 5038,
+    "mean": 3.73,
+    "ci95": [
+     3.71,
+     3.76
+    ],
+    "tier_pct": {
+     "include": 71.6,
+     "flag": 19.3,
+     "exclude": 9.1
+    },
+    "accuracy_mean": 4.5
+   }
+  },
+  "per_domain": {
+   "Restoran/Ovqatlanish": {
+    "n": 1626,
+    "include_pct": 80.9,
+    "accuracy_mean": 4.63
+   },
+   "Bank/Moliya": {
+    "n": 577,
+    "include_pct": 62.4,
+    "accuracy_mean": 4.47
+   },
+   "Boshqa": {
+    "n": 507,
+    "include_pct": 77.1,
+    "accuracy_mean": 4.57
+   },
+   "To'lov tizimlari": {
+    "n": 328,
+    "include_pct": 59.8,
+    "accuracy_mean": 4.34
+   },
+   "Elektron tijorat": {
+    "n": 296,
+    "include_pct": 72.0,
+    "accuracy_mean": 4.38
+   },
+   "Ta'lim": {
+    "n": 287,
+    "include_pct": 58.9,
+    "accuracy_mean": 4.32
+   },
+   "Tibbiyot/Sog'liqni saqlash": {
+    "n": 285,
+    "include_pct": 72.6,
+    "accuracy_mean": 4.55
+   },
+   "Telekommunikatsiya": {
+    "n": 234,
+    "include_pct": 60.7,
+    "accuracy_mean": 4.47
+   },
+   "Oziq-ovqat do'konlari": {
+    "n": 215,
+    "include_pct": 72.6,
+    "accuracy_mean": 4.36
+   },
+   "Gul/Sovg'a": {
+    "n": 173,
+    "include_pct": 69.9,
+    "accuracy_mean": 4.41
+   },
+   "Texnologiya/Media": {
+    "n": 110,
+    "include_pct": 62.7,
+    "accuracy_mean": 4.52
+   },
+   "Sayohat/Turizm": {
+    "n": 78,
+    "include_pct": 79.5,
+    "accuracy_mean": 4.55
+   },
+   "Sport/Fitnes": {
+    "n": 60,
+    "include_pct": 61.7,
+    "accuracy_mean": 4.38
+   },
+   "Kitob/Nashriyot": {
+    "n": 56,
+    "include_pct": 58.9,
+    "accuracy_mean": 4.36
+   },
+   "Din/Madaniyat": {
+    "n": 49,
+    "include_pct": 75.5,
+    "accuracy_mean": 4.47
+   },
+   "Transport/Yo'l": {
+    "n": 32,
+    "include_pct": 56.2,
+    "accuracy_mean": 4.3
+   },
+   "Yetkazib berish": {
+    "n": 30,
+    "include_pct": 76.7,
+    "accuracy_mean": 4.55
+   },
+   "Ko'ngilochar": {
+    "n": 26,
+    "include_pct": 46.2,
+    "accuracy_mean": 4.08
+   },
+   "Investitsiya/Trading": {
+    "n": 22,
+    "include_pct": 50.0,
+    "accuracy_mean": 4.23
+   },
+   "Davlat xizmatlari": {
+    "n": 16,
+    "include_pct": 75.0,
+    "accuracy_mean": 4.16
+   },
+   "Bozor/BSC": {
+    "n": 13,
+    "include_pct": 76.9,
+    "accuracy_mean": 4.5
+   },
+   "Go'zallik": {
+    "n": 11,
+    "include_pct": 72.7,
+    "accuracy_mean": 4.55
+   },
+   "Sug'urta": {
+    "n": 7,
+    "include_pct": 71.4,
+    "accuracy_mean": 4.36
+   }
+  },
+  "pooled_domains": [
+   "Gul/Sovg'a",
+   "Texnologiya/Media",
+   "Sayohat/Turizm",
+   "Sport/Fitnes",
+   "Kitob/Nashriyot",
+   "Din/Madaniyat",
+   "Transport/Yo'l",
+   "Yetkazib berish",
+   "Ko'ngilochar",
+   "Investitsiya/Trading",
+   "Davlat xizmatlari",
+   "Bozor/BSC",
+   "Go'zallik",
+   "Sug'urta"
+  ]
+ }
+}

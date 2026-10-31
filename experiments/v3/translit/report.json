@@ -1,0 +1,97 @@
+{
+ "n_reviews": 152,
+ "released_corpus_by_script": {
+  "ru": {
+   "n": 205,
+   "include_pct": 91.2
+  },
+  "latin": {
+   "n": 4681,
+   "include_pct": 71.5
+  },
+  "uz_cyrl": {
+   "n": 152,
+   "include_pct": 50.0
+  },
+  "all but uz_cyrl": {
+   "n": 4886,
+   "include_pct": 72.3
+  }
+ },
+ "arms": {
+  "released annotation (published checkpoint, Cyrillic input)": {
+   "n": 152,
+   "tier_pct": {
+    "include": 50.0,
+    "flag": 27.6,
+    "exclude": 22.4
+   },
+   "means": {
+    "completeness": 3.0,
+    "accuracy": 4.35,
+    "sentiment": 3.48,
+    "relevance": 3.75,
+    "overall": 3.29
+   }
+  },
+  "cyrillic input": {
+   "n": 152,
+   "tier_pct": {
+    "include": 54.6,
+    "flag": 23.0,
+    "exclude": 22.4
+   },
+   "means": {
+    "completeness": 3.15,
+    "accuracy": 4.03,
+    "sentiment": 3.57,
+    "relevance": 3.68,
+    "overall": 3.31
+   }
+  },
+  "latin input": {
+   "n": 152,
+   "tier_pct": {
+    "include": 68.4,
+    "flag": 13.2,
+    "exclude": 18.4
+   },
+   "means": {
+    "completeness": 3.29,
+    "accuracy": 4.18,
+    "sentiment": 3.83,
+    "relevance": 3.87,
+    "overall": 3.53
+   }
+  }
+ },
+ "latin_minus_cyrillic": {
+  "overall_mean_diff": 0.22,
+  "overall_diff_ci95": [
+   0.076,
+   0.368
+  ],
+  "wilcoxon_p": 0.008575321083687325,
+  "include_gained": 31,
+  "include_lost": 10,
+  "mcnemar_exact_p": 0.0014504910141113214
+ },
+ "annotation": {
+  "cyrillic": {
+   "parse_success": 1.0,
+   "aspects_per_review": 3.09,
+   "empty": 0,
+   "seconds_per_review": 5.6
+  },
+  "latin": {
+   "parse_success": 1.0,
+   "aspects_per_review": 3.03,
+   "empty": 0,
+   "seconds_per_review": 5.3
+  }
+ },
+ "latin_terms_mapped_back": {
+  "terms": 242,
+  "mapped": 240
+ }
+}
