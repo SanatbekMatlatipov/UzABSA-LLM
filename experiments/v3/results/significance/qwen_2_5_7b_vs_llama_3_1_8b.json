@@ -1,0 +1,56 @@
+{
+  "A": {
+    "ate_exact_f1": 0.7037,
+    "ate_partial_f1": 0.8108,
+    "pair_f1": 0.6305,
+    "sentiment_accuracy": 0.896
+  },
+  "B": {
+    "ate_exact_f1": 0.6861,
+    "ate_partial_f1": 0.7997,
+    "pair_f1": 0.6237,
+    "sentiment_accuracy": 0.9091
+  },
+  "n_examples": 609,
+  "n_boot": 10000,
+  "per_metric": {
+    "ate_exact_f1": {
+      "obs_delta_A_minus_B": 0.0176,
+      "ci95": [
+        -0.0092,
+        0.0441
+      ],
+      "p_value": 0.2,
+      "significant_at_0.05": false
+    },
+    "ate_partial_f1": {
+      "obs_delta_A_minus_B": 0.0111,
+      "ci95": [
+        -0.0108,
+        0.0337
+      ],
+      "p_value": 0.3278,
+      "significant_at_0.05": false
+    },
+    "pair_f1": {
+      "obs_delta_A_minus_B": 0.0068,
+      "ci95": [
+        -0.0225,
+        0.0354
+      ],
+      "p_value": 0.6594,
+      "significant_at_0.05": false
+    },
+    "sentiment_accuracy": {
+      "obs_delta_A_minus_B": -0.0131,
+      "ci95": [
+        -0.0374,
+        0.0104
+      ],
+      "p_value": 0.261,
+      "significant_at_0.05": false
+    }
+  },
+  "A_name": "Qwen 2.5-7B",
+  "B_name": "Llama 3.1-8B"
+}

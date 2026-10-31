@@ -1,0 +1,16 @@
+# 2026-10-31T22:30:41 host=DT-BIZON-W11 git=5794d60-dirty
+# PYTHONHASHSEED=0 'C:\Users\User\code\UzABSA-LLM\.venv\Scripts\python.exe' scripts/ensemble_preds.py --name 'Majority of 5 (seed 42)' --min-votes 3 --out-dir 'experiments\v3\results\ensembles' --systems 'Qwen 2.5-7B=experiments\v3\runs\qwen2.5-7b_s42\test_preds.jsonl' 'Llama 3.1-8B=experiments\v3\runs\llama3.1-8b_s42\test_preds.jsonl' 'DeepSeek-R1-7B=experiments\v3\runs\deepseek-7b_s42\test_preds.jsonl' 'BERTbek=experiments\v3\runs\BERTbek_s42\eval_test\preds_per_example.jsonl' 'TahrirchiBERT=experiments\v3\runs\TahrirchiBERT_s42\eval_test\preds_per_example.jsonl'
+system                   exact  part1:1  pair   acc
+Majority of 5 (seed 42)  0.7453 0.8234 0.6816 0.9146
+Qwen 2.5-7B              0.7037 0.8136 0.6305 0.8960
+Llama 3.1-8B             0.6861 0.8011 0.6237 0.9091
+DeepSeek-R1-7B           0.6643 0.7833 0.5848 0.8803
+BERTbek                  0.6981 0.7954 0.6180 0.8845
+TahrirchiBERT            0.6971 0.7992 0.6177 0.8867
+vs Qwen 2.5-7B           ate+0.042 (p=0.0008, holm=0.008)  part+0.010 (p=0.3062, holm=0.6124)  pair+0.051 (p=0.0, holm=0.0)  sentiment+0.019 (p=0.0434, holm=0.162)
+vs Llama 3.1-8B          ate+0.059 (p=0.0, holm=0.0)  part+0.022 (p=0.027, holm=0.162)  pair+0.058 (p=0.0, holm=0.0)  sentiment+0.005 (p=0.6232, holm=0.6232)
+vs DeepSeek-R1-7B        ate+0.081 (p=0.0, holm=0.0)  part+0.040 (p=0.0004, holm=0.0044)  pair+0.097 (p=0.0, holm=0.0)  sentiment+0.034 (p=0.005, holm=0.045)
+vs BERTbek               ate+0.047 (p=0.0, holm=0.0)  part+0.028 (p=0.006, holm=0.048)  pair+0.064 (p=0.0, holm=0.0)  sentiment+0.030 (p=0.0286, holm=0.162)
+vs TahrirchiBERT         ate+0.048 (p=0.0002, holm=0.0024)  part+0.024 (p=0.015, holm=0.105)  pair+0.064 (p=0.0, holm=0.0)  sentiment+0.028 (p=0.0358, holm=0.162)
+Saved -> experiments\v3\results\ensembles\majority_of_5_seed_42_metrics.json
+# exit 0 after 5s

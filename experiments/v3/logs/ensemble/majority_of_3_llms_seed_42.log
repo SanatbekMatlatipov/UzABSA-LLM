@@ -1,0 +1,12 @@
+# 2026-10-31T22:30:45 host=DT-BIZON-W11 git=5794d60-dirty
+# PYTHONHASHSEED=0 'C:\Users\User\code\UzABSA-LLM\.venv\Scripts\python.exe' scripts/ensemble_preds.py --name 'Majority of 3 LLMs (seed 42)' --min-votes 2 --out-dir 'experiments\v3\results\ensembles' --systems 'Qwen 2.5-7B=experiments\v3\runs\qwen2.5-7b_s42\test_preds.jsonl' 'Llama 3.1-8B=experiments\v3\runs\llama3.1-8b_s42\test_preds.jsonl' 'DeepSeek-R1-7B=experiments\v3\runs\deepseek-7b_s42\test_preds.jsonl'
+system                   exact  part1:1  pair   acc
+Majority of 3 LLMs (seed 42) 0.7055 0.8035 0.6379 0.9041
+Qwen 2.5-7B              0.7037 0.8136 0.6305 0.8960
+Llama 3.1-8B             0.6861 0.8011 0.6237 0.9091
+DeepSeek-R1-7B           0.6643 0.7833 0.5848 0.8803
+vs Qwen 2.5-7B           ate+0.002 (p=0.8562, holm=1.0)  part-0.010 (p=0.2888, holm=1.0)  pair+0.007 (p=0.5116, holm=1.0)  sentiment+0.008 (p=0.2034, holm=1.0)
+vs Llama 3.1-8B          ate+0.019 (p=0.0414, holm=0.4848)  part+0.002 (p=0.7382, holm=1.0)  pair+0.014 (p=0.1706, holm=1.0)  sentiment-0.005 (p=0.6234, holm=1.0)
+vs DeepSeek-R1-7B        ate+0.041 (p=0.0004, holm=0.0052)  part+0.020 (p=0.0404, holm=0.4848)  pair+0.053 (p=0.0, holm=0.0)  sentiment+0.024 (p=0.0744, holm=0.744)
+Saved -> experiments\v3\results\ensembles\majority_of_3_llms_seed_42_metrics.json
+# exit 0 after 3s

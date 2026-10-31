@@ -63,3 +63,30 @@ Done.
 [run] eval-llm/deepseek-7b_s43_dev -> experiments\v3\logs\eval-llm\deepseek-7b_s43_dev.log
 [ok] eval-llm/deepseek-7b_s43_test (1984s)
 [ok] eval-llm/deepseek-7b_s43_dev (1678s)
+[ok] eval-llm/llama3.1-8b_s43_dev (1834s)
+
+Done.
+=== seed 43 runner exit 0 ===
+  dev pair F1 so far: {
+  "deepseek-7b_s42": 0.5648,
+  "deepseek-7b_s43": 0.5605,
+  "llama3.1-8b_s42": 0.5604,
+  "llama3.1-8b_s43": 0.5957,
+  "qwen2.5-7b_s42": 0.5832,
+  "qwen2.5-7b_s43": 0.5972
+}
+  champion on dev: qwen2.5-7b_s43 (0.5972)
+  pruned deepseek-7b_s43/merged_model (15.2 GB)
+  pruned llama3.1-8b_s43/merged_model (16.1 GB)
+  pruned qwen2.5-7b_s42/merged_model (15.2 GB)
+  freed 46.6 GB
+  disk free: 92.4 GB
+
+======================================================================
+=== SEED 44 ===
+======================================================================
+
+=== train-llm ===
+[run] train-llm/qwen2.5-7b_s44 -> experiments\v3\logs\train-llm\qwen2.5-7b_s44.log
+[run] train-llm/deepseek-7b_s44 -> experiments\v3\logs\train-llm\deepseek-7b_s44.log
+[run] train-llm/llama3.1-8b_s44 -> experiments\v3\logs\train-llm\llama3.1-8b_s44.log

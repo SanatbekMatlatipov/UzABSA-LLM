@@ -1,0 +1,314 @@
+{
+ "name": "Majority of 3 LLMs (seed 42)",
+ "rule": "term kept if >= 2 of 3 systems predict it; polarity by plurality, ties to the first listed system",
+ "members": {
+  "Qwen 2.5-7B": "experiments\\v3\\runs\\qwen2.5-7b_s42\\test_preds.jsonl",
+  "Llama 3.1-8B": "experiments\\v3\\runs\\llama3.1-8b_s42\\test_preds.jsonl",
+  "DeepSeek-R1-7B": "experiments\\v3\\runs\\deepseek-7b_s42\\test_preds.jsonl"
+ },
+ "n_reviews": 609,
+ "n_boot": 10000,
+ "scores": {
+  "Majority of 3 LLMs (seed 42)": {
+   "canonical": {
+    "ate_exact_p": 0.7515,
+    "ate_exact_r": 0.6649,
+    "ate_exact_f1": 0.7055,
+    "ate_partial_f1": 0.8006,
+    "pair_f1": 0.6379,
+    "sentiment_accuracy": 0.9041,
+    "sentiment_macro_f1": 0.8551,
+    "pred_gold_ratio": 0.88
+   },
+   "exact_1to1": {
+    "p": 0.7515,
+    "r": 0.6649,
+    "f1": 0.7055
+   },
+   "partial_1to1": {
+    "p": 0.8558,
+    "r": 0.7571,
+    "f1": 0.8035
+   },
+   "stem_1to1": {
+    "p": 0.7623,
+    "r": 0.6744,
+    "f1": 0.7156
+   },
+   "pair_exact_1to1": {
+    "p": 0.6794,
+    "r": 0.6011,
+    "f1": 0.6379
+   },
+   "pair_stem_1to1": {
+    "p": 0.6887,
+    "r": 0.6092,
+    "f1": 0.6465
+   }
+  },
+  "Qwen 2.5-7B": {
+   "canonical": {
+    "ate_exact_p": 0.7033,
+    "ate_exact_r": 0.7042,
+    "ate_exact_f1": 0.7037,
+    "ate_partial_f1": 0.8108,
+    "pair_f1": 0.6305,
+    "sentiment_accuracy": 0.896,
+    "sentiment_macro_f1": 0.8364,
+    "pred_gold_ratio": 1.0
+   },
+   "exact_1to1": {
+    "p": 0.7033,
+    "r": 0.7042,
+    "f1": 0.7037
+   },
+   "partial_1to1": {
+    "p": 0.813,
+    "r": 0.8141,
+    "f1": 0.8136
+   },
+   "stem_1to1": {
+    "p": 0.7114,
+    "r": 0.7123,
+    "f1": 0.7119
+   },
+   "pair_exact_1to1": {
+    "p": 0.6301,
+    "r": 0.6309,
+    "f1": 0.6305
+   },
+   "pair_stem_1to1": {
+    "p": 0.6369,
+    "r": 0.6377,
+    "f1": 0.6373
+   }
+  },
+  "Llama 3.1-8B": {
+   "canonical": {
+    "ate_exact_p": 0.7011,
+    "ate_exact_r": 0.6716,
+    "ate_exact_f1": 0.6861,
+    "ate_partial_f1": 0.7997,
+    "pair_f1": 0.6237,
+    "sentiment_accuracy": 0.9091,
+    "sentiment_macro_f1": 0.8712,
+    "pred_gold_ratio": 0.96
+   },
+   "exact_1to1": {
+    "p": 0.7011,
+    "r": 0.6716,
+    "f1": 0.6861
+   },
+   "partial_1to1": {
+    "p": 0.8187,
+    "r": 0.7843,
+    "f1": 0.8011
+   },
+   "stem_1to1": {
+    "p": 0.7096,
+    "r": 0.6798,
+    "f1": 0.6944
+   },
+   "pair_exact_1to1": {
+    "p": 0.6374,
+    "r": 0.6106,
+    "f1": 0.6237
+   },
+   "pair_stem_1to1": {
+    "p": 0.6431,
+    "r": 0.616,
+    "f1": 0.6292
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "canonical": {
+    "ate_exact_p": 0.6964,
+    "ate_exact_r": 0.635,
+    "ate_exact_f1": 0.6643,
+    "ate_partial_f1": 0.7835,
+    "pair_f1": 0.5848,
+    "sentiment_accuracy": 0.8803,
+    "sentiment_macro_f1": 0.8238,
+    "pred_gold_ratio": 0.91
+   },
+   "exact_1to1": {
+    "p": 0.6933,
+    "r": 0.635,
+    "f1": 0.6629
+   },
+   "partial_1to1": {
+    "p": 0.8193,
+    "r": 0.7503,
+    "f1": 0.7833
+   },
+   "stem_1to1": {
+    "p": 0.7052,
+    "r": 0.6459,
+    "f1": 0.6742
+   },
+   "pair_exact_1to1": {
+    "p": 0.6104,
+    "r": 0.559,
+    "f1": 0.5836
+   },
+   "pair_stem_1to1": {
+    "p": 0.6193,
+    "r": 0.5672,
+    "f1": 0.5921
+   }
+  }
+ },
+ "ensemble_vs_member": {
+  "Qwen 2.5-7B": {
+   "ate_exact_f1": {
+    "delta": 0.0018,
+    "ci95": [
+     -0.0195,
+     0.0225
+    ],
+    "p_value": 0.8562,
+    "p_holm": 1.0
+   },
+   "pair_f1": {
+    "delta": 0.0074,
+    "ci95": [
+     -0.0153,
+     0.0287
+    ],
+    "p_value": 0.5116,
+    "p_holm": 1.0
+   },
+   "sentiment_accuracy": {
+    "delta": 0.0081,
+    "ci95": [
+     -0.0042,
+     0.0211
+    ],
+    "p_value": 0.2034,
+    "p_holm": 1.0
+   },
+   "ate_partial_1to1_f1": {
+    "delta": -0.0101,
+    "ci95": [
+     -0.029,
+     0.0083
+    ],
+    "p_value": 0.2888,
+    "p_holm": 1.0
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.0092,
+    "ci95": [
+     -0.0135,
+     0.0309
+    ],
+    "p_value": 0.4156,
+    "p_holm": 1.0
+   }
+  },
+  "Llama 3.1-8B": {
+   "ate_exact_f1": {
+    "delta": 0.0195,
+    "ci95": [
+     0.0009,
+     0.0373
+    ],
+    "p_value": 0.0414,
+    "p_holm": 0.4848
+   },
+   "pair_f1": {
+    "delta": 0.0142,
+    "ci95": [
+     -0.0064,
+     0.034
+    ],
+    "p_value": 0.1706,
+    "p_holm": 1.0
+   },
+   "sentiment_accuracy": {
+    "delta": -0.005,
+    "ci95": [
+     -0.0243,
+     0.0149
+    ],
+    "p_value": 0.6234,
+    "p_holm": 1.0
+   },
+   "ate_partial_1to1_f1": {
+    "delta": 0.0023,
+    "ci95": [
+     -0.0114,
+     0.0162
+    ],
+    "p_value": 0.7382,
+    "p_holm": 1.0
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.0173,
+    "ci95": [
+     -0.0039,
+     0.0383
+    ],
+    "p_value": 0.1066,
+    "p_holm": 0.9594
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "ate_exact_f1": {
+    "delta": 0.0412,
+    "ci95": [
+     0.0185,
+     0.0647
+    ],
+    "p_value": 0.0004,
+    "p_holm": 0.0052
+   },
+   "pair_f1": {
+    "delta": 0.0531,
+    "ci95": [
+     0.0276,
+     0.0787
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "sentiment_accuracy": {
+    "delta": 0.0237,
+    "ci95": [
+     -0.0022,
+     0.0498
+    ],
+    "p_value": 0.0744,
+    "p_holm": 0.744
+   },
+   "ate_partial_1to1_f1": {
+    "delta": 0.0202,
+    "ci95": [
+     0.0008,
+     0.039
+    ],
+    "p_value": 0.0404,
+    "p_holm": 0.4848
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.0544,
+    "ci95": [
+     0.0293,
+     0.08
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   }
+  }
+ },
+ "complementarity": {
+  "gold_pairs": 737,
+  "found_by_any_member": 552,
+  "oracle_pair_recall": 0.749,
+  "found_only_by": {
+   "Qwen 2.5-7B": 53,
+   "Llama 3.1-8B": 34,
+   "DeepSeek-R1-7B": 29
+  }
+ }
+}

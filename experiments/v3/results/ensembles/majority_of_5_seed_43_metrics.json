@@ -1,0 +1,486 @@
+{
+ "name": "Majority of 5 (seed 43)",
+ "rule": "term kept if >= 3 of 5 systems predict it; polarity by plurality, ties to the first listed system",
+ "members": {
+  "Qwen 2.5-7B": "experiments\\v3\\runs\\qwen2.5-7b_s43\\test_preds.jsonl",
+  "Llama 3.1-8B": "experiments\\v3\\runs\\llama3.1-8b_s43\\test_preds.jsonl",
+  "DeepSeek-R1-7B": "experiments\\v3\\runs\\deepseek-7b_s43\\test_preds.jsonl",
+  "BERTbek": "experiments\\v3\\runs\\BERTbek_s43\\eval_test\\preds_per_example.jsonl",
+  "TahrirchiBERT": "experiments\\v3\\runs\\TahrirchiBERT_s43\\eval_test\\preds_per_example.jsonl"
+ },
+ "n_reviews": 609,
+ "n_boot": 10000,
+ "scores": {
+  "Majority of 5 (seed 43)": {
+   "canonical": {
+    "ate_exact_p": 0.7948,
+    "ate_exact_r": 0.7096,
+    "ate_exact_f1": 0.7498,
+    "ate_partial_f1": 0.8215,
+    "pair_f1": 0.6882,
+    "sentiment_accuracy": 0.9178,
+    "sentiment_macro_f1": 0.8759,
+    "pred_gold_ratio": 0.89
+   },
+   "exact_1to1": {
+    "p": 0.7948,
+    "r": 0.7096,
+    "f1": 0.7498
+   },
+   "partial_1to1": {
+    "p": 0.8754,
+    "r": 0.7815,
+    "f1": 0.8258
+   },
+   "stem_1to1": {
+    "p": 0.8024,
+    "r": 0.7164,
+    "f1": 0.757
+   },
+   "pair_exact_1to1": {
+    "p": 0.7295,
+    "r": 0.6513,
+    "f1": 0.6882
+   },
+   "pair_stem_1to1": {
+    "p": 0.7356,
+    "r": 0.6567,
+    "f1": 0.6939
+   }
+  },
+  "Qwen 2.5-7B": {
+   "canonical": {
+    "ate_exact_p": 0.7196,
+    "ate_exact_r": 0.7069,
+    "ate_exact_f1": 0.7132,
+    "ate_partial_f1": 0.8159,
+    "pair_f1": 0.6393,
+    "sentiment_accuracy": 0.8964,
+    "sentiment_macro_f1": 0.8406,
+    "pred_gold_ratio": 0.98
+   },
+   "exact_1to1": {
+    "p": 0.7196,
+    "r": 0.7069,
+    "f1": 0.7132
+   },
+   "partial_1to1": {
+    "p": 0.8246,
+    "r": 0.81,
+    "f1": 0.8172
+   },
+   "stem_1to1": {
+    "p": 0.7293,
+    "r": 0.7164,
+    "f1": 0.7228
+   },
+   "pair_exact_1to1": {
+    "p": 0.645,
+    "r": 0.6336,
+    "f1": 0.6393
+   },
+   "pair_stem_1to1": {
+    "p": 0.6547,
+    "r": 0.6431,
+    "f1": 0.6489
+   }
+  },
+  "Llama 3.1-8B": {
+   "canonical": {
+    "ate_exact_p": 0.701,
+    "ate_exact_r": 0.6649,
+    "ate_exact_f1": 0.6825,
+    "ate_partial_f1": 0.7967,
+    "pair_f1": 0.6309,
+    "sentiment_accuracy": 0.9245,
+    "sentiment_macro_f1": 0.8942,
+    "pred_gold_ratio": 0.95
+   },
+   "exact_1to1": {
+    "p": 0.701,
+    "r": 0.6649,
+    "f1": 0.6825
+   },
+   "partial_1to1": {
+    "p": 0.8212,
+    "r": 0.7788,
+    "f1": 0.7994
+   },
+   "stem_1to1": {
+    "p": 0.7124,
+    "r": 0.6757,
+    "f1": 0.6936
+   },
+   "pair_exact_1to1": {
+    "p": 0.6481,
+    "r": 0.6147,
+    "f1": 0.6309
+   },
+   "pair_stem_1to1": {
+    "p": 0.6595,
+    "r": 0.6255,
+    "f1": 0.6421
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "canonical": {
+    "ate_exact_p": 0.7171,
+    "ate_exact_r": 0.6431,
+    "ate_exact_f1": 0.6781,
+    "ate_partial_f1": 0.7868,
+    "pair_f1": 0.6037,
+    "sentiment_accuracy": 0.8903,
+    "sentiment_macro_f1": 0.8373,
+    "pred_gold_ratio": 0.9
+   },
+   "exact_1to1": {
+    "p": 0.694,
+    "r": 0.6431,
+    "f1": 0.6676
+   },
+   "partial_1to1": {
+    "p": 0.8067,
+    "r": 0.7476,
+    "f1": 0.7761
+   },
+   "stem_1to1": {
+    "p": 0.7072,
+    "r": 0.6554,
+    "f1": 0.6803
+   },
+   "pair_exact_1to1": {
+    "p": 0.6179,
+    "r": 0.5726,
+    "f1": 0.5944
+   },
+   "pair_stem_1to1": {
+    "p": 0.6281,
+    "r": 0.5821,
+    "f1": 0.6042
+   }
+  },
+  "BERTbek": {
+   "canonical": {
+    "ate_exact_p": 0.6805,
+    "ate_exact_r": 0.6906,
+    "ate_exact_f1": 0.6855,
+    "ate_partial_f1": 0.7906,
+    "pair_f1": 0.6137,
+    "sentiment_accuracy": 0.8939,
+    "sentiment_macro_f1": 0.8249,
+    "pred_gold_ratio": 1.02
+   },
+   "exact_1to1": {
+    "p": 0.676,
+    "r": 0.6906,
+    "f1": 0.6832
+   },
+   "partial_1to1": {
+    "p": 0.7835,
+    "r": 0.8005,
+    "f1": 0.7919
+   },
+   "stem_1to1": {
+    "p": 0.6813,
+    "r": 0.6961,
+    "f1": 0.6886
+   },
+   "pair_exact_1to1": {
+    "p": 0.6056,
+    "r": 0.6187,
+    "f1": 0.6121
+   },
+   "pair_stem_1to1": {
+    "p": 0.6096,
+    "r": 0.6228,
+    "f1": 0.6161
+   }
+  },
+  "TahrirchiBERT": {
+   "canonical": {
+    "ate_exact_p": 0.6795,
+    "ate_exact_r": 0.6961,
+    "ate_exact_f1": 0.6877,
+    "ate_partial_f1": 0.7936,
+    "pair_f1": 0.6011,
+    "sentiment_accuracy": 0.8752,
+    "sentiment_macro_f1": 0.8,
+    "pred_gold_ratio": 1.03
+   },
+   "exact_1to1": {
+    "p": 0.675,
+    "r": 0.6961,
+    "f1": 0.6854
+   },
+   "partial_1to1": {
+    "p": 0.7816,
+    "r": 0.806,
+    "f1": 0.7936
+   },
+   "stem_1to1": {
+    "p": 0.6816,
+    "r": 0.7028,
+    "f1": 0.6921
+   },
+   "pair_exact_1to1": {
+    "p": 0.5908,
+    "r": 0.6092,
+    "f1": 0.5999
+   },
+   "pair_stem_1to1": {
+    "p": 0.5961,
+    "r": 0.6147,
+    "f1": 0.6052
+   }
+  }
+ },
+ "ensemble_vs_member": {
+  "Qwen 2.5-7B": {
+   "ate_exact_f1": {
+    "delta": 0.0366,
+    "ci95": [
+     0.0155,
+     0.0577
+    ],
+    "p_value": 0.0012,
+    "p_holm": 0.01
+   },
+   "pair_f1": {
+    "delta": 0.0489,
+    "ci95": [
+     0.0269,
+     0.0714
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "sentiment_accuracy": {
+    "delta": 0.0214,
+    "ci95": [
+     0.0045,
+     0.0393
+    ],
+    "p_value": 0.013,
+    "p_holm": 0.078
+   },
+   "ate_partial_1to1_f1": {
+    "delta": 0.0086,
+    "ci95": [
+     -0.0091,
+     0.0261
+    ],
+    "p_value": 0.3458,
+    "p_holm": 0.6916
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.045,
+    "ci95": [
+     0.0229,
+     0.0678
+    ],
+    "p_value": 0.0002,
+    "p_holm": 0.0022
+   }
+  },
+  "Llama 3.1-8B": {
+   "ate_exact_f1": {
+    "delta": 0.0674,
+    "ci95": [
+     0.0434,
+     0.0914
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "pair_f1": {
+    "delta": 0.0573,
+    "ci95": [
+     0.0324,
+     0.0826
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "sentiment_accuracy": {
+    "delta": -0.0067,
+    "ci95": [
+     -0.0278,
+     0.0149
+    ],
+    "p_value": 0.5362,
+    "p_holm": 0.6916
+   },
+   "ate_partial_1to1_f1": {
+    "delta": 0.0264,
+    "ci95": [
+     0.0047,
+     0.0488
+    ],
+    "p_value": 0.0208,
+    "p_holm": 0.104
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.0518,
+    "ci95": [
+     0.0266,
+     0.0775
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   }
+  },
+  "DeepSeek-R1-7B": {
+   "ate_exact_f1": {
+    "delta": 0.0717,
+    "ci95": [
+     0.0467,
+     0.0968
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "pair_f1": {
+    "delta": 0.0845,
+    "ci95": [
+     0.0567,
+     0.1122
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "sentiment_accuracy": {
+    "delta": 0.0275,
+    "ci95": [
+     0.004,
+     0.0517
+    ],
+    "p_value": 0.022,
+    "p_holm": 0.104
+   },
+   "ate_partial_1to1_f1": {
+    "delta": 0.0498,
+    "ci95": [
+     0.0207,
+     0.0812
+    ],
+    "p_value": 0.001,
+    "p_holm": 0.01
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.0897,
+    "ci95": [
+     0.0588,
+     0.1214
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   }
+  },
+  "BERTbek": {
+   "ate_exact_f1": {
+    "delta": 0.0643,
+    "ci95": [
+     0.0412,
+     0.087
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "pair_f1": {
+    "delta": 0.0744,
+    "ci95": [
+     0.0485,
+     0.1004
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "sentiment_accuracy": {
+    "delta": 0.0239,
+    "ci95": [
+     0.0026,
+     0.046
+    ],
+    "p_value": 0.0266,
+    "p_holm": 0.104
+   },
+   "ate_partial_1to1_f1": {
+    "delta": 0.0339,
+    "ci95": [
+     0.0139,
+     0.0539
+    ],
+    "p_value": 0.001,
+    "p_holm": 0.01
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.0778,
+    "ci95": [
+     0.0521,
+     0.104
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   }
+  },
+  "TahrirchiBERT": {
+   "ate_exact_f1": {
+    "delta": 0.0622,
+    "ci95": [
+     0.0415,
+     0.0843
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "pair_f1": {
+    "delta": 0.0871,
+    "ci95": [
+     0.0616,
+     0.1138
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "sentiment_accuracy": {
+    "delta": 0.0425,
+    "ci95": [
+     0.0189,
+     0.0677
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   },
+   "ate_partial_1to1_f1": {
+    "delta": 0.0322,
+    "ci95": [
+     0.0131,
+     0.0515
+    ],
+    "p_value": 0.001,
+    "p_holm": 0.01
+   },
+   "pair_stem_1to1_f1": {
+    "delta": 0.0887,
+    "ci95": [
+     0.0632,
+     0.1154
+    ],
+    "p_value": 0.0,
+    "p_holm": 0.0
+   }
+  }
+ },
+ "complementarity": {
+  "gold_pairs": 737,
+  "found_by_any_member": 585,
+  "oracle_pair_recall": 0.7938,
+  "found_only_by": {
+   "Qwen 2.5-7B": 8,
+   "Llama 3.1-8B": 10,
+   "DeepSeek-R1-7B": 15,
+   "BERTbek": 10,
+   "TahrirchiBERT": 12
+  }
+ }
+}
