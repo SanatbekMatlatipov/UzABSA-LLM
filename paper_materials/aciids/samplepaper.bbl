@@ -6,15 +6,14 @@
 \bibitem{10.1007/978-3-031-05328-3_6}
 Aripov, M., Khakimov, M., Matlatipov, S., Sirojiddinov, Z.: {Analysis and
   Processing of the Uzbek Language on the Multi-language Modelled Computer
-  Translator Technology}. In: Vetulani, Z., Paroubek, P., Kubis, M. (eds.)
-  Human Language Technology. Challenges for Computer Science and Linguistics.
-  pp. 81--95. Springer International Publishing, Cham (2022)
+  Translator Technology}. In: Human Language Technology. Challenges for
+  Computer Science and Linguistics. pp. 81--95. Springer International
+  Publishing, Cham (2022)
 
 \bibitem{3666122.3666563}
 Dettmers, T., Pagnoni, A., Holtzman, A., Zettlemoyer, L.: {QLORA: efficient
   finetuning of quantized LLMs}. In: Proceedings of the 37th International
-  Conference on Neural Information Processing Systems. NIPS '23, Curran
-  Associates Inc., Red Hook, NY, USA (2023)
+  Conference on Neural Information Processing Systems. NIPS '23 (2023)
 
 \bibitem{Grattafiori2024-ka}
 Grattafiori, A., Dubey, A., Jauhri, A., et~al.: {The Llama 3 herd of models}.
@@ -35,9 +34,8 @@ Hellwig, N.C., Fehle, J., Kruschwitz, U., Wolff, C.: {LLM-as-an-Annotator:
   \doi{10.63317/43srcdyc52cd}
 
 \bibitem{Hu2021-fz}
-Hu, E.J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L.,
-  Chen, W.: {{LoRA}: {Low-Rank} Adaptation of large language models}. arXiv
-  preprint arXiv:2106.09685  (June 2021)
+Hu, E.J., Shen, Y., Wallis, P., et~al.: {{LoRA}: {Low-Rank} Adaptation of large
+  language models}. arXiv preprint arXiv:2106.09685  (June 2021)
 
 \bibitem{Hua2024}
 Hua, Y.C., Denny, P., Wicker, J., Taskova, K.: {A systematic review of
@@ -178,10 +176,8 @@ Simmering, P.F., Huoviala, P.: {Large Language Models for Aspect-Based
   \url{https://aclanthology.org/2024.wassa-1.6/}
 
 \bibitem{Touvron2023-lf}
-Touvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.A., Lacroix, T.,
-  Rozi{\`e}re, B., Goyal, N., Hambro, E., Azhar, F., Rodriguez, A., Joulin, A.,
-  Grave, E., Lample, G.: {{LLaMA}: Open and efficient foundation language
-  models}. arXiv preprint arXiv:2302.13971  (February 2023)
+Touvron, H., Lavril, T., Izacard, G., et~al.: {{LLaMA}: Open and efficient
+  foundation language models}. arXiv preprint arXiv:2302.13971  (February 2023)
 
 \bibitem{verga2024juries}
 Verga, P., Hofst{\"a}tter, S., Althammer, S., et~al.: {Replacing Judges with
@@ -199,16 +195,14 @@ Yang, A., Yang, B., Zhang, B., et~al.: {Qwen2.5 Technical Report}. arXiv
   preprint arXiv:2412.15115  (December 2024)
 
 \bibitem{Yusufu2026}
-Yusufu, A., Liu, J., Aziz, K., Ainiwaer, A., Li, B., Li, F., Ji, D., Yusufu,
-  A.: {LASQ: A low-resource aspect-based sentiment quadruple extraction
-  dataset}. Journal of King Saud University Computer and Information Sciences
-  \textbf{38}(6), ~337 (Apr 2026). \doi{10.1007/s44443-026-00701-x}
+Yusufu, A., Liu, J., Aziz, K., et~al.: {LASQ: A low-resource aspect-based
+  sentiment quadruple extraction dataset}. Journal of King Saud University
+  Computer and Information Sciences  \textbf{38}(6), ~337 (Apr 2026).
+  \doi{10.1007/s44443-026-00701-x}
 
 \bibitem{3666122.3668142}
-Zheng, L., Chiang, W.L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z.,
-  Li, Z., Li, D., Xing, E.P., Zhang, H., Gonzalez, J.E., Stoica, I.: {Judging
-  LLM-as-a-judge with MT-bench and Chatbot Arena}. In: Proceedings of the 37th
-  International Conference on Neural Information Processing Systems. NIPS '23,
-  Curran Associates Inc., Red Hook, NY, USA (2023)
+Zheng, L., Chiang, W.L., Sheng, Y., et~al.: {Judging LLM-as-a-judge with
+  MT-bench and Chatbot Arena}. In: Proceedings of the 37th International
+  Conference on Neural Information Processing Systems. NIPS '23 (2023)
 
 \end{thebibliography}

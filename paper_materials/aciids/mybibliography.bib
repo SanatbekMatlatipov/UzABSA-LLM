@@ -30,11 +30,9 @@ isbn="978-3-030-63119-2"
 }
 
 @inproceedings{3666122.3668142,
-author = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric P. and Zhang, Hao and Gonzalez, Joseph E. and Stoica, Ion},
+author = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and others},
 title = {{Judging LLM-as-a-judge with MT-bench and Chatbot Arena}},
 year = {2023},
-publisher = {Curran Associates Inc.},
-address = {Red Hook, NY, USA},
 abstract = {Evaluating large language model (LLM) based chat assistants is challenging due to their broad capabilities and the inadequacy of existing benchmarks in measuring human preferences. To address this, we explore using strong LLMs as judges to evaluate these models on more open-ended questions. We examine the usage and limitations of LLM-as-a-judge, including position, verbosity, and self-enhancement biases, as well as limited reasoning ability, and propose solutions to mitigate some of them. We then verify the agreement between LLM judges and human preferences by introducing two benchmarks: MT-bench, a multi-turn question set; and Chatbot Arena, a crowdsourced battle platform. Our results reveal that strong LLM judges like GPT-4 can match both controlled and crowdsourced human preferences well, achieving over 80\% agreement, the same level of agreement between humans. Hence, LLM-as-a-judge is a scalable and explainable way to approximate human preferences, which are otherwise very expensive to obtain. Additionally, we show our benchmark and traditional benchmarks complement each other by evaluating several variants of LLaMA and Vicuna. The MT-bench questions, 3K expert votes, and 30K conversations with human preferences are publicly available at https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge.},
 booktitle = {Proceedings of the 37th International Conference on Neural Information Processing Systems},
 articleno = {2020},
@@ -45,11 +43,7 @@ series = {NIPS '23}
 
 @ARTICLE{Touvron2023-lf,
   title         = "{{LLaMA}: Open and efficient foundation language models}",
-  author        = "Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and
-                   Martinet, Xavier and Lachaux, Marie-Anne and Lacroix,
-                   Timoth{\'e}e and Rozi{\`e}re, Baptiste and Goyal, Naman and
-                   Hambro, Eric and Azhar, Faisal and Rodriguez, Aurelien and
-                   Joulin, Armand and Grave, Edouard and Lample, Guillaume",
+  author        = "Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and others",
   abstract      = "We introduce LLaMA, a collection of foundation language
                    models ranging from 7B to 65B parameters. We train our
                    models on trillions of tokens, and show that it is possible
@@ -216,9 +210,6 @@ author="Aripov, Mersaid
 and Khakimov, Muftakh
 and Matlatipov, Sanatbek
 and Sirojiddinov, Ziyoviddin",
-editor="Vetulani, Zygmunt
-and Paroubek, Patrick
-and Kubis, Marek",
 title="{Analysis and Processing of the Uzbek Language on the Multi-language Modelled Computer Translator Technology}",
 booktitle="Human Language Technology. Challenges for Computer Science and Linguistics",
 year="2022",
@@ -346,8 +337,6 @@ keywords = {Aspect sentiment classification, Graph convolutional neural network,
 author = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
 title = {{QLORA: efficient finetuning of quantized LLMs}},
 year = {2023},
-publisher = {Curran Associates Inc.},
-address = {Red Hook, NY, USA},
 abstract = {We present QLORA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLORA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters (LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3\% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLORA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) Double Quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) Paged Optimizers to manage memory spikes. We use QLORA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. A lemon-picked analysis demonstrates where Guanaco fails compared to ChatGPT. We release all of our models and code, including CUDA kernels for 4-bit training.. Equal contribution. https://github.com/artidoro/qlora and https://github.com/TimDettmers/bitsandbytes},
 booktitle = {Proceedings of the 37th International Conference on Neural Information Processing Systems},
 articleno = {441},
@@ -512,9 +501,7 @@ doi={10.1063/5.0241461}
 
 @ARTICLE{Hu2021-fz,
   title         = "{{LoRA}: {Low-Rank} Adaptation of large language models}",
-  author        = "Hu, Edward J and Shen, Yelong and Wallis, Phillip and
-                   Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang,
-                   Lu and Chen, Weizhu",
+  author        = "Hu, Edward J and Shen, Yelong and Wallis, Phillip and others",
   abstract      = "An important paradigm of natural language processing
                    consists of large-scale pre-training on general domain data
                    and adaptation to particular tasks or domains. As we
@@ -658,14 +645,7 @@ DOI = {10.3390/bdcc10050161}
 }
 
 @Article{Yusufu2026,
-author={Yusufu, Aizihaierjiang
-and Liu, Jiang
-and Aziz, Kamran
-and Ainiwaer, Abidan
-and Li, Bobo
-and Li, Fei
-and Ji, Donghong
-and Yusufu, Aizierguli},
+author={Yusufu, Aizihaierjiang and Liu, Jiang and Aziz, Kamran and others},
 title={{LASQ: A low-resource aspect-based sentiment quadruple extraction dataset}},
 journal={Journal of King Saud University Computer and Information Sciences},
 year={2026},
