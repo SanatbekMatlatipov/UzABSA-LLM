@@ -235,34 +235,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Paper drafts stay on this machine. GitHub gets the ACIIDS paper sources and
-# the experiment artifacts the scripts read (results, baselines, significance
-# tests, human validation, robustness).
-/paper_materials/*
-!/paper_materials/aciids/
-/paper_materials/aciids/*
-!/paper_materials/aciids/samplepaper.tex
-!/paper_materials/aciids/samplepaper.pdf
-!/paper_materials/aciids/samplepaper.bbl
-!/paper_materials/aciids/mybibliography.bib
-!/paper_materials/aciids/llncs.cls
-!/paper_materials/aciids/splncs04.bst
-!/paper_materials/aciids/README.md
-!/paper_materials/revision_v2/
-/paper_materials/revision_v2/*
-!/paper_materials/revision_v2/results*/
-!/paper_materials/revision_v2/baselines*/
-!/paper_materials/revision_v2/significance*/
-!/paper_materials/revision_v2/human_validation/
-!/paper_materials/revision_v2/robustness/
+# Paper sources, drafts and the run artifacts behind them stay on this machine.
+/paper_materials/
+
+# Raw review exports with reviewer metadata stay on this machine.
+/data/raw/private/
 
 # Personal to-do lists, in any folder, stay on this machine
 TODO.md
 
-# BERT baselines - ignore large model weights & checkpoints, keep metrics/logs
-# Tracked:  eval_results.json, train_summary.json, training_log.txt, preds_per_example.jsonl
-# Ignored:  hf_trainer/checkpoint-*/, model/
-# Matched for every baselines* tree (baselines/, baselines_v2/, ...) so a rerun
-# does not start tracking 5 GB of encoder checkpoints per model.
-paper_materials/revision_v2/baselines*/*/hf_trainer/
-paper_materials/revision_v2/baselines*/*/model/

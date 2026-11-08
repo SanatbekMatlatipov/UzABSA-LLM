@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-UzABSA-LLM is a research codebase (targeting an academic paper, currently in revision — see `paper_materials/revision_v2/REVISION_LOG.md`) for Uzbek Aspect-Based Sentiment Analysis (ABSA). It fine-tunes open-source LLMs (Qwen 2.5-7B, Llama 3.1-8B, DeepSeek-R1-Distill-7B) via QLoRA/Unsloth to extract aspect terms, categories, and sentiment polarities from Uzbek review text as structured JSON, and compares them against fine-tuned Uzbek BERT encoder baselines (BIO-tagging).
+UzABSA-LLM is a research codebase (supporting academic papers; their sources live in the local, git-ignored `paper_materials/`) for Uzbek Aspect-Based Sentiment Analysis (ABSA). It fine-tunes open-source LLMs (Qwen 2.5-7B, Llama 3.1-8B, DeepSeek-R1-Distill-7B) via QLoRA/Unsloth to extract aspect terms, categories, and sentiment polarities from Uzbek review text as structured JSON, and compares them against fine-tuned Uzbek BERT encoder baselines (BIO-tagging).
 
 There is no application server or frontend here — this is an ML research pipeline: data prep → training → evaluation → significance testing → paper artifacts.
 
@@ -101,7 +101,7 @@ Both families' per-example predictions feed `significance_test.py`, which runs p
 - `data/bio_processed/` — BIO-tag-aligned version of the same split, used for BERT baseline training/eval.
 - `data/annotated/` → `data/judged/` → `data/final_dataset/` — outputs of the three-layer silver-dataset pipeline.
 - `outputs/` — training run artifacts (`merged_model/`, `lora_adapters/`, checkpoints, curves, `experiment_summary.json`).
-- `paper_materials/` — LaTeX sources for submitted/revised papers (MDPI, Springer, current `revision_v2`) plus baseline run artifacts, human-validation data, and significance-test outputs referenced directly in the paper tables. Treat `revision_v2/REVISION_LOG.md` and `revision_v2/writing/pending_edits.md` as the source of truth for what's still open in the current revision.
+- `paper_materials/` — local only (git-ignored): paper sources and the run artifacts behind the paper tables (baselines, significance tests, human validation, robustness). Public data releases go to Zenodo and Hugging Face instead. Treat `revision_v2/REVISION_LOG.md` and `revision_v2/writing/pending_edits.md` there as the source of truth for what is still open in a revision.
 - `RESEARCH_LOG.md` — the authoritative methodology/experiment log (research questions, dataset stats, config decisions, results). Consult this before changing methodology, metrics, or hyperparameters, since it documents *why* choices were made, not just what they are.
 
 ### Key invariant
