@@ -234,15 +234,19 @@ def parse_chatml_example(chatml_text: str) -> Tuple[str, List[Dict[str, str]]]:
     Returns:
         Tuple of (review_text, gold_aspects_list).
     """
-    # Extract review text from user message
-    # Pattern: Matn: "..." inside the user block
-    text_match = re.search(r'Matn:\s*"(.+?)"', chatml_text, re.DOTALL)
-    if text_match:
-        review_text = text_match.group(1).strip()
-    else:
-        # Fallback: try to extract from Text: "..."
-        text_match = re.search(r'Text:\s*"(.+?)"', chatml_text, re.DOTALL)
-        review_text = text_match.group(1).strip() if text_match else ""
+    # Extract review text from the user message: Matn: "..." runs to the last
+    # double quote of the user block, so quotes inside the review are kept
+    # (a non-greedy match stopped at the first inner quote and cut the text).
+    user_match = re.search(r'<\|im_start\|>user\s*\n(.*?)<\|im_end\|>', chatml_text, re.DOTALL)
+    user_block = user_match.group(1) if user_match else chatml_text
+    review_text = ""
+    for label in ("Matn", "Text"):
+        text_match = re.search(label + r':\s*"(.*)"\s*$', user_block, re.DOTALL)
+        if not text_match:
+            text_match = re.search(label + r':\s*"(.+?)"', user_block, re.DOTALL)
+        if text_match:
+            review_text = text_match.group(1).strip()
+            break
 
     # Extract gold aspects from assistant response
     # Find the assistant block and parse JSON

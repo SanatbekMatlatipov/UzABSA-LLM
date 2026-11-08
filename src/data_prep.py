@@ -422,6 +422,9 @@ def _review_key(chatml_text: str) -> str:
     so a naive random split leaks ~10% of the validation set into training. Keying
     on the normalized review string groups every copy into the same split.
     """
+    # The key stops at the first double quote inside the review. Leave it so:
+    # it only groups texts with a shared prefix onto one side, and changing it
+    # would change the published train/test split.
     m = re.search(r'Matn:\s*"(.*?)"', chatml_text, re.S)
     raw = m.group(1) if m else chatml_text
     return re.sub(r"\s+", " ", raw).strip().lower()
